@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoIosSearch } from 'react-icons/io';
 import Logo from '../images/logo.png';
 
 const Navbar = () => {
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+
+      if (currentScrollPos > prevScrollPos && currentScrollPos > 100) {
+        // Scrolling down
+        document.querySelector('.navbar').classList.add('hidden');
+      } else {
+        // Scrolling up
+        document.querySelector('.navbar').classList.remove('hidden');
+      }
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]);
     return (
         <div>
             <nav className="navbar navbar-expand-lg border-bottom border-black">

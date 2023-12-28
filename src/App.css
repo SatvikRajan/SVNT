@@ -1,8 +1,21 @@
 /* General Styles */
 .navbar {
   padding: 0;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
 }
-
+.navbar.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar.hidden:hover {
+    transform: translateY(0);
+  }
 .logo-font {
   font-size: 10px;
   text-align: right;
@@ -69,7 +82,7 @@ form {
   width: 100%;
 }
 .form-control {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   height: 50px;
   border-radius: 15px !important;
   border: 1px solid #bfbdbd;
@@ -86,6 +99,7 @@ form {
   display: flex;
 }
 .submit {
+    font-size: 20px;
   width: 180px;
   height: 45px;
   border-radius: 100px;
@@ -115,4 +129,38 @@ form {
     gap: 0;
     flex-direction: column;
   }
+}
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;}
+.location{
+    text-align: center;
+}
+.location-name{
+    padding: 40px;
+}
+.offices{
+    gap: 55px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-title{
+    margin-bottom: 30px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: grey;
+}
+.grow{
+    transition: .5s, color .10s;
+        -webkit-transition: .5s, color .10s;
+        -moz-transition: .5s, color .10s;
+}
+.grow:hover{
+    transform: scale3d(1.5, 1.5, 0.3);
+        -webkit-transform: scale3d(1.5, 1.5, 0.3);
+        -moz-transform: scale3d(1.5, 1.5, 0.3);
 }
