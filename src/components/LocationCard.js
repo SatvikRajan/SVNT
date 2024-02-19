@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
-import { FaMapMarkerAlt } from 'react-icons/fa';
 
 const LocationCard = ({ title, address }) => {
     const [isFlipped, setIsFlipped] = useState(false);
