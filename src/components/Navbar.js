@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { IoIosSearch } from 'react-icons/io';
 import Logo from '../images/logo.png';
 
 const Navbar = () => {
@@ -10,10 +9,8 @@ const Navbar = () => {
       const currentScrollPos = window.pageYOffset;
 
       if (currentScrollPos > prevScrollPos && currentScrollPos > 100) {
-        // Scrolling down
         document.querySelector('.navbar').classList.add('hidden');
       } else {
-        // Scrolling up
         document.querySelector('.navbar').classList.remove('hidden');
       }
 
@@ -31,8 +28,7 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-lg border-bottom border-black">
                 <div className="container">
                     <a className="navbar-brand" href="/">
-                        <img src={Logo} alt="SVNT Tech" height={50} />
-                        <div className="logo-font">Freedom of Choice & Power of Integration</div>
+                        <img src={Logo} alt="SVNT Tech" height={30} />
                     </a>
                     <button
                         className="navbar-toggler"
@@ -47,23 +43,11 @@ const Navbar = () => {
                     </button>
                     <div className="navbar-collapse collapse justify-content-end" id="navbarSupportedContent">
                         <ul className="navbar-nav align-items-center">
-                            <NavItem href="/">ABOUT US</NavItem>
-                            <NavDropdown title="INDUSTRIES">
-                                <NavLink href="/">Action</NavLink>
-                                <NavLink href="/">Another action</NavLink>
-                                <NavLink href="/">Something else here</NavLink>
-                            </NavDropdown>
-                            <NavDropdown title="SERVICES">
-                                <NavLink href="/">Action</NavLink>
-                                <NavLink href="/">Another action</NavLink>
-                                <NavLink href="/">Something else here</NavLink>
-                            </NavDropdown>
-                            <NavItem href="/">INSIGHTS</NavItem>
-                            <NavItem href="/">CAREERS</NavItem>
-                            <NavItem href="contact">CONTACT US</NavItem>
-                            <NavItem>
-                                <IoIosSearch type="submit" className="btn search" />
-                            </NavItem>
+                            <NavItem href="about">About Us</NavItem>
+                            <NavItem href="industries">Industries</NavItem>
+                            <NavItem href="services">Services</NavItem>
+                            <NavItem href="careers">Careers</NavItem>
+                            <NavItem customClass="custom-nav-link" href="contact">Contact Us</NavItem>
                         </ul>
                     </div>
                 </div>
@@ -72,9 +56,9 @@ const Navbar = () => {
     );
 };
 
-const NavItem = ({ href, children }) => (
+const NavItem = ({ href, children, customClass}) => (
     <li className="nav-item">
-        <a className="nav-link" href={href}>
+        <a className={`nav-link ${customClass}`} href={href}>
             {children}
         </a>
     </li>

@@ -1,23 +1,6 @@
 import React from 'react';
 import contact from '../images/contact.jpg';
-import Form from 'react-bootstrap/Form';
-import Card from 'react-bootstrap/Card';
-const LocationCard = ({ title, address }) => {
-  const handleCardClick = () => {
-    const formattedAddress = encodeURIComponent(address);
-    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${formattedAddress}`;
-    window.open(mapsUrl, '_blank');
-  };
-
-  return (
-    <Card style={{ width: '20rem', height: '10rem', textAlign: 'left', marginRight: '100px', marginLeft: '100px' }} onClick={handleCardClick}>
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{address}</Card.Text>
-      </Card.Body>
-    </Card>
-  );
-};
+import LocationCard from '../components/LocationCard';
 const Contact = () => {
   return (
     <div className="contact-container">
@@ -27,112 +10,90 @@ const Contact = () => {
       </div>
 
       <div className="form-body">
-        <p className="form-text">Write to us</p>
-        <div className="container">
-
-          {/* Checkbox Section 1 */}
-          <div className="checkbox">
-            {['Request for Proposal', 'Issue Escalation'].map((label, index) => (
-              <Form.Check
-                key={index}
-                inline
-                label={label}
-                name="group1"
-                type="radio"
-                id={`checkbox-${index}`}
-              />
-            ))}
-            {['Media Enquiries', 'Partnership Opportunities'].map((label, index) => (
-              <Form.Check
-                key={index}
-                inline
-                label={label}
-                name="group1"
-                type="radio"
-                id={`checkbox-${index + 2}`} // Adjust index to avoid collision
-              />
-            ))}
+        <div className="write" >
+          <p className='write1'>Feel free to contact us for inquiries,<br/> feedback, or just a quick hello !</p>
+          <ul style={{lineHeight: '38px', fontSize: '17px'}}>
+            <li>Increase your revenue</li>
+            <li>Find the right solution for you</li>
+            <li>Learn about our pricing</li>
+          </ul>
+        </div>
+        <div className="form-box">
+          <label for="inp" class="inp">
+            <input type="text" id="inp" placeholder="&nbsp;" />
+            <span class="label">Name</span>
+            <span class="focus-bg"></span>
+          </label>
+          <div className="d-flex">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" />
+              <span class="label">Email</span>
+              <span class="focus-bg"></span>
+            </label>
+            {/* underline changes */}
+            <label for="inp" class="inp ">
+              <input type="text" id="inp" placeholder="&nbsp;" />
+              {/* //add +91 */}
+              <span class="label"> Phone Number</span>
+              <span class="focus-bg"></span>
+            </label>
           </div>
-          <div className="form">
-            <Form>
-              <Form.Group className="mb-3">
-                <Form.Control type="text" placeholder="Name" />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Control type='text' placeholder="Company Name" />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Control type='text' placeholder="Designation" />
-              </Form.Group>
-            </Form>
-          </div>
-          <div className="form">
-            <Form>
-              <Form.Group className="mb-3">
-                <Form.Control type="number" placeholder="Phone Number" />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Control type='email' placeholder="Email" />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Control type='text' placeholder="Country" />
-              </Form.Group>
-            </Form>
-          </div>
+          <label for="inp" class="inp">
+            <input type="text" id="inp" placeholder="&nbsp;" />
+            <span class="label">Subject</span>
+            <span class="focus-bg"></span>
+          </label>
 
-          <Form.Group controlId="subject" className="subject">
-            <Form.Control type="text" placeholder="Subject" aria-describedby="passwordHelpBlock" />
-          </Form.Group>
-
-          <Form.Group controlId="exampleForm.ControlTextarea1">
-            <Form.Control as="textarea" placeholder='Message' rows={6} />
-          </Form.Group>
-          <input class="btn btn-primary submit grow" type="submit" value="Submit" />
+          <label for="inp" class="inp">
+            <input type="text" id="inp" placeholder="&nbsp;" />
+            <span class="label">Message</span>
+            {/* //big size extent with text */}
+            <span class="focus-bg"></span>
+          </label>
+          <div class="input-group">
+              <button class="btn btn-primary submit" type="submit">
+                <span>Submit </span>
+              </button>
+          </div>
         </div>
       </div>
       <div className="location container">
-        <h1 className='location-name'>Locations</h1>
+        <h1 className='location-name'>Head Office</h1>
         <div className="offices">
-          <div className="row">
-            <div className="col-md-6">
-              <LocationCard
-                title="Hyderabad , HEAD OFFICE"
-                address="12th Floor, DSL ABACUS IT PARK , UPPAL, Hyderabad, Telangana, India-500 039"
-              />
-            </div>
-            <div className="col-md-6">
-              <LocationCard
-                title="Bangalore , BRANCH OFFICE"
-                address="House No: 114, 52/1 , 2nd Floor, Krishna Reddy Building , 24th Main Road , HSR Layout, 2nd Sector"
-              />
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-6">
-              <LocationCard
-                title="Kolkata , BRANCH OFFICE"
-                address="Balaji Apartment, Kalitala PO, Nawab Ganj, Ichapur , North 24 Paraganas , Kolkatta , West Bengal , India"
-              />
-            </div>
-            <div className="col-md-6">
-              <LocationCard
-                title="Delhi , BRANCH OFFICE"
-                address="House No : 07, Second Floor, Vinoba Puri, Lajpat Nagar-2, New Delhi - 110024"
-              />
-            </div>
-          </div>
-          <p>
-            <b>Ph : </b>
-            <a href="tel:+914027153387">040-27153387 </a>,
-            <a href="tel:+919397005115"> 9397005115 </a>,
-            <a href="tel:+918800630726"> 8800630726 </a>,
-            <a href="tel:+919441234471"> 9441234471 </a>
-          </p>
-
+          <LocationCard
+            title="Hyderabad"
+            address="12th Floor, DSL ABACUS IT PARK , UPPAL, Hyderabad, Telangana, India-500 039"
+          />
         </div>
+        <h1 className='location-name'>Other Branches</h1>
+        <div className="offices">
+
+          <LocationCard
+            title="Bangalore"
+            address="D No: 114, 52/1 , 2nd Floor, Krishna Reddy Building , 24th Main Road , HSR Layout, 2nd Sector"
+          />
+
+          <LocationCard
+            title="Kolkata"
+            address="Balaji Apartment, Kalitala PO, Nawab Ganj, Ichapur , North 24 Paraganas , Kolkatta , West Bengal , India"
+          />
+
+          <LocationCard
+            title="Delhi"
+            address="House No : 07, Second Floor, Vinoba Puri, Lajpat Nagar-2, New Delhi - 110024"
+          />
+        </div>
+        <p style={{marginBottom: '60px'}}>
+          <b>Ph : </b>
+          <a href="tel:+914027153387">040-27153387 </a>,
+          <a href="tel:+919397005115"> 9397005115 </a>,
+          <a href="tel:+918800630726"> 8800630726 </a>,
+          <a href="tel:+919441234471"> 9441234471 </a>
+        </p>
       </div>
-    </div>
+    </div >
   );
 };
 
 export default Contact;
+
