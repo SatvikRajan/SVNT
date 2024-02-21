@@ -21,7 +21,7 @@
 .navbar.hidden:hover {
   transform: translateY(0);
 }
-.custom-nav-link{
+.nav-link:hover{
   background: linear-gradient(135deg, #251741, #5023AA);
   color: white !important;
   font-weight: 200 !important;
@@ -162,6 +162,7 @@ form {
   padding: 40px;
 }
 .offices {
+  letter-spacing: 0.1px;
   border-radius: 20px;
   justify-content: center;
   display: flex;

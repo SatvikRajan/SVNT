@@ -54,7 +54,7 @@ export const CareersPage = () => {
         <div className="jobs">
           <div className="jobs1 justify-content-center d-flex flex-row mb-5" style={{ gap: '50px' }}>
             {[1, 2, 3].map((index) => (
-              <div key={index} className="card card1" style={{ width: '22rem', height: '11rem' }}>
+              <div key={index} className="card card1">
                 <div className="card-body">
                   <h5 className="card-title">564 - Senior Software Engineer</h5>
                   <h6 className="card-subtitle mb-2 text-body-secondary">Pune (On Site)</h6>
@@ -65,7 +65,7 @@ export const CareersPage = () => {
           </div>
           <div className="justify-content-center d-flex flex-row" style={{ gap: '50px' }}>
             {[4, 5, 6].map((index) => (
-              <div key={index} className="card card1" style={{ width: '22rem', height: '11rem' }}>
+              <div key={index} className="card card1">
                 <div className="card-body">
                   <p className="card-title">564 - Senior Software Engineer</p>
                   <p className="card-subtitle mb-2 text-body-secondary">Pune (On Site)</p>

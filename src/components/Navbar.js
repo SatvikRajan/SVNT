@@ -47,7 +47,7 @@ const Navbar = () => {
                             <NavItem href="industries">Industries</NavItem>
                             <NavItem href="services">Services</NavItem>
                             <NavItem href="careers">Careers</NavItem>
-                            <NavItem customClass="custom-nav-link" href="contact">Contact Us</NavItem>
+                            <NavItem href="contact">Contact Us</NavItem>
                         </ul>
                     </div>
                 </div>
@@ -56,9 +56,9 @@ const Navbar = () => {
     );
 };
 
-const NavItem = ({ href, children, customClass}) => (
+const NavItem = ({ href, children}) => (
     <li className="nav-item">
-        <a className={`nav-link ${customClass}`} href={href}>
+        <a className={'nav-link'} href={href}>
             {children}
         </a>
     </li>
