@@ -21,8 +21,9 @@
 .navbar.hidden:hover {
   transform: translateY(0);
 }
-.nav-link:hover{
-  background: linear-gradient(135deg, #251741, #5023AA);
+.nav-link:hover,
+.nav-link:active {
+  background: linear-gradient(135deg, #251741, #5023AA) !important;
   color: white !important;
   font-weight: 200 !important;
 }
@@ -34,6 +35,7 @@
     padding: 10px;
 }
 .nav-link {
+  transition: background 0.6s ease-in-out, color 0.6s ease-in-out, font-weight 0.2s ease-in;
   letter-spacing: 0.1px !important;
   display: flex;
   align-items: center;
@@ -63,10 +65,11 @@ svg.btn.search {
 }
 
 .text {
+  /* background-image: url('./images/madeleine-ragsdale-j0i8M-2aTPE-unsplash\ 1.png'); */
   text-shadow: 2px 2px 5px black;
   position: absolute;
   top: 22%;
-  left: 37%;
+  left: 35%;
   color: white;
   font-size: 48px;
   font-weight: 600;
@@ -78,6 +81,10 @@ svg.btn.search {
   text-align: center;
   width: 100%;
   background-color: #f8f9ff;
+  gap: 8rem;
+  padding: 6rem;
+  display: flex;
+  justify-content: center;
 }
 
 .form-text {
@@ -158,7 +165,6 @@ form {
   text-align: center;
 }
 .location-name {
-  margin-left: 100px;
   padding: 40px;
 }
 .offices {
@@ -195,21 +201,33 @@ a:hover {
 }
 
 .career-text1{
+  width: 30%;
+  text-shadow: 2px 2px 5px black;
   text-align: start;
   position: absolute;
   color: white;
-  font-size: 38px;
-  top: 45%;
+  font-size: 35px;
+  top: 35%;
   left: 5%;
   font-weight: 600;
 }
 .career-text2{
+  text-shadow: 2px 2px 5px black;
   font-size: 18px;
   position: absolute;
+  font-weight: 600;
   color: white;
-  top: 60%;
+  top: 48%;
   left: 5%;
   font-weight: 300;
+}
+.explore{
+  text-decoration: underline;
+  position: absolute;
+  color: white;
+  top: 55%;
+  left: 5%;
+  font-size: 19px;
 }
 .career-image{
   position: relative;
@@ -274,54 +292,67 @@ a:hover {
   color: #251741;
   border-radius: 100px;
   background: #F5F5F5;
-}
-.flipSide-180{
-  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
-  border-radius: 20px;
-  background-color: #F8F9FF;
-}
-.flip-card {
-  border: none;
-  background-color: none;
-  width: 300px;
-  height: 200px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
+}.location-card {
   position: relative;
+  width: 25rem;
+  height: 10rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-position 0.3s;
+}
+
+.location-card:hover {
+  background-position: 0% 100%;
+  color: #fff;
+}
+
+.card-content {
   width: 100%;
   height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+.front,
+.back {
+  flex: 1;
 }
 
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.back {
+  background-color: #1095c1;
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
+  height: 200%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateY(0%);
+  transition: transform 0.3s;
 }
 
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  color: black;
+.location-card:hover .back {
+  transform: translateY(-100%);
 }
 
-/* Style the back side */
-.flip-card-back {
-  color: white;
-  transform: rotateY(180deg);
+.icons {
+  display: flex;
+  justify-content: space-around;
 }
+
+.copy-notification {
+  color: #fff;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.location-card:hover .copy-notification {
+  color: #fff;
+}
+
 .about-us-page {
   background-color: #ffffff;
   height: 5441px;
@@ -809,12 +840,6 @@ a:hover {
   top: 0 !important;
 }
 
-.form-body{
-  gap: 6rem;
-  padding: 6rem;
-  display: flex;
-  justify-content: center;
-}
 .form-box{
   border-radius: 20px;
   padding: 20px;
@@ -827,15 +852,15 @@ a:hover {
   display: flex;
 }
 .write{
-  margin-top: 20px;
+  margin-top: 17px;
   text-align: start;
 }
 .write1{
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 400;
 }
 p.write1{
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .inp {
   padding-left: 10px;

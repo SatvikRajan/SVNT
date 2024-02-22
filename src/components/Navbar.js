@@ -3,7 +3,12 @@ import Logo from '../images/logo.png';
 
 const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [activeLink, setActiveLink] = useState(null);
 
+    const handleNavLinkClick = (href) => {
+        setActiveLink(href);
+        // Add logic for other click actions if needed
+    };
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
@@ -58,7 +63,7 @@ const Navbar = () => {
 
 const NavItem = ({ href, children}) => (
     <li className="nav-item">
-        <a className={'nav-link'} href={href}>
+        <a className={'nav-link'} href={href} activeClassName="active">
             {children}
         </a>
     </li>

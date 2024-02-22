@@ -11,6 +11,7 @@ const Contact = () => {
 
       <div className="form-body">
         <div className="write" >
+          <h1 style={{color: '#0E1513', marginBottom: '22px', fontSize: '30px'}}>Company Timeline</h1>
           <p className='write1'>Feel free to contact us for inquiries,<br/> feedback, or just a quick hello !</p>
           <ul style={{lineHeight: '38px', fontSize: '17px'}}>
             <li>Increase your revenue</li>
@@ -24,7 +25,7 @@ const Contact = () => {
             <span class="label">Name</span>
             <span class="focus-bg"></span>
           </label>
-          <div className="d-flex">
+          <div className="d-flex" style={{gap: '15px'}}>
             <label for="inp" class="inp">
               <input type="text" id="inp" placeholder="&nbsp;" />
               <span class="label">Email</span>
