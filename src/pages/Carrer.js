@@ -16,7 +16,7 @@ const DomainCard = ({ imgSrc, title, description }) => (
     </div>
     <div className="p-2 text-start">
       <h4 >{title}</h4>
-      <p style={{}}>{description}</p>
+      <p>{description}</p>
     </div>
   </div>
 );
@@ -49,30 +49,6 @@ export const CareersPage = () => {
           <div className="d-flex" style={{marginLeft: '200px', marginRight: '200px'}}>
             <DomainCard imgSrc={img5} title="Diversity and Inclusion" description="We celebrate diversity of thought, cultures, backgrounds, and perspectives, strengthening us." />
             <DomainCard imgSrc={img6} title="Health and Wellness" description="We prioritize employees' health with comprehensive medical plans and benefits." />
-          </div>
-        </div>
-        <div className="jobs">
-          <div className="jobs1 justify-content-center d-flex flex-row mb-5" style={{ gap: '50px' }}>
-            {[1, 2, 3].map((index) => (
-              <div key={index} className="card card1">
-                <div className="card-body">
-                  <h5 className="card-title">564 - Senior Software Engineer</h5>
-                  <h6 className="card-subtitle mb-2 text-body-secondary">Pune (On Site)</h6>
-                  <a href="*/" className="card-link">Apply Now &rarr;</a>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="justify-content-center d-flex flex-row" style={{ gap: '50px' }}>
-            {[4, 5, 6].map((index) => (
-              <div key={index} className="card card1">
-                <div className="card-body">
-                  <p className="card-title">564 - Senior Software Engineer</p>
-                  <p className="card-subtitle mb-2 text-body-secondary">Pune (On Site)</p>
-                  <a href="*/" className="card-link">Apply Now &rarr;</a>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
         <div className="d-flex flex-row invite">

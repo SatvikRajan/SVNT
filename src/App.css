@@ -9,6 +9,7 @@
   top: 5px ;
   z-index: 1000;
   transition: transform 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 .navbar.hidden {
   transform: translateY(-100%);
@@ -915,4 +916,26 @@ p.write1{
 
 .label{
 
+}
+
+
+/* Services CSS */
+.services{
+  margin-top: 8rem;
+}
+
+.service-box{
+  border-radius: 20px;
+  gap: 4rem;
+  line-height: 30px;
+  margin: 5rem;
+  padding: 5rem;
+  background-color: #E7E8FF;
+}
+.service-box1{
+  line-height: 36px;
+  font-size: 24px;
+}
+.service-boxhead{
+  margin-bottom: 3vh;
 }
