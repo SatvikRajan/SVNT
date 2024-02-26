@@ -5,6 +5,7 @@ import imagedit1 from '../images/imageedit_1_6185240469 1.png'
 import adityabirla from '../images/aditya-birla.jpg'
 import vedanta from '../images/vedanta.jpg'
 import caire from '../images/claire.png'
+import image15 from '../images/image 15.png'
 export const About = () => {
     return (
         <div className="about-us-page" style={{marginTop: '-53px'}}>
@@ -36,12 +37,12 @@ export const About = () => {
                                         alt="Aditya birla group"
                                         src={adityabirla}
                                     />
-                                    <img className="image" alt="Image" src="image-12-2.png" />
+                                    <img className="image" alt="Image" src="" />
                                 </div>
                                 <img className="ITC-limited-logo" alt="Itc limited logo" src="ITC-limited-logo-1-2.svg" />
                                 <img className="image-2" alt="Image" src=""/>
-                                <img className="image-3" alt="Image" src={vedanta}  />
-                                <img className="image-4" alt="Image" src="image-15.png" />
+                                <img style={{border: "2px solid black"}} className="image-3" alt="Image" src={vedanta}  />
+                                <img className="image-4" alt="Image" src={image15} />
                                 <img className="image-5" alt="Image" src="image-16.png" />
                                 <img className="LAURUSLABS" alt="Lauruslabs" src="LAURUSLABS-1.png" />
                             </div>

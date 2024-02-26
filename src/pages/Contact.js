@@ -67,8 +67,7 @@ const Contact = () => {
           />
         </div>
         <h1 className='location-name'>Other Branches</h1>
-        <div className="offices">
-
+        <div className="offices1">
           <LocationCard
             title="Bangalore"
             address="D No: 114, 52/1 , 2nd Floor, Krishna Reddy Building , 24th Main Road , HSR Layout, 2nd Sector"

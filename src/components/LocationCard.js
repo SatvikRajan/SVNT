@@ -26,8 +26,8 @@ const LocationCard = ({ title, address }) => {
         >
             <div className="card-content">
                 <div className="front">
-                    <h3>{title}</h3>
-                    <p>{address}</p>
+                    <h3 className='location-cardtitle'>{title}</h3>
+                    <p className='location-cardaddress'>{address}</p>
                 </div>
                 <div className="back">
                     <h3>{title}</h3>
