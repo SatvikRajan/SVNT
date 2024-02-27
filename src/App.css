@@ -194,7 +194,9 @@ form {
   border-radius: 20px;
   justify-content: center;
   display: flex;
+  gap: 30px;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 .card-title {
   font-weight: 600;
@@ -407,7 +409,7 @@ a:hover {
 }
 .about-us-page {
   background-color: #ffffff;
-  height: 5441px;
+  height: 5160px;
   overflow: hidden;
   position: relative;
   width: 1920px;
@@ -439,6 +441,7 @@ a:hover {
 }
 
 .about-us-page .overlap-6 {
+  margin-left: -90px;
   background-color: #ffffff;
   height: 1082px;
   position: relative;
@@ -538,6 +541,7 @@ a:hover {
 
 .about-us-page .henry-co-AW-p {
   height: 681px;
+  object-fit: cover;
   left: 5px;
   position: absolute;
   top: 0;
@@ -556,9 +560,16 @@ a:hover {
   top: 119px;
   white-space: nowrap;
 }
-
+.video{
+  filter: blur(4px);
+  height: 14%;
+  width: 100%;
+  object-fit: cover;
+  top: 86rem;
+  position: absolute;
+}
 .about-us-page .group-9 {
-  background-color: #f8f9ff;
+  background: linear-gradient(135deg, #E2E4F4, #CDD4FD) !important;
   height: 1103px;
   left: 0;
   position: absolute;
@@ -568,7 +579,7 @@ a:hover {
 
 .about-us-page .group-10 {
   height: 423px;
-  left: 342px;
+  left: 235px;
   position: absolute;
   top: 83px;
   width: 1371px;
@@ -681,10 +692,12 @@ a:hover {
   position: relative;
   width: 220px;
 }
-
+.imageedit:hover{
+  filter: grayscale(100%);
+}
 .about-us-page .group-16 {
   height: 423px;
-  left: 342px;
+  left: 235px;
   position: absolute;
   top: 575px;
   width: 1371px;
@@ -812,9 +825,9 @@ a:hover {
 
 .about-us-page .SVNT-infotech-pvt {
   color: #000000;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 400;
-  left: 372px;
+  left: 266px;
   letter-spacing: -0.56px;
   line-height: 44.8px;
   position: absolute;
@@ -824,7 +837,7 @@ a:hover {
 
 .about-us-page .group-20 {
   height: 713px;
-  left: 374px;
+  left: 292px;
   position: absolute;
   top: 2152px;
   width: 1270px;
@@ -1022,4 +1035,46 @@ p.write1{
 }
 .service-boxhead{
   margin-bottom: 3vh;
+}
+
+/* About */
+.timeline-container {
+  overflow-x: scroll;
+  white-space: nowrap;
+  display: flex;
+}
+
+.timeline-item {
+  width: calc(100% / var(--timeline-item-count));
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.date-range,
+h3,
+p {
+  margin-bottom: 0.5rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem;
+}
+
+.pagination li {
+  margin: 0 0.5rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.pagination button.active {
+  background-color: #eee;
 }
