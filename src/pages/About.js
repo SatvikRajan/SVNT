@@ -11,7 +11,9 @@ import lauru from '../images/LAURUSLABS 1.png'
 import ITC from '../images/itc.png'
 import image13 from '../images/image 13.png'
 import image16 from '../images/image 16.png'
+import Timeline from "../components/Timeline";
 export const About = () => {
+  
   return (
     <div className="about-us-page" style={{ marginTop: "-94px" }}>
       <div className="overlap-4">
