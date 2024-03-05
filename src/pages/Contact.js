@@ -1,11 +1,11 @@
 import React from 'react';
 import LocationCard from '../components/LocationCard';
-import hand from '../images/hand.mp4'
+import contact from '../images/contact.jpg'
 const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-image-container">
-        <video src={hand} autoPlay className=" contact-image" />
+        <img src={contact} className='contact-image' alt="" />
         <div className="text">How may we help you?</div>
       </div>
 

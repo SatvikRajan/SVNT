@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Logo from '../images/logo.png';
-
+// NAvbar issue
 const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [activeLink, setActiveLink] = useState(null);

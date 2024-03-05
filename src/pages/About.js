@@ -6,12 +6,13 @@ import adityabirla from "../images/aditya-birla.jpg";
 import vedanta from "../images/vedanta.jpg";
 import caire from "../images/claire.png";
 import image15 from "../images/image 15.png";
-import video from '../images/video.mp4'
 import lauru from '../images/LAURUSLABS 1.png'
 import ITC from '../images/itc.png'
 import image13 from '../images/image 13.png'
 import image16 from '../images/image 16.png'
-import Timeline from "../components/Timeline";
+import cloud from '../images/chris-nguyen-lbmrrNgq2lo-unsplash 2.png'
+
+import Timeline from '../components/Timeline'
 export const About = () => {
   
   return (
@@ -61,7 +62,6 @@ export const About = () => {
                 />
                 <img className="image-2" alt="Image" src={image13} />
                 <img
-                  style={{ border: "2px solid black" }}
                   className="image-3"
                   alt="Image"
                   src={vedanta}
@@ -233,9 +233,29 @@ export const About = () => {
         <div className="timeline">
             <h1>Company Timeline</h1>
             <div class="video-container">
-                <video className="video" src={video} autoPlay loop></video>
+                <img src={cloud} className="cloud" alt="" />
                 <div class="content">
+                  <div class="text-container">
+                    <div class="part" style={{marginLeft: '35px'}}>
+                      <span>
+                        <h2>2000 - 2003</h2>
+                        <h3>Company Spinout</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                      </span>
+                    </div>
+                    <div class="part" style={{ position: 'absolute', top: "120%", left: "35%"}}>
+                      <span><h2>2000 - 2003</h2>
+                        <h3>Company Spinout</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p></span>
+                    </div>
+                    <div class="part" style={{marginRight: '100px'}}>
+                      <span><h2>2000 - 2003</h2>
+                        <h3>Company Spinout</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p></span>
+                    </div>
+                  </div>
                 </div>
+
             </div>
         </div>
         <div className="group-20">

@@ -11,6 +11,13 @@
   transition: transform 0.3s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
+
+/* .nav-link:focus {
+  border-radius: 20px;
+  background: linear-gradient(135deg, #251741, #5023AA) !important;
+  color: white !important;
+  font-weight: 200 !important;
+} */
 .navbar.hidden {
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
@@ -22,21 +29,18 @@
 .navbar.hidden:hover {
   transform: translateY(0);
 }
-.nav-link:hover,
-.nav-link:active {
-  background: linear-gradient(135deg, #251741, #5023AA) !important;
-  color: white !important;
-  font-weight: 200 !important;
-}
 .logo-font {
   font-size: 10px;
   text-align: right;
 }
 .nav-item{
     padding: 10px;
+    position: relative;
 }
 .nav-link {
-  transition: background 0.6s ease-in-out, color 0.6s ease-in-out, font-weight 0.2s ease-in;
+  /* transition: background 0.6s ease-in-out, color 0.6s ease-in-out, font-weight 0.2s ease-in; */
+  transition: color 0.3s, border-bottom-color 0.3s; 
+  position: relative;
   letter-spacing: 0.1px !important;
   display: flex;
   align-items: center;
@@ -44,13 +48,62 @@
   justify-content: center;
   text-align: center;
   width: 110px;
-  background-color: #E7E8FF;
-  border-radius: 30px;
   font-size: 13px;
   font-weight: bold;
   color: black;
   text-decoration: none;
 }
+
+/* Underline styles */
+.nav-link {
+  display: inline-block;
+  position: relative;
+  color: black; /* Default color */
+  text-decoration: none;
+}
+
+/* Fade in */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #000000;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  opacity: 1;
+  transform: translateY(0.2em);
+}
+
+/* Slide in */
+.nav-link::after {
+  opacity: 1;
+  transform: translateX(-100%);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  transform: translateX(0);
+}
+
+/* Scale from center */
+.nav-link::after {
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  transform: scale(1);
+}
+
 svg.btn.search {
   height: 30px;
   width: 50px;
@@ -80,8 +133,9 @@ svg.btn.search {
   /* background-image: url('./images/madeleine-ragsdale-j0i8M-2aTPE-unsplash\ 1.png'); */
   text-shadow: 2px 2px 5px black;
   position: absolute;
-  top: 22%;
-  left: 35%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   font-size: 48px;
   font-weight: 600;
@@ -281,14 +335,6 @@ a:hover {
 .card-link:hover{
   color: white;
 }
-.jobs{
-  background-color: #F8F9FF;
-  margin-top: 100px;
-  padding-bottom: 100px;
-}
-.jobs1{
-  padding-top: 100px;
-}
 .card1{
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   border-left: 5px solid #1F8BED;
@@ -297,23 +343,6 @@ a:hover {
   justify-content: center;
   padding: 100px;
   gap: 30px;
-}
-.view-jobs{
-  gap: 20px;
-  width: 50%;
-  max-width: 100%;
-  font-size: 20px;
-  background-color: #251741;
-  padding: 10px;
-  color: white;
-  border-radius: 40px;
-  transition: gap 0.3s ease, background 0.3s ease; /* Added transition */
-}
-.view-jobs:hover{
-  gap: 10px;
-  color: #251741;
-  border-radius: 100px;
-  background: #F5F5F5;
 }
 .location-card {
   background: linear-gradient(#F8F9FF, #FFFFFF);
@@ -849,6 +878,7 @@ a:hover {
 
 .about-us-page .text-wrapper-21 {
   color: #000000;
+  font-weight: 600 !important;
   font-size: 54px;
   font-weight: 500;
   left: 124px;
@@ -1006,7 +1036,6 @@ p.write1{
 
 .recruit{
   text-align: center;
-  margin-top: 5rem;
 }
 
 .recruit-handle{
@@ -1033,98 +1062,217 @@ p.write1{
   margin-bottom: 3vh;
 }
 
-/* About */
-.timeline-container {
-  overflow-x: scroll;
-  white-space: nowrap;
-  display: flex;
-}
-
-.timeline-item {
-  width: calc(100% / var(--timeline-item-count));
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
-}
-
-.date-range,
-h3,
-p {
-  margin-bottom: 0.5rem;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 1rem;
-}
-
-.pagination li {
-  margin: 0 0.5rem;
-}
-
-.pagination button {
-  padding: 0.5rem 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.pagination button.active {
-  background-color: #eee;
-}
-
 .recruitment{
+  padding-top: 5rem;
   background-image: url(./images/bg.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top; 
+  background-position: center 60%;
 }
 .dropdown {
+  width: 50%;
   height: 100vh;
+  margin-left: 10rem;
+  margin-top: 2rem;
 }
 
 .recruit-handle{
   margin-bottom: 80px;
 }
 
-.menu {
-  border-radius: 20px;
-  margin: 0 auto;
+.dropdown-toggle, .dropdown-toggle:focus, .dropdown-toggle:active, .dropdown-toggle:hover{
+  text-align: left;
+  border-radius: 10rem;
+  padding-left: 50px;
+  background-color: white;
+  color: #0E1513;
+  border: none;
+  width: 50%;
   position: relative;
-  width: 200px;
+  z-index: 2;
+  transition: margin-top 1s;
+  letter-spacing: 0px;
 }
 
-.menu > li > a {
-  background: blue;
-  color: #fff;
+.btn:first-child:active{
+  color: #0E1513 ;
+  border: none;
+  background-color: white;
+
+}
+.btn.show{
+  background-color: white;
+  color: black;
+}
+
+ul.dropdown-menu.show{
+  line-height: 35px !important;
+  padding-top: 30px;
+  z-index: 1;
+  border: none;
+  background-color: #FFFFFF;
+  width: 50%;
+  margin: -24px 0px !important;
+  transition: all 1s;
+  opacity: 0.7;
+  letter-spacing: 0px;
+}
+
+.dropdown-toggle::after{
+  content: none;
+}
+.cloud{
+  background-size: cover;
+  top: 85rem;
+  position: absolute;
+}
+
+
+.jobs{
+  margin-left: 8rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.job-des{
+  height: 40rem;
+  margin-top: 2rem;
+  margin-left: -22rem;
+  padding: 30px;
+  padding-left: 40px;
+  width: 35%;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.job-requirments{
+  list-style-type: none;
+}
+
+ul.job-requirements{
+  letter-spacing: 0px;
+  line-height: 35px;
+  list-style-type: none;
+  padding-left: 0rem !important;
+}
+
+.apply::before {
+  content: "";
+  position: absolute;
   display: block;
-  padding: 10px 20px;
-  text-align: center;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+.apply {
+  position: relative;
+  color: #000;
   text-decoration: none;
 }
 
-.menu ul {
-  list-style-type: none !important;
-  background: #ddd;
-  height: 0;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  transition: all .5s ease;
-  top: 35px;
+
+.video-container {
+  position: relative;
   width: 100%;
+  margin: 0 auto;
 }
 
-.menu li:hover ul {
-  height: 200px;
-  opacity: 1;
-  transform: translateY(0);
+.cloud {
+  width: 100%;
+  height: auto;
 }
 
-.menu ul a {
-  color: #000;
-  display: block;
-  padding: 5px 20px;
+.content {
+  position: absolute;
+  top: 1600px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+
+.text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid black;
+  width: 95%;
+  padding: 10px 0; /* Adjust as needed */
+  position: relative;
+}
+
+.part {
+  width: 25%;
+}
+
+.text-container::before,
+.text-container::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.text-container::before {
+  left: -15px; /* Adjust to position the circle at the start */
+}
+
+.text-container::after {
+  right: -15px; /* Adjust to position the circle at the end */
+}
+
+.part:nth-child(1)::before{
+  content: "";
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+  left: 30%; /* Adjust to position the circle at the partition */
+}
+
+.part:nth-child(2)::before{
+  content: "";
+  position: absolute;
+  top: -22%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+  left: 110%; 
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination span {
+  margin: 0 5px;
+  font-weight: bold;
 }

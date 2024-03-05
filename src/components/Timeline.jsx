@@ -1,42 +1,33 @@
-import React, { useState, useRef, useEffect } from 'react';
-import video from '../images/video.mp4'
-const Timeline = ({ video, contentData }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const contentRef = useRef(null);
+import React, { useState } from 'react';
+import cloud from './cloud.jpg';
 
-  const handleNext = () => {
-    const nextIndex = (currentIndex + 1) % contentData.length;
-    setCurrentIndex(nextIndex);
+const ImageTextPagination = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = 3; // Assuming you have 3 pages
+
+  const prevPage = () => {
+    setCurrentPage(prevPage => (prevPage === 1 ? totalPages : prevPage - 1));
   };
 
-  const handlePrev = () => {
-    const prevIndex = (currentIndex - 1 + contentData.length) % contentData.length;
-    setCurrentIndex(prevIndex);
+  const nextPage = () => {
+    setCurrentPage(prevPage => (prevPage === totalPages ? 1 : prevPage + 1));
   };
-
-  useEffect(() => {
-    // Handle content fading transitions
-    contentRef.current.style.opacity = 0; 
-
-    // Small delay to allow for fade out before fading in
-    setTimeout(() => {
-      contentRef.current.style.opacity = 1;
-    }, 200); 
-  }, [currentIndex, contentData]);
 
   return (
-    <div className="timeline">
-      <h1>Company Timeline</h1>
-      <div className="video-container">
-        <video className="video" src={video} autoPlay loop muted /> {/* Add muted to prevent audio overlap */}
-        <div className="content" ref={contentRef} style={{ transition: 'opacity 0.5s ease-in-out' }}>
-          {contentData[currentIndex]}
+    <div className="video-container">
+      <img src={cloud} className="cloud" alt="" />
+      <div className="content">
+        <p style={{ display: currentPage === 1 ? 'block' : 'none' }}>This is page 1</p>
+        <p style={{ display: currentPage === 2 ? 'block' : 'none' }}>This is page 2</p>
+        <p style={{ display: currentPage === 3 ? 'block' : 'none' }}>This is page 3</p>
+        <div className="pagination">
+          <button onClick={prevPage}>Prev</button>
+          <span>{currentPage} of {totalPages}</span>
+          <button onClick={nextPage}>Next</button>
         </div>
       </div>
-      <button onClick={handlePrev}>Prev</button>
-      <button onClick={handleNext}>Next</button>
     </div>
   );
 };
 
-export default Timeline;
+export default ImageTextPagination;
