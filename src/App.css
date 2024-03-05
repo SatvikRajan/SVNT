@@ -438,7 +438,7 @@ a:hover {
 }
 .about-us-page {
   background-color: #ffffff;
-  height: 5160px;
+  height: 5000px;
   overflow: hidden;
   position: relative;
   width: 1920px;
@@ -567,7 +567,6 @@ a:hover {
   top: 117px;
   width: 687px;
 }
-
 .about-us-page .henry-co-AW-p {
   height: 681px;
   object-fit: cover;
@@ -587,6 +586,18 @@ a:hover {
   position: absolute;
   top: 119px;
   white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.img-container:hover {
+  background-color: black;
+}
+.img-container:hover::before {
+  content: "You are under surveillance";
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 24px;
 }
 .video{
   filter: blur(4px);
@@ -1139,7 +1150,7 @@ ul.dropdown-menu.show{
   margin-left: -22rem;
   padding: 30px;
   padding-left: 40px;
-  width: 35%;
+  width: 39%;
   border-radius: 20px;
   background-color: white;
 }
@@ -1169,11 +1180,32 @@ ul.job-requirements{
   transition: transform 0.3s ease;
 }
 .apply {
+  display: inline-block;
+  top: 40px;
+  font-size: 20px;
   position: relative;
   color: #000;
   text-decoration: none;
+  border-bottom: 2px solid black;
+  width: 100%;
+  padding-bottom: 5px; /* Adjust padding as needed */
 }
 
+.apply::after {
+  float: right;
+  content: "";
+  width: 30px; /* Adjust the width of the SVG */
+  height: 20px; /* Adjust the height of the SVG */
+  background: url('./images/Vector.svg') no-repeat;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s; /* Transition opacity and transform over 0.5 seconds */
+  transform: translateX(-10px); /* Initially move the arrow to the left */
+}
+
+.apply:hover::after {
+  opacity: 1; /* Fade in the SVG on hover */
+  transform: translateX(0); /* Move the arrow back to its original position */
+}
 
 .video-container {
   position: relative;
@@ -1217,7 +1249,7 @@ ul.job-requirements{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: black;
+  background-color: #251741;
 }
 
 .text-container::before {
@@ -1225,7 +1257,11 @@ ul.job-requirements{
 }
 
 .text-container::after {
-  right: -15px; /* Adjust to position the circle at the end */
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='30' viewBox='0 0 20 34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.82735 33.8939L0.34375 31.4103L14.7543 16.9997L0.34375 2.58907L2.82735 0.105469L19.7215 16.9997L2.82735 33.8939Z' fill='white'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: -15px; 
 }
 
 .part:nth-child(1)::before{
@@ -1236,8 +1272,8 @@ ul.job-requirements{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: black;
-  left: 30%; /* Adjust to position the circle at the partition */
+  background-color: #251741;
+  left: 30%;
 }
 
 .part:nth-child(2)::before{
@@ -1248,7 +1284,7 @@ ul.job-requirements{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: black;
+  background-color: #251741;
   left: 110%; 
 }
 
@@ -1275,4 +1311,41 @@ ul.job-requirements{
 .pagination span {
   margin: 0 5px;
   font-weight: bold;
+}
+
+
+.clients{
+  top: 4100px;
+  left: 265px;
+  position: relative;
+}
+
+.me {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-self: center;
+}
+
+.client-img1{
+  width: 14%;
+  gap: 58px;
+}
+.client-img2{
+  margin-left: 40px;
+  gap: 100px;
+  width: 47%;
+}
+.client-img3{
+  margin-top: 40px;
+  width: 33%;
+  margin-left: 61px;
+  gap: 170px;
+}
+.nested-skills{
+  margin-left: 184px;
+  list-style-type: disc;
+  margin-top: -36px;
+  font-size: 15px;
+  letter-spacing: 0px;
 }
