@@ -26,10 +26,9 @@ export const CareersPage = () => {
           <div className="career-text2">
             We believe in your Ideas, We believe in You
           </div>
-          <div className="explore">Explore Now</div>
         </div>
 
-        <div className="recruitment">
+        <div id="recruitment" className="recruitment">
           <div className="recruit">
             <h1>Shape our Future Together!</h1>
             <p className="recruit-handle">
@@ -167,7 +166,7 @@ export const CareersPage = () => {
           <div className="d-flex flex-row invite">
             <div>
               <img
-                style={{ maxWidth: "100%", borderRadius: "20px" }}
+                style={{ maxWidth: "100%",marginRight:'80px', borderRadius: "20px" }}
                 src={invite}
                 alt=""
               />
@@ -195,7 +194,6 @@ export const CareersPage = () => {
                   textDecoration: "underline",
                 }}
               >
-                Explore Now
               </p>
             </div>
           </div>

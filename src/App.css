@@ -12,12 +12,13 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
-/* .nav-link:focus {
+.nav-link:active {
   border-radius: 20px;
   background: linear-gradient(135deg, #251741, #5023AA) !important;
   color: white !important;
   font-weight: 200 !important;
-} */
+}
+
 .navbar.hidden {
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
@@ -146,7 +147,7 @@ svg.btn.search {
 .form-body {
   text-align: center;
   width: 100%;
-  background-color: #f8f9ff;
+  background-color: #E7E8FF;
   gap: 10rem;
   padding: 6rem;
   display: flex;
@@ -296,12 +297,44 @@ a:hover {
   font-weight: 300;
 }
 .explore{
-  text-decoration: underline;
+  border-bottom: 2px solid white;
   position: absolute;
   color: white;
   top: 55%;
   left: 5%;
   font-size: 19px;
+}
+.explore::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+.explore::after {
+  float: right;
+  content: "";
+  filter: invert();
+  width: 30px; /* Adjust the width of the SVG */
+  height: 20px; /* Adjust the height of the SVG */
+  background: url('./images/Vector.svg') no-repeat;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s; /* Transition opacity and transform over 0.5 seconds */
+  transform: translateX(-10px); /* Initially move the arrow to the left */
+}
+
+.explore:hover::after {
+  color: white;
+  margin-left: 20px;
+  filter: invert();
+  opacity: 1; /* Fade in the SVG on hover */
+  transform: translateX(0); /* Move the arrow back to its original position */
 }
 .career-image {
   position: relative;
@@ -340,6 +373,7 @@ a:hover {
   border-left: 5px solid #1F8BED;
 }
 .invite{
+  margin-right: 30px;
   justify-content: center;
   padding: 100px;
   gap: 30px;
@@ -1348,4 +1382,23 @@ ul.job-requirements{
   margin-top: -36px;
   font-size: 15px;
   letter-spacing: 0px;
+}
+
+
+/* HOME */
+.mainhome{
+  height: 730px;
+  background-repeat: no-repeat;
+  background-color: #1E1E1E;
+  background-position: center;
+  background-image: url('./images/home.png');
+}
+
+.hometext{
+  left: 180px;
+  position: absolute;
+  top: 200px;
+  color: white;
+  width: 60%;
+  font-size: 30px;
 }
