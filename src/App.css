@@ -12,13 +12,12 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
-.nav-link:active {
+.nav-link.active {
   border-radius: 20px;
   background: linear-gradient(135deg, #251741, #5023AA) !important;
   color: white !important;
   font-weight: 200 !important;
 }
-
 .navbar.hidden {
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
@@ -55,13 +54,6 @@
   text-decoration: none;
 }
 
-/* Underline styles */
-.nav-link {
-  display: inline-block;
-  position: relative;
-  color: black; /* Default color */
-  text-decoration: none;
-}
 
 /* Fade in */
 .nav-link::after {
