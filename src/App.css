@@ -18,6 +18,7 @@
   color: white !important;
   font-weight: 200 !important;
 }
+
 .navbar.hidden {
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
@@ -54,7 +55,7 @@
   text-decoration: none;
 }
 
-
+/* From Left to Right */
 /* Fade in */
 .nav-link::after {
   content: '';
@@ -82,7 +83,7 @@
 
 .nav-link:hover::after,
 .nav-link:focus::after {
-  transform: translateX(0);
+  transform: translateX(100%);
 }
 
 /* Scale from center */
@@ -121,7 +122,7 @@ svg.btn.search {
   max-width: 100%;
   height: auto;
 }
-
+/* line part */
 .text {
   /* background-image: url('./images/madeleine-ragsdale-j0i8M-2aTPE-unsplash\ 1.png'); */
   text-shadow: 2px 2px 5px black;
@@ -974,7 +975,13 @@ a:hover {
   display: flex;
   flex-direction: column;
   background-color: white;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.form-box-1{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
 .form1{
   flex-direction: column;
   display: flex;
@@ -1106,7 +1113,7 @@ p.write1{
   background-position: center 60%;
 }
 .dropdown {
-  width: 50%;
+  width: 25%;
   height: 100vh;
   margin-left: 10rem;
   margin-top: 2rem;
@@ -1116,6 +1123,10 @@ p.write1{
   margin-bottom: 80px;
 }
 
+.dropdown-career{
+  width: 100%;
+}
+
 .dropdown-toggle, .dropdown-toggle:focus, .dropdown-toggle:active, .dropdown-toggle:hover{
   text-align: left;
   border-radius: 10rem;
@@ -1123,7 +1134,7 @@ p.write1{
   background-color: white;
   color: #0E1513;
   border: none;
-  width: 50%;
+  width: 100%;
   position: relative;
   z-index: 2;
   transition: margin-top 1s;
@@ -1165,6 +1176,7 @@ ul.dropdown-menu.show{
 
 
 .jobs{
+  gap: 30px;
   margin-left: 8rem;
   display: flex;
   flex-direction: row;
@@ -1173,13 +1185,21 @@ ul.dropdown-menu.show{
 .job-des{
   height: 40rem;
   margin-top: 2rem;
-  margin-left: -22rem;
   padding: 30px;
   padding-left: 40px;
   width: 39%;
   border-radius: 20px;
   background-color: white;
 }
+
+.job-form{
+  height: 40rem;
+  background-color: white;
+  margin-top: 2rem;
+  width: 39%;
+  padding: 30px;
+  border-radius: 20px;
+} 
 
 .job-requirments{
   list-style-type: none;
@@ -1206,8 +1226,11 @@ ul.job-requirements{
   transition: transform 0.3s ease;
 }
 .apply {
-  display: inline-block;
-  top: 40px;
+  background-color: white;
+  border: none;
+  text-align: left;
+  display: inline-block !important;
+  top: 40px !important;
   font-size: 20px;
   position: relative;
   color: #000;

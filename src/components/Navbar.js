@@ -1,38 +1,47 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom'; // Assuming you're using React Router
 import Logo from '../images/logo.png';
+
 const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const location = useLocation();
     const [activeLink, setActiveLink] = useState(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+
+            if (currentScrollPos > prevScrollPos && currentScrollPos > 100) {
+                document.querySelector('.navbar').classList.add('hidden');
+            } else {
+                document.querySelector('.navbar').classList.remove('hidden');
+            }
+
+            setPrevScrollPos(currentScrollPos);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [prevScrollPos]);
+
+    useEffect(() => {
+        setActiveLink(location.pathname);
+    }, [location.pathname]);
 
     const handleNavLinkClick = (href) => {
         setActiveLink(href);
     };
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
 
-      if (currentScrollPos > prevScrollPos && currentScrollPos > 100) {
-        document.querySelector('.navbar').classList.add('hidden');
-      } else {
-        document.querySelector('.navbar').classList.remove('hidden');
-      }
-
-      setPrevScrollPos(currentScrollPos);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [prevScrollPos]);
     return (
         <div>
             <nav className="navbar navbar-expand-lg border-bottom border-black">
                 <div className="container">
-                    <a className="navbar-brand" href="/">
+                    <Link className="navbar-brand" to="/">
                         <img src={Logo} alt="SVNT Tech" height={30} />
-                    </a>
+                    </Link>
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -46,11 +55,21 @@ const Navbar = () => {
                     </button>
                     <div className="navbar-collapse collapse justify-content-end" id="navbarSupportedContent">
                         <ul className="navbar-nav align-items-center">
-                            <NavItem href="about">About Us</NavItem>
-                            <NavItem href="industries">Industries</NavItem>
-                            <NavItem href="services">Services</NavItem>
-                            <NavItem href="careers">Careers</NavItem>
-                            <NavItem href="contact">Contact Us</NavItem>
+                            <NavItem to="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                                About Us
+                            </NavItem>
+                            <NavItem to="/industries" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                                Industries
+                            </NavItem>
+                            <NavItem to="/services" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                                Services
+                            </NavItem>
+                            <NavItem to="/careers" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                                Careers
+                            </NavItem>
+                            <NavItem to="/contact" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                                Contact Us
+                            </NavItem>
                         </ul>
                     </div>
                 </div>
@@ -59,29 +78,21 @@ const Navbar = () => {
     );
 };
 
-const NavItem = ({ href, children}) => (
-    <li className="nav-item">
-        <a className={'nav-link'} href={href} activeClassName="active">
-            {children}
-        </a>
-    </li>
-);
+const NavItem = ({ to, children, activeLink, handleNavLinkClick }) => {
+    const isActive = activeLink === to;
 
-const NavLink = ({ href, children }) => (
-    <li>
-        <a className="dropdown-item" href={href}>
-            {children}
-        </a>
-    </li>
-);
+    return (
+        <li className={`nav-item ${isActive ? 'active' : ''}`}>
+            <Link
+                className={`nav-link ${isActive ? 'active' : ''}`}
+                to={to}
+                onClick={() => handleNavLinkClick(to)}
+            >
+                {children}
+            </Link>
+        </li>
+    );
+};
 
-const NavDropdown = ({ title, children }) => (
-    <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="/" role="button" aria-expanded="false">
-            {title}
-        </a>
-        <ul className="dropdown-menu">{children}</ul>
-    </li>
-);
 
 export default Navbar;
