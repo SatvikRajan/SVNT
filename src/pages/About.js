@@ -19,31 +19,42 @@ export const About = () => {
         <div className="overlap-5">
           <h1 style={{position: 'absolute', top: '4040px', left: '230px'}}>Clients</h1>
           <div className="clients">
-          <Carousel infiniteLoop transitionTime={2000} showArrows={false} showStatus={false} showThumbs={false} emulateTouch autoPlay={1000} showIndicators={false}>
-            <div className="d-flex client-img1">
-              <img className='me' src={adityabirla} alt="" /> 
-              <img className='me' src={vedanta} alt="" /> 
-              <img className='me' src={adityabirla} alt="" /> 
-              <img className='me' src={vedanta} alt="" /> 
-            </div>
-            </Carousel>
-            <Carousel infiniteLoop showArrows={false} showStatus={false} showThumbs={false} emulateTouch autoPlay={1000} showIndicators={false}>
-
-            <div className="d-flex client-img2">
-              <img className='me' src={caire} alt="" /> 
-              <img className='me' src={image15} alt="" /> 
-              <img className='me' src={caire} alt="" /> 
-              <img className='me' src={image15} alt="" /> 
-            </div>
-            </Carousel>
-            <Carousel infiniteLoop showArrows={false} showStatus={false} showThumbs={false} emulateTouch autoPlay={1000} showIndicators={false}>         
-            <div className="d-flex client-img3">
-              <img className='me' src={ITC} alt="" /> 
-              <img className='me' src={image13} alt="" /> 
-              <img className='me' src={ITC} alt="" /> 
-              <img className='me' src={image13} alt="" /> 
-            </div>
-            </Carousel>
+            <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
+      <div className="carousel-inner">
+        <div className="carousel-item active" data-bs-interval="10000">
+          <div className="d-flex client-img1">
+            <img className='me' src={adityabirla} alt="" /> 
+            <img className='me' src={vedanta} alt="" /> 
+            <img className='me' src={adityabirla} alt="" /> 
+            <img className='me' src={vedanta} alt="" /> 
+          </div>
+        </div>
+        <div className="carousel-item" data-bs-interval="2000">
+          <div className="d-flex client-img2">
+            <img className='me' src={caire} alt="" /> 
+            <img className='me' src={image15} alt="" /> 
+            <img className='me' src={caire} alt="" /> 
+            <img className='me' src={image15} alt="" /> 
+          </div>
+        </div>
+        <div className="carousel-item">
+          <div className="d-flex client-img3">
+            <img className='me' src={ITC} alt="" /> 
+            <img className='me' src={image13} alt="" /> 
+            <img className='me' src={ITC} alt="" /> 
+            <img className='me' src={image13} alt="" /> 
+          </div>
+        </div>
+      </div>
+      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
+      </button>
+    </div>
           </div>
           <div className="img-container">
           <img className="henry-co-AW-p" alt="Henry co AW p" src={henry} />

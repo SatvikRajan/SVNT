@@ -17,6 +17,8 @@
   background: linear-gradient(135deg, #251741, #5023AA) !important;
   color: white !important;
   font-weight: 200 !important;
+  text-decoration: none;
+  
 }
 
 .navbar.hidden {
@@ -38,9 +40,9 @@
     padding: 10px;
     position: relative;
 }
+
 .nav-link {
-  /* transition: background 0.6s ease-in-out, color 0.6s ease-in-out, font-weight 0.2s ease-in; */
-  transition: color 0.3s, border-bottom-color 0.3s; 
+  transition: color 0.3s, border-bottom-color 0.3s;
   position: relative;
   letter-spacing: 0.1px !important;
   display: flex;
@@ -81,8 +83,8 @@
   transform: translateX(-100%);
 }
 
-.nav-link:hover::after,
-.nav-link:focus::after {
+.nav-link-slide:hover::after,
+.nav-link-slide:focus::after {
   transform: translateX(100%);
 }
 
@@ -97,7 +99,9 @@
 .nav-link:focus::after {
   transform: scale(1);
 }
-
+.nav-link.active::after {
+  opacity: 0; /* Disable underline transition for active link */
+}
 svg.btn.search {
   height: 30px;
   width: 50px;
@@ -176,6 +180,12 @@ form {
   border: 1px solid #bfbdbd;
   margin-bottom: 10px;
 }
+
+#formFileSm{
+
+}
+
+
 
 .checkbox {
   gap: 30px;
@@ -259,7 +269,8 @@ a:hover {
   color: rgb(53, 53, 53);
 }
 .footer {
-  padding-top: 30px;
+  letter-spacing: 0px;
+  padding-top: 50px;
   color: white;
   background: #251741;
 }
@@ -367,7 +378,7 @@ a:hover {
 }
 .invite{
   margin-right: 30px;
-  justify-content: center;
+  margin-left: 55px;
   padding: 100px;
   gap: 30px;
 }
@@ -978,6 +989,7 @@ a:hover {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .form-box-1{
+  gap: 15px;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -1158,7 +1170,7 @@ ul.dropdown-menu.show{
   z-index: 1;
   border: none;
   background-color: #FFFFFF;
-  width: 50%;
+  width: 100%;
   margin: -24px 0px !important;
   transition: all 1s;
   opacity: 0.7;
@@ -1200,7 +1212,6 @@ ul.dropdown-menu.show{
   padding: 30px;
   border-radius: 20px;
 } 
-
 .job-requirments{
   list-style-type: none;
 }
@@ -1416,4 +1427,29 @@ ul.job-requirements{
   color: white;
   width: 60%;
   font-size: 30px;
+}
+
+.buttons{
+  gap: 150px;
+}
+.go-back{
+  border-radius: 30px;
+  padding: 10px;
+  width: 20%;
+  background: linear-gradient(135deg, #251741, #5023AA) !important;
+  font-size: 16px;
+  color: white;
+  border: none;
+}
+.submit1{
+  font-size: 16px;
+  color: white;
+  border: none;
+  background: linear-gradient(to right, #1F8BED, #671316);
+  border-radius: 30px;
+  width: 80%;
+}
+
+.job-form-transition {
+  transition: all 0.5s ease;
 }
