@@ -1,6 +1,6 @@
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 2px solid black;
+  /* border-right: 2px solid black; */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto;
   animation: typing 3.5s steps(50, start), blink-caret 0.5s step-end 3.5s infinite;

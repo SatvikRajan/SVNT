@@ -11,7 +11,7 @@ const Contact = () => {
       </div>
 
       <div className="form-body ">
-        <div className="write">
+        <div className="write" data-aos='flip-left'>
           <h1 style={{color: '#0E1513', marginBottom: '22px', fontSize: '30px'}}>Company Timeline</h1>
           <p className='write1'>Feel free to contact us for inquiries,<br/> feedback, or just a quick hello !</p>
           <ul style={{lineHeight: '38px', fontSize: '17px'}}>
@@ -20,7 +20,7 @@ const Contact = () => {
             <li>Learn about our pricing</li>
           </ul>
         </div>
-        <div className="form-box">
+        <div className="form-box" data-aos='flip-right'>
           <label for="inp" class="inp">
             <input type="text" id="inp" placeholder="&nbsp;" />
             <span class="label">Name</span>
@@ -32,10 +32,8 @@ const Contact = () => {
               <span class="label">Email</span>
               <span class="focus-bg"></span>
             </label>
-            {/* underline changes */}
             <label for="inp" class="inp ">
               <input type="text" id="inp" placeholder="&nbsp;" />
-              {/* //add +91 */}
               <span class="label"> Phone Number</span>
               <span class="focus-bg"></span>
             </label>
