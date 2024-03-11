@@ -1,16 +1,17 @@
 import React from 'react';
 import LocationCard from '../components/LocationCard';
 import contact from '../images/contact.jpg'
+import '../css/typewriter.css'
 const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-image-container">
         <img src={contact} className='contact-image' alt="" />
-        <div className="text">How may we help you?</div>
+        <div className="text typewriter">How may we help you?</div>
       </div>
 
-      <div className="form-body">
-        <div className="write" >
+      <div className="form-body ">
+        <div className="write">
           <h1 style={{color: '#0E1513', marginBottom: '22px', fontSize: '30px'}}>Company Timeline</h1>
           <p className='write1'>Feel free to contact us for inquiries,<br/> feedback, or just a quick hello !</p>
           <ul style={{lineHeight: '38px', fontSize: '17px'}}>

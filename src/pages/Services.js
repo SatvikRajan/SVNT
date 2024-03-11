@@ -12,12 +12,12 @@ const ServiceBox = ({ title, description, image, imagePosition, backgroundColor 
   const content = (
     <div className="service-box1">
       <h1 className="service-boxhead">{title}</h1>
-      <p style={{lineHeight: '35px'}}>{description}</p>
+      <p style={{lineHeight: '47px'}}>{description}</p>
     </div>
   );
 
   return (
-    <div className="service-box d-flex" style={{ backgroundColor }}>
+    <div className="service-box d-flex"  style={{ backgroundColor }}>
       {imagePosition === "after" ? content : null}
       <div className="service-box2">
         {/* Size of image is resized  */}

@@ -4,6 +4,7 @@ import invite from "../images/invite.png";
 import search from "../images/search.jpg";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '../css/typewriter.css'
 
 export const CareersPage = () => {
   const [name, setName] = useState('');
@@ -17,7 +18,7 @@ export const CareersPage = () => {
     setEmail("");
     setPhone("");
     setTotalExperience("");
-    setRelevantExperience ("");
+    setRelevantExperience("");
     toast.success("Application submitted successfully!");
   };
   const handleApplyClick = () => {
@@ -26,7 +27,7 @@ export const CareersPage = () => {
   const handleGoBackClick = () => {
     setShowForm(false);
   }
-  
+
   return (
     <div className="careers-page">
       <div className="career-start">
@@ -36,11 +37,11 @@ export const CareersPage = () => {
             style={{ maxWidth: "100%", backgroundAttachment: "fixed" }}
             alt=""
           />
-          <div className="career-text1">
+          <div className="career-text1 typewriter">
             Empower your <br />
             aspirations at SVNT Infotech!
           </div>
-          <div className="career-text2">
+          <div className="career-text2 typewriter">
             We believe in your Ideas, We believe in You
           </div>
         </div>
@@ -113,10 +114,7 @@ export const CareersPage = () => {
               </ul>
             </div>
             {showForm ? (
-              <div className="job-form d-flex fade-in">
-                <div className="job-des-content">
-                  
-                </div>
+              <div className="job-form d-flex">
                 <div style={{ marginLeft: "-25px", marginRight: "15px" }}>
                   {" "}
                   <svg
@@ -165,29 +163,29 @@ export const CareersPage = () => {
                   <div className="form-box-1">
                     <span style={{ marginLeft: "10px" }}>Apply Online</span>
                     <label for="inp" class="inp">
-                      <input type="text" id="inp" placeholder="&nbsp;" value={name} onChange={(e) => setName(e.target.value)}/>
+                      <input type="text" id="inp" placeholder="&nbsp;" value={name} onChange={(e) => setName(e.target.value)} />
                       <span class="label">Name</span>
                       <span class="focus-bg"></span>
                     </label>
                     <div className="d-flex" style={{ gap: "15px" }}>
                       <label for="inp" class="inp">
-                        <input type="text" id="inp" placeholder="&nbsp;" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <input type="text" id="inp" placeholder="&nbsp;" value={email} onChange={(e) => setEmail(e.target.value)} />
                         <span class="label">Email</span>
                         <span class="focus-bg"></span>
                       </label>
                       <label for="inp" class="inp ">
-                        <input type="text" id="inp" placeholder="&nbsp;" value={phone} onChange={(e) => setPhone(e.target.value)}/>
+                        <input type="text" id="inp" placeholder="&nbsp;" value={phone} onChange={(e) => setPhone(e.target.value)} />
                         <span class="label"> Phone Number</span>
                         <span class="focus-bg"></span>
                       </label>
                     </div>
                     <label for="inp" class="inp">
-                      <input type="text" id="inp" placeholder="&nbsp;" value={totalExperience} onChange={(e) => setTotalExperience(e.target.value)}/>
+                      <input type="text" id="inp" placeholder="&nbsp;" value={totalExperience} onChange={(e) => setTotalExperience(e.target.value)} />
                       <span class="label">Total Experience</span>
                       <span class="focus-bg"></span>
                     </label>
                     <label for="inp" class="inp">
-                      <input type="text" id="inp" placeholder="&nbsp;" value={relevantExperience} onChange={(e) => setRelevantExperience(e.target.value)}/>
+                      <input type="text" id="inp" placeholder="&nbsp;" value={relevantExperience} onChange={(e) => setRelevantExperience(e.target.value)} />
                       <span class="label">Relevant Experience</span>
                       <span class="focus-bg"></span>
                     </label>
@@ -465,9 +463,9 @@ export const CareersPage = () => {
                       </ul>
                     </li>
                   </ul>
-                 
+
                   <button
-                   /*fix */
+                    /*fix */
                     className="apply custom-apply-btn"
                     onClick={handleApplyClick}
                     type="button"
