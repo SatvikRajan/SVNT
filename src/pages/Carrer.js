@@ -4,8 +4,6 @@ import invite from "../images/invite.png";
 import search from "../images/search.jpg";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import '../css/typewriter.css'
-import '../css/careers.css'
 export const CareersPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

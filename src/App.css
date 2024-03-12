@@ -140,18 +140,6 @@ svg.btn.search {
   text-align: center;
 }
 
-/* Form Styles */
-.form-body {
-  text-align: center;
-  width: 100%;
-  background-color: #E7E8FF;
-  gap: 10rem;
-  padding: 6rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .form-text {
   color: #251741;
   font-size: 45px;
@@ -979,6 +967,17 @@ a:hover {
   left: 0 !important;
   position: absolute !important;
   top: 0 !important;
+}
+
+.form-body {
+  text-align: center;
+  width: 100%;
+  background-color: #e7e8ff;
+  gap: 10rem;
+  padding: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .form-box{
