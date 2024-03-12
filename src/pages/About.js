@@ -47,7 +47,7 @@ export const About = () => {
 
               </div>
             </div>
-            <div class="slider">
+            {/* <div class="slider">
               <div class="slide-track">
                 <div class="slide">
                   <img className='me' src={caire} alt="" />
@@ -74,7 +74,7 @@ export const About = () => {
                   <img className='me' src={image15} alt="" />
                 </div>
               </div>
-            </div>
+            </div> */}
             <br/>
             <br/>
             <br/>

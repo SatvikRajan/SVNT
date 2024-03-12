@@ -5,7 +5,7 @@ import search from "../images/search.jpg";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../css/typewriter.css'
-
+import '../css/careers.css'
 export const CareersPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -32,16 +32,11 @@ export const CareersPage = () => {
     <div className="careers-page">
       <div className="career-start">
         <div className="career-image">
-          <img
-            src={career}
-            style={{ maxWidth: "100%", backgroundAttachment: "fixed" }}
-            alt=""
-          />
-          <div className="career-text1 typewriter">
+          <div className="career-text1">
             Empower your <br />
             aspirations at SVNT Infotech!
           </div>
-          <div className="career-text2 typewriter">
+          <div className="career-text2">
             We believe in your Ideas, We believe in You
           </div>
         </div>

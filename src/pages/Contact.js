@@ -7,11 +7,11 @@ const Contact = () => {
     <div className="contact-container">
       <div className="contact-image-container">
         <img src={contact} className='contact-image' alt="" />
-        <div className="text typewriter">How may we help you?</div>
+        <div className="text">How may we help you?</div>
       </div>
 
       <div className="form-body ">
-        <div className="write" data-aos='flip-left'>
+        <div className="write" data-aos='fade-up'>
           <h1 style={{color: '#0E1513', marginBottom: '22px', fontSize: '30px'}}>Company Timeline</h1>
           <p className='write1'>Feel free to contact us for inquiries,<br/> feedback, or just a quick hello !</p>
           <ul style={{lineHeight: '38px', fontSize: '17px'}}>
@@ -20,7 +20,7 @@ const Contact = () => {
             <li>Learn about our pricing</li>
           </ul>
         </div>
-        <div className="form-box" data-aos='flip-right'>
+        <div className="form-box" data-aos='fade-up'>
           <label for="inp" class="inp">
             <input type="text" id="inp" placeholder="&nbsp;" />
             <span class="label">Name</span>
