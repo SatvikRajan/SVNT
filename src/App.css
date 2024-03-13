@@ -1483,6 +1483,8 @@ ul.job-requirements{
 }
 
 .number20{
+  font-family: "monospace";
+  text-align: right;
   font-size: 200px;
   font-family: "Train One", system-ui;
 }
@@ -1492,6 +1494,7 @@ ul.job-requirements{
 }
 
 .x{
+  text-align: center;
   margin-top: -40px;
 }
 

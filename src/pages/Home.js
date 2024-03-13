@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import ips from '../images/ips.png'
-import ipn from '../images/ipn.png'
-import str from '../images/str.png'
+import ips from "../images/ips.png";
+import ipn from "../images/ipn.png";
+import str from "../images/str.png";
 export default function Home() {
   const yearsRef = useRef(null);
 
@@ -21,7 +21,7 @@ export default function Home() {
   useEffect(() => {
     const yearsElement = yearsRef.current;
     const values = yearsElement.querySelectorAll(".value");
-    const duration = 1000;
+    const duration = 1500;
     values.forEach((value, index) => {
       animateValue(value, 0, parseInt(value.textContent), duration);
     });
@@ -32,7 +32,7 @@ export default function Home() {
       <div className="carousel1"></div>
       <div className="home-start">
         <div className="d-flex years" ref={yearsRef}>
-          <div className="d-flex flex-column">
+          <div className="">
             <p className="value number5">5</p>
             <p className="x">Clients</p>
           </div>
@@ -40,7 +40,7 @@ export default function Home() {
             <p className="value number20">20</p>
             <p style={{ fontSize: "30px" }}>Years</p>
           </div>
-          <div className="d-flex flex-column align-items-center">
+          <div className="align-items-center">
             <p className="value number60">60</p>
             <p className="x">Projects</p>
           </div>
@@ -59,10 +59,7 @@ export default function Home() {
       </div>
       <div className="case-studies d-flex">
         <div class="card">
-          <img
-            src={ips}
-            alt=""
-          />
+          <img src={ips} alt="" />
           <div class="card-content">
             <h2>Card Heading</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -73,10 +70,7 @@ export default function Home() {
           </div>
         </div>
         <div class="card">
-          <img
-            src={ipn}
-            alt=""
-          />
+          <img src={ipn} alt="" />
           <div class="card-content">
             <h2>Card Heading</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -87,10 +81,7 @@ export default function Home() {
           </div>
         </div>
         <div class="card">
-          <img
-            src={str}
-            alt=""
-          />
+          <img src={str} alt="" />
           <div class="card-content">
             <h2>Card Heading</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -104,3 +95,5 @@ export default function Home() {
     </div>
   );
 }
+
+
