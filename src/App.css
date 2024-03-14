@@ -169,10 +169,6 @@ form {
   margin-bottom: 10px;
 }
 
-#formFileSm{
-
-}
-
 
 
 .checkbox {
@@ -1465,7 +1461,6 @@ ul.job-requirements{
 }
 
 .years{
-  gap: 100px;
   align-items: center;
   color: white;
   justify-content: center;
@@ -1473,31 +1468,26 @@ ul.job-requirements{
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
 
 .number5{
-  text-align: center;
   font-size: 100px;
 }
 
 .number20{
   font-family: "monospace";
-  text-align: right;
+  /* text-align: right; */
   font-size: 200px;
   font-family: "Train One", system-ui;
 }
 
 .number60{
-  text-align: center;
   font-size: 100px;
 }
 
 .x{
- 
   text-align: center;
   margin-top: -40px;
 }
 
 .readmore{
-  text-align-last: right;
-  width: 25%;
   border-bottom: 1px solid white;
   padding-bottom: 5px;
 }
@@ -1591,3 +1581,38 @@ main {
 .material-symbols-outlined {
   vertical-align: middle;
 }
+
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item > div {
+      display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+  
+  .carousel-inner .carousel-item-right.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(33.333%);
+  }
+  
+  .carousel-inner .carousel-item-left.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-33.333%);
+  }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+transform: translateX(0);
+}
+
