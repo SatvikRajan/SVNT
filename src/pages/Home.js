@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import ips from "../images/ips.png";
 import ipn from "../images/ipn.png";
 import str from "../images/str.png";
+import carouselimg from '../images/carousel1.png'
+import '../css/carousel.css'
 export default function Home() {
   const yearsRef = useRef(null);
 
@@ -29,10 +31,25 @@ export default function Home() {
 
   return (
     <div className="home">
-      <div className="carousel1"></div>
+      <div class="carousel1">
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item"><img src={carouselimg} alt="" /></div>
+          <div  class="carousel-item"><img src={carouselimg} alt="" /></div>
+          <div class="carousel-item"><img src={carouselimg} alt="" /></div>
+          <div class="carousel-item"><img src={carouselimg} alt="" /></div>
+        </div>
+        <div class="carousel-controls">
+          <span class="prev"></span>
+          <span class="next"></span>
+        </div>
+        <div class="carousel-indicators"></div>
+      </div>
+      </div>
       <div className="home-start">
         <div className="d-flex years" ref={yearsRef}>
-          <div className="">
+          <div>
+            <span></span>
             <p className="value number5">5</p>
             <p className="x">Clients</p>
           </div>
@@ -61,34 +78,22 @@ export default function Home() {
         <div class="card">
           <img src={ips} alt="" />
           <div class="card-content">
-            <h2>Card Heading</h2>
+            <h2>IP Survillence Solution</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#" class="button">
-              Find out more
-              <span class="material-symbols-outlined">arrow_right_alt</span>
-            </a>
           </div>
         </div>
         <div class="card">
           <img src={ipn} alt="" />
           <div class="card-content">
-            <h2>Card Heading</h2>
+            <h2>IP Networking Solution</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#" class="button">
-              Find out more
-              <span class="material-symbols-outlined">arrow_right_alt</span>
-            </a>
           </div>
         </div>
         <div class="card">
           <img src={str} alt="" />
           <div class="card-content">
-            <h2>Card Heading</h2>
+            <h2 className="card-head">Storage</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#" class="button">
-              Find out more
-              <span class="material-symbols-outlined">arrow_right_alt</span>
-            </a>
           </div>
         </div>
       </div>

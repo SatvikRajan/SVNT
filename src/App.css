@@ -1457,13 +1457,7 @@ ul.job-requirements{
 
 /* HOME */
 
-.carousel1{
-  position: relative  ;
-  height: 800px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(./images/cbg.png);
-}
+
 
 .home-start{
   background: linear-gradient(to right, #7657BE, #7455BA, #432E6F, #AB1F24 80%);
@@ -1508,7 +1502,9 @@ ul.job-requirements{
 }
 
 .case-studies{
-  
+  padding-left: 140px;
+  margin: 100px;
+  gap: 100px;
 }
 
 main {
@@ -1519,8 +1515,11 @@ main {
   padding: 50px;
   font-family: 'Roboto', sans-serif;
 }
-
+.card-content{
+  text-align: center;
+}
 .card {
+  
   width: 24rem;
   height: 36rem;
   border-radius: 10px;
@@ -1543,14 +1542,12 @@ main {
 
   h2 {
     position: absolute;
-    inset: auto auto 30px 30px;
+    inset: auto auto 30px 0;
     margin: 0;
     transition: inset .3s .3s ease-out;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: normal;
-    text-transform: uppercase;
   }
-  
   p, a {
     position: absolute;
     opacity: 0;
@@ -1559,7 +1556,7 @@ main {
   }
   
   p {
-    inset: auto auto 80px 30px;
+    inset: auto auto 30px 30px;
   }
   
   a {
@@ -1569,7 +1566,7 @@ main {
   }
   
   &:hover h2 {
-    inset: auto auto 220px 30px;
+    inset: auto auto 450px 30px;
     transition: inset .3s ease-out;
   }
   
