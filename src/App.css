@@ -1465,14 +1465,15 @@ ul.job-requirements{
 }
 
 .years{
+  gap: 100px;
   align-items: center;
   color: white;
   justify-content: center;
-  gap: 200px;
 }
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
 
 .number5{
+  text-align: center;
   font-size: 100px;
 }
 
@@ -1484,20 +1485,25 @@ ul.job-requirements{
 }
 
 .number60{
+  text-align: center;
   font-size: 100px;
 }
 
 .x{
+ 
   text-align: center;
   margin-top: -40px;
 }
 
 .readmore{
+  text-align-last: right;
+  width: 25%;
   border-bottom: 1px solid white;
   padding-bottom: 5px;
 }
 
 .x1{
+  justify-content: center;
   gap: 20px;
 }
 

@@ -7,27 +7,31 @@ import '../css/carousel.css'
 export default function Home() {
   const yearsRef = useRef(null);
 
-  function animateValue(element, start, end, duration) {
-    let startTimestamp = null;
-    const step = (timestamp) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      element.textContent = Math.floor(progress * (end - start) + start);
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
-    };
-    window.requestAnimationFrame(step);
-  }
+function animateValue(element, start, end, duration) {
+  let startTimestamp = null;
+  const easeInOutQuad = (t) => t<.5 ? 2*t*t : -1+(4-2*t)*t;
+  
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const timeElapsed = timestamp - startTimestamp;
+    const progress = easeInOutQuad(Math.min(timeElapsed / duration, 1));
+    element.textContent = Math.floor(progress * (end - start) + start);
+    if (timeElapsed < duration) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
 
-  useEffect(() => {
-    const yearsElement = yearsRef.current;
-    const values = yearsElement.querySelectorAll(".value");
-    const duration = 1500;
-    values.forEach((value, index) => {
-      animateValue(value, 0, parseInt(value.textContent), duration);
-    });
-  }, []);
+useEffect(() => {
+  const yearsElement = yearsRef.current;
+  const values = yearsElement.querySelectorAll(".value");
+  const duration = 2000;
+  values.forEach((value, index) => {
+    animateValue(value, 0, parseInt(value.textContent), duration);
+  });
+}, []);
+
 
   return (
     <div className="home">
@@ -47,17 +51,17 @@ export default function Home() {
       </div>
       </div>
       <div className="home-start">
-        <div className="d-flex years" ref={yearsRef}>
-          <div>
+        <div className="row years" ref={yearsRef}>
+          <div className="col text-end">
             <span></span>
             <p className="value number5">5</p>
             <p className="x">Clients</p>
           </div>
-          <div className="d-flex align-items-center x1">
+          <div className="d-flex align-items-center x1 col">
             <p className="value number20">20</p>
             <p style={{ fontSize: "30px" }}>Years</p>
           </div>
-          <div className="align-items-center">
+          <div className="align-items-center col">
             <p className="value number60">60</p>
             <p className="x">Projects</p>
           </div>
