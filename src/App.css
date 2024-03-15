@@ -1152,7 +1152,7 @@ p.write1{
   width: 100%;
   position: relative;
   z-index: 2;
-  transition: margin-top 1s;
+  transition: margin-top 1s !important;
   letter-spacing: 0px;
 }
 

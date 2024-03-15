@@ -12,9 +12,11 @@
   width: 320px;
   margin: 100px auto 0 auto;
   perspective: 1000px;
+  top: -800px;
 }
 
 .caro {
+  top: 100px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -23,8 +25,8 @@
 }
 .carousel__face {
   position: absolute;
-  width: 300px;
-  height: 187px;
+  width: 200px;
+  height: 100px;
   top: 20px;
   left: 10px;
   right: 10px;
@@ -73,6 +75,22 @@
 .carousel__face:nth-child(9) {
   background-image: url('https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   transform: rotateY(320deg) translateZ(430px);
+}
+.carousel__face:nth-child(10) {
+  background-image: url('https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  transform: rotateY(360deg) translateZ(430px);
+}
+.carousel__face:nth-child(11) {
+  background-image: url('https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  transform: rotateY(400deg) translateZ(430px);
+}
+.carousel__face:nth-child(12) {
+  background-image: url('https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  transform: rotateY(440deg) translateZ(430px);
+}
+.carousel__face:nth-child(13) {
+  background-image: url('https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  transform: rotateY(480deg) translateZ(430px);
 }
 
 @keyframes rotate360 {

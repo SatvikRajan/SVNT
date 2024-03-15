@@ -39,7 +39,7 @@ export const CareersPage = () => {
           </div>
         </div>
 
-        <div id="recruitment" className="recruitment">
+        <div id="recruitment" data-aos="fade-right" className="recruitment">
           <div className="recruit">
             <h1>Shape our Future Together!</h1>
             <p className="recruit-handle">

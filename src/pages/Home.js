@@ -103,31 +103,43 @@ export default function Home() {
           <div class="cont">
             <div class="caro">
               <div class="carousel__face">
-                <span className="hi">This is something</span>
+                {/* <span className="hi">This is something</span> */}
               </div>
               <div class="carousel__face">
-                <span className="hi">Very special</span>
+                {/* <span className="hi">Very special</span> */}
               </div>
               <div class="carousel__face">
-                <span className="hi">Special is the key</span>
+                {/* <span className="hi">Special is the key</span> */}
               </div>
               <div class="carousel__face">
-                <span className="hi">For you</span>
+                {/* <span className="hi">For you</span> */}
               </div>
               <div class="carousel__face">
-                <span className="hi">Just give it</span>
+                {/* <span className="hi">Just give it</span> */}
               </div>
               <div class="carousel__face">
-                <span className="hi">A try</span>
+                {/* <span className="hi">A try</span> */}
               </div>
               <div class="carousel__face">
-                <span className="hi">And see</span>
+                {/* <span className="hi">And see</span> */}
               </div>
               <div class="carousel__face">
-                <span className="hi">How IT Works</span>
+                {/* <span className="hi">How IT Works</span> */}
               </div>
               <div class="carousel__face">
-                <span className="hi">Woow</span>
+                {/* <span className="hi">Woow</span> */}
+              </div>
+              <div class="carousel__face">
+                {/* <span className="hi">Woow</span> */}
+              </div>
+              <div class="carousel__face">
+                {/* <span className="hi">Woow</span> */}
+              </div>
+              <div class="carousel__face">
+                {/* <span className="hi">Woow</span> */}
+              </div>
+              <div class="carousel__face">
+                {/* <span className="hi">Woow</span> */}
               </div>
             </div>
           </div>
