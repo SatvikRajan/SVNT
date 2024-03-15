@@ -2,7 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import ips from '../images/ips.png';
 import ipn from '../images/ipn.png';
 import str from '../images/str.png';
+import $ from 'jquery';
 import '../css/carousel.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Home() {
   const yearsRef = useRef(null);
 
@@ -21,7 +23,31 @@ export default function Home() {
     };
     window.requestAnimationFrame(step);
   }
+  // useEffect(() => {
+  //   const multipleCardCarousel = document.querySelector('#carouselExampleControls');
+  //   if (window.matchMedia('(min-width: 768px)').matches) {
+  //     const carousel = new bootstrap.Carousel(multipleCardCarousel, { interval: false });
+  //     const carouselWidth = $('.carousel-inner')[0].scrollWidth;
+  //     const cardWidth = $('.carousel-item').width();
+  //     let scrollPosition = 0;
 
+  //     $('#carouselExampleControls .carousel-control-next').on('click', function () {
+  //       if (scrollPosition < carouselWidth - cardWidth * 4) {
+  //         scrollPosition += cardWidth;
+  //         $('#carouselExampleControls .carousel-inner').animate({ scrollLeft: scrollPosition }, 600);
+  //       }
+  //     });
+
+  //     $('#carouselExampleControls .carousel-control-prev').on('click', function () {
+  //       if (scrollPosition > 0) {
+  //         scrollPosition -= cardWidth;
+  //         $('#carouselExampleControls .carousel-inner').animate({ scrollLeft: scrollPosition }, 600);
+  //       }
+  //     });
+  //   } else {
+  //     $(multipleCardCarousel).addClass('slide');
+  //   }
+  // }, []);
   useEffect(() => {
     const yearsElement = yearsRef.current;
     const values = yearsElement.querySelectorAll('.value');
@@ -50,63 +76,159 @@ export default function Home() {
             <p className="x">Projects</p>
           </div>
         </div>
-        <div className="lorem container d-flex text-light">
-          <p style={{ width: '60%', lineHeight: '40px' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exmmodo consequat. Duis aute irure dolor in reprehenderi</p>
+        <div className="lorem container d-flex pt-5 text-light">
+          <p style={{ width: '60%', lineHeight: '40px' }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            exmmodo consequat. Duis aute irure dolor in reprehenderi
+          </p>
           <p className="ms-auto align-self-end fs-4 readmore">Read more About us</p>
         </div>
       </div>
-      <div className="case-studies d-flex">
-        <div class="card">
-          <img src={ips} alt="" />
-          <div class="card-content">
-            <h2>IP Survillence Solution</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div className="mainpage">
+        <div className="whyus">Why Choose Us</div>
+        <div className="whybest">What We Do Best</div>
+        <div className="partners">Partners</div>
+        <div className="case-studies">
+          <div id="carouselExampleControls" class="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card">
+                  <img src={ips} alt="" />
+                  <div class="card-content">
+                    <h2>IP Survillence Solution</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+              <div class="card">
+                  <img src={ipn} alt="" />
+                  <div class="card-content">
+                    <h2>IP Survillence Solution</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+              <div class="card">
+                  <img src={str} alt="" />
+                  <div class="card-content">
+                    <h2>IP Survillence Solution</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+              <div class="card">
+                  <img src={ips} alt="" />
+                  <div class="card-content">
+                    <h2>IP Survillence Solution</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+              <div class="card">
+                  <img src={ipn} alt="" />
+                  <div class="card-content">
+                    <h2>IP Survillence Solution</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+              <div class="card">
+                  <img src={str} alt="" />
+                  <div class="card-content">
+                    <h2>IP Survillence Solution</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+              <div class="card">
+                  <img src={ips} alt="" />
+                  <div class="card-content">
+                    <h2>IP Survillence Solution</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+              <div class="card">
+                  <img src={ipn} alt="" />
+                  <div class="card-content">
+                    <h2>IP Survillence Solution</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+              <div class="card">
+                  <img src={str} alt="" />
+                  <div class="card-content">
+                    <h2>IP Survillence Solution</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
           </div>
         </div>
-        <div class="card">
-          <img src={ipn} alt="" />
-          <div class="card-content">
-            <h2>IP Networking Solution</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div className="trusted d-flex">
+          <div className="trustedtext">
+            <h1>Trusted Allies</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            </p>
           </div>
-        </div>
-        <div class="card">
-          <img src={str} alt="" />
-          <div class="card-content">
-            <h2 className="card-head">Storage</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-      </div>
-      <div className="trusted">
-        <div class="cont">
-          <div class="caro">
-            <div class="carousel__face">
-              <span>This is something</span>
-            </div>
-            <div class="carousel__face">
-              <span>Very special</span>
-            </div>
-            <div class="carousel__face">
-              <span>Special is the key</span>
-            </div>
-            <div class="carousel__face">
-              <span>For you</span>
-            </div>
-            <div class="carousel__face">
-              <span>Just give it</span>
-            </div>
-            <div class="carousel__face">
-              <span>A try</span>
-            </div>
-            <div class="carousel__face">
-              <span>And see</span>
-            </div>
-            <div class="carousel__face">
-              <span>How IT Works</span>
-            </div>
-            <div class="carousel__face">
-              <span>Woow</span>
+          <div class="cont">
+            <div class="caro">
+              <div class="carousel__face">
+                <span className="hi">This is something</span>
+              </div>
+              <div class="carousel__face">
+                <span className="hi">Very special</span>
+              </div>
+              <div class="carousel__face">
+                <span className="hi">Special is the key</span>
+              </div>
+              <div class="carousel__face">
+                <span className="hi">For you</span>
+              </div>
+              <div class="carousel__face">
+                <span className="hi">Just give it</span>
+              </div>
+              <div class="carousel__face">
+                <span className="hi">A try</span>
+              </div>
+              <div class="carousel__face">
+                <span className="hi">And see</span>
+              </div>
+              <div class="carousel__face">
+                <span className="hi">How IT Works</span>
+              </div>
+              <div class="carousel__face">
+                <span className="hi">Woow</span>
+              </div>
             </div>
           </div>
         </div>

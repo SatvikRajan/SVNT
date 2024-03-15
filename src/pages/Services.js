@@ -29,6 +29,7 @@ const ServiceBox = ({ title, description, image, imagePosition, backgroundColor 
 };
 
 export default function Services() {
+  
   return (
     <div className="services">
       <h1 style={{ marginLeft: "5rem" }}>Services</h1>
@@ -88,6 +89,8 @@ export default function Services() {
         image={service8}
         backgroundColor="#FFF5E7" 
       />
+      
     </div>
+    
   );
 }
