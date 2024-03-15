@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import ips from '../images/ips.png';
 import ipn from '../images/ipn.png';
 import str from '../images/str.png';
-import $ from 'jquery';
+// import $ from 'jquery';
 import '../css/carousel.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Home() {
@@ -90,107 +90,7 @@ export default function Home() {
         <div className="whybest">What We Do Best</div>
         <div className="partners">Partners</div>
         <div className="case-studies">
-          <div id="carouselExampleControls" class="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="card">
-                  <img src={ips} alt="" />
-                  <div class="card-content">
-                    <h2>IP Survillence Solution</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-              <div class="card">
-                  <img src={ipn} alt="" />
-                  <div class="card-content">
-                    <h2>IP Survillence Solution</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-              <div class="card">
-                  <img src={str} alt="" />
-                  <div class="card-content">
-                    <h2>IP Survillence Solution</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-              <div class="card">
-                  <img src={ips} alt="" />
-                  <div class="card-content">
-                    <h2>IP Survillence Solution</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-              <div class="card">
-                  <img src={ipn} alt="" />
-                  <div class="card-content">
-                    <h2>IP Survillence Solution</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-              <div class="card">
-                  <img src={str} alt="" />
-                  <div class="card-content">
-                    <h2>IP Survillence Solution</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-              <div class="card">
-                  <img src={ips} alt="" />
-                  <div class="card-content">
-                    <h2>IP Survillence Solution</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-              <div class="card">
-                  <img src={ipn} alt="" />
-                  <div class="card-content">
-                    <h2>IP Survillence Solution</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-              <div class="card">
-                  <img src={str} alt="" />
-                  <div class="card-content">
-                    <h2>IP Survillence Solution</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleControls"
-              data-bs-slide="prev"
-            >
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleControls"
-              data-bs-slide="next"
-            >
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-          </div>
+          
         </div>
         <div className="trusted d-flex">
           <div className="trustedtext">
