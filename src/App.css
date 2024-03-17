@@ -5,10 +5,9 @@ body{
 }
 .navbar {
   font-family: 'Poppins', sans-serif !important; 
-
   letter-spacing: 0 !important;
   border-radius: 30px;
-  border-bottom: 0px !important;
+  /* border-bottom: 0px !important; */
   padding: 0 !important;
   left: 5%;
   position: fixed !important;
@@ -1434,6 +1433,7 @@ ul.job-requirements{
 .buttons{
   gap: 100px;
 }
+
 .go-back{
   border-radius: 30px;
   padding: 10px;
@@ -1463,10 +1463,12 @@ ul.job-requirements{
 
 .home-start{
   height: 680px;
-  background: linear-gradient(to right, #7657BE, #7455BA, #432E6F, #AB1F24 80%);
+  background: linear-gradient(to right, #6161E5 , #5C5BDF, #F57D81, #FB565C 90%);
   padding-bottom: 30px;
 }
+.home-start:hover{
 
+}
 .years{
   padding-top: 50px;
   align-items: center;
@@ -1508,9 +1510,13 @@ ul.job-requirements{
 }
 
 .case-studies{
-  padding-left: 140px;
-  margin: 100px;
-  gap: 100px;
+  height: 1000px;
+  padding: 10rem;
+}
+
+.case-studies h1{
+  font-weight: 400;
+  font-size: 30px;
 }
 
 main {
@@ -1521,11 +1527,12 @@ main {
   padding: 50px;
   font-family: 'Roboto', sans-serif;
 }
+
 .card-content{
   text-align: center;
 }
-.card {
-  
+
+.card-1 { 
   width: 24rem;
   height: 36rem;
   border-radius: 10px;
@@ -1595,22 +1602,24 @@ main {
 
 .mainpage{
   letter-spacing: 0px;
-  padding-top: 5rem;
-  background-image: url(./images/bg.png), url(./images/bgcs.png);
-  background-repeat: no-repeat;
-  background-position: center 20%, center 150%;
 }
 
 .whyus{
-  font-size: 20px;
+  padding: 10rem;
+  font-size: 30px;
   background-color: white;
   height: 800px;
 }
 
 .whybest{
+  padding-top: 10rem;
+  padding: 10rem;
+  font-size: 30px;
   height: 800px;
 }
 .partners{
+  padding: 10rem;
+  font-size: 30px;
   height: 800px;
 }
 
@@ -1655,4 +1664,17 @@ main {
   .card .img-wrapper {
     height: 17em;
   }
+}
+
+.trustedtext{
+  /* letter-spacing: 20px; */
+  line-height: 50px;
+  font-size: 20px;
+  width: 50%;
+  margin-right: 20rem;
+  padding-left: 5rem;
+}
+
+.trusted{
+  margin-bottom: 30rem;
 }

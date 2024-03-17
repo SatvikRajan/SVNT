@@ -37,7 +37,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg border-bottom border-black">
+            <nav className="navbar navbar-expand-lg">
                 <div className="container">
                     <Link className="navbar-brand" to="/">
                         <img src={Logo} alt="SVNT Tech" height={30} />

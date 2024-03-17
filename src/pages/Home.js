@@ -2,9 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import ips from '../images/ips.png';
 import ipn from '../images/ipn.png';
 import str from '../images/str.png';
-// import $ from 'jquery';
 import '../css/carousel.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import 'bootstrap'; // Import Bootstrap JS
+
 export default function Home() {
   const yearsRef = useRef(null);
 
@@ -23,31 +24,38 @@ export default function Home() {
     };
     window.requestAnimationFrame(step);
   }
-  // useEffect(() => {
-  //   const multipleCardCarousel = document.querySelector('#carouselExampleControls');
-  //   if (window.matchMedia('(min-width: 768px)').matches) {
-  //     const carousel = new bootstrap.Carousel(multipleCardCarousel, { interval: false });
-  //     const carouselWidth = $('.carousel-inner')[0].scrollWidth;
-  //     const cardWidth = $('.carousel-item').width();
-  //     let scrollPosition = 0;
 
-  //     $('#carouselExampleControls .carousel-control-next').on('click', function () {
-  //       if (scrollPosition < carouselWidth - cardWidth * 4) {
-  //         scrollPosition += cardWidth;
-  //         $('#carouselExampleControls .carousel-inner').animate({ scrollLeft: scrollPosition }, 600);
-  //       }
-  //     });
+  useEffect(() => {
+    const multipleCardCarousel = document.querySelector("#carouselExampleControls");
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      const carouselWidth = document.querySelector(".carousel-inner").scrollWidth;
+      const cardWidth = document.querySelector(".carousel-item").clientWidth;
+      let scrollPosition = 0;
 
-  //     $('#carouselExampleControls .carousel-control-prev').on('click', function () {
-  //       if (scrollPosition > 0) {
-  //         scrollPosition -= cardWidth;
-  //         $('#carouselExampleControls .carousel-inner').animate({ scrollLeft: scrollPosition }, 600);
-  //       }
-  //     });
-  //   } else {
-  //     $(multipleCardCarousel).addClass('slide');
-  //   }
-  // }, []);
+      document.querySelector("#carouselExampleControls .carousel-control-next").addEventListener("click", () => {
+        if (scrollPosition < carouselWidth - cardWidth * 4) {
+          scrollPosition += cardWidth;
+          document.querySelector("#carouselExampleControls .carousel-inner").scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+
+      document.querySelector("#carouselExampleControls .carousel-control-prev").addEventListener("click", () => {
+        if (scrollPosition > 0) {
+          scrollPosition -= cardWidth;
+          document.querySelector("#carouselExampleControls .carousel-inner").scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    } else {
+      multipleCardCarousel.classList.add("slide");
+    }
+  }, []);
+
   useEffect(() => {
     const yearsElement = yearsRef.current;
     const values = yearsElement.querySelectorAll('.value');
@@ -60,7 +68,7 @@ export default function Home() {
   return (
     <div className="home">
       <div class="carousel1"></div>
-      <div className="home-start">
+      <div className="home-start shiny">
         <div className="row years" ref={yearsRef}>
           <div className="col text-center">
             <span></span>
@@ -85,19 +93,88 @@ export default function Home() {
           <p className="ms-auto align-self-end fs-4 readmore">Read more About us</p>
         </div>
       </div>
+      <div className="whyus">Why Choose Us</div>
       <div className="mainpage">
-        <div className="whyus">Why Choose Us</div>
         <div className="whybest">What We Do Best</div>
         <div className="partners">Partners</div>
         <div className="case-studies">
-          
+          <h1>Case Studies</h1>
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card-1">
+                  <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt=""/>
+                    <div class="card-content">
+                      <h2>Card Heading</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
+                      <a href="#" class="button">
+                        Find out more
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                      </a>
+                    </div>
+                </div>
+                <div class="card-1">
+                  <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt=""/>
+                    <div class="card-content">
+                      <h2>Card Heading</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
+                      <a href="#" class="button">
+                        Find out more
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                      </a>
+                    </div>
+                </div>
+                <div class="card-1">
+                  <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt=""/>
+                    <div class="card-content">
+                      <h2>Card Heading</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
+                      <a href="#" class="button">
+                        Find out more
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                      </a>
+                    </div>
+                </div>
+                <div class="card-1">
+                  <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt=""/>
+                    <div class="card-content">
+                      <h2>Card Heading</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
+                      <a href="#" class="button">
+                        Find out more
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                      </a>
+                    </div>
+                </div>
+                <div class="card-1">
+                  <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt=""/>
+                    <div class="card-content">
+                      <h2>Card Heading</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
+                      <a href="#" class="button">
+                        Find out more
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                      </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
         <div className="trusted d-flex">
           <div className="trustedtext">
             <h1>Trusted Allies</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco lorem23
             </p>
           </div>
           <div class="cont">
@@ -125,6 +202,21 @@ export default function Home() {
               </div>
               <div class="carousel__face">
                 {/* <span className="hi">How IT Works</span> */}
+              </div>
+              <div class="carousel__face">
+                {/* <span className="hi">Woow</span> */}
+              </div>
+              <div class="carousel__face">
+                {/* <span className="hi">Woow</span> */}
+              </div>
+              <div class="carousel__face">
+                {/* <span className="hi">Woow</span> */}
+              </div>
+              <div class="carousel__face">
+                {/* <span className="hi">Woow</span> */}
+              </div>
+              <div class="carousel__face">
+                {/* <span className="hi">Woow</span> */}
               </div>
               <div class="carousel__face">
                 {/* <span className="hi">Woow</span> */}
