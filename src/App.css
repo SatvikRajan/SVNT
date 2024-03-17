@@ -1465,10 +1465,11 @@ ul.job-requirements{
   height: 680px;
   background: linear-gradient(to right, #6161E5 , #5C5BDF, #F57D81, #FB565C 90%);
   padding-bottom: 30px;
+  position: relative;
+  overflow: hidden;
 }
-.home-start:hover{
 
-}
+
 .years{
   padding-top: 50px;
   align-items: center;
@@ -1677,4 +1678,19 @@ main {
 
 .trusted{
   margin-bottom: 30rem;
+}
+.shiny::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--y, 0) * 1px - 300px);
+  left: calc(var(--x, 0) * 1px - 300px);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(black, #00000000 80%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.shiny:hover::after {
+  opacity: 0.1;
 }
