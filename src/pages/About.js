@@ -112,7 +112,7 @@ export const About = () => {
 
           <div className="img-container">
             <img className="henry-co-AW-p" alt="Henry co AW p" src={about} />
-            <div className="text-wrapper-13">About Us</div>
+            <div className="text-wrapper-13">Integrated Solutions,<br/> Empowered Choices <br/><span style={{fontSize: '18px'}}>We are the Blueprint</span></div>
 
           </div>
           <div className="group-9">

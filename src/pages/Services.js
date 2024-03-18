@@ -25,7 +25,7 @@ const ServiceBox = ({ title, description, image, imagePosition, backgroundImage 
   );
 
   return (
-    <div className="service-box d-flex"  style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className="service-box d-flex"  style={{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat',backgroundSize: 'cover' }}>
       {imagePosition === "after" ? content : null}
       <div className="service-box2" >
         {/* Size of image is resized  */}

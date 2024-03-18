@@ -2,6 +2,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import '../css/carousel.css';
 import $ from 'jquery';
 import CaseStudiesCarousel from '../components/Carousel';
+import c1 from '../images/c1.png';
+import c2 from '../images/c2.png';
+import c3 from '../images/c3.png';
+import c4 from '../images/c4.png';
+import Carousel from '../components/Carosuel1';
+import wc1 from '../images/wc1.png';
+import wc2 from '../images/wc2.png';
+import wc3 from '../images/wc3.png';
 export default function Home() {
   const yearsRef = useRef(null);
 
@@ -52,17 +60,9 @@ export default function Home() {
         setIsVisible(true);
         setTimeout(() => {
           setShowNames(true);
-        }, 2000); // Delay of 2 seconds
+        }, 2000);
       }
     };
-
-    const button = document.querySelector(".shiny");
-    button.addEventListener("mousemove", (e) => {
-      const { x, y } = button.getBoundingClientRect();
-      button.style.setProperty("--x", e.clientX - x);
-      button.style.setProperty("--y", e.clientY - y);
-    });
-  
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -85,7 +85,7 @@ export default function Home() {
     const multipleCardCarousel = document.querySelector('#carouselExampleControls');
     if (window.matchMedia('(min-width: 768px)').matches) {
       const carouselWidth = document.querySelector('.carousel-inner').scrollWidth;
-      const cardWidth = document.querySelector('.carousel-item').clientWidth;
+      const cardWidth = document.querySelector('.carousel-item5').clientWidth;
       let scrollPosition = 0;
 
       document.querySelector('#carouselExampleControls .carousel-control-next').addEventListener('click', () => {
@@ -135,9 +135,66 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleClick = (index) => {
+    setCurrentDetail(index);
+  };
   return (
     <div className="home">
-      <div class="carousel1"></div>
+      <div class="carousel1">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div style={{ padding: '100px' }} class="carousel-item active">
+              <img style={{ height: '100%' }} src={c1} class="d-block w-50" alt="..." />
+            </div>
+            <div style={{ padding: '100px' }} class="carousel-item">
+              <img style={{ height: '100%' }} src={c2} class="d-block w-50" alt="..." />
+            </div>
+            <div style={{ padding: '100px' }} class="carousel-item">
+              <img style={{ height: '100%' }} src={c3} class="d-block w-50" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
       <div className="home-start shiny">
         <div className="row years" ref={yearsRef}>
           <div className="col text-center">
@@ -160,17 +217,64 @@ export default function Home() {
             cutting-edge networking and communication solutions for evolving needs. With unwavering determination, we
             strive to lead in delivering innovative solutions globally.
           </p>
-          <p className="ms-auto align-self-end fs-4 readmore">Read more About us</p>
+          <p className="ms-auto align-self-end fs-4 readmore" href='/contact'>Read more About us</p>
         </div>
       </div>
-      <div className="whyus">
-        <p>Why Choose Us</p>
-        <div className="whyus-text d-flex">
-          <p style={{ borderBottom: currentDetail === 0 ? '1px solid black' : 'none' }}>Client Satisfaction</p>
-          <p style={{ borderBottom: currentDetail === 1 ? '1px solid black' : 'none' }}>Future Outlook</p>
-          <p style={{ borderBottom: currentDetail === 2 ? '1px solid black' : 'none' }}>Resilience</p>
+      <div
+        style={{ paddingLeft: '10rem', display: 'flex', flexDirection: 'row', alignItems: 'center' }}
+        className="whyus"
+      >
+        <div style={{ marginRight: '2rem' }}>
+          <p style={{fontSize: '42px'}}>Why Choose Us</p>
+          <div className="whyus-text d-flex">
+            <p style={{ position: 'relative', fontSize: '22px' }} onClick={() => handleClick(0)}>
+              Client Satisfaction
+              <span
+                style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  height: '5px',
+                  width: currentDetail === 0 ? '100%' : '0%',
+                  backgroundColor: '#6586FD',
+                  transition: 'width 5s',
+                }}
+              ></span>
+            </p>
+            <p style={{ position: 'relative', fontSize: '22px' }} onClick={() => handleClick(1)}>
+              Future Outlook
+              <span
+                style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  height: '5px',
+                  width: currentDetail === 1 ? '100%' : '0%',
+                  backgroundColor: '#6586FD',
+                  transition: 'width 5s',
+                }}
+              ></span>
+            </p>
+            <p style={{ position: 'relative', fontSize: '22px' }} onClick={() => handleClick(2)}>
+              Resilience
+              <span
+                style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  height: '5px',
+                  width: currentDetail === 2 ? '100%' : '0%',
+                  backgroundColor: '#6586FD',
+                  transition: 'width 5s',
+                }}
+              ></span>
+            </p>
+          </div>
+          <div style={{ marginLeft: '4rem', marginRight: '6rem', fontSize: '20px' }}>{details[currentDetail]}</div>
         </div>
-        <div className="">{details[currentDetail]}</div>
+        {currentDetail === 0 && <img src={wc1} style={{ width: '20vw', height: '40vh' }} alt="Client Satisfaction" />}
+        {currentDetail === 1 && <img src={wc2} style={{ width: '20vw', height: '40vh' }} alt="Future Outlook" />}
+        {currentDetail === 2 && <img src={wc3} style={{ width: '20vw', height: '40vh' }} alt="Resilience" />}
       </div>
 
       <div className="mainpage">

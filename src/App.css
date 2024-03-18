@@ -599,7 +599,6 @@ a:hover {
 .about-us-page .henry-co-AW-p {
   height: 681px;
   object-fit: cover;
-  background-size: cover;
   position: absolute;
   top: 0;
   width: 1870px;
@@ -607,16 +606,13 @@ a:hover {
 
 .about-us-page .text-wrapper-13 {
   color: #ffffff;
-  font-family: 'Poppins-SemiBold', Helvetica;
-  font-size: 150px;
-  font-weight: 600;
-  left: 374px;
-  letter-spacing: -3px;
-  line-height: 154.5px;
+  font-size: 35px;
+  line-height: 40px;
+  font-weight: 300;
   position: absolute;
-  top: 119px;
+  top: 520px;
+  left: 100px;
   white-space: nowrap;
-  transition: all 0.3s ease;
 }
 
 .img-container:hover {
@@ -1113,10 +1109,26 @@ p.write1 {
   padding: 5rem;
 }
 .service-box1 {
+  animation: animate 1s ease-in-out 0.6s 1 forwards;
   color: white;
   line-height: 36px;
   font-size: 24px;
 }
+
+@keyframes animate {
+  from{
+      opacity: 0;
+      transform: translate(0, 100px);
+      filter: blur(33px);
+  }
+
+  to{
+      opacity: 1;
+      transform: translate(0);
+      filter: blur(0);
+  }
+}
+
 .service-boxhead {
   margin-bottom: 3vh;
 }
@@ -1529,10 +1541,38 @@ ul.job-requirements {
   transform: translateX(0); /* Move the arrow back to its original position */
 }
 .readmore1 {
+  display: flex;
+  justify-content: flex-end; /* Align text to the right */
   text-align-last: right;
+  width: 25%;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+  transition: justify-content 0.5s;
   width: 25%;
   border-bottom: 1px solid black;
   padding-bottom: 5px;
+}
+
+.readmore-1:hover {
+  gap: 20px;
+  justify-content: flex-start; /* Align text to the left on hover */
+}
+
+.readmore-1:after {
+  gap: 20px;
+  align-self: center;
+  float: right;
+  content: '';
+  width: 30px; /* Adjust the width of the SVG */
+  height: 20px; /* Adjust the height of the SVG */
+  background: url('./images/Vector.svg') no-repeat;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s; /* Transition opacity and transform over 0.5 seconds */
+  transform: translateX(-10px); 
+}
+.readmore-1:hover::after {
+  opacity: 1; /* Fade in the SVG on hover */
+  transform: translateX(0); /* Move the arrow back to its original position */
 }
 
 .x1 {
@@ -1572,11 +1612,12 @@ main {
   letter-spacing: 0px;
 }
 
+
 .whyus {
-  margin-left: 5rem;
+  /* margin-left: 5rem; */
   padding: 5rem;
   font-size: 30px;
-  background-color: white;
+  background-color: #F1FAFF;
   height: 800px;
 }
 
@@ -1592,6 +1633,10 @@ main {
   height: 800px;
 }
 .partners {
+  background-color: #F1FAFF;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('./images/genetec.png');
   padding: 10rem;
   font-size: 30px;
   height: 800px;
@@ -1684,13 +1729,13 @@ main {
   transform: translateX(0); /* Move the arrow back to its original position */
 }
 .last-text1 {
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   display: flex;
   text-shadow: 2px 2px 5px black;
   position: absolute;
   top: 58%;
-  left: 63%;
+  left: 67%;
   /* transform: translate(-50%, -50%); */
   color: white;
   font-size: 30px;
@@ -1698,7 +1743,7 @@ main {
   text-align: center;
   color: white;
   border-bottom: 2px solid white;
-  width: 13%;
+  width: 10%;
   padding-bottom: 5px;
   text-align: right;
 }
@@ -1706,7 +1751,7 @@ main {
 .last-contact {
   left: 32rem;
   padding: 60px;
-  top: 378rem;
+  top: 358rem;
   border-radius: 20px;
   color: black;
   background-color: #e8e8e8;
@@ -1773,20 +1818,19 @@ main {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Dark background color */
-  z-index: 2; /* Ensure it's above other elements */
+  z-index: 2; 
 }
 
-/* Add styles for the details */
 .details {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3; /* Ensure it's above the darkened background */
+  z-index: 3; 
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.5); /* Light color for the details */
+  background-color: rgba(0, 0, 0, 0.5);
   transform: translate(-50%, -50%);
-  display: none; /* Initially hide the details */
+  display: none;
 }
 
 /* Show the details when the logo container is hovered */
@@ -1893,12 +1937,13 @@ main {
 }
 
 .whyus-text{
-  margin: 5rem;
-  gap: 200px;
+  margin: 3rem;
+  gap: 70px;
 }
 
 
 .whyus {
+  height: 800px;
   display: flex;
   flex-direction: column;
 }

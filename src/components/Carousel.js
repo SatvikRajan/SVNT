@@ -11,82 +11,82 @@ function CaseStudiesCarousel() {
   return (
     <div id="carouselExampleControls" className="carousel slide">
       <div className="carousel-inner">
-        <div className="carousel-item active">
+        <div className="carousel-item5 active">
           <div className="card-1">
             <img src={ips} alt="" />
             <div className="card-content">
               <h2>Genpact</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              <a href="" className='readmore'>Read More</a>
+              <p style={{fontSize: '20px', textAlign: 'left'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <a style={{textAlign: 'right'}} href="" className='readmore'>Read More</a>
             </div>
           </div>
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item5">
           <div className="card-1">
             <img src={ipn} alt="" />
             <div className="card-content">
               <h2>BIAL</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p style={{fontSize: '20px', textAlign: 'left'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
               <a href="" className='readmore'>Read More</a>
             </div>
           </div>
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item5">
           <div className="card-1">
             <img src={str} alt="" />
             <div className="card-content">
               <h2>ITC Hotels</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p style={{fontSize: '20px', textAlign: 'left'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
               <a href="" className='readmore'>Read More</a>
             </div>
           </div>
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item5">
           <div className="card-1">
             <img src={sms} alt="" />
             <div className="card-content">
               <h2>Card Heading</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p style={{fontSize: '20px', textAlign: 'left'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
               <a href="" className='readmore'>Read More</a>
             </div>
           </div>
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item5">
           <div className="card-1">
             <img src={is} alt="" />
             <div className="card-content">
               <h2>Card Heading</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p style={{fontSize: '20px', textAlign: 'left'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
               <a href="" className='readmore'>Read More</a>
             </div>
           </div>
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item5">
           <div className="card-1">
             <img src={sss} alt="" />
             <div className="card-content">
               <h2>Card Heading</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p style={{fontSize: '20px', textAlign: 'left'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
               <a href="" className='readmore'>Read More</a>
             </div>
           </div>
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item5">
           <div className="card-1">
             <img src={avs} alt="" />
             <div className="card-content">
               <h2>Card Heading</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p style={{fontSize: '20px', textAlign: 'left'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
               <a href="" className='readmore'>Read More</a>
             </div>
           </div>
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item5">
           <div className="card-1">
             <img src={es} alt="" />
             <div className="card-content">
               <h2>Card Heading</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p style={{fontSize: '20px', textAlign: 'left'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
               <a href="" className='readmore'>Read More</a>
 
             </div>
