@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import career from "../images/careerimage.png";
 import invite from "../images/invite.png";
 import search from "../images/search.jpg";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '../css/carousel.css'
 export const CareersPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -39,7 +40,7 @@ export const CareersPage = () => {
           </div>
         </div>
 
-        <div id="recruitment" data-aos="fade-right" className="recruitment">
+        <div id="recruitment" className="recruitment">
           <div className="recruit">
             <h1>Shape our Future Together!</h1>
             <p className="recruit-handle">
@@ -202,7 +203,7 @@ export const CareersPage = () => {
                 </div>
               </div>
             ) : (
-              <div className="job-des d-flex fade-in">
+              <div className="job-des d-flex">
                 <div style={{ marginLeft: "-35px", marginRight: "15px" }}>
                   {" "}
                   <svg
@@ -506,8 +507,11 @@ export const CareersPage = () => {
               ></p>
             </div>
           </div>
+
         </div>
+        
       </div>
+     
     </div>
   );
 };

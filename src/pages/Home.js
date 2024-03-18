@@ -1,11 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import ips from '../images/ips.png';
-import ipn from '../images/ipn.png';
-import str from '../images/str.png';
+import React, { useEffect, useRef, useState } from 'react';
 import '../css/carousel.css';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import 'bootstrap'; // Import Bootstrap JS
-
+import $ from 'jquery';
+import CaseStudiesCarousel from '../components/Carousel';
 export default function Home() {
   const yearsRef = useRef(null);
 
@@ -24,45 +20,95 @@ export default function Home() {
     };
     window.requestAnimationFrame(step);
   }
+  document.addEventListener('DOMContentLoaded', () => {
+    const hi = document.querySelector('.shiny');
 
-  const button = document.querySelector(".shiny");
-
-  const readout = document.querySelector("p");
-  
-  button.addEventListener("mousemove", (e) => {
-    const { x, y } = button.getBoundingClientRect();
-    button.style.setProperty("--x", e.clientX - x);
-    button.style.setProperty("--y", e.clientY - y);
+    hi.addEventListener('mousemove', (e) => {
+      const { x, y } = hi.getBoundingClientRect();
+      hi.style.setProperty('--x', e.clientX - x);
+      hi.style.setProperty('--y', e.clientY - y);
+    });
   });
+  const [isVisible, setIsVisible] = useState(false);
+  const [showNames, setShowNames] = useState(false);
+  const [selectedLogo, setSelectedLogo] = useState(null);
+  const names = [
+    'IP Surveillance Solution',
+    'IP Networking Solution',
+    'Integration Solutions',
+    'Audio-Visual Solutions',
+    'Storage',
+    'Security & Management Services',
+    'Surveillance and Safety Solutions',
+    'Energy Solutions',
+  ];
 
   useEffect(() => {
-    const multipleCardCarousel = document.querySelector("#carouselExampleControls");
-    if (window.matchMedia("(min-width: 768px)").matches) {
-      const carouselWidth = document.querySelector(".carousel-inner").scrollWidth;
-      const cardWidth = document.querySelector(".carousel-item").clientWidth;
+    const handleScroll = () => {
+      const logoCircle = document.getElementById('logo-circle');
+      const rect = logoCircle.getBoundingClientRect();
+      const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+      if (rect.top <= viewHeight * 0.75) {
+        setIsVisible(true);
+        setTimeout(() => {
+          setShowNames(true);
+        }, 2000); // Delay of 2 seconds
+      }
+    };
+
+    const button = document.querySelector(".shiny");
+    button.addEventListener("mousemove", (e) => {
+      const { x, y } = button.getBoundingClientRect();
+      button.style.setProperty("--x", e.clientX - x);
+      button.style.setProperty("--y", e.clientY - y);
+    });
+  
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const [activeLogo, setActiveLogo] = useState(null);
+
+  const handleLogoHover = (index) => {
+    setSelectedLogo(index);
+    setActiveLogo(index);
+  };
+
+  const handleLogoLeave = () => {
+    setSelectedLogo(null);
+    setActiveLogo(null);
+  };
+
+  useEffect(() => {
+    const multipleCardCarousel = document.querySelector('#carouselExampleControls');
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      const carouselWidth = document.querySelector('.carousel-inner').scrollWidth;
+      const cardWidth = document.querySelector('.carousel-item').clientWidth;
       let scrollPosition = 0;
 
-      document.querySelector("#carouselExampleControls .carousel-control-next").addEventListener("click", () => {
+      document.querySelector('#carouselExampleControls .carousel-control-next').addEventListener('click', () => {
         if (scrollPosition < carouselWidth - cardWidth * 4) {
           scrollPosition += cardWidth;
-          document.querySelector("#carouselExampleControls .carousel-inner").scrollTo({
+          document.querySelector('#carouselExampleControls .carousel-inner').scrollTo({
             left: scrollPosition,
-            behavior: 'smooth'
+            behavior: 'smooth',
           });
         }
       });
 
-      document.querySelector("#carouselExampleControls .carousel-control-prev").addEventListener("click", () => {
+      document.querySelector('#carouselExampleControls .carousel-control-prev').addEventListener('click', () => {
         if (scrollPosition > 0) {
           scrollPosition -= cardWidth;
-          document.querySelector("#carouselExampleControls .carousel-inner").scrollTo({
+          document.querySelector('#carouselExampleControls .carousel-inner').scrollTo({
             left: scrollPosition,
-            behavior: 'smooth'
+            behavior: 'smooth',
           });
         }
       });
     } else {
-      multipleCardCarousel.classList.add("slide");
+      multipleCardCarousel.classList.add('slide');
     }
   }, []);
 
@@ -73,6 +119,20 @@ export default function Home() {
     values.forEach((value, index) => {
       animateValue(value, 0, parseInt(value.textContent), duration);
     });
+  }, []);
+
+  const [currentDetail, setCurrentDetail] = useState(0);
+  const details = [
+    'Each solution is tailored to understand and address the unique needs of each client. Everything we do is shaped by a core set of values. Our mission as a company revolves around the complete satisfaction of our clients.',
+    'We are on the constant lookout for improvement and actively seeking new opportunities for growth and impact. Together, we aim to be a part of shaping the future and creating a better world.',
+    'We’re not here to follow the norm, we’re here to set them. We believe in being at the forefront of change, shaping the future.  Our commitment to excellence is evident in the challenges we embrace and the projects we successfully deliver.',
+  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDetail((prevDetail) => (prevDetail + 1) % details.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -96,155 +156,99 @@ export default function Home() {
         </div>
         <div className="lorem container d-flex pt-5 text-light">
           <p style={{ width: '60%', lineHeight: '40px' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            exmmodo consequat. Duis aute irure dolor in reprehenderi
+            Committed to integrating pioneering technology into quality service, SVNT Infotech is a premier provider of
+            cutting-edge networking and communication solutions for evolving needs. With unwavering determination, we
+            strive to lead in delivering innovative solutions globally.
           </p>
           <p className="ms-auto align-self-end fs-4 readmore">Read more About us</p>
         </div>
       </div>
-      <div className="whyus">Why Choose Us</div>
+      <div className="whyus">
+        <p>Why Choose Us</p>
+        <div className="whyus-text d-flex">
+          <p style={{ borderBottom: currentDetail === 0 ? '1px solid black' : 'none' }}>Client Satisfaction</p>
+          <p style={{ borderBottom: currentDetail === 1 ? '1px solid black' : 'none' }}>Future Outlook</p>
+          <p style={{ borderBottom: currentDetail === 2 ? '1px solid black' : 'none' }}>Resilience</p>
+        </div>
+        <div className="">{details[currentDetail]}</div>
+      </div>
+
       <div className="mainpage">
-        <div className="whybest">What We Do Best</div>
+        <div className="whybest">
+          What We Do Best
+          <div id="logo-circle" className={`logo-circle ${isVisible ? 'visible' : ''}`}>
+            <div className="central-logo"></div>
+            {names.map((name, index) => (
+              <div
+                key={index}
+                className={`logo-container ${selectedLogo === index ? 'selected' : ''}`}
+                onMouseEnter={() => handleLogoHover(index)}
+                onMouseLeave={handleLogoLeave}
+              >
+                <div className={`logo logo-${index + 1}`}></div>
+                <div className={`logo-name logo-name${index + 1}`}>{showNames && name}</div>
+                {selectedLogo === index && <div className="details">Details</div>}
+                <div className={`darken ${selectedLogo === index ? 'active' : ''}`}></div>
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="partners">Partners</div>
         <div className="case-studies">
           <h1>Case Studies</h1>
-          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="card-1">
-                  <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt=""/>
-                    <div class="card-content">
-                      <h2>Card Heading</h2>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
-                      <a href="#" class="button">
-                        Find out more
-                        <span class="material-symbols-outlined">arrow_right_alt</span>
-                      </a>
-                    </div>
-                </div>
-                <div class="card-1">
-                  <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt=""/>
-                    <div class="card-content">
-                      <h2>Card Heading</h2>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
-                      <a href="#" class="button">
-                        Find out more
-                        <span class="material-symbols-outlined">arrow_right_alt</span>
-                      </a>
-                    </div>
-                </div>
-                <div class="card-1">
-                  <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt=""/>
-                    <div class="card-content">
-                      <h2>Card Heading</h2>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
-                      <a href="#" class="button">
-                        Find out more
-                        <span class="material-symbols-outlined">arrow_right_alt</span>
-                      </a>
-                    </div>
-                </div>
-                <div class="card-1">
-                  <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt=""/>
-                    <div class="card-content">
-                      <h2>Card Heading</h2>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
-                      <a href="#" class="button">
-                        Find out more
-                        <span class="material-symbols-outlined">arrow_right_alt</span>
-                      </a>
-                    </div>
-                </div>
-                <div class="card-1">
-                  <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt=""/> 
-                    <div class="card-content">
-                      <h2>Card Heading</h2>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
-                      <a href="#" class="button">
-                        Find out more
-                        <span class="material-symbols-outlined">arrow_right_alt</span>
-                      </a>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+          <CaseStudiesCarousel />
         </div>
         <div className="trusted d-flex">
           <div className="trustedtext">
-            <h1>Trusted Allies</h1>
+            <h1>Clientele</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco lorem23
+              Our partners are who make us who we are. We firmly believe that people are our greatest asset and through
+              collaboration and exchange of ideas, the best ideas are brought to life. Our partners play a crucial role
+              in helping us deliver exceptional solutions and services to our clients that push the boundary further. 
             </p>
           </div>
           <div class="cont">
             <div class="caro">
               <div class="carousel__face">
-                {/* <span className="hi">This is something</span> */}
+                <span className="hi">Clients</span>
               </div>
-              <div class="carousel__face">
-                {/* <span className="hi">Very special</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">Special is the key</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">For you</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">Just give it</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">A try</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">And see</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">How IT Works</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">Woow</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">Woow</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">Woow</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">Woow</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">Woow</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">Woow</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">Woow</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">Woow</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">Woow</span> */}
-              </div>
-              <div class="carousel__face">
-                {/* <span className="hi">Woow</span> */}
-              </div>
+              <div class="carousel__face">{/* <span className="hi">Very special</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">Special is the key</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">For you</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">Just give it</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">A try</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">And see</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">How IT Works</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">Woow</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">Woow</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">Woow</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">Woow</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">Woow</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">Woow</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">Woow</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">Woow</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">Woow</span> */}</div>
+              <div class="carousel__face">{/* <span className="hi">Woow</span> */}</div>
             </div>
           </div>
+        </div>
+        <div className="last">
+          <p className="last-text">Connect with New People - Discover New Horizons - Design the Future</p>
+          <a href="/careers">
+            <p className="last-text1 join">Join Us</p>
+          </a>
+        </div>
+        <div className="last-contact d-flex">
+          <div className="w-75">
+            <h1>Not sure where to start ?</h1>
+            <p>
+              Our specialists are available to address your inquiries and guide you in choosing the ideal products for
+              your company.
+            </p>
+          </div>
+          <a href="/contact" className="ms-auto align-self-end fs-4 readmore1">
+            Contact Us
+          </a>
         </div>
       </div>
     </div>

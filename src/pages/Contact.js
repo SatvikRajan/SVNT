@@ -20,7 +20,7 @@ const Contact = () => {
             <li>Learn about our pricing</li>
           </ul>
         </div>
-        <div className="form-box" data-aos="fade-right">
+        <div className="form-box">
           <label for="inp" class="inp">
             <input type="text" id="inp" placeholder="&nbsp;" />
             <span class="label">Name</span>

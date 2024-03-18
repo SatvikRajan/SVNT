@@ -20,28 +20,28 @@ export const About = () => {
           <div className="clients">
             <div class="slider">
               <div class="slide-track">
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={adityabirla} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={vedanta} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={adityabirla} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={vedanta} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={adityabirla} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={vedanta} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={adityabirla} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={vedanta} alt="" />
                 </div>
 
@@ -49,28 +49,28 @@ export const About = () => {
             </div>
             {/* <div class="slider">
               <div class="slide-track">
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={caire} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={image15} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={caire} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={image15} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={caire} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={image15} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={caire} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={image15} alt="" />
                 </div>
               </div>
@@ -80,28 +80,28 @@ export const About = () => {
             <br/>
             <div class="slider">
               <div class="slide-track">
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={ITC} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={image13} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={ITC} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={image13} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={ITC} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={image13} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={ITC} alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide-1">
                   <img className='me' src={image13} alt="" />
                 </div>
               </div>

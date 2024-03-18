@@ -1,3 +1,4 @@
+
 .carousel1 {
   position: relative;
   height: 800px;
@@ -31,9 +32,10 @@
   top: 20px;
   left: 10px;
   right: 10px;
-  background-size: cover;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  background-size: contain;
   display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hi {
@@ -42,75 +44,75 @@
 }
 
 .carousel__face:nth-child(1) {
-  background-image: url('https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/aditya-birla.jpg');
   transform: rotateY(0deg) translateZ(480px);
 }
 .carousel__face:nth-child(2) {
-  background-image: url('https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/vedanta.jpg');
   transform: rotateY(20deg) translateZ(480px);
 }
 .carousel__face:nth-child(3) {
-  background-image: url('https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/itc.png');
   transform: rotateY(40deg) translateZ(480px);
 }
 .carousel__face:nth-child(4) {
-  background-image: url('https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/image 13.png');
   transform: rotateY(60deg) translateZ(480px);
 }
 .carousel__face:nth-child(5) {
-  background-image: url('https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/claire.png');
   transform: rotateY(80deg) translateZ(480px);
 }
 .carousel__face:nth-child(6) {
-  background-image: url('https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/image 15.png');
   transform: rotateY(100deg) translateZ(480px);
 }
 .carousel__face:nth-child(7) {
-  background-image: url('https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/aditya-birla.jpg');
   transform: rotateY(120deg) translateZ(480px);
 }
 .carousel__face:nth-child(8) {
-  background-image: url('https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/vedanta.jpg');
   transform: rotateY(140deg) translateZ(480px);
 }
 .carousel__face:nth-child(9) {
-  background-image: url('https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/itc.png');
   transform: rotateY(160deg) translateZ(480px);
 }
 .carousel__face:nth-child(10) {
-  background-image: url('https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/image 13.png');
   transform: rotateY(180deg) translateZ(480px);
 }
 .carousel__face:nth-child(11) {
-  background-image: url('https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/claire.png');
   transform: rotateY(200deg) translateZ(480px);
 }
 .carousel__face:nth-child(12) {
-  background-image: url('https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/image 15.png');
   transform: rotateY(220deg) translateZ(480px);
 }
 .carousel__face:nth-child(13) {
-  background-image: url('https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/aditya-birla.jpg');
   transform: rotateY(240deg) translateZ(480px);
 }
 .carousel__face:nth-child(14) {
-  background-image: url('https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/vedanta.jpg');
   transform: rotateY(260deg) translateZ(480px);
 }
 .carousel__face:nth-child(15) {
-  background-image: url('https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/vedanta.jpg');
   transform: rotateY(280deg) translateZ(480px);
 }
 .carousel__face:nth-child(16) {
-  background-image: url('https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/itc.png');
   transform: rotateY(300deg) translateZ(480px);
 }
 .carousel__face:nth-child(17) {
-  background-image: url('https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/claire.png');
   transform: rotateY(320deg) translateZ(480px);
 }
 .carousel__face:nth-child(18) {
-  background-image: url('https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/vedanta.jpg');
   transform: rotateY(340deg) translateZ(480px);
 }
 
@@ -123,46 +125,111 @@
   }
 }
 
-
-.carousel-inner {
+.carousel-inner{
+  margin-top: 5rem;
   padding: 1em;
+
 }
-.card-1 {
-  margin: 0 0.5em;
-  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-  border: none;
+
+.carousel-item{
+  transition: none !important;
 }
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: #e1e1e1;
-  width: 6vh;
-  height: 6vh;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-}
+
 @media (min-width: 768px) {
   .carousel-item {
     margin-right: 0;
-    flex: 0 0 33.333333%;
+    flex: 0 0 36.333333%;
     display: block;
   }
   .carousel-inner {
     display: flex;
   }
 }
-.card-1 .img-wrapper {
-    max-width: 100%;
-    height: 13em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.card-1 img {
-    max-height: 100%;
-}
 @media (max-width: 767px) {
   .card-1 .img-wrapper {
     height: 17em;
   }
+}
+
+.card-1 { 
+  width: 24rem;
+  height: 36rem;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  color: rgb(240, 240, 240);
+ 
+  img {
+    filter: brightness(0.5);
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+  }
+
+  h2 {
+    position: absolute;
+    inset: auto 30px 30px 30px;
+    margin: 0;
+    transition: inset .3s .3s ease-out;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+  }
+  p, a {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+  }
+  
+  p {
+    inset: auto auto 70px 30px;
+  }
+  
+  a {
+    width: 37%;
+    display: flex;
+    inset: auto auto 40px 133px;
+    color: white !important;
+    text-decoration: none;
+  }
+  
+  &:hover h2 {
+    inset: auto 30px 480px 20px;
+    transition: inset .3s ease-out;
+  }
+  
+  &:hover p, &:hover a {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+  }
+  
+  &:hover img {
+    transition: opacity .3s ease-in;
+    opacity: 1;
+  }
+
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+/* 
+.carousel-item, .carousel-item:active{
+  display: flex;
+  gap: 100px;
+} */
+
+.carousel-control-next,.carousel-control-prev {
+  opacity: 1;
+  width: 2%;
+}
+.carousel{
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
