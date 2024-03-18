@@ -10,6 +10,7 @@ import Carousel from '../components/Carosuel1';
 import wc1 from '../images/wc1.png';
 import wc2 from '../images/wc2.png';
 import wc3 from '../images/wc3.png';
+import Carosuel1 from '../components/Carosuel1';
 export default function Home() {
   const yearsRef = useRef(null);
 
@@ -141,59 +142,7 @@ export default function Home() {
   return (
     <div className="home">
       <div class="carousel1">
-        <div id="carouselExampleIndicators" class="carousel slide">
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div style={{ padding: '100px' }} class="carousel-item active">
-              <img style={{ height: '100%' }} src={c1} class="d-block w-50" alt="..." />
-            </div>
-            <div style={{ padding: '100px' }} class="carousel-item">
-              <img style={{ height: '100%' }} src={c2} class="d-block w-50" alt="..." />
-            </div>
-            <div style={{ padding: '100px' }} class="carousel-item">
-              <img style={{ height: '100%' }} src={c3} class="d-block w-50" alt="..." />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+        <Carosuel1/>
       </div>
       <div className="home-start shiny">
         <div className="row years" ref={yearsRef}>

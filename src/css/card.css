@@ -1,0 +1,49 @@
+.card{
+    height: 100%;
+    width: 20vw !important;
+    background-color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: all 0.2s;
+}
+
+.card.current{
+    width:50vw !important;
+}
+
+.carousellll{
+    height: 100%;
+    width: fit-content;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transition: all 0.2s;
+}
+
+
+.container10{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.left-button{
+    position: absolute;
+    top:50%;
+    left:5%;
+    transform: translate(-50%,-50%);
+}
+.right-button{
+    position: absolute;
+    top:50%;
+    right:5%;
+    transform: translate(-50%,-50%);
+}
+.outer{
+    padding: 10rem;
+    margin: 5rem;
+    width: 100vw;
+    height: 100vh;
+}
