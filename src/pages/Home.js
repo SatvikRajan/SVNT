@@ -1,7 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../css/carousel.css';
+import companyLogo from '../images/company'
+import logo1 from '../images/1'
+import logo2 from '../images/2.png'
+import logo3 from '../images/3.png'
+import logo4 from '../images/4.png'
+import logo5 from '../images/5'
+import logo6 from '../images/6'
+import logo7 from '../images/7'
+import logo8 from '../images/8'
 import $ from 'jquery';
 import CaseStudiesCarousel from '../components/Carousel';
+import index from 'toastify';
 export default function Home() {
   const yearsRef = useRef(null);
 
@@ -32,6 +42,8 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [showNames, setShowNames] = useState(false);
   const [selectedLogo, setSelectedLogo] = useState(null);
+
+  const [showDetails, setShowDetails] = useState(false);
   const names = [
     'IP Surveillance Solution',
     'IP Networking Solution',
@@ -42,6 +54,17 @@ export default function Home() {
     'Surveillance and Safety Solutions',
     'Energy Solutions',
   ];
+
+  const data = [
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt'
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -187,7 +210,23 @@ export default function Home() {
               >
                 <div className={`logo logo-${index + 1}`}></div>
                 <div className={`logo-name logo-name${index + 1}`}>{showNames && name}</div>
-                {selectedLogo === index && <div className="details">Details</div>}
+
+
+                {/* make changes here */}
+
+                {selectedLogo === index &&
+                  <div className="details">
+                    
+                    <div className='details-text'>
+                      {data[index]}
+                    </div> 
+                    <div className='details-readmore'>Read More</div>
+                  </div>}
+
+
+
+                {/* make changes above */}
+
                 <div className={`darken ${selectedLogo === index ? 'active' : ''}`}></div>
               </div>
             ))}
@@ -249,6 +288,103 @@ export default function Home() {
           <a href="/contact" className="ms-auto align-self-end fs-4 readmore1">
             Contact Us
           </a>
+        </div>
+      </div>
+
+      <div className='what-we-do-best'>
+       { showDetails && <div className='wwdb-details' onClick={() => setShowDetails(false)}>
+          <p className='wwdb-head'>What We Do Best</p>
+          <div className='details-wrapper'>
+            <p className='left'>IP Surveillance Solution<img src={logo2} /></p>
+            <div className='right'>
+              <p className='p1-info'>{data[0]}</p>
+              <p className='info'>Read More</p>
+            </div>
+            
+          </div>
+          
+
+        </div>}
+        <div className='wwdb-container'>
+          <p className='wwdb-head'>What We Do Best</p>
+
+          <div className='wwdb-menu'>
+
+            <div className='m1'>
+              <p
+                className='p1'
+                onClick={() => setShowDetails(!showDetails)}>
+                {names[1]}
+              </p>
+              <img src={logo2} />
+            </div>
+
+            <div className='m2'>
+              <p
+                className='p2'
+                onClick={() => setShowDetails(!showDetails)}>
+                {names[0]}
+                <img src={logo1} />
+              </p>
+
+              <p
+                className='p3'
+                onClick={() => setShowDetails(!showDetails)}>
+                <img src={logo3} />
+                {names[2]}
+              </p>
+            </div>
+
+            <div className='m3'>
+              <p
+                className='p4'
+                onClick={() => setShowDetails(!showDetails)}>
+                {names[3]}
+                <img src={logo4} />
+              </p>
+
+              <img src={companyLogo} alt='company logo' className='company-logo' />
+              
+              <p
+                className='p5'
+                onClick={() => setShowDetails(!showDetails)}>
+                <img src={logo7} />
+                {names[6]}
+              </p>
+            </div>
+            
+            <div className='m4'>
+              <p
+                className='p6'
+                onClick={() => setShowDetails(!showDetails)}>
+                {names[7]}
+                <img src={logo8} />
+              </p>
+              <p
+                className='p7'
+                onClick={() => setShowDetails(!showDetails)}>
+                <img src={logo5} />
+                Storage
+              </p>
+
+            </div>
+            <div className='m5'>
+              <img src={logo6} />
+              <p
+                className='p8'
+                onClick={() => setShowDetails(!showDetails)}>
+                {names[5]}
+              </p>
+            </div>
+
+          </div>
+
+          <div className='wwdb-learn-more'>
+            <p>Learn more on Services</p>
+            <div
+              style={{ flex: 1, height: '2px', backgroundColor: 'black' }}>
+            </div>
+          </div>
         </div>
       </div>
     </div>
