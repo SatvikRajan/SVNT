@@ -110,7 +110,7 @@ export const About = () => {
           </div>
 
           <div className="img-container">
-            <img className="henry-co-AW-p" alt="Henry co AW p" src={henry} />
+            <img className="henry-co-AW-p" alt="Henry co AW p" src={about} />
             <div className="text-wrapper-13">About Us</div>
 
           </div>
