@@ -599,6 +599,7 @@ a:hover {
 .about-us-page .henry-co-AW-p {
   height: 681px;
   object-fit: cover;
+  background-size: cover;
   position: absolute;
   top: 0;
   width: 1870px;

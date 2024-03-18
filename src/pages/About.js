@@ -10,6 +10,7 @@ import ITC from '../images/itc.png'
 import image13 from '../images/image 13.png'
 import cloud from '../images/chris-nguyen-lbmrrNgq2lo-unsplash 2.png'
 import '../css/slider.css'
+import about from '../images/about.jpg'
 export const About = () => {
 
   return (
