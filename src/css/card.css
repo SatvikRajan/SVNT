@@ -1,12 +1,18 @@
 .card{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 100%;
-    width: 20vw !important;
-    background-color: black;
+    width: 18vw !important;
     margin-left: 10px;
     margin-right: 10px;
     transition: all 0.2s;
+    border-radius: 20px;
+    border: 1px solid white;
 }
-
+.card{
+    --bs-card-border-color: none;
+}
 .card.current{
     width:50vw !important;
 }
@@ -30,20 +36,49 @@
 }
 
 .left-button{
+    background-image: url('../images/arorwleft.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     top:50%;
     left:5%;
     transform: translate(-50%,-50%);
 }
+.left-button:hover, .right-button:hover{
+    background-color: #7052B4;
+    cursor: pointer;
+}
+
+
 .right-button{
+    background-image: url('../images/arorwright.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     top:50%;
     right:5%;
     transform: translate(-50%,-50%);
 }
 .outer{
-    padding: 10rem;
-    margin: 5rem;
+    padding: 5rem;
     width: 100vw;
     height: 100vh;
+}
+
+.cc{
+    width: 100%;
+    height: 74vh;
+    object-fit: cover;
+}
+
+.cp{
+    background-image: url('../images/madeleine-ragsdale-j0i8M-2aTPE-unsplash\ 1.png');
 }

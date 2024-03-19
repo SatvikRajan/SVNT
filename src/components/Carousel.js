@@ -16,7 +16,7 @@ function CaseStudiesCarousel() {
             <img src={ips} alt="" />
             <div className="card-content">
               <h2>Genpact</h2>
-              <p style={{fontSize: '20px', textAlign: 'left'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p style={{fontSize: '20px', textAlign: 'left'}}>Optimizing Meetings with LED Panel Video Wall Installation</p>
               <a style={{textAlign: 'right'}} href="" className='readmore'>Read More</a>
             </div>
           </div>
@@ -26,7 +26,7 @@ function CaseStudiesCarousel() {
             <img src={ipn} alt="" />
             <div className="card-content">
               <h2>BIAL</h2>
-              <p style={{fontSize: '20px', textAlign: 'left'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p style={{fontSize: '20px', textAlign: 'left'}}>Delve into Security Implementation at Kempagowda International Airport</p>
               <a href="" className='readmore'>Read More</a>
             </div>
           </div>
@@ -36,7 +36,7 @@ function CaseStudiesCarousel() {
             <img src={str} alt="" />
             <div className="card-content">
               <h2>ITC Hotels</h2>
-              <p style={{fontSize: '20px', textAlign: 'left'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p style={{fontSize: '20px', textAlign: 'left'}}>A Close Examination of how SVNT implements Security Protocols at ITC. </p>
               <a href="" className='readmore'>Read More</a>
             </div>
           </div>

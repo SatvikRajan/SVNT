@@ -39,6 +39,10 @@ body {
 .navbar.hidden:hover {
   transform: translateY(0);
 }
+
+
+
+
 .logo-font {
   font-size: 10px;
   text-align: right;
@@ -1623,7 +1627,7 @@ main {
 
 .whybest {
   color: #251741;
-  background-image: url('./images/wbg.jpg');
+  background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)) , url('./images/wbg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1749,9 +1753,9 @@ main {
 }
 
 .last-contact {
-  left: 32rem;
+  left: 28rem;
   padding: 60px;
-  top: 386rem;
+  top: 395rem;
   border-radius: 20px;
   color: black;
   background-color: #e8e8e8;
@@ -1817,26 +1821,23 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark background color */
-  z-index: 2; 
 }
 
 .details {
   position: absolute;
-  top: 50%;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   z-index: 3; 
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
-  transform: translate(-50%, -50%);
-  display: none;
+  /* transform: translate(-50%, -50%); */
+  font-size: 12px;
+  display: block;
 }
 
 /* Show the details when the logo container is hovered */
-.logo-container:hover .details {
-  display: block;
-}
+
 
 .logo-name:hover + .darken,
 .darken:hover {
@@ -1891,6 +1892,7 @@ main {
 }
 
 .logo-name {
+  background-color: #0056b3;
   width: 100%;
   font-size: 20px;
 }
@@ -1938,12 +1940,11 @@ main {
 
 .whyus-text{
   margin: 3rem;
-  gap: 70px;
+  gap: 40px;
 }
 
 
 .whyus {
-  height: 800px;
   display: flex;
   flex-direction: column;
 }
@@ -1954,8 +1955,9 @@ main {
 }
 
 .whyus-text p {
+  padding-bottom: 10px;
   margin: 0 20px;
-  font-size: 30px;
+  font-size: 38px;
 }
 
 
@@ -1974,3 +1976,174 @@ main {
   visibility: visible;
 }
 
+.what-we-do-best{
+  width: 100vw;
+  height: 100vh;
+  /* background-color: #0077ff; */
+  background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)) , url('./images/wbg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wwdb-container{
+  width: 100%;
+  height: 100%;
+  /* background-color: #5023aa; */
+}
+
+.wwdb-head{
+/* background-color: #5023aa; */
+font-size: 42px;
+padding-top: 4%;
+padding-left: 5%;
+margin: 0;
+
+}
+
+.wwdb-menu{
+  /* background-color: #5c5bdf; */
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  padding-top: 5%;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+.wwdb-menu .m2, .m3, .m4{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.wwdb-menu .m1{
+  width: fit-content;
+  text-align: center;
+}
+.wwdb-menu .m5{
+  width: fit-content;
+  text-align: center;
+}
+
+.wwdb-menu .m5 img{
+  width: 12%;
+}
+
+.wwdb-menu .m2{
+ padding: 2% 27% 2% 28%;
+}
+
+.wwdb-menu .m4{
+  padding: 1% 34% 1% 31%;
+}
+.wwdb-menu .m4 img{
+  width: 24%;
+}
+.wwdb-menu .m3 .p5 img{
+  width: 10%;
+}
+
+.wwdb-menu .m3{
+  padding: 0% 15% 0% 20%;
+}
+
+
+.wwdb-menu div{
+  /* border: 2px solid green; */
+  width: 100%;
+}
+
+.wwdb-menu p{
+  /* border: 2px solid black; */
+  width: fit-content;
+  margin: 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.wwdb-menu div p img{
+  width: 15%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.wwdb-menu .m1 img, .m5 img{
+  width: 17%;
+}
+
+.wwdb-learn-more{
+  width: 100%;
+  font-size: 18px;
+  /* color: white; */
+  /* background-color: #125645; */
+  padding-top: 1%;
+  text-align: right;
+  padding-right: 5%;
+}
+.wwdb-learn-more p{
+  /* color: white; */
+  margin: 0;
+
+}
+
+.wwdb-learn-more div{
+  width: 30%;
+  margin-left: 70%;
+}
+
+/* animation on wwdb page */
+.wwdb-menu p:hover, img:hover{
+  transition: 1s;
+  color: white;
+  /* box-shadow: 0px 3px 4px 4px #BF9C33; */
+  text-shadow:0 0 10px #000000;
+}
+
+.wwdb-details{
+  position: absolute;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 100vh;
+}
+.wwdb-details .wwdb-head{
+  color: white;
+  cursor: pointer;
+  /* transition: 0.2s ease-out; */
+}
+
+.wwdb-details .details-wrapper{
+  color: white;
+  /* border: 2px solid white; */
+  /* padding-left: 15%; */
+  padding-top: 5%;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-left: 15%;
+  padding-right: 8%;
+}
+
+.wwdb-details .right .p1-info{
+  font-size: 12px;
+  padding-left: 12%;
+  line-height: 250%;
+  letter-spacing: 0.5px;
+}
+
+.wwdb-details .right .info{
+  font-size: 23px;
+  border-bottom: 1px solid white;
+  margin-left: 30%;
+  padding-right: 38%;
+  width: fit-content;
+  padding-top: 2%;
+
+
+}
+
+.company-logo{
+  /* position: absolute; */
+  z-index: 4;
+}

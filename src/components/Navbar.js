@@ -59,7 +59,7 @@ const Navbar = () => {
                                 About Us
                             </NavItem>
                             <NavItem to="/industries" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
-                                Industries
+                                Case Studies
                             </NavItem>
                             <NavItem to="/services" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 Services
