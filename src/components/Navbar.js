@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom'; // Assuming you're using React Router
 import Logo from '../images/logo.png';
-
+import '../css/navbar.css'
 const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const location = useLocation();

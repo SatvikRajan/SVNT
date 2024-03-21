@@ -1,0 +1,107 @@
+.navbar {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0 !important;
+  border-radius: 30px;
+  /* border-bottom: 0px !important; */
+  padding: 0 !important;
+  left: 5%;
+  position: fixed !important;
+  background-color: white;
+  width: 90%;
+  top: 5px;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.nav-link.active {
+  border-radius: 20px;
+  background: linear-gradient(135deg, #251741, #5023aa) !important;
+  color: white !important;
+  font-weight: 200 !important;
+  text-decoration: none;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+.navbar-toggler,
+.navbar-toggler:focus-visible {
+  border: 0px !important;
+  box-shadow: none !important;
+}
+.navbar.hidden:hover {
+  transform: translateY(0);
+}
+
+.logo-font {
+  font-size: 10px;
+  text-align: right;
+}
+.nav-item {
+  padding: 10px;
+  position: relative;
+}
+
+.nav-link {
+  transition: color 0.3s, border-bottom-color 0.3s;
+  position: relative;
+  letter-spacing: 0.1px !important;
+  display: flex;
+  align-items: center;
+  height: 38px;
+  justify-content: center;
+  text-align: center;
+  width: 110px;
+  font-size: 13px;
+  font-weight: 500;
+  color: black !important;
+  text-decoration: none;
+}
+
+/* From Left to Right */
+/* Fade in */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #000000;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  opacity: 1;
+  transform: translateY(0.2em);
+}
+
+/* Slide in */
+.nav-link::after {
+  opacity: 1;
+  transform: translateX(-100%);
+}
+
+.nav-link-slide:hover::after,
+.nav-link-slide:focus::after {
+  transform: translateX(100%);
+}
+
+/* Scale from center */
+.nav-link::after {
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  transform: scale(1);
+}
+.nav-link.active::after {
+  opacity: 0; /* Disable underline transition for active link */
+}

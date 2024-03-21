@@ -25,7 +25,7 @@ const Footer = () => {
                   fill="white"
                 />
               </svg>
-              <span>@gmail.com</span>
+              <span>@svntech.com</span>
             </div>
             <div style={{ gap: "30px" }} className="d-flex">
               <svg

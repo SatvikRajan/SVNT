@@ -2,12 +2,13 @@
 .carousel1 {
   position: relative;
   /* background-image: url('../images/cbg.png'); */
-  /* background-color: #0A0030; */
+  background-color: #0A0030;
   background-repeat: no-repeat;
   height: 98vh;
   width: 100vw;
   overflow: hidden;
 }
+
 .cont {
   text-align: center;
   color: white;
@@ -21,7 +22,7 @@
 .caro {
   top: 100px;
   position: absolute;
-  width: 100%;
+  width: 200%;
   height: 100%;
   transform-style: preserve-3d;
   transform-origin: center;
@@ -140,7 +141,7 @@
 @media (min-width: 768px) {
   .carousel-item5 {
     margin-right: 0;
-    flex: 0 0 35.333333% !important;
+    flex: 0 0 32.7% !important;
     display: block;
   }
   .carousel-inner {
@@ -233,6 +234,11 @@
   width: 2%;
 }
 
+.carousel-control-next-icon:hover,.carousel-control-prev-icon:hover{
+  background-color: white;
+  transition: 0.5s;
+}
+
 .carousel5{
   padding-left: 5rem;
   padding-right: 5rem;
@@ -250,6 +256,7 @@
 }
 
 .carousel-item5 {
+  text-align: -webkit-center;
   flex: 0 0 auto;
   padding: 20px;
   margin-right: 10px;

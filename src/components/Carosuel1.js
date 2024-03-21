@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import '../css/card.css';
-import image1 from '../images/c1.png';
-import image2 from '../images/c2.png';
-import image3 from '../images/c3.png';
-import image4 from '../images/c4.png';
+import image1 from '../images/carousel-image1.png';
+import image2 from '../images/carousel-image2.png';
+import image3 from '../images/carousel-image3.png';
+import image4 from '../images/carousel-image4.png';
 
 const cards = [
   {
@@ -33,41 +33,46 @@ const cards = [
 
 function Carosuel1({ currentImage }) {
   const [selected, setSelected] = React.useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     console.log(selected);
   }, [selected]);
 
   return (
-    <div className="outer" style={{ backgroundImage: `url(${currentImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat',backgroundPosition: 'center' }}>
+    <div className="outer" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <div className="container10">
         <div
           className="carousellll"
           style={{
-            transform: `translate(${selected * (-79 / cards.length)}%)`,
+            transform: `translate(${selected * (-57 / cards.length)}%)`,
           }}
         >
           {cards.map((card, i) => (
             <Card key={card.id} current={i === selected} image={card.image} text={card.text} />
           ))}
         </div>
-        <div
-          className="left-button"
-          onClick={() => {
-            setSelected((s) => {
-              if (s === 0) return cards.length - 1;
-              return s - 1;
-            });
-          }}
-        >
-        </div>
-        <div
-          className="right-button"
-          onClick={() => {
-            setSelected((s) => (s + 1) % cards.length);
-          }}
-        >
-        </div>
+        {isHovered && (
+          <>
+            <div
+              className="left-button"
+              onClick={() => {
+                setSelected((s) => {
+                  if (s === 0) return cards.length - 1;
+                  return s - 1;
+                });
+              }}
+            >
+            </div>
+            <div
+              className="right-button"
+              onClick={() => {
+                setSelected((s) => (s + 1) % cards.length);
+              }}
+            >
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

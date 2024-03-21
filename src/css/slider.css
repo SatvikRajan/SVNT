@@ -7,9 +7,12 @@
   }
 }
 
+.slides{
+  margin: 100px;
+}
+
 .slider {
   background: white;
-  height: 240px;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -39,7 +42,7 @@
 .slider .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 10);
+  width: calc(250px * 11);
 }
 .slider .slide-1 {
   text-align-last: center;
