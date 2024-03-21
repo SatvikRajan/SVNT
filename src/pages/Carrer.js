@@ -5,6 +5,7 @@ import search from "../images/search.jpg";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../css/carousel.css'
+import '../css/career.css'
 export const CareersPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

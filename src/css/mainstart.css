@@ -1,0 +1,70 @@
+.home-start {
+  height: 680px;
+  background: linear-gradient(to right, #6161e5, #5c5bdf, #f57d81, #fb565c 90%);
+  padding-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.years {
+  padding-top: 50px;
+  align-items: center;
+  color: white;
+  justify-content: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+
+.number5 {
+  font-size: 100px;
+}
+
+.number20 {
+  font-family: 'monospace';
+  /* text-align: right; */
+  font-size: 200px;
+  font-family: 'Train One', system-ui;
+}
+
+.number60 {
+  font-size: 100px;
+}
+
+.x {
+  text-align: center;
+  margin-top: -40px;
+}
+
+.readmore {
+  /* gap: 20px; */
+  display: flex;
+  /* justify-content: flex-end;  */
+  text-align-last: right;
+  width: 25%;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+  transition: justify-content 0.5s; /* Transition justify-content over 0.5 seconds */
+}
+
+.readmore:hover {
+  gap: 20px;
+  justify-content: flex-start; /* Align text to the left on hover */
+}
+
+.readmore:after {
+  margin-left: auto;
+  gap: 20px;
+  filter: invert(1);
+  align-self: center;
+  float: right;
+  content: '';
+  width: 30px; /* Adjust the width of the SVG */
+  height: 20px; /* Adjust the height of the SVG */
+  background: url('../images/Vector.svg') no-repeat;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s; /* Transition opacity and transform over 0.5 seconds */
+  transform: translateX(-10px);
+}
+.readmore:hover::after {
+  opacity: 1; /* Fade in the SVG on hover */
+  transform: translateX(0); /* Move the arrow back to its original position */
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-
+import '../css/mainstart.css'
 export default function MainStart() {
   const yearsRef = useRef(null);
   function animateValue(element, start, end, duration) {
