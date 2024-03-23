@@ -63,7 +63,7 @@ function Carosuel1({ currentImage }) {
   useEffect(() => {
     const autoplayInterval = setInterval(() => {
       nextSlide();
-    }, 3000); 
+    }, 2000); 
     return () => clearInterval(autoplayInterval);
   }, []);
 
