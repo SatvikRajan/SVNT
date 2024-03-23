@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import manager from '../images/manager.png';
+import React from 'react';
 import adityabirla from '../images/aditya-birla.jpg';
 import vedanta from '../images/vedanta.jpg';
 import '../css/about.css';

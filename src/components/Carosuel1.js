@@ -36,16 +36,28 @@ function Carosuel1({ currentImage }) {
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    console.log(selected);
-  }, [selected]);
+    const interval = setInterval(() => {
+      setSelected((s) => (s + 1) % cards.length);
+    }, 3000);
 
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextSlide = () => {
+    setSelected((s) => (s + 1) % cards.length);
+  };
+
+  const prevSlide = () => {
+    setSelected((s) => (s === 0 ? cards.length - 1 : s - 1));
+  };
   return (
     <div className="outer" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <div className="container10">
         <div
           className="carousellll"
           style={{
-            transform: `translate(${selected * (-57 / cards.length)}%)`,
+            animation: ' linear infinite',
+            transform: `translate(${selected * (-55.5 / cards.length)}%)`,
           }}
         >
           {cards.map((card, i) => (
@@ -54,23 +66,8 @@ function Carosuel1({ currentImage }) {
         </div>
         {isHovered && (
           <>
-            <div
-              className="left-button"
-              onClick={() => {
-                setSelected((s) => {
-                  if (s === 0) return cards.length - 1;
-                  return s - 1;
-                });
-              }}
-            >
-            </div>
-            <div
-              className="right-button"
-              onClick={() => {
-                setSelected((s) => (s + 1) % cards.length);
-              }}
-            >
-            </div>
+            <div className="left-button" onClick={prevSlide}></div>
+            <div className="right-button" onClick={nextSlide}></div>
           </>
         )}
       </div>

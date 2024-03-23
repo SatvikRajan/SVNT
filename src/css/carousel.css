@@ -141,7 +141,7 @@
 @media (min-width: 768px) {
   .carousel-item5 {
     margin-right: 0;
-    flex: 0 0 32.7% !important;
+    flex: 0 0 32% !important;
     display: block;
   }
   .carousel-inner {

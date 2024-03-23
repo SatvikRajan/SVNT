@@ -1,7 +1,10 @@
-import React, { useEffect, useRef } from 'react';
-import '../css/mainstart.css'
+import React, { useEffect, useRef, useState } from 'react';
+import '../css/mainstart.css';
+
 export default function MainStart() {
   const yearsRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+
   function animateValue(element, start, end, duration) {
     let startTimestamp = null;
     const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
@@ -17,14 +20,39 @@ export default function MainStart() {
     };
     window.requestAnimationFrame(step);
   }
+
   useEffect(() => {
     const yearsElement = yearsRef.current;
     const values = yearsElement.querySelectorAll('.value');
     const duration = 2000;
-    values.forEach((value, index) => {
-      animateValue(value, 0, parseInt(value.textContent), duration);
-    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+          setIsInView(true);
+          observer.unobserve(yearsElement);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(yearsElement);
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
+
+  useEffect(() => {
+    if (isInView) {
+      const yearsElement = yearsRef.current;
+      const values = yearsElement.querySelectorAll('.value');
+      const duration = 2000;
+      values.forEach((value) => {
+        animateValue(value, 0, parseInt(value.textContent), duration);
+      });
+    }
+  }, [isInView]);
+
   return (
     <div className="home-start shiny">
       {/* Main Minute Details of Company*/}
@@ -39,7 +67,7 @@ export default function MainStart() {
           <p style={{ fontSize: '30px' }}>Years</p>
         </div>
         <div className="text-center col">
-          <p className="value number60">10</p>
+          <p className="value number60">1000</p>
           <p className="x">Projects</p>
         </div>
       </div>
