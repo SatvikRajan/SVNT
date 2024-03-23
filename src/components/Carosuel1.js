@@ -32,25 +32,40 @@ const cards = [
 ];
 
 function Carosuel1({ currentImage }) {
-  const [selected, setSelected] = React.useState(0);
+  const [cardsState, setCardsState] = useState(cards);
+  const [selected, setSelected] = React.useState(1);
+ 
   const [isHovered, setIsHovered] = useState(false);
-  const clonedCards = [...cards, ...cards]; // Clone the cards array to create a continuous loop
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSelected((s) => (s + 1) % cards.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const nextSlide = () => {
-    setSelected((s) => (s + 1) % cards.length);
+    setSelected(s=>s+1)
+    setTimeout(()=>{
+      setCardsState(c=>{
+        const arr = [...c]
+        return [...c.slice(1,c.length),arr[0]]
+      })
+      setSelected(s=>s-1)
+    },500)
   };
 
   const prevSlide = () => {
-    setSelected((s) => (s === 0 ? cards.length - 1 : s - 1));
+    setSelected(s=>s-1)
+    setTimeout(()=>{
+      setCardsState(c=>{
+        const arr = [...c]
+        return [arr[arr.length-1], ...c.slice(0,arr.length-1)]
+      })
+      setSelected(s=>s+1)
+    },500)
   };
+
+  useEffect(() => {
+    const autoplayInterval = setInterval(() => {
+      nextSlide();
+    }, 3000); 
+    return () => clearInterval(autoplayInterval);
+  }, []);
 
   return (
     <div className="outer" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
@@ -58,11 +73,11 @@ function Carosuel1({ currentImage }) {
         <div
           className="carousellll"
           style={{
-            transform: `translate(${selected * (-35.5 / cards.length)}%)`,
+            transform: `translate(${selected * (-55.5 / cards.length)}%)`,
           }}
         >
-          {clonedCards.map((card, i) => (
-            <Card key={card.id} current={i === selected} image={card.image} text={card.text} />
+          {cardsState.map((card, i) => (
+            <Card key={card.id+'-'+i} current={i === selected} image={card.image} text={card.text} />
           ))}
         </div>
         {isHovered && (

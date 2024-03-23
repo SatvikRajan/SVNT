@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: start;
-    transition: all 0.2s;
+    /* transition: all 0.1s; */
 }
 
 
