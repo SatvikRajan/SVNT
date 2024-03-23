@@ -124,7 +124,6 @@
   
   .wwdb-details{
     position: absolute;
-    z-index: 3;
     background-color: rgba(0, 0, 0, 0.9);
     width: 100vw;
     height: 100vh;
@@ -170,28 +169,34 @@
     z-index: 4;
   }
 
-
-#wwbd-details{
-  opacity: 100%;
-}
-
-
-/*the fade animations*/
-
-@keyframes fade-out {
-  from {
-    opacity: 100%;
-  }
-  to {
+ #wwdb-details {
+    position: absolute;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    display: none;
     opacity: 0%;
   }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0%;
+  
+  
+  /*the fade animations*/
+  
+  @keyframes fade-out {
+    from {
+      opacity: 100%;
+    }
+    to {
+      opacity: 0%;
+      /* overlay: auto; */
+      /* display: none; */
+    }
   }
-  to {
-    opacity: 100%;
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
   }
-}

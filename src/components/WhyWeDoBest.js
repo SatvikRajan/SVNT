@@ -38,23 +38,30 @@ export default function WhyWeDoBest() {
   
   function fade(name, details) {
     const div = document.getElementById("wwdb-details");
-    if (showDetails == true) {
+    if (div.style.display === "block") {
       div.style.animation = "fade-out 2s forwards";
-      setShowDetails(false);
-      selectedDetails('');
-    } else if (showDetails == false) {
+      div.style.display = "hidden";
+      // div.style.transitionDelay = "2s";
+      setTimeout(() => {
+        div.style.display = "none";
+      }, 1500);
+      // setShowDetails(false);
+    } else{
+      div.style.display = "block";
       div.style.animation = "fade-in 2s forwards";
-      setShowDetails(details);
-      selectedDetails(name);
+      setShowDetails(details)
+      setSelectedDetails(name);
+      
     }
   }
 
 
   return (
     <div className="what-we-do-best">
-      {showDetails && (
-        <div id='wwdb-details' className="wwdb-details" onClick={() => setShowDetails(false)}>
-          <p className="wwdb-head">What We Do Best</p>
+      {/* {showDetails && ( */}
+      <div id='wwdb-details' onClick={() => fade('','')}>
+        <div className="wwdb-details animate__fadeIn" >
+          <p className="wwdb-head" >What We Do Best</p>
           <div className="details-wrapper">
             <p className="left fs-4">
               {selectedDetails}
@@ -68,7 +75,8 @@ export default function WhyWeDoBest() {
             </div>
           </div>
         </div>
-      )}
+        {/* )} */}
+      </div>
       <div className="wwdb-container">
         <p className="wwdb-head">What We Do Best</p>
 
@@ -89,8 +97,7 @@ export default function WhyWeDoBest() {
             <p
               className="p2 animate__zoomIn animate__dalay-3s"
               onClick={() => {
-                setShowDetails(data[0]);
-                setSelectedDetails(names[0]);
+                fade(names[0], data[0]);
               }}
             >
               {names[0]}
@@ -100,8 +107,7 @@ export default function WhyWeDoBest() {
             <p
               className="p3"
               onClick={() => {
-                setShowDetails(data[2]);
-                setSelectedDetails(names[2]);
+                fade(names[2], data[2]);
               }}
             >
               <img src={logo3} alt="logo" />
@@ -113,8 +119,7 @@ export default function WhyWeDoBest() {
             <p
               className="p4"
               onClick={() => {
-                setShowDetails(data[3]);
-                setSelectedDetails(names[3]);
+                fade(names[3], data[3]);
               }}
             >
               {names[3]}
@@ -126,8 +131,7 @@ export default function WhyWeDoBest() {
             <p
               className="p5"
               onClick={() => {
-                setShowDetails(data[6]);
-                setSelectedDetails(names[6]);
+                fade(names[6], data[6]);
               }}
             >
               <img src={logo7} alt="logo" />
@@ -139,8 +143,7 @@ export default function WhyWeDoBest() {
             <p
               className="p6"
               onClick={() => {
-                setShowDetails(data[7]);
-                setSelectedDetails(names[7]);
+                fade(names[7], data[7]);
               }}
             >
               {names[7]}
@@ -149,8 +152,7 @@ export default function WhyWeDoBest() {
             <p
               className="p7"
               onClick={() => {
-                setShowDetails(data[4]);
-                setSelectedDetails('Storage');
+                fade(names[4], "Storage")
               }}
             >
               <img src={logo5} alt="logo" />
@@ -162,8 +164,7 @@ export default function WhyWeDoBest() {
             <p
               className="p8"
               onClick={() => {
-                setShowDetails(data[5]);
-                setSelectedDetails(names[5]);
+                fade(names[5], data[5]);
               }}
             >
               {names[5]}
