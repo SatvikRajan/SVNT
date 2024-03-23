@@ -39,16 +39,16 @@ export default function WhyWeDoBest() {
   function fade(name, details) {
     const div = document.getElementById("wwdb-details");
     if (div.style.display === "block") {
-      div.style.animation = "fade-out 2s forwards";
+      div.style.animation = "fade-out 1s forwards";
       div.style.display = "hidden";
       // div.style.transitionDelay = "2s";
       setTimeout(() => {
         div.style.display = "none";
-      }, 1500);
+      }, 1000);
       // setShowDetails(false);
     } else{
       div.style.display = "block";
-      div.style.animation = "fade-in 2s forwards";
+      div.style.animation = "fade-in 1s forwards";
       setShowDetails(details)
       setSelectedDetails(name);
       
