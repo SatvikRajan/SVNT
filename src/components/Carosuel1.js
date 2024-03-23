@@ -34,6 +34,7 @@ const cards = [
 function Carosuel1({ currentImage }) {
   const [selected, setSelected] = React.useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const clonedCards = [...cards, ...cards]; // Clone the cards array to create a continuous loop
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,17 +51,17 @@ function Carosuel1({ currentImage }) {
   const prevSlide = () => {
     setSelected((s) => (s === 0 ? cards.length - 1 : s - 1));
   };
+
   return (
     <div className="outer" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <div className="container10">
         <div
           className="carousellll"
           style={{
-            animation: ' linear infinite',
-            transform: `translate(${selected * (-55.5 / cards.length)}%)`,
+            transform: `translate(${selected * (-35.5 / cards.length)}%)`,
           }}
         >
-          {cards.map((card, i) => (
+          {clonedCards.map((card, i) => (
             <Card key={card.id} current={i === selected} image={card.image} text={card.text} />
           ))}
         </div>
@@ -76,3 +77,4 @@ function Carosuel1({ currentImage }) {
 }
 
 export default Carosuel1;
+
