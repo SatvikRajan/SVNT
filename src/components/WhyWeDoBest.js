@@ -14,7 +14,6 @@ export default function WhyWeDoBest() {
     const [showDetails, setShowDetails] = useState(false);
     const [selectedDetails, setSelectedDetails] = useState('');
 
-
     const names = [
         'IP Surveillance Solution',
         'IP Networking Solution',
@@ -35,13 +34,26 @@ export default function WhyWeDoBest() {
         'Explore the realm of security and management solutions, vital for safeguarding businesses against threats. From network audits to advanced access control systems, these solutions ensure robust protection and efficient resource management.',
         'Our systems provide comprehensive monitoring and detection capabilities, ensuring prompt response to potential threats. From runway monitoring to fire alarm systems, we prioritize safety in any environment.',
         'Empower your organization with efficient energy solutions. Our innovative technologies optimize energy usage, reduce costs, and minimize environmental impact. From green power to UPS solutions, we offer custom plans for sustainable energy management and lasting savings.',
-      ];
+  ];
+  
+  function fade(name, details) {
+    const div = document.getElementById("wwdb-details");
+    if (showDetails == true) {
+      div.style.animation = "fade-out 2s forwards";
+      setShowDetails(false);
+      selectedDetails('');
+    } else if (showDetails == false) {
+      div.style.animation = "fade-in 2s forwards";
+      setShowDetails(details);
+      selectedDetails(name);
+    }
+  }
 
 
   return (
     <div className="what-we-do-best">
       {showDetails && (
-        <div className="wwdb-details" onClick={() => setShowDetails(false)}>
+        <div id='wwdb-details' className="wwdb-details" onClick={() => setShowDetails(false)}>
           <p className="wwdb-head">What We Do Best</p>
           <div className="details-wrapper">
             <p className="left fs-4">
@@ -63,10 +75,9 @@ export default function WhyWeDoBest() {
         <div className="wwdb-menu">
           <div className="m1">
             <p
-              className="p1"
+              className="p1 animate__zoomIn animate__dalay-2s"
               onClick={() => {
-                setShowDetails(data[1]);
-                setSelectedDetails(names[1]);
+                fade(names[1], data[1]);
               }}
             >
               {names[1]}
@@ -76,7 +87,7 @@ export default function WhyWeDoBest() {
 
           <div className="m2">
             <p
-              className="p2"
+              className="p2 animate__zoomIn animate__dalay-3s"
               onClick={() => {
                 setShowDetails(data[0]);
                 setSelectedDetails(names[0]);
@@ -110,7 +121,7 @@ export default function WhyWeDoBest() {
               <img src={logo4} alt="logo" />
             </p>
 
-            <img src={companyLogo} alt="company logo" className="company-logo" />
+            <img src={companyLogo} alt="company logo" className="company-logo scale-up-center" />
 
             <p
               className="p5"
