@@ -116,7 +116,7 @@
   
   /* animation on wwdb page */
   .wwdb-menu p:hover, img:hover{
-    transition: 1s;
+    transition: 0.4s;
     color: white;
     /* box-shadow: 0px 3px 4px 4px #BF9C33; */
     text-shadow:0 0 10px #000000;
