@@ -32,6 +32,29 @@ export const About = () => {
 
       <div className="company-timeline">
         <h1>Company Timeline</h1>
+        <div className="d-flex timeline-1">
+          <div className="d-flex flex-column">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna.
+            </div>
+            <div></div>
+          </div>
+          <div className="d-flex flex-column">
+            <div><br /><br /><br /><br /><br /></div>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna.
+            </div>
+          </div>
+          <div className="d-flex flex-column">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna.
+            </div>
+            <div></div>
+          </div>
+        </div>
       </div>
 
       <div className="ceo d-flex">
@@ -110,8 +133,6 @@ export const About = () => {
           </div>
         </div>
       </div>
-
-      <div className="company-timeline"></div>
     </div>
   );
 };

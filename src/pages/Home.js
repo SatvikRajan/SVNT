@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import '../css/carousel.css';
-
 import image1 from '../images/Home/carousel-image1.png';
 import image2 from '../images/Home/carousel-image2.png';
 import image3 from '../images/Home/carousel-image3.png';
@@ -13,35 +12,6 @@ import WhyWeDoBest from '../components/WhyWeDoBest';
 import Clientele from '../components/Clientele';
 import LastContent from '../components/LastContent';
 export default function Home() {
-  function animateValue(element, start, end, duration) {
-    let startTimestamp = null;
-    const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
-
-    const step = (timestamp) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const timeElapsed = timestamp - startTimestamp;
-      const progress = easeInOutQuad(Math.min(timeElapsed / duration, 1));
-      element.textContent = Math.floor(progress * (end - start) + start);
-      if (timeElapsed < duration) {
-        window.requestAnimationFrame(step);
-      }
-    };
-    window.requestAnimationFrame(step);
-  }
-
-  // useEffect(() => {
-  // const handleScroll = () => {
-  //   const logoCircle = document.getElementById('logo-circle');
-  //   const rect = logoCircle.getBoundingClientRect();
-  //   const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-  //   if (rect.top <= viewHeight * 0.75) {
-  //     setIsVisible(true);
-  //     setTimeout(() => {
-  //       setShowNames(true);
-  //     }, 2000); // Delay of 2 seconds
-  //   }
-  // };
-  // }, []);
 
   const [selected, setSelected] = useState(0);
   const cards = [

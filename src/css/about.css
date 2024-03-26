@@ -69,3 +69,8 @@
   scale: 1.1;
   filter: grayscale(100);
 }
+
+.company-timeline{
+  background-image: url(../images/AboutUs/company-timelinebg.png);
+  padding-left: 14rem;
+}
