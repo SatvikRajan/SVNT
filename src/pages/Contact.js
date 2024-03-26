@@ -1,7 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import LocationCard from '../components/LocationCard';
-import contact from '../images/contact.jpg';
-import '../css/typewriter.css';
+import contact from '../images/ContactUs/contact-hand.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 const Contact = () => {

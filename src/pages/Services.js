@@ -1,22 +1,22 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import service1 from '../images/service1.png';
-import service1bg from '../images/service1bg.png';
-import service2 from '../images/service2.png';
-import service2bg from '../images/service2bg.png';
-import service3 from '../images/service3.png';
-import service3bg from '../images/service3bg.png';
-import service4 from '../images/service4.png';
-import service4bg from '../images/service4bg.png';
-import service5 from '../images/service5.png';
-import service5bg from '../images/service5bg.png';
-import service6 from '../images/service6.png';
-import service6bg from '../images/service6bg.png';
-import service7 from '../images/service7.png';
-import service7bg from '../images/service7bg.png';
-import service8 from '../images/service8.png';
-import service8bg from '../images/service8bg.png';
+import service1 from '../images/Services/service1.png';
+import service1bg from '../images/Services/service1bg.png';
+import service2 from '../images/Services/service2.png';
+import service2bg from '../images/Services/service2bg.png';
+import service3 from '../images/Services/service3.png';
+import service3bg from '../images/Services/service3bg.png';
+import service4 from '../images/Services/service4.png';
+import service4bg from '../images/Services/service4bg.png';
+import service5 from '../images/Services/service5.png';
+import service5bg from '../images/Services/service5bg.png';
+import service6 from '../images/Services/service6.png';
+import service6bg from '../images/Services/service6bg.png';
+import service7 from '../images/Services/service7.png';
+import service7bg from '../images/Services/service7bg.png';
+import service8 from '../images/Services/service8.png';
+import service8bg from '../images/Services/service8bg.png';
 
 const ServiceBox = ({ title, description, image, imagePosition, backgroundImage }) => {
   const content = (

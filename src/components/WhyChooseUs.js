@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import wc1 from '../images/wc1.png';
-import wc2 from '../images/wc2.png';
-import wc3 from '../images/wc3.png';
+import wc1 from '../images/Home/whychoose1.png';
+import wc2 from '../images/Home/whychoose2.png';
+import wc3 from '../images/Home/whychoose3.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 export default function WhyChooseUs() {

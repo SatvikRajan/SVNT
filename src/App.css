@@ -299,7 +299,7 @@ p.write1 {
 .recruitment {
   z-index: 999;
   padding-top: 5rem;
-  background-image: url(./images/bg.png);
+  background-image: url(./images/Career/gradient-career.png);
   background-repeat: no-repeat;
   background-position: center 60%;
 }
@@ -529,34 +529,6 @@ ul.job-requirements {
   left: 110%;
 }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.pagination button {
-  margin: 0 5px;
-  padding: 5px 10px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.pagination button:hover {
-  background-color: #0056b3;
-}
-
-.pagination span {
-  margin: 0 5px;
-  font-weight: bold;
-}
-
-.clients {
-}
-
 .me {
   height: 100%;
   object-fit: cover;
@@ -586,23 +558,6 @@ ul.job-requirements {
   letter-spacing: 0px;
 }
 
-/* HOME */
-.mainhome {
-  height: 730px;
-  background-repeat: no-repeat;
-  background-color: #1e1e1e;
-  background-position: center;
-  background-image: url('./images/home.png');
-}
-
-.hometext {
-  left: 180px;
-  position: absolute;
-  top: 200px;
-  color: white;
-  width: 60%;
-  font-size: 30px;
-}
 
 .buttons {
   gap: 100px;
@@ -677,7 +632,7 @@ ul.job-requirements {
   color: white;
   background-position: center;
   background-size: cover;
-  background-image: url(./images/csbg.jpg);
+  background-image: url(./images/Home/casestudies-bg.jpg);
   height: 1000px;
   padding: 5rem;
   padding-left: 10rem;
@@ -715,7 +670,7 @@ main {
 
 .whybest {
   color: #251741;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/wbg.jpg');
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/Home/wbg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -728,7 +683,7 @@ main {
   background-color: #f1faff;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('./images/genetec.png');
+  background-image: url('./images/Home/genetec.png');
   padding: 10rem;
   font-size: 30px;
   height: 800px;
@@ -771,7 +726,7 @@ main {
   position: relative;
   height: 700px;
   background-size: cover;
-  background-image: url(./images/lastbg.png);
+  background-image: url(./images/Home/last-career.png);
 }
 
 .last-text {

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import '../css/card.css';
-import image1 from '../images/carousel-image1.png';
-import image2 from '../images/carousel-image2.png';
-import image3 from '../images/carousel-image3.png';
-import image4 from '../images/carousel-image4.png';
+import image1 from '../images/Home/carousel-image1.png';
+import image2 from '../images/Home/carousel-image2.png';
+import image3 from '../images/Home/carousel-image3.png';
+import image4 from '../images/Home/carousel-image4.png';
 
 const cards = [
   {
@@ -34,36 +34,35 @@ const cards = [
 function Carosuel1({ currentImage }) {
   const [cardsState, setCardsState] = useState(cards);
   const [selected, setSelected] = React.useState(1);
- 
+
   const [isHovered, setIsHovered] = useState(false);
 
-
   const nextSlide = () => {
-    setSelected(s=>s+1)
-    setTimeout(()=>{
-      setCardsState(c=>{
-        const arr = [...c]
-        return [...c.slice(1,c.length),arr[0]]
-      })
-      setSelected(s=>s-1)
-    },500)
+    setSelected((s) => s + 1);
+    setTimeout(() => {
+      setCardsState((c) => {
+        const arr = [...c];
+        return [...c.slice(1, c.length), arr[0]];
+      });
+      setSelected((s) => s - 1);
+    }, 500);
   };
 
   const prevSlide = () => {
-    setSelected(s=>s-1)
-    setTimeout(()=>{
-      setCardsState(c=>{
-        const arr = [...c]
-        return [arr[arr.length-1], ...c.slice(0,arr.length-1)]
-      })
-      setSelected(s=>s+1)
-    },500)
+    setSelected((s) => s - 1);
+    setTimeout(() => {
+      setCardsState((c) => {
+        const arr = [...c];
+        return [arr[arr.length - 1], ...c.slice(0, arr.length - 1)];
+      });
+      setSelected((s) => s + 1);
+    }, 500);
   };
 
   useEffect(() => {
     const autoplayInterval = setInterval(() => {
       nextSlide();
-    }, 3000); 
+    }, 3000);
     return () => clearInterval(autoplayInterval);
   }, []);
 
@@ -77,7 +76,7 @@ function Carosuel1({ currentImage }) {
           }}
         >
           {cardsState.map((card, i) => (
-            <Card key={card.id+'-'+i} current={i === selected} image={card.image} text={card.text} />
+            <Card key={card.id + '-' + i} current={i === selected} image={card.image} text={card.text} />
           ))}
         </div>
         {isHovered && (
@@ -92,4 +91,3 @@ function Carosuel1({ currentImage }) {
 }
 
 export default Carosuel1;
-

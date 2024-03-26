@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../css/carousel.css';
 
-import image1 from '../images/carousel-image1.png';
-import image2 from '../images/carousel-image2.png';
-import image3 from '../images/carousel-image3.png';
-import image4 from '../images/carousel-image4.png';
+import image1 from '../images/Home/carousel-image1.png';
+import image2 from '../images/Home/carousel-image2.png';
+import image3 from '../images/Home/carousel-image3.png';
+import image4 from '../images/Home/carousel-image4.png';
 import Carosuel1 from '../components/Carosuel1';
 import CaseStudiesCarousel from '../components/Carousel';
 import MainStart from '../components/MainStart';

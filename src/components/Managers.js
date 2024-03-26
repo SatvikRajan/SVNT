@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import manager from '../images/manager.png';
+import manager from '../images/AboutUs/manager.png';
 
 export default function Managers() {
   const [hovered, setHovered] = useState(false);

@@ -1,10 +1,10 @@
 import React from 'react';
-import adityabirla from '../images/aditya-birla.jpg';
-import vedanta from '../images/vedanta.jpg';
+import adityabirla from '../images/Home/aditya-birla.jpg';
+import vedanta from '../images/Home/vedanta.jpg';
 import '../css/about.css';
-import ITC from '../images/itc.png';
-import image13 from '../images/image 13.png';
-import ceo from '../images/ceo-image.png';
+import ITC from '../images/Home/itc.png';
+import gm from '../images/Home/gm.png';
+import ceo from '../images/AboutUs/ceo-image.png';
 import '../css/slider.css';
 import Managers from '../components/Managers';
 export const About = () => {
@@ -29,6 +29,11 @@ export const About = () => {
         retention rates in the IT industry today.  In the current dynamic landscape of technology, we are always on the
         lookout to elevate the quality of our products.and communication solutions
       </div>
+
+      <div className="company-timeline">
+        <h1>Company Timeline</h1>
+      </div>
+
       <div className="ceo d-flex">
         <div className="ceo-text">
           <h1 className="fs-1">Meet Our CEO </h1>
@@ -43,7 +48,7 @@ export const About = () => {
         </div>
       </div>
 
-      <Managers/>
+      <Managers />
       <div className="slides">
         <div class="slider">
           <div class="slide-track">
@@ -82,25 +87,25 @@ export const About = () => {
               <img className="me" src={ITC} alt="" />
             </div>
             <div class="slide-1">
-              <img className="me" src={image13} alt="" />
+              <img className="me" src={gm} alt="" />
             </div>
             <div class="slide-1">
               <img className="me" src={ITC} alt="" />
             </div>
             <div class="slide-1">
-              <img className="me" src={image13} alt="" />
+              <img className="me" src={gm} alt="" />
             </div>
             <div class="slide-1">
               <img className="me" src={ITC} alt="" />
             </div>
             <div class="slide-1">
-              <img className="me" src={image13} alt="" />
+              <img className="me" src={gm} alt="" />
             </div>
             <div class="slide-1">
               <img className="me" src={ITC} alt="" />
             </div>
             <div class="slide-1">
-              <img className="me" src={image13} alt="" />
+              <img className="me" src={gm} alt="" />
             </div>
           </div>
         </div>

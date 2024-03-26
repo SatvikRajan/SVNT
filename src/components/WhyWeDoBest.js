@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import companyLogo from '../images/company';
-import logo1 from '../images/wwdb-1';
-import logo2 from '../images/wwdb-2.png';
-import logo3 from '../images/wwdb-3.png';
-import logo4 from '../images/wwdb-4.png';
-import logo5 from '../images/wwdb-5';
-import logo6 from '../images/wwdb-6';
-import logo7 from '../images/wwdb-7';
-import logo8 from '../images/wwdb-8';
+import companyLogo from '../images/svnt-logo';
+import logo1 from '../images/Home/wwdb-1';
+import logo2 from '../images/Home/wwdb-2.png';
+import logo3 from '../images/Home/wwdb-3.png';
+import logo4 from '../images/Home/wwdb-4.png';
+import logo5 from '../images/Home/wwdb-5';
+import logo6 from '../images/Home/wwdb-6';
+import logo7 from '../images/Home/wwdb-7';
+import logo8 from '../images/Home/wwdb-8';
 import '../css/wwdb.css'
 export default function WhyWeDoBest() {
 

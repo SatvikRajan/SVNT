@@ -1,6 +1,5 @@
 import React, { useState,useEffect } from "react";
-import career from "../images/careerimage.png";
-import invite from "../images/invite.png";
+import invite from "../images/ContactUs/invite.png";
 import search from "../images/search.jpg";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

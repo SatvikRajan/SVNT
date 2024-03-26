@@ -108,7 +108,7 @@ a:hover {
   transform: translateX(0); /* Move the arrow back to its original position */
 }
 .career-image {
-  background-image: url('../images/careerimage.png');
+  background-image: url('../images/Career/careerimage.png');
   height: 800px;
   background-repeat: no-repeat;
   background-size: cover;

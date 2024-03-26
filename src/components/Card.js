@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Card({ current, image, text }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 200,
+    });
+  }, []);
   return (
-    <div className={`card ${current ? 'current' : ''}`} style={{ backgroundImage: `url(${image})`}}>
+    <div className={`card ${current ? 'current' : ''}`} style={{ backgroundImage: `url(${image})` }}>
       {current && (
-        <p className='cp'
+        <p
+          className="cp"
+          // data-aos='fade-up'
           style={{
             fontSize: '30px',
             padding: '25px',
@@ -12,8 +22,6 @@ function Card({ current, image, text }) {
             position: 'absolute',
             color: 'white',
             textShadow: 'black 1px 2px',
-            opacity: '1',
-            // transition: 'opacity 1 0.5s ease-in-out',
           }}
         >
           {text}

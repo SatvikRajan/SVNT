@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import ips from '../images/ips.png';
-import ipn from '../images/ipn.png';
-import str from '../images/str.png';
-import sms from '../images/sms';
-import is from '../images/is.png';
-import sss from '../images/sss';
-import avs from '../images/avs.png';
-import es from '../images/es.png';
+import ips from '../images/Home/home-carousel-genpact.png';
+import ipn from '../images/Home/home-carousel-bial.png';
+import str from '../images/Home/home-carousel-itc.png';
+import sms from '../images/Home/home-carousel-bel';
+import is from '../images/Home/home-carousel-statocast.png';
+import sss from '../images/Home/home-carousel-jsw';
+import avs from '../images/Home/home-carousel-cfcl.png';
+import es from '../images/Home/home-carousel-aragen.png';
 function CaseStudiesCarousel() {
   useEffect(() => {
     const multipleCardCarousel = document.querySelector('#carouselExampleControls');
