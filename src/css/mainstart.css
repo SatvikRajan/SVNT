@@ -1,4 +1,6 @@
 .home-start {
+  margin: 5%;
+  border-radius: 100px;
   height: 680px;
   background: linear-gradient(to right, #6161e5, #5c5bdf, #f57d81, #fb565c 90%);
   padding-bottom: 30px;

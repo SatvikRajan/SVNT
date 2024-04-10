@@ -11,7 +11,7 @@ export default function Clientele() {
           helping us deliver exceptional solutions and services to our clients that push the boundary further. 
         </p>
       </div>
-      <div class="cont">
+      {/* <div class="cont">
         <div class="caro">
           <div class="carousel__face">
             <span className="hi">Clients</span>
@@ -34,7 +34,7 @@ export default function Clientele() {
           <div class="carousel__face"></div>
           <div class="carousel__face"></div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

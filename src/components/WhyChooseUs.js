@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import wc1 from '../images/Home/whychoose1.png';
-import wc2 from '../images/Home/whychoose2.png';
-import wc3 from '../images/Home/whychoose3.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 export default function WhyChooseUs() {
@@ -88,14 +85,9 @@ export default function WhyChooseUs() {
             ></span>
           </p>
         </div>
-        <div style={{ marginLeft: '4.6rem', marginRight: '6rem', fontSize: '24px', lineHeight: '50px' }}>
+        <div data-aos='fade-right' style={{ marginLeft: '4.6rem', marginRight: '6rem', fontSize: '24px', lineHeight: '50px' }}>
           {details[currentDetail]}
         </div>
-      </div>
-      <div className={`carousel ${currentDetail === 1 ? 'reverse' : ''}`} >
-        {currentDetail === 0 && <img src={wc1} data-aos='fade-right' style={{ width: '21vw', height: '50vh' }} alt="Client Satisfaction" />}
-        {currentDetail === 1 && <img src={wc2} data-aos='fade-right' style={{ width: '21vw', height: '50vh' }} alt="Future Outlook" />}
-        {currentDetail === 2 && <img src={wc3} data-aos='fade-right' style={{ width: '21vw', height: '50vh' }} alt="Resilience" />}
       </div>
     </div>
   );

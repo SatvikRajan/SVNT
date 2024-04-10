@@ -1,12 +1,30 @@
-
 .carousel1 {
   position: relative;
   /* background-image: url('../images/cbg.png'); */
-  background-color: #0A0030;
   background-repeat: no-repeat;
-  height: 98vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
+}
+
+.carousel-caption {
+  text-align: start !important;
+  bottom: 7.25rem !important;
+  right: 23% !important;
+  left: 10% !important;
+  font-size: 42px;
+}
+
+.carousel-indicators {
+  background-color: black !important;
+  right: 74rem !important;
+  bottom: 3rem !important;
+  margin-right: 0% !important;
+  margin-left: 5% !important;
+}
+
+.carousel-item.active {
+  margin-left: 2% !important;
+  margin-right: 2% !important;
 }
 
 .cont {
@@ -47,75 +65,75 @@
 }
 
 .carousel__face:nth-child(1) {
-  background-image: url('../images/Home/aditya-birla.jpg');
+  background-image: url("../images/Home/aditya-birla.jpg");
   transform: rotateY(0deg) translateZ(480px);
 }
 .carousel__face:nth-child(2) {
-  background-image: url('../images/Home/vedanta.jpg');
+  background-image: url("../images/Home/vedanta.jpg");
   transform: rotateY(20deg) translateZ(480px);
 }
 .carousel__face:nth-child(3) {
-  background-image: url('../images/Home/itc.png');
+  background-image: url("../images/Home/itc.png");
   transform: rotateY(40deg) translateZ(480px);
 }
 .carousel__face:nth-child(4) {
-  background-image: url('../images/Home/gm.png');
+  background-image: url("../images/Home/gm.png");
   transform: rotateY(60deg) translateZ(480px);
 }
 .carousel__face:nth-child(5) {
-  background-image: url('../images/Home/claire.png');
+  background-image: url("../images/Home/claire.png");
   transform: rotateY(80deg) translateZ(480px);
 }
 .carousel__face:nth-child(6) {
-  background-image: url('../images//Home/britannia.png');
+  background-image: url("../images//Home/britannia.png");
   transform: rotateY(100deg) translateZ(480px);
 }
 .carousel__face:nth-child(7) {
-  background-image: url('../images/Home/aditya-birla.jpg');
+  background-image: url("../images/Home/aditya-birla.jpg");
   transform: rotateY(120deg) translateZ(480px);
 }
 .carousel__face:nth-child(8) {
-  background-image: url('../images/Home/vedanta.jpg');
+  background-image: url("../images/Home/vedanta.jpg");
   transform: rotateY(140deg) translateZ(480px);
 }
 .carousel__face:nth-child(9) {
-  background-image: url('../images/Home/itc.png');
+  background-image: url("../images/Home/itc.png");
   transform: rotateY(160deg) translateZ(480px);
 }
 .carousel__face:nth-child(10) {
-  background-image: url('../images/Home/gm.png');
+  background-image: url("../images/Home/gm.png");
   transform: rotateY(180deg) translateZ(480px);
 }
 .carousel__face:nth-child(11) {
-  background-image: url('../images/Home/claire.png');
+  background-image: url("../images/Home/claire.png");
   transform: rotateY(200deg) translateZ(480px);
 }
 .carousel__face:nth-child(12) {
-  background-image: url('../images/Home/britannia.png');
+  background-image: url("../images/Home/britannia.png");
   transform: rotateY(220deg) translateZ(480px);
 }
 .carousel__face:nth-child(13) {
-  background-image: url('../images/Home/aditya-birla.jpg');
+  background-image: url("../images/Home/aditya-birla.jpg");
   transform: rotateY(240deg) translateZ(480px);
 }
 .carousel__face:nth-child(14) {
-  background-image: url('../images/Home/vedanta.jpg');
+  background-image: url("../images/Home/vedanta.jpg");
   transform: rotateY(260deg) translateZ(480px);
 }
 .carousel__face:nth-child(15) {
-  background-image: url('../images/Home/vedanta.jpg');
+  background-image: url("../images/Home/vedanta.jpg");
   transform: rotateY(280deg) translateZ(480px);
 }
 .carousel__face:nth-child(16) {
-  background-image: url('../images/Home/itc.png');
+  background-image: url("../images/Home/itc.png");
   transform: rotateY(300deg) translateZ(480px);
 }
 .carousel__face:nth-child(17) {
-  background-image: url('../images/Home/claire.png');
+  background-image: url("../images/Home/claire.png");
   transform: rotateY(320deg) translateZ(480px);
 }
 .carousel__face:nth-child(18) {
-  background-image: url('../images/Home/vedanta.jpg');
+  background-image: url("../images/Home/vedanta.jpg");
   transform: rotateY(340deg) translateZ(480px);
 }
 
@@ -128,13 +146,12 @@
   }
 }
 
-.carousel-inner{
+.carousel-inner {
   margin-top: 5rem;
   padding: 1em;
-
 }
 
-.carousel-item5{
+.carousel-item5 {
   transition: none !important;
 }
 
@@ -154,7 +171,7 @@
   }
 }
 
-.card-1 { 
+.card-1 {
   width: 24rem;
   height: 36rem;
   border-radius: 10px;
@@ -162,7 +179,7 @@
   cursor: pointer;
   position: relative;
   color: rgb(240, 240, 240);
- 
+
   img {
     filter: brightness(0.5);
     position: absolute;
@@ -172,28 +189,29 @@
     top: 0;
     left: 0;
     opacity: 0.9;
-    transition: opacity .2s ease-out;
+    transition: opacity 0.2s ease-out;
   }
 
   h2 {
     position: absolute;
     inset: auto 30px 30px 30px;
     margin: 0;
-    transition: inset .3s .3s ease-out;
-    font-family: 'Roboto Condensed', sans-serif;
+    transition: inset 0.3s 0.3s ease-out;
+    font-family: "Roboto Condensed", sans-serif;
     font-weight: normal;
   }
-  p, a {
+  p,
+  a {
     position: absolute;
     opacity: 0;
     max-width: 80%;
-    transition: opacity .3s ease-out;
+    transition: opacity 0.3s ease-out;
   }
-  
+
   p {
     inset: auto auto 70px 30px;
   }
-  
+
   a {
     font-size: 18px;
     width: 39%;
@@ -202,22 +220,22 @@
     color: white !important;
     text-decoration: none;
   }
-  
+
   &:hover h2 {
     inset: auto 30px 480px 20px;
-    transition: inset .3s ease-out;
-  }
-  
-  &:hover p, &:hover a {
-    opacity: 1;
-    transition: opacity .5s .1s ease-in;
-  }
-  
-  &:hover img {
-    transition: opacity .3s ease-in;
-    opacity: 1;
+    transition: inset 0.3s ease-out;
   }
 
+  &:hover p,
+  &:hover a {
+    opacity: 1;
+    transition: opacity 0.5s 0.1s ease-in;
+  }
+
+  &:hover img {
+    transition: opacity 0.3s ease-in;
+    opacity: 1;
+  }
 }
 
 .material-symbols-outlined {
@@ -229,17 +247,19 @@
   gap: 100px;
 } */
 
-.carousel-control-next,.carousel-control-prev {
+.carousel-control-next,
+.carousel-control-prev {
   opacity: 1;
   width: 2%;
 }
 
-.carousel-control-next-icon:hover,.carousel-control-prev-icon:hover{
+.carousel-control-next-icon:hover,
+.carousel-control-prev-icon:hover {
   background-color: white;
   transition: 0.5s;
 }
 
-.carousel5{
+.carousel5 {
   padding-left: 5rem;
   padding-right: 5rem;
 }
@@ -250,7 +270,6 @@
 }
 
 .carousel-inner5 {
-  
   display: flex;
   transition: transform 0.5s ease;
 }
@@ -262,7 +281,6 @@
   margin-right: 10px;
   transition: flex 0.5s ease, width 0.5s ease; /* Add width transition */
 }
-
 
 .prev,
 .next {
@@ -295,50 +313,48 @@
   justify-content: center;
 }
 
-.cell {  
+.cell {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   font-size: 26px;
   font-weight: 500;
-  color: rgba(0,0,0,0.87);
-  color: rgba(0,0,0,0.92);
-  user-select: none;  
+  color: rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.92);
+  user-select: none;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   height: 100%;
   transform-origin: center bottom;
 }
 
 .cell-content-inner {
-    position: relative;
-    overflow: hidden;
-    height: 300px;
+  position: relative;
+  overflow: hidden;
+  height: 300px;
 }
 
 .img5 {
-     object-fit: cover;
-    font-family: 'object-fit: cover;';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
+  object-fit: cover;
+  font-family: "object-fit: cover;";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
 }
 
 .picker {
   position: relative;
-  overflow: hidden;  
+  overflow: hidden;
   width: 80vw;
   height: 90vh;
   border-radius: 2px;
-  background-color: #fff;  
-  box-shadow: 
-    0 2px 4px -1px rgba(0,0,0,.2), 
-    0 4px 5px 0 rgba(0,0,0,.14), 
-    0 1px 10px 0 rgba(0,0,0,.12);
+  background-color: #fff;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }

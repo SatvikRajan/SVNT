@@ -44,7 +44,7 @@ export default function Home() {
     <div className="home">
       {/* Carousel */}
       <div class="carousel1">
-        <Carosuel1 currentImage={currentImage} setSelected={setSelected} />
+        <Carosuel1/>
       </div>
 
       <MainStart />

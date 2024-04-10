@@ -1,23 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import manager from '../images/AboutUs/manager.png';
 
 export default function Managers() {
-  const [hovered, setHovered] = useState(false);
-  const Manager = ({ name, role, description }) => (
-    <div className="d-flex flex-column manager-1">
-      <img
-        src={manager}
-        alt=""
-        width={'60%'}
-        style={{ filter: hovered ? 'grayscale(100%)' : 'none', transform: hovered ? 'scale(1.1)' : 'scale(1)' }}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      />
-      <span className="mt-3 fw-bolder">{name}</span>
-      <span className="text-secondary">{role}</span>
-      <span style={{ color: '#363636' }}>{description}</span>
-    </div>
-  );
 
   return (
     <div className="managers">

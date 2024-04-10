@@ -3,12 +3,13 @@ import LocationCard from '../components/LocationCard';
 import contact from '../images/ContactUs/contact-hand.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import '../css/contact.css'
 const Contact = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: true, // Animation occurs only once
-      offset: 200, // Offset (in px) from the original trigger point
+      duration: 1000,
+      once: true,
+      offset: 200,
     });
   }, []);
 
@@ -23,39 +24,6 @@ const Contact = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const transporter = createTransport({
-  //     host: 'smtp-relay.sendinblue.com',
-  //     port: 587,
-  //     auth: {
-  //       user: 'satvikrajan@example.com',
-  //       pass: 'your-password',
-  //     },
-  //   });
-
-  //   const mailOptions = {
-  //     from: 'your-email@example.com',
-  //     to: 'recipient@example.com',
-  //     subject: formData.subject,
-  //     text: `
-  //         Name: ${formData.name}
-  //         Email: ${formData.email}
-  //         Phone Number: ${formData.phoneNumber}
-  //         Message: ${formData.message}
-  //     `,
-  //   };
-
-  //   try {
-  //     await transporter.sendMail(mailOptions);
-  //     alert('Email sent successfully');
-  //   } catch (error) {
-  //     console.error(error);
-  //     alert('Failed to send email');
-  //   }
-  // };
 
   return (
     <div className="contact-container">

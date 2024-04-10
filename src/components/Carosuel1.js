@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Card from './Card';
 import '../css/card.css';
 import image1 from '../images/Home/carousel-image1.png';
 import image2 from '../images/Home/carousel-image2.png';
@@ -31,61 +30,45 @@ const cards = [
   },
 ];
 
-function Carosuel1({ currentImage }) {
-  const [cardsState, setCardsState] = useState(cards);
-  const [selected, setSelected] = React.useState(1);
-
-  const [isHovered, setIsHovered] = useState(false);
-
-  const nextSlide = () => {
-    setSelected((s) => s + 1);
-    setTimeout(() => {
-      setCardsState((c) => {
-        const arr = [...c];
-        return [...c.slice(1, c.length), arr[0]];
-      });
-      setSelected((s) => s - 1);
-    }, 500);
-  };
-
-  const prevSlide = () => {
-    setSelected((s) => s - 1);
-    setTimeout(() => {
-      setCardsState((c) => {
-        const arr = [...c];
-        return [arr[arr.length - 1], ...c.slice(0, arr.length - 1)];
-      });
-      setSelected((s) => s + 1);
-    }, 500);
-  };
-
-  useEffect(() => {
-    const autoplayInterval = setInterval(() => {
-      nextSlide();
-    }, 2000); 
-    return () => clearInterval(autoplayInterval);
-  }, []);
-
+function Carosuel1() {
   return (
-    <div className="outer" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <div className="container10">
-        <div
-          className="carousellll"
-          style={{
-            transform: `translate(${selected * (-55.5 / cards.length)}%)`,
-          }}
-        >
-          {cardsState.map((card, i) => (
-            <Card key={card.id + '-' + i} current={i === selected} image={card.image} text={card.text} />
-          ))}
-        </div>
-        {isHovered && (
-          <>
-            <div className="left-button" onClick={prevSlide}></div>
-            <div className="right-button" onClick={nextSlide}></div>
-          </>
-        )}
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src={image4} class="d-block w-100" style={{backgroundSize: 'contain'}} alt="..."/>
+            <div class="carousel-caption d-none d-md-block">
+              <h1>First slide label</h1>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <img src={image2} class="d-block w-100" alt="..."/>
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Second slide label</h1>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <img src={image3} class="d-block w-100" alt="..."/>
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Third slide label</h1>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   );
 }

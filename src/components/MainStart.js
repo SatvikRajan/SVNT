@@ -54,7 +54,7 @@ export default function MainStart() {
   }, [isInView]);
 
   return (
-    <div className="home-start shiny">
+    <div className="home-start">
       {/* Main Minute Details of Company*/}
       <div className="row years" ref={yearsRef}>
         <div className="col text-center">
