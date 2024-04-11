@@ -1,0 +1,39 @@
+#carousel-control-prev{
+    left: 30px;
+    width: 10%;
+}
+#carousel-control-next{
+    right: 30px;
+    width: 10%;
+}
+
+#carousel-control-prev-icon{
+    background-image: url('../images/arorwleft.svg') !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 40px;
+    padding: 40px;
+    border: 1px solid white;
+}
+
+#carousel-control-next-icon{
+    background-image: url('../images/arorwright.svg') !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 40px;
+    padding: 40px;
+    border: 1px solid white;
+}
+
+#carousel-control-prev-icon:hover, #carousel-control-next-icon:hover{
+    border: none;
+    background-color: black;
+    filter: invert();
+}
+
+#carousel-button{
+    background-color: #E9E8EC;
+    width: 140px;
+    height: 15px;
+    border-radius: 20px;
+}

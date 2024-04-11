@@ -15,11 +15,15 @@
 }
 
 .carousel-indicators {
-  background-color: black !important;
+  gap: 20px;
   right: 74rem !important;
   bottom: 3rem !important;
   margin-right: 0% !important;
   margin-left: 5% !important;
+}
+
+.carousel-indicators .active {
+  background-color: #251741 !important;
 }
 
 .carousel-item.active {
