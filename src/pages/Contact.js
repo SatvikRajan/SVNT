@@ -13,17 +13,6 @@ const Contact = () => {
     });
   }, []);
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phoneNumber: '',
-    subject: '',
-    message: '',
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   return (
     <div className="contact-container">
@@ -47,30 +36,30 @@ const Contact = () => {
         </div>
         <div className="form-box" data-aos="fade-left">
           <label for="inp" class="inp">
-            <input type="text" id="inp" value={formData.name} onChange={handleChange} placeholder="&nbsp;" />
+            <input type="text" id="inp" placeholder="&nbsp;" />
             <span class="label">Name</span>
             <span class="focus-bg"></span>
           </label>
           <div className="d-flex" style={{ gap: '15px' }}>
             <label for="inp" class="inp">
-              <input type="text" id="inp" value={formData.email} onChange={handleChange} placeholder="&nbsp;" />
+              <input type="text" id="inp"  placeholder="&nbsp;" />
               <span class="label">Email</span>
               <span class="focus-bg"></span>
             </label>
             <label for="inp" class="inp ">
-              <input type="text" id="inp" value={formData.phoneNumber} onChange={handleChange} placeholder="&nbsp;" />
+              <input type="text" id="inp" placeholder="&nbsp;" />
               <span class="label"> Phone Number</span>
               <span class="focus-bg"></span>
             </label>
           </div>
           <label for="inp" class="inp">
-            <input type="text" id="inp" value={formData.subject} onChange={handleChange} placeholder="&nbsp;" />
+            <input type="text" id="inp"  placeholder="&nbsp;" />
             <span class="label">Subject</span>
             <span class="focus-bg"></span>
           </label>
 
           <label for="inp" class="inp">
-            <input type="text" id="inp" value={formData.message} onChange={handleChange} placeholder="&nbsp;" />
+            <input type="text" id="inp"  placeholder="&nbsp;" />
             <span class="label">Message</span>
             <span class="focus-bg"></span>
           </label>

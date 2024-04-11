@@ -14,7 +14,7 @@ export default function LastContent() {
             <p className="last-text1 join">Join Us</p>
           </a>
         </div>
-        <div className="last-contact d-flex">
+        {/* <div className="last-contact d-flex">
           <div className="w-75">
             <h1>Not sure where to start ?</h1>
             <p>
@@ -25,7 +25,7 @@ export default function LastContent() {
           <a href="/contact" style={{filter: 'invert()'}} className="ms-auto text-light align-self-end fs-4 readmore">
             Contact Us
           </a>
-        </div>
+        </div> */}
     </>
   )
 }

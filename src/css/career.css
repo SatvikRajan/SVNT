@@ -47,14 +47,13 @@ a:hover {
 
 .career-text1 {
   width: 30%;
-  height: 800px;
   text-shadow: 2px 2px 5px black;
   text-align: start;
   position: absolute;
   color: white;
   font-size: 35px;
-  top: 35%;
-  left: 5%;
+  top: 55%;
+  left: 10%;
   font-weight: 600;
 }
 .career-text2 {
@@ -64,7 +63,7 @@ a:hover {
   font-weight: 600;
   color: white;
   top: 48%;
-  left: 5%;
+  left: 15%;
   font-weight: 300;
 }
 .explore {
@@ -108,7 +107,7 @@ a:hover {
   transform: translateX(0); /* Move the arrow back to its original position */
 }
 .career-image {
-  background-image: url('../images/Career/careerimage.png');
+  background-image: url('');
   height: 800px;
   background-repeat: no-repeat;
   background-size: cover;

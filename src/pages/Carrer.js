@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../css/carousel.css'
 import '../css/career.css'
+import carrerimage from '../images/Career/careerimage.png'
 export const CareersPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -31,13 +32,14 @@ export const CareersPage = () => {
     <div className="careers-page">
       <div className="career-start">
         <div className="career-image">
+          <img style={{width: '100%' ,height: '100%', objectFit: 'none'}} src={carrerimage} alt="" />
           <div className="career-text1">
             Empower your <br />
             aspirations at SVNT Infotech!
           </div>
-          <div className="career-text2">
+          {/* <div className="career-text2">
             We believe in your Ideas, We believe in You
-          </div>
+          </div> */}
         </div>
 
         <div id="recruitment" className="recruitment">

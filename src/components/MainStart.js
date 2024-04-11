@@ -55,6 +55,9 @@ export default function MainStart() {
 
   return (
     <div className="home-start">
+      <video autoplay loop muted playsinline>
+        <source src="your_video.mp4" type="video/mp4"/>
+      </video>
       {/* Main Minute Details of Company*/}
       <div className="row years" ref={yearsRef}>
         <div className="col text-center">
