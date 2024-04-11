@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import LocationCard from '../components/LocationCard';
 import contact from '../images/ContactUs/contact-hand.jpg';
 import AOS from 'aos';
@@ -34,41 +34,43 @@ const Contact = () => {
             <li>Learn about our pricing</li>
           </ul>
         </div>
-        <div className="form-box" data-aos="fade-left">
-          <label for="inp" class="inp">
-            <input type="text" id="inp" placeholder="&nbsp;" />
-            <span class="label">Name</span>
-            <span class="focus-bg"></span>
-          </label>
-          <div className="d-flex" style={{ gap: '15px' }}>
+        <form action="">
+          <div className="form-box" data-aos="fade-left">
             <label for="inp" class="inp">
-              <input type="text" id="inp"  placeholder="&nbsp;" />
-              <span class="label">Email</span>
-              <span class="focus-bg"></span>
-            </label>
-            <label for="inp" class="inp ">
               <input type="text" id="inp" placeholder="&nbsp;" />
-              <span class="label"> Phone Number</span>
+              <span class="label">Name</span>
               <span class="focus-bg"></span>
             </label>
-          </div>
-          <label for="inp" class="inp">
-            <input type="text" id="inp"  placeholder="&nbsp;" />
-            <span class="label">Subject</span>
-            <span class="focus-bg"></span>
-          </label>
+            <div className="d-flex" style={{ gap: '15px' }}>
+              <label for="inp" class="inp">
+                <input type="text" id="inp" placeholder="&nbsp;" />
+                <span class="label">Email</span>
+                <span class="focus-bg"></span>
+              </label>
+              <label for="inp" class="inp ">
+                <input type="text" id="inp" placeholder="&nbsp;" />
+                <span class="label"> Phone Number</span>
+                <span class="focus-bg"></span>
+              </label>
+            </div>
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" />
+              <span class="label">Subject</span>
+              <span class="focus-bg"></span>
+            </label>
 
-          <label for="inp" class="inp">
-            <input type="text" id="inp"  placeholder="&nbsp;" />
-            <span class="label">Message</span>
-            <span class="focus-bg"></span>
-          </label>
-          <div class="input-group">
-            <button class="btn btn-primary submit" type="submit">
-              <span>Submit </span>
-            </button>
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" />
+              <span class="label">Message</span>
+              <span class="focus-bg"></span>
+            </label>
+            <div class="input-group">
+              <button class="btn btn-primary submit" type="submit">
+                <span>Submit </span>
+              </button>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
       <div className="location container">
         <h1 className="location-name">Head Office</h1>
