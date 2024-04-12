@@ -7,7 +7,7 @@ import image4 from '../images/Home/carousel-image4.png';
 
 function Carosuel1() {
   return (
-    <div id="carouselExampleCaptions" class="carousel slide">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" id='carousel-button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" id='carousel-button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -15,28 +15,28 @@ function Carosuel1() {
         <button type="button" id='carousel-button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="carousel-item active" >
           <img src={image4} class="d-block w-100" style={{backgroundSize: 'contain'}} alt="..."/>
             <div class="carousel-caption d-none d-md-block">
               <h1>First slide label</h1>
               <p>Some representative placeholder content for the first slide.</p>
             </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" >
           <img src={image2} class="d-block w-100" alt="..."/>
             <div class="carousel-caption d-none d-md-block">
               <h1>Second slide label</h1>
               <p>Some representative placeholder content for the second slide.</p>
             </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" >
           <img src={image3} class="d-block w-100" alt="..."/>
             <div class="carousel-caption d-none d-md-block">
               <h1>Third slide label</h1>
               <p>Some representative placeholder content for the third slide.</p>
             </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" >
           <img src={image3} class="d-block w-100" alt="..."/>
             <div class="carousel-caption d-none d-md-block">
               <h1>Third slide label</h1>
