@@ -1,0 +1,230 @@
+.location {
+  text-align: center;
+}
+.location-name {
+  padding: 40px;
+}
+.offices {
+  letter-spacing: 0.1px;
+  border-radius: 20px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.offices1 {
+  letter-spacing: 0.1px;
+  border-radius: 20px;
+  justify-content: center;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.card-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.card-subtitle {
+  margin-bottom: 20px !important;
+}
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+a:hover {
+  color: rgb(53, 53, 53);
+}
+.footer {
+  letter-spacing: 0px;
+  padding-top: 50px;
+  color: white;
+  background: #251741;
+}
+.bottom-bar {
+  padding-bottom: 1px;
+  padding-top: 20px;
+}
+
+.career-text1 {
+  width: 30%;
+  text-shadow: 2px 2px 5px black;
+  text-align: start;
+  position: absolute;
+  color: white;
+  font-size: 35px;
+  top: 55%;
+  left: 10%;
+  font-weight: 600;
+}
+.career-text2 {
+  text-shadow: 2px 2px 5px black;
+  font-size: 18px;
+  position: absolute;
+  font-weight: 600;
+  color: white;
+  top: 48%;
+  left: 15%;
+  font-weight: 300;
+}
+.explore {
+  border-bottom: 2px solid white;
+  position: absolute;
+  color: white;
+  top: 55%;
+  left: 5%;
+  font-size: 19px;
+}
+.explore::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+.explore::after {
+  float: right;
+  content: '';
+  filter: invert();
+  width: 30px; /* Adjust the width of the SVG */
+  height: 20px; /* Adjust the height of the SVG */
+  background: url('../images/Vector.svg') no-repeat;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s; /* Transition opacity and transform over 0.5 seconds */
+  transform: translateX(-10px); /* Initially move the arrow to the left */
+}
+
+.explore:hover::after {
+  color: white;
+  margin-left: 20px;
+  filter: invert();
+  opacity: 1; /* Fade in the SVG on hover */
+  transform: translateX(0); /* Move the arrow back to its original position */
+}
+.career-image {
+  background-image: url('');
+  height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.explorebtn {
+  color: white;
+  border-radius: 40px;
+  padding: 10px;
+  position: absolute;
+  top: 78%;
+  left: 7%;
+  border: 2px solid white;
+}
+.domain {
+  text-align: center;
+}
+.domain-head,
+.domain-text {
+  letter-spacing: 0.1px;
+}
+
+.invite {
+  justify-content: center;
+  margin-right: 30px;
+  margin-left: 55px;
+  padding: 100px;
+}
+.location-card {
+  background: linear-gradient(#f8f9ff, #ffffff);
+  position: relative;
+  width: 400px;
+  height: 160px;
+  background-color: #f0f0f0;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px,
+    rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.location-card:hover {
+  background-color: #ccc;
+}
+
+.card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#f8f9ff, #ffffff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.back {
+  transform: translateY(100%);
+  background-color: #fff; /* Add a background color for better visibility */
+}
+
+.location-card.hovered .front {
+  transform: translateY(-100%);
+}
+
+.location-card.hovered .back {
+  transform: translateY(0);
+}
+
+.icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.copy-notification {
+  color: black !important;
+  text-align: center;
+  transition: color 0.3s;
+}
+.location-cardtitle {
+  letter-spacing: 5%;
+  font-size: 27px;
+}
+.location-cardaddress {
+  letter-spacing: 5%;
+  line-height: 30px;
+}
+.location-card:hover .copy-notification {
+  color: #fff;
+}
+.location-card:nth-child(1) {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-card:nth-child(2) {
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1), 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-card:nth-child(3) {
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1);
+}

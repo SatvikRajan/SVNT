@@ -1,0 +1,104 @@
+
+
+.about-us-head-name{
+  line-height: 60px;
+  letter-spacing: -1.5%;
+  position: absolute;
+  top: 35rem;
+  font-size: 48px;
+  color: white;
+  padding-left: 9%;
+}
+
+.about-us-head-name1{
+  position: absolute;
+  letter-spacing: 1.5%;
+  font-weight: 300;
+  top: 43rem;
+  font-size: 30px;
+  color: white;
+  padding-left: 9%;
+}
+
+.svnt-info{
+  margin-left: 5rem;
+  margin-right: 5rem;
+  font-size: 28px;
+  padding: 8rem;
+}
+
+.ceo{
+  align-items: center;
+  text-align: center;
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+.ceo-text-p{
+ font-size: 22px; 
+}
+
+.managers{
+  margin-top: 0% !important;
+  margin: 5%;
+  border-radius: 100px;
+  background: linear-gradient(to right, #E2E4F4, #CDD4FD);
+  padding-top: 5rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+
+.manager-1{
+  align-items: center;
+  text-align: center;
+  margin: 1rem;
+}
+
+.manager-menu{
+  padding: 1rem;
+}
+
+.manager-line{
+  gap: 20px;
+}
+
+.image-1:hover{
+  scale: 1.1;
+  filter: grayscale(100);
+}
+
+.company-timeline{
+  margin-top: 0% !important;
+  margin: 5%;
+  border-radius: 100px;
+  position: relative;
+  background-image: url(../images/AboutUs/company-timelinebg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 14rem;
+  padding-right: 14rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.timeline-1{
+  font-size: 22px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.divider {
+  position: absolute;
+  top: 50%;
+  left: 11%;
+  width: 77vw;
+}
+
+.circle{
+  height: 60px;
+  width: 60px;
+}
+
+.line{
+  width: 20vw
+}
