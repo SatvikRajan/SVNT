@@ -3,13 +3,32 @@ import { Link, useLocation } from 'react-router-dom'; // Assuming you're using R
 import Logo from '../images/logo.png';
 import '../css/navbar.css'
 const Navbar = () => {
+
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const location = useLocation();
     const [activeLink, setActiveLink] = useState(null);
 
+    const [scrollTop, setScrollTop] = useState(0);
     useEffect(() => {
         const handleScroll = () => {
-            const currentScrollPos = window.pageYOffset;
+            setScrollTop(window.scrollY);
+            const navElement = document.getElementById('navbar');
+            const navItems = document.getElementById("navbarSupportedContent");
+            if (navElement) {
+                if (scrollTop >= 100) {
+                    navElement.classList.add('scrolled-nav');
+                    navItems.classList.remove('justify-content-center')
+                    navItems.classList.add('justify-content-end')
+                } else {
+                    navElement.classList.remove('scrolled-nav')
+                    navItems.classList.remove('justify-content-end')
+                    navItems.classList.add('justify-content-center');
+                }
+            }
+
+            const currentScrollPos = window.scrollY;
+
+
 
             if (currentScrollPos > prevScrollPos && currentScrollPos > 100) {
                 document.querySelector('.navbar').classList.add('hidden');
@@ -36,12 +55,12 @@ const Navbar = () => {
     };
 
     return (
-        <div>
-            <nav className="navbar navbar-expand-lg">
+        <div className='navigation-bar'>
+            <nav className="navbar navbar-expand-lg " id='navbar'>
                 <div className="container">
-                    <Link className="navbar-brand" to="/">
+                    {scrollTop>100 && <Link className="navbar-brand" to="/">
                         <img src={Logo} alt="SVNT Tech" height={30} />
-                    </Link>
+                    </Link>}
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -53,8 +72,8 @@ const Navbar = () => {
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="navbar-collapse collapse justify-content-end" id="navbarSupportedContent">
-                        <ul className="navbar-nav align-items-center">
+                    <div className="navbar-collapse collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav">
                             <NavItem to="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 About Us
                             </NavItem>
