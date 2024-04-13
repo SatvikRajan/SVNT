@@ -27,7 +27,7 @@
   justify-content: space-between;
   padding-right: 12px;
   /* padding: 0 2px; */
-  transition: padding 0.3s ease; /* Smooth padding transition */
+  transition: padding 0.1s ease; /* Smooth padding transition */
   animation-duration: 0.3s;
   animation-timing-function: ease;
 }
@@ -43,8 +43,24 @@
   }
 }
 
+
+@keyframes shrinkToCenter {
+  from {
+    width: 90%;
+    left: 5%;
+  }
+  to {
+    width: 42%;
+    left: 52%;
+  }
+}
+
 .scrolled-nav{
   animation: expandFromLeft 0.3s ease forwards;
+}
+
+.scrolled-top .navbar {
+  animation: shrinkToCenter 0.3s ease forwards;
 }
 
 .navbar-brand img {
@@ -64,18 +80,18 @@
   text-decoration: none;
 }
 
-.navbar.hidden {
+/* .navbar.hidden {
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
-}
+} */
 .navbar-toggler,
 .navbar-toggler:focus-visible {
   border: 0px !important;
   box-shadow: none !important;
 }
-.navbar.hidden:hover {
+/* .navbar.hidden:hover {
   transform: translateY(0);
-}
+} */
 
 .logo-font {
   font-size: 10px;

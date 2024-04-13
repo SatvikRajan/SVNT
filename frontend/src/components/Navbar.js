@@ -18,11 +18,13 @@ const Navbar = () => {
             if (navElement) {
                 if (scrollTop >= 100) {
                     navElement.classList.add('scrolled-nav');
-                    // navItems.classList.remove('justify-content-end')
-                    // navLinks.classList.remove('nav')
+                    navItems.classList.add('collapse','justify-content-end')
+                    navLinks.classList.remove('navbar-collapse','collapse','justify-content-between')
                     // navItems.classList.add('justify-content-end')
                 } else {
                     navElement.classList.remove('scrolled-nav')
+                    navItems.classList.remove('collapse','justify-content-end')
+                    navLinks.classList.add('navbar-collapse','collapse','justify-content-between')
                     // navItems.classList.remove('justify-content-')
                     // navItems.classList.add('justify-content-center');
                 }
@@ -57,7 +59,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className='navigation-bar'>
+        <div className={`${scrollTop==0?'scrolled-top':''}`}>
             <nav className="navbar navbar-expand-lg " id='navbar'>
                 <div className="container">
                     <Link className="navbar-brand" to="/">
@@ -75,7 +77,7 @@ const Navbar = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="navbar-collapse" id="navbarSupportedContent">
-                        <ul id='navbar-links' className="navbar-nav navbar-collapse collapse justify-content-between">
+                        <ul id='nav-links' className="navbar-nav navbar-collapse collapse justify-content-between">
                             <NavItem to="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 About Us
                             </NavItem>
