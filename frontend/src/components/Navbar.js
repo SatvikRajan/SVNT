@@ -14,15 +14,17 @@ const Navbar = () => {
             setScrollTop(window.scrollY);
             const navElement = document.getElementById('navbar');
             const navItems = document.getElementById("navbarSupportedContent");
+            const navLinks = document.getElementById('nav-links')
             if (navElement) {
                 if (scrollTop >= 100) {
                     navElement.classList.add('scrolled-nav');
-                    navItems.classList.remove('justify-content-center')
-                    navItems.classList.add('justify-content-end')
+                    // navItems.classList.remove('justify-content-end')
+                    // navLinks.classList.remove('nav')
+                    // navItems.classList.add('justify-content-end')
                 } else {
                     navElement.classList.remove('scrolled-nav')
-                    navItems.classList.remove('justify-content-end')
-                    navItems.classList.add('justify-content-center');
+                    // navItems.classList.remove('justify-content-')
+                    // navItems.classList.add('justify-content-center');
                 }
             }
 
@@ -58,9 +60,9 @@ const Navbar = () => {
         <div className='navigation-bar'>
             <nav className="navbar navbar-expand-lg " id='navbar'>
                 <div className="container">
-                    {scrollTop>100 && <Link className="navbar-brand" to="/">
+                    <Link className="navbar-brand" to="/">
                         <img src={Logo} alt="SVNT Tech" height={30} />
-                    </Link>}
+                    </Link>
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -72,8 +74,8 @@ const Navbar = () => {
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="navbar-collapse collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav">
+                    <div className="navbar-collapse" id="navbarSupportedContent">
+                        <ul id='navbar-links' className="navbar-nav navbar-collapse collapse justify-content-between">
                             <NavItem to="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 About Us
                             </NavItem>

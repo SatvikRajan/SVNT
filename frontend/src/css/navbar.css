@@ -9,24 +9,32 @@
   letter-spacing: 0 !important;
   border-radius: 40px;
   /* border-bottom: 0px !important; */
-  padding: 0 !important;
+  /* padding: 0 !important; */
   left: 52%;
   position: fixed !important;
   background-color: white;
-  width: 42%;
+  width: 45%;
   height: 10%;
   top: 5%;
   z-index: 1000;
   column-gap: 10px;
   /* background-color: #5023aa; */
   transition: transform 0.3s ease-in-out;
-  animation: expandFromLeft 0.3s ease;
+  /* animation: expandFromLeft 0.3s ease; */
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 12px;
+  /* padding: 0 2px; */
+  transition: padding 0.3s ease; /* Smooth padding transition */
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
 }
 
 @keyframes expandFromLeft {
   0% {
-    width: 42%; /* Initial width */
+    width: 45%; /* Initial width */
     left: 52%; /* Initial left position */
   }
   100% {
@@ -37,8 +45,16 @@
 
 .scrolled-nav{
   animation: expandFromLeft 0.3s ease forwards;
-
 }
+
+.navbar-brand img {
+  display: none; /* Initially hide logo image */
+}
+
+.scrolled-nav .navbar-brand img {
+  display: block; /* Show logo image when scrolled */
+}
+
 
 .nav-link.active {
   border-radius: 20px;
