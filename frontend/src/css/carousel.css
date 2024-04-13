@@ -2,7 +2,8 @@
   position: relative;
   /* background-image: url('../images/cbg.png'); */
   background-repeat: no-repeat;
-  width: 100%;
+  width: 90%;
+  margin-left: 5%;
   overflow: hidden;
 }
 
@@ -155,7 +156,7 @@
 }
 
 .carousel-inner {
-  margin-top: 5rem;
+  margin-top: 3rem;
   padding: 1em;
 }
 

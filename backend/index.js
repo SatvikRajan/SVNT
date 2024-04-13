@@ -10,9 +10,8 @@ app.use("/api/auth", userRoutes);
 
 async function main() {
     try {
-        await mongoose.connect('mongodb+srv://satvikrajan:Satvik2003@cluster0.lowxabl.mongodb.net/svnt?retryWrites=true&w=majority', {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
+        await mongoose.connect('mongodb+srv://satvikrajan:Satvik2003@cluster0.3sgwwvu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+           
         });
         console.log('DB connected successfully');
     } catch (err) {
@@ -25,5 +24,5 @@ main().catch((err) => {
 });
 
 const server = app.listen(process.env.PORT, () => {
-    console.log(`Example app listening on port ${process.env.PORT}`);
+    console.log(`Example app listening on port 8080`);
 });

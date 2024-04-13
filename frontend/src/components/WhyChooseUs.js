@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
       className="whyus"
     >
       <div>
-        <p style={{ fontSize: '42px' }}>Why Choose Us</p>
+        <p style={{ fontSize: '42px', fontWeight: '500' }}>Why Choose Us</p>
         <div className="whyus-text d-flex">
           <p className="n1" style={{ position: 'relative' }} onClick={() => handleClick(0)}>
             Client Satisfaction
