@@ -8,8 +8,6 @@ svg.btn.search {
   width: 50px;
 }
 
-
-
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -234,8 +232,6 @@ p.write1 {
   transition: all 0.1s ease;
 }
 
-.label {
-}
 /* Careers */
 
 .recruit {
@@ -622,14 +618,14 @@ ul.job-requirements {
   background-position: center;
   background-size: cover;
   background-image: url(./images/Home/casestudies-bg.jpg);
-  height: 1000px;
+  height: 760px;
   padding: 5rem;
   padding-left: 10rem;
 }
 
 .case-studies h1 {
   font-weight: 400;
-  font-size: 30px;
+  font-size: 42px;
 }
 
 main {

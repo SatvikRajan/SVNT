@@ -21,6 +21,7 @@ module.exports.register = async (req,res,next) =>{
     next(ex)
    }
 }
+
 module.exports.login = async (req,res,next) =>{
     try{
      const{username,password} = req.body;
@@ -40,7 +41,7 @@ module.exports.login = async (req,res,next) =>{
 module.exports.getAllUsers = async (req,res,next)=>{
     try{    
         const users = await User.find({_id:{$ne:req.params.id}}).select([
-            "email","username","avatarImage","_id"
+            "email","username","_id"
         ])
         return res.json(users)
     }

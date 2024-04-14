@@ -167,7 +167,7 @@
 @media (min-width: 768px) {
   .carousel-item5 {
     margin-right: 0;
-    flex: 0 0 32% !important;
+    flex: 0 0 32.1% !important;
     display: block;
   }
   .carousel-inner {
@@ -182,7 +182,7 @@
 
 .card-1 {
   width: 24rem;
-  height: 36rem;
+  height: 30rem;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -259,13 +259,37 @@
 .carousel-control-next,
 .carousel-control-prev {
   opacity: 1;
-  width: 2%;
+  width: 5%;
 }
-
+.carousel-control-prev {
+  left: -60px;
+}
+.carousel-control-next {
+  right: -50px;
+}
 .carousel-control-next-icon:hover,
 .carousel-control-prev-icon:hover {
-  background-color: white;
+  filter: invert();
+  background-color: black;
   transition: 0.5s;
+  border: none;
+}
+
+.carousel-control-prev-icon{
+  padding: 40px;
+  background-repeat: no-repeat;
+  border: 1px solid white;
+  background-image: url('../images/arrowleft') !important;
+  background-size: auto;
+  border-radius: 40px;
+}
+.carousel-control-next-icon{
+  padding: 40px;
+  background-repeat: no-repeat;
+  border: 1px solid white;
+  background-image: url('../images/arrowright.png') !important;
+  background-size: auto;
+  border-radius: 40px;
 }
 
 .carousel5 {

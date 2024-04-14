@@ -3,7 +3,7 @@
 }
 
 .contact-image {
-    object-fit: none;
+    object-fit: scale-down;
     width: 100%;
     height: 100%;
 }

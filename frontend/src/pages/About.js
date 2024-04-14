@@ -13,7 +13,7 @@ export const About = () => {
     <div className="about-us-page">
       
       <div className="about-us-head">
-      <img src={aboutbg} style={{height: '100%', width: '99vw', objectFit: 'none', marginTop: '1rem'}} alt="" />
+      <img src={aboutbg} style={{height: '100%', width: '99vw', objectFit: 'scale-down', marginTop: '1rem'}} alt="" />
         <p className="about-us-head-name">
           Integrated Solutions,
           <br /> Empowered Choices

@@ -17,7 +17,7 @@ export default function WhyWeDoBest() {
     const names = [
         'IP Surveillance Solution',
         'IP Networking Solution',
-        'Integration Solutions',
+        ' Integration Solutions',
         'Audio-Visual Solutions',
         'Storage',
         'Security & Management Services',
@@ -111,7 +111,7 @@ export default function WhyWeDoBest() {
               }}
             >
               <img src={logo3} alt="logo" />
-              {names[2]}
+              { names[2]}
             </p>
           </div>
 

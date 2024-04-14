@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import ips from '../images/Home/home-carousel-genpact.png';
 import ipn from '../images/Home/home-carousel-bial.png';
 import str from '../images/Home/home-carousel-itc.png';
@@ -8,41 +8,60 @@ import sss from '../images/Home/home-carousel-jsw';
 import avs from '../images/Home/home-carousel-cfcl.png';
 import es from '../images/Home/home-carousel-aragen.png';
 function CaseStudiesCarousel() {
+  const carouselRef = useRef(null);
+  const [cardWidth, setCardWidth] = useState(0);
+
   useEffect(() => {
-    const multipleCardCarousel = document.querySelector('#carouselExampleControls');
-    if (window.matchMedia('(min-width: 768px)').matches) {
-      const carouselWidth = document.querySelector('.carousel-inner').scrollWidth;
-      const cardWidth = document.querySelector('.carousel-item5').clientWidth;
-      let scrollPosition = 0;
+    const updateCardWidth = () => {
+      const carousel = carouselRef.current;
+      if (carousel) {
+        const carouselWidth = carousel.clientWidth;
+        const numberOfCardsPerSlide = 3; // Display three cards per slide
+        const calculatedCardWidth = carouselWidth / numberOfCardsPerSlide;
+        setCardWidth(calculatedCardWidth);
+      }
+    };
 
-      document.querySelector('#carouselExampleControls .carousel-control-next').addEventListener('click', () => {
-        if (scrollPosition < carouselWidth - cardWidth * 4) {
-          scrollPosition += cardWidth;
-          document.querySelector('#carouselExampleControls .carousel-inner').scrollTo({
-            left: scrollPosition,
-            behavior: 'smooth',
-          });
-        }
-      });
+    updateCardWidth(); // Initial call to set card width
 
-      document.querySelector('#carouselExampleControls .carousel-control-prev').addEventListener('click', () => {
-        if (scrollPosition > 0) {
-          scrollPosition -= cardWidth;
-          document.querySelector('#carouselExampleControls .carousel-inner').scrollTo({
-            left: scrollPosition,
-            behavior: 'smooth',
-          });
-        }
-      });
-    } else {
-      multipleCardCarousel.classList.add('slide');
-    }
+    const handleResize = () => {
+      updateCardWidth();
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
+  const handleNext = () => {
+    const carousel = carouselRef.current;
+    if (carousel) {
+      const newPosition = carousel.scrollLeft + cardWidth;
+      carousel.scrollTo({
+        left: newPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const handlePrev = () => {
+    const carousel = carouselRef.current;
+    if (carousel) {
+      const newPosition = carousel.scrollLeft - cardWidth;
+      carousel.scrollTo({
+        left: newPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  
   return (
     <div id="carouselExampleControls" className="carousel slide">
-      <div className="carousel-inner">
-        <div className="carousel-item5 active">
+      <div className="carousel-inner" ref={carouselRef} style={{ scrollSnapType: 'x mandatory', display: 'flex' }}>
+        <div className="carousel-item5 active" style={{ minWidth: cardWidth }}>
           <div className="card-1">
             <img src={ips} alt="" />
             <div className="card-content">
@@ -56,7 +75,7 @@ function CaseStudiesCarousel() {
             </div>
           </div>
         </div>
-        <div className="carousel-item5">
+        <div className="carousel-item5" >
           <div className="card-1">
             <img src={ipn} alt="" />
             <div className="card-content">
@@ -70,7 +89,7 @@ function CaseStudiesCarousel() {
             </div>
           </div>
         </div>
-        <div className="carousel-item5">
+        <div className="carousel-item5" style={{ minWidth: cardWidth }}>
           <div className="card-1">
             <img src={str} alt="" />
             <div className="card-content">
@@ -84,7 +103,7 @@ function CaseStudiesCarousel() {
             </div>
           </div>
         </div>
-        <div className="carousel-item5">
+        <div className="carousel-item5" >
           <div className="card-1">
             <img src={sms} alt="" />
             <div className="card-content">
@@ -99,7 +118,7 @@ function CaseStudiesCarousel() {
             </div>
           </div>
         </div>
-        <div className="carousel-item5">
+        <div className="carousel-item5" style={{minWidth: cardWidth }}>
           <div className="card-1">
             <img src={is} alt="" />
             <div className="card-content">
@@ -114,7 +133,7 @@ function CaseStudiesCarousel() {
             </div>
           </div>
         </div>
-        <div className="carousel-item5">
+        <div className="carousel-item5" >
           <div className="card-1">
             <img src={sss} alt="" />
             <div className="card-content">
@@ -129,7 +148,7 @@ function CaseStudiesCarousel() {
             </div>
           </div>
         </div>
-        <div className="carousel-item5">
+        <div className="carousel-item5" style={{flex: '0 0 auto', minWidth: cardWidth }}>
           <div className="card-1">
             <img src={avs} alt="" />
             <div className="card-content">
@@ -143,7 +162,7 @@ function CaseStudiesCarousel() {
             </div>
           </div>
         </div>
-        <div className="carousel-item5">
+        <div className="carousel-item5" style={{ minWidth: cardWidth }}>
           <div className="card-1">
             <img src={es} alt="" />
             <div className="card-content">
@@ -158,21 +177,13 @@ function CaseStudiesCarousel() {
           </div>
         </div>
       </div>
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev"
-      >
-        <span className="carousel-control-prev-icon left-button" style={{border: '1px solid white', borderRadius: '30px'}} aria-hidden="true"></span>
+      <button className="carousel-control-prev" onClick={handlePrev} type="button">
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
       </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleControls"
-        data-bs-slide="next"
-      >
-        <span className="carousel-control-next-icon right-button" style={{border: '1px solid white', borderRadius: '30px'}} aria-hidden="true"></span>
+      <button className="carousel-control-next" onClick={handleNext} type="button">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
       </button>
     </div>
   );

@@ -8,18 +8,18 @@
 }
 
 #carousel-control-prev-icon{
-    background-image: url('../images/arorwleft.svg') !important;
+    background-image: url('../images/arrowleft') !important;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     border-radius: 40px;
     padding: 40px;
     border: 1px solid white;
 }
 
 #carousel-control-next-icon{
-    background-image: url('../images/arorwright.svg') !important;
+    background-image: url('../images/arrowright.png') !important;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     border-radius: 40px;
     padding: 40px;
     border: 1px solid white;
