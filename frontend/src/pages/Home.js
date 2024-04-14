@@ -29,7 +29,7 @@ export default function Home() {
 
       <div className="mainpage">
         <WhyWeDoBest />
-        <div className="partners">Partners</div>
+        <div className="partners" style={{fontSize: '42px'}}>Partners</div>
         <div className="case-studies">
           <h1>Case Studies</h1>
           <CaseStudiesCarousel />
