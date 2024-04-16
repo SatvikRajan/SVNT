@@ -39,11 +39,6 @@ svg.btn.search {
   justify-content: center;
   flex-wrap: wrap;
 }
-form {
-  gap: 35px;
-  display: flex;
-  justify-content: center;
-}
 .mb-3 {
   width: 100%;
 }

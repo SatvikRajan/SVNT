@@ -34,8 +34,8 @@ const Contact = () => {
             <li>Learn about our pricing</li>
           </ul>
         </div>
-        <form action="">
-          <div className="form-box" data-aos="fade-left">
+        <div className="form-box" data-aos="fade-left">
+          <form action="">
             <label for="inp" class="inp">
               <input type="text" id="inp" placeholder="&nbsp;" />
               <span class="label">Name</span>
@@ -69,8 +69,8 @@ const Contact = () => {
                 <span>Submit </span>
               </button>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
       <div className="location container">
         <h1 className="location-name">Head Office</h1>

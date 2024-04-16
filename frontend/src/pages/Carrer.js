@@ -1,6 +1,7 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect,useNavigate } from "react";
 import invite from "../images/ContactUs/invite.png";
 import search from "../images/search.jpg";
+import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../css/carousel.css'
@@ -12,14 +13,34 @@ export const CareersPage = () => {
   const [phone, setPhone] = useState('');
   const [totalExperience, setTotalExperience] = useState('');
   const [relevantExperience, setRelevantExperience] = useState('');
+  const [resume, setResume] = useState(null);
   const [showForm, setShowForm] = useState(false);
-  const handleSubmit = () => {
-    setName("");
-    setEmail("");
-    setPhone("");
-    setTotalExperience("");
-    setRelevantExperience("");
-    toast.success("Application submitted successfully!");
+  const handleSubmit = async () => {
+    try {
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('email', email);
+      formData.append('phone', phone);
+      formData.append('totalExperience', totalExperience);
+      formData.append('relevantExperience', relevantExperience);
+      formData.append('resume', resume);
+  
+      await fetch('http://localhost:3000/careers/api/submitForm', {
+        method: 'POST',
+        body: formData,
+      });
+  
+      toast.success('Form submitted successfully');
+      setName('');
+      setEmail('');
+      setPhone('');
+      setTotalExperience('');
+      setRelevantExperience('');
+      setResume(null);
+    } catch (error) {
+      console.error(error);
+      toast.error('Error submitting form');
+    }
   };
   const handleApplyClick = () => {
     setShowForm(true);
@@ -28,11 +49,57 @@ export const CareersPage = () => {
     setShowForm(false);
   }
 
+
+  // const navigate = useNavigate();
+  //   const [values,setValues]=useState({
+  //       username: "",
+  //       password: ""
+  //   })
+  //   useEffect(()=>{
+  //     if(localStorage.getItem('app-user'))
+  //     {
+  //       navigate('/')
+  //     }
+  //   },[navigate])
+    
+    
+  //   const handleSubmit1 = async (e) => {
+  //       e.preventDefault();
+  //       if(handleValidation1()){
+  //         const {password,username} = values;
+  //         const {data} = await axios.post({
+  //           username,password
+  //         })
+  //         if(data.status===false){
+  //           toast.error(data.msg)
+  //         }
+  //         if(data.status===true){
+  //           localStorage.setItem('app-user',JSON.stringify(data.user))
+  //           navigate("/");
+  //         }
+  //       }
+  //     }
+  //   const handleValidation1 = ()=>{
+  //       const{password,username}=values;
+  //       if(password===""){
+  //         toast.error("Username and Password is required")
+  //           return false;
+  //       }
+  //       else if(username.length===0){
+  //           toast.error("Username and Password is required")
+  //           return false;
+  //       }
+  //       return true;
+  //     }
+  //     const handleChange=(e)=>{
+  //       setValues({...values,[e.target.name]: e.target.value})
+  //     }
+
   return (
     <div className="careers-page">
       <div className="career-start">
         <div className="career-image">
-          <img style={{width: '100%' ,height: '100%', objectFit: 'scale-down'}} src={carrerimage} alt="" />
+          <img style={{ width: '100%', height: '100%', objectFit: 'scale-down' }} src={carrerimage} alt="" />
           <div className="career-text1">
             Empower your <br />
             aspirations at SVNT Infotech!
@@ -71,8 +138,8 @@ export const CareersPage = () => {
                   alt=""
                 />
               </button>
-              <ul class="dropdown-menu" > 
-              {/* changes */}
+              <ul class="dropdown-menu" >
+                {/* changes */}
                 <li>
                   <a class="dropdown-item" href="#job-des">
                     Defence Porjects
@@ -190,9 +257,10 @@ export const CareersPage = () => {
                     <div className="d-flex mt-4 justify-center">
                       <span className="inp w-50">Attach Resume</span>
                       <input
-                        class="form-control inp form-control-sm"
+                        className="form-control inp form-control-sm"
                         id="formFileSm"
                         type="file"
+                        onChange={(e) => setResume(e.target.files[0])}
                       />
                     </div>
                   </div>
@@ -512,9 +580,9 @@ export const CareersPage = () => {
           </div>
 
         </div>
-        
+
       </div>
-     
+
     </div>
   );
 };
