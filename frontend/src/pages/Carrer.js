@@ -15,6 +15,8 @@ export const CareersPage = () => {
   const [relevantExperience, setRelevantExperience] = useState('');
   const [resume, setResume] = useState(null);
   const [showForm, setShowForm] = useState(false);
+
+  
   const handleSubmit = async () => {
     try {
       const formData = new FormData();
@@ -25,12 +27,17 @@ export const CareersPage = () => {
       formData.append('relevantExperience', relevantExperience);
       formData.append('resume', resume);
   
-      await fetch('http://localhost:3000/careers/api/submitForm', {
+      var JSbody = JSON.stringify(Object.fromEntries(formData));
+      console.log(JSbody)
+      await fetch('http://localhost:8080/careers/api/submitForm', {
         method: 'POST',
-        body: formData,
+        headers: {
+          "Content-Type" : 'application/json'
+        },
+        body: JSbody,
       });
   
-      toast.success('Form submitted successfully');
+      // toast.success('Form submitted successfully');
       setName('');
       setEmail('');
       setPhone('');
@@ -48,52 +55,6 @@ export const CareersPage = () => {
   const handleGoBackClick = () => {
     setShowForm(false);
   }
-
-
-  // const navigate = useNavigate();
-  //   const [values,setValues]=useState({
-  //       username: "",
-  //       password: ""
-  //   })
-  //   useEffect(()=>{
-  //     if(localStorage.getItem('app-user'))
-  //     {
-  //       navigate('/')
-  //     }
-  //   },[navigate])
-    
-    
-  //   const handleSubmit1 = async (e) => {
-  //       e.preventDefault();
-  //       if(handleValidation1()){
-  //         const {password,username} = values;
-  //         const {data} = await axios.post({
-  //           username,password
-  //         })
-  //         if(data.status===false){
-  //           toast.error(data.msg)
-  //         }
-  //         if(data.status===true){
-  //           localStorage.setItem('app-user',JSON.stringify(data.user))
-  //           navigate("/");
-  //         }
-  //       }
-  //     }
-  //   const handleValidation1 = ()=>{
-  //       const{password,username}=values;
-  //       if(password===""){
-  //         toast.error("Username and Password is required")
-  //           return false;
-  //       }
-  //       else if(username.length===0){
-  //           toast.error("Username and Password is required")
-  //           return false;
-  //       }
-  //       return true;
-  //     }
-  //     const handleChange=(e)=>{
-  //       setValues({...values,[e.target.name]: e.target.value})
-  //     }
 
   return (
     <div className="careers-page">
@@ -238,18 +199,18 @@ export const CareersPage = () => {
                         <span class="focus-bg"></span>
                       </label>
                       <label for="inp" class="inp ">
-                        <input type="text" id="inp" placeholder="&nbsp;" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                        <input type="number" id="inp" placeholder="&nbsp;" value={phone} onChange={(e) => setPhone(e.target.value)} />
                         <span class="label"> Phone Number</span>
                         <span class="focus-bg"></span>
                       </label>
                     </div>
                     <label for="inp" class="inp">
-                      <input type="text" id="inp" placeholder="&nbsp;" value={totalExperience} onChange={(e) => setTotalExperience(e.target.value)} />
+                      <input type="number" id="inp" placeholder="&nbsp;" value={totalExperience} onChange={(e) => setTotalExperience(e.target.value)} />
                       <span class="label">Total Experience</span>
                       <span class="focus-bg"></span>
                     </label>
                     <label for="inp" class="inp">
-                      <input type="text" id="inp" placeholder="&nbsp;" value={relevantExperience} onChange={(e) => setRelevantExperience(e.target.value)} />
+                      <input type="number" id="inp" placeholder="&nbsp;" value={relevantExperience} onChange={(e) => setRelevantExperience(e.target.value)} />
                       <span class="label">Relevant Experience</span>
                       <span class="focus-bg"></span>
                     </label>
@@ -260,6 +221,7 @@ export const CareersPage = () => {
                         className="form-control inp form-control-sm"
                         id="formFileSm"
                         type="file"
+                        accept='.pdf'
                         onChange={(e) => setResume(e.target.files[0])}
                       />
                     </div>

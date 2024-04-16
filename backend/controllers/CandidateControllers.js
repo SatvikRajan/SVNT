@@ -3,7 +3,6 @@ module.exports.createCandidate = async (req, res) => {
     try {
         const { name, email, phoneNumber, totalExperience, relevantExperience } = req.body;
         const resume = req.file.path;
-
         const candidate = new Candidate({
             name,
             email,
@@ -12,7 +11,6 @@ module.exports.createCandidate = async (req, res) => {
             relevantExperience,
             resume
         });
-
         await candidate.save();
         res.status(201).json({ message: 'Candidate created successfully', candidate });
     } catch (error) {

@@ -15,11 +15,11 @@ const CandidateSchema = new mongoose.Schema({
         trim: true,
         maxlength: 50
     },
-    phoneNumber: {
-        type: String,
+    phone: {
+        type: Number,
         required: true,
         trim: true,
-        max: 10
+        min: 0
     },
     totalExperience: {
         type: Number,
@@ -32,7 +32,7 @@ const CandidateSchema = new mongoose.Schema({
         min: 0
     },
     resume: {
-        type: String, 
+        type: Object, 
         required: true,
         trim: true
     }

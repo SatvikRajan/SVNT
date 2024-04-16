@@ -4,22 +4,25 @@ const mongoose = require('mongoose');
 const app = express();
 const userRoutes = require('../backend/routes/UserRoutes');
 const candidateRoutes = require('./routes/CandidateRoutes')
+const Candidate = require('./model/CandidatesModel');
 require("dotenv").config();
 app.use(cors())
 app.use(express.json());
 app.use("/api/auth", userRoutes);
 app.use('/api/candidates', candidateRoutes)
-app.post('/api/submitForm', async (req, res) => {
+app.post('/careers/api/submitForm', async (req, res) => {
     try {
         const { name, email, phone, totalExperience, relevantExperience, resume } = req.body;
+        console.log(req.body);
         const candidate = new Candidate({ name, email, phone, totalExperience, relevantExperience, resume });
         await candidate.save();
         res.status(201).json({ message: 'Candidate saved successfully' });
-      } catch (error) {
+    } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Internal server error' });
-      }
+    }
 });
+
 async function main() {
     try {
         await mongoose.connect('mongodb+srv://satvikrajan:Satvik2003@cluster0.3sgwwvu.mongodb.net/svnt?retryWrites=true&w=majority&appName=Cluster0', {
