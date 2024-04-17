@@ -26,7 +26,6 @@ app.post('/careers/api/submitForm', async (req, res) => {
 async function main() {
     try {
         await mongoose.connect('mongodb+srv://satvikrajan:Satvik2003@cluster0.3sgwwvu.mongodb.net/svnt?retryWrites=true&w=majority&appName=Cluster0', {
-
         });
         console.log('DB connected successfully');
     } catch (err) {
@@ -41,3 +40,5 @@ main().catch((err) => {
 const server = app.listen(8080, () => {
     console.log(`Example app listening on port 8080`);
 });
+
+

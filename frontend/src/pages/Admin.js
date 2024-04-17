@@ -8,38 +8,39 @@ import '../css/admin.css'
 function Admin() {
   const navigate = useNavigate();
   const [values, setValues] = useState({
-    username: "",
+    email: "",
     password: ""
   })
   useEffect(() => {
     if (localStorage.getItem('app-user')) {
-      navigate('/')
+      navigate('/admin/page')
     }
   }, [navigate])
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (handleValidation()) {
-      const { password, username } = values;
+      const { password, email } = values;
       const { data } = await axios.post(loginRoute, {
-        username, password
+        email, password
       })
       if (data.status === false) {
         toast.error(data.msg)
       }
       if (data.status === true) {
         localStorage.setItem('app-user', JSON.stringify(data.user))
-        navigate("/");
+        navigate("/admin/page");
       }
     }
   }
   const handleValidation = () => {
-    const { password, username } = values;
+    const { password, email } = values;
     if (password === "") {
-      toast.error("Username and Password is required")
+      toast.error("email and Password is required")
       return false;
     }
-    else if (username.length === 0) {
-      toast.error("Username and Password is required")
+    else if (email.length === 0) {
+      toast.error("email and Password is required")
       return false;
     }
     return true;
@@ -55,24 +56,26 @@ function Admin() {
       <div class="parent-container">
         <div class="portal d-flex flex-column">
           <p>Admin Portal</p>
-          <input
-            type="text"
-            placeholder="email"
-            name="email"
-            onChange={(e) => {
-              handleChange(e);
-            }}
-            min="3"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            onChange={(e) => {
-              handleChange(e);
-            }}
-          />
-          <button type="submit" onChange={handleSubmit}>Login</button>
+          <form onSubmit={(e) => handleSubmit(e)}>
+            <input
+              type="text"
+              placeholder="Email"
+              name="email"
+              onChange={(e) => {
+                handleChange(e);
+              }}
+              min="3"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              onChange={(e) => {
+                handleChange(e);
+              }}
+            />
+            <button type="submit">Login</button>
+          </form>
         </div>
         <ToastContainer />
       </div>

@@ -4,16 +4,13 @@ const saltRounds = 10;
 
 module.exports.register = async (req,res,next) =>{
    try{
-    const{username,email,password} = req.body;
-    let usernameCheck = await User.findOne({username})
-    if(usernameCheck)
-    return res.json({ msg: "Username already used", status: false});
+    const{email,password} = req.body;
     let emailCheck = await User.findOne({email})
     if(emailCheck)
     return res.json({ msg: "Email already used", status: false});
     const hashedPassword = bcrypt.hashSync(password,saltRounds)
     const user = await User.create({
-        email,username,password: hashedPassword
+        email,password: hashedPassword
     })
     return res.json({status: true,user})
    }
@@ -23,18 +20,19 @@ module.exports.register = async (req,res,next) =>{
 }
 
 module.exports.login = async (req,res,next) =>{
-    try{
-     const{username,password} = req.body;
-     const user = await User.findOne({username})
-     if(!user)
-     return res.json({ msg: "Incorrect Username or Password" ,status: false});
-     const isPasswordValid = bcrypt.compareSync(password,user.password)
-     if(!isPasswordValid)
-     return res.json({ msg: "Incorrect Username or Password" ,status: false});
-    return res.json({status: true,user})
-    }
-    catch(ex){
-     next(ex)
+    try {
+        const { email, password } = req.body;
+        console.log(email);
+        console.log(password);
+        const user = await User.findOne({ email }).timeout(40000);
+        if (!user) return res.json({ msg: "Incorrect Email or Password", status: false });
+        if (password !== user.password) {
+            return res.json({ msg: "Incorrect Email or Password", status: false });
+        }
+
+        return res.json({ status: true, user });
+    } catch (ex) {
+        next(ex);
     }
  }  
 

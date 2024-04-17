@@ -10,7 +10,7 @@ import CaseStudies from './pages/CaseStudies'
 import { About } from './pages/About';
 import Services from './pages/Services';
 import Admin from './pages/Admin';
-
+import AdminPage from './pages/AdminPage';
 function App() {
   return (
     <BrowserRouter>
@@ -22,6 +22,7 @@ function App() {
         <Route path="about" element={<MainLayout><About /></MainLayout>} />
         <Route path="services" element={<MainLayout><Services /></MainLayout>} />
         <Route path="admin/*" element={<Admin />} />
+        <Route path="admin/page" element={<AdminPage />} />
       </Routes>
     </BrowserRouter>
   );
