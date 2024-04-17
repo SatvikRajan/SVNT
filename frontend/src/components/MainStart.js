@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../css/mainstart.css';
+import bgVideo from '../images/Home/mainstart.mp4'
 
 export default function MainStart() {
   const yearsRef = useRef(null);
@@ -56,6 +57,9 @@ export default function MainStart() {
   return (
     <div className="home-start">
       {/* Main Minute Details of Company*/}
+      <video src={bgVideo} autoPlay loop muted playsInline className='bg-video'>
+        {/* <source type='video/mp4' src={bgVideo} /> */}
+      </video>
       <div className="row years" ref={yearsRef}>
         <div className="col text-center">
           <span></span>
@@ -72,7 +76,7 @@ export default function MainStart() {
         </div>
       </div>
       <div className="lorem container d-flex pt-5 text-light">
-        <p style={{ width: '60%', lineHeight: '40px' }}>
+        <p style={{ width: '60%', lineHeight: '40px', paddingLeft:'5%'}}>
           Committed to integrating pioneering technology into quality service, SVNT Infotech is a premier provider of
           cutting-edge networking and communication solutions for evolving needs. With unwavering determination, we
           strive to lead in delivering innovative solutions globally.
