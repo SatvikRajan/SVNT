@@ -2,10 +2,21 @@
   margin: 5%;
   border-radius: 100px;
   height: 680px;
-  background: linear-gradient(to right, #6161e5, #5c5bdf, #f57d81, #fb565c 90%);
-  padding-bottom: 30px;
-  position: relative;
   overflow: hidden;
+}
+
+.bg-video{
+  z-index: -1;
+  position: absolute;
+  /* margin: 0% 0% 0% ; */
+  margin-left: 15%;
+  left: 0;
+  border-radius: 80px;
+  height: 780px;
+  width: fit-content;
+  overflow: hidden;
+  background-color: aqua;
+  
 }
 
 .years {
@@ -25,6 +36,7 @@
   /* text-align: right; */
   font-size: 200px;
   font-family: 'Train One', system-ui;
+  
 }
 
 .number60 {
@@ -34,6 +46,7 @@
 .x {
   text-align: center;
   margin-top: -40px;
+  /* padding-left: 10%; */
 }
 
 .readmore {
