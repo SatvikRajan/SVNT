@@ -10,8 +10,8 @@ export default function WhyChooseUs() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      offset: 200 // Offset (in px) from the original trigger point
+      duration: 1000,
+      offset: 200
     });
   }, []);
 
@@ -85,7 +85,7 @@ export default function WhyChooseUs() {
             ></span>
           </p>
         </div>
-        <div data-aos='fade-right' style={{ marginLeft: '4.6rem', marginRight: '6rem', fontSize: '24px', lineHeight: '50px' }}>
+        <div data-aos='fade-up' style={{ marginLeft: '4.6rem', marginRight: '6rem', fontSize: '24px', lineHeight: '50px' }}>
           {details[currentDetail]}
         </div>
       </div>

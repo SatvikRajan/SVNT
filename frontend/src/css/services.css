@@ -1,0 +1,25 @@
+.service-bg{
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+    margin-top: 1rem;
+}
+
+.service-head{
+    font-size: 42px;
+    text-align: center;
+}
+
+.service-name{
+    justify-content: center;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+}
+.service-name p{
+    margin-bottom: 0;
+}
+
+.services-in{
+    margin: 5rem;
+}
