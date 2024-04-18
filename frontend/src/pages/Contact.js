@@ -4,6 +4,7 @@ import contact from '../images/ContactUs/contact-hand.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../css/contact.css'
+import axios from 'axios';
 const Contact = () => {
   useEffect(() => {
     AOS.init({
@@ -13,6 +14,34 @@ const Contact = () => {
     });
   }, []);
 
+  const [senderName, setSenderName] = useState('');
+  const [senderEmail, setSenderEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [text, setText] = useState('');
+  const [message, setMessage] = useState('');
+  const [phoneNumber,setPhoneNumber] = useState('')
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:8080/send-email', {
+        senderName,
+        senderEmail,
+        subject,
+        text,
+        phoneNumber
+      });
+      setMessage(response.data);
+      setSenderName('');
+      setSenderEmail('');
+      setSubject('');
+      setText('');
+      setPhoneNumber('')
+    } catch (error) {
+      setMessage('Error sending email');
+      console.error(error);
+    }
+  };
 
   return (
     <div className="contact-container">
@@ -35,32 +64,36 @@ const Contact = () => {
           </ul>
         </div>
         <div className="form-box" data-aos="fade-left">
-          <form action="">
-            <label for="inp" class="inp">
-              <input type="text" id="inp" placeholder="&nbsp;" />
+          <form onSubmit={handleSubmit}>
+            <label for="name" class="inp">
+              <input type="text" id="name" value={senderName}
+                onChange={(e) => setSenderName(e.target.value)} placeholder="&nbsp;" />
               <span class="label">Name</span>
               <span class="focus-bg"></span>
             </label>
-            <div className="d-flex" style={{ gap: '15px' }}>
-              <label for="inp" class="inp">
-                <input type="text" id="inp" placeholder="&nbsp;" />
+            <div class="d-flex" style={{ gap: '15px' }}>
+              <label for="email" class="inp">
+                <input type="text" id="email"  value={senderEmail}
+                  onChange={(e) => setSenderEmail(e.target.value)} placeholder="&nbsp;" />
                 <span class="label">Email</span>
                 <span class="focus-bg"></span>
               </label>
-              <label for="inp" class="inp ">
-                <input type="text" id="inp" placeholder="&nbsp;" />
+              <label for="phone" class="inp ">
+                <input type="text" id="phone" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}  placeholder="&nbsp;" />
                 <span class="label"> Phone Number</span>
                 <span class="focus-bg"></span>
               </label>
             </div>
-            <label for="inp" class="inp">
-              <input type="text" id="inp" placeholder="&nbsp;" />
+            <label for="subject" class="inp">
+              <input type="text" id="subject"  value={subject}
+                onChange={(e) => setSubject(e.target.value)} placeholder="&nbsp;" />
               <span class="label">Subject</span>
               <span class="focus-bg"></span>
             </label>
 
             <label for="inp" class="inp">
-              <input type="text" id="inp" placeholder="&nbsp;" />
+              <input type="text" id="inp" value={text}
+              onChange={(e) => setText(e.target.value)} placeholder="&nbsp;" />
               <span class="label">Message</span>
               <span class="focus-bg"></span>
             </label>
@@ -70,6 +103,7 @@ const Contact = () => {
               </button>
             </div>
           </form>
+          {message && <p>{message}</p>}
         </div>
       </div>
       <div className="location container">
