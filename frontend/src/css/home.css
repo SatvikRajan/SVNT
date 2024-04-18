@@ -1,3 +1,16 @@
+.logo-brand{
+    z-index: 10;
+    position: absolute;
+    display: block;
+    top: 108px;
+    left: 207px;
+}
+
+.logo-brand img{
+    width: 350px;
+    height: 42px;
+}
+
 #carousel-control-prev{
     left: 30px;
     width: 10%;

@@ -1,31 +1,46 @@
 import React, { useState } from 'react';
-import companyLogo from '../images/svnt-logo';
-import logo1 from '../images/Home/wwdb-1';
-import logo2 from '../images/Home/wwdb-2.png';
-import logo3 from '../images/Home/wwdb-3.png';
-import logo4 from '../images/Home/wwdb-4.png';
-import logo5 from '../images/Home/wwdb-5';
-import logo6 from '../images/Home/wwdb-6';
-import logo7 from '../images/Home/wwdb-7';
-import logo8 from '../images/Home/wwdb-8';
+import companyLogo from '../images/Home/companyLogo.svg';
+import logo3 from '../images/Home/surveillance-and-safety.svg';
+import logo1 from '../images/Home/IP-surveillance.svg';
+import logo2 from '../images/Home/energy.svg';
+import logo0 from '../images/Home/IP-network.svg';
+import logo4 from '../images/Home/security-and-mgmt.svg';
+import logo7 from '../images/Home/integration.svg';
+import logo5 from '../images/Home/storage.svg';
+import logo6 from '../images/Home/audio-visual.svg';
 import '../css/wwdb.css'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+const ArrowRightIcon = ({ className }) => {
+  return <FontAwesomeIcon icon={faArrowRight} className={className} />;
+};
+
 export default function WhyWeDoBest() {
 
+
+
+
+  
     const [showDetails, setShowDetails] = useState(false);
     const [selectedDetails, setSelectedDetails] = useState('');
 
-    const names = [
-        'IP Surveillance Solution',
-        'IP Networking Solution',
-        ' Integration Solutions',
-        'Audio-Visual Solutions',
-        'Storage',
-        'Security & Management Services',
-        'Surveillance and Safety Solutions',
-        'Energy Solutions',
-      ];
+  const names = [
+    'IP Networking Solution',
+      
+      'IP Surveillance Solution',
+      'Energy Solutions',
+      'Surveillance and Safety Solutions',
+    'Security & Management Services',
+    'Storage',
+    'Audio-Visual Solutions',  
+      'Integration Solutions',
+      
+        
+  ];
     
-      const data = [
+      const details = [
         'IP camera systems revolutionize security by providing customizable video surveillance accessible from any location. They seamlessly integrate with existing systems, enhancing their effectiveness and ensuring comprehensive coverage for heightened security measures.',
         'IP networks enable smooth and continuous device interaction, essential for both small-scale home networks and extensive corporate setups, ensuring seamless integration and uninterrupted data transmission.',
         'Optimize efficiency with our integration solutions, merging systems for seamless communication and collaboration. From system to machine and telephone integration, we simplify processes, reduce complexity, and automate tasks for maximum productivity and cost-effectiveness.',
@@ -35,31 +50,37 @@ export default function WhyWeDoBest() {
         'Our systems provide comprehensive monitoring and detection capabilities, ensuring prompt response to potential threats. From runway monitoring to fire alarm systems, we prioritize safety in any environment.',
         'Empower your organization with efficient energy solutions. Our innovative technologies optimize energy usage, reduce costs, and minimize environmental impact. From green power to UPS solutions, we offer custom plans for sustainable energy management and lasting savings.',
   ];
-  
-  function fade(name, details) {
-    const div = document.getElementById("wwdb-details");
-    if (div.style.display === "block") {
-      div.style.animation = "fade-out 1s forwards";
-      div.style.display = "hidden";
-      // div.style.transitionDelay = "2s";
-      setTimeout(() => {
-        div.style.display = "none";
-      }, 1000);
-      // setShowDetails(false);
-    } else{
-      div.style.display = "block";
-      div.style.animation = "fade-in 1s forwards";
-      setShowDetails(details)
-      setSelectedDetails(name);
-      
-    }
+
+  // animation ------------------
+  const [serviceClicked, setServiceClicked] = useState(false);
+  function handleServiceClicked() {
+    setServiceClicked(!serviceClicked)
   }
+  
+  // function fade(name, details) {
+  //   const div = document.getElementById("wwdb-details");
+  //   if (div.style.display === "block") {
+  //     div.style.animation = "fade-out 1s forwards";
+  //     div.style.display = "hidden";
+  //     // div.style.transitionDelay = "2s";
+  //     setTimeout(() => {
+  //       div.style.display = "none";
+  //     }, 1000);
+  //     // setShowDetails(false);
+  //   } else{
+  //     div.style.display = "block";
+  //     div.style.animation = "fade-in 1s forwards";
+  //     setShowDetails(details)
+  //     setSelectedDetails(name);
+      
+  //   }
+  // }
 
 
   return (
     <div className="what-we-do-best">
       {/* {showDetails && ( */}
-      <div id='wwdb-details' onClick={() => fade('','')}>
+      {/* <div id='wwdb-details' onClick={() => fade('','')}>
         <div className="wwdb-details animate__fadeIn" >
           <p className="wwdb-head" >What We Do Best</p>
           <div className="details-wrapper">
@@ -74,14 +95,18 @@ export default function WhyWeDoBest() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* )} */}
-      </div>
+      {/* </div> */}
+
+      
+
       <div className="wwdb-container">
         <p className="wwdb-head">What We Do Best</p>
 
+        <div className='wwdb-menu-wrapper'>
         <div className="wwdb-menu">
-          <div className="m1">
+          {/* <div className="m1">
             <p
               className="p1 animate__zoomIn animate__dalay-2s"
               onClick={() => {
@@ -169,13 +194,110 @@ export default function WhyWeDoBest() {
             >
               {names[5]}
             </p>
+          </div> */}
+
+          <div className='mainLogo'>
+            <img src={ companyLogo} />
+          </div>
+
+          <div className='m0' onClick={handleServiceClicked}>
+            <p>{names[0]}</p>
+            <img className='logoImg' src={logo0} />
+          </div>
+
+          <div className='m1'>
+            <p>{names[1]}</p>
+          <img className='logoImg' src={logo1} />
+          </div>
+            
+          <div className='m2'>
+            <p>{names[2]}</p>
+            <img className='logoImg' src={logo2} />
+          </div>
+
+          <div className='m3'>
+            <p>{names[3]}</p>
+            <img className='logoImg' src={logo3} />
+            </div>
+          
+          <div className='m4'>
+            <img className='logoImg' src={logo4} />
+            <p>{names[4]}</p>
+          </div>
+          
+          <div className='m5'>
+          <img className='logoImg' src={logo5} />
+            <p>{names[5]}</p>
+          </div>
+          
+          <div className='m6'>
+          <img className='logoImg' src={logo6} />
+            <p>{names[6]}</p>
+          </div>
+
+          <div className='m7'>
+            <img className='logoImg' src={logo7} />
+            <p>{names[7]}</p>
+          </div>
+
+          
           </div>
         </div>
 
-        <div className="wwdb-learn-more fs-3">
-          <a href="/services" style={{textAlign: '-webkit-right', filter: 'invert()', fontWeight: '200'}}><p className="readmore text-white">Learn more on Services</p></a> 
+        <div className="wwdb-learn-more">
+          <a href="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more Services
+     <ArrowRightIcon className="fas"/>
+          </span></p></a> 
         </div>
+
+
+      <div className='service-info'>
+      
+      <p>
+        <span>{details[0]}</span>
+      </p>
+
       </div>
+    </div>
+
+    
+
+      {/* <div className='wwdb-containerDetails'>
+        <div className='details-container'>
+          <p className="wwdb-details-head">What We Do Best</p>
+          <div className='details'>
+            
+            <div className='service-head'>
+              <p>{names[0]}</p>
+              <img src={logo0} />
+            </div>
+
+            <div className='details-mainLogo'>
+            <img src={ companyLogo} />
+            </div>
+
+            <div className='service-info'>
+              <p>
+                <span>{details[0]}</span>
+              </p>
+
+            </div>
+
+            <div>
+
+            </div>
+          </div>
+        </div>
+        
+        <div className="wwdb-read-more">
+          <a href="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Read more
+     <ArrowRightIcon className="fas"/>
+          </span></p>
+          </a> 
+
+        </div>
+      </div> */}
+
     </div>
   );
 }

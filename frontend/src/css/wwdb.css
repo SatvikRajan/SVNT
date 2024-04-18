@@ -1,35 +1,281 @@
 .what-we-do-best {
-  margin: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0077ff;
+  
+}
+/* 
+.wwdb-containerDetails{
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  opacity: 89%;
+  top: 0;
+  left: 0;
+}
+
+.details-container{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.details-container p, div{
+  position: absolute;
+}
+
+.wwdb-details-head{
+  font-size: 42px;
+  top: 129px;
+  left: 113px;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  color: white;
+}
+
+.service-head{
+  top: 273px;
+  left: 394px;
+}
+
+.details-mainLogo{
+  width: 70px;
+  height: 111px;
+  top: 403px;
+  left: 866px;
+}
+ */
+.service-info{
+  text-align: left;
+  position: absolute;
+  width: 665px;
+  height: 265px;
+  top: 256px;
+  left: 1076px;
+  z-index: -1;
+  /* opacity: 0; */
+}
+
+.service-info p{
+  font-size: 20px;
+  line-height: 50px;
+  letter-spacing: 5%;
+}
+
+/* 
+.wwdb-read-more{
+  position: absolute;
+  top: 552px;
+  left: 1225px;
+  width: fit-content;
+}
+
+ */
+
+.wwdb-container {
+
+  width: 1724px;
+  /* margin-top: 20%; */
+  height: 780px;
   border-radius: 100px;
-  height: 100%;
-  /* background-color: #0077ff; */
+  position: relative;
   background-image: url("../images/Home/wbg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.wwdb-container {
-  width: 100%;
-  height: 100%;
+  /* padding-top: 10%; */
   /* background-color: #5023aa; */
+
+  /* opacity: 0; */
 }
 
 .wwdb-head {
-  /* background-color: #5023aa; */
+  background-color: #a78cdc;
   font-size: 42px;
-  padding-top: 4%;
-  padding-left: 10%;
+  position: absolute;
+  top: 89px;
+  left: 113px;
   margin: 0;
+  padding: 0;
+  width: fit-content;
+  
 }
 
-.wwdb-menu {
-  /* background-color: #5c5bdf; */
-  width: 100%;
-  /* height: 100%; */
+/* newwwwwww */
+/* .wwdb-menu-wrapper{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 60vh;
+background-color: #57555b;
+} */
+
+.wwdb-menu{
+  /* position: relative; */
+  /* height: 60vh; */
+  /* background-color: rgb(152, 120, 88); */
+}
+
+.wwdb-menu div{
+  position: absolute;
+  background-color: aliceblue;
+  width: fit-content;
+  
+}
+
+.mainLogo{
+  left: 825px;
+  top: 348px;
+  width: 70px;
+  height: 111px;
+}
+
+.wwdb-menu div p{
+  font-size: 28px;
+  font-family: 'poppins';
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  background-color: aquamarine;
+}
+
+.logoImg{
+  width: 60px;
+  height: 60px;
+}
+
+.m0{
+  text-align: center;
+  top: 135px;
+  left: 709px;
+}
+
+.m1{
+  left: 336px;
+  top: 259px;
+}
+
+.m2{
+  left: 409px;
+  top: 379px;
+}
+
+.m3{
+  left: 193px;
+  top: 490px;
+}
+
+.m4{
+  text-align: center;
+  top: 565px;
+  left: 642px;
+}
+
+.m5{
+  top: 490px;
+  left: 985px;
+}
+
+.m6{
+  top: 379px;
+  left: 1034px;
+}
+
+.m7{
+  top: 267px;
+  left: 985px;
+}
+
+.m1, .m2, .m3, .m5, .m6, .m7{
   display: flex;
   align-items: center;
-  padding-top: 5%;
-  /* justify-content: center; */
+}
+
+.m0, .m1, .m2, .m3, .m4, .m5, .m6, .m7:hover{
+  cursor: pointer;
+}
+
+.wwdb-learn-more{
+  position: absolute;
+  top: 673px;
+  left: 1126px;
+  width: fit-content;
+  /* background-color: aqua; */
+}
+
+.wwdb-learn-more .btn-arrow {
+  position: relative;
+  transition: background-color 300ms ease-out;
+}
+
+.wwdb-learn-more .btn{
+    padding: .5rem 0 .5rem 8rem;
+    
+    height: 60px;
+    text-align: right;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    border-radius: 0;
+}
+
+.wwdb-learn-more .btn-arrow span {
+  display: inline-block;
+  position: relative;
+  transition: all 300ms ease-out;
+  will-change: transform;
+}
+
+.learnMore{
+  font-size: 30px;
+  /* width: 470px; */
+  background-color: #0077ff;
+  margin-right: 0;
+}
+
+.wwdb-learn-more .btn-arrow :hover{
+  transform: translate3d(-1rem, 0, 0);
+}
+
+.wwdb-learn-more .btn-arrow .fas{
+  position: absolute;
+  width: 1.1em;
+  right: 0px;
+  right: 0rem;
+  opacity: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 300ms ease-out;
+  will-change: right, opacity;
+}
+
+.wwdb-learn-more .btn-arrow .fas :hover{
+  opacity: 1;
+  right: -2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  */
+
+/* .wwdb-menu {
+  background-color: #5c5bdf;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 0%;
   flex-direction: column;
 }
 
@@ -70,15 +316,15 @@
 
 .wwdb-menu .m3 {
   padding: 0% 15% 0% 20%;
-}
+} */
 
-.wwdb-menu div {
-  /* border: 2px solid green; */
+/* .wwdb-menu div {
+  border: 2px solid green;
   width: 100%;
-}
+} */
 
-.wwdb-menu p {
-  /* border: 2px solid black; */
+/* .wwdb-menu p {
+  
   width: fit-content;
   margin: 0;
   cursor: pointer;
@@ -94,33 +340,29 @@
 .wwdb-menu .m1 img,
 .m5 img {
   width: 17%;
-}
+} */
 
-.wwdb-learn-more {
+/* .wwdb-learn-more {
   width: 100%;
   font-size: 18px;
-  /* color: white; */
-  /* background-color: #125645; */
   padding-top: 1%;
   text-align: right;
   padding-right: 5%;
 }
 .wwdb-learn-more p {
-  /* color: white; */
   margin: 0;
 }
 
 .wwdb-learn-more div {
   width: 30%;
   margin-left: 70%;
-}
+} */
 
 /* animation on wwdb page */
-.wwdb-menu p:hover,
+/* .wwdb-menu p:hover,
 img:hover {
   transition: 1s;
   color: white;
-  /* box-shadow: 0px 3px 4px 4px #BF9C33; */
   text-shadow: 0 0 10px #000000;
 }
 
@@ -129,17 +371,14 @@ img:hover {
   background-color: rgba(0, 0, 0, 0.9);
   width: 100vw;
   height: 100vh;
-}
-.wwdb-details .wwdb-head {
+} */
+/* .wwdb-details .wwdb-head {
   color: white;
   cursor: pointer;
-  /* transition: 0.2s ease-out; */
 }
 
 .wwdb-details .details-wrapper {
   color: white;
-  /* border: 2px solid white; */
-  /* padding-left: 15%; */
   padding-top: 5%;
   width: 100vw;
   display: grid;
@@ -159,43 +398,39 @@ img:hover {
   font-size: 23px;
   border-bottom: 1px solid white;
   margin-left: auto;
-  /* padding-right: 18%; */
   width: fit-content;
   padding-top: 2%;
 }
 
 .company-logo {
-  /* position: absolute; */
   z-index: 4;
-}
+} */
 
-#wwdb-details {
+/* #wwdb-details {
   position: absolute;
   z-index: 3;
   width: 100%;
   height: 100vh;
   display: none;
   opacity: 0%;
-}
+} */
 
 /*the fade animations*/
 
-@keyframes fade-out {
+/* @keyframes fade-out {
   from {
     opacity: 100%;
   }
   to {
     opacity: 0%;
-    /* overlay: auto; */
-    /* display: none; */
   }
-}
+} */
 
-@keyframes fade-in {
+/* @keyframes fade-in {
   from {
     opacity: 0%;
   }
   to {
     opacity: 100%;
   }
-}
+} */

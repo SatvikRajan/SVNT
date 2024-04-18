@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,7 +12,7 @@
     "aos": "^2.3.4",
     "axios": "^1.6.7",
     "bootstrap": "^5.3.3",
-    "framer-motion": "^11.0.14",
+    "framer-motion": "^11.1.5",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "react": "^18.2.0",
