@@ -22,9 +22,7 @@ module.exports.register = async (req,res,next) =>{
 module.exports.login = async (req,res,next) =>{
     try {
         const { email, password } = req.body;
-        console.log(email);
-        console.log(password);
-        const user = await User.findOne({ email }).timeout(40000);
+        const user = await User.findOne({ email });
         if (!user) return res.json({ msg: "Incorrect Email or Password", status: false });
         if (password !== user.password) {
             return res.json({ msg: "Incorrect Email or Password", status: false });

@@ -11,7 +11,7 @@
 }
 
 .service-name{
-    justify-content: center;
+    justify-content: start;
     width: 50vw;
     display: flex;
     align-items: center;
@@ -21,5 +21,38 @@
 }
 
 .services-in{
-    margin: 5rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 10rem;
+}
+
+.left{
+    background-color: white;
+    margin-right: 2rem;
+    background-image: url('../images/Home/arrowleft.png');
+    background-size: contain;
+    /* height: 3rem; */
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+.right{
+    background-color: white;
+    margin-left: 2rem;
+    background-image: url('../images/Home/arrowright.png');
+    background-size: contain;
+    /* height: 3rem; */
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+.service-text{
+    font-size: 42px;
+    color: white;
+    font-weight: 500;
+    position: absolute;
+    top: 30rem;
+    left: 10rem;
 }

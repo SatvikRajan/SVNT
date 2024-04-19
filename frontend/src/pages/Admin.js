@@ -13,7 +13,7 @@ function Admin() {
   })
   useEffect(() => {
     if (localStorage.getItem('app-user')) {
-      navigate('/admin/page')
+      navigate('/admin-main')
     }
   }, [navigate])
 
@@ -29,7 +29,7 @@ function Admin() {
       }
       if (data.status === true) {
         localStorage.setItem('app-user', JSON.stringify(data.user))
-        navigate("/admin/page");
+        navigate("/admin-main");
       }
     }
   }

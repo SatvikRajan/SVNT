@@ -16,32 +16,33 @@ function Carosuel1() {
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active" >
-          <img src={image4} class="d-block w-100" style={{backgroundSize: 'contain'}} alt="..."/>
-            <div class="carousel-caption d-none d-md-block">
-              <h1>First slide label</h1>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
+          <img src={image4} class="d-block w-100" style={{ backgroundSize: 'contain' }} alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            {/* <h1>First slide label</h1> */}
+            <p>Nestled in the Heart of Hyderabad , where Innovation Meets Culture</p>
+          </div>
         </div>
         <div class="carousel-item" >
-          <img src={image2} class="d-block w-100" alt="..."/>
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Second slide label</h1>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
+          <img src={image2} class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            {/* <h1>Second slide label</h1> */}
+            <p >Sky High! <br/>
+              Discover our vital contribution to ensuring security at Kempagowda International Airport.</p>
+          </div>
         </div>
         <div class="carousel-item" >
-          <img src={image3} class="d-block w-100" alt="..."/>
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Third slide label</h1>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
+          <img src={image3} class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            {/* <h1>Third slide label</h1> */}
+            <p>Behind the Scenes: Our Role in Safeguarding ITC Royal Bengal</p>
+          </div>
         </div>
         <div class="carousel-item" >
-          <img src={image3} class="d-block w-100" alt="..."/>
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Third slide label</h1>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
+          <img src={image3} class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            {/* <h1>Third slide label</h1> */}
+            <p>Nestled in the Heart of Hyderabad, where Innovation Meets Culture</p>
+          </div>
         </div>
       </div>
       <button class="carousel-control-prev" id='carousel-control-prev' type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">

@@ -7,6 +7,10 @@
   overflow: hidden;
 }
 
+.carousel-item{
+  padding: 0 20px;
+}
+
 .carousel-caption {
   text-align: start !important;
   bottom: 7.25rem !important;
@@ -28,7 +32,7 @@
 }
 
 .carousel-indicators .active {
-  background-color: #251741 !important;
+  background-color: #5B09FF !important;
 }
 /* 
 .carousel-item.active {
@@ -412,7 +416,6 @@ html, body {
 
 .carousel-inner {
   margin-top: 3rem;
-  padding: 1em;
 }
 
 .carousel-item5 {

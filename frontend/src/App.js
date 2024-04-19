@@ -22,7 +22,7 @@ function App() {
         <Route path="about" element={<MainLayout><About /></MainLayout>} />
         <Route path="services" element={<MainLayout><Services /></MainLayout>} />
         <Route path="admin/*" element={<Admin />} />
-        <Route path="admin/page" element={<AdminPage />} />
+        <Route path="admin-main" element={<AdminPage />} />
       </Routes>
     </BrowserRouter>
   );
