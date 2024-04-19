@@ -19,17 +19,18 @@ import img17 from '../images/Home/CAIRN.svg'
 import img18 from '../images/Home/Brigade.svg'
 
 
-
 export default function Clientele() {
+
   return (
     <div className="trusted">
       <div className="trustedtext">
-        <h1>Clientele</h1>
+
+          <h1 >Clientele</h1>
         <p>
           Our partners are who make us who we are. We firmly believe that people are our greatest asset and through
           collaboration and exchange of ideas, the best ideas are brought to life. Our partners play a crucial role in
           helping us deliver exceptional solutions and services to our clients that push the boundary further. 
-        </p>
+          </p>
       </div>
       {/* <div class="cont">
         <div class="caro">

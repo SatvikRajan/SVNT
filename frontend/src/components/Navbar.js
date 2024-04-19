@@ -9,6 +9,13 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState(null);
 
     const [scrollTop, setScrollTop] = useState(0);
+    // const [addDelay, setAddDelayed] = useState(false);
+ 
+    // const handleClick = () => {
+    //     setTimeout(() => {
+    //         setAddDelayed(true);
+    //     }, 1000);
+    // };
     useEffect(() => {
         const handleScroll = () => {
             setScrollTop(window.scrollY);
@@ -16,15 +23,17 @@ const Navbar = () => {
             const navItems = document.getElementById("navbarSupportedContent");
             const navLinks = document.getElementById('nav-links')
             if (navElement) {
-                if (scrollTop >= 100) {
+                if (scrollTop > 70) {
                     navElement.classList.add('scrolled-nav');
                     navItems.classList.add('collapse','justify-content-end')
-                    navLinks.classList.remove('navbar-collapse','collapse','justify-content-between')
+                    navLinks.classList.remove('navbar-collapse', 'collapse', 'justify-content-between')
+                    navItems.classList.add('navLinksPosition')
                     // navItems.classList.add('justify-content-end')
                 } else {
                     navElement.classList.remove('scrolled-nav')
                     navItems.classList.remove('collapse','justify-content-end')
-                    navLinks.classList.add('navbar-collapse','collapse','justify-content-between')
+                    navLinks.classList.add('navbar-collapse', 'collapse', 'justify-content-between')
+                    navItems.classList.add('navLinksPosition')
                     // navItems.classList.remove('justify-content-')
                     // navItems.classList.add('justify-content-center');
                 }
@@ -59,7 +68,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className={`${scrollTop==0?'scrolled-top':''}`}>
+        <div className={`${scrollTop<=70?'scrolled-top':''}`}>
             <nav className="navbar navbar-expand-lg " id='navbar'>
                 <div className="container">
                     <Link className="navbar-brand" to="/">

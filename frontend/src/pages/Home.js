@@ -11,15 +11,20 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import WhyWeDoBest from '../components/WhyWeDoBest';
 import Clientele from '../components/Clientele';
 import LastContent from '../components/LastContent';
+import { Link, useLocation } from 'react-router-dom';
+import Logo from '../images/svnt-logo-white.svg';
 import '../css/home.css'
-
 export default function Home() {
 
 
   return (
     <div className="home">
       {/* Carousel */}
+      
       <div class="carousel1">
+        <Link className="logo-brand" to="/">
+          <img src={Logo} alt="SVNT Tech" height={30} />
+        </Link>
         <Carosuel1/>
       </div>
 

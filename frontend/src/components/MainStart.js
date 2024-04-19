@@ -75,8 +75,8 @@ export default function MainStart() {
           <p className="x">Projects</p>
         </div>
       </div>
-      <div className="lorem container d-flex pt-5 text-light">
-        <p style={{ width: '60%', lineHeight: '40px', paddingLeft:'5%'}}>
+      <div className="videoText lorem container d-flex pt-5 text-light">
+        <p className='video-info'>
           Committed to integrating pioneering technology into quality service, SVNT Infotech is a premier provider of
           cutting-edge networking and communication solutions for evolving needs. With unwavering determination, we
           strive to lead in delivering innovative solutions globally.
