@@ -40,7 +40,7 @@ export default function WwdbDetails({click, index, setClick, topPos, leftPos}) {
         'Energy Solutions',
         'Surveillance and Safety Solutions',
         'Security & Management Services',
-        'Storage',
+        'Storage and Archives',
         'Audio-Visual Solutions',  
         'Integration Solutions',
           
@@ -108,7 +108,8 @@ export default function WwdbDetails({click, index, setClick, topPos, leftPos}) {
             borderRadius: '100px',
                 zIndex: '100',
             cursor: 'pointer'
-        }}
+            }}
+            onClick={handleClickOutside}
             initial={{ opacity: 0 }}
             animate={{ opacity: '1' , zIndex: 10}}
             exit={{ opacity: 0, zIndex: -1, transition: { duration: 0.5, delay:0.4} }}
@@ -145,15 +146,17 @@ export default function WwdbDetails({click, index, setClick, topPos, leftPos}) {
                         justifyContent: 'center',
                         
                         top: '89px',
-                        left: '113px',
+                        left: '36%',
                     }}
 
-                    transition={{duration:0.5}}
+                    transition={{duration:0.8}}
                 >
+                    <motion.img                         
+                        src={logo[index]}></motion.img>
                     <motion.p
                         style={{
                             // fontSize: '42px',
-                            fontSize: '28px',
+                            fontSize: '42px',
                             fontFamily: 'poppins',
                             margin: 0,
                             padding: 0,
@@ -161,23 +164,23 @@ export default function WwdbDetails({click, index, setClick, topPos, leftPos}) {
                             color: 'white'
                         }}
                     >{names[index]}</motion.p>
-                    <motion.img src={logo[index]}></motion.img>
+                    
                 </motion.div>
 
                 <motion.div
                     style={{
                         position: 'absolute',
-                        left: '291px',
+                        left: '178px',
                         width: '436px',
                         height: '267px',
                         borderRadius: '20px',
                         zIndex: '101'
                     }}
                     initial={{ top: '300px', opacity: 0 }}
-                    animate={{ top: '286px', opacity: 1 }}
-                    transition={{ delay: 0.3, duration:0.5  }}
+                    animate={{ top: '208px', opacity: 1 }}
+                    transition={{ delay: 0.3, duration:0.8  }}
                 >
-                    <motion.img
+                    <motion.img style={{width: '600px', height: '400px'}}
                         src={images[index]}
                         
                     >
@@ -186,15 +189,14 @@ export default function WwdbDetails({click, index, setClick, topPos, leftPos}) {
 
                 <motion.div
                     initial={{ opacity: 0, top: '260px' }}
-                    animate={{ opacity: 1, top: '286px' }}
-                    transition={{ delay: 0.3, duration:0.5  }}
+                    animate={{ opacity: 1, top: '270px' }}
+                    transition={{ delay: 0.3, duration:0.8  }}
                     style={{
                         textAlign: 'left',
                         position: 'absolute',
                         width: '559px',
                         height: '150px',
-                        top: '286px',
-                        left: '1018px',
+                        left: '858px',
                         color: 'white'
 
                         }}>
@@ -216,8 +218,8 @@ export default function WwdbDetails({click, index, setClick, topPos, leftPos}) {
 
                 <motion.div className="wwdb-learn-more"
                     initial={{ opacity:'0',  top: '673px', left: '1126px' }}
-                    animate={{  opacity:'1',top: '508px', left: '1108px', width: '471px' }}
-                    transition={{ delay: 0.3, duration:0.5 }}
+                    animate={{  opacity:'1',top: '536px', left: '1140px', width: '240px' }}
+                    transition={{ delay: 0.3, duration:0.8 }}
                 >
           <motion.a href="/services" class="btn btn-primary btn-arrow"><motion.p className='learnMore' style={{color:'white'}}><motion.span>Read More
             <ArrowRightIcon className="fas"/>

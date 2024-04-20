@@ -29,7 +29,7 @@ export default function WhyWeDoBest() {
       'Energy Solutions',
       'Surveillance and Safety Solutions',
       'Security & Management Services',
-      'Storage',
+      'Storage and Archives ',
       'Audio-Visual Solutions',  
       'Integration Solutions',    
   ];

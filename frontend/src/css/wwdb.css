@@ -1,4 +1,5 @@
 .what-we-do-best {
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,13 +70,13 @@
  */
 
 .wwdb-container {
-
+  color: white;
   width: 1724px;
   /* margin-top: 20%; */
   height: 780px;
   border-radius: 100px;
   position: relative;
-  background-image: url("../images/Home/wbg.jpg");
+  background-image: url("../images/Home/wbg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   /* padding-top: 10%; */
@@ -134,38 +135,38 @@
 }
 
 .m1{
-  left: 336px;
-  top: 259px;
+  left: 349px;
+  top: 238px;
 }
 
 .m2{
-  left: 409px;
-  top: 379px;
+  left: 407px;
+  top: 360px;
 }
 
 .m3{
-  left: 193px;
-  top: 490px;
+  left: 206px;
+  top: 483px;
 }
 
 .m4{
   text-align: center;
-  top: 565px;
-  left: 642px;
+  top: 567px;
+  left: 640px;
 }
 
 .m5{
-  top: 490px;
+  top: 484px;
   left: 985px;
 }
 
 .m6{
-  top: 379px;
+  top: 360px;
   left: 1034px;
 }
 
 .m7{
-  top: 267px;
+  top: 238px;
   left: 985px;
 }
 
@@ -203,6 +204,7 @@
 }
 
 .wwdb-learn-more .btn-arrow span{
+  color: white;
   display: inline-block;
   position: relative;
   transition: all 300ms ease-out;
