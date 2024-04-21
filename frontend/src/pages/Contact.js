@@ -5,6 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../css/contact.css'
 import axios from 'axios';
+
 const Contact = () => {
   useEffect(() => {
     AOS.init({
@@ -19,7 +20,7 @@ const Contact = () => {
   const [subject, setSubject] = useState('');
   const [text, setText] = useState('');
   const [message, setMessage] = useState('');
-  const [phoneNumber,setPhoneNumber] = useState('')
+  const [phoneNumber, setPhoneNumber] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,21 +48,19 @@ const Contact = () => {
     <div className="contact-container">
       <div className="contact-image-container">
         <img src={contact} className="contact-image" alt="" />
-        <div className="text">How may we help you?</div>
+        <div className="text">Need assistance?<br/>
+          How may we help you?</div>
       </div>
 
       <div className="form-body " >
         <div className="write" data-aos="fade-right">
-          <h1 style={{ color: '#0E1513', marginBottom: '22px', fontSize: '30px' }}>Company Timeline</h1>
+          <h1 className='write-h1' style={{ color: '#0E1513', marginBottom: '22px', fontSize: '42px' }}>Contact Us</h1>
           <p className="write1">
             Feel free to contact us for inquiries,
             <br /> feedback, or just a quick hello !
+            {/* Fix this */}
           </p>
-          <ul style={{ lineHeight: '38px', fontSize: '17px' }}>
-            <li>Increase your revenue</li>
-            <li>Find the right solution for you</li>
-            <li>Learn about our pricing</li>
-          </ul>
+          <p className='write1'>Gain deeper insight into our services</p>
         </div>
         <div className="form-box" data-aos="fade-left">
           <form onSubmit={handleSubmit}>
@@ -71,21 +70,21 @@ const Contact = () => {
               <span class="label">Name</span>
               <span class="focus-bg"></span>
             </label>
-            <div class="d-flex" style={{ gap: '15px' }}>
+            <div class="d-flex email" style={{ gap: '15px' }}>
               <label for="email" class="inp">
-                <input type="text" id="email"  value={senderEmail}
+                <input type="text" id="email" value={senderEmail}
                   onChange={(e) => setSenderEmail(e.target.value)} placeholder="&nbsp;" />
                 <span class="label">Email</span>
                 <span class="focus-bg"></span>
               </label>
               <label for="phone" class="inp ">
-                <input type="text" id="phone" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}  placeholder="&nbsp;" />
+                <input type="text" id="phone" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="&nbsp;" />
                 <span class="label"> Phone Number</span>
                 <span class="focus-bg"></span>
               </label>
             </div>
             <label for="subject" class="inp">
-              <input type="text" id="subject"  value={subject}
+              <input type="text" id="subject" value={subject}
                 onChange={(e) => setSubject(e.target.value)} placeholder="&nbsp;" />
               <span class="label">Subject</span>
               <span class="focus-bg"></span>
@@ -93,7 +92,7 @@ const Contact = () => {
 
             <label for="inp" class="inp">
               <input type="text" id="inp" value={text}
-              onChange={(e) => setText(e.target.value)} placeholder="&nbsp;" />
+                onChange={(e) => setText(e.target.value)} placeholder="&nbsp;" />
               <span class="label">Message</span>
               <span class="focus-bg"></span>
             </label>
@@ -106,16 +105,16 @@ const Contact = () => {
           {message && <p>{message}</p>}
         </div>
       </div>
-      <div className="location container">
+      <div className="location">
         <h1 className="location-name">Head Office</h1>
-        <div className="offices">
+        <div className="offices" data-aos='fade-up'>
           <LocationCard
             title="Hyderabad"
             address="12th Floor, DSL ABACUS IT PARK , UPPAL, Hyderabad, Telangana, India-500 039"
           />
         </div>
         <h1 className="location-name">Other Branches</h1>
-        <div className="offices1">
+        <div className="offices1" data-aos='fade-up'>
           <LocationCard
             title="Bangalore"
             address="D No: 114, 52/1 , 2nd Floor, Krishna Reddy Building , 24th Main Road , HSR Layout, 2nd Sector"

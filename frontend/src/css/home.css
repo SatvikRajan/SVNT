@@ -1,52 +1,101 @@
-.logo-brand{
-    z-index: 10;
-    position: absolute;
-    display: block;
-    top: 108px;
-    left: 207px;
+.logo-brand {
+  z-index: 10;
+  position: absolute;
+  display: block;
+  top: 108px;
+  left: 207px;
 }
 
-.logo-brand img{
-    width: 350px;
-    height: 42px;
+.logo-brand img {
+  width: 350px;
+  height: 42px;
 }
 
-#carousel-control-prev{
-    left: 30px;
-    width: 10%;
+#carousel-control-prev {
+  left: 30px;
+  width: 10%;
 }
-#carousel-control-next{
-    right: 30px;
-    width: 10%;
-}
-
-#carousel-control-prev-icon{
-    background-image: url('../images/arrowleft') !important;
-    background-repeat: no-repeat;
-    background-size: auto;
-    border-radius: 40px;
-    padding: 40px;
-    border: 1px solid white;
+#carousel-control-next {
+  right: 30px;
+  width: 10%;
 }
 
-#carousel-control-next-icon{
-    background-image: url('../images/arrowright.png') !important;
-    background-repeat: no-repeat;
-    background-size: auto;
-    border-radius: 40px;
-    padding: 40px;
-    border: 1px solid white;
+#carousel-control-prev-icon {
+  background-image: url("../images/arrowleft") !important;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-radius: 40px;
+  padding: 40px;
+  border: 1px solid white;
 }
 
-#carousel-control-prev-icon:hover, #carousel-control-next-icon:hover{
-    border: none;
-    background-color: black;
-    filter: invert();
+#carousel-control-next-icon {
+  background-image: url("../images/arrowright.png") !important;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-radius: 40px;
+  padding: 40px;
+  border: 1px solid white;
 }
 
-#carousel-button{
-    background-color: #E9E8EC;
-    width: 110px;
-    height: 13px;
-    border-radius: 16px;
+#carousel-control-prev-icon:hover,
+#carousel-control-next-icon:hover {
+  border: none;
+  background-color: black;
+  filter: invert();
+}
+
+#carousel-button {
+  background-color: #e9e8ec;
+  width: 110px;
+  height: 13px;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .carousel-indicators {
+    width: 33rem !important;
+    height: 3rem !important;
+    bottom: 1rem !important;
+    gap: 10px !important;
+  }
+  #carousel-button {
+    width: 70px !important;
+    height: 13px !important;
+  }
+  .carousel-caption {
+    font-size: 20px !important;
+    bottom: 5.25rem !important;
+    left: 17% !important;
+  }
+  #carousel-control-prev-icon {
+    padding: 27px;
+  }
+  #carousel-control-next-icon {
+    padding: 27px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .carousel-indicators {
+    width: 34.5rem;
+    height: 3rem;
+    bottom: 1rem !important;
+    gap: 10px !important;
+  }
+  #carousel-button {
+    width: 80px !important;
+    height: 15px !important;
+  }
+  .carousel-caption {
+    font-size: 28px;
+    bottom: 5.25rem !important;
+    left: 17% !important;
+  }
+  #carousel-control-prev-icon {
+    padding: 27px;
+  }
+  #carousel-control-next-icon {
+    padding: 27px;
+  }
 }

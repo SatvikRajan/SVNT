@@ -16,7 +16,12 @@ function CaseStudiesCarousel() {
       const carousel = carouselRef.current;
       if (carousel) {
         const carouselWidth = carousel.clientWidth;
-        const numberOfCardsPerSlide = 3; // Display three cards per slide
+        let numberOfCardsPerSlide = 1; // Default to 1 card per slide
+        if (carouselWidth >= 1024) {
+          numberOfCardsPerSlide = 3;
+        } else if (carouselWidth >= 768) {
+          numberOfCardsPerSlide = 2;
+        }
         const calculatedCardWidth = carouselWidth / numberOfCardsPerSlide;
         setCardWidth(calculatedCardWidth);
       }
@@ -57,7 +62,7 @@ function CaseStudiesCarousel() {
     }
   };
 
-  
+
   return (
     <div id="carouselExampleControls" className="carousel slide">
       <div className="carousel-inner" ref={carouselRef} style={{ scrollSnapType: 'x mandatory', display: 'flex' }}>
@@ -75,7 +80,7 @@ function CaseStudiesCarousel() {
             </div>
           </div>
         </div>
-        <div className="carousel-item5" >
+        <div className="carousel-item5" style={{ minWidth: cardWidth }}>
           <div className="card-1">
             <img src={ipn} alt="" />
             <div className="card-content">
@@ -103,7 +108,7 @@ function CaseStudiesCarousel() {
             </div>
           </div>
         </div>
-        <div className="carousel-item5" >
+        <div className="carousel-item5" style={{ minWidth: cardWidth }}>
           <div className="card-1">
             <img src={sms} alt="" />
             <div className="card-content">
@@ -118,7 +123,7 @@ function CaseStudiesCarousel() {
             </div>
           </div>
         </div>
-        <div className="carousel-item5" style={{minWidth: cardWidth }}>
+        <div className="carousel-item5" style={{ minWidth: cardWidth }}>
           <div className="card-1">
             <img src={is} alt="" />
             <div className="card-content">
@@ -133,7 +138,7 @@ function CaseStudiesCarousel() {
             </div>
           </div>
         </div>
-        <div className="carousel-item5" >
+        <div className="carousel-item5" style={{ minWidth: cardWidth }}>
           <div className="card-1">
             <img src={sss} alt="" />
             <div className="card-content">
@@ -148,7 +153,7 @@ function CaseStudiesCarousel() {
             </div>
           </div>
         </div>
-        <div className="carousel-item5" style={{flex: '0 0 auto', minWidth: cardWidth }}>
+        <div className="carousel-item5" style={{ flex: '0 0 auto', minWidth: cardWidth }}>
           <div className="card-1">
             <img src={avs} alt="" />
             <div className="card-content">

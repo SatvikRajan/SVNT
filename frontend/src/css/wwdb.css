@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   /* background-color: #0077ff; */
   
 }
@@ -79,7 +79,7 @@
 
 .wwdb-container {
 
-  width: 1724px;
+  width: 100%;
   /* margin-top: 20%; */
   height: 780px;
   border-radius: 100px;
