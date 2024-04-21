@@ -23,6 +23,9 @@ const ArrowRightIcon = ({ className }) => {
 
 export default function WhyWeDoBest() {
 
+    const [showDetails, setShowDetails] = useState(false);
+    const [selectedDetails, setSelectedDetails] = useState('');
+
   const names = [
       'IP Networking Solution',
       'IP Surveillance Solution',

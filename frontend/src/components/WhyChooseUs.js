@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
 
   return (
     <div
-      style={{ paddingLeft: '10rem', display: 'flex', flexDirection: 'row', alignItems: 'center' }}
+      style={{ paddingLeft: '10rem', display: 'flex', alignItems: 'center' }}
       className="whyus"
     >
       <div>

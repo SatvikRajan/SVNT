@@ -56,9 +56,7 @@ export default function MainStart() {
 
   return (
     <div className="home-start">
-      {/* Main Minute Details of Company*/}
       <video src={bgVideo} autoPlay loop muted playsInline className='bg-video'>
-        {/* <source type='video/mp4' src={bgVideo} /> */}
       </video>
       <div className="row years" ref={yearsRef}>
         <div className="col text-center">
@@ -75,7 +73,7 @@ export default function MainStart() {
           <p className="x">Projects</p>
         </div>
       </div>
-      <div className="videoText lorem container d-flex pt-5 text-light">
+      <div className="videoText d-flex pt-5 text-light">
         <p className='video-info'>
           Committed to integrating pioneering technology into quality service, SVNT Infotech is a premier provider of
           cutting-edge networking and communication solutions for evolving needs. With unwavering determination, we

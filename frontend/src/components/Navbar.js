@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom'; // Assuming you're using React Router
+import { Link, useLocation } from 'react-router-dom'; 
 import Logo from '../images/logo.png';
 import '../css/navbar.css'
 const Navbar = () => {
@@ -9,13 +9,6 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState(null);
 
     const [scrollTop, setScrollTop] = useState(0);
-    // const [addDelay, setAddDelayed] = useState(false);
- 
-    // const handleClick = () => {
-    //     setTimeout(() => {
-    //         setAddDelayed(true);
-    //     }, 1000);
-    // };
     useEffect(() => {
         const handleScroll = () => {
             setScrollTop(window.scrollY);
