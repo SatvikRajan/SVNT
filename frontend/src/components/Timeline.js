@@ -97,29 +97,79 @@ export default function Timeline() {
                     <Slider {...settings}>
                         
                         {/* display grid 50% 50% for each with bottom border and 50% of left border for the text div */}
-                    <div className='info'>
+                        <div className='info'>
+                            <div className='info-set info-set-up'>
+                                <p className='year'>2000 - 2003</p>
+                                <p className='sub-head'>Company Spinout</p>
+                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
 
-                    </div>
+                            </div>
+                            <div className='gap'>
 
-                    <div className='info'>
-                        
-                    </div>
+                            </div>
+                        </div>
 
-                    <div className='info'>
-                        
-                    </div>
+                        <div className='info'>
+                            <div className='gap'>
 
-                    <div className='info'>
-                        
-                    </div>
+                            </div>
+                            <div className='info-set info-set-down'>
+                                <p className='year'>2000 - 2003</p>
+                                <p className='sub-head'>Company Spinout</p>
+                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
 
-                    <div className='info'>
-                        
-                    </div>
+                            </div>
+                        </div>
 
-                    <div className='info'>
-                        
-                    </div>
+                        <div className='info'>
+                            <div className='info-set info-set-up'>
+                                <p className='year'>2000 - 2003</p>
+                                <p className='sub-head'>Company Spinout</p>
+                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+
+                            </div>
+                            <div className='gap'>
+
+                            </div>
+                        </div>
+
+                        <div className='info'>
+                            <div className='gap'>
+
+                            </div>
+                            <div className='info-set info-set-down'>
+                                <p className='year'>2000 - 2003</p>
+                                <p className='sub-head'>Company Spinout</p>
+                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+
+                            </div>
+                        </div>
+
+
+                        <div className='info'>
+                            <div className='info-set info-set-up'>
+                                <p className='year'>2000 - 2003</p>
+                                <p className='sub-head'>Company Spinout</p>
+                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+
+                            </div>
+                            <div className='gap'>
+
+                            </div>
+                        </div>
+
+                        <div className='info'>
+                            <div className='gap'>
+
+                            </div>
+                            <div className='info-set info-set-down'>
+                                <p className='year'>2000 - 2003</p>
+                                <p className='sub-head'>Company Spinout</p>
+                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+
+                            </div>
+                        </div>
+
                 </Slider>
                 </div>
             </div>
