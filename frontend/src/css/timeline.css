@@ -1,0 +1,194 @@
+.timeline{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 5% 0%; */
+}
+
+.timeline-container{
+    width: 1724px;
+    height: 780px;
+    /* background-color: aquamarine; */
+    border-radius: 100px;
+    background-image: url('../images/AboutUs/timeline-bg.svg');
+    background-position-x: 40%;
+    transition: 0.6s ease;
+    /* display: grid; */
+    /* grid-template-rows: 20% 80%; */
+    /* position: relative; */
+
+}
+
+.timeline-head{
+    font-size: 42px;
+    /* background-color: aqua; */
+    width: fit-content;
+    padding-left: 6%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+h1{
+    margin: 0;
+    padding: 0%;
+}
+
+.timeline-carousel{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    padding: 0% 9%;
+    /* background-color: rgb(4, 4, 4); */
+    /* padding: 0% 8%; */
+    /* opacity: 50%; */
+}
+
+
+
+/* .timeline-arrow{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: aquamarine;
+} */
+
+
+.timeline-carousel .info{
+    /* background-color: aquamarine; */
+    width: 434px;
+    height: 525px;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-rows: 50% 50%;
+    /* padding-left: 6%; */
+    
+}
+
+.info .info-set{
+    height: 50%;
+    width: 100%;
+    padding: 1% 6%;
+    position: relative;
+}
+
+.info .info-set-down::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 50%; /* This creates a circle */
+    transform: translate(-50%, -50%);
+}
+
+.info-set-down::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 1px; /* Width of the left border */
+    /* border-left: 1px solid #808283; */
+    /* background: linear-gradient(to bottom, #808283 1%, transparent 50%); */
+    background-color: #808283;
+}
+
+.info .info-set-up::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #251741;
+    border-radius: 50%; /* This creates a circle */
+    transform: translate(-50%, 57%);
+}
+
+.info-set-up::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 1px; /* Width of the left border */
+    /* border-left: 1px solid #808283; */
+    /* background: linear-gradient(to bottom, #808283 1%, transparent 50%); */
+    background-color: #808283;
+}
+
+.info-set p{
+    margin: 0;
+    padding: 0%;
+}
+
+.info-set .year{
+    font-size: 36px;
+    font-weight: light;
+    
+}
+
+.info-set .sub-head{
+    font-size: 30px;
+}
+
+.info-set .para{
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 5%;
+}
+
+.info-set-up{
+    border-bottom: 4px solid #808283 !important;
+}
+.info-set-down{
+    margin-top: -0.9%;
+    border-top: 4px solid #808283 !important;
+
+}
+
+.info .gap{
+    height: 50%;
+    width: 100%;
+    /* background-color: blanchedalmond; */
+}
+
+/* idea -> onclick add val to background position x and also move the carousel card using react slick*/
+
+.slick-arrow.slick-next,
+.slick-arrow.slick-prev{
+background-color: #251741;
+height:60px;
+width: 60px;
+
+border-radius: 50%;
+opacity: 1;
+transition: 0.3s ease-in;
+z-index: 10;
+}
+
+.slick-arrow.slick-next:hover,
+.slick-arrow.slick-prev:hover
+{
+    background-color: #251741;
+}
+
+
+.slick-prev::before,.slick-next::before{
+   display:none;
+}
+
+.arrows{
+height:40px;
+width:40px;
+/* margin: 9% 10%; */
+z-index: 10;
+color: white;
+transition: color 1s ease;
+/* display: none; */
+}

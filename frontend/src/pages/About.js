@@ -8,6 +8,9 @@ import ceo from '../images/AboutUs/ceo-image.png';
 import '../css/slider.css';
 import Managers from '../components/Managers';
 import aboutbg from '../images/AboutUs/about-bg.jpg'
+import TimeLine from '../components/Timeline'
+
+
 export const About = () => {
   return (
     <div className="about-us-page">
@@ -25,7 +28,7 @@ export const About = () => {
         Our philosophy is to combine international technology with local expertise to tailor solutions to clients needs. Driven by excellence, we aim to lead the global market in networking and communication solutions.
       </div>
 
-      <div className="company-timeline">
+      {/* <div className="company-timeline">
         <h1>Company Timeline</h1>
 
         <svg className='divider' width="1455" height="60" viewBox="0 0 1455 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +92,9 @@ export const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <TimeLine/>
 
       <div className="ceo d-flex">
         <div className="ceo-text">
