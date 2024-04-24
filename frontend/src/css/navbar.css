@@ -14,7 +14,7 @@
   position: fixed !important;
   background-color: rgb(244, 241, 241);
   width: 42%;
-  height: 10%;
+  /* height: 10%; */
   top: 5%;
   z-index: 1000;
   /* column-gap: 10px; */

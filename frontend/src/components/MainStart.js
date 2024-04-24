@@ -79,7 +79,7 @@ export default function MainStart() {
           cutting-edge networking and communication solutions for evolving needs. With unwavering determination, we
           strive to lead in delivering innovative solutions globally.
         </p>
-        <a className="ms-auto align-self-end " href="/about">
+        <a className="ms-auto align-self-end" href="/about">
           <p className="fs-4 text-light w-100 readmore">Read more About us</p>
         </a>
       </div>

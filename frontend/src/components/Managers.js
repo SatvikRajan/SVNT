@@ -13,8 +13,7 @@ export default function Managers() {
               <span className="mt-3 fw-bolder">Alec Benjamin</span>
               <span className="text-secondary">Manager</span>
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </span>
             </div>
             <div className="d-flex flex-column manager-1">
@@ -22,8 +21,7 @@ export default function Managers() {
               <span className="mt-3 fw-bolder">Alec Benjamin</span>
               <span className="text-secondary">Manager</span>
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </span>
             </div>
             <div className="d-flex flex-column manager-1">
@@ -31,8 +29,7 @@ export default function Managers() {
               <span className="mt-3 fw-bolder">Alec Benjamin</span>
               <span className="text-secondary">Manager</span>
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </span>
             </div>
           </div>
@@ -42,8 +39,7 @@ export default function Managers() {
               <span className="mt-3 fw-bolder">Alec Benjamin</span>
               <span className="text-secondary">Manager</span>
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </span>
             </div>
             <div className="d-flex flex-column manager-1">
@@ -51,8 +47,7 @@ export default function Managers() {
               <span className="mt-3 fw-bolder">Alec Benjamin</span>
               <span className="text-secondary">Manager</span>
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </span>
             </div>
             <div className="d-flex flex-column manager-1">
@@ -60,8 +55,7 @@ export default function Managers() {
               <span className="mt-3 fw-bolder">Alec Benjamin</span>
               <span className="text-secondary">Manager</span>
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </span>
             </div>
           </div>

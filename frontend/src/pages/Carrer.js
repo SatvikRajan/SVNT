@@ -60,7 +60,7 @@ export const CareersPage = () => {
     <div className="careers-page">
       <div className="career-start">
         <div className="career-image">
-          <img style={{ width: '100%', height: '100%', objectFit: 'scale-down' }} src={carrerimage} alt="" />
+          <img className="career-img" src={carrerimage} alt="" />
           <div className="career-text1">
             Empower your <br />
             aspirations at SVNT Infotech!
@@ -80,7 +80,7 @@ export const CareersPage = () => {
               dedicated workforce.
             </p>
           </div>
-          <h1 style={{ textAlign: "start", paddingLeft: "18rem" }}>
+          <h1 className='recruitment-h'>
             Recruitment
           </h1>
           <div className="jobs">

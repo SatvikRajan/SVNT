@@ -1,6 +1,4 @@
-
-
-.about-us-head-name{
+.about-us-head-name {
   line-height: 60px;
   letter-spacing: -1.5%;
   position: absolute;
@@ -10,7 +8,7 @@
   padding-left: 9%;
 }
 
-.about-us-head-name1{
+.about-us-head-name1 {
   position: absolute;
   letter-spacing: 1.5%;
   font-weight: 300;
@@ -20,54 +18,54 @@
   padding-left: 9%;
 }
 
-.svnt-info{
+.svnt-info {
   margin-left: 5rem;
   margin-right: 5rem;
   font-size: 28px;
   padding: 8rem;
 }
 
-.ceo{
+.ceo {
   align-items: center;
   text-align: center;
   padding-left: 15rem;
   padding-right: 15rem;
 }
 
-.ceo-text-p{
- font-size: 22px; 
+.ceo-text-p {
+  font-size: 22px;
 }
 
-.managers{
+.managers {
   margin-top: 0% !important;
   margin: 5%;
   border-radius: 100px;
-  background: linear-gradient(to right, #E2E4F4, #CDD4FD);
+  background: linear-gradient(to right, #e2e4f4, #cdd4fd);
   padding-top: 5rem;
   padding-left: 12rem;
   padding-right: 12rem;
 }
 
-.manager-1{
+.manager-1 {
   align-items: center;
   text-align: center;
   margin: 1rem;
 }
 
-.manager-menu{
+.manager-menu {
   padding: 1rem;
 }
 
-.manager-line{
+.manager-line {
   gap: 20px;
 }
 
-.image-1:hover{
+.image-1:hover {
   scale: 1.1;
   filter: grayscale(100);
 }
 
-.company-timeline{
+.company-timeline {
   margin-top: 0% !important;
   margin: 5%;
   border-radius: 100px;
@@ -81,7 +79,7 @@
   padding-bottom: 6rem;
 }
 
-.timeline-1{
+.timeline-1 {
   font-size: 22px;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -94,11 +92,114 @@
   width: 77vw;
 }
 
-.circle{
+.circle {
   height: 60px;
   width: 60px;
 }
 
-.line{
-  width: 20vw
+.line {
+  width: 20vw;
+}
+
+@media (max-width: 768px) {
+  .about-img {
+    padding: 2rem;
+  }
+  .about-us-head-name {
+    top: 14rem !important;
+    font-size: 28px !important;
+    line-height: 40px !important;
+  }
+  .about-us-head-name1 {
+    top: 20rem !important;
+  }
+  .manager-line {
+    flex-wrap: wrap;
+  }
+  .manager-1{
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+  
+  .image-1 {
+    width: 14rem;
+  }
+  .svnt-info {
+    font-size: 20px !important;
+  }
+
+  .ceo {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .ceo-photo {
+    width: 55% !important;
+  }
+  .ceo-photo-1 {
+    width: 26rem !important;
+  }
+  .ceo-text-head {
+    font-size: 28px !important;
+  }
+  .ceo-text-p {
+    font-size: 16px !important;
+  }
+  .slider {
+    width: 100%;
+  }
+  .ceo-text-head {
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-img {
+    margin-top: -0.5rem;
+    padding: 2rem;
+  }
+  .about-us-head-name {
+    top: 19rem;
+    font-size: 32px;
+    line-height: 50px;
+  }
+  .about-us-head-name1 {
+    font-size: 20px;
+    top: 26rem;
+  }
+  .svnt-info {
+    padding: 3rem;
+    font-size: 24px;
+  }
+  .ceo {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .ceo-photo {
+    width: 55%;
+  }
+  .managers {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .ceo-text-head {
+    font-size: 38px;
+  }
+  .ceo-text-p {
+    font-size: 22px;
+  }
+  .slider {
+    width: 100% !important;
+  }
+  .image-1 {
+    width: 10rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .about-img {
+    margin-top: 0rem !important;
+    /* padding: 2rem; */
+  }
+  
 }
