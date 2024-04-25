@@ -4,11 +4,9 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
-import { useState } from 'react';
-// import FontAwesome from 'react-fontawesome'
-// import faStyles from 'font-awesome/css/font-awesome.css'
-// import styled from 'styled-components';
-
+import { useState,useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Timeline() {
     const [backgroundPosition, setBackgroundPosition] = useState(0);
@@ -25,7 +23,7 @@ export default function Timeline() {
     function SampleNextArrow(props) {
         const { className, style, onClick } = props;
         return (
-          <div
+            <div
                 className={`arrow ${className}`}
                 style={{
                     ...style,
@@ -41,26 +39,26 @@ export default function Timeline() {
                         handleNextArrowClick();
                     }
                 }}
-    
+
             >
                 <IoIosArrowForward className='arrows'
-                style={{
-                    color: onClick? 'white':'#251741',
-                    cursor: onClick? 'pointer':'default'
-               }}/>
-        </div>
-            
+                    style={{
+                        color: onClick ? 'white' : '#251741',
+                        cursor: onClick ? 'pointer' : 'default'
+                    }} />
+            </div>
+
         );
-      }
-      
-      function SamplePrevArrow(props) {
-          const { className, style, onClick } = props;
+    }
+
+    function SamplePrevArrow(props) {
+        const { className, style, onClick } = props;
         return (
-          <div
-            className={`arrow ${className}`}
+            <div
+                className={`arrow ${className}`}
                 style={{
                     ...style,
-                    width:'60px',
+                    width: '60px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center'
@@ -73,9 +71,9 @@ export default function Timeline() {
                 }}
             >
                 <IoIosArrowBack className='arrows' style={{
-                    color: onClick? 'white':'#251741',
-                    cursor: onClick? 'pointer':'default'
-               }}/>
+                    color: onClick ? 'white' : '#251741',
+                    cursor: onClick ? 'pointer' : 'default'
+                }} />
             </div>
         );
     }
@@ -88,14 +86,23 @@ export default function Timeline() {
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />
     };
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 300
+        });
+    }, []);
+
     return (
-        <div className="timeline">
+        <div className="timeline" data-aos='fade-up'>
             <div className="timeline-container" style={{ backgroundPositionX: `${backgroundPosition}%` }}>
                 <div><h1 className="timeline-head">Comapany TimeLine</h1></div>
                 {/* <div class="line"></div>  */}
                 <div className="timeline-carousel">
                     <Slider {...settings}>
-                        
+
                         {/* display grid 50% 50% for each with bottom border and 50% of left border for the text div */}
                         <div className='info'>
                             <div className='info-set info-set-up'>
@@ -170,9 +177,9 @@ export default function Timeline() {
                             </div>
                         </div>
 
-                </Slider>
+                    </Slider>
                 </div>
             </div>
         </div>
-    )    
+    )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
-
+import last from '../images/Home/last-career.png'
 export default function LastContent() {
   return (
     <>
       <div className="last">
+        <img src={last} alt="" />
         <p className="last-text-1" style={{ fontSize: '42px' }}>Career</p>
         <ul style={{ color: 'white', paddingTop: '5rem', paddingLeft: '18rem', fontSize: '38px' }}>
           <li>Connect with New People</li>

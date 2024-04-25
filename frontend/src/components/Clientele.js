@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import img1 from '../images/Home/ITC-Limited.svg'
 import img2 from '../images/Home/aditya-birla.svg'
 import img3 from '../images/Home/AEQUS.svg'
@@ -17,22 +17,28 @@ import img15 from '../images/Home/Zuari-cement.svg'
 import img16 from '../images/Home/KempegodwaIA.svg'
 import img17 from '../images/Home/CAIRN.svg'
 import img18 from '../images/Home/Brigade.svg'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Clientele() {
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 200
+    });
+  }, []);
   return (
     <>
       <h1 className='clientele' >Clientele</h1>
       <div className="trusted">
         <div className="trustedtext">
 
-          <p>
+          <p data-aos='fade-right'>
           Our most invaluable resource lies within our people, and it is collaboration that sparks the best ideas into life.
           </p>
         </div>
 
-        <section id="slideshow">
+        <section id="slideshow" data-aos='fade-left'>
           <div class="entire-content">
             <div class="content-carrousel">
               <figure class="shadow"><img src={img1} /></figure>

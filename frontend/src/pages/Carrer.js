@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useNavigate } from "react";
+import React, { useState, useEffect, useNavigate } from "react";
 import invite from "../images/ContactUs/invite.png";
 import search from "../images/search.jpg";
 import axios from 'axios'
@@ -7,6 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../css/carousel.css'
 import '../css/career.css'
 import carrerimage from '../images/Career/careerimage.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export const CareersPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -16,7 +19,7 @@ export const CareersPage = () => {
   const [resume, setResume] = useState(null);
   const [showForm, setShowForm] = useState(false);
 
-  
+
   const handleSubmit = async () => {
     try {
       const formData = new FormData();
@@ -26,17 +29,17 @@ export const CareersPage = () => {
       formData.append('totalExperience', totalExperience);
       formData.append('relevantExperience', relevantExperience);
       formData.append('resume', resume);
-  
+
       var JSbody = JSON.stringify(Object.fromEntries(formData));
       console.log(JSbody)
       await fetch('http://localhost:8080/careers/api/submitForm', {
         method: 'POST',
         headers: {
-          "Content-Type" : 'application/json'
+          "Content-Type": 'application/json'
         },
         body: JSbody,
       });
-  
+
       // toast.success('Form submitted successfully');
       setName('');
       setEmail('');
@@ -55,6 +58,13 @@ export const CareersPage = () => {
   const handleGoBackClick = () => {
     setShowForm(false);
   }
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 300,
+    });
+  }, []);
 
   return (
     <div className="careers-page">
@@ -71,7 +81,7 @@ export const CareersPage = () => {
         </div>
 
         <div id="recruitment" className="recruitment">
-          <div className="recruit">
+          <div className="recruit" data-aos='fade-down'>
             <h1>Shape our Future Together!</h1>
             <p className="recruit-handle">
               With over 32 locations , SVNT presents limitless prospects while
@@ -84,7 +94,7 @@ export const CareersPage = () => {
             Recruitment
           </h1>
           <div className="jobs">
-            <div class="dropdown">
+            <div class="dropdown" data-aos='fade-right'>
               <button
                 class="btn btn-secondary dropdown-career dropdown-toggle"
                 type="button"
@@ -139,7 +149,7 @@ export const CareersPage = () => {
               </ul>
             </div>
             {showForm ? (
-              <div className="job-form d-flex">
+              <div className="job-form d-flex" >
                 <div style={{ marginLeft: "-25px", marginRight: "15px" }}>
                   {" "}
                   <svg
@@ -185,7 +195,7 @@ export const CareersPage = () => {
                     </svg>
                     Full Time
                   </p>
-                  <div className="form-box-1">
+                  <div className="form-box-1" >
                     <span style={{ marginLeft: "10px" }}>Apply Online</span>
                     <label for="inp" class="inp">
                       <input type="text" id="inp" placeholder="&nbsp;" value={name} onChange={(e) => setName(e.target.value)} />
@@ -236,7 +246,7 @@ export const CareersPage = () => {
                 </div>
               </div>
             ) : (
-              <div className="job-des d-flex">
+              <div className="job-des d-flex" data-aos='fade-left'>
                 <div style={{ marginLeft: "-35px", marginRight: "15px" }}>
                   {" "}
                   <svg
@@ -504,7 +514,7 @@ export const CareersPage = () => {
             )}
           </div>
           <div className="d-flex flex-row invite">
-            <div>
+            <div data-aos='fade-right'>
               <img
                 style={{
                   maxWidth: "100%",
@@ -515,7 +525,7 @@ export const CareersPage = () => {
                 alt=""
               />
             </div>
-            <div style={{ alignSelf: "center" }}>
+            <div style={{ alignSelf: "center" }} data-aos='fade-left'>
               <h1
                 style={{
                   color: "#0E1513",

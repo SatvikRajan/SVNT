@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import adityabirla from '../images/Home/aditya-birla.jpg';
 import vedanta from '../images/Home/vedanta.jpg';
 import '../css/about.css';
@@ -9,9 +9,20 @@ import '../css/slider.css';
 import Managers from '../components/Managers';
 import aboutbg from '../images/AboutUs/about-bg.jpg'
 import TimeLine from '../components/Timeline'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const About = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 300,
+      delay: 200
+    });
+  }, []);
+
   return (
     <div className="about-us-page">
 
@@ -23,7 +34,7 @@ export const About = () => {
         </p>
         <p className="about-us-head-name1">We are the Blueprint</p>
       </div>
-      <div className="svnt-info">
+      <div className="svnt-info" data-aos='fade-up'>
         Established in 2003, SVNT Infotech Pvt Ltd set out on a mission to revolutionize IT infrastructure solutions.
         Our philosophy is to combine international technology with local expertise to tailor solutions to clients needs. Driven by excellence, we aim to lead the global market in networking and communication solutions.
       </div>
@@ -98,20 +109,20 @@ export const About = () => {
 
       <div className="ceo d-flex">
         <div className="ceo-text">
-          <h1 className="fs-1 ceo-text-head">Meet Our Managing Director </h1>
-          <p className="ceo-text-p">
+          <h1 className="fs-1 ceo-text-head" data-aos='fade-down'>Meet Our Managing Director </h1>
+          <p className="ceo-text-p" data-aos='fade-right'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna. nisi ut aliquip exmmodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
             esse cillum dolore . Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.
           </p>
         </div>
-        <div className="ceo-photo">
+        <div className="ceo-photo" data-aos='fade-left'>
           <img className='ceo-photo-1' src={ceo} alt="" />
         </div>
       </div>
 
       <Managers />
-      <div className="slides">
+      <div className="slides" data-aos='fade-down'>
         <div class="slider">
           <div class="slide-track">
             <div class="slide-1">

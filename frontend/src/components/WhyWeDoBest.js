@@ -10,8 +10,8 @@ import logo5 from '../images/Home/storage.svg';
 import logo6 from '../images/Home/audio-visual.svg';
 import '../css/wwdb.css'
 import WwdbDetails from './WwdbDetails';
-
-import { motion } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faLeftLong } from '@fortawesome/free-solid-svg-icons';
@@ -23,8 +23,6 @@ const ArrowRightIcon = ({ className }) => {
 
 export default function WhyWeDoBest() {
 
-  const [showDetails, setShowDetails] = useState(false);
-  const [selectedDetails, setSelectedDetails] = useState('');
 
   const names = [
     'IP Networking Solution',
@@ -44,12 +42,18 @@ export default function WhyWeDoBest() {
   function handleClick() {
     setClickVal(true);
   }
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      offset: 300,
+      delay: 500
+    });
+  }, []);
   return (
     <div className="what-we-do-best">
       <WwdbDetails click={clickVal} index={indexVal} setClick={setClickVal} topPos={topPos} leftPos={leftPos} />
       <div className="wwdb-container">
-        <p className="wwdb-head">What We Do Best</p>
+        <p className="wwdb-head" data-aos='fade-down' data-aos-easing="ease-in-sine">What We Do Best</p>
 
         <div className='wwdb-menu-wrapper'>
           <div className="wwdb-menu">
@@ -58,7 +62,7 @@ export default function WhyWeDoBest() {
               <img src={companyLogo} />
             </div>
 
-            <div className='m0' onClick={() => {
+            <div className='m0' data-aos='fade-down' onClick={() => {
               handleClick();
               setIndexVal(0);
               setTopPos(135);
@@ -68,7 +72,7 @@ export default function WhyWeDoBest() {
               <img className='logoImg' src={logo0} />
             </div>
 
-            <div className='m1' onClick={() => {
+            <div className='m1' data-aos='fade-right' onClick={() => {
               handleClick();
               setIndexVal(1);
               setTopPos(259);
@@ -79,7 +83,7 @@ export default function WhyWeDoBest() {
               <img className='logoImg' src={logo1} />
             </div>
 
-            <div className='m2' onClick={() => {
+            <div className='m2' data-aos='fade-right' onClick={() => {
               handleClick();
               setIndexVal(2);
               setTopPos(379);
@@ -89,7 +93,7 @@ export default function WhyWeDoBest() {
               <img className='logoImg' src={logo2} />
             </div>
 
-            <div className='m3' onClick={() => {
+            <div className='m3' data-aos='fade-right' onClick={() => {
               handleClick();
               setIndexVal(3);
               setTopPos(490);
@@ -99,7 +103,7 @@ export default function WhyWeDoBest() {
               <img className='logoImg' src={logo3} />
             </div>
 
-            <div className='m4' onClick={() => {
+            <div className='m4' data-aos='fade-up' onClick={() => {
               handleClick();
               setIndexVal(4);
               setTopPos(565);
@@ -109,7 +113,7 @@ export default function WhyWeDoBest() {
               <p>{names[4]}</p>
             </div>
 
-            <div className='m5' onClick={() => {
+            <div className='m5' data-aos='fade-left' onClick={() => {
               handleClick();
               setIndexVal(5);
               setTopPos(490);
@@ -119,7 +123,7 @@ export default function WhyWeDoBest() {
               <p>{names[5]}</p>
             </div>
 
-            <div className='m6' onClick={() => {
+            <div className='m6' data-aos='fade-left' onClick={() => {
               handleClick();
               setIndexVal(6);
               setTopPos(379);
@@ -129,7 +133,7 @@ export default function WhyWeDoBest() {
               <p>{names[6]}</p>
             </div>
 
-            <div className='m7' onClick={() => {
+            <div className='m7' data-aos='fade-left' onClick={() => {
               handleClick();
               setIndexVal(7);
               setTopPos(267);

@@ -68,7 +68,7 @@ export default function WhyChooseUs() {
         <p className='why-choose-head'>Why Choose Us</p>
         <div className="whyus-text d-flex">
           {details.slice(0, numDisplayed).map((detail, index) => (
-            <p key={index} className="n1" style={{ position: 'relative' }} onClick={() => handleClick(index)}>
+            <p data-aos='fade-down' key={index} className="n1" style={{ position: 'relative' }} onClick={() => handleClick(index)}>
               {numDisplayed === 1 ? getCurrentHead() : index === 0 ? 'Client Satisfaction' : index === 1 ? 'Future Outlook' : 'Resilience'}
               <span
                 style={{

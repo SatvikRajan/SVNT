@@ -7,10 +7,18 @@ import is from '../images/Home/home-carousel-statocast.png';
 import sss from '../images/Home/home-carousel-jsw';
 import avs from '../images/Home/home-carousel-cfcl.png';
 import es from '../images/Home/home-carousel-aragen.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function CaseStudiesCarousel() {
   const carouselRef = useRef(null);
   const [cardWidth, setCardWidth] = useState(0);
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 200
+    });
+  }, []);
   useEffect(() => {
     const updateCardWidth = () => {
       const carousel = carouselRef.current;
