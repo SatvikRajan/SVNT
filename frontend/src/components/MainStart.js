@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../css/mainstart.css';
 import bgVideo from '../images/Home/mainstart.mp4'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export default function MainStart() {
   const yearsRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
@@ -44,6 +45,13 @@ export default function MainStart() {
   }, []);
 
   useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 200
+    });
+  }, []);
+  useEffect(() => {
     if (isInView) {
       const yearsElement = yearsRef.current;
       const values = yearsElement.querySelectorAll('.value');
@@ -55,7 +63,7 @@ export default function MainStart() {
   }, [isInView]);
 
   return (
-    <div className="home-start">
+    <div className="home-start" data-aos='fade-up'>
       <video src={bgVideo} autoPlay loop muted playsInline className='bg-video'>
       </video>
       <div className="row years" ref={yearsRef}>
@@ -74,12 +82,12 @@ export default function MainStart() {
         </div>
       </div>
       <div className="videoText d-flex pt-5 text-light">
-        <p className='video-info'>
+        <p className='video-info' data-aos='fade-right'>
           Committed to integrating pioneering technology into quality service, SVNT Infotech is a premier provider of
           cutting-edge networking and communication solutions for evolving needs. With unwavering determination, we
           strive to lead in delivering innovative solutions globally.
         </p>
-        <a className="ms-auto align-self-end " href="/about">
+        <a className="ms-auto align-self-end" href="/about" data-aos='fade-left'>
           <p className="fs-4 text-light w-100 readmore">Read more About us</p>
         </a>
       </div>

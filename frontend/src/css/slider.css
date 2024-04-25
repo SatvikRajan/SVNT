@@ -42,7 +42,7 @@
 .slider .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 11);
+  width: calc(250px * 10);
 }
 .slider .slide-1 {
   text-align-last: center;

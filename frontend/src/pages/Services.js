@@ -11,19 +11,28 @@ import wwdb6 from '../images/Services/wwdb-6';
 import wwdb7 from '../images/Services/wwdb-7';
 import wwdb8 from '../images/Services/wwdb-8';
 import servicebg from '../images/Services/servicebg.png';
-import CarouselPhotos from '../components/CarouselPhotos';
+import IPSlider from '../components/Sliders/IPSSlider';
+import INSlider from '../components/Sliders/INSSlider';
+import IntegrationSlider from '../components/Sliders/IntegrationSlider';
+import AudioVisualSlider from '../components/Sliders/AudioVisualSlider';
+import SecuritySlider from '../components/Sliders/SecuritySlider';
+import EnergySlider from '../components/Sliders/EnergySlider';
+import SurveillanceSlider from '../components/Sliders/SurveillanceSlider';
+import StorageSlider from '../components/Sliders/StorageSlider';
+
 const services = [
   { image: wwdb1, title: 'IP Surveillance Solution', details: 'An IP camera system is a closed-circuit TV (CCTV) that is network attached. IP camera systems can be utilized to enhance security measures and elevate safety in any sector ranging from healthcare, schools and businesses to industrial, military, and government organizations. Moreover, IP cameras also make it incredibly easy to access video feeds, which may', details1: 'be saved modified or examined using a PC. Video feeds from IP cameras can be monitored from any location on multiple devices simultaneously. These surveillance systems can have features customized to their requirements and be integrated into any organisations existing IT network effortlessly, thereby making it effective and hassle-free.' },
-  { image: wwdb2, title: 'IP Networking Solution', details: 'An IP camera system is a closed-circuit TV (CCTV) that is network attached. IP camera systems can be utilized to enhance security measures and elevate safety in any sector ranging from healthcare, schools and businesses to industrial, military, and government organizations. Moreover, IP cameras also make it incredibly easy to access video feeds, which may', details1: 'be saved modified or examined using a PC. Video feeds from IP cameras can be monitored from any location on multiple devices simultaneously. These surveillance systems can have features customized to their requirements and be integrated into any organisations existing IT network effortlessly, thereby making it effective and hassle-free.'},
-  { image: wwdb3, title: 'Integration Solutions', details: 'An IP camera system is a closed-circuit TV (CCTV) that is network attached. IP camera systems can be utilized to enhance security measures and elevate safety in any sector ranging from healthcare, schools and businesses to industrial, military, and government organizations. Moreover, IP cameras also make it incredibly easy to access video feeds, which may', details1: 'be saved modified or examined using a PC. Video feeds from IP cameras can be monitored from any location on multiple devices simultaneously. These surveillance systems can have features customized to their requirements and be integrated into any organisations existing IT network effortlessly, thereby making it effective and hassle-free.'},
+  { image: wwdb2, title: 'IP Networking Solution', details: 'An IP camera system is a closed-circuit TV (CCTV) that is network attached. IP camera systems can be utilized to enhance security measures and elevate safety in any sector ranging from healthcare, schools and businesses to industrial, military, and government organizations. Moreover, IP cameras also make it incredibly easy to access video feeds, which may', details1: 'be saved modified or examined using a PC. Video feeds from IP cameras can be monitored from any location on multiple devices simultaneously. These surveillance systems can have features customized to their requirements and be integrated into any organisations existing IT network effortlessly, thereby making it effective and hassle-free.' },
+  { image: wwdb3, title: 'Integration Solutions', details: 'An IP camera system is a closed-circuit TV (CCTV) that is network attached. IP camera systems can be utilized to enhance security measures and elevate safety in any sector ranging from healthcare, schools and businesses to industrial, military, and government organizations. Moreover, IP cameras also make it incredibly easy to access video feeds, which may', details1: 'be saved modified or examined using a PC. Video feeds from IP cameras can be monitored from any location on multiple devices simultaneously. These surveillance systems can have features customized to their requirements and be integrated into any organisations existing IT network effortlessly, thereby making it effective and hassle-free.' },
   { image: wwdb4, title: 'Audio-Visual', details: 'An IP camera system is a closed-circuit TV (CCTV) that is network attached. IP camera systems can be utilized to enhance security measures and elevate safety in any sector ranging from healthcare, schools and businesses to industrial, military, and government organizations. Moreover, IP cameras also make it incredibly easy to access video feeds, which may', details1: 'be saved modified or examined using a PC. Video feeds from IP cameras can be monitored from any location on multiple devices simultaneously. These surveillance systems can have features customized to their requirements and be integrated into any organisations existing IT network effortlessly, thereby making it effective and hassle-free.' },
-  
-  { image: wwdb6, title: 'Security & Management', details: 'An IP camera system is a closed-circuit TV (CCTV) that is network attached. IP camera systems can be utilized to enhance security measures and elevate safety in any sector ranging from healthcare, schools and businesses to industrial, military, and government organizations. Moreover, IP cameras also make it incredibly easy to access video feeds, which may', details1: 'be saved modified or examined using a PC. Video feeds from IP cameras can be monitored from any location on multiple devices simultaneously. These surveillance systems can have features customized to their requirements and be integrated into any organisations existing IT network effortlessly, thereby making it effective and hassle-free.'},
+
+  { image: wwdb6, title: 'Security & Management', details: 'An IP camera system is a closed-circuit TV (CCTV) that is network attached. IP camera systems can be utilized to enhance security measures and elevate safety in any sector ranging from healthcare, schools and businesses to industrial, military, and government organizations. Moreover, IP cameras also make it incredibly easy to access video feeds, which may', details1: 'be saved modified or examined using a PC. Video feeds from IP cameras can be monitored from any location on multiple devices simultaneously. These surveillance systems can have features customized to their requirements and be integrated into any organisations existing IT network effortlessly, thereby making it effective and hassle-free.' },
   { image: wwdb8, title: 'Energy Solutions', details: 'An IP camera system is a closed-circuit TV (CCTV) that is network attached. IP camera systems can be utilized to enhance security measures and elevate safety in any sector ranging from healthcare, schools and businesses to industrial, military, and government organizations. Moreover, IP cameras also make it incredibly easy to access video feeds, which may', details1: 'be saved modified or examined using a PC. Video feeds from IP cameras can be monitored from any location on multiple devices simultaneously. These surveillance systems can have features customized to their requirements and be integrated into any organisations existing IT network effortlessly, thereby making it effective and hassle-free.' },
   { image: wwdb7, title: 'Surveillance and Safety', details: 'An IP camera system is a closed-circuit TV (CCTV) that is network attached. IP camera systems can be utilized to enhance security measures and elevate safety in any sector ranging from healthcare, schools and businesses to industrial, military, and government organizations. Moreover, IP cameras also make it incredibly easy to access video feeds, which may', details1: 'be saved modified or examined using a PC. Video feeds from IP cameras can be monitored from any location on multiple devices simultaneously. These surveillance systems can have features customized to their requirements and be integrated into any organisations existing IT network effortlessly, thereby making it effective and hassle-free.' },
   { image: wwdb5, title: 'Storage', details: 'An IP camera system is a closed-circuit TV (CCTV) that is network attached. IP camera systems can be utilized to enhance security measures and elevate safety in any sector ranging from healthcare, schools and businesses to industrial, military, and government organizations. Moreover, IP cameras also make it incredibly easy to access video feeds, which may', details1: 'be saved modified or examined using a PC. Video feeds from IP cameras can be monitored from any location on multiple devices simultaneously. These surveillance systems can have features customized to their requirements and be integrated into any organisations existing IT network effortlessly, thereby making it effective and hassle-free.' }
-  
+
 ];
+
 export default function Services() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentService = services[currentIndex];
@@ -36,7 +45,8 @@ export default function Services() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      offset: 200
+      once: true,
+      offset: 300
     });
   }, []);
 
@@ -69,11 +79,10 @@ export default function Services() {
             alignItems: 'center'
           }}>
             <button style={{
-              height:'20px'
+              height: '20px'
             }} className='left' onClick={handlePrevPage} disabled={currentIndex >= services.length}></button>
             <div style={{
               width: "100%",
-              
               overflow: 'hidden'
             }}>
               <div className="d-flex services-main" style={{
@@ -88,9 +97,9 @@ export default function Services() {
                     style={{ position: 'relative', width: '12.5%' }}
                     className="service-name"
                   >
-                    <div className='d-flex mb-2 align-items-center' style={{gap: '0.5rem'}}>
+                    <div className='d-flex mb-2 align-items-center' style={{ gap: '0.5rem' }}>
                       <img className='service-img' src={service.image} alt="" />
-                      <p className='service-title-main' style={{ fontSize: '24px'}}>{service.title}</p>
+                      <p className='service-title-main' style={{ fontSize: '24px' }}>{service.title}</p>
                     </div>
                     <span
                       style={{
@@ -109,12 +118,11 @@ export default function Services() {
 
               </div>
             </div>
-            <button style={{height:'20px'}} className='right' onClick={handleNextPage} disabled={currentIndex >= services.length}></button>
+            <button style={{ height: '20px' }} className='right' onClick={handleNextPage} disabled={currentIndex >= services.length}></button>
           </div>
-          <div className='services-mainf' style={{ padding: '3rem' }}>
+          <div className="services-mainf" style={{ padding: '3rem' }}>
             {currentService && (
               <div>
-
                 <div className="d-flex">
                   <div className='services-ndetails' style={{ width: '70%' }}>
                     <div className="d-flex imgtit align-items-center">
@@ -123,7 +131,14 @@ export default function Services() {
                     </div>
                     <p className='service-details' style={{ fontSize: '24px', lineHeight: '54px', letterSpacing: '5%' }}>{currentIndex !== null ? services[currentIndex].details : currentService.details}</p>
                   </div>
-                  <CarouselPhotos />
+                  {currentService.title === 'IP Surveillance Solution' && <IPSlider />}
+                  {currentService.title === 'IP Networking Solution' && <INSlider />}
+                  {currentService.title === 'Integration Solutions' && <IntegrationSlider />}
+                  {currentService.title === 'Audio-Visual' && <AudioVisualSlider />}
+                  {currentService.title === 'Security & Management' && <SecuritySlider />}
+                  {currentService.title === 'Energy Solutions' && <EnergySlider />}
+                  {currentService.title === 'Surveillance and Safety' && <SurveillanceSlider />}
+                  {currentService.title === 'Storage' && <StorageSlider />}
                 </div>
                 <p className='service-details' style={{ fontSize: '24px', lineHeight: '50px', letterSpacing: '5%', marginTop: '-15px' }}>{currentIndex !== null ? services[currentIndex].details1 : currentService.details1}</p>
               </div>

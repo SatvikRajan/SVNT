@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="col-md-6 p-2 w-25">
             <div
               style={{ gap: "30px", marginBottom: "10px" }}
-              className="d-flex align-items-center"
+              className="d-flex align-items-center footer-email"
             >
               <svg
                 width="22"
@@ -27,7 +27,7 @@ const Footer = () => {
               </svg>
               <span>@svntech.com</span>
             </div>
-            <div style={{ gap: "30px" }} className="d-flex">
+            <div style={{ gap: "30px" }} className="d-flex footer-email">
               <svg
                 width="20"
                 height="20"
@@ -93,7 +93,6 @@ const Footer = () => {
         </div>
       </div>
       <div
-        style={{ fontSize: "12px", gap: "34rem" }}
         className="container bottom-bar d-flex"
       >
         <p>

@@ -34,6 +34,9 @@ a {
 a:hover {
   color: rgb(53, 53, 53);
 }
+.footer-email{
+  justify-content: center;
+}
 .footer {
   letter-spacing: 0px;
   padding-top: 50px;
@@ -49,10 +52,10 @@ a:hover {
   width: 30%;
   text-shadow: 2px 2px 5px black;
   text-align: start;
-  position: absolute;
+  position: relative;
   color: white;
   font-size: 35px;
-  top: 78%;
+  bottom: 15rem;
   left: 10%;
   font-weight: 600;
 }
@@ -75,7 +78,7 @@ a:hover {
   font-size: 19px;
 }
 .explore::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
@@ -89,11 +92,11 @@ a:hover {
 }
 .explore::after {
   float: right;
-  content: '';
+  content: "";
   filter: invert();
   width: 30px; /* Adjust the width of the SVG */
   height: 20px; /* Adjust the height of the SVG */
-  background: url('../images/Vector.svg') no-repeat;
+  background: url("../images/Vector.svg") no-repeat;
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s; /* Transition opacity and transform over 0.5 seconds */
   transform: translateX(-10px); /* Initially move the arrow to the left */
@@ -107,7 +110,7 @@ a:hover {
   transform: translateX(0); /* Move the arrow back to its original position */
 }
 .career-image {
-  background-image: url('');
+  background-image: url("");
   margin-top: 1rem;
   background-repeat: no-repeat;
   background-size: cover;
@@ -142,8 +145,9 @@ a:hover {
   width: 400px;
   height: 160px;
   background-color: #f0f0f0;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px,
-    rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -227,4 +231,101 @@ a:hover {
 
 .location-card:nth-child(3) {
   box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.career-img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  padding: 2rem;
+  margin-top: -1.5rem;
+}
+.recruitment-h {
+  text-align: start;
+  padding-left: 18rem;
+}
+@media (max-width: 768px) {
+  .jobs {
+    flex-wrap: wrap;
+    gap: 40px !important;
+  }
+  .job-des {
+    margin-left: 5rem;
+    width: 80% !important;
+  }
+  .dropdown {
+    width: 80%;
+    height: 0px;
+  }
+  .invite {
+    flex-wrap: wrap;
+  }
+  .career-text1{
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .jobs {
+    gap: 50px;
+    margin-left: 0px;
+  }
+  .recruitment-h {
+    padding-left: 6rem;
+  }
+  .dropdown {
+    margin-left: 5rem;
+  }
+  .job-des {
+    width: 60%;
+  }
+  .invite {
+    gap: 2rem;
+  }
+  .career-text1 {
+    font-size: 28px;
+    width: 50%;
+    bottom: 11rem;
+  }
+  .recruit-handle {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+  ul.dropdown-menu.show {
+    opacity: 1;
+  }
+  .bottom-bar {
+    gap: 8rem !important;
+  }
+  .recruitment{
+    padding-top: 0;
+  }
+}
+
+.bottom-bar {
+  font-size: 12px;
+  gap: 34rem;
+}
+@media (min-width: 1440px) {
+  .recruitment{
+    padding-top: 0;
+  }
+  .jobs {
+    margin-top: 4rem;
+    gap: 50px;
+    margin-left: 0px;
+  }
+  .recruitment-h {
+    padding-left: 10rem;
+  }
+  .dropdown{
+    margin-left: 16rem;
+  }
+  .job-des {
+    width: 35%;
+  }
+}
+
+.row {
+  width: 100%;
 }

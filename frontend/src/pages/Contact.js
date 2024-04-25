@@ -11,7 +11,8 @@ const Contact = () => {
     AOS.init({
       duration: 1000,
       once: true,
-      offset: 200,
+      offset: 300,
+      delay: 500
     });
   }, []);
 

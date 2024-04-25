@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import adityabirla from '../images/Home/aditya-birla.jpg';
 import vedanta from '../images/Home/vedanta.jpg';
 import '../css/about.css';
@@ -9,31 +9,34 @@ import '../css/slider.css';
 import Managers from '../components/Managers';
 import aboutbg from '../images/AboutUs/about-bg.jpg'
 import TimeLine from '../components/Timeline'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const About = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 300,
+      delay: 200
+    });
+  }, []);
+
   return (
     <div className="about-us-page">
-      
+
       <div className="about-us-head">
-      <img src={aboutbg} style={{height: '100%', width: '99vw', objectFit: 'scale-down', marginTop: '1rem'}} alt="" />
+        <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100vw', objectFit: 'scale-down', marginTop: '1rem' }} alt="" />
         <p className="about-us-head-name">
           Integrated Solutions,
           <br /> Empowered Choices
         </p>
         <p className="about-us-head-name1">We are the Blueprint</p>
       </div>
-      <div className="svnt-info">
-        SVNT Infotech Pvt Ltd, formerly known as S V Network Technologies, was established in 2003 with a singular
-        objective: to deliver cutting-edge IT infrastructure solutions across diverse industry verticals, including
-        power, steel, cement, petroleum, and defence. With our headquarters in Hyderabad, SVNT has strategically
-        positioned branches in key cities such as Delhi and Bangalore, ensuring a widespread presence.
-        <br />
-        <br /> Our founding philosophy at SVNT Infotech is rooted in addressing the unique needs of our customers
-        through the integration of top-tier international technology, complemented by local expertise. As a company
-        fully funded and managed by our dedicated employees, we take pride in boasting one of the highest employee
-        retention rates in the IT industry today. In the current dynamic landscape of technology, we are always on the
-        lookout to elevate the quality of our products.and communication solutions.
+      <div className="svnt-info" data-aos='fade-up'>
+        Established in 2003, SVNT Infotech Pvt Ltd set out on a mission to revolutionize IT infrastructure solutions.
+        Our philosophy is to combine international technology with local expertise to tailor solutions to clients needs. Driven by excellence, we aim to lead the global market in networking and communication solutions.
       </div>
 
       {/* <div className="company-timeline">
@@ -106,20 +109,20 @@ export const About = () => {
 
       <div className="ceo d-flex">
         <div className="ceo-text">
-          <h1 className="fs-1">Meet Our CEO </h1>
-          <p className="ceo-text-p">
+          <h1 className="fs-1 ceo-text-head" data-aos='fade-down'>Meet Our Managing Director </h1>
+          <p className="ceo-text-p" data-aos='fade-right'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna. nisi ut aliquip exmmodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore . Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.”
+            esse cillum dolore . Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.
           </p>
         </div>
-        <div className="ceo-photo">
-          <img src={ceo} alt="" />
+        <div className="ceo-photo" data-aos='fade-left'>
+          <img className='ceo-photo-1' src={ceo} alt="" />
         </div>
       </div>
 
       <Managers />
-      <div className="slides">
+      <div className="slides" data-aos='fade-down'>
         <div class="slider">
           <div class="slide-track">
             <div class="slide-1">

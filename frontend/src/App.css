@@ -568,22 +568,6 @@ ul.job-requirements {
   gap: 20px;
 }
 
-.case-studies {
-  margin: 5%;
-  border-radius: 100px;
-  color: white;
-  background-position: center;
-  background-size: cover;
-  background-image: url(./images/Home/casestudies-bg.jpg);
-  height: 760px;
-  padding: 5rem;
-  padding-left: 10rem;
-}
-
-.case-studies h1 {
-  font-weight: 400;
-  font-size: 42px;
-}
 
 main {
   display: flex;
@@ -644,7 +628,6 @@ main {
 }
 
 .trusted {
-  margin-top: 10rem;
   margin-bottom: 15rem;
 }
 .shiny::after {
@@ -663,35 +646,8 @@ main {
   opacity: 0.2;
 }
 
-.last {
-  margin-right: 5%;
-  margin-left: 5%;
-  position: relative;
-  height: 700px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url(./images/Home/last-career.png);
-}
 
-.last-text {
-  text-shadow: 2px 2px 5px black;
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  /* transform: translate(-50%, -50%); */
-  color: white;
-  font-size: 30px;
-  font-weight: 400;
-  text-align: center;
-}
 
-.last-text-1 {
-  padding-left: 10rem;
-  padding-top: 5rem;
-  color: white;
-  font-size: 30px;
-  font-weight: 400;
-}
 .readmore {
   /* gap: 20px; */
   display: flex;
@@ -724,35 +680,6 @@ main {
 .join:hover::after {
   opacity: 1; /* Fade in the SVG on hover */
   transform: translateX(0); /* Move the arrow back to its original position */
-}
-.last-text1 {
-  align-items: center;
-  display: flex;
-  text-shadow: 2px 2px 5px black;
-  position: absolute;
-  top: 43%;
-  left: 63%;
-  /* transform: translate(-50%, -50%); */
-  color: white;
-  font-size: 30px;
-  font-weight: 400;
-  text-align: center;
-  color: white;
-  border-bottom: 2px solid white;
-  width: 10%;
-  padding-bottom: 5px;
-  text-align: right;
-}
-
-.last-contact {
-  left: 28rem;
-  padding: 60px;
-  top: 391rem;
-  border-radius: 20px;
-  color: black;
-  background-color: #e8e8e8;
-  position: absolute;
-  width: 50%;
 }
 
 

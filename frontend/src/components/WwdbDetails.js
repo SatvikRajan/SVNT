@@ -103,7 +103,7 @@ export default function WwdbDetails({click, index, setClick, topPos, leftPos}) {
             left: '50%',
             transform: 'translate(-50%, -50%)',
             backgroundColor: 'rgba(0,0,0,0.9)',
-            width: '1724px',
+            width: '90%',
             height: '780px',
             borderRadius: '100px',
                 zIndex: '100',
