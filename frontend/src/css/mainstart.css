@@ -11,10 +11,11 @@
   position: absolute;
   border-radius: 80px;
   height: 780px;
-  width: 100%;
+  width: 91%;
   overflow: hidden;
   background-color: aqua;
   object-fit: cover;
+  left: 100px;
   
 }
 

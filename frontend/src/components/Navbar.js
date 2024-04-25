@@ -83,7 +83,7 @@ const Navbar = () => {
                             <NavItem to="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 About Us
                             </NavItem>
-                            <NavItem to="/industries" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                            <NavItem to="/casestudies" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 Case Studies
                             </NavItem>
                             <NavItem to="/services" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
