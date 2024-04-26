@@ -16,6 +16,8 @@
   width: 90%;
   overflow: hidden;
   background-color: aqua;
+  object-fit: cover;
+  
 }
 
 .years {
