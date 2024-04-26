@@ -110,7 +110,8 @@
 }
 
 .left{
-    background-color: white;
+    filter: invert();
+    background: none;
     margin-right: 2rem;
     background-image: url('../images/Home/arrowleft.png');
     background-size: contain;
@@ -121,7 +122,8 @@
 }
 
 .right{
-    background-color: white;
+    filter: invert();
+    background: none;
     margin-left: 2rem;
     background-image: url('../images/Home/arrowright.png');
     background-size: contain;

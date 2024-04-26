@@ -528,7 +528,7 @@ export const CareersPage = () => {
             <div style={{ alignSelf: "center" }} data-aos='fade-left'>
               <h1
                 style={{
-                  color: "#0E1513",
+                  color: "#F1FAFF",
                   fontWeight: "600",
                   marginBottom: "25px",
                 }}
