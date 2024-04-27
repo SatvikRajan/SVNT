@@ -1,10 +1,10 @@
 
 import { color, motion, px, useScroll } from 'framer-motion';
-import img1 from '../images/Home/ip-surveillance-img.svg'
-import img0 from '../images/Home/ip-net-img.png'
-import img2 from '../images/Home/energy-img.svg'
-import img3 from '../images/Home/surveillance-safety-img.svg'
-import img4 from '../images/Home/security-mgmt-img.svg'
+import img1 from '../images/Home/ip-surveillance-img.png'
+import img0 from '../images/Home/ip-net-sol-img.png'
+import img2 from '../images/Home/energy-sol-img.png'
+import img3 from '../images/Home/surveillance-safety-sol-img.png'
+import img4 from '../images/Home/sec-mgmt-img.png'
 import img5 from '../images/Home/storage-img.svg'
 import img7 from '../images/Home/integration-sol-img.svg'
 import img6 from '../images/Home/audio-vis-img.svg'

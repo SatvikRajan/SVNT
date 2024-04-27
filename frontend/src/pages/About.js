@@ -6,7 +6,7 @@ import Managers from '../components/Managers';
 import TimeLine from '../components/Timeline'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Logo from '../images/svnt-logo-white-full.png';
+import Logo from '../images/svnt-logo-black-full.png';
 import { Link } from 'react-router-dom'
 import AboutCarousel from '../components/AboutCarousel';
 import aequs from '../images/AboutUs/client-aequs.svg'
