@@ -7,6 +7,7 @@
 .cs-body{
     background-color: #262231;
     overflow: hidden;
+    position: relative;
 }
 .cs-hero{
     width: 100%;
@@ -29,11 +30,11 @@
 
 .cs-search-bar{
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2% 0% 3% 0%;
+    padding: 2% 0% 1.5% 0%;
     
     /* color: white; */
 }
@@ -50,9 +51,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0% 10%;
-    position: relative;
+    transition: 0.5s ease;
+    /* position: relative; */
     /* background-color: antiquewhite; */
 }
+
 
 .cs-card{
     width: 600px;
@@ -62,13 +65,15 @@
     background-image: url('../images/CaseStudies/cs-bangaloreIA-1.png');
     margin: 2% 0% 8% 0%;
     border-radius: 20px;
-    z-index: 1;
+    /* z-index: 1; */
     color: white;
     display: grid;
     grid-template-rows: 60% 25% 15%;
     justify-content: center;
+    transition: 0.3s ease;
     /* align-items: center; */
 }
+
 
 .cs-card div{
     /* background-color: blue; */
@@ -112,7 +117,87 @@
     
 }
 
-.expanded-cs-card{
+.background-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    z-index: 10;
+}
+
+.expanded-card{
+    width: 1431px;
+    height: 835px;
+    /* transition: 0.3s ease; */
+    background-color: bisque;
+    z-index: 11;
     position: absolute;
+    border-radius: 20px;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.expanded-info::-webkit-scrollbar {
+    width: 16px;
     
+  }
+  
+  /* Track */
+  .expanded-info::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    margin-right: 5%;
+    background-color: white;
+  }
+   
+  /* Handle */
+.expanded-info::-webkit-scrollbar-thumb {
+    background: #251741; 
+    border-radius: 10px;
+    border: 3px solid white;
+  }
+  
+  /* Handle on hover */
+.expanded-info::-webkit-scrollbar-thumb:hover {
+    background: #34215b; 
+}
+
+
+.expanded-head{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    /* background-color: rgb(59, 85, 108); */
+    padding: 3% 0% 2% 0%;
+}
+
+.expanded-head-h2{
+    font-size: 42px;
+    /* background-color: antiquewhite; */
+    width: fit-content;
+    margin-left: 30%;
+    
+}
+
+.expanded-head-img{
+    /* background-color: #b30000; */
+    width: fit-content;
+    margin-left: 50%;
+    /* z-index: 10; */
+}
+
+.expanded-info{
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: green; */
+    overflow-y: scroll;
+    height: 75%;
+    margin: 0% 7.3% 0% 7%;
+    padding-right: 2%;
+    /* padding-top: 3%; */
+    font-size: 24px;
+    letter-spacing: 10%;
+    line-height: 36px;
+
 }
