@@ -1,5 +1,6 @@
 import React from 'react'
 import company from '../images/logo1.png'
+
 export default function AdminPage() {
     return (
         <div>

@@ -8,6 +8,8 @@ import WhyWeDoBest from '../components/WhyWeDoBest';
 import Clientele from '../components/Clientele';
 import LastContent from '../components/LastContent';
 import '../css/home.css'
+import Logo from '../images/svnt-logo-white-full.png';
+import { Link } from 'react-router-dom'
 
 export default function Home() {
 
@@ -15,7 +17,11 @@ export default function Home() {
   return (
     <div className="home">
       {/* Carousel */}
+
       <div class="carousel1">
+        <Link className="logo-brand" to="/">
+          <img src={Logo} alt="SVNT Tech" height={30} />
+        </Link>
         <Carosuel1/>
       </div>
 

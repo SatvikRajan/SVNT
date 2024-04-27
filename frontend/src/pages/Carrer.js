@@ -9,6 +9,8 @@ import '../css/career.css'
 import carrerimage from '../images/Career/careerimage.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Logo from '../images/svnt-logo-white-full.png';
+import { Link } from 'react-router-dom'
 
 export const CareersPage = () => {
   const [name, setName] = useState('');
@@ -68,6 +70,9 @@ export const CareersPage = () => {
 
   return (
     <div className="careers-page">
+      <Link className="logo-brand" to="/">
+          <img src={Logo} alt="SVNT Tech" height={30} />
+      </Link>
       <div className="career-start">
         <div className="career-image">
           <img className="career-img" src={carrerimage} alt="" />

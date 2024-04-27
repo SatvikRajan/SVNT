@@ -19,6 +19,8 @@ import SecuritySlider from '../components/Sliders/SecuritySlider';
 import EnergySlider from '../components/Sliders/EnergySlider';
 import SurveillanceSlider from '../components/Sliders/SurveillanceSlider';
 import StorageSlider from '../components/Sliders/StorageSlider';
+import Logo from '../images/svnt-logo-black-full.png';
+import { Link } from 'react-router-dom'
 
 const services = [
   { image: wwdb1, title: 'IP Surveillance Solution', details: 'An IP camera system is a closed-circuit TV (CCTV) that is network attached. IP camera systems can be utilized to enhance security measures and elevate safety in any sector ranging from healthcare, schools and businesses to industrial, military, and government organizations. Moreover, IP cameras also make it incredibly easy to access video feeds, which may', details1: 'be saved modified or examined using a PC. Video feeds from IP cameras can be monitored from any location on multiple devices simultaneously. These surveillance systems can have features customized to their requirements and be integrated into any organisations existing IT network effortlessly, thereby making it effective and hassle-free.' },
@@ -67,6 +69,9 @@ export default function Services() {
 
   return (
     <div className="services">
+      <Link className="logo-brand" to="/">
+          <img src={Logo} alt="SVNT Tech" height={30} />
+      </Link>
       <img style={{ position: 'relative', marginTop: '-0.5rem' }} src={servicebg} className='service-bg' alt="" />
       <p className='service-text'>Expertise you can trust:<br /> Tailored solutions just for you!</p>
       <p className='service-head'>Gain deeper insight into our <span style={{ fontWeight: '500' }}>Services</span></p>

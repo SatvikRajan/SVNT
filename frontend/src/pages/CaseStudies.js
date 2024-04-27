@@ -8,11 +8,11 @@ import CaseStudyCard from '../components/CaseStudyCard';
 export default function CaseStudies() {
   return (
     <div className='cs-body'>
-      <div className='cs-hero'>
-        <img src={bghero} style={{height: '90%', width: '90%', margin: '3% 5%'}} alt="" />
-        <Link className="logo-brand" to="/">
+      <Link className="logo-brand" to="/">
           <img src={Logo} alt="SVNT Tech" height={30} />
         </Link>
+      <div className='cs-hero'>
+        <img className="cs-hero-bg" src={bghero} alt="" />
         <p className='image-text'>Empower your aspirations <br/>at SVNT Infotech!</p>
       </div>
 

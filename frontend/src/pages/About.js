@@ -11,6 +11,8 @@ import aboutbg from '../images/AboutUs/about-bg.jpg'
 import TimeLine from '../components/Timeline'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Logo from '../images/svnt-logo-black-full.png';
+import { Link } from 'react-router-dom'
 
 export const About = () => {
 
@@ -25,9 +27,11 @@ export const About = () => {
 
   return (
     <div className="about-us-page">
-
+      <Link className="logo-brand" to="/">
+          <img src={Logo} alt="SVNT Tech" height={30} />
+      </Link>
       <div className="about-us-head">
-        <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100vw', objectFit: 'scale-down', marginTop: '1rem' }} alt="" />
+        <img className='about-img' src={aboutbg} alt="" />
         <p className="about-us-head-name">
           Integrated Solutions,
           <br /> Empowered Choices

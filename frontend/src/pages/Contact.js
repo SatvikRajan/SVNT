@@ -5,6 +5,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../css/contact.css'
 import axios from 'axios';
+import Logo from '../images/svnt-logo-black-full.png';
+import { Link } from 'react-router-dom'
 
 const Contact = () => {
   useEffect(() => {
@@ -48,6 +50,9 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-image-container">
+        <Link className="logo-brand" to="/">
+          <img src={Logo} alt="SVNT Tech" height={30} />
+        </Link>
         <img src={contact} className="contact-image" alt="" />
         <div className="text">Need assistance?<br/>
           How may we help you?</div>

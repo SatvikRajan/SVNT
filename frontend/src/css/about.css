@@ -1,10 +1,25 @@
+.about-us-head{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.about-img{
+  width: fit-content;
+  object-fit: scale-down;
+  /* background-color: #bab3cf; */
+  position: absolute;
+  top: 49px;
+  left: 86px;
+}
+
 .about-us-head-name {
   line-height: 60px;
   letter-spacing: -1.5%;
   position: absolute;
   top: 40rem;
   font-size: 48px;
-  color: white;
+  color: rgb(255, 255, 255);
   padding-left: 9%;
 }
 

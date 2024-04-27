@@ -3,6 +3,19 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
+.logo-brand {
+  z-index: 10;
+  position: absolute;
+  display: block;
+  top: 108px;
+  left: 207px;
+}
+
+.logo-brand img {
+  width: 350px;
+  height: 42px;
+}
+
 svg.btn.search {
   height: 30px;
   width: 50px;

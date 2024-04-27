@@ -10,11 +10,20 @@
     position: relative;
 }
 .cs-hero{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: relative;
     /* background-image: url(../images/CaseStudies/bg-hero.png); */
     
+}
+
+.cs-hero-bg{
+    width: fit-content;
+    object-fit: scale-down;
+    /* background-color: #bab3cf; */
+    position: absolute;
+    top: 49px;
+    left: 86px;
 }
 
 .image-text{
@@ -52,6 +61,7 @@
     flex-wrap: wrap;
     padding: 0% 10%;
     transition: 0.5s ease;
+    margin-bottom: 5%;
     /* position: relative; */
     /* background-color: antiquewhite; */
 }
@@ -132,7 +142,7 @@
     height: 835px;
     /* transition: 0.3s ease; */
     background-color: bisque;
-    z-index: 11;
+    z-index: 1000;
     position: absolute;
     border-radius: 20px;
     color: white;
