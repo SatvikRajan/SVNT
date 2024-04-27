@@ -12,11 +12,16 @@
 }
 
 .carousel-caption {
+  color: #F1FAFF;
   text-align: start !important;
-  bottom: 7.25rem !important;
-  right: 23% !important;
-  left: 10% !important;
+  bottom: 18rem;
+  right: 20% !important;
+  left: 14% !important;
   font-size: 42px;
+}
+
+.cc3{
+  bottom: 14rem;
 }
 
 .carousel-indicators {
