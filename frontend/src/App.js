@@ -26,7 +26,10 @@ function App() {
   return (
     <BrowserRouter>
       {isLoading ? (
-        <Loader />
+        <div style={{position: 'relative', height: '100vh', width: '100vw'}}>
+          <Loader />
+        </div>
+
       ) : (
         <Routes>
           <Route path="/" element={<MainLayout><Home /></MainLayout>} />

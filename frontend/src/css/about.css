@@ -32,6 +32,10 @@
   padding-right: 15rem;
 }
 
+.ceo-text{
+  text-align: -webkit-center;
+}
+
 .ceo-text-p {
   font-size: 22px;
 }
@@ -63,7 +67,6 @@
 
 .image-1:hover {
   scale: 1.1;
-  filter: grayscale(100);
 }
 
 .company-timeline {

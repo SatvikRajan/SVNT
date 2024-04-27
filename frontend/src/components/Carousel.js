@@ -26,7 +26,7 @@ function CaseStudiesCarousel() {
       const carousel = carouselRef.current;
       if (carousel) {
         const carouselWidth = carousel.clientWidth;
-        let numberOfCardsPerSlide = 1; // Default to 1 card per slide
+        let numberOfCardsPerSlide = 1; 
         if (carouselWidth >= 1024) {
           numberOfCardsPerSlide = 3;
         } else if (carouselWidth >= 768) {
@@ -37,7 +37,7 @@ function CaseStudiesCarousel() {
       }
     };
 
-    updateCardWidth(); // Initial call to set card width
+    updateCardWidth(); 
 
     const handleResize = () => {
       updateCardWidth();

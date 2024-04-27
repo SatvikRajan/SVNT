@@ -110,6 +110,7 @@
 }
 
 .left{
+    width: 2rem;
     filter: invert();
     background: none;
     margin-right: 2rem;
@@ -122,6 +123,7 @@
 }
 
 .right{
+    width: 2rem;
     filter: invert();
     background: none;
     margin-left: 2rem;

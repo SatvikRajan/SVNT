@@ -34,7 +34,7 @@
   right: 74rem !important;
   bottom: 2rem !important;
   margin-right: 0% !important;
-  margin-left: 5% !important;
+  margin-left: 12% !important;
 }
 
 .carousel-indicators .active {
@@ -573,7 +573,6 @@ html, body {
   text-align: -webkit-center;
   flex: 0 0 auto;
   padding: 20px;
-  margin-right: 7px;
   transition: flex 0.5s ease, width 0.5s ease; /* Add width transition */
 }
 

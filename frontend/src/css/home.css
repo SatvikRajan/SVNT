@@ -46,10 +46,11 @@
 }
 
 #carousel-button {
+  /* padding: 2px; */
   background-color: #e9e8ec;
-  width: 110px;
-  height: 13px;
-  border-radius: 16px;
+  width: 155px;
+  height: 24px;
+  border-radius: 20px;
 }
 
 .whyus {
@@ -68,9 +69,11 @@
   line-height: 50px;
 }
 .last {
+  margin-bottom: -14.4rem;
   position: relative;
 }
 .last img{
+  width: 100vw;
   position: relative;
   padding-left: 5rem;
   padding-right: 5rem;
@@ -97,7 +100,7 @@
   display: flex;
   text-shadow: 2px 2px 5px black;
   position: absolute;
-  top: 43%;
+  top: 45%;
   left: 63%;
   /* transform: translate(-50%, -50%); */
   color: white;
@@ -111,20 +114,28 @@
   text-align: right;
 }
 .last-text-1 {
+  bottom: 35rem;
+  left: 15rem;
   position: relative;
   color: white;
   font-size: 30px;
   font-weight: 400;
 }
+.last-ul{
+  bottom: 20rem;
+  left: 15rem;
+  position: relative;
+  font-size: 24px;
+}
 
 .last-contact {
   left: 28rem;
   padding: 60px;
-  top: 391rem;
+  top: 3rem;
   border-radius: 20px;
   color: black;
   background-color: #e8e8e8;
-  position: absolute;
+  position: relative;
   width: 50%;
 }
 

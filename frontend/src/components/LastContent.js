@@ -4,9 +4,9 @@ export default function LastContent() {
   return (
     <>
       <div className="last">
-        <img src={last} alt="" />
+        <img src={last} style={{marginBottom: '-5rem'}} alt="" />
         <p className="last-text-1" style={{ fontSize: '42px' }}>Career</p>
-        <ul style={{ color: 'white', paddingTop: '5rem', paddingLeft: '18rem', fontSize: '38px' }}>
+        <ul className='last-ul'>
           <li>Connect with New People</li>
           <li>Discover New Horizons </li>
           <li>Design the Future</li>
@@ -15,7 +15,7 @@ export default function LastContent() {
           <p className="last-text1 join">Join Us</p>
         </a>
       </div>
-      {/* <div className="last-contact d-flex">
+      <div className="last-contact d-flex">
           <div className="w-75">
             <h1>Not sure where to start ?</h1>
             <p>
@@ -26,7 +26,7 @@ export default function LastContent() {
           <a href="/contact" style={{filter: 'invert()'}} className="ms-auto text-light align-self-end fs-4 readmore">
             Contact Us
           </a>
-        </div> */}
+        </div>
     </>
   )
 }

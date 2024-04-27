@@ -1,16 +1,21 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import adityabirla from '../images/Home/aditya-birla.jpg';
 import vedanta from '../images/Home/vedanta.jpg';
+import cairn from '../images/Home/claire.png'
+import britannia from '../images/Home/britannia.png'
 import '../css/about.css';
-import ITC from '../images/Home/itc.png';
+import ITC from '../images/Home/itc-hotels.png';
+import itc from '../images/Home/ITC-Limited.svg'
 import gm from '../images/Home/gm.png';
 import ceo from '../images/AboutUs/ceo-image.png';
 import '../css/slider.css';
 import Managers from '../components/Managers';
 import aboutbg from '../images/AboutUs/about-bg.jpg'
 import TimeLine from '../components/Timeline'
+import laurus from '../images/Home/LAURUS.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import AboutCarousel from '../components/AboutCarousel';
 
 export const About = () => {
 
@@ -27,7 +32,8 @@ export const About = () => {
     <div className="about-us-page">
 
       <div className="about-us-head">
-        <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100vw', objectFit: 'scale-down', marginTop: '1rem' }} alt="" />
+        <AboutCarousel />
+        {/* <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100vw', objectFit: 'scale-down', marginTop: '1rem' }} alt="" /> */}
         <p className="about-us-head-name">
           Integrated Solutions,
           <br /> Empowered Choices
@@ -105,19 +111,17 @@ export const About = () => {
         </div>
       </div> */}
 
-      <TimeLine/>
+      <TimeLine />
 
       <div className="ceo d-flex">
         <div className="ceo-text">
-          <h1 className="fs-1 ceo-text-head" data-aos='fade-down'>Meet Our Managing Director </h1>
-          <p className="ceo-text-p" data-aos='fade-right'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna. nisi ut aliquip exmmodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore . Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.
+          <h1 className="fs-1 ceo-text-head mb-3" data-aos='fade-down'>Meet Our Managing Director </h1>
+          <p className="ceo-text-p w-75" data-aos='fade-right'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. nisi ut aliquip exmmodo consequat. Duis aute irure dolor.
           </p>
         </div>
         <div className="ceo-photo" data-aos='fade-left'>
-          <img className='ceo-photo-1' src={ceo} alt="" />
+          <img className='ceo-photo-1' src={ceo} alt="" /> 
         </div>
       </div>
 
@@ -132,56 +136,84 @@ export const About = () => {
               <img className="me" src={vedanta} alt="" />
             </div>
             <div class="slide-1">
-              <img className="me" src={adityabirla} alt="" />
+              <img className="me" src={ITC} alt="" />
             </div>
             <div class="slide-1">
-              <img className="me" src={vedanta} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={adityabirla} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={vedanta} alt="" />
+              <img className="me" src={laurus} alt="" />
             </div>
             <div class="slide-1">
               <img className="me" src={adityabirla} alt="" />
             </div>
             <div class="slide-1">
               <img className="me" src={vedanta} alt="" />
+            </div>
+            <div class="slide-1">
+              <img className="me" src={ITC} alt="" />
+            </div>
+            <div class="slide-1">
+              <img className="me" src={laurus} alt="" />
             </div>
           </div>
         </div>
-        {/* <br />
-        <br />
-        <br /> */}
         <div class="slider">
           <div class="slide-track">
             <div class="slide-1">
-              <img className="me" src={ITC} alt="" />
+              <img className="me" src={cairn} alt="" />
+            </div>
+            <div class="slide-1">
+              <img className="me" src={britannia} alt="" />
+            </div>
+            <div class="slide-1">
+              <img className="me" src={adityabirla} alt="" />
+            </div>
+            <div class="slide-1">
+              <img className="me" src={vedanta} alt="" />
+            </div>
+            <div class="slide-1">
+              <img className="me" src={cairn} alt="" />
+            </div>
+            <div class="slide-1">
+              <img className="me" src={britannia} alt="" />
+            </div>
+            <div class="slide-1">
+              <img className="me" src={adityabirla} alt="" />
+            </div>
+            <div class="slide-1">
+              <img className="me" src={vedanta} alt="" />
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        {/* <div class="slider">
+          <div class="slide-track">
+            <div class="slide-1">
+              <img className="me" src={itc} alt="" />
             </div>
             <div class="slide-1">
               <img className="me" src={gm} alt="" />
             </div>
             <div class="slide-1">
-              <img className="me" src={ITC} alt="" />
+              <img className="me" src={itc} alt="" />
             </div>
             <div class="slide-1">
               <img className="me" src={gm} alt="" />
             </div>
             <div class="slide-1">
-              <img className="me" src={ITC} alt="" />
+              <img className="me" src={itc} alt="" />
             </div>
             <div class="slide-1">
               <img className="me" src={gm} alt="" />
             </div>
             <div class="slide-1">
-              <img className="me" src={ITC} alt="" />
+              <img className="me" src={itc} alt="" />
             </div>
             <div class="slide-1">
               <img className="me" src={gm} alt="" />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

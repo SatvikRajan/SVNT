@@ -31,7 +31,7 @@ export default function Home() {
           <CaseStudiesCarousel />
         </div>
         <Clientele />
-        {/* <LastContent /> */}
+        <LastContent />
       </div>
     </div>
   );
