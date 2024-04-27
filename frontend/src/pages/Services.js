@@ -19,7 +19,7 @@ import SecuritySlider from '../components/Sliders/SecuritySlider';
 import EnergySlider from '../components/Sliders/EnergySlider';
 import SurveillanceSlider from '../components/Sliders/SurveillanceSlider';
 import StorageSlider from '../components/Sliders/StorageSlider';
-import Logo from '../images/svnt-logo-black-full.png';
+import Logo from '../images/svnt-logo-white-full.png';
 import { Link } from 'react-router-dom'
 
 const services = [
