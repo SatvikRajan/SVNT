@@ -474,7 +474,7 @@ ul.job-requirements {
 }
 
 .me {
-  height: 100%;
+  height: 25vh;
   object-fit: cover;
   align-self: center;
 }

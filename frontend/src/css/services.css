@@ -4,6 +4,10 @@
     object-fit: scale-down;
     margin-top: 1rem;
 }
+.service-head{
+    margin-bottom: 3rem;
+}
+
 @media (max-width: 768px) {
     .service-img{
         width: 1rem;

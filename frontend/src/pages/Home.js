@@ -29,6 +29,7 @@ export default function Home() {
         <div className="case-studies">
           <h1>Case Studies</h1>
           <CaseStudiesCarousel />
+          <a href="">Read More</a>
         </div>
         <Clientele />
         <LastContent />

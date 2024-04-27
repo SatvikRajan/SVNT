@@ -74,8 +74,8 @@ function CaseStudiesCarousel() {
 
 
   return (
-    <div id="carouselExampleControls" className="carousel slide">
-      <div className="carousel-inner" ref={carouselRef} style={{ scrollSnapType: 'x mandatory', display: 'flex' }}>
+    <div data-aos='fade-up' id="carouselExampleControls" className="carousel slide">
+      <div className="carousel-inner" ref={carouselRef} style={{ scrollSnapType: 'x mandatory', display: 'flex',marginTop: '1rem' }}>
         <div className="carousel-item5 active" style={{ minWidth: cardWidth }}>
           <div className="card-1">
             <img src={ips} alt="" />

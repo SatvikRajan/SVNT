@@ -57,7 +57,7 @@
   background-position: center;
   background-size: cover;
   background-image: url(../images/Home/casestudies-bg.jpg);
-  height: 760px;
+  height: 780px;
   padding: 5rem;
   padding-left: 10rem;
 }
@@ -74,7 +74,7 @@
   width: 25%;
   border-bottom: 1px solid white;
   padding-bottom: 5px;
-  transition: justify-content 0.5s; /* Transition justify-content over 0.5 seconds */
+  transition: justify-content 0.5s; 
 }
 
 .readmore:hover {

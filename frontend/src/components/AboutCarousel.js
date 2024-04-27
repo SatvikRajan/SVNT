@@ -19,10 +19,10 @@ function AboutCarousel() {
       <div className="slider-container" >
         <Slider {...settings}>
           <div>
-            <img style={{ height: '100%', width: '100vw', objectFit: 'scale-down', marginTop: '1rem' }} className='about-img' src={aboutbg} alt="" />
+            <img className='about-img' src={aboutbg} alt="" />
           </div>
           <div>
-            <img style={{ height: '100%', width: '100vw', objectFit: 'scale-down', marginTop: '1rem' }} className='about-img' src={aboutbg1} alt="" />
+            <img className='about-img' src={aboutbg1} alt="" />
           </div>
         </Slider>
       </div></div>

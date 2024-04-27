@@ -48,8 +48,8 @@
 #carousel-button {
   /* padding: 2px; */
   background-color: #e9e8ec;
-  width: 155px;
-  height: 24px;
+  width: 120px;
+    height: 24px;
   border-radius: 20px;
 }
 
@@ -69,7 +69,6 @@
   line-height: 50px;
 }
 .last {
-  margin-bottom: -14.4rem;
   position: relative;
 }
 .last img{
@@ -98,45 +97,45 @@
   position: relative;
   align-items: center;
   display: flex;
-  text-shadow: 2px 2px 5px black;
+  color: #251741;
   position: absolute;
-  top: 45%;
-  left: 63%;
+  top: 62%;
+  left: 62%;
   /* transform: translate(-50%, -50%); */
-  color: white;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 300;
   text-align: center;
-  color: white;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #251741;
   width: 10%;
   padding-bottom: 5px;
   text-align: right;
 }
 .last-text-1 {
-  bottom: 35rem;
-  left: 15rem;
+  color: #251741;
+  bottom: 48rem;
+  left: 14rem;
   position: relative;
-  color: white;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 500;
 }
 .last-ul{
-  bottom: 20rem;
-  left: 15rem;
+  color: #251741;
+  bottom: 15rem;
+  left: 44rem;
   position: relative;
   font-size: 24px;
 }
 
 .last-contact {
-  left: 28rem;
   padding: 60px;
-  top: 3rem;
-  border-radius: 20px;
+  border-radius: 80px;
   color: black;
   background-color: #e8e8e8;
-  position: relative;
-  width: 50%;
+  width: 90vw;
+  margin-left: 5.5rem;
+  margin-bottom: 8rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
 
 
