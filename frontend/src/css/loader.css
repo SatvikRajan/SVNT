@@ -2,8 +2,11 @@
   --uib-size: 50px;
   --uib-speed: 1.2s;
   --uib-color: #474554;
-  position: relative;
+  position: absolute;
   display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 40%);
   align-items: center;
   justify-content: center; 
   width: var(--uib-size);

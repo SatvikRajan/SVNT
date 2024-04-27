@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export default function WhyChooseUs() {
   const [currentDetail, setCurrentDetail] = useState(0);
-  const [numDisplayed, setNumDisplayed] = useState(3); // Default to 3 displayed elements
+  const [numDisplayed, setNumDisplayed] = useState(3);
+  const observer = useRef(null);
+  const whyUsRef = useRef(null);
 
   const handleClick = (index) => {
-    if (numDisplayed === 3) {
-      setCurrentDetail(index);
-    } else {
-      setCurrentDetail(currentDetail + index);
-    }
+    setCurrentDetail(index);
   };
 
   useEffect(() => {
@@ -38,11 +36,29 @@ export default function WhyChooseUs() {
       }
     };
 
-    handleResize(); // Call once to set initial state based on window size
+    handleResize(); 
 
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    observer.current = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setCurrentDetail(0);
+        }
+      });
+    });
+
+    observer.current.observe(whyUsRef.current);
+
+    return () => {
+      if (observer.current) {
+        observer.current.disconnect();
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -55,17 +71,14 @@ export default function WhyChooseUs() {
 
   const getCurrentHead = () => {
     if (numDisplayed === 1) {
-      const currentIndex = currentDetail % details.length;
-      return currentIndex === 0 ? 'Client Satisfaction' : currentIndex === 1 ? 'Future Outlook' : 'Resilience';
+      return currentDetail === 0 ? 'Client Satisfaction' : currentDetail === 1 ? 'Future Outlook' : 'Resilience';
     } else {
       return 'Why Choose Us';
     }
   };
 
   return (
-    <div
-      className="whyus"
-    >
+    <div className="whyus" ref={whyUsRef}>
       <div>
         <p className='why-choose-head'>Why Choose Us</p>
         <div className="whyus-text d-flex">

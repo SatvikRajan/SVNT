@@ -26,7 +26,7 @@ function CaseStudiesCarousel() {
       const carousel = carouselRef.current;
       if (carousel) {
         const carouselWidth = carousel.clientWidth;
-        let numberOfCardsPerSlide = 1; // Default to 1 card per slide
+        let numberOfCardsPerSlide = 1; 
         if (carouselWidth >= 1024) {
           numberOfCardsPerSlide = 3;
         } else if (carouselWidth >= 768) {
@@ -37,7 +37,7 @@ function CaseStudiesCarousel() {
       }
     };
 
-    updateCardWidth(); // Initial call to set card width
+    updateCardWidth(); 
 
     const handleResize = () => {
       updateCardWidth();
@@ -74,8 +74,8 @@ function CaseStudiesCarousel() {
 
 
   return (
-    <div id="carouselExampleControls" className="carousel slide">
-      <div className="carousel-inner" ref={carouselRef} style={{ scrollSnapType: 'x mandatory', display: 'flex' }}>
+    <div data-aos='fade-up' id="carouselExampleControls" className="carousel slide">
+      <div className="carousel-inner" ref={carouselRef} style={{ scrollSnapType: 'x mandatory', display: 'flex',marginTop: '1rem' }}>
         <div className="carousel-item5 active" style={{ minWidth: cardWidth }}>
           <div className="card-1">
             <img src={ips} alt="" />

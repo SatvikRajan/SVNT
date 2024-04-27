@@ -47,13 +47,17 @@
   padding-right: 15rem;
 }
 
+.ceo-text {
+  text-align: -webkit-center;
+}
+
 .ceo-text-p {
   font-size: 22px;
 }
 
 .managers {
   background-color: #262231;
-  color: #E9E8EC;
+  color: #e9e8ec;
   margin-top: 0% !important;
   margin: 5%;
   border-radius: 100px;
@@ -75,10 +79,12 @@
 .manager-line {
   gap: 20px;
 }
-
+.image-1 {
+  transition: ease-in-out 0.5s;
+}
 .image-1:hover {
   scale: 1.1;
-  filter: grayscale(100);
+  transition: ease-in-out 0.5s;
 }
 
 .company-timeline {
@@ -116,6 +122,12 @@
 .line {
   width: 20vw;
 }
+.about-img {
+  height: 100%;
+  width: 100vw;
+  object-fit: scale-down;
+  margin-top: 1rem;
+}
 
 @media (max-width: 768px) {
   .about-img {
@@ -132,11 +144,11 @@
   .manager-line {
     flex-wrap: wrap;
   }
-  .manager-1{
+  .manager-1 {
     padding-right: 4rem;
     padding-left: 4rem;
   }
-  
+
   .image-1 {
     width: 14rem;
   }
@@ -217,5 +229,4 @@
     margin-top: 0rem !important;
     /* padding: 2rem; */
   }
-  
 }

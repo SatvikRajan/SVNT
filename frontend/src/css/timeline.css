@@ -82,7 +82,7 @@ h1{
     left: 0;
     width: 60px;
     height: 60px;
-    background-color: black;
+    background-color: #251741;
     border-radius: 50%; /* This creates a circle */
     transform: translate(-50%, -50%);
 }
@@ -96,7 +96,7 @@ h1{
     width: 1px; /* Width of the left border */
     /* border-left: 1px solid #808283; */
     /* background: linear-gradient(to bottom, #808283 1%, transparent 50%); */
-    background-color: #808283;
+    background-color: #251741;
 }
 
 .info .info-set-up::after {
@@ -120,7 +120,7 @@ h1{
     width: 1px; /* Width of the left border */
     /* border-left: 1px solid #808283; */
     /* background: linear-gradient(to bottom, #808283 1%, transparent 50%); */
-    background-color: #808283;
+    background-color: #251741;
 }
 
 .info-set p{

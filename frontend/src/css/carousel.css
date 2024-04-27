@@ -12,11 +12,16 @@
 }
 
 .carousel-caption {
+  color: #F1FAFF;
   text-align: start !important;
-  bottom: 7.25rem !important;
-  right: 23% !important;
-  left: 10% !important;
+  bottom: 18rem;
+  right: 20% !important;
+  left: 14% !important;
   font-size: 42px;
+}
+
+.cc3{
+  bottom: 14rem;
 }
 
 .carousel-indicators {
@@ -24,12 +29,12 @@
   width: 46rem;
   height: 4rem;
   border-radius: 50px;
-  gap: 20px;
+  gap: 30px;
   opacity: 1;
   right: 74rem !important;
   bottom: 2rem !important;
   margin-right: 0% !important;
-  margin-left: 5% !important;
+  margin-left: 28% !important;
 }
 
 .carousel-indicators .active {
@@ -439,8 +444,8 @@ html, body {
 
 .card-1 {
   width: 24rem;
-  height: 30rem;
-  border-radius: 10px;
+  height: 32rem;
+  border-radius: 18px;
   overflow: hidden;
   cursor: pointer;
   position: relative;
@@ -568,7 +573,6 @@ html, body {
   text-align: -webkit-center;
   flex: 0 0 auto;
   padding: 20px;
-  margin-right: 7px;
   transition: flex 0.5s ease, width 0.5s ease; /* Add width transition */
 }
 
