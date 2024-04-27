@@ -140,11 +140,9 @@ a:hover {
   padding: 100px;
 }
 .location-card {
-  background: linear-gradient(#f8f9ff, #ffffff);
   position: relative;
   width: 400px;
   height: 160px;
-  background-color: #f0f0f0;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
     rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
     rgba(0, 0, 0, 0.07) 0px 16px 16px;
@@ -152,10 +150,6 @@ a:hover {
   overflow: hidden;
   cursor: pointer;
   transition: background-color 0.3s;
-}
-
-.location-card:hover {
-  background-color: #ccc;
 }
 
 .card-content {
@@ -172,12 +166,13 @@ a:hover {
 
 .front,
 .back {
+  color: #F1FAFF;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#f8f9ff, #ffffff);
+  background-color: #252C2A;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -187,7 +182,6 @@ a:hover {
 
 .back {
   transform: translateY(100%);
-  background-color: #fff; /* Add a background color for better visibility */
 }
 
 .location-card.hovered .front {
@@ -244,6 +238,10 @@ a:hover {
   text-align: start;
   padding-left: 18rem;
 }
+.phn{
+  color: #E9E8EC !important;
+}
+
 @media (max-width: 768px) {
   .jobs {
     flex-wrap: wrap;

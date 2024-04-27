@@ -7,6 +7,8 @@ function Card({ current, image, text }) {
     AOS.init({
       duration: 1000,
       offset: 200,
+      delay: 500,
+      once: true
     });
   }, []);
   return (

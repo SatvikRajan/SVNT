@@ -114,7 +114,7 @@ svg.btn.search {
   margin-top: -3rem;
   text-align: center;
   width: 100%;
-  background-color: #e7e8ff;
+  /* background-color: #e7e8ff; */
   gap: 10rem;
   padding: 6rem;
   display: flex;
@@ -123,11 +123,12 @@ svg.btn.search {
 }
 
 .form-box {
+
   border-radius: 20px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #262231;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .form-box-1 {
@@ -161,11 +162,12 @@ p.write1 {
 }
 
 .inp .label {
+  
+  color: #E9E8EC;
   position: absolute;
   top: 20px;
   left: 12px;
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.5);
   font-weight: 500;
   transform-origin: 0 0;
   transform: translate3d(0, 0, 0);
@@ -186,6 +188,7 @@ p.write1 {
 }
 
 .inp input {
+  color: #E9E8EC;
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
@@ -195,9 +198,9 @@ p.write1 {
   height: 56px;
   font-size: 16px;
   font-weight: 400;
+  background-color: #262231;
   /* background: rgba(0, 0, 0, 0.02); */
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
-  color: #000;
+  box-shadow: inset 0 -1px 0 #E9E8EC;
   transition: all 0.15s ease;
 }
 
@@ -323,6 +326,7 @@ ul.dropdown-menu.show {
   width: 39%;
   border-radius: 20px;
   background-color: white;
+  color: #14181A;
 }
 
 .job-form {
@@ -587,6 +591,7 @@ main {
 }
 
 .whyus {
+  justify-content: center;
   /* margin-left: 5rem; */
   padding: 5rem;
   font-size: 30px;
@@ -605,7 +610,6 @@ main {
   height: 800px;
 }
 .partners {
-  background-color: #f1faff;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url('./images/Home/genetec.png');

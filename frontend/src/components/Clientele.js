@@ -24,7 +24,9 @@ export default function Clientele() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      offset: 200
+      offset: 200,
+      delay: 500,
+      once: true
     });
   }, []);
   return (

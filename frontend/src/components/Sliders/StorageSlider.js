@@ -19,7 +19,7 @@ function SimpleSlider() {
   };
 
   const sliderStyle = {
-    width: '30%', 
+    width: '35%', 
     margin: '0 auto' 
   };
 
