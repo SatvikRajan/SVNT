@@ -50,6 +50,7 @@ export const About = () => {
     slidesPerRow: 2,
     cssEase: "linear"
   };
+
   return (
     <div className="about-us-page">
       <Link className="logo-brand" to="/">
@@ -84,59 +85,62 @@ export const About = () => {
       </div>
 
       <Managers />
-      <h1 style={{marginLeft: '10rem'}}>Clients</h1>
-      <div className="slider-container" style={{marginLeft: '28rem',textAlign: '-webkit-center', width: '50%', marginBottom: '5rem'}}>
-        <Slider {...settings}>
-          <div>
-            <img src={aequs} alt="" />
-          </div>
-          <div>
-            <img src={allergan} alt="" />
-          </div>
-          <div>
-            <img src={ampath} alt="" />
-          </div>
-          <div>
-            <img src={kia} alt="" />
-          </div>
-          <div>
-            <img src={brigade} alt="" />
-          </div>
-          <div>
-            <img src={esl} alt="" />
-          </div>
-          <div>
-            <img src={gd} alt="" />
-          </div>
-          <div>
-            <img src={akn} alt="" />
-          </div>
-          <div>
-            <img src={hc} alt="" />
-          </div>
-          <div>
-            <img src={itc} alt="" />
-          </div>
-          <div>
-            <img src={indigo} alt="" />
-          </div>
-          <div>
-            <img src={afio} alt="" />
-          </div>
-          <div>
-            <img src={abg} alt="" />
-          </div>
-          <div>
-            <img src={gm} alt="" />
-          </div>
-          <div>
-            <img src={britannia} alt="" />
-          </div>
-          <div>
-            <img src={vedanta} alt="" />
-          </div>
-        </Slider>
+      <div className='about-clients'>
+        <h1 className='client-h1'>Clients</h1>
+        <div className="slider-container" style={{ marginLeft: '15rem', marginTop: '4rem', textAlign: '-webkit-center', width: '65%', marginBottom: '5rem' }}>
+          <Slider {...settings}>
+            <div>
+              <img src={aequs} alt="" />
+            </div>
+            <div>
+              <img src={allergan} alt="" />
+            </div>
+            <div>
+              <img src={ampath} alt="" />
+            </div>
+            <div>
+              <img src={kia} alt="" />
+            </div>
+            <div>
+              <img src={brigade} alt="" />
+            </div>
+            <div>
+              <img src={esl} alt="" />
+            </div>
+            <div>
+              <img src={gd} alt="" />
+            </div>
+            <div>
+              <img src={akn} alt="" />
+            </div>
+            <div>
+              <img src={hc} alt="" />
+            </div>
+            <div>
+              <img src={itc} alt="" />
+            </div>
+            <div>
+              <img src={indigo} alt="" />
+            </div>
+            <div>
+              <img src={afio} alt="" />
+            </div>
+            <div>
+              <img src={abg} alt="" />
+            </div>
+            <div>
+              <img src={gm} alt="" />
+            </div>
+            <div>
+              <img src={britannia} alt="" />
+            </div>
+            <div>
+              <img src={vedanta} alt="" />
+            </div>
+          </Slider>
+        </div>
       </div>
+
     </div>
   );
 };

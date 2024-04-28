@@ -8,8 +8,6 @@ import img4 from '../images/Home/sec-mgmt-img.png'
 import img5 from '../images/Home/storage-img.svg'
 import img7 from '../images/Home/integration-sol-img.svg'
 import img6 from '../images/Home/audio-vis-img.svg'
-
-import companyLogo from '../images/Home/companyLogo.svg';
 import logo3 from '../images/Home/surveillance-safety-white.svg';
 import logo1 from '../images/Home/ip-surveillance-white.svg';
 import logo2 from '../images/Home/energy-white.svg';
@@ -18,8 +16,6 @@ import logo4 from '../images/Home/security-mgmt-white.svg';
 import logo7 from '../images/Home/integration-white.svg';
 import logo5 from '../images/Home/storage-white.svg';
 import logo6 from '../images/Home/audio-vis-white.svg';
-import { useState } from 'react';
-
 import close from '../images/Home/cross.svg'
 import '../css/wwdb.css'
 

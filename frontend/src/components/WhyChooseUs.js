@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 export default function WhyChooseUs() {
   const [currentDetail, setCurrentDetail] = useState(0);
   const [numDisplayed, setNumDisplayed] = useState(3);
+  const [isInView, setIsInView] = useState(false);
   const observer = useRef(null);
   const whyUsRef = useRef(null);
 
@@ -47,13 +48,16 @@ export default function WhyChooseUs() {
     observer.current = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setCurrentDetail(0);
+          setIsInView(true);
+          setCurrentDetail(0); 
+        } else {
+          setIsInView(false);
         }
       });
     });
-
+  
     observer.current.observe(whyUsRef.current);
-
+  
     return () => {
       if (observer.current) {
         observer.current.disconnect();
@@ -63,11 +67,14 @@ export default function WhyChooseUs() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentDetail((prevDetail) => (prevDetail + 1) % details.length);
+      if (isInView) {
+        setCurrentDetail((prevDetail) => (prevDetail + 1) % details.length);
+      }
     }, 5000);
-
+  
     return () => clearInterval(interval);
-  }, []);
+  }, [isInView]);
+  
 
   const getCurrentHead = () => {
     if (numDisplayed === 1) {

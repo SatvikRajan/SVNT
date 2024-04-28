@@ -58,7 +58,7 @@ const Contact = () => {
           How may we help you?</div>
       </div>
 
-      <div className="form-body " >
+      <div className="form-body" >
         <div className="write" data-aos="fade-right">
           <h1 className='write-h1' style={{ marginBottom: '22px', fontSize: '42px' }}>Contact Us</h1>
           <p className="write1">
@@ -66,6 +66,19 @@ const Contact = () => {
             <br /> feedback, or just a quick hello !
             {/* Fix this */}
           </p>
+          <br/>
+          <p className="write1">
+            Feel free to contact us for inquiries,
+            <br /> feedback, or just a quick hello !
+            {/* Fix this */}
+          </p>
+          <br/>
+          <p className="write1">
+            Feel free to contact us for inquiries,
+            <br /> feedback, or just a quick hello !
+            {/* Fix this */}
+          </p>
+          <br/>
           <p className='write1'>Gain deeper insight into our services</p>
         </div>
         <div className="form-box" data-aos="fade-left">
@@ -136,10 +149,10 @@ const Contact = () => {
             address="House No : 07, Second Floor, Vinoba Puri, Lajpat Nagar-2, New Delhi - 110024"
           />
         </div>
-        <p style={{ marginBottom: '60px', color: '#E9E8EC' }}>
+        <p style={{ marginBottom: '60px'}}>
           <b>Ph : </b>
-          <a className='phn' href="tel:+914027153387">040-27153387 </a>,<a className='phn' href="tel:+919397005115"> 9397005115 </a>,
-          <a className='phn' href="tel:+918800630726"> 8800630726 </a>,<a className='phn' href="tel:+919441234471"> 9441234471 </a>
+          <a href="tel:+914027153387">040-27153387 </a>,<a href="tel:+919397005115"> 9397005115 </a>,
+          <a href="tel:+918800630726"> 8800630726 </a>,<a href="tel:+919441234471"> 9441234471 </a>
         </p>
       </div>
     </div>

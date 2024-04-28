@@ -124,10 +124,12 @@ svg.btn.search {
 }
 
 .form-body {
+  margin-left: 8rem;
+  margin-right: 8rem;
   margin-top: -3rem;
   text-align: center;
-  width: 100%;
-  /* background-color: #e7e8ff; */
+  border-radius: 80px;
+  background: linear-gradient(to right, #E2E4F4, #CDD4FD);
   gap: 10rem;
   padding: 6rem;
   display: flex;
@@ -136,6 +138,7 @@ svg.btn.search {
 }
 
 .form-box {
+  background-color: white;
   width: 44rem;
   border-radius: 20px;
   padding: 20px;
@@ -330,6 +333,7 @@ ul.dropdown-menu.show {
 }
 
 .job-des {
+  position: relative;
   height: 40rem;
   margin-top: 2rem;
   padding: 30px;
@@ -747,4 +751,15 @@ main {
   padding-bottom: 10px;
   margin: 0 20px;
   font-size: 38px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logo-brand{
+    top: 38px;
+    left: 90px;
+  }
+  .logo-brand img{
+    width: 310px;
+    height: 36px;
+  }
 }

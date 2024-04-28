@@ -27,13 +27,13 @@ function SimpleSlider() {
     <div className="slider-container" style={sliderStyle}>
       <Slider {...settings}>
         <div>
-          <img style={{width:'100%'}} src={ips1} alt="" />
+          <img style={{width:'95%'}} src={ips1} alt="" />
         </div>
         <div>
-        <img style={{width:'100%'}} src={ips2} alt="" />
+        <img style={{width:'95%'}} src={ips2} alt="" />
         </div>
         <div>
-        <img style={{width:'100%'}} src={ips3} alt="" />
+        <img style={{width:'95%'}} src={ips3} alt="" />
         </div>
       </Slider>
     </div>

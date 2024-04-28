@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
-import ips from '../images/Home/home-carousel-genpact.png';
-import ipn from '../images/Home/home-carousel-bial.png';
-import str from '../images/Home/home-carousel-itc.png';
+import ips from '../images/Home/home-carousel-genpact.webp';
+import ipn from '../images/Home/home-carousel-bial.webp';
+import str from '../images/Home/home-carousel-itc.webp';
 import sms from '../images/Home/home-carousel-bel';
-import is from '../images/Home/home-carousel-statocast.png';
+import is from '../images/Home/home-carousel-statocast.webp';
 import sss from '../images/Home/home-carousel-jsw';
-import avs from '../images/Home/home-carousel-cfcl.png';
-import es from '../images/Home/home-carousel-aragen.png';
+import avs from '../images/Home/home-carousel-cfcl.webp';
+import es from '../images/Home/home-carousel-aragen.webp';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

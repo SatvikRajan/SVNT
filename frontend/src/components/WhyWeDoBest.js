@@ -70,7 +70,7 @@ export default function WhyWeDoBest() {
               setLeftPos(709);
             }}>
               <p>{names[0]}</p>
-              <img className='logoImg' src={logo0} />
+              <img className='logoImg' src={logo0} alt='client'/>
             </div>
 
             <div className='m1' data-aos='fade-right' onClick={() => {
@@ -81,7 +81,7 @@ export default function WhyWeDoBest() {
             }}
             >
               <p>{names[1]}</p>
-              <img className='logoImg' src={logo1} />
+              <img className='logoImg' src={logo1} alt='client'/>
             </div>
 
             <div className='m2' data-aos='fade-right' onClick={() => {
@@ -91,7 +91,7 @@ export default function WhyWeDoBest() {
               setLeftPos(409);
             }}>
               <p>{names[2]}</p>
-              <img className='logoImg' src={logo2} />
+              <img className='logoImg' src={logo2} alt='client'/>
             </div>
 
             <div className='m3' data-aos='fade-right' onClick={() => {
@@ -101,7 +101,7 @@ export default function WhyWeDoBest() {
               setLeftPos(193);
             }}>
               <p>{names[3]}</p>
-              <img className='logoImg' src={logo3} />
+              <img className='logoImg' src={logo3} alt='client'/>
             </div>
 
             <div className='m4' data-aos='fade-up' onClick={() => {
@@ -110,7 +110,7 @@ export default function WhyWeDoBest() {
               setTopPos(565);
               setLeftPos(642);
             }}>
-              <img className='logoImg' src={logo4} />
+              <img className='logoImg' src={logo4} alt='client'/>
               <p>{names[4]}</p>
             </div>
 
@@ -120,7 +120,7 @@ export default function WhyWeDoBest() {
               setTopPos(490);
               setLeftPos(985);
             }}>
-              <img className='logoImg' src={logo5} />
+              <img className='logoImg' src={logo5} alt='client'/>
               <p>{names[5]}</p>
             </div>
 
@@ -130,7 +130,7 @@ export default function WhyWeDoBest() {
               setTopPos(379);
               setLeftPos(1034);
             }}>
-              <img className='logoImg' src={logo6} />
+              <img className='logoImg' src={logo6} alt='client'/>
               <p>{names[6]}</p>
             </div>
 
@@ -140,7 +140,7 @@ export default function WhyWeDoBest() {
               setTopPos(267);
               setLeftPos(985);
             }}>
-              <img className='logoImg' src={logo7} />
+              <img className='logoImg' src={logo7} alt='client'/>
               <p>{names[7]}</p>
             </div>
 

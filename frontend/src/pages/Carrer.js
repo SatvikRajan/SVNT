@@ -516,6 +516,9 @@ export const CareersPage = () => {
                     Apply Now
                   </button>
                 </div>
+                <div className="overlay">
+                  <p className="overlay-text">Coming Soon</p>
+                </div>
               </div>
             )}
           </div>

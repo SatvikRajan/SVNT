@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../css/card.css';
-import image1 from '../images/Home/carousel-image1.png';
-import image2 from '../images/Home/carousel-image2.png';
-import image3 from '../images/Home/carousel-image3.png';
-import image4 from '../images/Home/carousel-image4.png';
+import image1 from '../images/Home/carousel-image1.webp';
+import image2 from '../images/Home/carousel-image2.webp';
+import image3 from '../images/Home/carousel-image3.webp';
 
 function Carosuel1() {
   return (
