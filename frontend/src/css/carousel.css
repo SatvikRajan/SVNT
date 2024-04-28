@@ -30,7 +30,7 @@
   height: 4rem;
   border-radius: 50px;
   gap: 30px;
-  opacity: 1;
+  opacity: 1 !important;
   right: 74rem !important;
   bottom: 2rem !important;
   margin-right: 0% !important;
@@ -440,6 +440,12 @@ html, body {
   .card-1 .img-wrapper {
     height: 17em;
   }
+}
+.ccr{
+  left: 68rem;
+  top: 22rem;
+  font-size:  30px;
+  position: absolute;
 }
 
 .card-1 {

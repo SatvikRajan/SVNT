@@ -25,6 +25,7 @@ import abg from '../images/AboutUs/client-abg.svg'
 import gm from '../images/AboutUs/client-gm.svg'
 import britannia from '../images/AboutUs/client-britannia.svg'
 import vedanta from '../images/AboutUs/client-vedanta.svg'
+import Slider from "react-slick";
 
 export const About = () => {
 
@@ -33,14 +34,26 @@ export const About = () => {
       duration: 1000,
       once: true,
       offset: 300,
-      delay: 200
+      delay: 500
     });
   }, []);
-
+  const settings = {
+    arrows: false,
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    speed: 6000,
+    rows: 2,
+    slidesPerRow: 2,
+    cssEase: "linear"
+  };
   return (
     <div className="about-us-page">
       <Link className="logo-brand" to="/">
-          <img src={Logo} alt="SVNT Tech" height={30} />
+        <img src={Logo} alt="SVNT Tech" height={30} />
       </Link>
       <div className="about-us-head">
         <AboutCarousel />
@@ -66,103 +79,63 @@ export const About = () => {
           </p>
         </div>
         <div className="ceo-photo" data-aos='fade-left'>
-          <img className='ceo-photo-1' src={ceo} alt="" /> 
+          <img className='ceo-photo-1' src={ceo} alt="" />
         </div>
       </div>
 
       <Managers />
-      <div className="slides" data-aos='fade-down'>
-        <div class="slider">
-          <div class="slide-track">
-            <div class="slide-1">
-              <img className="me" src={aequs} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={allergan} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={ampath} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={kia} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={brigade} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={esl} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={gd} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={akn} alt="" />
-            </div>
+      <h1 style={{marginLeft: '10rem'}}>Clients</h1>
+      <div className="slider-container" style={{marginLeft: '28rem',textAlign: '-webkit-center', width: '50%', marginBottom: '5rem'}}>
+        <Slider {...settings}>
+          <div>
+            <img src={aequs} alt="" />
           </div>
-          <br/>
-        <br/>
-        <br/>
-        </div>
-       
-        <div class="slider">
-          <div class="slide-track">
-            <div class="slide-1">
-              <img className="me" src={hc} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={itc} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={indigo} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={afio} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={abg} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={gm} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={britannia} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={vedanta} alt="" />
-            </div>
+          <div>
+            <img src={allergan} alt="" />
           </div>
-        </div>
-        <br />
-        <br />
-        <br />
-        {/* <div class="slider">
-          <div class="slide-track">
-            <div class="slide-1">
-              <img className="me" src={itc} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={gm} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={itc} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={gm} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={itc} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={gm} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={itc} alt="" />
-            </div>
-            <div class="slide-1">
-              <img className="me" src={gm} alt="" />
-            </div>
+          <div>
+            <img src={ampath} alt="" />
           </div>
-        </div> */}
+          <div>
+            <img src={kia} alt="" />
+          </div>
+          <div>
+            <img src={brigade} alt="" />
+          </div>
+          <div>
+            <img src={esl} alt="" />
+          </div>
+          <div>
+            <img src={gd} alt="" />
+          </div>
+          <div>
+            <img src={akn} alt="" />
+          </div>
+          <div>
+            <img src={hc} alt="" />
+          </div>
+          <div>
+            <img src={itc} alt="" />
+          </div>
+          <div>
+            <img src={indigo} alt="" />
+          </div>
+          <div>
+            <img src={afio} alt="" />
+          </div>
+          <div>
+            <img src={abg} alt="" />
+          </div>
+          <div>
+            <img src={gm} alt="" />
+          </div>
+          <div>
+            <img src={britannia} alt="" />
+          </div>
+          <div>
+            <img src={vedanta} alt="" />
+          </div>
+        </Slider>
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ import { About } from './pages/About';
 import Services from './pages/Services';
 import Admin from './pages/Admin';
 import AdminPage from './pages/AdminPage';
-import Loader from './components/Loader'; // Import the Loader component
+import Loader from './components/Loader'; 
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,14 +19,14 @@ function App() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 5000);
     return () => clearTimeout(timeout);
   }, []);
 
   return (
     <BrowserRouter>
       {isLoading ? (
-        <div style={{position: 'relative', height: '100vh', width: '100vw'}}>
+        <div style={{position: 'relative', height: '100vh', width: '100vw', backgroundColor: '#F1FAFF'}}>
           <Loader />
         </div>
       ) : (

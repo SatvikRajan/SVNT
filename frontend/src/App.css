@@ -82,7 +82,7 @@ svg.btn.search {
   border-radius: 100px !important;
   background: linear-gradient(135deg, #251741, #5023aa);
   margin-bottom: 0px;
-  margin-top: 130px;
+  margin-top: 22rem;
 }
 
 .submit:hover {
@@ -136,12 +136,11 @@ svg.btn.search {
 }
 
 .form-box {
-
+  width: 44rem;
   border-radius: 20px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  background-color: #262231;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .form-box-1 {
@@ -176,7 +175,7 @@ p.write1 {
 
 .inp .label {
   
-  color: #E9E8EC;
+  color: #251741;
   position: absolute;
   top: 20px;
   left: 12px;
@@ -201,7 +200,7 @@ p.write1 {
 }
 
 .inp input {
-  color: #E9E8EC;
+  color: #514567;
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
@@ -211,9 +210,8 @@ p.write1 {
   height: 56px;
   font-size: 16px;
   font-weight: 400;
-  background-color: #262231;
   /* background: rgba(0, 0, 0, 0.02); */
-  box-shadow: inset 0 -1px 0 #E9E8EC;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
   transition: all 0.15s ease;
 }
 

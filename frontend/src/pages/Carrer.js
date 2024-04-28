@@ -71,7 +71,7 @@ export const CareersPage = () => {
   return (
     <div className="careers-page">
       <Link className="logo-brand" to="/">
-          <img src={Logo} alt="SVNT Tech" height={30} />
+        <img src={Logo} alt="SVNT Tech" height={30} />
       </Link>
       <div className="career-start">
         <div className="career-image">
@@ -200,7 +200,7 @@ export const CareersPage = () => {
                     </svg>
                     Full Time
                   </p>
-                  <div className="form-box-1" >
+                  <div className="form-box-1">
                     <span style={{ marginLeft: "10px" }}>Apply Online</span>
                     <label for="inp" class="inp">
                       <input type="text" id="inp" placeholder="&nbsp;" value={name} onChange={(e) => setName(e.target.value)} />
@@ -251,7 +251,7 @@ export const CareersPage = () => {
                 </div>
               </div>
             ) : (
-              <div className="job-des d-flex" data-aos='fade-left'>
+              <div className="job-des d-flex">
                 <div style={{ marginLeft: "-35px", marginRight: "15px" }}>
                   {" "}
                   <svg
@@ -511,6 +511,7 @@ export const CareersPage = () => {
                     className="apply custom-apply-btn"
                     onClick={handleApplyClick}
                     type="button"
+                    disabled
                   >
                     Apply Now
                   </button>
@@ -533,7 +534,6 @@ export const CareersPage = () => {
             <div style={{ alignSelf: "center" }} data-aos='fade-left'>
               <h1
                 style={{
-                  color: "#F1FAFF",
                   fontWeight: "600",
                   marginBottom: "25px",
                 }}

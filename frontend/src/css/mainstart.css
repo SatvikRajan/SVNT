@@ -110,7 +110,10 @@
   height: 100%;
   font-size: 23px;
 }
-
+.n1{
+  font-weight: 500;
+  color: #514567;
+}
 /* .videoText a{
   position: absolute;
   width: 374px;

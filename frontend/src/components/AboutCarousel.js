@@ -10,9 +10,9 @@ function AboutCarousel() {
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     autoplay: true,
-    autoplaySpeed: 2000, 
+    autoplaySpeed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1
   };
@@ -27,7 +27,8 @@ function AboutCarousel() {
             <img className='about-img' src={aboutbg1} alt="" />
           </div>
         </Slider>
-      </div></div>
+      </div>
+    </div>
   )
 }
 

@@ -60,7 +60,7 @@ const Contact = () => {
 
       <div className="form-body " >
         <div className="write" data-aos="fade-right">
-          <h1 className='write-h1' style={{ color: '#F1FAFF', marginBottom: '22px', fontSize: '42px' }}>Contact Us</h1>
+          <h1 className='write-h1' style={{ marginBottom: '22px', fontSize: '42px' }}>Contact Us</h1>
           <p className="write1">
             Feel free to contact us for inquiries,
             <br /> feedback, or just a quick hello !

@@ -7,6 +7,7 @@
 .offices {
   letter-spacing: 0.1px;
   border-radius: 20px;
+  
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -16,7 +17,7 @@
   border-radius: 20px;
   justify-content: center;
   display: flex;
-  gap: 30px;
+  gap: 50px;
   /* flex-wrap: wrap; */
   margin-bottom: 30px;
 }
@@ -166,13 +167,11 @@ a:hover {
 
 .front,
 .back {
-  color: #F1FAFF;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #252C2A;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -241,7 +240,6 @@ a:hover {
 .phn{
   color: #E9E8EC !important;
 }
-
 @media (max-width: 768px) {
   .jobs {
     flex-wrap: wrap;
