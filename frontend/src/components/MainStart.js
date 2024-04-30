@@ -70,16 +70,20 @@ export default function MainStart() {
       <div className="row years" ref={yearsRef}>
         <div className=" text-center col">
           <span></span>
-          <p className="value number5">5</p>
+          <div className="d-flex align-items-center justify-content-center">
+            <p className="value number5">5</p>
+            <span style={{ fontSize: '54px' }}>+</span>
+          </div>
+
           <p className="x">CLIENTS</p>
         </div>
         <div className="d-flex align-items-center x1 col">
           <p className="value number20">20</p>
-          <p style={{ fontSize: '37px', paddingTop:'7rem' }}>Years</p>
+          <p style={{ fontSize: '37px', paddingTop: '7rem' }}>Years</p>
         </div>
         <div className="text-center col">
           <div className='d-flex align-items-center justify-content-center'>
-            <p className="value number60">1000</p><span style={{fontSize: '54px'}}>+</span>
+            <p className="value number60">1000</p><span style={{ fontSize: '54px' }}>+</span>
           </div>
           <p className="x">PROJECTS</p>
         </div>
@@ -90,7 +94,7 @@ export default function MainStart() {
           cutting-edge networking and communication solutions for evolving needs. With unwavering determination, we
           strive to lead in delivering innovative solutions globally.
         </p>
-        <a className="align-self-end" style={{marginLeft:'8.5rem'}} href="/about" data-aos='fade-left'>
+        <a className="align-self-end" style={{ marginLeft: '8.5rem' }} href="/about" data-aos='fade-left'>
           <p className="fs-4 text-light w-100 readmore">Read more</p>
         </a>
       </div>
