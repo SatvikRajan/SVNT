@@ -146,11 +146,12 @@
 
 
 
-.service-details {
+
+.service-content {
   opacity: 0; 
 }
 
-.service-details.fade-in {
+.fade-in {
   animation: fade-in 0.5s forwards;
 }
 

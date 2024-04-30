@@ -19,17 +19,18 @@ function SimpleSlider() {
 
   const sliderStyle = {
     width: '35%', 
-    margin: '0 auto' 
+    margin: '0 auto',
+    float: 'right'
   };
 
   return (
     <div className="slider-container" style={sliderStyle}>
       <Slider {...settings}>
         <div>
-          <img style={{width:'95%'}} src={ss1} alt="" />
+          <img style={{width: "100%"}} src={ss1} alt="" />
         </div>
         <div>
-        <img style={{width:'95%'}} src={ss2} alt="" />
+        <img style={{width: "100%"}} src={ss2} alt="" />
         </div>
       </Slider>
     </div>
