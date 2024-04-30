@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import bg from '../images/CaseStudies/cs-bangaloreIA-2.png'
 import bgMain from '../images/CaseStudies/cs-bangaloreIA-3.png'
+import jsw from '../images/CaseStudies/cs-JSW-1.png'
+import jswback from '../images/CaseStudies/cs-JSW-2.png'
 import cross from '../images/CaseStudies/cross.png'
 
 const items = [
@@ -25,8 +27,8 @@ const items = [
     },
     {
         id: 2,
-        bg1:bgMain,
-        bgImg: bg,
+        bg1:jswback,
+        bgImg: jsw,
         title: "Bangalore International Airport",
         subtitle: "How SVNT implements Security Measures in Kempagowda international Airport",
         desc: [

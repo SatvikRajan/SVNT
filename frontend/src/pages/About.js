@@ -47,7 +47,7 @@ export const About = () => {
     slidesToScroll: 1,
     speed: 6000,
     rows: 2,
-    slidesPerRow: 2,
+    slidesPerRow: 3,
     cssEase: "linear"
   };
 
@@ -59,11 +59,7 @@ export const About = () => {
       <div className="about-us-head">
         <AboutCarousel />
         {/* <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100vw', objectFit: 'scale-down', marginTop: '1rem' }} alt="" /> */}
-        <p className="about-us-head-name">
-          Integrated Solutions,
-          <br /> Empowered Choices
-        </p>
-        <p className="about-us-head-name1">We are the Blueprint</p>
+
       </div>
       <div className="svnt-info" data-aos='fade-up'>
         Established in 2003, SVNT Infotech Pvt Ltd set out on a mission to revolutionize IT infrastructure solutions.
@@ -76,7 +72,7 @@ export const About = () => {
         <div className="ceo-text">
           <h1 className="fs-1 ceo-text-head mb-3" data-aos='fade-down'>Meet Our Managing Director </h1>
           <p className="ceo-text-p w-75" data-aos='fade-right'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. nisi ut aliquip exmmodo consequat. Duis aute irure dolor.
+            Opportunities don’t come knocking at your door, you must build your own door
           </p>
         </div>
         <div className="ceo-photo" data-aos='fade-left'>
@@ -87,7 +83,7 @@ export const About = () => {
       <Managers />
       <div className='about-clients'>
         <h1 className='client-h1'>Clients</h1>
-        <div className="slider-container" style={{ marginLeft: '15rem', marginTop: '4rem', textAlign: '-webkit-center', width: '65%', marginBottom: '5rem' }}>
+        <div className="slider-container" style={{ marginTop: '4rem', textAlign: '-webkit-center',  marginBottom: '5rem' }}>
           <Slider {...settings}>
             <div>
               <img src={aequs} alt="" />
@@ -136,6 +132,12 @@ export const About = () => {
             </div>
             <div>
               <img src={vedanta} alt="" />
+            </div>
+            <div>
+              <img src={itc} alt="" />
+            </div>
+            <div>
+              <img src={hc} alt="" />
             </div>
           </Slider>
         </div>

@@ -20,7 +20,8 @@ function SimpleSlider() {
 
   const sliderStyle = {
     width: '35%', 
-    margin: '0 auto' 
+    margin: '0 auto' ,
+    float:'right'
   };
 
   return (

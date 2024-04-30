@@ -37,6 +37,8 @@
 }
 
 .svnt-info {
+  line-height: 50px;
+  font-weight: 500;
   margin-left: 5rem;
   margin-right: 5rem;
   font-size: 28px;
@@ -44,6 +46,7 @@
 }
 
 .ceo {
+  margin-bottom: -3rem;
   align-items: center;
   text-align: center;
   padding-left: 15rem;
@@ -51,10 +54,13 @@
 }
 
 .ceo-text {
+  color: #251741;
+  font-weight: 500;
   text-align: -webkit-center;
 }
 
 .ceo-text-p {
+  color: #514567;
   font-size: 22px;
 }
 
@@ -139,7 +145,7 @@
   margin-right: 6rem;
   margin-left: 6rem;
   padding: 5rem;
-  background-color: #e3dbfb;
+  /* background-color: #e3dbfb; */
 }
 
 @media (max-width: 768px) {

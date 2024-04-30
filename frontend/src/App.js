@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1000);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -58,7 +58,7 @@ const MainLayout = ({ children }) => (
 function ScrollToTop({ children }) {
   const { pathname } = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../css/services.css';
@@ -36,14 +36,25 @@ const services = [
 ];
 
 export default function Services() {
+  const ref = useRef(null)
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [detailsChanging, setDetailsChanging] = useState(false);
   const currentService = services[currentIndex];
 
   const onSecondPart = currentIndex >= 4;
+
   const handleClick = (index) => {
+    setDetailsChanging(true); 
     setCurrentIndex(index === currentIndex ? null : index);
   };
 
+  useEffect(()=>{
+    if(!ref) return
+    ref.current.classList.remove('fade-in')
+    // ref.current.classList.add('fade-in')
+    setTimeout(()=>{ref.current.classList.add('fade-in')},100)
+    
+  },[currentIndex])
 
   useEffect(() => {
     AOS.init({
@@ -53,19 +64,19 @@ export default function Services() {
     });
   }, []);
 
-
-
   const handleNextPage = () => {
     const nextIndex = (currentIndex + 1) % services.length;
     if (nextIndex === 4) {
 
     }
     setCurrentIndex(nextIndex);
+    setDetailsChanging(true); 
   };
 
   const handlePrevPage = () => {
     const prevIndex = (currentIndex - 1) % services.length;
     setCurrentIndex(prevIndex);
+    setDetailsChanging(true); 
   };
 
   return (
@@ -126,17 +137,10 @@ export default function Services() {
             </div>
             <button style={{ height: '20px' }} className='right' onClick={handleNextPage} disabled={currentIndex >= services.length}></button>
           </div>
-          <div className="services-mainf" style={{ padding: '3rem', height: '35rem' }}>
+          <div className="services-mainf" style={{ padding: '3rem', height: '35rem', marginTop: '1rem' }}>
             {currentService && (
               <div>
-                <div className="d-flex" style={{gap: '15px'}}>
-                  <div className='services-ndetails' style={{ width: '70%' }}>
-                    <div className="d-flex imgtit align-items-center">
-                      <img className='service-img' src={currentService.image} alt="" />
-                      <p className='service-title' style={{ marginBottom: '0', fontSize: '38px' }}>{currentService.title}</p>
-                    </div>
-                    <p className='service-details' style={{ fontSize: '24px', lineHeight: '54px', letterSpacing: '5%' }}>{currentIndex !== null ? services[currentIndex].details : currentService.details}</p>
-                  </div>
+                <div style={{ gap: '15px' }}>
                   {currentService.title === 'IP Surveillance Solution' && <IPSlider />}
                   {currentService.title === 'IP Networking Solution' && <INSlider />}
                   {currentService.title === 'Integration Solutions' && <IntegrationSlider />}
@@ -145,8 +149,15 @@ export default function Services() {
                   {currentService.title === 'Energy Solutions' && <EnergySlider />}
                   {currentService.title === 'Surveillance and Safety' && <SurveillanceSlider />}
                   {currentService.title === 'Storage' && <StorageSlider />}
+                  <div className='services-ndetails' style={{}}>
+                    <div className="d-flex imgtit align-items-center">
+                      <img className='service-img' src={currentService.image} alt="" />
+                      <p className='service-title' style={{ marginBottom: '0', fontSize: '38px' }}>{currentService.title}</p>
+                    </div>
+                    <p ref={ref} className={`service-details fade-in`} style={{ fontSize: '24px', lineHeight: '54px', letterSpacing: '5%' }}>{currentIndex !== null ? services[currentIndex].details : currentService.details}</p>
+                  </div>
                 </div>
-                <p className='service-details' style={{ fontSize: '24px', lineHeight: '50px', letterSpacing: '5%', marginTop: '-13px' }}>{currentIndex !== null ? services[currentIndex].details1 : currentService.details1}</p>
+                {/* <p className={`service-details ${detailsChanging ? 'fade-in' : ''}`} style={{ fontSize: '24px', lineHeight: '50px', letterSpacing: '5%', marginTop: '-13px', float:"left" }}>{currentIndex !== null ? services[currentIndex].details1 : currentService.details1}</p> */}
               </div>
             )}
           </div>
@@ -155,3 +166,4 @@ export default function Services() {
     </div>
   );
 }
+

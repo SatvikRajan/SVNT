@@ -59,7 +59,7 @@
   background-image: url(../images/Home/casestudies-bg.webp);
   height: 780px;
   padding: 5rem;
-  padding-left: 10rem;
+  padding-left: 5rem;
 }
 
 .case-studies h1 {
@@ -112,7 +112,6 @@
 }
 .n1{
   font-weight: 500;
-  color: #514567;
 }
 /* .videoText a{
   position: absolute;

@@ -530,10 +530,10 @@ html, body {
   width: 5%;
 }
 .carousel-control-prev {
-  left: -60px;
+  left: -50px;
 }
 .carousel-control-next {
-  right: -60px;
+  right: -48px;
 }
 .carousel-control-next-icon:hover,
 .carousel-control-prev-icon:hover {

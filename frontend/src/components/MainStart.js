@@ -78,7 +78,9 @@ export default function MainStart() {
           <p style={{ fontSize: '37px', paddingTop:'7rem' }}>Years</p>
         </div>
         <div className="text-center col">
-          <p className="value number60">1000</p>
+          <div className='d-flex align-items-center justify-content-center'>
+            <p className="value number60">1000</p><span style={{fontSize: '54px'}}>+</span>
+          </div>
           <p className="x">PROJECTS</p>
         </div>
       </div>

@@ -1,9 +1,10 @@
 .location {
+  padding-bottom: 1rem;
+  background-color: #CDD4FD;
   margin: 5rem;
   border-radius: 80px;
   margin-left: 8rem;
   margin-right: 8rem;
-  border: 1px solid #251741;
   text-align: center;
 }
 .location-name {
@@ -22,7 +23,7 @@
   border-radius: 20px;
   justify-content: center;
   display: flex;
-  gap: 80px;
+  gap: 90px;
   /* flex-wrap: wrap; */
   margin-bottom: 30px;
 }
@@ -55,14 +56,15 @@ a:hover {
 }
 
 .career-text1 {
+  text-align-last: center;
   width: 30%;
-  text-shadow: 2px 2px 5px black;
+  /* text-shadow: 2px 2px 5px black; */
   text-align: start;
   position: relative;
-  color: white;
+  color: #251741;
   font-size: 35px;
   bottom: 15rem;
-  left: 10%;
+  left: 35%;
   font-weight: 600;
 }
 .career-text2 {
@@ -172,7 +174,7 @@ a:hover {
 
 .front,
 .back {
-  background: linear-gradient(to right, #E0E3F5, #D0D5FB);
+  background-color: #F1FAFF;
   position: absolute;
   top: 0;
   left: 0;

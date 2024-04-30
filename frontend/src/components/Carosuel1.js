@@ -19,7 +19,7 @@ function Carosuel1() {
           <div class="carousel-caption cc1 d-none d-md-block">
             {/* <h1>First slide label</h1> */}
             <p>Behind the Scenes: Our Role in<br /> Safeguarding ITC Royal Bengal</p>
-            <a href=""><p className='ccr text-white readmore'>Read More</p></a>
+            <a href="/casestudies"><p className='ccr text-white readmore'>Read More</p></a>
           </div>
         </div>
         <div class="carousel-item" >
@@ -27,7 +27,7 @@ function Carosuel1() {
           <div class="carousel-caption cc2 d-none d-md-block">
             {/* <h1>Second slide label</h1> */}
             <p >Nestled in the Heart of Hyderabad ,<br /> where Innovation Meets Culture.</p>
-            <a href=""><p className='ccr text-white readmore'>Read More</p></a>
+            <a href="/casestudies"><p className='ccr text-white readmore'>Read More</p></a>
           </div>
         </div>
         <div class="carousel-item" >
@@ -36,7 +36,7 @@ function Carosuel1() {
             {/* <h1>Third slide label</h1> */}
             <p>Sky High!<br />
               Discover our vital contribution to ensuring<br /> security at Kempagowda International Airport</p>
-              <a href=""><p className='ccr text-white readmore'>Read More</p></a>
+              <a href="/casestudies"><p className='ccr text-white readmore'>Read More</p></a>
           </div>
         </div>
         <div class="carousel-item" >
@@ -44,7 +44,7 @@ function Carosuel1() {
           <div class="carousel-caption cc4 d-none d-md-block">
             {/* <h1>Third slide label</h1> */}
             <p>Sky High! Discover our vital contribution to ensuring security at Kempagowda International Airport</p>
-            <a href=""><p className='ccr text-white readmore'>Read More</p></a>
+            <a href="/casestudies"><p className='ccr text-white readmore'>Read More</p></a>
           </div>
         </div>
       </div>

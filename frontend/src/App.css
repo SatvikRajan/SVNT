@@ -130,10 +130,9 @@ svg.btn.search {
   text-align: center;
   border-radius: 80px;
   background: linear-gradient(to right, #E2E4F4, #CDD4FD);
-  gap: 10rem;
+  gap: 5rem;
   padding: 6rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -157,7 +156,7 @@ svg.btn.search {
   display: flex;
 }
 .write {
-  margin-top: 17px;
+  margin-top: 4px;
   text-align: start;
 }
 .write1 {
@@ -165,7 +164,7 @@ svg.btn.search {
   font-weight: 400;
 }
 p.write1 {
-  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 .inp {
   padding-left: 10px;
@@ -177,13 +176,11 @@ p.write1 {
 }
 
 .inp .label {
-  
-  color: #251741;
+  color: #747474;
   position: absolute;
   top: 20px;
   left: 12px;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
   transform-origin: 0 0;
   transform: translate3d(0, 0, 0);
   transition: all 0.2s ease;

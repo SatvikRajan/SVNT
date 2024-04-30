@@ -4,7 +4,7 @@
   --uib-color: #251741;
   position: absolute;
   display: flex;
-  top: 30%;
+  top: 45%;
   left: 45%;
   transform: translate(50%, 50%);
   align-items: center;
@@ -14,7 +14,7 @@
 }
 .newtons-logo{
   width: 35%;
-  top: 45%;
+  top: 35%;
   left: 15%;
   transform: translate(50%, 50%);
   position: absolute;

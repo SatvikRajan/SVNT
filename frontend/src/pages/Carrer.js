@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useNavigate } from "react";
 import invite from "../images/ContactUs/invite.png";
 import search from "../images/search.jpg";
-import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../css/carousel.css'
@@ -9,7 +8,7 @@ import '../css/career.css'
 import carrerimage from '../images/Career/careerimage.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Logo from '../images/svnt-logo-white-full.png';
+import Logo from '../images/svnt-logo-black-full.png';
 import { Link } from 'react-router-dom'
 
 export const CareersPage = () => {
