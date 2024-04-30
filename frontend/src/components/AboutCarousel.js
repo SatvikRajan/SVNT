@@ -14,7 +14,8 @@ function AboutCarousel() {
     autoplay: true,
     autoplaySpeed: 10000,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    outline: false
   };
 
   return (
@@ -22,12 +23,12 @@ function AboutCarousel() {
       <div className="slider-container">
         <Slider {...settings}>
           <div>
-            <img  style={{position: 'relative'}} className='about-img' src={aboutbg} alt="" />
-            <h2 style={{position: 'absolute', top: '70%', left: '42%', fontSize: '42px', fontWeight: '400'}}>Integrated Solutions,<br/> Empowered Choices</h2>
+            <img   className='about-img' src={aboutbg} alt="" />
+            {/* <h2 style={{position: 'absolute', top: '70%', left: '42%', fontSize: '42px', fontWeight: '400'}}>Integrated Solutions,<br/> Empowered Choices</h2> */}
           </div>
           <div >
-            <img  className='about-img'  src={aboutbg1} alt="" />
-            {/* <h2 style={{position: 'absolute', top: '70%', left: '42%'}}>Integrated Solutions,<br/> Empowered Choices</h2> */}
+            <img style={{position: 'relative'}} className='about-img'  src={aboutbg1} alt="" />
+            <h2 style={{position: 'absolute', top: '70%', left: '42%'}}>Integrated Solutions,<br/> Empowered Choices</h2>
           </div>
         </Slider>
       </div>

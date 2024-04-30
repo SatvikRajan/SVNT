@@ -92,7 +92,8 @@ export default function Timeline() {
             duration: 1000,
             once: true,
             offset: 300,
-            delay: 500
+            delay: 500,
+            outline: false
         });
     }, []);
 
