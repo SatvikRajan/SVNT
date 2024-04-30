@@ -72,7 +72,7 @@ export default function MainStart() {
           <span></span>
           <div className="d-flex align-items-center justify-content-center">
             <p className="value number5">250</p>
-            <span style={{ fontSize: '54px' }} className='delay'>+</span>
+            <span style={{ fontSize: '54px' }}>+</span>
           </div>
 
           <p className="x">CLIENTS</p>
@@ -83,7 +83,7 @@ export default function MainStart() {
         </div>
         <div className="text-center col">
           <div className='d-flex align-items-center justify-content-center'>
-            <p className="value number60">1000</p><span style={{ fontSize: '54px' }} className='delay'>+</span>
+            <p className="value number60">1000</p><span style={{ fontSize: '54px' }}>+</span>
           </div>
           <p className="x">PROJECTS</p>
         </div>
