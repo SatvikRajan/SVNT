@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import bg from '../images/CaseStudies/cs-bangaloreIA-2.png'
 import bgMain from '../images/CaseStudies/cs-bangaloreIA-3.png'
@@ -81,7 +81,20 @@ const items = [
 export default function CaseStudyCard({props}) {
     const [selectedId, setSelectedId] = useState(null)
     const [currTop, setCurrTop] = useState('');
+    const expandedCardRef = useRef(null);
     
+    useEffect(() => {
+        if (selectedId !== null) {
+            // Scroll to the expanded card
+            expandedCardRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Prevent scrolling of the background page
+            document.documentElement.classList.add('overflow-hidden');
+            
+        } else {
+            // Allow scrolling of the background page
+            document.documentElement.classList.remove('overflow-hidden');
+        }
+    }, [selectedId]);
 
     return (
         <motion.div className={'cs-set'}> 
@@ -118,9 +131,11 @@ export default function CaseStudyCard({props}) {
                             onClick={() => setSelectedId(null)}
 
                         />
-                        <motion.div layoutId={selectedId}
-                        className="expanded-card"
-                        style={{top:currTop, left: '246px', backgroundImage:`url(${items.find(item => item.id === selectedId).bg1})`, backgroundRepeat:'no-repeat', backgroundSize:'cover'}}
+                        <motion.div
+                            ref={expandedCardRef}
+                            layoutId={selectedId}
+                            className="expanded-card"
+                            style={{top:currTop, left: '246px', backgroundImage:`url(${items.find(item => item.id === selectedId).bg1})`, backgroundRepeat:'no-repeat', backgroundSize:'cover'}}
                     >
                         <motion.div className="expanded-head">
                             <motion.h2 className="expanded-head-h2">{items.find(item => item.id === selectedId).title}</motion.h2>

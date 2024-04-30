@@ -18,7 +18,7 @@ export default function CaseStudies() {
 
       <div className='cs-main'>
         <div className='cs-search-bar'>
-          <div><p>Gain deeper insight into Case Studies</p></div>
+          <div><p>Gain a deeper insight into our Case Studies</p></div>
       </div>
         {/* for the entire cs-set section create another component and apply the framer motion code*/}
       <CaseStudyCard />
