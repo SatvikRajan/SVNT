@@ -48,7 +48,8 @@ export const About = () => {
     speed: 6000,
     rows: 2,
     slidesPerRow: 3,
-    cssEase: "linear"
+    cssEase: "linear",
+    outline: false
   };
 
   return (

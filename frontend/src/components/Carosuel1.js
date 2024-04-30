@@ -41,7 +41,7 @@ function Carosuel1() {
         </div>
         <div class="carousel-item" >
           <img src={image3} class="d-block w-100" alt="..." />
-          <div class="carousel-caption cc4 d-none d-md-block">
+          <div class="carousel-caption cc3 d-none d-md-block">
             {/* <h1>Third slide label</h1> */}
             <p>Sky High! Discover our vital contribution to ensuring security at Kempagowda International Airport</p>
             <a href="/casestudies"><p className='ccr text-white readmore'>Read More</p></a>

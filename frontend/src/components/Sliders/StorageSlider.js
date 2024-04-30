@@ -16,6 +16,7 @@ function SimpleSlider() {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 3000, 
+    outline: false
   };
 
   const sliderStyle = {
