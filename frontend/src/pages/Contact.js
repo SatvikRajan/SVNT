@@ -15,7 +15,7 @@ const Contact = () => {
       duration: 1000,
       once: true,
       offset: 300,
-      delay: 500
+      delay: 300
     });
   }, []);
 
@@ -96,7 +96,7 @@ const Contact = () => {
             </label>
 
             <label for="inp" class="inp">
-              <input type="text" id="inp" value={text}
+              <input type="text" id="inp" value={text} rows={6}
                 onChange={(e) => setText(e.target.value)} placeholder="&nbsp;" />
               <span class="label">Message</span>
               <span class="focus-bg"></span>
@@ -107,7 +107,7 @@ const Contact = () => {
               </button>
             </div>
           </form>
-          {message && <p>{message}</p>}
+          {message && <p style={{marginTop: '10px'}}>{message}</p>}
         </div>
       </div>
       <div className="location">
@@ -133,7 +133,7 @@ const Contact = () => {
 
           <LocationCard
             title="Delhi"
-            address="House No : 07, Second Floor, Vinoba Puri, Lajpat Nagar-2, New Delhi - 110024"
+            address="House No.849, GROUND FLOOR , SECTOR, 47 GURGAON, (HR) 122001"
           />
         </div>
         <p style={{ marginBottom: '60px' }}>

@@ -114,7 +114,7 @@ function CaseStudiesCarousel() {
                 <p style={{ fontSize: '20px', textAlign: 'left' }}>
                   {item.description}
                 </p>
-                <a href="" className="readmore">
+                <a href="/casestudies" className="readmore">
                   Read More
                 </a>
               </div>

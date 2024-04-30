@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="col-md-6 p-2 w-25">
             <div
               style={{ gap: "30px", marginBottom: "10px" }}
-              className="d-flex align-items-center footer-email"
+              className="d-flex align-items-start footer-email"
             >
               <svg
                 width="22"
@@ -25,7 +25,7 @@ const Footer = () => {
                   fill="white"
                 />
               </svg>
-              <span>@svntech.com</span>
+              <span><a className="mail1" href="mailto:info@svntech.com">info@svntech.com</a></span>
             </div>
             <div style={{ gap: "30px" }} className="d-flex footer-email">
               <svg
@@ -41,7 +41,7 @@ const Footer = () => {
                 />
               </svg>
 
-              <span>+91 99000 99000</span>
+              <span>+91 88006 30726</span>
             </div>
           </div>
           <div style={{gap: '30px'}} className="col-md-6 d-flex justify-content-end align-items-center">

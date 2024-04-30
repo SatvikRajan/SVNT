@@ -60,7 +60,8 @@ export default function Services() {
     AOS.init({
       duration: 1000,
       once: true,
-      offset: 300
+      offset: 500,
+      once: true
     });
   }, []);
 
@@ -86,8 +87,8 @@ export default function Services() {
       </Link>
       <img style={{ position: 'relative', marginTop: '-0.5rem' }} src={servicebg} className='service-bg' alt="" />
       <p className='service-text'>Expertise you can trust:<br /> Tailored solutions just for you!</p>
-      <p className='service-head'>Gain deeper insight into our <span style={{ fontWeight: '500' }}>Services</span></p>
-      <div className="services-in">
+      <p className='service-head' data-aos='fade-up'>Gain deeper insight into our <span style={{ fontWeight: '500' }}>Services</span></p>
+      <div className="services-in" data-aos='fade-up'>
         <div>
           <div style={{
             width: '100%',

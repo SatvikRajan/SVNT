@@ -330,7 +330,6 @@ ul.dropdown-menu.show {
 }
 
 .job-des {
-  position: relative;
   height: 40rem;
   margin-top: 2rem;
   padding: 30px;
@@ -759,4 +758,12 @@ main {
     width: 310px;
     height: 36px;
   }
+}
+
+.slick-slide div{
+  outline: none;
+}
+
+.mail1{
+  color: white !important;
 }

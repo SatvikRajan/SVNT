@@ -23,12 +23,12 @@ function AboutCarousel() {
       <div className="slider-container">
         <Slider {...settings}>
           <div>
-            <img   className='about-img' src={aboutbg} alt="" />
+            <img   className='about-img' src={aboutbg1} alt="" />
             {/* <h2 style={{position: 'absolute', top: '70%', left: '42%', fontSize: '42px', fontWeight: '400'}}>Integrated Solutions,<br/> Empowered Choices</h2> */}
           </div>
           <div >
-            <img style={{position: 'relative'}} className='about-img'  src={aboutbg1} alt="" />
-            <h2 style={{position: 'absolute', top: '70%', left: '42%'}}>Integrated Solutions,<br/> Empowered Choices</h2>
+            <img style={{position: 'relative'}} className='about-img'  src={aboutbg} alt="" />
+            <h2 style={{position: 'absolute', top: '70%', left: '42%', fontSize: '41px', fontWeight: '400', color: '#f1faff'}}>Integrated Solutions,<br/> Empowered Choices</h2>
           </div>
         </Slider>
       </div>

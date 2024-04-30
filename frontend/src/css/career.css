@@ -8,6 +8,8 @@
   text-align: center;
 }
 .location-name {
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 40px;
 }
 .offices {
@@ -23,9 +25,9 @@
   border-radius: 20px;
   justify-content: center;
   display: flex;
-  gap: 90px;
+  gap: 45px;
   /* flex-wrap: wrap; */
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .card-title {
   font-weight: 600;
@@ -42,7 +44,7 @@ a:hover {
   color: rgb(53, 53, 53);
 }
 .footer-email{
-  justify-content: center;
+  justify-content: start;
 }
 .footer {
   letter-spacing: 0px;
@@ -149,8 +151,8 @@ a:hover {
 }
 .location-card {
   position: relative;
-  width: 400px;
-  height: 160px;
+  width: 482px;
+  height: 225px;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
     rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
     rgba(0, 0, 0, 0.07) 0px 16px 16px;
@@ -215,10 +217,13 @@ a:hover {
 .location-cardtitle {
   letter-spacing: 5%;
   font-size: 32px;
+  padding-bottom: 10px;
 }
 .location-cardaddress {
+  font-weight: 500;
+  font-size: 20px;
   letter-spacing: 5%;
-  line-height: 24px;
+  line-height: 30px;
 }
 .location-card:hover .copy-notification {
   color: #fff;
@@ -252,25 +257,26 @@ a:hover {
 .overlay {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 100px;
+  width: 90%;
   height: 100%;
   border-radius: 30px;
-  background-color: rgb(37, 23, 65, 0.8);
+  background-color: rgba(233, 232, 236, 0.6);
+ 
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid #F1FAFF;
   z-index: 2; 
 }
 
-.overlay-text {
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
+.jobs{
+  position: relative;
 }
-
-
+.overlay-text {
+  font-weight: 500;
+  color: #251741;
+  font-size: 54px;
+}
 @media (max-width: 768px) {
   .jobs {
     flex-wrap: wrap;

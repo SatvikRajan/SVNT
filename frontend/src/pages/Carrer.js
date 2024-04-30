@@ -516,7 +516,7 @@ export const CareersPage = () => {
                   </button>
                 </div>
                 <div className="overlay">
-                  <p className="overlay-text">Coming Soon</p>
+                  <p className="overlay-text">Coming Soon . . . . </p>
                 </div>
               </div>
             )}
