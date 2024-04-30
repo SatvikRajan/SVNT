@@ -67,7 +67,7 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0% 12.5%;
+    padding: 0% 10%;
     transition: 0.5s ease;
     margin-bottom: 5%;
     /* position: relative; */
@@ -76,11 +76,10 @@
 
 
 .cs-card{
-    width: 600px;
-    height: 690px;
+    width: 700px;
+    height: 740px;
     /* background-color: aquamarine; */
     /* border: 2px solid white; */
-    background-image: url('../images/CaseStudies/cs-bangaloreIA-1.png');
     margin: 2% 0% 8% 0%;
     border-radius: 20px;
     /* z-index: 1; */
@@ -89,6 +88,7 @@
     grid-template-rows: 60% 25% 15%;
     justify-content: center;
     transition: 0.3s ease;
+    /* z-index: 100; */
     /* align-items: center; */
 }
 
@@ -152,6 +152,7 @@
     background-color: bisque;
     z-index: 1000;
     position: absolute;
+    background-position-y: 2%;
     border-radius: 20px;
     color: white;
     backdrop-filter: blur(10px);
