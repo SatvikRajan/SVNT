@@ -18,13 +18,13 @@ function Carosuel1() {
         <div class="carousel-item active" >
           <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." />
           <div class="carousel-caption cc1 d-none d-md-block">
-            {/* <h1>First slide label</h1> */}
+            <h1>First slide label</h1>
             <p>Behind the Scenes: Our Role in<br /> Safeguarding ITC Royal Bengal</p>
             <a href="/casestudies"><p className='ccr text-white readmore'>Read More</p></a>
           </div>
         </div>
         <div class="carousel-item" >
-          <img src={image1} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." />
+          <img src={image1} class="d-block w-100" alt="..." />
           <div class="carousel-caption cc1 d-none d-md-block">
             {/* <h1>First slide label</h1> */}
             <p>Behind the Scenes: Our Role in<br /> Safeguarding ITC Royal Bengal</p>
@@ -46,14 +46,6 @@ function Carosuel1() {
             <p>Sky High!<br />
               Discover our vital contribution to ensuring<br /> security at Kempagowda International Airport</p>
               <a href="/casestudies"><p className='ccr text-white readmore'>Read More</p></a>
-          </div>
-        </div>
-        <div class="carousel-item" >
-          <img src={image3} class="d-block w-100" alt="..." />
-          <div class="carousel-caption cc3 d-none d-md-block">
-            {/* <h1>Third slide label</h1> */}
-            <p>Sky High! Discover our vital contribution to ensuring security at Kempagowda International Airport</p>
-            <a href="/casestudies"><p className='ccr text-white readmore'>Read More</p></a>
           </div>
         </div>
       </div>
