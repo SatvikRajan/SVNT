@@ -51,6 +51,9 @@
   0% {
     opacity: 0;
   }
+  90%{
+    opacity: 0;
+  }
   100% {
     visibility: visible;
     opacity: 1;
