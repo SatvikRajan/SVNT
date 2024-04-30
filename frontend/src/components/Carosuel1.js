@@ -18,7 +18,7 @@ function Carosuel1() {
         <div class="carousel-item active" >
           <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." />
           <div class="carousel-caption cc1 d-none d-md-block">
-            <h1>First slide label</h1>
+            {/* <h1>First slide label</h1> */}
             <p>Behind the Scenes: Our Role in<br /> Safeguarding ITC Royal Bengal</p>
             <a href="/casestudies"><p className='ccr text-white readmore'>Read More</p></a>
           </div>
