@@ -46,16 +46,18 @@ export const About = () => {
     arrows: false,
     dots: false,
     autoplay: true,
-    // autoplaySpeed: 100,
+    autoplaySpeed: 2000, 
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
     speed: 6000,
     rows: 2,
-    slidesPerRow: 3,
+    slidesPerRow: 2,
     cssEase: "linear",
     outline: false
   };
+  
+  
 
   return (
     <div className="about-us-page">
@@ -93,58 +95,58 @@ export const About = () => {
         <div className="slider-container" style={{ marginTop: '4rem', textAlign: '-webkit-center', marginBottom: '5rem' }}>
           <Slider {...settings}>
             <div>
-              <img src={aequs} alt="" />
+              <img height={300} src={aequs} alt="" />
             </div>
             <div>
-              <img src={allergan} alt="" />
+              <img height={300} src={allergan} alt="" />
             </div>
             <div>
-              <img src={ampath} alt="" />
+              <img height={300} src={ampath} alt="" />
             </div>
             <div>
-              <img src={kia} alt="" />
+              <img height={300} src={kia} alt="" />
             </div>
             <div>
-              <img src={brigade} alt="" />
+              <img height={300} src={brigade} alt="" />
             </div>
             <div>
-              <img src={esl} alt="" />
+              <img height={300} src={esl} alt="" />
             </div>
             <div>
-              <img src={gd} alt="" />
+              <img height={300} src={gd} alt="" />
             </div>
             <div>
-              <img src={akn} alt="" />
+              <img height={300} src={akn} alt="" />
             </div>
             <div>
-              <img src={hc} alt="" />
+              <img height={300} src={hc} alt="" />
+            </div>
+            {/* <div>
+              <img height={300} src={itc} alt="" />
+            </div> */}
+            {/* <div>
+              <img height={300} src={indigo} alt="" />
+            </div> */}
+            <div>
+              <img height={300} src={afio} alt="" />
             </div>
             <div>
-              <img src={itc} alt="" />
+              <img height={300} src={abg} alt="" />
             </div>
             <div>
-              <img src={indigo} alt="" />
+              <img height={300} src={gm} alt="" />
             </div>
             <div>
-              <img src={afio} alt="" />
+              <img height={300} src={britannia} alt="" />
             </div>
             <div>
-              <img src={abg} alt="" />
+              <img height={300} src={vedanta} alt="" />
             </div>
             <div>
-              <img src={gm} alt="" />
+              <img height={300} src={jsw} alt="" />
             </div>
             <div>
-              <img src={britannia} alt="" />
-            </div>
-            <div>
-              <img src={vedanta} alt="" />
-            </div>
-            <div>
-              <img src={jsw} alt="" />
-            </div>
-            <div>
-              <img src={mahindra} alt="" />
+              <img height={300} src={mahindra} alt="" />
             </div>
           </Slider>
         </div>
