@@ -92,12 +92,20 @@ const items = [
 export default function CaseStudyCard({props}) {
     const [selectedId, setSelectedId] = useState(null)
     const [currTop, setCurrTop] = useState('');
+    const [expandedPosition, setExpandedPosition] = useState({ top: '50%', left: '50%' });
     const expandedCardRef = useRef(null);
     
     useEffect(() => {
         if (selectedId !== null && selectedId!==4) {
             expandedCardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
             document.documentElement.classList.add('overflow-hidden');
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            const expandedWidth = expandedCardRef.current.offsetWidth;
+            const expandedHeight = expandedCardRef.current.offsetHeight;
+            const top = `${(viewportHeight - expandedHeight) / 2}px`;
+            const left = `${(viewportWidth - expandedWidth) / 2}px`;
+            setExpandedPosition({ top, left });
             
         } else {
             // Allow scrolling of the background page
@@ -172,7 +180,8 @@ export default function CaseStudyCard({props}) {
                                 top: currTop,
                                 backgroundImage: `url(${items.find(item => item.id === selectedId).bg1})`,
                                 backgroundRepeat: 'no-repeat',
-                                backgroundSize: 'cover'
+                                backgroundSize: 'cover',
+                                left: expandedPosition.left,
                             }}
                     >
                         <motion.div className="expanded-head">
