@@ -100,7 +100,7 @@ export default function Timeline() {
     return (
         <div className="timeline" data-aos='fade-up'>
             <div className="timeline-container" style={{ backgroundPositionX: `${backgroundPosition}%` }}>
-                <div><h1 className="timeline-head">Comapany TimeLine</h1></div>
+                <div><h1 className="timeline-head">Company TimeLine</h1></div>
                 {/* <div class="line"></div>  */}
                 <div className="timeline-carousel">
                     <Slider {...settings}>
@@ -108,8 +108,8 @@ export default function Timeline() {
                         {/* display grid 50% 50% for each with bottom border and 50% of left border for the text div */}
                         <div className='info'>
                             <div className='info-set info-set-up'>
-                                <p className='year'>2000 - 2003</p>
-                                <p className='sub-head'>Company Spinout</p>
+                                <p className='year'>2003 - 2006</p>
+                                <p className='sub-head'>Birth of SVNT</p>
                                 <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
 
                             </div>
@@ -123,7 +123,7 @@ export default function Timeline() {
 
                             </div>
                             <div className='info-set info-set-down'>
-                                <p className='year'>2000 - 2003</p>
+                                <p className='year'>2006 - 2009</p>
                                 <p className='sub-head'>Company Spinout</p>
                                 <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
 
@@ -132,7 +132,7 @@ export default function Timeline() {
 
                         <div className='info'>
                             <div className='info-set info-set-up'>
-                                <p className='year'>2000 - 2003</p>
+                                <p className='year'>2009 - 2012</p>
                                 <p className='sub-head'>Company Spinout</p>
                                 <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
 
@@ -147,7 +147,7 @@ export default function Timeline() {
 
                             </div>
                             <div className='info-set info-set-down'>
-                                <p className='year'>2000 - 2003</p>
+                                <p className='year'>2012 - 2015</p>
                                 <p className='sub-head'>Company Spinout</p>
                                 <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
 
@@ -157,7 +157,7 @@ export default function Timeline() {
 
                         <div className='info'>
                             <div className='info-set info-set-up'>
-                                <p className='year'>2000 - 2003</p>
+                                <p className='year'>2015 - 2018</p>
                                 <p className='sub-head'>Company Spinout</p>
                                 <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
 
@@ -172,9 +172,21 @@ export default function Timeline() {
 
                             </div>
                             <div className='info-set info-set-down'>
-                                <p className='year'>2000 - 2003</p>
+                                <p className='year'>2018 - 2021</p>
                                 <p className='sub-head'>Company Spinout</p>
                                 <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+
+                            </div>
+                        </div>
+
+                        <div className='info'>
+                            <div className='info-set info-set-up'>
+                                <p className='year'>2021 - Present</p>
+                                <p className='sub-head'>Company Spinout</p>
+                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+
+                            </div>
+                            <div className='gap'>
 
                             </div>
                         </div>
