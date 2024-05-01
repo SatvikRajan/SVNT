@@ -679,8 +679,8 @@ main {
   line-height: 50px;
   font-size: 20px;
   width: 50%;
+  letter-spacing: 5%;
   margin-right: 20rem;
-  padding-left: 5rem;
 }
 
 .trustedtext h1 {

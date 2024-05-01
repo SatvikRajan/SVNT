@@ -37,6 +37,7 @@
 }
 
 .cs-hero-bg{
+    margin-top: 3.2rem;
     width: fit-content;
     object-fit: scale-down;
 }
