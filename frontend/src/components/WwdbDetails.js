@@ -1,13 +1,13 @@
 
 import { color, motion, px, useScroll } from 'framer-motion';
-import img1 from '../images/Home/ip-surveillance-img.png'
-import img0 from '../images/Home/ip-net-sol-img.png'
-import img2 from '../images/Home/energy-sol-img.png'
-import img3 from '../images/Home/surveillance-safety-sol-img.png'
-import img4 from '../images/Home/sec-mgmt-img.png'
-import img5 from '../images/Home/storage-img.svg'
-import img7 from '../images/Home/integration-sol-img.svg'
-import img6 from '../images/Home/audio-vis-img.svg'
+import img1 from '../images/Home/ip-surveillance-img.webp'
+import img0 from '../images/Home/ip-net-sol-img.webp'
+import img2 from '../images/Home/energy-sol-img.webp'
+import img3 from '../images/Home/surveillance-safety-sol-img.webp'
+import img4 from '../images/Home/sec-mgmt-img.webp'
+import img5 from '../images/Home/storage-img.webp'
+import img7 from '../images/Home/integration-sol-img.webp'
+import img6 from '../images/Home/audio-vis-img.webp'
 import logo3 from '../images/Home/surveillance-safety-white.svg';
 import logo1 from '../images/Home/ip-surveillance-white.svg';
 import logo2 from '../images/Home/energy-white.svg';
@@ -119,19 +119,19 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
                 top: '10%',
                 left: '1546px',
                 cursor: 'pointer',
-                // zIndex:'100'
+                zIndex:'1000'
             }}
-
-                onClick={handleClickOutside}
             >
-                <motion.img onClick={handleClickOutside} src={close}>
+                    <motion.img
+                        onClick={handleClickOutside}
+                        src={close}>
                 </motion.img>
             </motion.div>
 
             <motion.div
                 style={{
                     position: 'absolute',
-                    width: 'fit-content'
+                    // backgroundColor:'pink'
                 }}
                 initial={{
                     textAlign: 'center', top: topVal, left: leftVal
@@ -142,7 +142,8 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
                     justifyContent: 'center',
 
                     top: '89px',
-                    left: '36%',
+                    width: '100%',
+                    left: '0',
                 }}
 
                 transition={{ duration: 0.8 }}

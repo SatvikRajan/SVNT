@@ -222,8 +222,10 @@
   /* width: 470px; */
   /* background-color: #0077ff; */
   margin-right: 0;
+  /* background: none !important; */
   /* width: 470px; */
 }
+
 
  .fas :hover {
   transform: translate3d(5rem, 0, 0);
