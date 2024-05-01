@@ -10,7 +10,7 @@ import wwdb5 from '../images/Home/security-and-mgmt.svg';
 import wwdb6 from '../images/Home/energy.svg';
 import wwdb7 from '../images/Home/surveillance-and-safety.svg';
 import wwdb8 from '../images/Home/storage.svg';
-import servicebg from '../images/Services/servicebg.png';
+import servicebg from '../images/Services/servicebg.webp';
 import IPSlider from '../components/Sliders/IPSSlider';
 import INSlider from '../components/Sliders/INSSlider';
 import IntegrationSlider from '../components/Sliders/IntegrationSlider';

@@ -19,7 +19,7 @@ export default function Home() {
       {/* Carousel */}
 
       <div class="carousel1">
-        <Link style={{left: '75px',}} className="logo-brand" to="/">
+        <Link style={{left: '140px',}} className="logo-brand" to="/">
           <img src={Logo} alt="SVNT Tech" height={30} />
         </Link>
         <Carosuel1/>

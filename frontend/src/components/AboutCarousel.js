@@ -10,7 +10,7 @@ function AboutCarousel() {
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 1000,
+    speed: 100,
     autoplay: true,
     autoplaySpeed: 10000,
     slidesToShow: 1,

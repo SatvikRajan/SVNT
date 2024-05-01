@@ -26,6 +26,8 @@ import gm from '../images/AboutUs/client-gm.svg'
 import britannia from '../images/AboutUs/client-britannia.svg'
 import vedanta from '../images/AboutUs/client-vedanta.svg'
 import jsw from '../images/AboutUs/jsw.svg'
+import jcb from '../images/AboutUs/jcb.svg'
+import lat from '../images/AboutUs/lat.svg'
 import mahindra from '../images/AboutUs/mahindra.svg'
 
 import aboutbg from '../images/AboutUs/about-bg.webp';
@@ -46,7 +48,7 @@ export const About = () => {
     arrows: false,
     dots: false,
     autoplay: true,
-    autoplaySpeed: 2000, 
+    autoplaySpeed: 10,
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -56,8 +58,8 @@ export const About = () => {
     cssEase: "linear",
     outline: false
   };
-  
-  
+
+
 
   return (
     <div className="about-us-page">
@@ -67,10 +69,10 @@ export const About = () => {
       <div className="about-us-head">
         {/* <AboutCarousel /> */}
         <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100%', objectFit: 'scale-down', marginTop: '0.2rem' }} alt="" />
-        <h2 style={{position: 'absolute', top: '70%', left: '10%', fontSize: '41px', fontWeight: '400',lineHeight: '4rem', color: '#f1faff'}}>Integrated Solutions,<br/> Empowered Choices</h2>
+        <h2 style={{ position: 'absolute', top: '70%', left: '10%', fontSize: '41px', fontWeight: '400', lineHeight: '4rem', color: '#f1faff' }}>Integrated Solutions,<br /> Empowered Choices</h2>
       </div>
       <div className="svnt-info" data-aos='fade-up'>
-        <h1 style={{paddingBottom: '2rem'}}>About Us</h1>
+        <h1 style={{ paddingBottom: '2rem' }}>About Us</h1>
         Established in 2003, SVNT Infotech Pvt Ltd set out on a mission to revolutionize IT infrastructure solutions.
         Our philosophy is to combine international technology with local expertise to tailor solutions to clients needs. Driven by excellence, we aim to lead the global market in networking and communication solutions.
       </div>
@@ -81,8 +83,9 @@ export const About = () => {
         <div className="ceo-text">
           <h1 className="fs-1 ceo-text-head mb-3" data-aos='fade-down'>Meet Our Managing Director </h1>
           <p className="ceo-text-p w-75" data-aos='fade-right'>
-            Opportunities don’t come knocking at your door, you must build your own door
+            “User experience is everything. It always has been, but it's still undervalued and under-invested in. If you don't know user-centered design, study it. Hire people who know it. Obsess over it. Live and breathe it. ”
           </p>
+          <h1>- Mr. V G Salimath</h1>
         </div>
         <div className="ceo-photo" data-aos='fade-left'>
           <img className='ceo-photo-1' src={ceo} alt="" />
@@ -121,12 +124,12 @@ export const About = () => {
             <div>
               <img height={300} src={hc} alt="" />
             </div>
-            {/* <div>
+            <div>
               <img height={300} src={itc} alt="" />
-            </div> */}
-            {/* <div>
+            </div>
+            <div>
               <img height={300} src={indigo} alt="" />
-            </div> */}
+            </div>
             <div>
               <img height={300} src={afio} alt="" />
             </div>
@@ -147,6 +150,12 @@ export const About = () => {
             </div>
             <div>
               <img height={300} src={mahindra} alt="" />
+            </div>
+            <div>
+              <img height={300} src={jcb} alt="" />
+            </div>
+            <div>
+              <img height={300} src={lat} alt="" />
             </div>
           </Slider>
         </div>
