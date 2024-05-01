@@ -9,9 +9,12 @@
 
 .cs-body{
     overflow-x: hidden;
-    /* overflow-y: none; */
+    overflow-y: auto;
     position: relative;
+    width: 99vw;
     /* background-color: antiquewhite; */
+
+
 }
 
 .overflow-hidden * {
@@ -22,7 +25,13 @@
 .cs-hero{
     width: 100vw;
     height: 100vh;
-    position: relative;
+    margin-top: -1.2%;
+    margin-left: -0.5%;
+    /* position: relative; */
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     /* background-image: url(../images/CaseStudies/bg-hero.png); */
     
 }
@@ -30,10 +39,6 @@
 .cs-hero-bg{
     width: fit-content;
     object-fit: scale-down;
-    /* background-color: #bab3cf; */
-    position: absolute;
-    top: 49px;
-    left: 86px;
 }
 
 .image-text{
@@ -53,8 +58,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2% 0% 1.5% 0%;
-    
+    padding: 1.5% 0%;
+    /* background-color: antiquewhite; */
     /* color: white; */
 }
 
@@ -67,14 +72,20 @@
 .cs-set{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    padding: 0% 11.2%;
+    /* padding: 0% 8%; */
+    gap: 4%;
     transition: 0.5s ease;
     margin-bottom: 0%;
+    /* width: 98.6vw; */
     /* position: relative; */
     /* background-color: antiquewhite; */
 }
+
+/* .cs-card-parent{
+    background-color: aqua;
+} */
 
 
 .cs-card{
@@ -98,10 +109,7 @@
 
 
 .cs-card div{
-    /* background-color: blue; */
-    /* border: 1px solid white; */
     padding: 0% 9%;
-    /* padding-top: 5%; */
 }
 
 .cs-sub-img{
@@ -125,12 +133,9 @@
 
 .cs-read-more{
     width: 100%;
-    cursor: pointer;
-    /* text-align: right; */
-    /* padding-top: ; */
-    
-    
+    cursor: pointer; 
 }
+
 .cs-readmore{
     color: white !important;
     font-size: 30px;
@@ -147,18 +152,18 @@
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(8px);
-    z-index: 10;
+    backdrop-filter: blur(3px);
+    z-index: 1000;
 }
 
 .expanded-card{
-    width: 1431px;
-    height: 835px;
+    width: 1600px;
+    height: 930px;
     /* transition: 0.3s ease; */
-    background-color: bisque;
+    background-color:black;
     z-index: 1000;
     position: absolute;
-    background-position-y: 2%;
+    background-position-y: 5%;
     border-radius: 20px;
     color: white;
     backdrop-filter: blur(10px);

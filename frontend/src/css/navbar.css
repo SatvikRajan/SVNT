@@ -1,13 +1,21 @@
 .navigation-bar{
   background-color: aquamarine;
-  width: 100%;
+  /* width: 99vw; */
   height: 100%;
+  overflow-y: scroll;
 
 }
+
+/* Adjust padding to account for scrollbar */
+.navigation-bar::-webkit-scrollbar {
+  width: 16px; /* Width of the scrollbar */
+}
+
 .navbar {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0 !important;
   border-radius: 100px;
+  box-sizing: content-box;
   padding-right: 0%;
   /* border-bottom: 0px !important; */
   /* padding: 0 !important; */
@@ -66,11 +74,15 @@
   animation: expandFromLeft 0.3s ease forwards;
   top: 0;
   height: 8%;
-  padding-right: 0%;
+  /* background-color: aqua; */
+  /* padding-right: 16px; */
+  /* width: 100vw; */
 }
 
 .scrolled-top .navbar {
   animation: shrinkToCenter 0.4s ease forwards;
+  /* background-color: #5b4586; */
+  
 }
 
 .navbar-brand img {

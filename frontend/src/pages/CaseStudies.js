@@ -13,8 +13,10 @@ export default function CaseStudies() {
           <img src={Logo} alt="SVNT Tech" height={30} />
         </Link>
       <div className='cs-hero'>
-        <img className="cs-hero-bg" src={bghero} alt="" />
-        <p className='image-text'>Empower your aspirations <br/>at SVNT Infotech!</p>
+        <div>
+          <img className="cs-hero-bg" src={bghero} alt="" />
+          <p className='image-text'>Empower your aspirations <br />at SVNT Infotech!</p>
+        </div>
       </div>
 
       <div className='cs-main'>
