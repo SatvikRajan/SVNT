@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/loader.css'
-import logo from '../images/logobig.png'
+import logo from '../images/logobig.webp'
 
 function Loader() {
     return (
