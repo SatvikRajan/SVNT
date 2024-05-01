@@ -218,9 +218,9 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
                 animate={{ opacity: '1', top: '536px', left: '1140px', width: '240px' }}
                 transition={{ delay: 0.3, duration: 0.8 }}
             >
-                <motion.a href="/services" class="btn btn-primary btn-arrow"><motion.p className='learnMore' style={{ color: 'white' }}><motion.span>Read More
+                <motion.span class="btn btn-primary btn-arrow"><motion.p className='learnMore' style={{ color: 'white' }}><motion.span>Read More
                     <ArrowRightIcon className="fas" />
-                </motion.span></motion.p></motion.a>
+                </motion.span></motion.p></motion.span>
             </motion.div>
 
 

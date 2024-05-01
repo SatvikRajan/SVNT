@@ -35,7 +35,7 @@ export default function Home() {
         <div className="case-studies">
           <h1>Case Studies</h1>
           <CaseStudiesCarousel />
-          <a className='ms-auto' href="">Read More</a>
+          {/* <a className='ms-auto' href="">Read More</a> */}
         </div>
         <Clientele />
         <LastContent />

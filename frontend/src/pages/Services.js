@@ -86,7 +86,7 @@ export default function Services() {
         <img src={Logo} alt="SVNT Tech" height={30} />
       </Link>
       <img style={{ position: 'relative', marginTop: '-0.5rem' }} src={servicebg} className='service-bg' alt="" />
-      <p className='service-text'>Expertise you can trust:<br /> Tailored solutions just for you!</p>
+      {/* <p className='service-text'>Expertise you can trust:<br /> Tailored solutions just for you!</p> */}
       <p className='service-head' data-aos='fade-up'>Gain a deeper insight into our <span style={{ fontWeight: '500' }}>Services</span></p>
       <div className="services-in" data-aos='fade-up'>
         <div>
@@ -152,8 +152,8 @@ export default function Services() {
                   {currentService.title === 'Storage' && <StorageSlider />}
                   <div className='services-ndetails' style={{}}>
                     <div className="d-flex imgtit align-items-center">
-                      <img className='service-img' src={currentService.image} alt="" />
-                      <p className='service-title' style={{ marginBottom: '0', fontSize: '38px' }}>{currentService.title}</p>
+                      <img className='service-img' style={{marginTop: '-2rem'}} src={currentService.image} alt="" />
+                      <p className='service-title' style={{ marginBottom: '0', fontSize: '38px', marginTop: '-2rem' }}>{currentService.title}</p>
                     </div>
                     <p  className={`service-details `} style={{ fontSize: '24px', lineHeight: '54px', letterSpacing: '5%' }}>{currentIndex !== null ? services[currentIndex].details : currentService.details}</p>
                   </div>

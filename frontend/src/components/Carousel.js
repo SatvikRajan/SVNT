@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ips from '../images/Home/home-carousel-bial.webp';
-import ipn from '../images/Home/home-carousel-genpact.webp';
+import ipn from '../images/Home/home-carousel-genpact 1.png';
 import str from '../images/Home/home-carousel-itc.webp';
 import sms from '../images/Home/home-carousel-bel';
 import is from '../images/Home/home-carousel-statocast.webp';
@@ -114,9 +114,10 @@ function CaseStudiesCarousel() {
                 <p style={{ fontSize: '20px', textAlign: 'left' }}>
                   {item.description}
                 </p>
-                <a href="/casestudies" className="readmore">
+                <a href="/casestudies" className={`readmore ${!item.title ? 'read-1' : ''}`}>
                   Read More
                 </a>
+
               </div>
             </div>
           </div>

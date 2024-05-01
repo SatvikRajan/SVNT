@@ -17,19 +17,19 @@ export default function Managers() {
   }, []);
   return (
     <div className="managers">
-      <h1>Team Members</h1>
+      <h1>Our Team</h1>
       <div className="manager-menu">
         <div className="d-flex manager-line justify-content-around">
           <div className="d-flex flex-column manager-1" data-aos='fade-up'>
             <img className='image-1' src={soumendra} alt="" width={'40%'} />
-            <span className="mt-3 fw-bolder">Mr. Soumendra</span>
+            <span className="mt-3 manager-name fw-bolder">Mr. Soumendra</span>
             <span className="text-secondary">Director</span>
             <span>
               “No growth hack, brilliant marketing idea can save you long-term if you don’t have a sufficiently good product.”              </span>
           </div>
           <div className="d-flex flex-column manager-1" data-aos='fade-up'>
             <img className='image-1' src={sridhar} alt="" width={'40%'} />
-            <span className="mt-3 fw-bolder">Mr. Sridhar Naidu</span>
+            <span className="mt-3 manager-name fw-bolder">Mr. Sridhar Naidu</span>
             <span className="text-secondary">Director</span>
             <span>
             “We must learn what customers really want, not what they say they want or what we think they should want.”
@@ -47,7 +47,7 @@ export default function Managers() {
         <div className="d-flex manager-line mt-5 justify-content-around" >
           <div className="d-flex flex-column manager-1" data-aos='fade-up'>
             <img className='image-1' src={mohan} alt="" width={'58%'} />
-            <span className="mt-3 fw-bolder">Mr. Mohan Reddy</span>
+            <span className="mt-3 manager-name fw-bolder">Mr. Mohan Reddy</span>
             <span className="text-secondary">Vice President</span>
             <span>
             “The greatest achievements often come from the greatest challenges in world.”
@@ -55,7 +55,7 @@ export default function Managers() {
           </div>
           <div className="d-flex flex-column manager-1" data-aos='fade-up'>
             <img className='image-1' src={nd} alt="" width={'56%'} />
-            <span className="mt-3 fw-bolder">Mr. ND Prasad</span>
+            <span className="mt-3 manager-name fw-bolder">Mr. ND Prasad</span>
             <span className="text-secondary">Project Manager</span>
             <span>
             “Opportunities don’t come knocking at your door, you must build your own door.”
@@ -63,7 +63,7 @@ export default function Managers() {
           </div>
           <div className="d-flex flex-column manager-1" data-aos='fade-up'>
             <img className='image-1' src={somu} alt="" width={'58%'} />
-            <span className="mt-3 fw-bolder">Mr. Somu</span>
+            <span className="mt-3 manager-name fw-bolder">Mr. Somu</span>
             <span className="text-secondary">Vice President</span>
             <span>
             "Actively be in charge of your circumstances, destiny and place in the world.”
