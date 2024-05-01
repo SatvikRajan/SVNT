@@ -4,6 +4,7 @@ import Logo from '../images/svnt-logo-white-full.png';
 import '../css/caseStudies.css';
 import bghero from '../images/CaseStudies/bg-hero.png';
 import CaseStudyCard from '../components/CaseStudyCard';
+import comingSoon from '../images/CaseStudies/coming-soon-bg.png'
 
 export default function CaseStudies() {
   return (
@@ -22,6 +23,9 @@ export default function CaseStudies() {
       </div>
         {/* for the entire cs-set section create another component and apply the framer motion code*/}
       <CaseStudyCard />
+      </div>
+      <div className='coming-soon'>
+        <img src={comingSoon} />
       </div>
         
     </div>

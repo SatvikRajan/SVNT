@@ -81,8 +81,11 @@
 .scrolled-nav .navbar-brand img {
   display: block; /* Show logo image when scrolled */
   /* transition-delay: 0.5s; */
-  /* background-color: #5023aa; */
+  /* background-color: #5023aa;
+  width: 100%; */
+  height: 40px;
   margin-left: -30%;
+  
 }
 
 
