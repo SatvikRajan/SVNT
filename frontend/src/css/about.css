@@ -38,7 +38,7 @@
 
 .img-info {
   position: absolute;
-  top: 70%;
+  top: 65%;
   left: 10%;
   font-size: 41px;
   font-weight: 400;
@@ -46,6 +46,7 @@
   color: #f1faff;
   letter-spacing: -1.5%;
   line-height: 54.5px;
+  /* background-color: bisque; */
   /* word-spacing: 10px; */
 }
 
