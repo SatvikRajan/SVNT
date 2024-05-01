@@ -2,9 +2,10 @@
   position: relative;
   /* background-image: url('../images/cbg.png'); */
   background-repeat: no-repeat;
-  width: 90%;
-  margin-left: 5%;
+  width: 93%;
+  margin-left: 3.6%;
   overflow: hidden;
+  margin-top: 0rem;
 }
 
 .carousel-item{
@@ -20,9 +21,6 @@
   font-size: 42px;
 }
 
-.cc3{
-  bottom: 14rem;
-}
 
 .carousel-indicators {
   align-items: center;

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import ips from '../images/Home/home-carousel-genpact.webp';
+import ips from '../images/Home/home-carousel-bial.webp';
 import ipn from '../images/Home/home-carousel-genpact.webp';
 import str from '../images/Home/home-carousel-itc.webp';
 import sms from '../images/Home/home-carousel-bel';

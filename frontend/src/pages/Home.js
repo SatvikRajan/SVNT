@@ -19,7 +19,7 @@ export default function Home() {
       {/* Carousel */}
 
       <div class="carousel1">
-        <Link className="logo-brand" to="/">
+        <Link style={{left: '75px',}} className="logo-brand" to="/">
           <img src={Logo} alt="SVNT Tech" height={30} />
         </Link>
         <Carosuel1/>
@@ -35,7 +35,7 @@ export default function Home() {
         <div className="case-studies">
           <h1>Case Studies</h1>
           <CaseStudiesCarousel />
-          <a href="">Read More</a>
+          <a className='ms-auto' href="">Read More</a>
         </div>
         <Clientele />
         <LastContent />

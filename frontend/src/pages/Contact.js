@@ -27,6 +27,25 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      if (!senderName || !subject || !text ) {
+        setMessage('Please fill in the required fields ');
+        return;
+      }
+
+      if(senderName.length<3){
+        setMessage('Name should be more than 3 characters');
+        return;
+      }
+
+      if (!isValidEmail(senderEmail)) {
+        setMessage('Please provide a valid email address');
+        return;
+      }
+      if (!isValidPhoneNumber(phoneNumber)) {
+        setMessage('Please provide a valid phone number');
+        return;
+      }
+
       const response = await axios.post('http://localhost:8080/send-email', {
         senderName,
         senderEmail,
@@ -36,14 +55,19 @@ const Contact = () => {
       });
       setMessage(response.data);
       clearFormFields();
-
     } catch (error) {
-      if(!senderEmail){
-        setMessage('Email needs to be there')
-      }
       setMessage('Error sending email');
       console.error(error);
     }
+  };
+
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+  const isValidPhoneNumber = (phone) => {
+    const phoneRegex = /^\d{10}$/;
+    return phoneRegex.test(phone);
   };
 
   if (!senderName || !senderEmail || !subject || !text || !phoneNumber) {
@@ -59,7 +83,7 @@ const Contact = () => {
     setSubject('');
     setText('');
   };
-  
+
   return (
     <div className="contact-container">
       <div className="contact-image-container">
@@ -108,7 +132,7 @@ const Contact = () => {
             </label>
 
             <label for="inp" class="inp">
-              <input type="text" id="inp" value={text} rows={6}
+              <textarea style={{height: '20rem'}} className='textarea' type="text" id="inp" value={text} rows={12}
                 onChange={(e) => setText(e.target.value)} placeholder="&nbsp;" />
               <span class="label">Message</span>
               <span class="focus-bg"></span>

@@ -42,7 +42,7 @@ app.post('/send-email', (req, res) => {
         return res.status(400).json({ error: 'Invalid sender email' });
     }
 
-    if (phone && !validatePhone(phone)) {
+    if (!phoneNumber && !validatePhone(phoneNumber)) {
         return res.status(400).json({ error: 'Invalid phone number' });
     }
 

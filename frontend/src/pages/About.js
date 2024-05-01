@@ -65,9 +65,9 @@ export const About = () => {
         <img src={Logo} alt="SVNT Tech" height={30} />
       </Link>
       <div className="about-us-head">
-        <AboutCarousel />
-        {/* <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100vw', objectFit: 'scale-down' }} alt="" /> */}
-        {/* <h2 style={{position: 'absolute', top: '70%', left: '42%', fontSize: '41px', fontWeight: '400', color: '#f1faff'}}>Integrated Solutions,<br/> Empowered Choices</h2> */}
+        {/* <AboutCarousel /> */}
+        <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100%', objectFit: 'scale-down', marginTop: '0.2rem' }} alt="" />
+        <h2 style={{position: 'absolute', top: '70%', left: '10%', fontSize: '41px', fontWeight: '400',lineHeight: '4rem', color: '#f1faff'}}>Integrated Solutions,<br/> Empowered Choices</h2>
       </div>
       <div className="svnt-info" data-aos='fade-up'>
         <h1 style={{paddingBottom: '2rem'}}>About Us</h1>
