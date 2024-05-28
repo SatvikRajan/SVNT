@@ -1,5 +1,5 @@
 .what-we-do-best {
-  color: white;
+  color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,7 +72,7 @@
   height: 780px;
   border-radius: 100px;
   position: relative;
-  background-image: url("../images/Home/wbg.svg");
+  background-image: url("../images/Home/wbg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   /* padding-top: 10%; */
@@ -101,11 +101,12 @@
 }
 
 .mainLogo {
-  left: 825px;
-  top: 348px;
+  left: 808px;
+  top: 330px;
   /* z-index: 100; */
-  width: 70px;
-  height: 111px;
+  width: 100px;
+  height: 157px;
+  /* background-color: aqua; */
 }
 
 .wwdb-menu div p {
@@ -210,7 +211,7 @@
 }
 
 .wwdb-learn-more .btn-arrow span {
-  color: white;
+  color: rgb(0, 0, 0);
   display: inline-block;
   position: relative;
   transition: all 300ms ease-out;
@@ -234,7 +235,7 @@
  .fas {
   position: absolute;
   width: 1em;
-  right: 0;
+  right: -3rem;
   opacity: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -244,7 +245,7 @@
 
  .btn-arrow :hover .fas {
   opacity: 1;
-  right: -2rem;
+  right: -4.5rem;
   padding-left: 5px;
 }
 
