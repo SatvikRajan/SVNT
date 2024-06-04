@@ -23,7 +23,7 @@ export default function LastContent() {
             your company.
           </p>
         </div>
-        <div className="ms-auto align-self-center">
+        <div className="ms-auto align-self-center" style={{width: '13%'}}>
           <a href="/contact" style={{ filter: 'invert()', width: '100%' }} className=" text-light align-self-end fs-4 readmore">
             Contact Us
           </a>

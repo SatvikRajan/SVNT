@@ -31,6 +31,7 @@ import lat from '../images/AboutUs/lat.svg'
 import mahindra from '../images/AboutUs/mahindra.svg'
 
 import aboutbg from '../images/AboutUs/about-bg.webp';
+import aboutbgm from '../images/AboutUs/about-bgm.jpg';
 
 import Slider from "react-slick";
 
@@ -56,10 +57,19 @@ export const About = () => {
     rows: 2,
     slidesPerRow: 2,
     cssEase: "linear",
-    outline: false
+    outline: false,
+    responsive: [
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          // slidesToScroll: 1,
+          rows: 2,
+          slidesPerRow: 2
+        }
+      }
+    ]
   };
-
-
 
   return (
     <div className="about-us-page">
@@ -68,8 +78,17 @@ export const About = () => {
       </Link>
       <div className="about-us-head">
         {/* <AboutCarousel /> */}
-        <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100%', objectFit: 'scale-down', marginTop: '0.2rem' }} alt="" />
-        <h2  className='img-info'>
+        <picture>
+          <source media="(max-width: 425px)" srcSet={aboutbgm} />
+          <source media="(min-width: 426px)" srcSet={aboutbg} />
+          <img
+            style={{ height: '100%', width: '100%', objectFit: 'scale-down', marginTop: '0.2rem' }}
+            src={aboutbg}
+            className='service-bg'
+            alt=""
+          />
+        </picture>
+        <h2 className='img-info'>
           Integrated Solutions, Empowered Choices
           <br />
           <p> </p>
@@ -84,18 +103,19 @@ export const About = () => {
 
       <TimeLine />
 
-      <div className="ceo d-flex">
+      <div className="ceo">
         <div className="ceo-text">
-          <h1 className="fs-1 ceo-text-head" style={{marginBottom: '2rem'}} data-aos='fade-down'>Meet Our Managing Director </h1>
-          <p className="ceo-text-p w-75" style={{marginBottom: '2rem'}} data-aos='fade-right'>
+          <h1 className="fs-1 ceo-text-head" style={{ marginBottom: '2rem' }} data-aos='fade-down'>Meet Our Managing Director</h1>
+          <p className="ceo-text-p" style={{ marginBottom: '2rem' }} data-aos='fade-right'>
             “User experience is everything. It always has been, but it's still undervalued and under-invested in. If you don't know user-centered design, study it. Hire people who know it. Obsess over it. Live and breathe it. ”
           </p>
-          <h1 style={{float: 'inline-end'}}>- Mr. V G Salimath</h1>
+          <h1 style={{ float: 'inline-end' }}>- Mr. V G Salimath</h1>
         </div>
         <div className="ceo-photo" data-aos='fade-left'>
           <img className='ceo-photo-1' src={ceo} alt="" />
         </div>
       </div>
+
 
       <Managers />
       <div className='about-clients'>
@@ -103,64 +123,64 @@ export const About = () => {
         <div className="slider-container" style={{ marginTop: '4rem', textAlign: '-webkit-center', marginBottom: '5rem' }}>
           <Slider {...settings}>
             <div>
-              <img height={300} src={aequs} alt="" />
+              <img className='client-slider-img' height={300} src={aequs} alt="" />
             </div>
             <div>
-              <img height={300} src={allergan} alt="" />
+              <img className='client-slider-img' height={300} src={allergan} alt="" />
             </div>
             <div>
-              <img height={300} src={ampath} alt="" />
+              <img className='client-slider-img' height={300} src={ampath} alt="" />
             </div>
             <div>
-              <img height={300} src={kia} alt="" />
+              <img className='client-slider-img' height={300} src={kia} alt="" />
             </div>
             <div>
-              <img height={300} src={brigade} alt="" />
+              <img className='client-slider-img' height={300} src={brigade} alt="" />
             </div>
             <div>
-              <img height={300} src={esl} alt="" />
+              <img className='client-slider-img' height={300} src={esl} alt="" />
             </div>
             <div>
-              <img height={300} src={gd} alt="" />
+              <img className='client-slider-img' height={300} src={gd} alt="" />
             </div>
             <div>
-              <img height={300} src={akn} alt="" />
+              <img className='client-slider-img' height={300} src={akn} alt="" />
             </div>
             <div>
-              <img height={300} src={hc} alt="" />
+              <img className='client-slider-img' height={300} src={hc} alt="" />
             </div>
             <div>
-              <img height={300} src={itc} alt="" />
+              <img className='client-slider-img' height={300} src={itc} alt="" />
             </div>
             <div>
-              <img height={300} src={indigo} alt="" />
+              <img className='client-slider-img' height={300} src={indigo} alt="" />
             </div>
             <div>
-              <img height={300} src={afio} alt="" />
+              <img className='client-slider-img' height={300} src={afio} alt="" />
             </div>
             <div>
-              <img height={300} src={abg} alt="" />
+              <img className='client-slider-img' height={300} src={abg} alt="" />
             </div>
             <div>
-              <img height={300} src={gm} alt="" />
+              <img className='client-slider-img' height={300} src={gm} alt="" />
             </div>
             <div>
-              <img height={300} src={britannia} alt="" />
+              <img className='client-slider-img' height={300} src={britannia} alt="" />
             </div>
             <div>
-              <img height={300} src={vedanta} alt="" />
+              <img className='client-slider-img' height={300} src={vedanta} alt="" />
             </div>
             <div>
-              <img height={300} src={jsw} alt="" />
+              <img className='client-slider-img' height={300} src={jsw} alt="" />
             </div>
             <div>
-              <img height={300} src={mahindra} alt="" />
+              <img className='client-slider-img' height={300} src={mahindra} alt="" />
             </div>
             <div>
-              <img height={300} src={jcb} alt="" />
+              <img className='client-slider-img' height={300} src={jcb} alt="" />
             </div>
             <div>
-              <img height={300} src={lat} alt="" />
+              <img className='client-slider-img' height={300} src={lat} alt="" />
             </div>
           </Slider>
         </div>

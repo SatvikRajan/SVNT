@@ -41,7 +41,7 @@ function App() {
             <Route path="admin/*" element={<Admin />} />
             <Route path="admin-main" element={<MainLayout><AdminPage /></MainLayout>} />
           </Routes>
-        </ScrollToTop>
+       </ScrollToTop>
       )}
     </BrowserRouter>
   );

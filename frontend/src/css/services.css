@@ -2,7 +2,7 @@
   height: 100%;
   width: 100%;
   object-fit: scale-down;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 .service-head {
   margin-bottom: 3rem;
@@ -112,27 +112,35 @@
 }
 
 .left {
-  width: 2rem;
-  background: none;
+  border-radius: 3rem;
+  /* border: 1px solid black; */
+  /* width: 2rem; */
+  background: #FFFFFF;
   margin-right: 2rem;
   background-image: url("../images/Home/arrowleft.png");
-  background-size: contain;
-  /* height: 3rem; */
+  background-size: auto;
+  height: 4rem;
+  width: 4.5rem;
   background-repeat: no-repeat;
   background-position: center;
   border: none;
+  box-shadow: 0px 1px 2px black;
+  /* box-shadow: 0px 1px 3px 1px black; */
 }
 
 .right {
-  width: 2rem;
-  background: none;
+  border-radius: 3rem;
+  /* width: 2rem; */
+  background: #FFFFFF;
   margin-left: 2rem;
   background-image: url("../images/Home/arrowright.png");
-  background-size: contain;
-  /* height: 3rem; */
+  background-size: auto;
+  height: 4rem;
+  width: 4.5rem;
   background-repeat: no-repeat;
   background-position: center;
   border: none;
+  box-shadow: 0px 1px 2px black;
 }
 
 .service-text {
@@ -144,8 +152,15 @@
   left: 10rem;
 }
 
+.imgtit{
+  margin-top: 44px;
+  margin-bottom: 22px;
+}
 
-
+.services-list{
+  font-size: 28px;
+  line-height: 60px;
+}
 
 .service-content {
   opacity: 0; 
@@ -158,4 +173,83 @@
 @keyframes fade-in{
   0% {opacity: 0;}
   100% {opacity: 1;}
+}
+
+@media (max-width: 425px) {
+  .logo-brand{
+    position: relative;
+    top: 30px;
+    left: 10px;
+  }  
+  .logo-brand img{
+    display: none;
+    width: 165px;
+    height: 20px;
+  }
+  .services-in{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .services-ndetails{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .imgtit{
+    display: none !important;
+  }
+  .service-content{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .slider-container{
+    width: 100% !important;
+  }
+  .service-details{
+    font-size: 18px !important;
+    line-height: 34px !important;
+  }
+  .services-main {
+    width: 140rem !important;
+    gap: 30px !important;
+  }
+
+  .service-head{
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 18px !important;
+    font-weight: 500;
+    margin-bottom: 0 !important;
+  }
+  .services-mainf{
+    padding: 0 !important;
+  }
+  .services-list{
+    font-size: 18px;
+    line-height: 40px !important;
+  }
+  .service-name{
+    flex: 0 0 13.5%;
+  }
+  .service-bg{
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    object-fit: contain !important;
+    margin-top: 5.5rem !important;
+  }
+  .service-title-main{
+    font-size: 18px !important;
+  }
+  .service-img{
+    width: 2rem !important;
+  }
+  .left{
+    height: 3rem;
+    background: #251741;
+    margin-right: 1rem !important;
+  }
+  .right{
+    height: 3rem;
+    background: #251741;
+    margin-left: 1rem !important;
+  }
 }

@@ -60,7 +60,6 @@
   }
 } */
 
-
 .x {
   font-size: 30px;
   text-align: center;
@@ -89,10 +88,10 @@
   display: flex;
   /* justify-content: flex-end;  */
   text-align-last: right;
-  width: 25%;
+  width: 22%;
   border-bottom: 1px solid white;
   padding-bottom: 5px;
-  transition: justify-content 0.5s; 
+  transition: justify-content 0.5s;
 }
 
 .readmore:hover {
@@ -128,7 +127,10 @@
   height: 100%;
   font-size: 24px;
 }
-.n1{
+.video-info{
+  width: 57% !important;
+}
+.n1 {
   font-weight: 500;
 }
 /* .videoText a{
@@ -149,5 +151,74 @@
     padding: 5rem;
   }
 }
-@media screen {
+@media (max-width: 425px) {
+  .row {
+  }
+  .x1 {
+    flex-wrap: wrap;
+    font-size: 24px !important;
+  }
+  .number20 {
+    margin-bottom: -1rem;
+    height: 120px;
+    font-size: 100px;
+  }
+  .years {
+    padding-top: 0;
+    padding-left: 0 !important ;
+    padding-right: 0 !important;
+  }
+  .years .col {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .home-start {
+    border-radius: 30px !important;
+  }
+  .years .x1 {
+    width: 100%;
+    order: -1;
+  }
+  .year-name {
+    font-size: 34px !important;
+    padding-top: 0 !important;
+  }
+  .whyus {
+    padding: 20px;
+    height: 100%;
+    padding-left: 20px !important;
+  }
+  .why-choose-head {
+    font-weight: bold !important;
+    padding-top: 20px;
+    font-size: 20px !important;
+  }
+  .whyus-text {
+    margin: 0 !important;
+  }
+  .whyus-text p {
+    text-align: left;
+    margin: 0px 0px !important;
+    width: 100%;
+    font-size: 18px !important;
+  }
+  .whyus-details {
+    letter-spacing: 0;
+    font-size: 18px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .videoText {
+    flex-wrap: wrap;
+    padding: 0 !important;
+  }
+  .video-info {
+    width: 100% !important;
+    padding-left: 3rem !important;
+    line-height: 35px !important;
+    font-size: 18px !important  ;
+  }
+  .bg-video {
+    border-radius: 30px !important;
+  }
 }

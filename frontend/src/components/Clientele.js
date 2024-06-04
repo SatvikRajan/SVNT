@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import aequs from '../images/AboutUs/client-aequs.svg'
 import allergan from '../images/AboutUs/client-allergan.svg'
 import ampath from '../images/AboutUs/client-ampath.svg'
@@ -34,31 +34,31 @@ export default function Clientele() {
         <div className="trustedtext">
 
           <p data-aos='fade-right'>
-          Our most invaluable resource lies within our people, and it is collaboration that sparks the best ideas into life.
+            Our most invaluable resource lies within our people, and it is collaboration that sparks the best ideas into life.
           </p>
         </div>
 
         <section id="slideshow" data-aos='fade-left'>
           <div class="entire-content">
             <div class="content-carrousel">
-              <figure class="shadow"><img src={aequs} alt='client'/></figure>
-              <figure class="shadow"><img src={allergan} alt='client'/></figure>
-              <figure class="shadow"><img src={ampath} alt='client'/></figure>
-              <figure class="shadow"><img src={kia} alt='client'/></figure>
-              <figure class="shadow"><img src={brigade} alt='client'/></figure>
-              <figure class="shadow"><img src={esl} alt='client'/></figure>
-              <figure class="shadow"><img src={gd} alt='client'/></figure>
-              <figure class="shadow"><img src={akn} alt='client'/></figure>
-              <figure class="shadow"><img src={hc} alt='client'/></figure>
-              <figure class="shadow"><img src={itc} alt='client'/></figure>
-              <figure class="shadow"><img src={indigo} alt='client'/></figure>
-              <figure class="shadow"><img src={afio} alt='client'/></figure>
-              <figure class="shadow"><img src={abg} alt='client'/></figure>
-              <figure class="shadow"><img src={gm} alt='client'/></figure>
-              <figure class="shadow"><img src={britannia} alt='client'/></figure>
-              <figure class="shadow"><img src={vedanta} alt='client'/></figure>
-              <figure class="shadow"><img src={akn} alt='client'/></figure>
-              <figure class="shadow"><img src={hc} alt='client'/></figure>
+              <figure class="shadow"><img src={aequs} alt='client' /></figure>
+              <figure class="shadow"><img src={allergan} alt='client' /></figure>
+              <figure class="shadow"><img src={ampath} alt='client' /></figure>
+              <figure class="shadow"><img src={kia} alt='client' /></figure>
+              <figure class="shadow"><img src={brigade} alt='client' /></figure>
+              <figure class="shadow"><img src={esl} alt='client' /></figure>
+              <figure class="shadow"><img src={gd} alt='client' /></figure>
+              <figure class="shadow"><img src={akn} alt='client' /></figure>
+              <figure class="shadow"><img src={hc} alt='client' /></figure>
+              <figure class="shadow"><img src={itc} alt='client' /></figure>
+              <figure class="shadow"><img src={indigo} alt='client' /></figure>
+              <figure class="shadow"><img src={afio} alt='client' /></figure>
+              <figure class="shadow"><img src={abg} alt='client' /></figure>
+              <figure class="shadow"><img src={gm} alt='client' /></figure>
+              <figure class="shadow"><img src={britannia} alt='client' /></figure>
+              <figure class="shadow"><img src={vedanta} alt='client' /></figure>
+              <figure class="shadow"><img src={akn} alt='client' /></figure>
+              <figure class="shadow"><img src={hc} alt='client' /></figure>
 
             </div>
           </div>
