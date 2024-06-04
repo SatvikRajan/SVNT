@@ -329,6 +329,7 @@
     height: 100px !important;
   } */
   .ceo-text {
+    margin-top: 1rem;
     padding-right: 2rem;
     max-width: 100%;
     padding-left: 2rem;

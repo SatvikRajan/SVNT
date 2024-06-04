@@ -88,7 +88,11 @@
 
 @media (max-width: 425px) {
   .navbar{
-    top: 2%;
+    position: static !important;
+    margin-top: 1rem;
+    border-radius: 0 !important;
+    width: 100%;
+
   }
   @keyframes shrinkToCenter {
     from {
@@ -101,9 +105,15 @@
     }
   }
   .scrolled-nav{
+    animation: none !important;
     height: 8.5%;
   }
   
+  .scrolled-nav .nav-item {
+    left: 0% !important;
+    font-size: 18px !important;
+  }
+
   @keyframes expandFromLeft {
     0% {
       width: 90%; 
@@ -117,13 +127,21 @@
   .navbar-brand img {
     display: block !important;
     transition: 0.5s ease 0.3s;
-    height: 22px !important;
+    height: 25px !important;
+  }
+  .scrolled-top .navbar{
+    animation: none !important;
+  }
+  .nav-link{
+    height: 50px !important;
+  }
+  #nav-links{
+    margin-top: 10px !important;
   }
 
 }
 .scrolled-top .navbar {
-  animation: shrinkToCenter 0.4s ease forwards;
-  
+  animation: shrinkToCenter 0.4s ease forwards; 
 }
 
 .navbar-brand img {
