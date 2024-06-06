@@ -381,12 +381,31 @@
 
 @media (max-width: 425px) {
   .last-contact{
-    flex-wrap: wrap ;
-    width: 100% !important;
-    margin: 1rem !important;
+    flex-wrap: wrap;
+    width: 90% !important;
+    margin: 0rem !important;
     border-radius: 20px !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    /* padding-left: 10px !important;
+    padding-right: 10px !important; */
+    padding: 30px !important;
+    margin-bottom: 2rem !important;
+    margin-left: 1.3rem !important;
+  }
+  .lc{
+    width: 50% !important;
+  }
+
+  .lc a{
+    font-size: 18px !important;
+  }
+  .last-contact-start{
+    width: 100% !important;
+  }
+  .last-contact-start h1{
+    font-size: 24px !important;
+  }
+  .last-contact-start p{
+    font-size: 18px !important;
   }
   .trusted{
     gap: 6rem !important;

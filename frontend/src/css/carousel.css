@@ -691,4 +691,17 @@ html, body {
     width: 100%;
   }
   
+  .ci{
+    padding: 10px !important;
+  }
+  .cinner{
+    margin-top: 1rem !important;
+  }
+  #carousel-control-prev, #carousel-control-next{
+    bottom: 0 !important;
+    height: 100% !important;
+  }
+  .carousel-indicators{
+    display: none !important;
+  }
 }

@@ -205,8 +205,12 @@ a:hover {
 .icons {
   margin-top: 10px;
   display: flex;
-  gap: 10px;
+  gap: 80px;
+  align-items: center;
   justify-content: space-around;
+}
+.copyadd, .map svg{
+  filter: grayscale(1);
 }
 
 .copy-notification {
@@ -362,3 +366,4 @@ a:hover {
 .row {
   width: 100%;
 }
+
