@@ -32,7 +32,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .contact-image {
     padding: 2rem;
   }
@@ -46,25 +46,39 @@
     gap: 0px !important;
   }
   .form-body {
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
     flex-wrap: nowrap;
     gap: 2rem !important;
   }
+  .location {
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+  }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .offices1 {
     /* padding: 1rem; */
     margin-left: 2rem;
     margin-right: 2rem;
   }
-  /* .form-body{
-        gap: 4rem !important;
-    } */
+  .form-body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
   .write-h1 {
     font-size: 38px;
   }
   .write1 {
     font-size: 18px;
+  }
+  .contact-image {
+    padding: 2rem;
+  }
+  .location {
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
   }
 }
 @media (min-width: 1440px) {
@@ -121,26 +135,26 @@
     margin-right: 0 !important;
   }
   .location-h1 {
-    margin-left: 2rem  !important;
+    margin-left: 2rem !important;
     margin-bottom: 1rem;
     padding-top: 1rem !important;
   }
-  .location-name{
+  .location-name {
     display: none;
   }
-  .phonenumbers{
+  .phonenumbers {
     display: none;
   }
-  .form-box{
+  .form-box {
     padding: 10px !important;
   }
-  .inp .textarea{
+  .inp .textarea {
     height: 12rem !important;
   }
-  .location-cardaddress{
+  .location-cardaddress {
     font-size: 18px !important;
   }
-  .location-cardtitle{
+  .location-cardtitle {
     font-size: 24px !important;
   }
 }

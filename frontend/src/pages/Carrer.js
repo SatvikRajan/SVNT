@@ -20,7 +20,11 @@ export const CareersPage = () => {
   const [resume, setResume] = useState(null);
   const [showForm, setShowForm] = useState(false);
 
-
+  const handleFileChange = (e) => {
+    setResume(e.target.files[0]);
+    console.log(e.target.files[0])
+  };
+  
   const handleSubmit = async () => {
     try {
       const formData = new FormData();
@@ -31,17 +35,18 @@ export const CareersPage = () => {
       formData.append('relevantExperience', relevantExperience);
       formData.append('resume', resume);
 
-      var JSbody = JSON.stringify(Object.fromEntries(formData));
-      console.log(JSbody)
+      // var JSbody = JSON.stringify(Object.fromEntries(formData));
+      // console.log(JSbody)
+
       await fetch('http://localhost:8080/careers/api/submitForm', {
         method: 'POST',
-        headers: {
-          "Content-Type": 'application/json'
-        },
-        body: JSbody,
+        // headers: {
+        //   "Content-Type": 'application/json'
+        // },
+        body: formData,
       });
 
-      // toast.success('Form submitted successfully');
+
       setName('');
       setEmail('');
       setPhone('');
@@ -51,7 +56,7 @@ export const CareersPage = () => {
     } catch (error) {
       console.error(error);
       toast.error('Error submitting form');
-    }
+    } 
   };
   const handleApplyClick = () => {
     setShowForm(true);
@@ -59,6 +64,7 @@ export const CareersPage = () => {
   const handleGoBackClick = () => {
     setShowForm(false);
   }
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -174,7 +180,7 @@ export const CareersPage = () => {
                     style={{
                       display: "flex",
                       alignItems: "center",
-                      height: "4vh",
+                      height: "2rem",
                       letterSpacing: "0px",
                       fontWeight: "bold",
                       paddingLeft: "10px",
@@ -201,42 +207,41 @@ export const CareersPage = () => {
                   </p>
                   <div className="form-box-1">
                     <span style={{ marginLeft: "10px" }}>Apply Online</span>
-                    <label for="inp" class="inp">
-                      <input type="text" id="inp" placeholder="&nbsp;" value={name} onChange={(e) => setName(e.target.value)} />
-                      <span class="label">Name</span>
-                      <span class="focus-bg"></span>
+                    <label htmlFor="name" className="inp">
+                      <input type="text" id="name" placeholder="&nbsp;" value={name} onChange={(e) => setName(e.target.value)} />
+                      <span className="label">Name</span>
+                      <span className="focus-bg"></span>
                     </label>
                     <div className="d-flex" style={{ gap: "15px" }}>
-                      <label for="inp" class="inp">
-                        <input type="text" id="inp" placeholder="&nbsp;" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <span class="label">Email</span>
-                        <span class="focus-bg"></span>
+                      <label htmlFor="email" className="inp">
+                        <input type="text" id="email" placeholder="&nbsp;" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <span className="label">Email</span>
+                        <span className="focus-bg"></span>
                       </label>
-                      <label for="inp" class="inp ">
-                        <input type="number" id="inp" placeholder="&nbsp;" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                        <span class="label"> Phone Number</span>
-                        <span class="focus-bg"></span>
+                      <label htmlFor="phone" className="inp">
+                        <input type="number" id="phone" placeholder="&nbsp;" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                        <span className="label">Phone Number</span>
+                        <span className="focus-bg"></span>
                       </label>
                     </div>
-                    <label for="inp" class="inp">
-                      <input type="number" id="inp" placeholder="&nbsp;" value={totalExperience} onChange={(e) => setTotalExperience(e.target.value)} />
-                      <span class="label">Total Experience</span>
-                      <span class="focus-bg"></span>
+                    <label htmlFor="totalExperience" className="inp">
+                      <input type="number" id="totalExperience" placeholder="&nbsp;" value={totalExperience} onChange={(e) => setTotalExperience(e.target.value)} />
+                      <span className="label">Total Experience</span>
+                      <span className="focus-bg"></span>
                     </label>
-                    <label for="inp" class="inp">
-                      <input type="number" id="inp" placeholder="&nbsp;" value={relevantExperience} onChange={(e) => setRelevantExperience(e.target.value)} />
-                      <span class="label">Relevant Experience</span>
-                      <span class="focus-bg"></span>
+                    <label htmlFor="relevantExperience" className="inp">
+                      <input type="number" id="relevantExperience" placeholder="&nbsp;" value={relevantExperience} onChange={(e) => setRelevantExperience(e.target.value)} />
+                      <span className="label">Relevant Experience</span>
+                      <span className="focus-bg"></span>
                     </label>
-
                     <div className="d-flex mt-4 justify-center">
                       <span className="inp w-50">Attach Resume</span>
                       <input
                         className="form-control inp form-control-sm"
                         id="formFileSm"
                         type="file"
-                        accept='.pdf'
-                        onChange={(e) => setResume(e.target.files[0])}
+                        accept=".pdf"
+                        onChange={handleFileChange}
                       />
                     </div>
                   </div>
@@ -247,6 +252,7 @@ export const CareersPage = () => {
                     <ToastContainer />
                     <button onClick={handleSubmit} className="submit1">Submit</button>
                   </div>
+
                 </div>
               </div>
             ) : (
@@ -510,13 +516,9 @@ export const CareersPage = () => {
                     className="apply custom-apply-btn"
                     onClick={handleApplyClick}
                     type="button"
-                    disabled
                   >
                     Apply Now
                   </button>
-                </div>
-                <div className="overlay">
-                  <p className="overlay-text">Coming Soon . . . . </p>
                 </div>
               </div>
             )}
