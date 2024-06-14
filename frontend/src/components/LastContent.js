@@ -4,16 +4,18 @@ export default function LastContent() {
   return (
     <>
       <div className="last">
-        <img src={last} style={{ marginBottom: '3rem' }} alt="" />
         <p className="last-text-1" style={{ fontSize: '42px' }}>Careers</p>
-        <ul className='last-ul'>
-          <li>Connect with New People</li>
-          <li>Discover New Horizons </li>
-          <li>Design the Future</li>
-        </ul>
-        <a href="/careers">
-          <p className="last-text1 join">Join Us</p>
-        </a>
+        <div className='d-flex justify-content-around'>
+          <ul className='last-ul'>
+            <li>Connect with New People</li>
+            <li>Discover New Horizons </li>
+            <li>Design the Future</li>
+          </ul>
+          <a href="/careers">
+            <p className="last-text1 join">Join Us</p>
+          </a>
+        </div>
+        <img src={last} alt="" />
       </div>
       <div className="last-contact d-flex">
         <div className='last-contact-start' style={{ width: '60%' }}>
@@ -23,8 +25,8 @@ export default function LastContent() {
             your company.
           </p>
         </div>
-        <div className="ms-auto align-self-center lc" style={{width: '13%'}}>
-          <a href="/contact" style={{ filter: 'invert()', width: '100%' }} className=" text-light align-self-end fs-4 readmore">
+        <div className="ms-auto align-self-center lc">
+          <a href="/contact" style={{ width: '100%' }} className=" text-light align-self-end fs-4 readmore">
             Contact Us
           </a>
         </div>

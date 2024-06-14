@@ -24,9 +24,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .service-bg {
-    padding: 3rem;
-  }
+  
   .service-text {
     font-size: 18px !important;
     top: 14rem !important;
@@ -65,9 +63,7 @@
 }
 
 @media (min-width: 1024px) {
-  .service-bg {
-    padding: 2rem;
-  }
+  
   .service-text {
     font-size: 26px !important;
     top: 18rem !important;
@@ -231,10 +227,10 @@
     flex: 0 0 13.5%;
   }
   .service-bg{
-    padding-left: 1rem !important;
+    /* padding-left: 1rem !important;
     padding-right: 1rem !important;
     object-fit: contain !important;
-    margin-top: 2rem !important;
+    margin-top: 2rem !important; */
   }
   .service-title-main{
     font-size: 18px !important;

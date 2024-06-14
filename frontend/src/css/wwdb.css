@@ -68,17 +68,12 @@
 
 .wwdb-container {
   width: 90%;
-  /* margin-top: 20%; */
   height: 780px;
   border-radius: 100px;
   position: relative;
   background-image: url("../images/Home/wbg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  /* padding-top: 10%; */
-  /* background-color: #5023aa; */
-
-  /* opacity: 0; */
 }
 
 .wwdb-head {

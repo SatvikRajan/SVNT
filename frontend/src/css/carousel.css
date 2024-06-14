@@ -2,14 +2,13 @@
   position: relative;
   /* background-image: url('../images/cbg.png'); */
   background-repeat: no-repeat;
-  width: 93%;
-  margin-left: 3.6%;
+  width: 100%;
   overflow: hidden;
   margin-top: 0rem;
 }
 
 .carousel-item{
-  padding: 0 20px;
+  padding: 0 0;
 }
 
 .carousel-caption {
@@ -383,10 +382,6 @@ html, body {
   to {
     transform: rotateY(-360deg);
   }
-}
-
-.carousel-inner {
-  margin-top: 3rem;
 }
 
 .carousel-item5 {

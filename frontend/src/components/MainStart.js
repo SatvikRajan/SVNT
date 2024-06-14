@@ -79,7 +79,7 @@ export default function MainStart() {
         </div>
         <div className="d-flex align-items-center x1 col">
           <p className="value number20">21</p>
-          <p style={{ fontSize: '37px', paddingTop: '7rem' }} className='year-name'>Years</p>
+          <p style={{ fontSize: '37px' }} className='year-name'>Years</p>
         </div>
         <div className="text-center col">
           <div className='d-flex align-items-center justify-content-center'>
@@ -90,12 +90,11 @@ export default function MainStart() {
       </div>
       <div className="videoText d-flex pt-5 text-light">
         <p className='video-info' data-aos='fade-right'>
-          Committed to integrating pioneering technology into quality service, SVNT Infotech is a premier provider of
-          cutting-edge networking and communication solutions for evolving needs. With unwavering determination, we
-          strive to lead in delivering innovative solutions globally.
+          Your security is our priority.Feel free to immerse yourself in what's important to you.
+          Let us take care of the rest.
         </p>
         <a className="align-self-end" style={{ marginLeft: '16.5rem' }} href="/about" data-aos='fade-left'>
-          <p className="fs-4 text-light readmore" style={{width: '13rem'}}>Read more</p>
+          <p className="fs-4 text-light readmore" style={{ width: '13rem' }}>Read more</p>
         </a>
       </div>
     </div>

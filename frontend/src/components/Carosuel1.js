@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../css/card.css';
-import image1 from '../images/Home/carousel-image1.webp';
+import image1 from '../images/Home/carousel-image-1.jpg';
 import image1m from '../images/Home/carousel-image1m.jpg';
 import image2 from '../images/Home/carousel-image2.webp';
 import image3 from '../images/Home/carousel-image3.webp';
@@ -18,71 +18,74 @@ function Carosuel1() {
       <div class="carousel-inner cinner">
         <div class="carousel-item ci active" >
           <picture>
-          <source media="(max-width: 425px)" srcSet={image1m} />
-          <source media="(min-width: 426px)" srcSet={image1} />
-          <img
-            src={image1}
-            className="d-block w-100"
-            alt="..."
-          />
-        </picture>
+            <source media="(max-width: 425px)" srcSet={image1m} />
+            <source media="(min-width: 426px)" srcSet={image1} />
+            <img
+              src={image1}
+              className="d-block w-100"
+              alt="..."
+            />
+          </picture>
           <div class="carousel-caption cc1 d-none d-md-block">
             {/* <h1>First slide label</h1> */}
-            <p>Get to know us better!<br />
-              Unveiling the Path That Led Us to Now</p>
-            <a href="/about"><p className='ccr text-white readmore'>Read More</p></a>
+            <h1 style={{width: '60%', lineHeight: '4rem'}}>Relax, We've Got Your Back
+              Your Security is Our Priority!
+            </h1>
+            <p>Send us a message
+            </p>
+            {/* <a href="/about"><p className='ccr text-white readmore'>Read More</p></a> */}
           </div>
         </div>
         <div class="carousel-item ci" >
           {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
-          <source media="(max-width: 425px)" srcSet={image1m} />
-          <source media="(min-width: 426px)" srcSet={image1} />
-          <img
-            src={image1}
-            className="d-block w-100"
-            alt="..."
-          />
-        </picture>
+            <source media="(max-width: 425px)" srcSet={image1m} />
+            <source media="(min-width: 426px)" srcSet={image1} />
+            <img
+              src={image1}
+              className="d-block w-100"
+              alt="..."
+            />
+          </picture>
           <div class="carousel-caption cc1 d-none d-md-block">
             {/* <h1>First slide label</h1> */}
             <p>Delve into the revolutionary world of pelletization<br /> plants through real time system integration.</p>
-            <a href="/casestudies"><p className='ccr text-white readmore'>Read More</p></a>
+            {/* <a href="/casestudies"><p className='ccr text-white readmore'>Read More</p></a> */}
           </div>
         </div>
         <div class="carousel-item ci" >
           {/* <img src={image2} class="d-block w-100" alt="..." /> */}
           <picture>
-          <source media="(max-width: 425px)" srcSet={image1m} />
-          <source media="(min-width: 426px)" srcSet={image1} />
-          <img
-            src={image1}
-            className="d-block w-100"
-            alt="..."
-          />
-        </picture>
+            <source media="(max-width: 425px)" srcSet={image1m} />
+            <source media="(min-width: 426px)" srcSet={image1} />
+            <img
+              src={image1}
+              className="d-block w-100"
+              alt="..."
+            />
+          </picture>
           <div class="carousel-caption cc2 d-none d-md-block">
             {/* <h1>Second slide label</h1> */}
             <p >Explore our comprehensive range of<br /> services designed to meet your every need!</p>
-            <a href="/services"><p className='ccr text-white readmore'>Read More</p></a>
+            {/* <a href="/services"><p className='ccr text-white readmore'>Read More</p></a> */}
           </div>
         </div>
         <div class="carousel-item ci" >
           {/* <img src={image3} class="d-block w-100" alt="..." /> */}
           <picture>
-          <source media="(max-width: 425px)" srcSet={image1m} />
-          <source media="(min-width: 426px)" srcSet={image1} />
-          <img
-            src={image1}
-            className="d-block w-100"
-            alt="..."
-          />
-        </picture>
+            <source media="(max-width: 425px)" srcSet={image1m} />
+            <source media="(min-width: 426px)" srcSet={image1} />
+            <img
+              src={image1}
+              className="d-block w-100"
+              alt="..."
+            />
+          </picture>
           <div class="carousel-caption cc3 d-none d-md-block">
             {/* <h1>Third slide label</h1> */}
-            <p>Exploring opportunities with us?<br/>
+            <p>Exploring opportunities with us?<br />
               We're all ears! Drop us a message</p>
-            <a href="/contact"><p className='ccr text-white readmore'>Read More</p></a>
+            {/* <a href="/contact"><p className='ccr text-white readmore'>Read More</p></a> */}
           </div>
         </div>
       </div>

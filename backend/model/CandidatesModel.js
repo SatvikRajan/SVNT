@@ -16,26 +16,23 @@ const CandidateSchema = new mongoose.Schema({
         maxlength: 50
     },
     phone: {
-        type: Number,
+        type: String,
         required: true,
         trim: true,
         min: 0
     },
     totalExperience: {
-        type: Number,
+        type: String,
         required: true,
         min: 0
     },
     relevantExperience: {
-        type: Number,
+        type: String,
         required: true,
         min: 0
     },
-    resume: {
-        type: Object, 
-        required: true,
-        trim: true
-    }
+    resume: { type: mongoose.Schema.Types.ObjectId, ref: 'resumes.files', required: true }
+
 });
 
 module.exports = mongoose.model("Candidate", CandidateSchema);

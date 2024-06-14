@@ -1,7 +1,7 @@
 .home-start {
   margin-top: 5%;
   border-radius: 100px;
-  height: 780px;
+  height: 700px;
   width: 100%;
   overflow: hidden;
 }
@@ -19,6 +19,7 @@
 }
 
 .years {
+  flex-wrap: nowrap;
   width: 90%;
   padding-left: 8rem;
   padding-right: 8rem;
@@ -152,8 +153,7 @@
   }
 }
 @media (max-width: 425px) {
-  .row {
-  }
+  
   .x1 {
     flex-wrap: wrap;
     font-size: 24px !important;
@@ -164,6 +164,7 @@
     font-size: 100px;
   }
   .years {
+    flex-wrap: wrap;
     padding-top: 0;
     padding-left: 0 !important ;
     padding-right: 0 !important;

@@ -11,7 +11,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
-    width: 99vw;
+    width: 100%;
     /* background-color: antiquewhite; */
 
 
@@ -23,10 +23,8 @@
 
 
 .cs-hero{
-    width: 100vw;
-    height: 100vh;
-    margin-top: -1.2%;
-    margin-left: -0.5%;
+    width: 100%;
+    height: 100%;
     /* position: relative; */
     /* background-color: aquamarine; */
     display: flex;
@@ -37,8 +35,9 @@
 }
 
 .cs-hero-bg{
+    padding: 2rem;
     margin-top: 3.2rem;
-    width: fit-content;
+    width: 100%;
     object-fit: scale-down;
 }
 
@@ -47,7 +46,7 @@
     color: white;
     font-size: 42px;
     position: absolute;
-    top: 462px;
+    top: 432px;
     left: 213px;
 }
 
@@ -245,4 +244,14 @@
     justify-content: center;
     
     
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .image-text{
+        top: 320px;
+        left: 150px;
+        font-size: 28px;
+
+    }
 }

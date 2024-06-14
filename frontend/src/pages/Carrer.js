@@ -219,18 +219,18 @@ export const CareersPage = () => {
                         <span className="focus-bg"></span>
                       </label>
                       <label htmlFor="phone" className="inp">
-                        <input type="number" id="phone" placeholder="&nbsp;" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                        <input type="text" id="phone" placeholder="&nbsp;" value={phone} onChange={(e) => setPhone(e.target.value)} onWheel={ event => event.currentTarget.blur() }/>
                         <span className="label">Phone Number</span>
                         <span className="focus-bg"></span>
                       </label>
                     </div>
                     <label htmlFor="totalExperience" className="inp">
-                      <input type="number" id="totalExperience" placeholder="&nbsp;" value={totalExperience} onChange={(e) => setTotalExperience(e.target.value)} />
+                      <input type="text" id="totalExperience" placeholder="&nbsp;" value={totalExperience} onChange={(e) => setTotalExperience(e.target.value)} />
                       <span className="label">Total Experience</span>
                       <span className="focus-bg"></span>
                     </label>
                     <label htmlFor="relevantExperience" className="inp">
-                      <input type="number" id="relevantExperience" placeholder="&nbsp;" value={relevantExperience} onChange={(e) => setRelevantExperience(e.target.value)} />
+                      <input type="text" id="relevantExperience" placeholder="&nbsp;" value={relevantExperience} onChange={(e) => setRelevantExperience(e.target.value)} />
                       <span className="label">Relevant Experience</span>
                       <span className="focus-bg"></span>
                     </label>
