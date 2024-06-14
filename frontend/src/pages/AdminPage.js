@@ -6,7 +6,12 @@ export default function AdminPage() {
         <div>
             <div className="top">
                 <img src={company} width='400rem' alt="" />
-                <p>how are you </p>
+            </div>
+            <div className="admin-left">
+                <h1>Applications</h1>
+                <a href=""></a><p>Add Vacancy</p>
+                <p>Recieved</p>
+                <p>Add Vacancy</p>
             </div>
         </div>
     )

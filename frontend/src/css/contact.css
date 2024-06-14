@@ -1,6 +1,4 @@
-.contact-image-container {
-  margin-top: 0.5rem;
-}
+
 
 .contact-image {
   object-fit: scale-down;
@@ -33,9 +31,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .contact-image {
+  /* .contact-image {
     padding: 2rem;
-  }
+  } */
   .text {
     font-size: 28px;
     bottom: 10rem;
@@ -64,8 +62,8 @@
     margin-right: 2rem;
   }
   .form-body {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
   .write-h1 {
     font-size: 38px;
@@ -73,12 +71,9 @@
   .write1 {
     font-size: 18px;
   }
-  .contact-image {
-    padding: 2rem;
-  }
   .location {
-    margin-left: 2rem !important;
-    margin-right: 2rem !important;
+    margin-left: 4rem !important;
+    margin-right: 4rem !important;
   }
 }
 @media (min-width: 1440px) {
@@ -92,7 +87,6 @@
     display: none;
   }
   .contact-image {
-    padding: 1rem;
     object-fit: contain;
   }
   .form-body {

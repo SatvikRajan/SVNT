@@ -88,9 +88,6 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-image-container">
-        <Link className="logo-brand" to="/">
-          <img src={Logo} alt="SVNT Tech" height={30} />
-        </Link>
         <picture>
           <source media="(max-width: 425px)" srcSet={contactm} />
           <source media="(min-width: 426px)" srcSet={contact} />

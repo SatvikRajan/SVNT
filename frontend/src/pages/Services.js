@@ -10,7 +10,7 @@ import wwdb5 from '../images/Home/security-and-mgmt.svg';
 import wwdb6 from '../images/Home/energy.svg';
 import wwdb7 from '../images/Home/surveillance-and-safety.svg';
 import wwdb8 from '../images/Home/storage.svg';
-import servicebg from '../images/Services/servicebg.webp';
+import servicebg from '../images/Services/servicebg.jpg';
 import servicebgm from '../images/Services/servicebgm.jpg';
 import IPSlider from '../components/Sliders/IPSSlider';
 import INSlider from '../components/Sliders/INSSlider';
@@ -82,9 +82,6 @@ export default function Services() {
 
   return (
     <div className="services">
-      <Link className="logo-brand" to="/">
-        <img src={Logo} alt="SVNT Tech" height={30} />
-      </Link>
       <picture>
         <source media="(max-width: 425px)" srcSet={servicebgm} />
         <source media="(min-width: 426px)" srcSet={servicebg} />

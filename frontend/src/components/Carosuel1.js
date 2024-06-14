@@ -48,9 +48,11 @@ function Carosuel1() {
             />
           </picture>
           <div class="carousel-caption cc1 d-none d-md-block">
-            {/* <h1>First slide label</h1> */}
-            <p>Delve into the revolutionary world of pelletization<br /> plants through real time system integration.</p>
-            {/* <a href="/casestudies"><p className='ccr text-white readmore'>Read More</p></a> */}
+          <h1 style={{width: '60%', lineHeight: '4rem'}}>Relax, We've Got Your Back
+              Your Security is Our Priority!
+            </h1>
+            <p>Send us a message
+            </p>
           </div>
         </div>
         <div class="carousel-item ci" >
@@ -65,9 +67,11 @@ function Carosuel1() {
             />
           </picture>
           <div class="carousel-caption cc2 d-none d-md-block">
-            {/* <h1>Second slide label</h1> */}
-            <p >Explore our comprehensive range of<br /> services designed to meet your every need!</p>
-            {/* <a href="/services"><p className='ccr text-white readmore'>Read More</p></a> */}
+          <h1 style={{width: '60%', lineHeight: '4rem'}}>Relax, We've Got Your Back
+              Your Security is Our Priority!
+            </h1>
+            <p>Send us a message
+            </p>
           </div>
         </div>
         <div class="carousel-item ci" >
@@ -82,10 +86,11 @@ function Carosuel1() {
             />
           </picture>
           <div class="carousel-caption cc3 d-none d-md-block">
-            {/* <h1>Third slide label</h1> */}
-            <p>Exploring opportunities with us?<br />
-              We're all ears! Drop us a message</p>
-            {/* <a href="/contact"><p className='ccr text-white readmore'>Read More</p></a> */}
+          <h1 style={{width: '60%', lineHeight: '4rem'}}>Relax, We've Got Your Back
+              Your Security is Our Priority!
+            </h1>
+            <p>Send us a message
+            </p>
           </div>
         </div>
       </div>

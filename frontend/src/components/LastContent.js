@@ -5,7 +5,7 @@ export default function LastContent() {
     <>
       <div className="last">
         <p className="last-text-1" style={{ fontSize: '42px' }}>Careers</p>
-        <div className='d-flex justify-content-around'>
+        <div className='d-flex justify-content-around lt-text'>
           <ul className='last-ul'>
             <li>Connect with New People</li>
             <li>Discover New Horizons </li>

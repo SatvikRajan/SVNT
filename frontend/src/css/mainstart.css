@@ -1,6 +1,6 @@
 .home-start {
   margin-top: 5%;
-  border-radius: 100px;
+  border-radius: 20px;
   height: 700px;
   width: 100%;
   overflow: hidden;
@@ -10,7 +10,7 @@
   z-index: -1;
   left: 5%;
   position: absolute;
-  border-radius: 80px;
+  border-radius: 30px;
   height: inherit;
   object-fit: fill;
   width: 90%;
@@ -70,7 +70,7 @@
 
 .case-studies {
   margin: 5%;
-  border-radius: 100px;
+  border-radius: 20px;
   color: white;
   background-position: center;
   background-size: cover;
@@ -149,7 +149,7 @@
   }
   .partners {
     margin-top: 10rem;
-    padding: 5rem;
+    /* padding: 5rem; */
   }
 }
 @media (max-width: 425px) {

@@ -7,10 +7,10 @@ import { loginRoute } from '../utils/ApiRoutes';
 import '../css/admin.css'
 
 
-function Admin() {
+function AdminLogin() {
   const navigate = useNavigate();
   const [values, setValues] = useState({
-    email: "",
+    username: "",
     password: ""
   })
   useEffect(() => {
@@ -22,9 +22,9 @@ function Admin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (handleValidation()) {
-      const { password, email } = values;
+      const { password, username } = values;
       const { data } = await axios.post(loginRoute, {
-        email, password
+        username, password
       })
       if (data.status === false) {
         toast.error(data.msg)
@@ -36,13 +36,13 @@ function Admin() {
     }
   }
   const handleValidation = () => {
-    const { password, email } = values;
+    const { password, username } = values;
     if (password === "") {
-      toast.error("email and Password is required")
+      toast.error("username and Password is required")
       return false;
     }
-    else if (email.length === 0) {
-      toast.error("email and Password is required")
+    else if (username.length === 0) {
+      toast.error("username and Password is required")
       return false;
     }
     return true;
@@ -56,13 +56,13 @@ function Admin() {
         <img src={company} width='400rem' alt="" />
       </div>
       <div class="parent-container">
-        <div class="portal d-flex flex-column">
+        <div class="portal-login d-flex flex-column">
           <p>Admin Portal</p>
           <form onSubmit={(e) => handleSubmit(e)}>
             <input
               type="text"
-              placeholder="Email"
-              name="email"
+              placeholder="Username"
+              name="username"
               onChange={(e) => {
                 handleChange(e);
               }}
@@ -77,6 +77,9 @@ function Admin() {
               }}
             />
             <button type="submit">Login</button>
+            <span>
+            Don't have an account ?<Link to="/register">  Register</Link>
+          </span>
           </form>
         </div>
         <ToastContainer />
@@ -85,4 +88,4 @@ function Admin() {
   )
 }
 
-export default Admin
+export default AdminLogin;
