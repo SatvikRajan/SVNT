@@ -10,7 +10,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Logo from '../images/svnt-logo-black-full.png';
 import { Link } from 'react-router-dom'
-
+import ArrowIcon from "../components/ArrowIcon";
+import axios from 'axios';
 export const CareersPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -19,12 +20,34 @@ export const CareersPage = () => {
   const [relevantExperience, setRelevantExperience] = useState('');
   const [resume, setResume] = useState(null);
   const [showForm, setShowForm] = useState(false);
+  const [jobs, setJobs] = useState([]);
+  const [selectedItem, setSelectedItem] = useState(null);
+
 
   const handleFileChange = (e) => {
-    setResume(e.target.files[0]);
-    console.log(e.target.files[0])
+    const file = e.target.files[0];
+    setResume(file);
   };
-  
+
+  // useEffect(() => {
+  //   const fetchJobDetails = async () => {
+  //     try {
+  //       const response = await axios.get(`http://localhost:8080/api/jobs/${jobId}`);
+  //       setJobDetails(response.data);
+  //     } catch (error) {
+  //       console.error('Error fetching job details:', error);
+  //     }
+  //   };
+
+  //   if (jobId) {
+  //     fetchJobDetails();
+  //   }
+  // }, [jobId]);
+
+  const handleDropdownClick = (jobId) => {
+    setSelectedItem(jobId);
+  };
+
   const handleSubmit = async () => {
     try {
       const formData = new FormData();
@@ -33,31 +56,34 @@ export const CareersPage = () => {
       formData.append('phone', phone);
       formData.append('totalExperience', totalExperience);
       formData.append('relevantExperience', relevantExperience);
-      formData.append('resume', resume);
-
-      // var JSbody = JSON.stringify(Object.fromEntries(formData));
-      // console.log(JSbody)
-
-      await fetch('http://localhost:8080/careers/api/submitForm', {
+      if (resume) {
+        formData.append('resume', resume);
+      }
+      // for (let pair of formData.entries()) {
+      //   console.log(pair[0] + ': ' + pair[1]);
+      // }
+      const response = await fetch('http://localhost:8080/careers/api/submitForm', {
         method: 'POST',
-        // headers: {
-        //   "Content-Type": 'application/json'
-        // },
         body: formData,
       });
 
+      if (!response.ok) {
+        throw new Error('Error submitting form');
+      }
 
       setName('');
       setEmail('');
       setPhone('');
       setTotalExperience('');
       setRelevantExperience('');
-      setResume(null);
+      // setResume(null);
+      toast.success('Form submitted successfully');
     } catch (error) {
       console.error(error);
       toast.error('Error submitting form');
-    } 
+    }
   };
+
   const handleApplyClick = () => {
     setShowForm(true);
   };
@@ -119,43 +145,17 @@ export const CareersPage = () => {
                   alt=""
                 />
               </button>
-              <ul class="dropdown-menu" >
-                {/* changes */}
-                <li>
-                  <a class="dropdown-item" href="#job-des">
-                    Defence Porjects
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#job-des">
-                    Enterprise Solutions
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#job-des">
-                    Global Markets
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#job-des">
-                    IT Infrastructure
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#job-des">
-                    HR
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#job-des">
-                    Sales
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#job-des">
-                    Solution Architect
-                  </a>
-                </li>
+              <ul className="dropdown-menu">
+                {jobs.map((job) => (
+                  <li key={job._id}>
+                    <button
+                      className="dropdown-item"
+                      onClick={() => handleDropdownClick(job._id)}
+                    >
+                      {job.title}
+                    </button>
+                  </li>
+                ))}
               </ul>
             </div>
             {showForm ? (
@@ -174,7 +174,7 @@ export const CareersPage = () => {
                 </div>
                 <div className="w-100">
                   <p style={{ fontWeight: "bolder" }}>
-                    Senior Software Engineer
+                    {selectedItem}
                   </p>
                   <p
                     style={{
@@ -219,7 +219,7 @@ export const CareersPage = () => {
                         <span className="focus-bg"></span>
                       </label>
                       <label htmlFor="phone" className="inp">
-                        <input type="text" id="phone" placeholder="&nbsp;" value={phone} onChange={(e) => setPhone(e.target.value)} onWheel={ event => event.currentTarget.blur() }/>
+                        <input type="text" id="phone" placeholder="&nbsp;" value={phone} onChange={(e) => setPhone(e.target.value)} onWheel={event => event.currentTarget.blur()} />
                         <span className="label">Phone Number</span>
                         <span className="focus-bg"></span>
                       </label>
@@ -306,207 +306,22 @@ export const CareersPage = () => {
                   <p style={{ fontWeight: "bold" }}>Requirements</p>
                   <ul class="job-requirements">
                     <li>
-                      Experience{" "}
-                      <svg
-                        style={{ marginLeft: "50px", marginRight: "25px" }}
-                        width="30"
-                        height="23"
-                        viewBox="0 0 30 23"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M8.20516 0H0L8.20516 10.7812L0 23H8.20516L16.1539 10.7812L8.20516 0Z"
-                          fill="url(#paint0_linear_1590_3086)"
-                        />
-                        <path
-                          d="M13.3317 0H10.7676L18.4599 10.6786L10.7676 23H13.3317L21.024 10.6786L13.3317 0Z"
-                          fill="url(#paint1_linear_1590_3086)"
-                        />
-                        <path
-                          d="M23.8457 10.6786L16.1533 0H22.3072L29.9995 10.6786L22.3072 23H16.1533L23.8457 10.6786Z"
-                          fill="url(#paint2_linear_1590_3086)"
-                        />
-                        <defs>
-                          <linearGradient
-                            id="paint0_linear_1590_3086"
-                            x1="4.21406"
-                            y1="11.0893"
-                            x2="16.0149"
-                            y2="11.1373"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                          <linearGradient
-                            id="paint1_linear_1590_3086"
-                            x1="13.4432"
-                            y1="11.0893"
-                            x2="20.9359"
-                            y2="11.1087"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                          <linearGradient
-                            id="paint2_linear_1590_3086"
-                            x1="19.7654"
-                            y1="11.0893"
-                            x2="29.8804"
-                            y2="11.1246"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                      3 to 4 years
+                      Experience {" "}
+                      <ArrowIcon style={{ marginRight: '25px', marginLeft: '50px' }} />
+                      {/* {jobDetails.experience} */}
                     </li>
                     <li>
-                      Primary Skills{" "}
-                      <svg
-                        style={{ marginLeft: "33px", marginRight: "20px" }}
-                        width="30"
-                        height="23"
-                        viewBox="0 0 30 23"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M8.20516 0H0L8.20516 10.7812L0 23H8.20516L16.1539 10.7812L8.20516 0Z"
-                          fill="url(#paint0_linear_1590_3086)"
-                        />
-                        <path
-                          d="M13.3317 0H10.7676L18.4599 10.6786L10.7676 23H13.3317L21.024 10.6786L13.3317 0Z"
-                          fill="url(#paint1_linear_1590_3086)"
-                        />
-                        <path
-                          d="M23.8457 10.6786L16.1533 0H22.3072L29.9995 10.6786L22.3072 23H16.1533L23.8457 10.6786Z"
-                          fill="url(#paint2_linear_1590_3086)"
-                        />
-                        <defs>
-                          <linearGradient
-                            id="paint0_linear_1590_3086"
-                            x1="4.21406"
-                            y1="11.0893"
-                            x2="16.0149"
-                            y2="11.1373"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                          <linearGradient
-                            id="paint1_linear_1590_3086"
-                            x1="13.4432"
-                            y1="11.0893"
-                            x2="20.9359"
-                            y2="11.1087"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                          <linearGradient
-                            id="paint2_linear_1590_3086"
-                            x1="19.7654"
-                            y1="11.0893"
-                            x2="29.8804"
-                            y2="11.1246"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                        </defs>
-                      </svg>{" "}
-                      C++/QT
+                      Primary Skills {" "}
+                      <ArrowIcon style={{ marginRight: '20px', marginLeft: '33px' }} />
+                      {/* {jobDetails.primarySkills} */}
                     </li>
                     <li>
-                      Required Skills{" "}
-                      <svg
-                        style={{ marginLeft: "24px", marginRight: "20px" }}
-                        width="30"
-                        height="23"
-                        viewBox="0 0 30 23"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M8.20516 0H0L8.20516 10.7812L0 23H8.20516L16.1539 10.7812L8.20516 0Z"
-                          fill="url(#paint0_linear_1590_3086)"
-                        />
-                        <path
-                          d="M13.3317 0H10.7676L18.4599 10.6786L10.7676 23H13.3317L21.024 10.6786L13.3317 0Z"
-                          fill="url(#paint1_linear_1590_3086)"
-                        />
-                        <path
-                          d="M23.8457 10.6786L16.1533 0H22.3072L29.9995 10.6786L22.3072 23H16.1533L23.8457 10.6786Z"
-                          fill="url(#paint2_linear_1590_3086)"
-                        />
-                        <defs>
-                          <linearGradient
-                            id="paint0_linear_1590_3086"
-                            x1="4.21406"
-                            y1="11.0893"
-                            x2="16.0149"
-                            y2="11.1373"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                          <linearGradient
-                            id="paint1_linear_1590_3086"
-                            x1="13.4432"
-                            y1="11.0893"
-                            x2="20.9359"
-                            y2="11.1087"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                          <linearGradient
-                            id="paint2_linear_1590_3086"
-                            x1="19.7654"
-                            y1="11.0893"
-                            x2="29.8804"
-                            y2="11.1246"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                      <ul class="nested-skills">
-                        <li>Work Experience with Qt/C++ programming.</li>
-                        <li>
-                          Hands-on experience and knowledge in GUI development
-                          with Qt/QML.
-                        </li>
-                        <li>
-                          Experience with multithreading and object-oriented
-                          programming.
-                        </li>
-                        <li>Experience creating reusable QML components.</li>
-                        <li>
-                          Experience with interfacing Serial device
-                          communication.
-                        </li>
+                      Required Skills {" "}
+                      <ArrowIcon style={{ marginRight: '20px', marginLeft: '24px' }} />
+                      <ul className="nested-skills">
+                        {/* {jobDetails.requiredSkills.map((skill, index) => (
+                          <li key={index}>{skill}</li>
+                        ))} */}
                       </ul>
                     </li>
                   </ul>

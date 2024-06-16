@@ -13,12 +13,14 @@ const app = express();
 
 const adminRoutes = require('../backend/routes/AdminRoutes');
 const candidateRoutes = require('./routes/CandidateRoutes');
+const jobRoutes = require('./routes/JobRoutes');
 const Candidate = require('./model/CandidatesModel');
 app.use(cors());
 require("dotenv").config();
 app.use(express.json());
 app.use("/api/auth", adminRoutes);
 app.use('/api/candidates', candidateRoutes);
+app.use('/admin/api/jobs', jobRoutes);
 
 app.use(bodyParser.json());
 
@@ -112,10 +114,20 @@ function validatePhone(phone) {
     return phoneRegex.test(phone);
 }
 
+app.get('/candidates', async (req, res) => {
+    try {
+        const candidates = await Candidate.find();
+        res.status(200).json(candidates);
+    } catch (error) {
+        console.error('Error fetching candidates:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
 app.post('/careers/api/submitForm', upload.single('resume'), async (req, res) => {
     try {
         const { name, email, phone, totalExperience, relevantExperience } = req.body;
-        const resumeFileId = req.file.id;
+        const resume = req.file;
 
         const candidate = new Candidate({
             name,
@@ -123,7 +135,7 @@ app.post('/careers/api/submitForm', upload.single('resume'), async (req, res) =>
             phone,
             totalExperience,
             relevantExperience,
-            resume: resumeFileId
+            resumePath: resume ? resume.path : null // Assuming you want to store the file path
         });
 
         await candidate.save();
