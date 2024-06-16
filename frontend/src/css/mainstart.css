@@ -1,7 +1,7 @@
 .home-start {
   margin-top: 5%;
-  border-radius: 20px;
-  height: 700px;
+  border-radius: 100px;
+  height: 780px;
   width: 100%;
   overflow: hidden;
 }
@@ -10,7 +10,7 @@
   z-index: -1;
   left: 5%;
   position: absolute;
-  border-radius: 30px;
+  border-radius: 80px;
   height: inherit;
   object-fit: fill;
   width: 90%;
@@ -19,7 +19,6 @@
 }
 
 .years {
-  flex-wrap: nowrap;
   width: 90%;
   padding-left: 8rem;
   padding-right: 8rem;
@@ -61,6 +60,7 @@
   }
 } */
 
+
 .x {
   font-size: 30px;
   text-align: center;
@@ -70,7 +70,7 @@
 
 .case-studies {
   margin: 5%;
-  border-radius: 20px;
+  border-radius: 100px;
   color: white;
   background-position: center;
   background-size: cover;
@@ -89,10 +89,10 @@
   display: flex;
   /* justify-content: flex-end;  */
   text-align-last: right;
-  width: 22%;
+  width: 25%;
   border-bottom: 1px solid white;
   padding-bottom: 5px;
-  transition: justify-content 0.5s;
+  transition: justify-content 0.5s; 
 }
 
 .readmore:hover {
@@ -128,10 +128,7 @@
   height: 100%;
   font-size: 24px;
 }
-.video-info{
-  width: 57% !important;
-}
-.n1 {
+.n1{
   font-weight: 500;
 }
 /* .videoText a{
@@ -149,77 +146,8 @@
   }
   .partners {
     margin-top: 10rem;
-    /* padding: 5rem; */
+    padding: 5rem;
   }
 }
-@media (max-width: 425px) {
-  
-  .x1 {
-    flex-wrap: wrap;
-    font-size: 24px !important;
-  }
-  .number20 {
-    margin-bottom: -1rem;
-    height: 120px;
-    font-size: 100px;
-  }
-  .years {
-    flex-wrap: wrap;
-    padding-top: 0;
-    padding-left: 0 !important ;
-    padding-right: 0 !important;
-  }
-  .years .col {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  .home-start {
-    border-radius: 30px !important;
-  }
-  .years .x1 {
-    width: 100%;
-    order: -1;
-  }
-  .year-name {
-    font-size: 34px !important;
-    padding-top: 0 !important;
-  }
-  .whyus {
-    padding: 20px;
-    height: 100%;
-    padding-left: 20px !important;
-  }
-  .why-choose-head {
-    font-weight: bold !important;
-    padding-top: 20px;
-    font-size: 20px !important;
-  }
-  .whyus-text {
-    margin: 0 !important;
-  }
-  .whyus-text p {
-    text-align: left;
-    margin: 0px 0px !important;
-    width: 100%;
-    font-size: 18px !important;
-  }
-  .whyus-details {
-    letter-spacing: 0;
-    font-size: 18px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  .videoText {
-    flex-wrap: wrap;
-    padding: 0 !important;
-  }
-  .video-info {
-    width: 100% !important;
-    padding-left: 3rem !important;
-    line-height: 35px !important;
-    font-size: 18px !important  ;
-  }
-  .bg-video {
-    border-radius: 30px !important;
-  }
+@media screen {
 }

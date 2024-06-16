@@ -90,7 +90,6 @@ export const CareersPage = () => {
   const handleGoBackClick = () => {
     setShowForm(false);
   }
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -180,7 +179,7 @@ export const CareersPage = () => {
                     style={{
                       display: "flex",
                       alignItems: "center",
-                      height: "2rem",
+                      height: "4vh",
                       letterSpacing: "0px",
                       fontWeight: "bold",
                       paddingLeft: "10px",
@@ -207,16 +206,16 @@ export const CareersPage = () => {
                   </p>
                   <div className="form-box-1">
                     <span style={{ marginLeft: "10px" }}>Apply Online</span>
-                    <label htmlFor="name" className="inp">
-                      <input type="text" id="name" placeholder="&nbsp;" value={name} onChange={(e) => setName(e.target.value)} />
-                      <span className="label">Name</span>
-                      <span className="focus-bg"></span>
+                    <label for="inp" class="inp">
+                      <input type="text" id="inp" placeholder="&nbsp;" value={name} onChange={(e) => setName(e.target.value)} />
+                      <span class="label">Name</span>
+                      <span class="focus-bg"></span>
                     </label>
                     <div className="d-flex" style={{ gap: "15px" }}>
-                      <label htmlFor="email" className="inp">
-                        <input type="text" id="email" placeholder="&nbsp;" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <span className="label">Email</span>
-                        <span className="focus-bg"></span>
+                      <label for="inp" class="inp">
+                        <input type="text" id="inp" placeholder="&nbsp;" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <span class="label">Email</span>
+                        <span class="focus-bg"></span>
                       </label>
                       <label htmlFor="phone" className="inp">
                         <input type="text" id="phone" placeholder="&nbsp;" value={phone} onChange={(e) => setPhone(e.target.value)} onWheel={event => event.currentTarget.blur()} />
@@ -224,24 +223,25 @@ export const CareersPage = () => {
                         <span className="focus-bg"></span>
                       </label>
                     </div>
-                    <label htmlFor="totalExperience" className="inp">
-                      <input type="text" id="totalExperience" placeholder="&nbsp;" value={totalExperience} onChange={(e) => setTotalExperience(e.target.value)} />
-                      <span className="label">Total Experience</span>
-                      <span className="focus-bg"></span>
+                    <label for="inp" class="inp">
+                      <input type="number" id="inp" placeholder="&nbsp;" value={totalExperience} onChange={(e) => setTotalExperience(e.target.value)} />
+                      <span class="label">Total Experience</span>
+                      <span class="focus-bg"></span>
                     </label>
-                    <label htmlFor="relevantExperience" className="inp">
-                      <input type="text" id="relevantExperience" placeholder="&nbsp;" value={relevantExperience} onChange={(e) => setRelevantExperience(e.target.value)} />
-                      <span className="label">Relevant Experience</span>
-                      <span className="focus-bg"></span>
+                    <label for="inp" class="inp">
+                      <input type="number" id="inp" placeholder="&nbsp;" value={relevantExperience} onChange={(e) => setRelevantExperience(e.target.value)} />
+                      <span class="label">Relevant Experience</span>
+                      <span class="focus-bg"></span>
                     </label>
+
                     <div className="d-flex mt-4 justify-center">
                       <span className="inp w-50">Attach Resume</span>
                       <input
                         className="form-control inp form-control-sm"
                         id="formFileSm"
                         type="file"
-                        accept=".pdf"
-                        onChange={handleFileChange}
+                        accept='.pdf'
+                        onChange={(e) => setResume(e.target.files[0])}
                       />
                     </div>
                   </div>
@@ -252,7 +252,6 @@ export const CareersPage = () => {
                     <ToastContainer />
                     <button onClick={handleSubmit} className="submit1">Submit</button>
                   </div>
-
                 </div>
               </div>
             ) : (
@@ -331,9 +330,13 @@ export const CareersPage = () => {
                     className="apply custom-apply-btn"
                     onClick={handleApplyClick}
                     type="button"
+                    disabled
                   >
                     Apply Now
                   </button>
+                </div>
+                <div className="overlay">
+                  <p className="overlay-text">Coming Soon . . . . </p>
                 </div>
               </div>
             )}
@@ -380,5 +383,5 @@ export const CareersPage = () => {
       </div>
 
     </div>
-  );
-};
+  )
+}

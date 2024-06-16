@@ -9,6 +9,9 @@ import comingSoon from '../images/CaseStudies/coming-soon-bg.png'
 export default function CaseStudies() {
   return (
     <div className='cs-body'>
+      <Link className="logo-brand" to="/">
+          <img src={Logo} alt="SVNT Tech" height={30} />
+        </Link>
       <div className='cs-hero'>
         <div>
           <img className="cs-hero-bg" src={bghero} alt="" />

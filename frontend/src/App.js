@@ -9,6 +9,7 @@ import { CareersPage } from './pages/Carrer';
 import CaseStudies from './pages/CaseStudies';
 import { About } from './pages/About';
 import Services from './pages/Services';
+import Admin from './pages/Admin';
 import AdminPage from './pages/AdminPage';
 import Loader from './components/Loader';
 import AdminLogin from './pages/AdminLogin';
@@ -52,7 +53,7 @@ function App() {
 
 const MainLayout = ({ children }) => (
   <>
-    {/* <Navbar /> */}
+    <Navbar />
     {children}
     <Footer />
   </>

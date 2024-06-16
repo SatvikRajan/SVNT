@@ -1,6 +1,6 @@
 .about-us-head {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: relative;
 }
 
@@ -57,20 +57,23 @@
   letter-spacing: 1.5% !important;
 }
 
+
+
 .svnt-info {
   line-height: 50px;
   font-weight: 500;
+  margin-left: 5rem;
+  margin-right: 5rem;
   font-size: 28px;
   padding: 8rem;
 }
 
 .ceo {
-  display: flex;
   margin-bottom: -3rem;
   align-items: center;
   text-align: center;
-  padding-left: 8rem;
-  padding-right: 5rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
 }
 
 .ceo-text {
@@ -88,10 +91,10 @@
   background: linear-gradient(to right, #e2e4f4, #cdd4fd);
   margin-top: 0% !important;
   margin: 5%;
-  border-radius: 20px;
+  border-radius: 100px;
   padding-top: 5rem;
-  padding-left: 10rem;
-  padding-right: 10 rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
 }
 
 .manager-1 {
@@ -118,7 +121,7 @@
 .company-timeline {
   margin-top: 0% !important;
   margin: 5%;
-  border-radius: 20px;
+  border-radius: 100px;
   position: relative;
   background-image: url(../images/AboutUs/company-timelinebg.png);
   background-repeat: no-repeat;
@@ -200,10 +203,10 @@
     padding-right: 5rem;
   }
   .ceo-photo {
-    width: 100% !important;
+    width: 55% !important;
   }
   .ceo-photo-1 {
-    width: 100% !important;
+    width: 26rem !important;
   }
   .ceo-text-head {
     font-size: 28px !important;
@@ -272,72 +275,6 @@
   }
 }
 
-.manager-name {
+.manager-name{
   font-size: 22px;
-}
-
-@media (max-width: 425px) {
-  .img-info {
-    display: none;
-  }
-  .svnt-info {
-    padding: 2rem;
-    font-size: 18px !important;
-    line-height: 34px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  .svnt-info h1 {
-    padding-bottom: 0 !important;
-  }
-  .timeline-carousel {
-    display: none !important;
-  }
-  .ceo {
-    margin-bottom: 10px !important;
-    display: flex ;
-    position: relative;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  /* .ceo-photo{
-    float: right !important;
-  } */
-  .managers {
-    border-radius: 20px !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    padding-top: 2rem;
-  }
-  .manager-1 {
-    padding-left: 0% !important;
-    padding-right: 0% !important;
-    margin: 0 !important;
-  }
-  .managers h1 {
-    text-align: center;
-  }
-  .about-clients {
-    padding: 0 !important;
-    margin: 2rem !important;
-  }
-  /* .slick-slide img {
-    height: 100px !important;
-  } */
-  .ceo-text {
-    margin-top: 1rem;
-    padding-right: 2rem;
-    max-width: 100%;
-    padding-left: 2rem;
-    text-align: left !important;
-  }
-
-  .client-slider-img{
-    height: 100px;
-  }
-  .ceo-text-head{
-    font-size: 24px !important;
-  }
 }

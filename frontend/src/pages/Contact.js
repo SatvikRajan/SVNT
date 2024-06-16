@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import LocationCard from '../components/LocationCard';
 import contact from '../images/ContactUs/contact-hand.jpg';
-import contactm from '../images/ContactUs/contact-handm.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../css/contact.css'
@@ -88,15 +87,10 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-image-container">
-        <picture>
-          <source media="(max-width: 425px)" srcSet={contactm} />
-          <source media="(min-width: 426px)" srcSet={contact} />
-          <img
-            src={contact}
-            className='contact-image'
-            alt=""
-          />
-        </picture>
+        <Link className="logo-brand" to="/">
+          <img src={Logo} alt="SVNT Tech" height={30} />
+        </Link>
+        <img src={contact} className="contact-image" alt="" />
         <div className="text">Need assistance?<br />
           How may we help you?</div>
       </div>
@@ -153,7 +147,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="location">
-        <h1 className='location-h1' style={{ textAlign: 'start', marginLeft: '8rem', paddingTop: '3rem' }}>Our Locations</h1>
+        <h1 style={{ textAlign: 'start', marginLeft: '8rem', paddingTop: '3rem' }}>Our Locations</h1>
         <h1 className="location-name">Head Office</h1>
         <div className="offices" data-aos='fade-up'>
           <LocationCard
@@ -178,6 +172,11 @@ const Contact = () => {
             address="House No.849, GROUND FLOOR , SECTOR, 47 GURGAON, (HR) 122001"
           />
         </div>
+        <p style={{ marginBottom: '60px' }}>
+          <b>Ph : </b>
+          <a href="tel:+914027153387">040-27153387 </a>,<a href="tel:+919397005115"> 9397005115 </a>,
+          <a href="tel:+918800630726"> 8800630726 </a>,<a href="tel:+919441234471"> 9441234471 </a>
+        </p>
       </div>
     </div>
   );

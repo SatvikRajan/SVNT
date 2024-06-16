@@ -10,7 +10,6 @@ import LastContent from '../components/LastContent';
 import '../css/home.css'
 import Logo from '../images/svnt-logo-white-full.png';
 import { Link } from 'react-router-dom'
-import Partners from './Partners';
 
 export default function Home() {
 
@@ -20,22 +19,25 @@ export default function Home() {
       {/* Carousel */}
 
       <div class="carousel1">
-        <Carosuel1 />
+        <Link style={{left: '140px',}} className="logo-brand" to="/">
+          <img src={Logo} alt="SVNT Tech" height={30} />
+        </Link>
+        <Carosuel1/>
       </div>
 
       <MainStart />
 
-      <Clientele />
-      <WhyWeDoBest />
       <WhyChooseUs />
 
       <div className="mainpage">
-        <Partners/>
+        <WhyWeDoBest />
+        <div className="partners" style={{fontSize: '42px'}}>Partners</div>
         <div className="case-studies">
           <h1>Case Studies</h1>
           <CaseStudiesCarousel />
           {/* <a className='ms-auto' href="">Read More</a> */}
         </div>
+        <Clientele />
         <LastContent />
       </div>
     </div>

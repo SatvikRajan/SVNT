@@ -9,49 +9,48 @@ const Navbar = () => {
     const location = useLocation();
     const [activeLink, setActiveLink] = useState(null);
 
-    const [scrollTop, setScrollTop] = useState(0);
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrollTop(window.scrollY);
-            const navElement = document.getElementById('navbar');
-            const navItems = document.getElementById("navbarSupportedContent");
-            const navLinks = document.getElementById('nav-links')
-            if (navElement) {
-                if (scrollTop > 70) {
-                    navElement.classList.add('scrolled-nav');
-                    navItems.classList.add('collapse','justify-content-end')
-                    navLinks.classList.remove('navbar-collapse', 'collapse', 'justify-content-between')
-                    navItems.classList.add('navLinksPosition')
-                    // navItems.classList.add('justify-content-end')
-                } else {
-                    navElement.classList.remove('scrolled-nav')
-                    navItems.classList.remove('collapse','justify-content-end')
-                    navLinks.classList.add('navbar-collapse', 'collapse', 'justify-content-between')
-                    navItems.classList.add('navLinksPosition')
-                    // navItems.classList.remove('justify-content-')
-                    // navItems.classList.add('justify-content-center');
-                }
-            }
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         setScrollTop(window.scrollY);
+    //         const navElement = document.getElementById('navbar');
+    //         const navItems = document.getElementById("navbarSupportedContent");
+    //         const navLinks = document.getElementById('nav-links')
+    //         if (navElement) {
+    //             if (scrollTop > 70) {
+    //                 navElement.classList.add('scrolled-nav');
+    //                 navItems.classList.add('collapse','justify-content-end')
+    //                 navLinks.classList.remove('navbar-collapse', 'collapse', 'justify-content-between')
+    //                 navItems.classList.add('navLinksPosition')
+    //                 // navItems.classList.add('justify-content-end')
+    //             } else {
+    //                 navElement.classList.remove('scrolled-nav')
+    //                 navItems.classList.remove('collapse','justify-content-end')
+    //                 navLinks.classList.add('navbar-collapse', 'collapse', 'justify-content-between')
+    //                 navItems.classList.add('navLinksPosition')
+    //                 // navItems.classList.remove('justify-content-')
+    //                 // navItems.classList.add('justify-content-center');
+    //             }
+    //         }
 
-            const currentScrollPos = window.scrollY;
-
+    //         const currentScrollPos = window.scrollY;
 
 
-            if (currentScrollPos > prevScrollPos && currentScrollPos > 100) {
-                document.querySelector('.navbar').classList.add('hidden');
-            } else {
-                document.querySelector('.navbar').classList.remove('hidden');
-            }
 
-            setPrevScrollPos(currentScrollPos);
-        };
+    //         if (currentScrollPos > prevScrollPos && currentScrollPos > 100) {
+    //             document.querySelector('.navbar').classList.add('hidden');
+    //         } else {
+    //             document.querySelector('.navbar').classList.remove('hidden');
+    //         }
 
-        window.addEventListener('scroll', handleScroll);
+    //         setPrevScrollPos(currentScrollPos);
+    //     };
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [prevScrollPos]);
+    //     window.addEventListener('scroll', handleScroll);
+
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, [prevScrollPos]);
 
     useEffect(() => {
         setActiveLink(location.pathname);
@@ -62,8 +61,8 @@ const Navbar = () => {
     };
 
     return (
-        <div className={`${scrollTop<=70?'scrolled-top':''}`}>
-            <nav className="navbar navbar-expand-lg " id='navbar'>
+        <div>
+            <nav className="navbar navbar-expand-lg scrolled-nav " id='navbar'>
                 <div className="container">
                     <Link className="navbar-brand" to="/">
                         <img src={Logo} alt="SVNT Tech" height={30} />
@@ -79,8 +78,8 @@ const Navbar = () => {
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-                        <ul id='nav-links' className="navbar-nav navbar-collapse collapse justify-content-between">
+                    <div className="navbar-collapse navLinksPosition collapse justify-content-end" id="navbarSupportedContent">
+                        <ul id='nav-links' className="navbar-nav ">
                             <NavItem to="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 About Us
                             </NavItem>

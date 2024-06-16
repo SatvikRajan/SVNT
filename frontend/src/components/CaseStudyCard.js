@@ -31,10 +31,10 @@ const items = [
             "The solution also comprises the deployment of Axis Communications' IP cameras across the airport premises, providing high-definition video coverage of key areas. Tyco's access control system was deployed to manage entry points, secure zones, and regulate access permissions for personnel. Genetec's unified security platform was leveraged for centralised management and monitoring, integrating video management, access control, and licence plate recognition solutions. Redundant architectures and failover mechanisms were implemented for critical components such as servers and storage to ensure continuous operation and data availability. Additionally, the security infrastructure was designed to scale seamlessly with the airport's expansion plans, accommodating additional cameras, access points, and users. Our system utilises Genetec for the frontend, providing users with seamless access to its features. Behind the scenes, Tyco's  backend handles access control functionalities discreetly, ensuring seamless operations without any visibility to end-users.",
             "The implementation of the advanced security solutions yielded significant results. Firstly, it enhanced security by providing comprehensive coverage and real-time monitoring capabilities, bolstering the overall security posture of Kempegowda International Airport. Secondly, operational efficiency was improved through centralised management and monitoring, enabling quick responses to incidents and improved incident resolution times. Thirdly, reliability and redundancy were ensured through redundant architectures and failover mechanisms, minimising the risk of data loss or downtime. Fourthly, scalability allowed for future expansion and adaptation to evolving security needs without significant disruptions. Lastly, compliance with industry regulations and standards was achieved, enhancing the airport's reputation as a secure and reliable transportation hub.",
             "By leveraging advanced security technologies and implementing integrated solutions, Kempagowda International Airport successfully addressed its security challenges while improving operational efficiency and reliability. The deployment of scalable and redundant architectures ensures the airport's ability to adapt to future security requirements, positioning it as a leader in aviation security."
-            ,
+,
         ],
         top: '1153px',
-
+        
     },
     {
         id: 2,
@@ -53,7 +53,7 @@ const items = [
             "Genetec's Security Desk offers a comprehensive solution, allowing users to manage various security operations seamlessly.Federated entities in Security Desk refer to the integration of different security systems, such as cameras, doors, alarms, and access control devices, into a unified platform. This integration enables users to access and manage these entities from a single interface, streamlining security operations across various locations.",
             "Security Desk offers an array of functionalities for managing federated entities. Users can view live or recorded video from federated cameras, add bookmarks, export video and even control PTZ (Pan-Tilt-Zoom) cameras, which are built with mechanical parts that allow them to swivel left to right, tilt up and down, and zoom in and out of a scene. Federated entities allow users to unlock doors, override schedules, set doors in maintenance mode, and control reader buzzers. Users can receive, acknowledge, and manage alarms, as well as configure alarm properties and associated actions. Security Desk supports monitoring people count and tracking cardholders and visitors in federated areas. Federated entities in Security Desk provide a robust solution for integrating and managing different security systems. By using federated entities, security operations are made more efficient and can effectively manage security across various locations, promoting safety and peace of mind.With a focus on guest network infrastructure, data administration networks, and access control mechanisms, the collaborative efforts between ITC Royal Bengal and SVNT exemplify a commitment to excellence and a dedication to providing guests with unparalleled experiences",
             "With a focus on guest network infrastructure, data administration networks, and access control mechanisms, the collaborative efforts between ITC Royal Bengal and SVNT exemplify a commitment to excellence and a dedication to providing guests with unparalleled experiences. This transformative initiative sets a new benchmark for hospitality industry standards, reinforcing ITC Royal Bengal's position as a leader in luxury accommodation and guest services.",
-        ],
+],
         top: '1153px',
     },
     {
@@ -62,7 +62,7 @@ const items = [
         bg2: jsw2,
         title: "JSW Eye On Pellet",
         subtitle: "Delve into the revolutionary world of pelletization plants through real time system integration",
-        desc: [
+        desc:[
             "Step into the world of pelletization plants, where innovation meets necessity. Pelletization, the transformative process that turns raw materials into the backbone of various industries, demands precision and efficiency. Yet, traditional methods often fall short, hindered by manual inspections and human errors. Enter 'Eye-on-Pellet,' a beacon of technological advancement developed to revolutionise pelletization plant operations.",
             "Identifying Operational Gaps",
             "Pelletization turns raw materials like iron ore, biomass, or coal fines into small, uniform pellets, demands precision and efficiency. These pellets are used in industries like iron and steel, renewable energy, and agriculture. They improve efficiency, reduce waste, and enhance product quality by making the materials easier to handle, transport, and use in various applications. In the realm of pelletization, the reliance on manual inspection by operators has led to inconsistent pellet sizes and suboptimal throughput. The human element introduces errors and compromises the plant's performance, operating at only 60%-70% of its potential. It's evident that a transformative solution is needed, one that transcends traditional limitations and ushers in a new era of efficiency and productivity.",
@@ -73,12 +73,12 @@ const items = [
             "Realising Results:",
             "The Impact of 'Eye-on-Pellet' The implementation of 'Eye-on-Pellet' yields a myriad of benefits, transforming the landscape of pelletization plant operations. Real-time monitoring not only enhances quality control but also reduces rejected pellets, ensuring optimal utilisation of resources. Operators can swiftly adjust parameters, optimising plant performance and maximising throughput. And the best part? Our customisable solutions are tailor-made to fit each plant's unique needs, unlocking maximum efficiency and potential.",
             "The successful implementation of 'Eye-on-Pellet' demonstrates its effectiveness in enhancing pelletization plant efficiency and productivity. By leveraging advanced technology and automated monitoring, operators can make informed decisions, optimise plant parameters, and achieve consistent, high-quality pellet output. With its proven track record and customisable features, 'Eye-on-Pellet' stands as a pioneering solution in revolutionising pelletization plant operations.",
-            ,
+,
         ],
         top: '2017px',
     },
     {
-        id: 3,
+        id: 4,
         bg1: delhiP1,
         bg2: delhiP2,
         title: "Delhi Parliament",
@@ -86,17 +86,17 @@ const items = [
         desc: [],
         top: '2017px',
     },
-
+    
 ]
 
-export default function CaseStudyCard({ props }) {
+export default function CaseStudyCard({props}) {
     const [selectedId, setSelectedId] = useState(null)
     const [currTop, setCurrTop] = useState('');
     const [expandedPosition, setExpandedPosition] = useState({ top: '50%', left: '50%' });
     const expandedCardRef = useRef(null);
-
+    
     useEffect(() => {
-        if (selectedId !== null && selectedId !== 4) {
+        if (selectedId !== null && selectedId!==4) {
             expandedCardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
             document.documentElement.classList.add('overflow-hidden');
             const viewportWidth = window.innerWidth;
@@ -106,7 +106,7 @@ export default function CaseStudyCard({ props }) {
             const top = `${(viewportHeight - expandedHeight) / 2}px`;
             const left = `${(viewportWidth - expandedWidth) / 2}px`;
             setExpandedPosition({ top, left });
-
+            
         } else {
             // Allow scrolling of the background page
             document.documentElement.classList.remove('overflow-hidden');
@@ -114,58 +114,54 @@ export default function CaseStudyCard({ props }) {
     }, [selectedId]);
 
     return (
-        <motion.div className={'cs-set'}>
+        <motion.div className={'cs-set'}> 
             {items.map(item => (
                 <motion.div className="cs-card-parent">
-                    <motion.div
-                        className="cs-card"
-                        id={`cs-card-${item.id}`}
-                        layoutId={item.id}
-                        style={{ backgroundImage: `url(${item.bg1})` }}
-                        onClick={() => {
-                            setSelectedId(item.id);
-                            setCurrTop(item.top);
-                        }}>
-                        {item.id !== 4 && <motion.div className="cs-sub-text">
+                <motion.div
+                    className="cs-card"
+                    id={`cs-card-${item.id}`}
+                    layoutId={item.id}
+                    style={{backgroundImage:`url(${item.bg1})`}}
+                    onClick={() => {
+                        setSelectedId(item.id);
+                        setCurrTop(item.top);
+                    }}>
+                        {<motion.div className="cs-sub-img"><motion.img src={item.bg2} /></motion.div>}
+                        {item.id!==4 && <motion.div className="cs-sub-text">  
                             <motion.p className="cs-head">{item.title}</motion.p>
+                            <motion.p className="cs-info">{item.subtitle}</motion.p>
                         </motion.div>}
-                        {<motion.div className="cs-sub-bullet">
-                            <ul>
-                                <li>How SVNT implements Security Measures in Kempagowda international Airport</li>
-                                <li>How SVNT implements Security Measures in Kempagowda international Airport</li>
-                                <li>How SVNT implements Security Measures in Kempagowda international Airport</li>
-                            </ul></motion.div>}
-                        {item.id !== 4 && <motion.div className="cs-read-more" onClick={() => setSelectedId(item.id)}>
-                            <motion.p style={{ textAlign: 'right' }} className="readmore cs-readmore" >
+                        {item.id!==4 && <motion.div className="cs-read-more" onClick={() => setSelectedId(item.id)}>
+                            <motion.p style={{ textAlign: 'right' }}className="readmore cs-readmore" >
                                 Read More
                             </motion.p>
+                    </motion.div>}
+                    {item.id == 4 &&
+                        <motion.div style={{marginTop:'10%', padding:'0%'}}>
+                            <motion.p
+                                style={{
+                                    // backgroundColor: 'green',
+                                    textAlign: "center",
+                                    fontSize: '24px',
+                                    marginBottom:'9%'
+                                }}>
+                                {item.title}</motion.p>
+                            <motion.p
+                                style={{
+                                    // backgroundColor: 'green',
+                                    textAlign: "center",
+                                    fontSize: '42px',
+                                    margin: 0,
+                                                                        
+                                }}>
+                                Coming Soon</motion.p>
                         </motion.div>}
-                        {item.id == 4 &&
-                            <motion.div style={{ marginTop: '10%', padding: '0%' }}>
-                                <motion.p
-                                    style={{
-                                        // backgroundColor: 'green',
-                                        textAlign: "center",
-                                        fontSize: '24px',
-                                        marginBottom: '9%'
-                                    }}>
-                                    {item.title}</motion.p>
-                                {/* <motion.p
-                                    style={{
-                                        // backgroundColor: 'green',
-                                        textAlign: "center",
-                                        fontSize: '42px',
-                                        margin: 0,
-
-                                    }}>
-                                    Coming Soon</motion.p> */}
-                            </motion.div>}
                     </motion.div>
-                </motion.div>
+                    </motion.div>
             ))}
-
+            
             <AnimatePresence>
-                {selectedId != null && selectedId != 4 && (
+                {selectedId!=null && selectedId!=4 &&(
                     <>
                         <motion.div
                             className="background-blur"
@@ -187,21 +183,21 @@ export default function CaseStudyCard({ props }) {
                                 backgroundSize: 'cover',
                                 left: expandedPosition.left,
                             }}
-                        >
-                            <motion.div className="expanded-head">
-                                <motion.h2 className="expanded-head-h2">{items.find(item => item.id === selectedId).title}</motion.h2>
-                                <motion.div className="expanded-head-img"><motion.img onClick={() => setSelectedId(null)} src={cross} /></motion.div>
-                            </motion.div>
-
-                            <motion.div className="expanded-info">
-                                {items.find(item => item.id === selectedId).desc.map(info => (
-                                    <motion.p className="expanded-info-p">{info}</motion.p>
-                                ))}
-                            </motion.div>
+                    >
+                        <motion.div className="expanded-head">
+                            <motion.h2 className="expanded-head-h2">{items.find(item => item.id === selectedId).title}</motion.h2>
+                            <motion.div className="expanded-head-img"><motion.img onClick={() => setSelectedId(null)} src = {cross}/></motion.div>
+                        </motion.div>
+                        
+                        <motion.div className="expanded-info">
+                            {items.find(item => item.id === selectedId).desc.map(info => (
+                                <motion.p className="expanded-info-p">{info}</motion.p>
+                            ))}
+                        </motion.div>
                         </motion.div>
                     </>
-                )}
+            )}
             </AnimatePresence >
-        </motion.div>
+    </motion.div>
     )
 }
