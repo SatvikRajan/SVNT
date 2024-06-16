@@ -14,8 +14,6 @@ function CaseStudiesCarousel() {
   const carouselRef = useRef(null);
   const [cardWidth, setCardWidth] = useState(0);
   const [items, setItems] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsToShow = 4; // Number of dots to show
 
   useEffect(() => {
     AOS.init({
@@ -58,63 +56,50 @@ function CaseStudiesCarousel() {
   useEffect(() => {
     setItems([
       { id: 0, image: sss, title: 'JSW Eye on Pellet', description: 'Delve into the revolutionary world of pelletization plants through real time system integration.' },
+      { id: 1, image: ips, title: '', description: '' },
+      { id: 2, image: ipn, title: '', description: '' },
       { id: 3, image: str, title: 'ITC Hotels', description: 'A Close Examination of how SVNT implements Security Protocols at ITC.' },
       { id: 4, image: sms, title: 'BEL(Rafael)', description: 'Explore the realm of security and management solutions, vital for safeguarding businesses against threats.' },
       { id: 5, image: is, title: 'Om Books (Statocast)', description: 'Optimize efficiency with our integration solutions, merging systems for seamless communication and collaboration.' },
+      { id: 6, image: avs, title: 'CFCL', description: 'Elevate communication and engagement with our audio-visual solutions.' },
+      { id: 7, image: es, title: 'Aragen', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' },
+      { id: 0, image: sss, title: 'JSW Eye on Pellet', description: 'Delve into the revolutionary world of pelletization plants through real time system integration.' },
       { id: 1, image: ips, title: '', description: '' },
       { id: 2, image: ipn, title: '', description: '' },
+      { id: 3, image: str, title: 'ITC Hotels', description: 'A Close Examination of how SVNT implements Security Protocols at ITC.' },
+      { id: 4, image: sms, title: 'BEL(Rafael)', description: 'Explore the realm of security and management solutions, vital for safeguarding businesses against threats.' },
+      { id: 5, image: is, title: 'Om Books (Statocast)', description: 'Optimize efficiency with our integration solutions, merging systems for seamless communication and collaboration.' },
+      { id: 6, image: avs, title: 'CFCL', description: 'Elevate communication and engagement with our audio-visual solutions.' },
+      { id: 7, image: es, title: 'Aragen', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' },
+      { id: 0, image: sss, title: 'JSW Eye on Pellet', description: 'Delve into the revolutionary world of pelletization plants through real time system integration.' },
+      { id: 1, image: ips, title: '', description: '' },
+      { id: 2, image: ipn, title: '', description: '' },
+      { id: 3, image: str, title: 'ITC Hotels', description: 'A Close Examination of how SVNT implements Security Protocols at ITC.' },
+      { id: 4, image: sms, title: 'BEL(Rafael)', description: 'Explore the realm of security and management solutions, vital for safeguarding businesses against threats.' },
+      { id: 5, image: is, title: 'Om Books (Statocast)', description: 'Optimize efficiency with our integration solutions, merging systems for seamless communication and collaboration.' },
       { id: 6, image: avs, title: 'CFCL', description: 'Elevate communication and engagement with our audio-visual solutions.' },
       { id: 7, image: es, title: 'Aragen', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' },
     ]);
   }, []);
 
   const handleNext = () => {
-    const newIndex = (currentIndex + 1) % items.length;
-    setCurrentIndex(newIndex);
     const carousel = carouselRef.current;
     if (carousel) {
       carousel.scrollTo({
-        left: newIndex * cardWidth,
+        left: carousel.scrollLeft + cardWidth,
         behavior: 'smooth',
       });
     }
   };
 
   const handlePrev = () => {
-    const newIndex = (currentIndex - 1 + items.length) % items.length;
-    setCurrentIndex(newIndex);
     const carousel = carouselRef.current;
     if (carousel) {
       carousel.scrollTo({
-        left: newIndex * cardWidth,
+        left: carousel.scrollLeft - cardWidth,
         behavior: 'smooth',
       });
     }
-  };
-
-  const handleDotClick = (index) => {
-    setCurrentIndex(index);
-    const carousel = carouselRef.current;
-    if (carousel) {
-      carousel.scrollTo({
-        left: index * cardWidth,
-        behavior: 'smooth',
-      });
-    }
-  };
-
-  const getVisibleDots = () => {
-    const totalDots = items.length;
-    if (totalDots <= itemsToShow) return [...Array(totalDots).keys()];
-    
-    const dots = [];
-    let startIndex = Math.floor(currentIndex / itemsToShow) * itemsToShow;
-
-    for (let i = 0; i < itemsToShow; i++) {
-      dots.push((startIndex + i) % totalDots);
-    }
-
-    return dots;
   };
 
   return (
@@ -132,6 +117,7 @@ function CaseStudiesCarousel() {
                 <a href="/casestudies" className={`readmore ${!item.title ? 'read-1' : ''}`}>
                   Read More
                 </a>
+
               </div>
             </div>
           </div>
@@ -145,15 +131,6 @@ function CaseStudiesCarousel() {
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
       </button>
-      <div className="carousel-dots">
-        {getVisibleDots().map((index) => (
-          <span
-            key={index}
-            className={`dot ${index === currentIndex ? 'active' : ''}`}
-            onClick={() => handleDotClick(index)}
-          ></span>
-        ))}
-      </div>
     </div>
   );
 }

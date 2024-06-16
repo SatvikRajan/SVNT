@@ -5,21 +5,14 @@
 }
 
 .parent-container {
-  height: 70vh;
+    height: 70vh;
   display: grid;
   place-items: center;
 }
 
-.portal-login,
-.portal-register {
-  align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  padding: 5rem;
-  background-color: #f1faff;
-}
-
-.reg {
-  gap: 20px;
-  display: flex;
-  flex-direction: column;
+.portal {
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 5rem;
+    background-color: #F1FAFF;
 }

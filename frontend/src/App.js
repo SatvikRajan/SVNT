@@ -9,10 +9,9 @@ import { CareersPage } from './pages/Carrer';
 import CaseStudies from './pages/CaseStudies';
 import { About } from './pages/About';
 import Services from './pages/Services';
+import Admin from './pages/Admin';
 import AdminPage from './pages/AdminPage';
 import Loader from './components/Loader'; 
-import AdminLogin from './pages/AdminLogin';
-import AdminRegister from './pages/AdminRegister';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,11 +38,10 @@ function App() {
             <Route path="careers" element={<MainLayout><CareersPage /></MainLayout>} />
             <Route path="about" element={<MainLayout><About /></MainLayout>} />
             <Route path="services" element={<MainLayout><Services /></MainLayout>} />
-            <Route path="login" element={<AdminLogin />} />
-            <Route path="register" element={<AdminRegister />} />
+            <Route path="admin/*" element={<Admin />} />
             <Route path="admin-main" element={<MainLayout><AdminPage /></MainLayout>} />
           </Routes>
-       </ScrollToTop>
+        </ScrollToTop>
       )}
     </BrowserRouter>
   );
@@ -51,7 +49,7 @@ function App() {
 
 const MainLayout = ({ children }) => (
   <>
-    {/* <Navbar /> */}
+    <Navbar />
     {children}
     <Footer />
   </>

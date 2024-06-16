@@ -24,13 +24,13 @@ function SimpleSlider() {
   };
 
   return (
-    <div className="slider-container" style={sliderStyle}>
+    <div className="slider-images">
       <Slider {...settings}>
         <div>
-          <img style={{width: "100%"}} src={is1} alt="" />
+          <img src={is1} alt="" />
         </div>
         <div>
-          <img style={{width: "100%"}} src={is2} alt="" />
+          <img src={is2} alt="" />
         </div>
       </Slider>
     </div>

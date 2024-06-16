@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import s1 from '../../images/Services/Sliders/s1.png'
 import s2 from '../../images/Services/Sliders/s2.png'
-import s3 from '../../images/Services/Sliders/s3.png'
 
 function SimpleSlider() {
   const settings = {
@@ -26,16 +25,13 @@ function SimpleSlider() {
   };
 
   return (
-    <div className="slider-container" style={sliderStyle}>
+    <div className="slider-images">
       <Slider {...settings}>
         <div>
-          <img style={{width: "100%"}} src={s1} alt="" />
+          <img src={s1} alt="" />
         </div>
         <div>
-        <img style={{width: "100%"}} src={s2} alt="" />
-        </div>
-        <div>
-        <img style={{width: "100%"}} src={s3} alt="" />
+        <img src={s2} alt="" />
         </div>
       </Slider>
     </div>

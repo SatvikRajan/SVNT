@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
-import { useState, useEffect } from 'react';
+import { useState,useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -12,10 +12,12 @@ export default function Timeline() {
     const [backgroundPosition, setBackgroundPosition] = useState(0);
 
     const handleNextArrowClick = () => {
+        // Increment background position by 10%
         setBackgroundPosition(prevPosition => prevPosition + 10);
     };
 
     const handlePrevArrowClick = () => {
+        // Decrement background position by 10%
         setBackgroundPosition(prevPosition => prevPosition - 10);
     };
     function SampleNextArrow(props) {
@@ -30,6 +32,7 @@ export default function Timeline() {
                     alignItems: 'center',
                     justifyContent: 'center'
                 }}
+                // onClick={onClick}
                 onClick={() => {
                     if (onClick) {
                         onClick();

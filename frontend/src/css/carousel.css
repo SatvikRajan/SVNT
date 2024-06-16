@@ -2,13 +2,14 @@
   position: relative;
   /* background-image: url('../images/cbg.png'); */
   background-repeat: no-repeat;
-  width: 100%;
+  width: 93%;
+  margin-left: 3.6%;
   overflow: hidden;
   margin-top: 0rem;
 }
 
 .carousel-item{
-  padding: 0 0;
+  padding: 0 20px;
 }
 
 .carousel-caption {
@@ -384,6 +385,10 @@ html, body {
   }
 }
 
+.carousel-inner {
+  margin-top: 3rem;
+}
+
 .carousel-item5 {
   transition: none !important;
 }
@@ -404,7 +409,7 @@ html, body {
   }
 }
 .ccr{
-  left: 65rem;
+  left: 68rem;
   top: 22rem;
   font-size:  30px;
   position: absolute;
@@ -619,84 +624,4 @@ html, body {
   background-color: #fff;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
     0 1px 10px 0 rgba(0, 0, 0, 0.12);
-}
-
-
-@media (max-width: 425px) {
-  .carousel-control-prev,
-  .carousel-control-next {
-    align-self: self-end;
-    bottom: -1.5rem;
-  }
-
-
-  .card-1{
-    width: 20rem;
-    height: 26rem;
-  }
-  .case-studies{
-    border-radius: 30px !important;
-    height: 610px !important;
-    padding: 0 !important;
-    padding-top: 2rem !important;
-    padding-left: 0.2rem !important;
-  }
-
-  .case-studies h1{
-    font-size: 34px !important; 
-    padding-left: 1rem !important;
-  }
-  .carousel-control-prev{
-    left: 50px;
-  }
-  .carousel-control-next{
-    right: 50px;
-  }
-  
-  .carousel-control-prev-icon, .carousel-control-next-icon{
-    padding: 30px !important;
-  }
-  .carousel-dots {
-    gap:  18px;
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-  
-  .carousel-dots .dot {
-    height: 12px;
-    width: 12px;
-    margin: 0 4px;
-    background-color: white;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  .carousel-dots .dot.active {
-    border-radius: 20px;
-    width: 8%;
-    background-color: #8243FF;
-  }
-  
-  .carousel-inner {
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-  }
-  
-  .ci{
-    padding: 10px !important;
-  }
-  .cinner{
-    margin-top: 1rem !important;
-  }
-  #carousel-control-prev, #carousel-control-next{
-    bottom: 0 !important;
-    height: 100% !important;
-  }
-  .carousel-indicators{
-    display: none !important;
-  }
 }
