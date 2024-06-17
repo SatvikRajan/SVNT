@@ -70,7 +70,7 @@
   width: 90%;
   /* margin-top: 20%; */
   height: 780px;
-  border-radius: 100px;
+  border-radius: 20px;
   position: relative;
   background-image: url("../images/Home/wbg.jpg");
   background-repeat: no-repeat;
@@ -249,4 +249,62 @@
   padding-left: 5px;
 }
 
+@media (max-width: 425px) {
+.wwdb-head{
+  margin-top: 1rem ;
+  position: static;
+  font-size: 24px !important;
+}
 
+  .wwdb-container {
+    width: 100% !important;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 600px !important;
+    border-radius: 30px !important;
+  }
+
+  .wwdb-menu {
+    padding: 10px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wwdb-menu div {
+    position: static;
+  }
+
+  .wwdb-menu div p {
+    font-size: 18px !important;
+  }
+
+  .logoImg {
+    filter: grayscale(1);
+    width: 40px;
+    height: 40px;
+  }
+
+  .mainLogo {
+    display: none !important;
+  }
+
+  .m0,
+  .m4 {
+    display: flex;
+  }
+
+  .m0,
+  .m1,
+  .m2,
+  .m3 {
+    flex-direction: row-reverse;
+  }
+
+  .m0,
+  .m1,
+  .m2,
+  .m3,.m4,.m5,.m6,.m7{
+    align-items: center;
+  }
+}
