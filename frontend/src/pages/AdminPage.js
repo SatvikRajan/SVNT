@@ -15,7 +15,7 @@ export default function AdminPage() {
     useEffect(() => {
         const fetchCandidates = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/candidates'); 
+                const response = await axios.get('http://localhost:8080/candidates');
                 setCandidates(response.data);
             } catch (error) {
                 console.error('Error fetching candidates:', error);
@@ -32,7 +32,7 @@ export default function AdminPage() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
         try {
             const response = await fetch('http://localhost:8080/admin/api/jobs', {
                 method: 'POST',
@@ -45,6 +45,15 @@ export default function AdminPage() {
             console.log('Job created successfully:', data);
         } catch (error) {
             console.error('Error creating job:', error);
+        }
+    };
+
+    const handleDelete = async (id) => {
+        try {
+            await axios.delete(`http://localhost:8080/api/candidates/${id}`);
+            setCandidates(candidates.filter(candidate => candidate._id !== id));
+        } catch (error) {
+            console.error('Error deleting candidate:', error);
         }
     };
 
@@ -108,8 +117,14 @@ export default function AdminPage() {
                             <td>{candidate.totalExperience}</td>
                             <td>{candidate.relevantExperience}</td>
                             <td>
-                                {/* Display link to download resume or show resume details */}
-                                {/* Example: <a href={`/uploads/${candidate.resume.filename}`} download>Download Resume</a> */}
+                                {candidate.resumeFilename ? (
+                                    <a href={`http://localhost:8080/api/resume/${candidate.resumeFilename}`} target="_blank" rel="noopener noreferrer">View Resume</a>
+                                ) : (
+                                    'No Resume'
+                                )}
+                            </td>
+                            <td>
+                                <button onClick={() => handleDelete(candidate._id)}>Delete</button>
                             </td>
                         </tr>
                     ))}

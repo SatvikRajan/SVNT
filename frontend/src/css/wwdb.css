@@ -291,6 +291,7 @@
 
   .m0,
   .m4 {
+    text-align: left;
     display: flex;
   }
 

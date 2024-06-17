@@ -17,25 +17,25 @@
 }
 
 .partners-img {
-  width: 50%;
+  width: 100%;
 }
 
 .partners-text {
-  
-  width: 50%;
+  width: 100%;
   align-content: center;
 }
 
-.partners-text img{
+.partners-text img {
   margin-bottom: 2rem;
 }
 
-.partners-text p, .partners-text a{
+.partners-text p,
+.partners-text a {
   letter-spacing: 3px;
   font-size: 24px;
 }
 
-.rm1{
+.rm1 {
   color: white !important;
 }
 #carousel-control-prev {
@@ -100,25 +100,18 @@
 }
 .last {
   border-radius: 30px;
-  padding: 2rem;
-  margin: 2rem;
-  background-color: #E9E8EC;
-  position: relative;
+  padding: 4rem;
+  margin: 6rem;
+  background-color: #e9e8ec;
+  /* position: relative; */
 }
 .last img {
-  width: 100vw;
-  position: relative;
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-.last ul {
-  position: absolute;
+  width: 100%;
+  /* position: relative; */
+  /* padding-left: 5rem; */
 }
 .last-text {
   text-shadow: 2px 2px 5px black;
-  position: absolute;
-  top: 50%;
-  left: 20%;
   /* transform: translate(-50%, -50%); */
   color: white;
   font-size: 30px;
@@ -127,35 +120,24 @@
 }
 
 .last-text1 {
-  position: relative;
   align-items: center;
   display: flex;
   color: #251741;
-  position: absolute;
-  top: 62%;
-  left: 62%;
   /* transform: translate(-50%, -50%); */
   font-size: 30px;
   font-weight: 300;
-  text-align: center;
   border-bottom: 2px solid #251741;
-  width: 10%;
+  /* width: 10%; */
   padding-bottom: 5px;
   text-align: right;
 }
 .last-text-1 {
   color: #251741;
-  bottom: 48rem;
-  left: 14rem;
-  position: relative;
   font-size: 30px;
   font-weight: 500;
 }
 .last-ul {
   color: #251741;
-  bottom: 15rem;
-  left: 44rem;
-  position: relative;
   font-size: 24px;
 }
 
@@ -164,8 +146,8 @@
   border-radius: 30px;
   color: white;
   background: linear-gradient(135deg, #251741, #5023aa) !important;
-  width: 95%;
-  margin-left: 2.5%;
+  width: 90%;
+  margin-left: 5%;
   /* margin: 30px; */
   margin-bottom: 2rem;
   padding-left: 5rem;
@@ -320,7 +302,7 @@
     padding-right: 5rem;
   }
   .video-info {
-  width: 60%;    
+    width: 60%;
     line-height: 40px !important;
     font-size: 18px !important;
   }
@@ -422,6 +404,20 @@
     margin-bottom: 2rem !important;
     margin-left: 1.3rem !important;
   }
+  .last {
+    margin: 2rem;
+  }
+
+  .last img {
+    padding: 0;
+  }
+
+  .last-text1 {
+    text-align: end;
+  }
+  .lt-text {
+    flex-wrap: wrap;
+  }
   .lc {
     width: 50% !important;
   }
@@ -465,5 +461,10 @@
   .partners {
     margin-top: 0;
     padding: 2rem;
+  }
+  .partners-img,
+  .partners-text,
+  .rm1 {
+    width: 100% !important;
   }
 }

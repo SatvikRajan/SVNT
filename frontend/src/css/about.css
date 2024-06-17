@@ -1,19 +1,12 @@
 .about-us-head {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
 .about-img {
-  padding-left: 5rem;
-  padding-right: 5rem;
   width: fit-content;
   object-fit: scale-down;
-  /* background-color: #bab3cf; */
-  /* position: absolute;
-  z-index: 10; */
-  /* background-color: antiquewhite; */
-  margin-left: -10px;
 }
 
 .about-us-head-name {
@@ -69,11 +62,12 @@
 }
 
 .ceo {
+  display: flex;
   margin-bottom: -3rem;
   align-items: center;
   text-align: center;
-  padding-left: 15rem;
-  padding-right: 15rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
 
 .ceo-text {
@@ -154,12 +148,9 @@
   width: 20vw;
 }
 .about-img {
-  padding-left: 5rem;
-  padding-right: 5rem;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   object-fit: scale-down;
-  margin-top: 1.5rem;
 }
 
 .about-clients {
@@ -172,9 +163,6 @@
 }
 
 @media (max-width: 768px) {
-  .about-img {
-    padding: 2rem;
-  }
   .about-us-head-name {
     top: 14rem !important;
     font-size: 28px !important;
@@ -203,10 +191,10 @@
     padding-right: 5rem;
   }
   .ceo-photo {
-    width: 55% !important;
+    width: 100% !important;
   }
   .ceo-photo-1 {
-    width: 26rem !important;
+    width: 100% !important;
   }
   .ceo-text-head {
     font-size: 28px !important;
@@ -223,10 +211,6 @@
 }
 
 @media (max-width: 1024px) {
-  .about-img {
-    margin-top: -0.5rem;
-    padding: 2rem;
-  }
   .about-us-head-name {
     top: 19rem;
     font-size: 32px;
@@ -266,15 +250,71 @@
   }
 }
 
-@media (min-width: 1440px) {
-  .about-img {
-    padding-left: 5rem;
-    padding-right: 5rem;
-    margin-top: 2rem;
-    /* padding: 2rem; */
-  }
+.manager-name {
+  font-size: 22px;
 }
 
-.manager-name{
-  font-size: 22px;
+@media (max-width: 425px) {
+  .img-info {
+    display: none;
+  }
+  .svnt-info {
+    padding: 2rem;
+    font-size: 18px !important;
+    line-height: 34px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .svnt-info h1 {
+    padding-bottom: 0 !important;
+  }
+  .timeline-carousel {
+    display: none !important;
+  }
+  .ceo {
+    margin-bottom: 10px !important;
+    display: flex ;
+    position: relative;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  /* .ceo-photo{
+    float: right !important;
+  } */
+  .managers {
+    border-radius: 20px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 2rem;
+  }
+  .manager-1 {
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    margin: 0 !important;
+  }
+  .managers h1 {
+    text-align: center;
+  }
+  .about-clients {
+    padding: 0 !important;
+    margin: 2rem !important;
+  }
+  /* .slick-slide img {
+    height: 100px !important;
+  } */
+  .ceo-text {
+    padding-right: 2rem;
+    max-width: 100%;
+    padding-left: 2rem;
+    text-align: left !important;
+  }
+
+  .client-slider-img{
+    height: 100px;
+  }
+  .ceo-text-head{
+    font-size: 24px !important;
+  }
 }

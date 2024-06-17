@@ -28,7 +28,7 @@ function Carosuel1() {
           </picture>
           <div class="carousel-caption cc1 d-none d-md-block">
             {/* <h1>First slide label</h1> */}
-            <h1 style={{width: '60%', lineHeight: '4rem'}}>Relax, We've Got Your Back
+            <h1 style={{ width: '60%', lineHeight: '4rem' }}>Relax, We've Got Your Back
               Your Security is Our Priority!
             </h1>
             <p>Send us a message
@@ -48,7 +48,7 @@ function Carosuel1() {
             />
           </picture>
           <div class="carousel-caption cc1 d-none d-md-block">
-          <h1 style={{width: '60%', lineHeight: '4rem'}}>Relax, We've Got Your Back
+            <h1 style={{ width: '60%', lineHeight: '4rem' }}>Relax, We've Got Your Back
               Your Security is Our Priority!
             </h1>
             <p>Send us a message
@@ -56,7 +56,7 @@ function Carosuel1() {
           </div>
         </div>
         <div class="carousel-item ci" >
-          {/* <img src={image2} class="d-block w-100" alt="..." /> */}
+          {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
             <source media="(max-width: 425px)" srcSet={image1m} />
             <source media="(min-width: 426px)" srcSet={image1} />
@@ -66,18 +66,27 @@ function Carosuel1() {
               alt="..."
             />
           </picture>
-          <div class="carousel-caption cc2 d-none d-md-block">
-          <h1 style={{width: '60%', lineHeight: '4rem'}}>Relax, We've Got Your Back
+          <div class="carousel-caption cc1 d-none d-md-block">
+            <h1 style={{ width: '60%', lineHeight: '4rem' }}>Relax, We've Got Your Back
               Your Security is Our Priority!
             </h1>
             <p>Send us a message
             </p>
           </div>
         </div>
-        <div class="carousel-item" >
-          <img src={image3} class="d-block w-100" alt="..." />
-          <div class="carousel-caption cc3 d-none d-md-block">
-          <h1 style={{width: '60%', lineHeight: '4rem'}}>Relax, We've Got Your Back
+        <div class="carousel-item ci" >
+          {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
+          <picture>
+            <source media="(max-width: 425px)" srcSet={image1m} />
+            <source media="(min-width: 426px)" srcSet={image1} />
+            <img
+              src={image1}
+              className="d-block w-100"
+              alt="..."
+            />
+          </picture>
+          <div class="carousel-caption cc1 d-none d-md-block">
+            <h1 style={{ width: '60%', lineHeight: '4rem' }}>Relax, We've Got Your Back
               Your Security is Our Priority!
             </h1>
             <p>Send us a message

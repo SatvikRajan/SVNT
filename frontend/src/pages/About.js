@@ -30,7 +30,7 @@ import jcb from '../images/AboutUs/jcb.svg'
 import lat from '../images/AboutUs/lat.svg'
 import mahindra from '../images/AboutUs/mahindra.svg'
 
-import aboutbg from '../images/AboutUs/about-bg.webp';
+import aboutbg from '../images/AboutUs/about-bg.jpg';
 
 import Slider from "react-slick";
 
@@ -63,18 +63,15 @@ export const About = () => {
 
   return (
     <div className="about-us-page">
-      <Link className="logo-brand" to="/">
-        <img src={Logo} alt="SVNT Tech" height={30} />
-      </Link>
       <div className="about-us-head">
         {/* <AboutCarousel /> */}
         <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100%', objectFit: 'scale-down', marginTop: '0.2rem' }} alt="" />
-        <h2  className='img-info'>
+        {/* <h2  className='img-info'>
           Integrated Solutions, Empowered Choices
           <br />
           <p> </p>
           <span id='img-info-span'>We are the Blueprint</span>
-        </h2>
+        </h2> */}
       </div>
       <div className="svnt-info" data-aos='fade-up'>
         <h1 style={{ paddingBottom: '2rem' }}>About Us</h1>

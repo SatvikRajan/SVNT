@@ -20,7 +20,7 @@ require("dotenv").config();
 app.use(express.json());
 app.use("/api/auth", adminRoutes);
 app.use('/api/candidates', candidateRoutes);
-app.use('/admin/api/jobs', jobRoutes);
+app.use('/api/jobs', jobRoutes);
 
 app.use(bodyParser.json());
 
@@ -135,13 +135,27 @@ app.post('/careers/api/submitForm', upload.single('resume'), async (req, res) =>
             phone,
             totalExperience,
             relevantExperience,
-            resumePath: resume ? resume.path : null // Assuming you want to store the file path
+            resumePath: resume ? resume.path : null
         });
 
         await candidate.save();
         res.status(201).json({ message: 'Candidate saved successfully' });
     } catch (error) {
         console.error(error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+app.delete('/api/candidates/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        const candidate = await Candidate.findByIdAndDelete(id);
+        if (!candidate) {
+            return res.status(404).json({ message: 'Candidate not found' });
+        }
+        res.json({ message: 'Candidate deleted successfully' });
+    } catch (error) {
+        console.error('Error deleting candidate:', error);
         res.status(500).json({ message: 'Internal server error' });
     }
 });

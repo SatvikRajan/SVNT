@@ -5,34 +5,33 @@ const CandidateSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true,
-        min: 3,
-        max: 20,
+        minlength: 3,
+        maxlength: 20,
     },
     email: {
         type: String,
         required: true,
         unique: true,
         trim: true,
-        maxlength: 50
+        maxlength: 50,
     },
     phone: {
         type: String,
         required: true,
         trim: true,
-        min: 0
     },
     totalExperience: {
         type: String,
         required: true,
-        min: 0
     },
     relevantExperience: {
         type: String,
         required: true,
-        min: 0
     },
-    resume: { type: mongoose.Schema.Types.ObjectId, ref: 'resumes.files', required: true }
-
+    resumeFilename: { 
+        type: String,
+        required: false 
+    }
 });
 
 module.exports = mongoose.model("Candidate", CandidateSchema);
