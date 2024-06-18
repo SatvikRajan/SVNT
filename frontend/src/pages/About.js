@@ -65,7 +65,7 @@ export const About = () => {
     <div className="about-us-page">
       <div className="about-us-head">
         {/* <AboutCarousel /> */}
-        <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100%', objectFit: 'scale-down', marginTop: '0.2rem' }} alt="" />
+        <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100%', objectFit: 'scale-down' }} alt="" />
         {/* <h2  className='img-info'>
           Integrated Solutions, Empowered Choices
           <br />
@@ -83,11 +83,11 @@ export const About = () => {
 
       <div className="ceo d-flex">
         <div className="ceo-text">
-          <h1 className="fs-1 ceo-text-head" style={{marginBottom: '2rem'}} data-aos='fade-down'>Meet Our Managing Director </h1>
-          <p className="ceo-text-p w-75" style={{marginBottom: '2rem'}} data-aos='fade-right'>
+          <h1 className="fs-1 ceo-text-head" style={{ marginBottom: '2rem' }} data-aos='fade-down'>Meet Our Managing Director </h1>
+          <p className="ceo-text-p w-75" style={{ marginBottom: '2rem' }} data-aos='fade-right'>
             “User experience is everything. It always has been, but it's still undervalued and under-invested in. If you don't know user-centered design, study it. Hire people who know it. Obsess over it. Live and breathe it. ”
           </p>
-          <h1 style={{float: 'inline-end'}}>- Mr. V G Salimath</h1>
+          <h1 style={{ float: 'inline-end' }}>- Mr. V G Salimath</h1>
         </div>
         <div className="ceo-photo" data-aos='fade-left'>
           <img className='ceo-photo-1' src={ceo} alt="" />

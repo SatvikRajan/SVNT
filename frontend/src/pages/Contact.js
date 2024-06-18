@@ -178,11 +178,6 @@ const Contact = () => {
             address="House No.849, GROUND FLOOR , SECTOR, 47 GURGAON, (HR) 122001"
           />
         </div>
-        <p style={{ marginBottom: '60px' }}>
-          <b>Ph : </b>
-          <a href="tel:+914027153387">040-27153387 </a>,<a href="tel:+919397005115"> 9397005115 </a>,
-          <a href="tel:+918800630726"> 8800630726 </a>,<a href="tel:+919441234471"> 9441234471 </a>
-        </p>
       </div>
     </div>
   );

@@ -123,6 +123,7 @@ export default function AdminPage() {
                                     'No Resume'
                                 )}
                             </td>
+
                             <td>
                                 <button onClick={() => handleDelete(candidate._id)}>Delete</button>
                             </td>

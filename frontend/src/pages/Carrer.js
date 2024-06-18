@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../css/carousel.css'
 import '../css/career.css'
-import carrerimage from '../images/Career/careerimage.png'
+import carrerimage from '../images/Career/careerbg.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Logo from '../images/svnt-logo-black-full.png';
@@ -19,17 +19,16 @@ export const CareersPage = () => {
   const [totalExperience, setTotalExperience] = useState('');
   const [relevantExperience, setRelevantExperience] = useState('');
   const [resume, setResume] = useState(null);
+  const [id, setId] = useState(null);
   const [showForm, setShowForm] = useState(false);
   const [jobs, setJobs] = useState([]);
   const [jobId, setJobId] = useState(null);
   const [jobDetails, setJobDetails] = useState(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState('');
-  const [selectedItem, setSelectedItem] = useState(null);
 
 
   const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    setResume(file);
+    setResume(e.target.files[0]);
   };
 
   useEffect(() => {
@@ -68,18 +67,18 @@ export const CareersPage = () => {
     setSelectedJobTitle(title);
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('phone', phone);
+    formData.append('totalExperience', totalExperience);
+    formData.append('relevantExperience', relevantExperience);
+    formData.append('resume', resume)
+
     try {
-      const formData = new FormData();
-      formData.append('name', name);
-      formData.append('email', email);
-      formData.append('phone', phone);
-      formData.append('totalExperience', totalExperience);
-      formData.append('relevantExperience', relevantExperience);
-      if (resume) {
-        formData.append('resume', resume, resume.name);
-      }
-      console.log(formData)
       const response = await fetch('http://localhost:8080/careers/api/submitForm', {
         method: 'POST',
         body: formData,
@@ -94,7 +93,7 @@ export const CareersPage = () => {
       setPhone('');
       setTotalExperience('');
       setRelevantExperience('');
-      // setResume(null);
+      setResume(null);
       toast.success('Form submitted successfully');
     } catch (error) {
       console.error(error);
@@ -125,9 +124,9 @@ export const CareersPage = () => {
             Empower your <br />
             aspirations at SVNT Infotech!
           </div>
-          {/* <div className="career-text2">
+          <div className="career-text2">
             We believe in your Ideas, We believe in You
-          </div> */}
+          </div>
         </div>
 
         <div id="recruitment" className="recruitment">
@@ -186,7 +185,7 @@ export const CareersPage = () => {
                   </svg>
                 </div>
                 <div className="w-100">
-                  <p style={{ fontWeight: "bolder",marginBottom: '1rem' }}>
+                  <p style={{ fontWeight: "bolder", marginBottom: '1rem' }}>
                     {jobDetails.title}
                   </p>
                   <p
@@ -253,10 +252,11 @@ export const CareersPage = () => {
                       <span className="inp w-50">Attach Resume</span>
                       <input
                         className="form-control inp form-control-sm"
-                        id="formFileSm"
+                        id="resume"
+                        name="resume"
                         type="file"
-                        accept='.pdf'
-                        onChange={(e) => setResume(e.target.files[0])}
+                        accept=".pdf"
+                        onChange={handleFileChange}
                       />
                     </div>
                   </div>
@@ -285,7 +285,7 @@ export const CareersPage = () => {
                 </div>
 
                 {jobDetails && (
-                  <div style={{width: '100%'}}>
+                  <div style={{ width: '100%' }}>
                     <p style={{ fontWeight: "bolder", marginBottom: '1rem' }}>
                       {jobDetails.title}
                     </p>

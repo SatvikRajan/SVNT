@@ -1,64 +1,22 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const multer = require('multer');
-const { GridFsStorage } = require('multer-gridfs-storage');
-const Grid = require('gridfs-stream');
-const path = require('path');
-const crypto = require('crypto');
-
-const app = express();
-
 const adminRoutes = require('../backend/routes/AdminRoutes');
 const candidateRoutes = require('./routes/CandidateRoutes');
 const jobRoutes = require('./routes/JobRoutes');
 const Candidate = require('./model/CandidatesModel');
+const app = express();
 app.use(cors());
 require("dotenv").config();
-app.use(express.json());
 app.use("/api/auth", adminRoutes);
 app.use('/api/candidates', candidateRoutes);
 app.use('/api/jobs', jobRoutes);
 
-app.use(bodyParser.json());
-
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 const mongoURI = 'mongodb+srv://satvikrajan:Satvik2003@cluster0.3sgwwvu.mongodb.net/svnt?retryWrites=true&w=majority&appName=Cluster0';
-
-
-const conn = mongoose.createConnection(mongoURI, {
-});
-
-let gfs;
-
-conn.once('open', () => {
-    gfs = Grid(conn.db, mongoose.mongo);
-    gfs.collection('resumes');
-});
-
-
-const storage = new GridFsStorage({
-    url: mongoURI,
-    file: (req, file) => {
-        return new Promise((resolve, reject) => {
-            crypto.randomBytes(16, (err, buf) => {
-                if (err) {
-                    return reject(err);
-                }
-                const filename = buf.toString('hex') + path.extname(file.originalname);
-                const fileInfo = {
-                    filename: filename,
-                    bucketName: 'resumes',
-                };
-                resolve(fileInfo);
-            });
-        });
-    },
-});
-
-const upload = multer({ storage });
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -124,27 +82,6 @@ app.get('/candidates', async (req, res) => {
     }
 });
 
-app.post('/careers/api/submitForm', upload.single('resume'), async (req, res) => {
-    try {
-        const { name, email, phone, totalExperience, relevantExperience } = req.body;
-        const resume = req.file;
-
-        const candidate = new Candidate({
-            name,
-            email,
-            phone,
-            totalExperience,
-            relevantExperience,
-            resumePath: resume ? resume.path : null
-        });
-
-        await candidate.save();
-        res.status(201).json({ message: 'Candidate saved successfully' });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: 'Internal server error' });
-    }
-});
 
 app.delete('/api/candidates/:id', async (req, res) => {
     const { id } = req.params;

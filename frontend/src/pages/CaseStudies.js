@@ -1,21 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import Logo from '../images/svnt-logo-white-full.png';
 import '../css/caseStudies.css';
-import bghero from '../images/CaseStudies/bg-hero.png';
+import bghero from '../images/CaseStudies/casestudiesbg.jpg';
 import CaseStudyCard from '../components/CaseStudyCard';
 import comingSoon from '../images/CaseStudies/coming-soon-bg.png'
 
 export default function CaseStudies() {
   return (
     <div className='cs-body'>
-      <Link className="logo-brand" to="/">
-          <img src={Logo} alt="SVNT Tech" height={30} />
-        </Link>
       <div className='cs-hero'>
         <div>
           <img className="cs-hero-bg" src={bghero} alt="" />
-          <p className='image-text'>Empower your aspirations <br />at SVNT Infotech!</p>
+          {/* <p className='image-text'>Empower your aspirations <br />at SVNT Infotech!</p> */}
         </div>
       </div>
 

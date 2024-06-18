@@ -28,10 +28,7 @@ const CandidateSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    resumeFilename: { 
-        type: String,
-        required: false 
-    }
+    resumePath: String,
 });
 
 module.exports = mongoose.model("Candidate", CandidateSchema);
