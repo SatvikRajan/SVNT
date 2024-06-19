@@ -5,12 +5,13 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../css/carousel.css'
 import '../css/career.css'
-import carrerimage from '../images/Career/careerimage.png'
+import carrerimage from '../images/Career/careerbg.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Logo from '../images/svnt-logo-black-full.png';
 import { Link } from 'react-router-dom'
-
+import ArrowIcon from "../components/ArrowIcon";
+import axios from 'axios';
 export const CareersPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -18,41 +19,88 @@ export const CareersPage = () => {
   const [totalExperience, setTotalExperience] = useState('');
   const [relevantExperience, setRelevantExperience] = useState('');
   const [resume, setResume] = useState(null);
+  const [id, setId] = useState(null);
   const [showForm, setShowForm] = useState(false);
+  const [jobs, setJobs] = useState([]);
+  const [jobId, setJobId] = useState(null);
+  const [jobDetails, setJobDetails] = useState(null);
+  const [selectedJobTitle, setSelectedJobTitle] = useState('');
 
 
-  const handleSubmit = async () => {
+  const handleFileChange = (e) => {
+    setResume(e.target.files[0]);
+  };
+
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const response = await axios.get('http://localhost:8080/api/jobs');
+        setJobs(response.data);
+      } catch (error) {
+        console.error('Error fetching jobs:', error);
+      }
+    };
+
+    fetchJobs();
+  }, []);
+
+  useEffect(() => {
+    const fetchJobDetails = async () => {
+      if (selectedJobTitle) {
+        try {
+          const selectedJob = jobs.find(job => job.title === selectedJobTitle);
+          if (selectedJob) {
+            const response = await axios.get(`http://localhost:8080/api/jobs/${selectedJob._id}`);
+            setJobDetails(response.data);
+          }
+        } catch (error) {
+          console.error('Error fetching job details:', error);
+        }
+      }
+    };
+
+    fetchJobDetails();
+  }, [selectedJobTitle, jobs]);
+
+
+  const handleDropdownClick = (title) => {
+    setSelectedJobTitle(title);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('phone', phone);
+    formData.append('totalExperience', totalExperience);
+    formData.append('relevantExperience', relevantExperience);
+    formData.append('resume', resume)
+
     try {
-      const formData = new FormData();
-      formData.append('name', name);
-      formData.append('email', email);
-      formData.append('phone', phone);
-      formData.append('totalExperience', totalExperience);
-      formData.append('relevantExperience', relevantExperience);
-      formData.append('resume', resume);
-
-      var JSbody = JSON.stringify(Object.fromEntries(formData));
-      console.log(JSbody)
-      await fetch('http://localhost:8080/careers/api/submitForm', {
+      const response = await fetch('http://localhost:8080/careers/api/submitForm', {
         method: 'POST',
-        headers: {
-          "Content-Type": 'application/json'
-        },
-        body: JSbody,
+        body: formData,
       });
 
-      // toast.success('Form submitted successfully');
+      if (!response.ok) {
+        throw new Error('Error submitting form');
+      }
+
       setName('');
       setEmail('');
       setPhone('');
       setTotalExperience('');
       setRelevantExperience('');
       setResume(null);
+      toast.success('Form submitted successfully');
     } catch (error) {
       console.error(error);
       toast.error('Error submitting form');
     }
   };
+
   const handleApplyClick = () => {
     setShowForm(true);
   };
@@ -69,9 +117,6 @@ export const CareersPage = () => {
 
   return (
     <div className="careers-page">
-      <Link className="logo-brand" to="/">
-        <img src={Logo} alt="SVNT Tech" height={30} />
-      </Link>
       <div className="career-start">
         <div className="career-image">
           <img className="career-img" src={carrerimage} alt="" />
@@ -79,9 +124,9 @@ export const CareersPage = () => {
             Empower your <br />
             aspirations at SVNT Infotech!
           </div>
-          {/* <div className="career-text2">
+          <div className="career-text2">
             We believe in your Ideas, We believe in You
-          </div> */}
+          </div>
         </div>
 
         <div id="recruitment" className="recruitment">
@@ -113,43 +158,16 @@ export const CareersPage = () => {
                   alt=""
                 />
               </button>
-              <ul class="dropdown-menu" >
-                {/* changes */}
-                <li>
-                  <a class="dropdown-item" href="#job-des">
-                    Defence Porjects
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#job-des">
-                    Enterprise Solutions
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#job-des">
-                    Global Markets
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#job-des">
-                    IT Infrastructure
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#job-des">
-                    HR
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#job-des">
-                    Sales
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#job-des">
-                    Solution Architect
-                  </a>
-                </li>
+              <ul className="dropdown-menu">
+                {jobs.map((job) => (
+                  <button
+                    key={job._id}
+                    className="dropdown-item"
+                    onClick={() => handleDropdownClick(job.title)}
+                  >
+                    {job.title}
+                  </button>
+                ))}
               </ul>
             </div>
             {showForm ? (
@@ -167,14 +185,14 @@ export const CareersPage = () => {
                   </svg>
                 </div>
                 <div className="w-100">
-                  <p style={{ fontWeight: "bolder" }}>
-                    Senior Software Engineer
+                  <p style={{ fontWeight: "bolder", marginBottom: '1rem' }}>
+                    {jobDetails.title}
                   </p>
                   <p
                     style={{
                       display: "flex",
                       alignItems: "center",
-                      height: "4vh",
+                      height: "2rem",
                       letterSpacing: "0px",
                       fontWeight: "bold",
                       paddingLeft: "10px",
@@ -183,6 +201,7 @@ export const CareersPage = () => {
                       backgroundColor: "#CFC0F7",
                       borderRadius: "20px",
                       width: "130px",
+                      marginBottom: '10px'
                     }}
                   >
                     <svg
@@ -212,19 +231,19 @@ export const CareersPage = () => {
                         <span class="label">Email</span>
                         <span class="focus-bg"></span>
                       </label>
-                      <label for="inp" class="inp ">
-                        <input type="number" id="inp" placeholder="&nbsp;" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                        <span class="label"> Phone Number</span>
-                        <span class="focus-bg"></span>
+                      <label htmlFor="phone" className="inp">
+                        <input type="text" id="phone" placeholder="&nbsp;" value={phone} onChange={(e) => setPhone(e.target.value)} onWheel={event => event.currentTarget.blur()} />
+                        <span className="label">Phone Number</span>
+                        <span className="focus-bg"></span>
                       </label>
                     </div>
                     <label for="inp" class="inp">
-                      <input type="number" id="inp" placeholder="&nbsp;" value={totalExperience} onChange={(e) => setTotalExperience(e.target.value)} />
+                      <input type="text" id="inp" placeholder="&nbsp;" value={totalExperience} onChange={(e) => setTotalExperience(e.target.value)} />
                       <span class="label">Total Experience</span>
                       <span class="focus-bg"></span>
                     </label>
                     <label for="inp" class="inp">
-                      <input type="number" id="inp" placeholder="&nbsp;" value={relevantExperience} onChange={(e) => setRelevantExperience(e.target.value)} />
+                      <input type="text" id="inp" placeholder="&nbsp;" value={relevantExperience} onChange={(e) => setRelevantExperience(e.target.value)} />
                       <span class="label">Relevant Experience</span>
                       <span class="focus-bg"></span>
                     </label>
@@ -233,10 +252,11 @@ export const CareersPage = () => {
                       <span className="inp w-50">Attach Resume</span>
                       <input
                         className="form-control inp form-control-sm"
-                        id="formFileSm"
+                        id="resume"
+                        name="resume"
                         type="file"
-                        accept='.pdf'
-                        onChange={(e) => setResume(e.target.files[0])}
+                        accept=".pdf"
+                        onChange={handleFileChange}
                       />
                     </div>
                   </div>
@@ -264,260 +284,72 @@ export const CareersPage = () => {
                   </svg>
                 </div>
 
-                <div>
-                  <p style={{ fontWeight: "bolder" }}>
-                    Senior Software Engineer
-                  </p>
-                  <p
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      height: "4vh",
-                      letterSpacing: "0px",
-                      fontWeight: "bold",
-                      paddingLeft: "10px",
-                      fontSize: "12px",
-                      gap: "10px",
-                      backgroundColor: "#CFC0F7",
-                      borderRadius: "20px",
-                      width: "130px",
-                    }}
-                  >
-                    <svg
-                      width="13"
-                      height="14"
-                      viewBox="0 0 15 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                {jobDetails && (
+                  <div style={{ width: '100%' }}>
+                    <p style={{ fontWeight: "bolder", marginBottom: '1rem' }}>
+                      {jobDetails.title}
+                    </p>
+                    <p
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        height: "4vh",
+                        letterSpacing: "0px",
+                        fontWeight: "bold",
+                        paddingLeft: "10px",
+                        fontSize: "12px",
+                        gap: "10px",
+                        backgroundColor: "#CFC0F7",
+                        borderRadius: "20px",
+                        width: "130px",
+                        marginBottom: '10px'
+                      }}
                     >
-                      <path
-                        d="M1.73078 13.3749C1.35193 13.3749 1.03125 13.2437 0.76875 12.9812C0.50625 12.7187 0.375 12.398 0.375 12.0191V9.06242H5.625V10.3749H9.37496V9.06242H14.625V12.0191C14.625 12.398 14.4937 12.7187 14.2312 12.9812C13.9687 13.2437 13.648 13.3749 13.2692 13.3749H1.73078ZM6.74998 9.24994V7.74994H8.24998V9.24994H6.74998ZM0.375 7.93746V4.23074C0.375 3.85189 0.50625 3.53121 0.76875 3.26871C1.03125 3.00621 1.35193 2.87496 1.73078 2.87496H4.875V1.60576C4.875 1.22692 5.00625 0.90625 5.26875 0.64375C5.53125 0.38125 5.85192 0.25 6.23077 0.25H8.76919C9.14804 0.25 9.46871 0.38125 9.73121 0.64375C9.99371 0.90625 10.125 1.22692 10.125 1.60576V2.87496H13.2692C13.648 2.87496 13.9687 3.00621 14.2312 3.26871C14.4937 3.53121 14.625 3.85189 14.625 4.23074V7.93746H9.37496V6.62496H5.625V7.93746H0.375ZM5.99998 2.87496H8.99998V1.60576C8.99998 1.54806 8.97594 1.49517 8.92787 1.44709C8.87978 1.39901 8.82689 1.37496 8.76919 1.37496H6.23077C6.17307 1.37496 6.12018 1.39901 6.07209 1.44709C6.02402 1.49517 5.99998 1.54806 5.99998 1.60576V2.87496Z"
-                        fill="#0E1513"
-                      />
-                    </svg>
-                    Full Time
-                  </p>
-                  <p style={{ fontWeight: "bold" }}>Requirements</p>
-                  <ul class="job-requirements">
-                    <li>
-                      Experience{" "}
                       <svg
-                        style={{ marginLeft: "50px", marginRight: "25px" }}
-                        width="30"
-                        height="23"
-                        viewBox="0 0 30 23"
+                        width="13"
+                        height="14"
+                        viewBox="0 0 15 14"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M8.20516 0H0L8.20516 10.7812L0 23H8.20516L16.1539 10.7812L8.20516 0Z"
-                          fill="url(#paint0_linear_1590_3086)"
+                          d="M1.73078 13.3749C1.35193 13.3749 1.03125 13.2437 0.76875 12.9812C0.50625 12.7187 0.375 12.398 0.375 12.0191V9.06242H5.625V10.3749H9.37496V9.06242H14.625V12.0191C14.625 12.398 14.4937 12.7187 14.2312 12.9812C13.9687 13.2437 13.648 13.3749 13.2692 13.3749H1.73078ZM6.74998 9.24994V7.74994H8.24998V9.24994H6.74998ZM0.375 7.93746V4.23074C0.375 3.85189 0.50625 3.53121 0.76875 3.26871C1.03125 3.00621 1.35193 2.87496 1.73078 2.87496H4.875V1.60576C4.875 1.22692 5.00625 0.90625 5.26875 0.64375C5.53125 0.38125 5.85192 0.25 6.23077 0.25H8.76919C9.14804 0.25 9.46871 0.38125 9.73121 0.64375C9.99371 0.90625 10.125 1.22692 10.125 1.60576V2.87496H13.2692C13.648 2.87496 13.9687 3.00621 14.2312 3.26871C14.4937 3.53121 14.625 3.85189 14.625 4.23074V7.93746H9.37496V6.62496H5.625V7.93746H0.375ZM5.99998 2.87496H8.99998V1.60576C8.99998 1.54806 8.97594 1.49517 8.92787 1.44709C8.87978 1.39901 8.82689 1.37496 8.76919 1.37496H6.23077C6.17307 1.37496 6.12018 1.39901 6.07209 1.44709C6.02402 1.49517 5.99998 1.54806 5.99998 1.60576V2.87496Z"
+                          fill="#0E1513"
                         />
-                        <path
-                          d="M13.3317 0H10.7676L18.4599 10.6786L10.7676 23H13.3317L21.024 10.6786L13.3317 0Z"
-                          fill="url(#paint1_linear_1590_3086)"
-                        />
-                        <path
-                          d="M23.8457 10.6786L16.1533 0H22.3072L29.9995 10.6786L22.3072 23H16.1533L23.8457 10.6786Z"
-                          fill="url(#paint2_linear_1590_3086)"
-                        />
-                        <defs>
-                          <linearGradient
-                            id="paint0_linear_1590_3086"
-                            x1="4.21406"
-                            y1="11.0893"
-                            x2="16.0149"
-                            y2="11.1373"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                          <linearGradient
-                            id="paint1_linear_1590_3086"
-                            x1="13.4432"
-                            y1="11.0893"
-                            x2="20.9359"
-                            y2="11.1087"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                          <linearGradient
-                            id="paint2_linear_1590_3086"
-                            x1="19.7654"
-                            y1="11.0893"
-                            x2="29.8804"
-                            y2="11.1246"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                        </defs>
                       </svg>
-                      3 to 4 years
-                    </li>
-                    <li>
-                      Primary Skills{" "}
-                      <svg
-                        style={{ marginLeft: "33px", marginRight: "20px" }}
-                        width="30"
-                        height="23"
-                        viewBox="0 0 30 23"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M8.20516 0H0L8.20516 10.7812L0 23H8.20516L16.1539 10.7812L8.20516 0Z"
-                          fill="url(#paint0_linear_1590_3086)"
-                        />
-                        <path
-                          d="M13.3317 0H10.7676L18.4599 10.6786L10.7676 23H13.3317L21.024 10.6786L13.3317 0Z"
-                          fill="url(#paint1_linear_1590_3086)"
-                        />
-                        <path
-                          d="M23.8457 10.6786L16.1533 0H22.3072L29.9995 10.6786L22.3072 23H16.1533L23.8457 10.6786Z"
-                          fill="url(#paint2_linear_1590_3086)"
-                        />
-                        <defs>
-                          <linearGradient
-                            id="paint0_linear_1590_3086"
-                            x1="4.21406"
-                            y1="11.0893"
-                            x2="16.0149"
-                            y2="11.1373"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                          <linearGradient
-                            id="paint1_linear_1590_3086"
-                            x1="13.4432"
-                            y1="11.0893"
-                            x2="20.9359"
-                            y2="11.1087"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                          <linearGradient
-                            id="paint2_linear_1590_3086"
-                            x1="19.7654"
-                            y1="11.0893"
-                            x2="29.8804"
-                            y2="11.1246"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                        </defs>
-                      </svg>{" "}
-                      C++/QT
-                    </li>
-                    <li>
-                      Required Skills{" "}
-                      <svg
-                        style={{ marginLeft: "24px", marginRight: "20px" }}
-                        width="30"
-                        height="23"
-                        viewBox="0 0 30 23"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M8.20516 0H0L8.20516 10.7812L0 23H8.20516L16.1539 10.7812L8.20516 0Z"
-                          fill="url(#paint0_linear_1590_3086)"
-                        />
-                        <path
-                          d="M13.3317 0H10.7676L18.4599 10.6786L10.7676 23H13.3317L21.024 10.6786L13.3317 0Z"
-                          fill="url(#paint1_linear_1590_3086)"
-                        />
-                        <path
-                          d="M23.8457 10.6786L16.1533 0H22.3072L29.9995 10.6786L22.3072 23H16.1533L23.8457 10.6786Z"
-                          fill="url(#paint2_linear_1590_3086)"
-                        />
-                        <defs>
-                          <linearGradient
-                            id="paint0_linear_1590_3086"
-                            x1="4.21406"
-                            y1="11.0893"
-                            x2="16.0149"
-                            y2="11.1373"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                          <linearGradient
-                            id="paint1_linear_1590_3086"
-                            x1="13.4432"
-                            y1="11.0893"
-                            x2="20.9359"
-                            y2="11.1087"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                          <linearGradient
-                            id="paint2_linear_1590_3086"
-                            x1="19.7654"
-                            y1="11.0893"
-                            x2="29.8804"
-                            y2="11.1246"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop offset="0.0661152" stop-color="#7F57E9" />
-                            <stop offset="0.510295" stop-color="#4E28D1" />
-                            <stop offset="1" stop-color="#1A1741" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                      <ul class="nested-skills">
-                        <li>Work Experience with Qt/C++ programming.</li>
-                        <li>
-                          Hands-on experience and knowledge in GUI development
-                          with Qt/QML.
-                        </li>
-                        <li>
-                          Experience with multithreading and object-oriented
-                          programming.
-                        </li>
-                        <li>Experience creating reusable QML components.</li>
-                        <li>
-                          Experience with interfacing Serial device
-                          communication.
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
+                      {jobDetails.employmentType}
+                    </p>
+                    <p style={{ fontWeight: "bold" }}>Requirements</p>
+                    <ul class="job-requirements">
+                      <li>
+                        Experience {" "}
+                        <ArrowIcon style={{ marginRight: '25px', marginLeft: '50px' }} />
+                        {jobDetails.experience}
+                      </li>
+                      <li>
+                        Primary Skills {" "}
+                        <ArrowIcon style={{ marginRight: '20px', marginLeft: '33px' }} />
+                        {jobDetails.primaryskills}
+                      </li>
+                      <li>
+                        Required Skills {" "}
+                        <ArrowIcon style={{ marginRight: '20px', marginLeft: '24px' }} />
+                        <ul className="nested-skills">
+                          <li>{jobDetails.requiredskills}</li>
+                        </ul>
+                      </li>
+                    </ul>
 
-                  <button
-                    /*fix */
-                    className="apply custom-apply-btn"
-                    onClick={handleApplyClick}
-                    type="button"
-                    disabled
-                  >
-                    Apply Now
-                  </button>
-                </div>
-                <div className="overlay">
-                  <p className="overlay-text">Coming Soon . . . . </p>
-                </div>
+                    <button
+                      /*fix */
+                      className="apply custom-apply-btn"
+                      onClick={handleApplyClick}
+                      type="button"
+                    >
+                      Apply Now
+                    </button>
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -563,5 +395,5 @@ export const CareersPage = () => {
       </div>
 
     </div>
-  );
-};
+  )
+}

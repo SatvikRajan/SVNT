@@ -6,12 +6,11 @@ export default function Partners() {
         <>
             <div className='d-flex partners container'>
                 <img className='partners-img' src={partners} alt="" />
-                
                 <div className='partners-text'>
                     <img src={genetec} alt="" />
-                    <h1>Our Global Partner</h1>
+                    <h2>Meet our Global Partner</h2>
                     <p>Our most invaluable resource lies within our people, and it is collaboration that sparks the best ideas into life.</p>
-                    <a href="/partners" style={{width: '40%', filter: 'invert(1)', color: 'white'}} className='readmore rm1'>Read More</a>
+                    <a href="readmore">Read More</a>
                 </div>
             </div>
         </>

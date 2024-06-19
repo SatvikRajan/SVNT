@@ -30,7 +30,7 @@ import jcb from '../images/AboutUs/jcb.svg'
 import lat from '../images/AboutUs/lat.svg'
 import mahindra from '../images/AboutUs/mahindra.svg'
 
-import aboutbg from '../images/AboutUs/about-bg.webp';
+import aboutbg from '../images/AboutUs/about-bg.jpg';
 
 import Slider from "react-slick";
 
@@ -63,18 +63,15 @@ export const About = () => {
 
   return (
     <div className="about-us-page">
-      <Link className="logo-brand" to="/">
-        <img src={Logo} alt="SVNT Tech" height={30} />
-      </Link>
       <div className="about-us-head">
         {/* <AboutCarousel /> */}
-        <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100%', objectFit: 'scale-down', marginTop: '0.2rem' }} alt="" />
-        <h2  className='img-info'>
+        <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100%', objectFit: 'scale-down' }} alt="" />
+        {/* <h2  className='img-info'>
           Integrated Solutions, Empowered Choices
           <br />
           <p> </p>
           <span id='img-info-span'>We are the Blueprint</span>
-        </h2>
+        </h2> */}
       </div>
       <div className="svnt-info" data-aos='fade-up'>
         <h1 style={{ paddingBottom: '2rem' }}>About Us</h1>
@@ -86,11 +83,11 @@ export const About = () => {
 
       <div className="ceo d-flex">
         <div className="ceo-text">
-          <h1 className="fs-1 ceo-text-head" style={{marginBottom: '2rem'}} data-aos='fade-down'>Meet Our Managing Director </h1>
-          <p className="ceo-text-p w-75" style={{marginBottom: '2rem'}} data-aos='fade-right'>
+          <h1 className="fs-1 ceo-text-head" style={{ marginBottom: '2rem' }} data-aos='fade-down'>Meet Our Managing Director </h1>
+          <p className="ceo-text-p w-75" style={{ marginBottom: '2rem' }} data-aos='fade-right'>
             “User experience is everything. It always has been, but it's still undervalued and under-invested in. If you don't know user-centered design, study it. Hire people who know it. Obsess over it. Live and breathe it. ”
           </p>
-          <h1 style={{float: 'inline-end'}}>- Mr. V G Salimath</h1>
+          <h1 style={{ float: 'inline-end' }}>- Mr. V G Salimath</h1>
         </div>
         <div className="ceo-photo" data-aos='fade-left'>
           <img className='ceo-photo-1' src={ceo} alt="" />

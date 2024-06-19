@@ -4,16 +4,19 @@ export default function LastContent() {
   return (
     <>
       <div className="last">
-        <img src={last} style={{ marginBottom: '3rem' }} alt="" />
         <p className="last-text-1" style={{ fontSize: '42px' }}>Careers</p>
-        <ul className='last-ul'>
-          <li>Connect with New People</li>
-          <li>Discover New Horizons </li>
-          <li>Design the Future</li>
-        </ul>
-        <a href="/careers">
-          <p className="last-text1 join">Join Us</p>
-        </a>
+        <div className='d-flex justify-content-around lt-text'>
+          <ul className='last-ul'>
+            <li>Connect with New People</li>
+            <li>Discover New Horizons </li>
+            <li>Design the Future</li>
+          </ul>
+          <a href="/careers">
+            <p className="last-text1 join">Join Us</p>
+          </a>
+        </div>
+        {/* <img src={last} style={{ marginBottom: '3rem' }} alt="" /> */}
+        <img src={last} alt="" />
       </div>
       <div className="last-contact d-flex">
         <div style={{ width: '60%' }}>

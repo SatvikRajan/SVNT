@@ -8,7 +8,7 @@ import wwdb7 from '../images/Home/surveillance-and-safety.svg';
 import wwdb8 from '../images/Home/storage.svg';
 import Logo from "../images/svnt-logo-white-full.png";
 import { Link } from "react-router-dom";
-import servicebg from "../images/Services/servicebg.webp";
+import servicebg from "../images/Services/servicebg.jpg";
 import "../css/services2.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -162,9 +162,6 @@ export default function Services() {
   };
   return (
     <div className="App">
-      <Link className="logo-brand" to="/">
-        <img src={Logo} alt="SVNT Tech" height={30} />
-      </Link>
       <img
         style={{ position: "relative", marginTop: "-0.5rem" }}
         src={servicebg}

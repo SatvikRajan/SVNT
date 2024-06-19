@@ -9,10 +9,10 @@ import { CareersPage } from './pages/Carrer';
 import CaseStudies from './pages/CaseStudies';
 import { About } from './pages/About';
 import Services from './pages/Services';
-import Admin from './pages/Admin';
 import AdminPage from './pages/AdminPage';
-import Loader from './components/Loader'; 
-
+import Loader from './components/Loader';
+import AdminLogin from './pages/AdminLogin';
+import AdminRegister from './pages/AdminRegister';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -24,31 +24,35 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      {isLoading ? (
-        <div style={{position: 'relative', height: '100vh', width: '100vw', backgroundColor: '#F1FAFF'}}>
-          <Loader />
-        </div>
-      ) : (
-        <ScrollToTop>
-          <Routes>
-            <Route path="/" element={<MainLayout><Home /></MainLayout>} />
-            <Route path="contact" element={<MainLayout><Contact /></MainLayout>} />
-            <Route path="casestudies" element={<MainLayout><CaseStudies /></MainLayout>} />
-            <Route path="careers" element={<MainLayout><CareersPage /></MainLayout>} />
-            <Route path="about" element={<MainLayout><About /></MainLayout>} />
-            <Route path="services" element={<MainLayout><Services /></MainLayout>} />
-            <Route path="admin/*" element={<Admin />} />
-            <Route path="admin-main" element={<MainLayout><AdminPage /></MainLayout>} />
-          </Routes>
-        </ScrollToTop>
-      )}
-    </BrowserRouter>
+      <BrowserRouter>
+        {isLoading ? (
+          <div style={{ position: 'relative', height: '100vh', width: '100vw', backgroundColor: '#F1FAFF' }}>
+            <Loader />
+          </div>
+        ) : (
+          <ScrollToTop>
+            <Routes>
+              <Route path="/" element={<MainLayout><Home /></MainLayout>} />
+              <Route path="contact" element={<MainLayout><Contact /></MainLayout>} />
+              <Route path="casestudies" element={<MainLayout><CaseStudies /></MainLayout>} />
+              <Route path="careers" element={<MainLayout><CareersPage /></MainLayout>} />
+              <Route path="about" element={<MainLayout><About /></MainLayout>} />
+              <Route path="services" element={<MainLayout><Services /></MainLayout>} />
+              <Route path="login" element={<AdminLogin />} />
+              <Route path="register" element={<AdminRegister />} />
+              {/* <Route path="/" element={<PrivateRoute />}> */}
+                <Route path="admin-main" element={<AdminPage />} />
+              {/* </Route> */}
+            </Routes>
+          </ScrollToTop>
+        )}
+      </BrowserRouter>
   );
 }
 
 const MainLayout = ({ children }) => (
   <>
+    <Navbar />
     <Navbar />
     {children}
     <Footer />
