@@ -117,13 +117,12 @@ export default function AdminPage() {
                             <td>{candidate.totalExperience}</td>
                             <td>{candidate.relevantExperience}</td>
                             <td>
-                                {candidate.resumeFilename ? (
-                                    <a href={`http://localhost:8080/api/resume/${candidate.resumeFilename}`} target="_blank" rel="noopener noreferrer">View Resume</a>
-                                ) : (
-                                    'No Resume'
+                                {candidate.resumePath && (
+                                    <a href={`http://localhost:8080/${(candidate.resumePath)}`} target="_blank" rel="noopener noreferrer">
+                                        {candidate.resumePath}
+                                    </a>
                                 )}
                             </td>
-
                             <td>
                                 <button onClick={() => handleDelete(candidate._id)}>Delete</button>
                             </td>

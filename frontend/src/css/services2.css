@@ -11,12 +11,7 @@ p{
 
   .services-main{
     width: 100vw;
-    height: 100vh;
-    /* background-color: aquamarine; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 60rem;
     
   }
 
@@ -56,7 +51,6 @@ p{
   
   .details {
     width:80%;
-    height: 70%;
     /* margin-left: 14.8%; */
     display: grid;
     grid-template-columns: 60% 40%;

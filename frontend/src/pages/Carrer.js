@@ -34,7 +34,7 @@ export const CareersPage = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/jobs');
+        const response = await axios.get('http://localhost:8080/admin/api/jobs');
         setJobs(response.data);
       } catch (error) {
         console.error('Error fetching jobs:', error);
@@ -50,7 +50,7 @@ export const CareersPage = () => {
         try {
           const selectedJob = jobs.find(job => job.title === selectedJobTitle);
           if (selectedJob) {
-            const response = await axios.get(`http://localhost:8080/api/jobs/${selectedJob._id}`);
+            const response = await axios.get(`http://localhost:8080/admin/api/jobs/${selectedJob._id}`);
             setJobDetails(response.data);
           }
         } catch (error) {

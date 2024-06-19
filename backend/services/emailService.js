@@ -18,7 +18,7 @@ function validatePhone(phone) {
     return phoneRegex.test(phone);
 }
 
-const sendEmail = (req, res) => {
+async function sendEmail(req, res) {
     const { senderName, senderEmail, subject, text, phoneNumber } = req.body;
 
     if (senderName.length < 4) {
@@ -33,7 +33,7 @@ const sendEmail = (req, res) => {
     if (!senderEmail || !validateEmail(senderEmail)) {
         return res.status(400).json({ error: 'Invalid sender email' });
     }
-    if (!phoneNumber && !validatePhone(phoneNumber)) {
+    if (!phoneNumber || !validatePhone(phoneNumber)) {
         return res.status(400).json({ error: 'Invalid phone number' });
     }
 
@@ -44,14 +44,16 @@ const sendEmail = (req, res) => {
         text: `Sender: ${senderName} <${senderEmail}>\n\n${text}\nPhone Number: ${phoneNumber}`,
     };
 
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.error(error);
-            return res.status(500).json({ error: 'Error sending email' });
-        }
+    try {
+        const info = await transporter.sendMail(mailOptions);
         console.log('Email sent: ' + info.response);
         res.status(200).send('Email sent successfully');
-    });
-};
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Error sending email' });
+    }
+}
 
-module.exports = sendEmail;
+module.exports = {
+    sendEmail,
+};

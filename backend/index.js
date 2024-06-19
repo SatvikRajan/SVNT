@@ -6,18 +6,31 @@ const adminRoutes = require('../backend/routes/AdminRoutes');
 const candidateRoutes = require('./routes/CandidateRoutes');
 const jobRoutes = require('./routes/JobRoutes');
 const Candidate = require('./model/CandidatesModel');
+const multer = require('multer');
+const fs = require('fs');
+const path = require('path');
 const app = express();
 app.use(cors());
-require("dotenv").config();
-app.use("/api/auth", adminRoutes);
-app.use('/api/candidates', candidateRoutes);
-app.use('/api/jobs', jobRoutes);
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const mongoURI = 'mongodb+srv://satvikrajan:Satvik2003@cluster0.3sgwwvu.mongodb.net/svnt?retryWrites=true&w=majority&appName=Cluster0';
+require("dotenv").config();
+app.use("/api/auth", adminRoutes)
+app.use('/api/candidates', candidateRoutes)
+app.use('/admin/api/jobs', jobRoutes)
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+const mongoURI = 'mongodb+srv://satvikrajan:Satvik2003@cluster0.3sgwwvu.mongodb.net/svnt?retryWrites=true&w=majority&appName=Cluster0';
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads/');
+    },
+    filename: (req, file, cb) => {
+        cb(null, `${file.originalname}`);
+    }
+});
+
+const upload = multer({ storage });
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -83,6 +96,28 @@ app.get('/candidates', async (req, res) => {
 });
 
 
+app.post('/careers/api/submitForm', upload.single('resume'), async (req, res) => {
+    try {
+        const { name, email, phone, totalExperience, relevantExperience } = req.body;
+        const resumePath = req.file ? req.file.path : null;
+
+        const candidate = new Candidate({
+            name,
+            email,
+            phone,
+            totalExperience,
+            relevantExperience,
+            resumePath,
+        });
+
+        await candidate.save();
+        res.status(201).json({ message: 'Candidate saved successfully' });
+    } catch (error) {
+        console.error('Error saving candidate:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
 app.delete('/api/candidates/:id', async (req, res) => {
     const { id } = req.params;
     try {
@@ -97,26 +132,18 @@ app.delete('/api/candidates/:id', async (req, res) => {
     }
 });
 
-app.get('/api/resume/:filename', async (req, res) => {
-    try {
-        const file = await gfs.files.findOne({ filename: req.params.filename });
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-        if (!file) {
-            return res.status(404).json({ err: 'No file exists' });
-        }
+app.get('/api/resume/:filename', (req, res) => {
+    const filePath = path.join(__dirname, 'uploads', req.params.filename);
 
-        if (file.contentType === 'application/pdf') {
-            const readstream = gfs.createReadStream(file.filename);
-            res.set('Content-Type', 'application/pdf');
-            return readstream.pipe(res);
-        } else {
-            return res.status(400).json({ err: 'Not a PDF' });
-        }
-    } catch (err) {
-        console.error(err);
-        return res.status(500).json({ err: 'Server error' });
+    if (fs.existsSync(filePath)) {
+        res.sendFile(filePath);
+    } else {
+        res.status(404).json({ message: 'File not found' });
     }
 });
+
 
 async function main() {
     try {

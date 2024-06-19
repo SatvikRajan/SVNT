@@ -11,7 +11,7 @@ export default function LastContent() {
             <li>Discover New Horizons </li>
             <li>Design the Future</li>
           </ul>
-          <a href="/careers">
+          <a href="/careers" style={{width: '10%'}}>
             <p className="last-text1 join">Join Us</p>
           </a>
         </div>
@@ -26,8 +26,8 @@ export default function LastContent() {
             your company.
           </p>
         </div>
-        <div className="ms-auto align-self-center">
-          <a href="/contact" style={{ filter: 'invert()', width: '100%' }} className=" text-light align-self-end fs-4 readmore">
+        <div className="ms-auto align-self-center" style={{width: '15%'}}>
+          <a href="/contact" style={{ width: '100%' }} className=" text-light align-self-end fs-4 readmore">
             Contact Us
           </a>
         </div>

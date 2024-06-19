@@ -23,10 +23,8 @@
 
 
 .cs-hero{
-    width: 100vw;
-    height: 100vh;
-    margin-top: -1.2%;
-    margin-left: -0.5%;
+    width: 100%;
+    height: 100%;
     /* position: relative; */
     /* background-color: aquamarine; */
     display: flex;
@@ -37,8 +35,8 @@
 }
 
 .cs-hero-bg{
-    margin-top: 3.2rem;
-    width: fit-content;
+    height: 100%;
+    width: 100%;
     object-fit: scale-down;
 }
 
