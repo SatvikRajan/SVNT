@@ -12,6 +12,15 @@ import servicebg from "../images/Services/servicebg.webp";
 import "../css/services2.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTheme } from '@mui/material/styles';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import PropTypes from 'prop-types';
+import Avatar from "@material-ui/core/Avatar";
+// import SwipeableViews from 'react-swipeable-views';
+// import SwipeableViews from 'react-swipeable-views';
 
 
 import IPSlider from "../components/Sliders/IPSSlider";
@@ -30,65 +39,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { useState } from 'react';
-
-const services = [
-  {
-    image: wwdb1,
-    name: "IP Surveillance Solution",
-    details:
-      "An IP camera system is a closed-circuit TV (CCTV) that is network attached. IP camera systems can be utilized to enhance security measures and elevate safety in any sector ranging from healthcare, schools and businesses to industrial, military, and government organizations. ",
-    slider: <IPSlider/>
-  },
-  {
-    image: wwdb2,
-    name: "IP Networking Solution",
-    details:
-      " The setup of devices connected to a network and how they interact depend entirely on the networks purpose. Different organisations have different priorities. It might be a small network linking a few devices at home or work, or a large corporate network with thousands of devices. ",
-  },
-  {
-    image: wwdb3,
-    name: "Integration Solutions",
-    details:
-      "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify ",
-    slider: <IPSlider/>
-  },
-  {
-    image: wwdb4,
-    name: "Audio-Visual",
-    details:
-      "We provide state-of-the-art audio-visual products and solutions to seamlessly integrate audio, video, display, lighting equipment, and system controls. Our AV solutions cater to various applications, including conference rooms, auditoriums, cafeterias, ",
-    slider: <IPSlider/>
-  },
-
-  {
-    image: wwdb6,
-    name: "Security & Management",
-    details:
-      "As businesses expand, the natural progression involves upscaling their IT networks to meet evolving needs and requirements. Performing a comprehensive network audit is essential to uncover any problems before they escalate and result in serious consequences.",
-      slider: <IPSlider/>
-  },
-  {
-    image: wwdb8,
-    name: "Energy Solutions",
-    details:
-      "Our UPS solution, or uninterruptible power supply solution, automatically provides backup electricity to devices during a power failure. This ensures that your servers and computers can continue operating without interruption during power outages. ",
-      slider: <IPSlider/>
-  },
-  {
-    image: wwdb7,
-    name: "Surveillance and Safety",
-    details:
-      "Runway monitoring includes meticulously recording all aircraft movements and paths during take-off and landing to provide a detailed overview of all airport activities. This system, which includes strategically placed video cameras along the runway, is designed to.",
-      slider: <IPSlider/>
-  },
-  {
-    image: wwdb5,
-    name: "Storage",
-    details:
-      "When it comes to storing data, services like NAS (Network Attached Storage) and SAN (Storage Area Network) help employees work together and respond to customer needs quickly. Its important for these resources to be accessible and easy to use, all while keeping costs low. ",
-      slider: <IPSlider/>
-  },
-];
 
 const menuItems = [
   {
@@ -152,46 +102,43 @@ const menuItems = [
   },
 ];
 
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelledby={`full-width-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
 
 export default function Services() { 
-  // return (
-  //   <div className='services'>
-      // <Link className="logo-brand" to="/">
-      //   <img src={Logo} alt="SVNT Tech" height={30} />
-      // </Link>
-      // <img
-      //   style={{ position: "relative", marginTop: "-0.5rem" }}
-      //   src={servicebg}
-      //   className="service-bg"
-      //   alt=""
-      // />
-      // {/* <p className='service-text'>Expertise you can trust:<br /> Tailored solutions just for you!</p> */}
-      // <div className='services-main'>
-      //   <p className='services-mainhead'>
-      //   Gain a deeper insight into our{" "}
-      //   <span style={{ fontWeight:"500", color:"black"}}>Services</span>
-      //   </p>
+  const theme = useTheme();
+  const [value, setValue] = React.useState(0);
 
-  //       <div className='services-section'>
-  //         <div className='services-heading'>
-  //           <ul className='services-ul'>
-  //             <li className='services-li'>Energy Solution</li>
-  //             <li className='services-li'>Surveillance and Safety</li>
-  //             <li className='services-li'>Integration Solution</li>
-  //           </ul>
-  //         </div>
-  //         <div className='services-desc'>
-  //           <div className='services-info'>
-  //             <div className='head1'>one</div>
-  //             <div className='head2'>two</div>
-  //             <div className='head3'>three</div>
-  //           </div>
-  //           <div className='image'></div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // )
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const handleChangeIndex = (index) => {
+    setValue(index);
+  };
 
   const [selectedItem, setSelectedItem] = useState(null);
   const [visibleRange, setVisibleRange] = useState({ start: 0, end: 3 });
@@ -226,48 +173,62 @@ export default function Services() {
       />
       {/* <p className='service-text'>Expertise you can trust:<br /> Tailored solutions just for you!</p> */}
       <div className='services-main'>
+        
         <p className='services-mainhead'>
         Gain a deeper insight into our{" "}
         <span style={{ fontWeight:"500", color:"black"}}>Services</span>
         </p>
-        <div className="menu-container">
-        <button className="arrow left-arrow" onClick={scrollLeft} disabled={visibleRange.start === 0}>◀</button>
-        <div className="menu">
-          {menuItems.slice(visibleRange.start, visibleRange.end).map((item) => (
-            <div 
-              key={item.id} 
-              className={`menu-item ${selectedItem === item ? 'selected' : ''}`}
-              onClick={() => handleItemClick(item)}
-            >
-              <img src={item.image} alt="service" />
-                {item.name}
-            </div>
+        <div className='services-container'>
+        <Box sx={{width:'81%'}}>
+         
+        <Tabs
+          value={value}
+          onChange={handleChange}
+              variant="scrollable"
+              // className='menu'
+              scrollButtons="auto"
+              aria-label="scrollable auto tabs example"
+              sx={{
+                width: '100%',
+                // backgroundColor: '#fff', // Example background color
+                // Add more styles as needed
+              }}
+              className="custom-tabs"
+        >
+         {menuItems.map((item, index) => (
+              <Tab
+                key={item.id}
+                label={item.name}
+                iconPosition='start'
+             icon={<Avatar alt={item.name} src={item.image}
+             />}
+             className='custom-tab'
+              />
+            ))}
+          </Tabs>
+
+          {menuItems.map((item, index) => (
+            <TabPanel key={item.id} value={value} index={index} dir={theme.direction}>
+              <div className="details">
+                <div className='g1'>
+                  {[...Array(3)].map((_, i) => (
+                    <div key={i}>
+                      <h2>{item.name}</h2>
+                      <p>{item.details}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className='g2'>
+                  {item.slider}
+                </div>
+              </div>
+            </TabPanel>
           ))}
-        </div>
-        <button className="arrow right-arrow" onClick={scrollRight} disabled={visibleRange.end === menuItems.length}>▶</button>
+          </Box>
+          </div>
+
       </div>
-      {selectedItem && (
-          <div className="details">
-            <div className='g1'>
-              <div>
-                <h2>{selectedItem.name}</h2>
-                <p>{selectedItem.details}</p>
-              </div>
-              <div>
-                <h2>{selectedItem.name}</h2>
-                <p>{selectedItem.details}</p>
-              </div>
-              <div>
-                <h2>{selectedItem.name}</h2>
-                <p>{selectedItem.details}</p>
-              </div>
-            </div>
-            <div className='g2'>
-              {selectedItem.slider}
-            </div>
-        </div>
-      )}
-    </div>
+
     </div>
   );
 };
