@@ -10,7 +10,7 @@ import LastContent from '../components/LastContent';
 import '../css/home.css'
 import Logo from '../images/svnt-logo-white-full.png';
 import { Link } from 'react-router-dom'
-import Partners from './Partners';
+import Partners from '../components/Partners';
 
 export default function Home() {
 

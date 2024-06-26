@@ -148,7 +148,7 @@ export default function WhyWeDoBest() {
           </div>
         </div>
 
-        <div className="wwdb-learn-more">
+        <div className="wwdb-learn-more wwdb-learnmore-2">
           <a href="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
             <ArrowRightIcon className="fas" />
           </span></p></a>
