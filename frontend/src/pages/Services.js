@@ -39,6 +39,22 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { useState } from 'react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  components: {
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          '&.Mui-selected': {
+            color: 'purple',
+            fontWeight: '100',
+          },
+        },
+      },
+    },
+  },
+});
 
 const menuItems = [
   {
@@ -136,30 +152,6 @@ export default function Services() {
     setValue(newValue);
   };
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
-
-  const [selectedItem, setSelectedItem] = useState(null);
-  const [visibleRange, setVisibleRange] = useState({ start: 0, end: 3 });
-
-  const scrollLeft = () => {
-    setVisibleRange((prevRange) => ({
-      start: Math.max(prevRange.start - 1, 0),
-      end: Math.max(prevRange.end - 1, 3)
-    }));
-  };
-
-  const scrollRight = () => {
-    setVisibleRange((prevRange) => ({
-      start: Math.min(prevRange.start + 1, menuItems.length - 3),
-      end: Math.min(prevRange.end + 1, menuItems.length)
-    }));
-  };
-
-  const handleItemClick = (item) => {
-    setSelectedItem(item);
-  };
   return (
     <div className="App">
       <img
@@ -176,8 +168,9 @@ export default function Services() {
         <span style={{ fontWeight:"500", color:"black"}}>Services</span>
         </p>
         <div className='services-container'>
-        <Box sx={{width:'81%'}}>
-         
+          <Box sx={{ width: '81%' }}>
+            
+        <ThemeProvider theme={theme}>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -200,9 +193,16 @@ export default function Services() {
              icon={<Avatar alt={item.name} src={item.image}
              />}
              className='custom-tab'
+             sx={{
+              '&.Mui-selected': {
+                 color: '#251741',
+                fontWeight: 'bold',
+              },
+            }}
               />
             ))}
-          </Tabs>
+            </Tabs>
+            </ThemeProvider>
 
           {menuItems.map((item, index) => (
             <TabPanel key={item.id} value={value} index={index} dir={theme.direction}>

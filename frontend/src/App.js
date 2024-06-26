@@ -13,6 +13,7 @@ import AdminPage from './pages/AdminPage';
 import Loader from './components/Loader';
 import AdminLogin from './pages/AdminLogin';
 import AdminRegister from './pages/AdminRegister';
+import Partners from './pages/Partners';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -34,6 +35,7 @@ function App() {
             <Routes>
               <Route path="/" element={<MainLayout><Home /></MainLayout>} />
               <Route path="contact" element={<MainLayout><Contact /></MainLayout>} />
+              <Route path="partners" element={<MainLayout><Partners /></MainLayout>} />
               <Route path="casestudies" element={<MainLayout><CaseStudies /></MainLayout>} />
               <Route path="careers" element={<MainLayout><CareersPage /></MainLayout>} />
               <Route path="about" element={<MainLayout><About /></MainLayout>} />

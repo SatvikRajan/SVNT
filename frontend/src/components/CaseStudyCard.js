@@ -73,7 +73,6 @@ const items = [
             "Realising Results:",
             "The Impact of 'Eye-on-Pellet' The implementation of 'Eye-on-Pellet' yields a myriad of benefits, transforming the landscape of pelletization plant operations. Real-time monitoring not only enhances quality control but also reduces rejected pellets, ensuring optimal utilisation of resources. Operators can swiftly adjust parameters, optimising plant performance and maximising throughput. And the best part? Our customisable solutions are tailor-made to fit each plant's unique needs, unlocking maximum efficiency and potential.",
             "The successful implementation of 'Eye-on-Pellet' demonstrates its effectiveness in enhancing pelletization plant efficiency and productivity. By leveraging advanced technology and automated monitoring, operators can make informed decisions, optimise plant parameters, and achieve consistent, high-quality pellet output. With its proven track record and customisable features, 'Eye-on-Pellet' stands as a pioneering solution in revolutionising pelletization plant operations.",
-,
         ],
         top: '2017px',
     },
