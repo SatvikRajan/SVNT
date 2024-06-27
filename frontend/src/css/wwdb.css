@@ -186,6 +186,38 @@
   cursor: pointer;
 }
 
+.wwdb-learnmore-2 {
+  position: absolute;
+  top: 632px;
+  left: 1296px;
+  width: 300px;
+  /* background-color: aqua; */
+}
+
+.wwdb-learn-more .btn-arrow {
+  position: relative;
+  transition: background-color 300ms ease-out;
+}
+
+.wwdb-learn-more .btn {
+  padding: 0.5rem 0 0.5rem;
+  width: 80%;
+  height: 60px;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+  border-radius: 0;
+}
+
+.wwdb-learn-more .btn-arrow span {
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  position: relative;
+  transition: all 300ms ease-out;
+  will-change: transform;
+}
+
 .learnMore {
   font-size: 30px;
   margin-right: 0;

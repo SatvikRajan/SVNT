@@ -30,6 +30,22 @@ import StorageSlider from "../components/Sliders/StorageSlider";
 import React from "react";
 
 import { useState } from 'react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  components: {
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          '&.Mui-selected': {
+            color: 'purple',
+            fontWeight: '100',
+          },
+        },
+      },
+    },
+  },
+});
 
 const menuItems = [
   {
@@ -127,30 +143,6 @@ export default function Services() {
     setValue(newValue);
   };
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
-
-  const [selectedItem, setSelectedItem] = useState(null);
-  const [visibleRange, setVisibleRange] = useState({ start: 0, end: 3 });
-
-  const scrollLeft = () => {
-    setVisibleRange((prevRange) => ({
-      start: Math.max(prevRange.start - 1, 0),
-      end: Math.max(prevRange.end - 1, 3)
-    }));
-  };
-
-  const scrollRight = () => {
-    setVisibleRange((prevRange) => ({
-      start: Math.min(prevRange.start + 1, menuItems.length - 3),
-      end: Math.min(prevRange.end + 1, menuItems.length)
-    }));
-  };
-
-  const handleItemClick = (item) => {
-    setSelectedItem(item);
-  };
   return (
     <div className="App">
       <img
@@ -168,10 +160,11 @@ export default function Services() {
         </p>
         <div className='services-container'>
           <Box sx={{ width: '81%' }}>
-
-            <Tabs
-              value={value}
-              onChange={handleChange}
+            
+        <ThemeProvider theme={theme}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
               variant="scrollable"
               // className='menu'
               scrollButtons="auto"
@@ -182,24 +175,30 @@ export default function Services() {
                 // Add more styles as needed
               }}
               className="custom-tabs"
-            >
-              {menuItems.map((item, index) => (
-                <Tab
-                  key={item.id}
-                  label={item.name}
-                  iconPosition='start'
-                  icon={<Avatar alt={item.name} src={item.image}
-                  />}
-                  className='custom-tab'
-                  id={item.name.toLowerCase().replace(/\s+/g, '-')}
-                />
-              ))}
+        >
+         {menuItems.map((item, index) => (
+              <Tab
+                key={item.id}
+                label={item.name}
+                iconPosition='start'
+             icon={<Avatar alt={item.name} src={item.image}
+             />}
+             className='custom-tab'
+             sx={{
+              '&.Mui-selected': {
+                 color: '#251741',
+                fontWeight: 'bold',
+              },
+            }}
+              />
+            ))}
             </Tabs>
+            </ThemeProvider>
 
             {menuItems.map((item, index) => (
               <TabPanel key={item.id} value={value} index={index} dir={theme.direction} id={item.name.toLowerCase().replace(/\s+/g, '-')}>
                 <div className="details">
-                  <div className='g1'>
+                  <div className='g1'>``
                     {[...Array(3)].map((_, i) => (
                       <div key={i}>
                         <h2>{item.name}</h2>

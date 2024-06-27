@@ -11,10 +11,9 @@
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
-    width: 99vw;
+    width: 100vw;
+
     /* background-color: antiquewhite; */
-
-
 }
 
 .overflow-hidden * {
@@ -49,7 +48,10 @@
     left: 213px;
 }
 
-
+.cs-list{
+    width: 100vw;
+    height: 100vh;
+}
 
 .cs-search-bar{
     width: 100%;
@@ -85,7 +87,6 @@
 /* .cs-card-parent{
     background-color: aqua;
 } */
-
 
 .cs-card{
     cursor: pointer;
@@ -243,4 +244,12 @@
     justify-content: center;
     
     
+}
+
+.custom-tab{
+    width: fit-content !important;
+    padding: 0% !important;
+    /* background-color: antiquewhite !important; */
+    /* border: 2px solid black !important; */
+    border-radius: 10px !important;
 }
