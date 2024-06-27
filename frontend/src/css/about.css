@@ -317,4 +317,10 @@
   .ceo-text-head{
     font-size: 24px !important;
   }
+  .ceo-text p{
+    width: 100% !important;
+  }
+  .about-bg{
+    padding: 1rem;
+  }
 }

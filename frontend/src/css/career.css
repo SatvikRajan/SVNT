@@ -1,6 +1,6 @@
 .location {
   padding-bottom: 1rem;
-  background-color: #CDD4FD;
+  background-color: #cdd4fd;
   margin: 5rem;
   border-radius: 80px;
   margin-left: 8rem;
@@ -15,7 +15,7 @@
 .offices {
   letter-spacing: 0.1px;
   border-radius: 20px;
-  
+
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -43,7 +43,7 @@ a {
 a:hover {
   color: rgb(53, 53, 53);
 }
-.footer-email{
+.footer-email {
   justify-content: start;
 }
 .footer {
@@ -168,7 +168,7 @@ a:hover {
 
 .front,
 .back {
-  background-color: #F1FAFF;
+  background-color: #f1faff;
   position: absolute;
   top: 0;
   left: 0;
@@ -241,8 +241,8 @@ a:hover {
   text-align: start;
   padding-left: 18rem;
 }
-.phn{
-  color: #E9E8EC !important;
+.phn {
+  color: #e9e8ec !important;
 }
 .overlay {
   position: absolute;
@@ -252,14 +252,14 @@ a:hover {
   height: 100%;
   border-radius: 30px;
   background-color: rgba(233, 232, 236, 0.6);
- 
+
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2; 
+  z-index: 2;
 }
 
-.jobs{
+.jobs {
   position: relative;
 }
 .overlay-text {
@@ -283,7 +283,7 @@ a:hover {
   .invite {
     flex-wrap: wrap;
   }
-  .career-text1{
+  .career-text1 {
     font-size: 20px !important;
   }
 }
@@ -320,7 +320,7 @@ a:hover {
   .bottom-bar {
     gap: 8rem !important;
   }
-  .recruitment{
+  .recruitment {
     padding-top: 0;
   }
 }
@@ -330,7 +330,7 @@ a:hover {
   gap: 34rem;
 }
 @media (min-width: 1440px) {
-  .recruitment{
+  .recruitment {
     padding-top: 5rem;
   }
   .jobs {
@@ -341,7 +341,7 @@ a:hover {
   .recruitment-h {
     padding-left: 10rem;
   }
-  .dropdown{
+  .dropdown {
     margin-left: 16rem;
   }
   .job-des {
@@ -351,4 +351,12 @@ a:hover {
 
 .row {
   width: 100%;
+}
+
+@media (max-width: 425px) {
+  .invite {
+    padding: 1rem !important;
+    margin-left: 40px !important;
+    margin-top: 2rem;
+  }
 }

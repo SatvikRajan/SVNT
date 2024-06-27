@@ -8,6 +8,7 @@ import sss from '../images/Home/home-carousel-eyeon.webp';
 import avs from '../images/Home/home-carousel-cfcl.webp';
 import es from '../images/Home/home-carousel-aragen.webp';
 import AOS from 'aos';
+
 import 'aos/dist/aos.css';
 
 function CaseStudiesCarousel() {
@@ -56,29 +57,14 @@ function CaseStudiesCarousel() {
   useEffect(() => {
     setItems([
       { id: 0, image: sss, title: 'JSW Eye on Pellet', description: 'Delve into the revolutionary world of pelletization plants through real time system integration.' },
-      { id: 1, image: ips, title: '', description: '' },
-      { id: 2, image: ipn, title: '', description: '' },
       { id: 3, image: str, title: 'ITC Hotels', description: 'A Close Examination of how SVNT implements Security Protocols at ITC.' },
       { id: 4, image: sms, title: 'BEL(Rafael)', description: 'Explore the realm of security and management solutions, vital for safeguarding businesses against threats.' },
+      { id: 1, image: ips, title: '', description: '' },
+      { id: 2, image: ipn, title: '', description: '' },
       { id: 5, image: is, title: 'Om Books (Statocast)', description: 'Optimize efficiency with our integration solutions, merging systems for seamless communication and collaboration.' },
       { id: 6, image: avs, title: 'CFCL', description: 'Elevate communication and engagement with our audio-visual solutions.' },
       { id: 7, image: es, title: 'Aragen', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' },
       { id: 0, image: sss, title: 'JSW Eye on Pellet', description: 'Delve into the revolutionary world of pelletization plants through real time system integration.' },
-      { id: 1, image: ips, title: '', description: '' },
-      { id: 2, image: ipn, title: '', description: '' },
-      { id: 3, image: str, title: 'ITC Hotels', description: 'A Close Examination of how SVNT implements Security Protocols at ITC.' },
-      { id: 4, image: sms, title: 'BEL(Rafael)', description: 'Explore the realm of security and management solutions, vital for safeguarding businesses against threats.' },
-      { id: 5, image: is, title: 'Om Books (Statocast)', description: 'Optimize efficiency with our integration solutions, merging systems for seamless communication and collaboration.' },
-      { id: 6, image: avs, title: 'CFCL', description: 'Elevate communication and engagement with our audio-visual solutions.' },
-      { id: 7, image: es, title: 'Aragen', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' },
-      { id: 0, image: sss, title: 'JSW Eye on Pellet', description: 'Delve into the revolutionary world of pelletization plants through real time system integration.' },
-      { id: 1, image: ips, title: '', description: '' },
-      { id: 2, image: ipn, title: '', description: '' },
-      { id: 3, image: str, title: 'ITC Hotels', description: 'A Close Examination of how SVNT implements Security Protocols at ITC.' },
-      { id: 4, image: sms, title: 'BEL(Rafael)', description: 'Explore the realm of security and management solutions, vital for safeguarding businesses against threats.' },
-      { id: 5, image: is, title: 'Om Books (Statocast)', description: 'Optimize efficiency with our integration solutions, merging systems for seamless communication and collaboration.' },
-      { id: 6, image: avs, title: 'CFCL', description: 'Elevate communication and engagement with our audio-visual solutions.' },
-      { id: 7, image: es, title: 'Aragen', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' },
     ]);
   }, []);
 
@@ -114,7 +100,7 @@ function CaseStudiesCarousel() {
                 <p style={{ fontSize: '20px', textAlign: 'left' }}>
                   {item.description}
                 </p>
-                <a href="/casestudies" className={`readmore ${!item.title ? 'read-1' : ''}`}>
+                <a href={`/casestudies?id=${item.id}`} className={`readmore ${!item.title ? 'read-1' : ''}`}>
                   Read More
                 </a>
 

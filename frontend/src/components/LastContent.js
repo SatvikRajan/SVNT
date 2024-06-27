@@ -19,14 +19,14 @@ export default function LastContent() {
         <img src={last} alt="" />
       </div>
       <div className="last-contact d-flex">
-        <div style={{ width: '60%' }}>
+        <div className='lc-1' style={{ width: '60%' }}>
           <h1>Not sure where to start ?</h1>
           <p style={{ fontSize: '24px', marginTop: '10px' }}>
             Our specialists are available to address your inquiries and guide you in choosing the ideal products for
             your company.
           </p>
         </div>
-        <div className="ms-auto align-self-center" style={{width: '15%'}}>
+        <div className="ms-auto align-self-center lc-2" style={{width: '15%'}}>
           <a href="/contact" style={{ width: '100%' }} className=" text-light align-self-end fs-4 readmore">
             Contact Us
           </a>

@@ -6,8 +6,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../css/contact.css'
 import axios from 'axios';
-import Logo from '../images/svnt-logo-black-full.png';
-import { Link } from 'react-router-dom'
 
 const Contact = () => {
   useEffect(() => {
@@ -28,12 +26,12 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      if (!senderName || !subject || !text ) {
+      if (!senderName || !subject || !text) {
         setMessage('Please fill in the required fields ');
         return;
       }
 
-      if(senderName.length<3){
+      if (senderName.length < 3) {
         setMessage('Name should be more than 3 characters');
         return;
       }
@@ -138,7 +136,7 @@ const Contact = () => {
             </label>
 
             <label for="inp" class="inp">
-              <textarea style={{height: '20rem'}} className='textarea' type="text" id="inp" value={text} rows={12}
+              <textarea style={{ height: '20rem' }} className='textarea' type="text" id="inp" value={text} rows={12}
                 onChange={(e) => setText(e.target.value)} placeholder="&nbsp;" />
               <span class="label">Message</span>
               <span class="focus-bg"></span>
@@ -153,7 +151,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="location">
-        <h1 style={{ textAlign: 'start', marginLeft: '8rem', paddingTop: '3rem' }}>Our Locations</h1>
+        <h1 className='ln'>Our Locations</h1>
         <h1 className="location-name">Head Office</h1>
         <div className="offices" data-aos='fade-up'>
           <LocationCard

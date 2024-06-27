@@ -53,7 +53,6 @@ function App() {
 const MainLayout = ({ children }) => (
   <>
     <Navbar />
-    <Navbar />
     {children}
     <Footer />
   </>

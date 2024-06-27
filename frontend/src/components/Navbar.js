@@ -4,8 +4,6 @@ import Logo from '../images/logo.png';
 import '../css/navbar.css'
 
 const Navbar = () => {
-
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
     const location = useLocation();
     const [activeLink, setActiveLink] = useState(null);
 

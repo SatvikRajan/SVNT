@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '../css/card.css';
 import image1 from '../images/Home/carousel-image-1.jpg';
 import image1m from '../images/Home/carousel-image1m.jpg';
-import image2 from '../images/Home/carousel-image2.webp';
-import image3 from '../images/Home/carousel-image3.webp';
-import image4 from '../images/Home/carousel-image4.webp';
 
 function Carosuel1() {
   return (
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
+      <div class="carousel-indicators c-ind">
         <div type="button" id='carousel-button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></div>
         <div type="button" id='carousel-button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></div>
         <div type="button" id='carousel-button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></div>
@@ -94,11 +91,11 @@ function Carosuel1() {
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" id='carousel-control-prev' type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <button class="carousel-control-prev ccb" id='carousel-control-prev' type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" id='carousel-control-prev-icon' aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" id='carousel-control-next' type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <button class="carousel-control-next ccb" id='carousel-control-next' type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
         <span class="carousel-control-next-icon" id='carousel-control-next-icon' aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>

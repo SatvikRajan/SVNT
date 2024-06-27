@@ -186,53 +186,16 @@
   cursor: pointer;
 }
 
-.wwdb-learn-more {
-  position: absolute;
-  top: 632px;
-  left: 1296px;
-  width: 300px;
-  /* background-color: aqua; */
-}
-
-.wwdb-learn-more .btn-arrow {
-  position: relative;
-  transition: background-color 300ms ease-out;
-}
-
-.wwdb-learn-more .btn {
-  padding: 0.5rem 0 0.5rem;
-  width: 80%;
-  height: 60px;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid gray;
-  border-radius: 0;
-}
-
-.wwdb-learn-more .btn-arrow span {
-  color: rgb(0, 0, 0);
-  display: inline-block;
-  position: relative;
-  transition: all 300ms ease-out;
-  will-change: transform;
-}
-
 .learnMore {
   font-size: 30px;
-  /* width: 470px; */
-  /* background-color: #0077ff; */
   margin-right: 0;
-  /* background: none !important; */
-  /* width: 470px; */
 }
 
-
- .fas :hover {
+.fas :hover {
   transform: translate3d(5rem, 0, 0);
 }
 
- .fas {
+.fas {
   position: absolute;
   width: 1em;
   right: -3rem;
@@ -243,18 +206,18 @@
   will-change: right, opacity;
 }
 
- .btn-arrow :hover .fas {
+.btn-arrow :hover .fas {
   opacity: 1;
   right: -4.5rem;
   padding-left: 5px;
 }
 
 @media (max-width: 425px) {
-.wwdb-head{
-  margin-top: 1rem ;
-  position: static;
-  font-size: 24px !important;
-}
+  .wwdb-head {
+    margin-top: 1rem;
+    position: static;
+    font-size: 24px !important;
+  }
 
   .wwdb-container {
     width: 100% !important;
@@ -263,7 +226,14 @@
     height: 600px !important;
     border-radius: 30px !important;
   }
+  .wwdb-details-overlay {
+    width: 95% !important;
+    height: 600px !important;
+  }
 
+  .wwdb-logo-title,.wwdb-close-button,.wwdb-image-container,.wwdb-details-text{
+    position: static !important;
+  }
   .wwdb-menu {
     padding: 10px;
     gap: 20px;
@@ -305,7 +275,38 @@
   .m0,
   .m1,
   .m2,
-  .m3,.m4,.m5,.m6,.m7{
+  .m3,
+  .m4,
+  .m5,
+  .m6,
+  .m7 {
     align-items: center;
+  }
+  .wwdb-logo-title{
+    gap: 10px;
+  }
+  .wwdb-logo-title p{
+    font-size: 24px !important;
+  }
+  .wwdb-logo-title img{
+    height: 40px;
+  }
+  .wwdb-close-button{
+    margin-left: 20rem !important;
+  }
+  .wwdb-image-container{
+    height: 200px !important;
+    width: fit-content !important;
+    padding-left: 2rem;
+    padding-top: 1rem;
+  }
+  .wwdb-image-container img{
+    height: 200px !important;
+    width:max-content !important;
+  }
+  .wwdb-details-text p{
+    line-height: 40px !important;
+    font-size: 18px !important;
+    padding: 2rem !important;
   }
 }

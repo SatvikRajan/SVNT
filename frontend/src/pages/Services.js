@@ -5,13 +5,8 @@ import wwdb4 from '../images/Home/audio-visual.svg';
 import wwdb5 from '../images/Home/security-and-mgmt.svg';
 import wwdb6 from '../images/Home/energy.svg';
 import wwdb7 from '../images/Home/surveillance-and-safety.svg';
-import wwdb8 from '../images/Home/storage.svg';
-import Logo from "../images/svnt-logo-white-full.png";
-import { Link } from "react-router-dom";
 import servicebg from "../images/Services/servicebg.jpg";
 import "../css/services2.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { useTheme } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -28,15 +23,11 @@ import INSlider from "../components/Sliders/INSSlider";
 import IntegrationSlider from "../components/Sliders/IntegrationSlider";
 import AudioVisualSlider from "../components/Sliders/AudioVisualSlider";
 import SecuritySlider from "../components/Sliders/SecuritySlider";
-import EnergySlider from "../components/Sliders/EnergySlider";
 import SurveillanceSlider from "../components/Sliders/SurveillanceSlider";
 import StorageSlider from "../components/Sliders/StorageSlider";
 
 
 import React from "react";
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 import { useState } from 'react';
 
@@ -47,16 +38,16 @@ const menuItems = [
     name: "IP Surveillance Solution",
     details:
       "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
-      slider: <IPSlider/>,
+    slider: <IPSlider />,
   },
-      
+
   {
     id: 2,
     image: wwdb2,
     name: "IP Networking Solution",
     details:
       "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
-      slider: <INSlider/>,
+    slider: <INSlider />,
   },
   {
     id: 3,
@@ -64,7 +55,7 @@ const menuItems = [
     name: "Integration Solutions",
     details:
       "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
-      slider: <IntegrationSlider/>,
+    slider: <IntegrationSlider />,
   },
   {
     id: 4,
@@ -72,7 +63,7 @@ const menuItems = [
     name: "Audio-Visual",
     details:
       "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
-    slider: <AudioVisualSlider/>,
+    slider: <AudioVisualSlider />,
   },
   {
     id: 5,
@@ -80,25 +71,25 @@ const menuItems = [
     name: "Security & Management",
     details:
       "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
-      slider: <SecuritySlider/>,
+    slider: <SecuritySlider />,
   },
-      
+
   {
     id: 6,
     image: wwdb7,
     name: "Surveillance and Safety",
     details:
       "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
-      slider: <SurveillanceSlider/>,
+    slider: <SurveillanceSlider />,
   },
-      
+
   {
     id: 7,
     image: wwdb5,
     name: "Storage",
     details:
       "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
-      slider: <StorageSlider/>,
+    slider: <StorageSlider />,
   },
 ];
 
@@ -128,7 +119,7 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export default function Services() { 
+export default function Services() {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
@@ -170,17 +161,17 @@ export default function Services() {
       />
       {/* <p className='service-text'>Expertise you can trust:<br /> Tailored solutions just for you!</p> */}
       <div className='services-main'>
-        
+
         <p className='services-mainhead'>
-        Gain a deeper insight into our{" "}
-        <span style={{ fontWeight:"500", color:"black"}}>Services</span>
+          Gain a deeper insight into our{" "}
+          <span style={{ fontWeight: "500", color: "black" }}>Services</span>
         </p>
         <div className='services-container'>
-        <Box sx={{width:'81%'}}>
-         
-        <Tabs
-          value={value}
-          onChange={handleChange}
+          <Box sx={{ width: '81%' }}>
+
+            <Tabs
+              value={value}
+              onChange={handleChange}
               variant="scrollable"
               // className='menu'
               scrollButtons="auto"
@@ -191,41 +182,42 @@ export default function Services() {
                 // Add more styles as needed
               }}
               className="custom-tabs"
-        >
-         {menuItems.map((item, index) => (
-              <Tab
-                key={item.id}
-                label={item.name}
-                iconPosition='start'
-             icon={<Avatar alt={item.name} src={item.image}
-             />}
-             className='custom-tab'
-              />
-            ))}
-          </Tabs>
+            >
+              {menuItems.map((item, index) => (
+                <Tab
+                  key={item.id}
+                  label={item.name}
+                  iconPosition='start'
+                  icon={<Avatar alt={item.name} src={item.image}
+                  />}
+                  className='custom-tab'
+                  id={item.name.toLowerCase().replace(/\s+/g, '-')}
+                />
+              ))}
+            </Tabs>
 
-          {menuItems.map((item, index) => (
-            <TabPanel key={item.id} value={value} index={index} dir={theme.direction}>
-              <div className="details">
-                <div className='g1'>
-                  {[...Array(3)].map((_, i) => (
-                    <div key={i}>
-                      <h2>{item.name}</h2>
-                      <p>{item.details}</p>
-                    </div>
-                  ))}
+            {menuItems.map((item, index) => (
+              <TabPanel key={item.id} value={value} index={index} dir={theme.direction} id={item.name.toLowerCase().replace(/\s+/g, '-')}>
+                <div className="details">
+                  <div className='g1'>
+                    {[...Array(3)].map((_, i) => (
+                      <div key={i}>
+                        <h2>{item.name}</h2>
+                        <p>{item.details}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <div className='g2'>
+                    {item.slider}
+                  </div>
                 </div>
-                <div className='g2'>
-                  {item.slider}
-                </div>
-              </div>
-            </TabPanel>
-          ))}
+              </TabPanel>
+            ))}
           </Box>
-          </div>
+        </div>
 
       </div>
 
     </div>
   );
-};
+}

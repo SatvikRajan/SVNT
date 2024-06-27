@@ -6,9 +6,6 @@ import Managers from '../components/Managers';
 import TimeLine from '../components/Timeline'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Logo from '../images/svnt-logo-black-full.png';
-import { Link } from 'react-router-dom'
-import AboutCarousel from '../components/AboutCarousel';
 import aequs from '../images/AboutUs/client-aequs.svg'
 import allergan from '../images/AboutUs/client-allergan.svg'
 import ampath from '../images/AboutUs/client-ampath.svg'
@@ -31,6 +28,7 @@ import lat from '../images/AboutUs/lat.svg'
 import mahindra from '../images/AboutUs/mahindra.svg'
 
 import aboutbg from '../images/AboutUs/about-bg.jpg';
+import aboutbgm from '../images/AboutUs/about-bgm.jpg';
 
 import Slider from "react-slick";
 
@@ -65,7 +63,17 @@ export const About = () => {
     <div className="about-us-page">
       <div className="about-us-head">
         {/* <AboutCarousel /> */}
-        <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100%', objectFit: 'scale-down' }} alt="" />
+        {/* <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100%', objectFit: 'scale-down' }} alt="" /> */}
+        <picture>
+          <source media="(max-width: 425px)" srcSet={aboutbgm} />
+          <source media="(min-width: 426px)" srcSet={aboutbg} />
+          <img
+            style={{ height: '100%', width: '100%' }}
+            src={aboutbg}
+            className="about-bg"
+            alt="..."
+          />
+        </picture>
         {/* <h2  className='img-info'>
           Integrated Solutions, Empowered Choices
           <br />
