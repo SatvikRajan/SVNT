@@ -76,7 +76,7 @@ const Navbar = () => {
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="navbar-collapse navLinksPosition collapse justify-content-end" id="navbarSupportedContent">
+                    <div className="navbar-collapse navLinksPosition collapse" id="navbarSupportedContent">
                         <ul id='nav-links' className="navbar-nav ">
                             <NavItem to="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 About Us

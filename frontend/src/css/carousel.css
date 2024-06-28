@@ -49,6 +49,7 @@ body {
 .trusted {
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -71,9 +72,10 @@ body {
 #slideshow {
   height: 50%;
   width: 60%;
+  padding-top: 7%;
+  
   padding-left: 20%;
   margin-left: 0;
-  background-color: #ffffff;
 
   /* box-sizing: border-box; */
 }
@@ -81,7 +83,6 @@ body {
 .entire-content {
   background-color: #0b3c1c;
   margin: auto;
-  width: 160px;
   perspective: 1000px;
   position: relative;
   transform-style: preserve-3d;
@@ -93,7 +94,6 @@ body {
 }
 
 .content-carrousel {
-  margin-top: -3rem;
   width: 80%;
   /* background-color: #0e5054; */
   position: absolute;

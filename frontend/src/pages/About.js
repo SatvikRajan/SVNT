@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/about.css';
 import ceo from '../images/AboutUs/ceo-image.png';
 import '../css/slider.css';
@@ -33,12 +33,63 @@ import aboutbgm from '../images/AboutUs/about-bgm.jpg';
 import Slider from "react-slick";
 
 export const About = () => {
+  const [activeClientType, setActiveClientType] = useState('All');
+  const clients = {
+    All: [
+      { src: aequs, alt: 'Aequs' },
+      { src: allergan, alt: 'Allergan' },
+      { src: lat, alt: 'LAT' },
+      { src: jcb, alt: 'JCB' },
+      { src: vedanta, alt: 'vedanta' },
+      { src: britannia, alt: 'britannia' },
+      { src: gm, alt: 'gm' },
+      { src: abg, alt: 'abg' },
+      { src: brigade, alt: 'abg' },
+      { src: gd, alt: 'abg' },
+      { src: akn, alt: 'abg' },
+      { src: hc, alt: 'abg' },
+      { src: mahindra, alt: 'abg' },
+      { src: itc, alt: 'abg' },
+      { src: indigo, alt: 'abg' },
+      // Add all clients here
+    ],
+    Power: [
+      { src: ampath, alt: 'Power Client 1' },
+      { src: kia, alt: 'Power Client 2' },
+      // Add power clients here
+    ],
+    Pharma: [
+      { src: esl, alt: 'Pharma Client 1' },
+      { src: jsw, alt: 'Pharma Client 2' },
+      // Add pharma clients here
+    ],
+    Zinc: [
+      { src: '../images/AboutUs/client-esl.svg', alt: 'Zinc Client 1' },
+      { src: '../images/AboutUs/jcb.svg', alt: 'Zinc Client 2' },
+      // Add pharma clients here
+    ],
+    Hotels: [
+      { src: '../images/AboutUs/client-esl.svg', alt: 'Hotels Client 1' },
+      { src: '../images/AboutUs/jcb.svg', alt: 'Hotels Client 2' },
+      // Add pharma clients here
+    ],
+    Tobacco: [
+      { src: '../images/AboutUs/client-esl.svg', alt: 'Tobacco Client 1' },
+      { src: '../images/AboutUs/jcb.svg', alt: 'Tobacco Client 2' },
+      // Add pharma clients here
+    ],
+    Foods: [
+      { src: '../images/AboutUs/client-esl.svg', alt: 'Foods Client 1' },
+      { src: '../images/AboutUs/jcb.svg', alt: 'Foods Client 2' },
+      // Add pharma clients here
+    ],
+  };
 
   useEffect(() => {
     AOS.init({
       duration: 1000,
       once: true,
-      offset: 300,
+      offset: 200,
       delay: 500
     });
   }, []);
@@ -46,17 +97,15 @@ export const About = () => {
     arrows: false,
     dots: false,
     autoplay: true,
-    autoplaySpeed: 10,
+    autoplaySpeed: 3000,
     infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    speed: 6000,
-    rows: 2,
-    slidesPerRow: 2,
+    slidesToShow: 1,
+    speed: 600, 
+    rows: 3,
+    slidesPerRow: 4,
     cssEase: "linear",
     outline: false
   };
-
 
 
   return (
@@ -105,69 +154,24 @@ export const About = () => {
       <Managers />
       <div className='about-clients'>
         <h1 className='client-h1'>Clients</h1>
-        <div className="slider-container" style={{ marginTop: '4rem', textAlign: '-webkit-center', marginBottom: '5rem' }}>
-          <Slider {...settings}>
-            <div>
-              <img height={300} src={aequs} alt="" />
-            </div>
-            <div>
-              <img height={300} src={allergan} alt="" />
-            </div>
-            <div>
-              <img height={300} src={ampath} alt="" />
-            </div>
-            <div>
-              <img height={300} src={kia} alt="" />
-            </div>
-            <div>
-              <img height={300} src={brigade} alt="" />
-            </div>
-            <div>
-              <img height={300} src={esl} alt="" />
-            </div>
-            <div>
-              <img height={300} src={gd} alt="" />
-            </div>
-            <div>
-              <img height={300} src={akn} alt="" />
-            </div>
-            <div>
-              <img height={300} src={hc} alt="" />
-            </div>
-            <div>
-              <img height={300} src={itc} alt="" />
-            </div>
-            <div>
-              <img height={300} src={indigo} alt="" />
-            </div>
-            <div>
-              <img height={300} src={afio} alt="" />
-            </div>
-            <div>
-              <img height={300} src={abg} alt="" />
-            </div>
-            <div>
-              <img height={300} src={gm} alt="" />
-            </div>
-            <div>
-              <img height={300} src={britannia} alt="" />
-            </div>
-            <div>
-              <img height={300} src={vedanta} alt="" />
-            </div>
-            <div>
-              <img height={300} src={jsw} alt="" />
-            </div>
-            <div>
-              <img height={300} src={mahindra} alt="" />
-            </div>
-            <div>
-              <img height={300} src={jcb} alt="" />
-            </div>
-            <div>
-              <img height={300} src={lat} alt="" />
-            </div>
-          </Slider>
+        <div className="client-container">
+          <div className="about-client-type">
+            {Object.keys(clients).map((clientType) => (
+              <p key={clientType} onClick={() => setActiveClientType(clientType)}>
+                {clientType}
+              </p>
+            ))}
+          </div>
+
+          <div className="slider-container">
+            <Slider {...settings}>
+              {clients[activeClientType].map((client, index) => (
+                <div key={index}>
+                  <img height={200} src={client.src} alt={client.alt} />
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
       </div>
 

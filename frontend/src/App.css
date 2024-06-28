@@ -681,7 +681,7 @@ main {
 }
 
 .trusted {
-  margin-bottom: 15rem;
+  margin-bottom: 30rem;
 }
 .shiny::after {
   content: '';

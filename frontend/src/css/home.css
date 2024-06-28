@@ -82,21 +82,21 @@
   display: inline-block;
 }
 
-.whyus {
-  padding-left: 10rem;
-  display: flex;
-  align-items: center;
-}
 .why-choose-head {
+  margin-bottom: 2rem;
   font-size: 42px;
   font-weight: 500;
 }
-.whyus-details {
-  font-weight: 500;
-  margin-left: 4.6rem;
-  margin-right: 6rem;
+.whyus-details, .whyus-details-1{
+  text-align-last: center;
+}
+.whyus-details-1{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.whyus-details p,.whyus-details-1 p{
+  text-align: center;
   font-size: 24px;
-  line-height: 50px;
 }
 .last {
   border-radius: 30px;
@@ -157,7 +157,9 @@
 .trusted p {
   font-size: 28px;
 }
-
+.why-choose-main{
+  padding: 2rem;
+}
 @media (max-width: 768px) {
   .x1 {
     flex-wrap: wrap;
@@ -214,17 +216,6 @@
   .why-choose-head {
     font-size: 34px !important;
   }
-  .whyus-text p {
-    width: -webkit-fill-available;
-    font-size: 30px;
-    margin: 0px;
-  }
-  .whyus-details {
-    margin-left: 2.6rem !important;
-    margin-right: 2rem !important;
-    font-size: 22px;
-    line-height: 50px;
-  }
   .mainLogo {
     left: 330px !important;
   }
@@ -252,6 +243,9 @@
   }
   .m7 {
     left: 495px !important;
+  }
+  .why-choose-main{
+    flex-wrap: wrap;
   }
 }
 
@@ -308,21 +302,8 @@
   .readmore {
     font-size: 18px !important;
   }
-  .whyus {
-    padding-left: 5rem;
-  }
   .why-choose-head {
     font-size: 38px;
-  }
-  .whyus-text p {
-    font-size: 30px;
-    margin: 0px;
-  }
-  .whyus-details {
-    margin-left: 4.6rem;
-    margin-right: 4rem;
-    font-size: 22px;
-    line-height: 50px;
   }
   .clientele {
     padding-left: 5rem;
