@@ -16,7 +16,12 @@ import PropTypes from 'prop-types';
 import Avatar from "@material-ui/core/Avatar";
 // import SwipeableViews from 'react-swipeable-views';
 // import SwipeableViews from 'react-swipeable-views';
-
+import energy1 from '../images/Services/energy1.svg'
+import energy2 from '../images/Services/energy2.svg'
+import ss1 from '../images/Services/ss1.svg'
+import ss2 from '../images/Services/ss2.svg'
+import is1 from '../images/Services/is1.svg'
+import is2 from '../images/Services/is2.svg'
 
 import IPSlider from "../components/Sliders/IPSSlider";
 import INSlider from "../components/Sliders/INSSlider";
@@ -50,7 +55,8 @@ const theme = createTheme({
 const menuItems = [
   {
     id: 1,
-    image: wwdb1,
+    image: ss1,
+    selectedImage: ss2,
     name: "IP Surveillance Solution",
     details:
       "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
@@ -67,7 +73,8 @@ const menuItems = [
   },
   {
     id: 3,
-    image: wwdb3,
+    image: is1,
+    selectedImage: is2,
     name: "Integration Solutions",
     details:
       "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
@@ -92,7 +99,8 @@ const menuItems = [
 
   {
     id: 6,
-    image: wwdb7,
+    image: ss1,
+    selectedImage: ss2,
     name: "Surveillance and Safety",
     details:
       "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
@@ -101,12 +109,22 @@ const menuItems = [
 
   {
     id: 7,
-    image: wwdb5,
+    image: wwdb5, 
     name: "Storage",
     details:
       "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
     slider: <StorageSlider />,
   },
+
+  {
+    id: 8,
+    image: energy1,
+    selectedImage: energy2,
+    name: "Energy Solutions",
+    details:
+      "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
+      slider: <SurveillanceSlider/>,
+  }
 ];
 
 function TabPanel(props) {
@@ -158,10 +176,9 @@ export default function Services() {
           Gain a deeper insight into our{" "}
           <span style={{ fontWeight: "500", color: "black" }}>Services</span>
         </p>
-        <div className='services-container'>
-          <Box sx={{ width: '81%' }}>
-            
-        <ThemeProvider theme={theme}>
+        <div className='case-container'>
+        <Box sx={{width:'100%', height:'auto', padding:'auto'}}>
+         <div className='services-parent-container'>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -169,10 +186,28 @@ export default function Services() {
               // className='menu'
               scrollButtons="auto"
               aria-label="scrollable auto tabs example"
-              sx={{
-                width: '100%',
-                // backgroundColor: '#fff', // Example background color
-                // Add more styles as needed
+                sx={{
+                // backgroundColor:'pink',
+                  width: '100%',
+                '& .MuiTab-root': {
+                  textTransform: 'none', // Prevent uppercase transformation
+                  color: 'inherit', // Default font color
+                  minWidth: '500px !important',
+                  // marginLeft:'3% !important',
+                  maxWidth: '500px !important',
+                  // marginRight: '3% !important',
+                },
+                '& .MuiTab-root.Mui-selected': {
+                  backgroundColor: '#251741', // Background color when tab is selected
+                  color: 'white', // Font color when tab is selected
+                  // fontWeight: 'bold', // Font weight when tab is selected
+                  minWidth: '500px !important',
+                  marginRight: '3% !important',
+                  // maxWidth: '500px !important',
+                },
+                '& .MuiTabs-indicator': {
+                  display: 'none', // Hide the default indicator
+                },
               }}
               className="custom-tabs"
         >
@@ -181,37 +216,46 @@ export default function Services() {
                 key={item.id}
                 label={item.name}
                 iconPosition='start'
-             icon={<Avatar alt={item.name} src={item.image}
-             />}
-             className='custom-tab'
-             sx={{
-              '&.Mui-selected': {
-                 color: '#251741',
-                fontWeight: 'bold',
-              },
-            }}
+                icon={
+                    <Avatar
+                      alt={item.name}
+                      src={value === index ? item.selectedImage : item.image}
+                      sx={{
+                        
+                        color: 'inherit', // Ensure the default font color
+                        '&.Mui-selected': {
+                          backgroundColor: 'purple', // Background color when tab is selected
+                          color: 'white', // Font color when tab is selected
+                        },
+                        '&:hover': {
+                          backgroundColor: 'purple', // Background color on hover (optional)
+                        },
+                      }}
+                    />
+                }
+             className='custom-services-tab custom-tab '
+             sx={{ minWidth: '50px', maxWidth: '50px' }} // Set the minWidth and maxWidth directly on Tab
               />
             ))}
-            </Tabs>
-            </ThemeProvider>
-
-            {menuItems.map((item, index) => (
-              <TabPanel key={item.id} value={value} index={index} dir={theme.direction} id={item.name.toLowerCase().replace(/\s+/g, '-')}>
-                <div className="details">
-                  <div className='g1'>``
-                    {[...Array(3)].map((_, i) => (
-                      <div key={i}>
-                        <h2>{item.name}</h2>
-                        <p>{item.details}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <div className='g2'>
-                    {item.slider}
-                  </div>
+          </Tabs>
+          {menuItems.map((item, index) => (
+            <TabPanel key={item.id} value={value} index={index} dir={theme.direction}>
+              <div className="services-details">
+                <div className='g1'>
+                  {[...Array(3)].map((_, i) => (
+                    <div className='sub-service-detail' key={i}>
+                      <h2 className='sh'>{item.name}</h2>
+                      <p className='sd'>{item.details}</p>
+                    </div>
+                  ))}
                 </div>
-              </TabPanel>
-            ))}
+                <div className='g2'>
+                  {item.slider}
+                </div>
+              </div>
+            </TabPanel>
+          ))}
+          </div>
           </Box>
         </div>
 
