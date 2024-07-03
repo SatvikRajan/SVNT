@@ -254,8 +254,8 @@
     border-radius: 10px !important;
     min-width: 312px !important;
     max-width: 312px !important;
-    /* margin-left: 3%;
-    margin-right: 4%; */
+    margin-left: 3%;
+    margin-right: 4%;
     /* border: 2px solid black !important; */
 }
 
@@ -343,13 +343,6 @@
 
 
 
-.cs-learn-more{
-    width: 278px !important;
-    margin-left: 30%;
-    margin-top: 10%;
-
-}
-
 .custom-scroll-button {
     width: 80px;
     height: 80px;
@@ -379,5 +372,46 @@
   
   .custom-scroll-button-right {
     right: -100px; /* Adjust positioning as needed */
+  }
+
+
+  .cs-container {
+    transition: height 0.5s ease;
+    overflow: hidden;
+    position: relative;
+    height: fit-content;
+  }
+  
+  .cs-container.expanded .cs-wrapper {
+    display: none;
+  }
+  
+  .expanded-content {
+    display: none;
+    transition: height 0.5s ease;
+  }
+  
+  .cs-container.expanded .expanded-content {
+    display: block;
+    height: fit-content;
+  }
+  
+  .cs-learn-more {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .cs-container .cs-learn-more {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 20px;
+  }
+  
+  .cs-container.expanded .cs-learn-more {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
   }
   
