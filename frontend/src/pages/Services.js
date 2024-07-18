@@ -58,17 +58,22 @@ const menuItems = [
     image: ss1,
     selectedImage: ss2,
     name: "IP Surveillance Solution",
-    details:
-      "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
+    details: [
+      { header: "Remote Video Access", content: "Easy access to video feeds on any device from any location" },
+      { header: "Seamless Integration", content: "Customizable features and integrates effortlessly into existing IT networks." },
+      { header: "Enhanced Security", content: "Enhances security in healthcare, schools, businesses, government, etc." },
+    ],
     slider: <IPSlider />,
   },
-
   {
     id: 2,
     image: wwdb2,
     name: "IP Networking Solution",
-    details:
-      "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
+    details: [
+      { header: "Network Size Flexibility", content: "The size of an IP network solution can vary, from a few devices to thousands in a large network." },
+      { header: "Communication Support", content: "Supports communication systems like email, web browsing, and video streaming." },
+      { header: "Effortless Information Exchange", content: "Allows easy exchange of information and resources." },
+    ],
     slider: <INSlider />,
   },
   {
@@ -76,57 +81,72 @@ const menuItems = [
     image: is1,
     selectedImage: is2,
     name: "Integration Solutions",
-    details:
-      "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
+    details: [
+      { header: "Speedy Communication", content: "Boost productivity and quality by speeding up information flow and cutting costs." },
+      { header: "Integration", content: "Easily connect new and existing hardware with our integration solutions." },
+      { header: "Collaboration", content: "Simplify sharing info and collaboration with our machine integration." },
+    ],
     slider: <IntegrationSlider />,
   },
   {
     id: 4,
     image: wwdb4,
-    name: "Audio-Visual",
-    details:
-      "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
+    name: "Audio-Visual Solutions",
+    details: [
+      { header: "Multimedia Integration", content: "Integrate audio, video, display, lighting, and system controls." },
+      { header: "Venue Application", content: "Perfect for conference rooms, auditoriums, cafeterias, classrooms, and more." },
+      { header: "Digital Displays", content: "Use digital displays to create dynamic content ideal for entertainment, merchandise, and advertising." },
+    ],
     slider: <AudioVisualSlider />,
   },
   {
     id: 5,
     image: wwdb6,
-    name: "Security & Management",
-    details:
-      "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
+    name: "Security Automation",
+    details: [
+      // Replace with details specific to Security & Management
+      { header: "Firewall", content: "Decide what data to allow or block using a firewall" },
+      { header: "Vulnerability Detection", content: "Discover and fix security weaknesses to keep your business safe." },
+      { header: "Website Optimization", content: ` Improve your website's performance with web caching and bandwidth management.` },
+    ],
     slider: <SecuritySlider />,
   },
-
   {
     id: 6,
     image: ss1,
     selectedImage: ss2,
-    name: "Surveillance and Safety",
-    details:
-      "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
+    name: "Surveillance and Safety Solutions",
+    details: [
+      { header: "Fault Detection", content: "Detects malfunctions, equipment failures, or evidence for accident investigations." },
+      { header: "Fire Detection", content: "Detects and alerts occupants to potential threats like smoke or fire promptly." },
+      { header: "Activity Documentation", content: "Generates thorough reports of site activities upon implementation." },
+    ],
     slider: <SurveillanceSlider />,
   },
-
   {
     id: 7,
-    image: wwdb5, 
+    image: wwdb5,
     name: "Storage",
-    details:
-      "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
+    details: [
+      { header: "Resource Accessibility", content: "Resources are accessible, easy to use, and cost-effective." },
+      { header: "Disaster Recovery", content: "Ensures a swift recovery from potential disasters." },
+      { header: "Collaboration", content: "NAS and SAN aid in collaboration and quick response to customer needs." },
+    ],
     slider: <StorageSlider />,
   },
-
   {
     id: 8,
     image: energy1,
     selectedImage: energy2,
     name: "Energy Solutions",
-    details:
-      "Enhance operational productivity and elevate quality standards by accelerating information flow and reducing costs within your organization. Our system integration solutions seamlessly integrate with both new and existing hardware, ensuring a cohesive environment. We simplify sharing information, communication, and collaboration among different machines with our machine ",
-      slider: <SurveillanceSlider/>,
-  }
+    details: [
+      { header: "Power Backup", content: "Our UPS solution provides automatic backup power during outages." },
+      { header: "Lightning Solution", content: "Advanced systems minimize damage from lightning strikes." },
+      { header: "Solar Solution", content: "Utilize solar solutions to reduce carbon footprint and CO2 emissions." },
+    ],
+    slider: <SurveillanceSlider />, // Replace with the correct slider component
+  },
 ];
-
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -177,85 +197,87 @@ export default function Services() {
           <span style={{ fontWeight: "500", color: "black" }}>Services</span>
         </p>
         <div className='case-container'>
-        <Box sx={{width:'100%', height:'auto', padding:'auto'}}>
-         <div className='services-parent-container'>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-              variant="scrollable"
-              // className='menu'
-              scrollButtons="auto"
-              aria-label="scrollable auto tabs example"
+          <Box sx={{ width: '100%', height: 'auto', padding: 'auto' }}>
+            <div className='services-parent-container'>
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                variant="scrollable"
+                // className='menu'
+                scrollButtons="auto"
+                aria-label="scrollable auto tabs example"
                 sx={{
-                // backgroundColor:'pink',
+                  // backgroundColor:'pink',
                   width: '100%',
-                '& .MuiTab-root': {
-                  textTransform: 'none', // Prevent uppercase transformation
-                  color: 'inherit', // Default font color
-                  minWidth: '500px !important',
-                  // marginLeft:'3% !important',
-                  maxWidth: '500px !important',
-                  // marginRight: '3% !important',
-                },
-                '& .MuiTab-root.Mui-selected': {
-                  backgroundColor: '#251741', // Background color when tab is selected
-                  color: 'white', // Font color when tab is selected
-                  // fontWeight: 'bold', // Font weight when tab is selected
-                  minWidth: '500px !important',
-                  marginRight: '3% !important',
-                  // maxWidth: '500px !important',
-                },
-                '& .MuiTabs-indicator': {
-                  display: 'none', // Hide the default indicator
-                },
-              }}
-              className="custom-tabs"
-        >
-         {menuItems.map((item, index) => (
-              <Tab
-                key={item.id}
-                label={item.name}
-                iconPosition='start'
-                icon={
-                    <Avatar
-                      alt={item.name}
-                      src={value === index ? item.selectedImage : item.image}
-                      sx={{
-                        
-                        color: 'inherit', // Ensure the default font color
-                        '&.Mui-selected': {
-                          backgroundColor: 'purple', // Background color when tab is selected
-                          color: 'white', // Font color when tab is selected
-                        },
-                        '&:hover': {
-                          backgroundColor: 'purple', // Background color on hover (optional)
-                        },
-                      }}
-                    />
-                }
-             className='custom-services-tab custom-tab '
-             sx={{ minWidth: '50px', maxWidth: '50px' }} // Set the minWidth and maxWidth directly on Tab
-              />
-            ))}
-          </Tabs>
-          {menuItems.map((item, index) => (
-            <TabPanel key={item.id} value={value} index={index} dir={theme.direction}>
-              <div className="services-details">
-                <div className='g1'>
-                  {[...Array(3)].map((_, i) => (
-                    <div className='sub-service-detail' key={i}>
-                      <h2 className='sh'>{item.name}</h2>
-                      <p className='sd'>{item.details}</p>
+                  '& .MuiTab-root': {
+                    textTransform: 'none', // Prevent uppercase transformation
+                    color: 'inherit', // Default font color
+                    minWidth: '500px !important',
+                    // marginLeft:'3% !important',
+                    maxWidth: '500px !important',
+                    // marginRight: '3% !important',
+                  },
+                  '& .MuiTab-root.Mui-selected': {
+                    backgroundColor: '#251741', // Background color when tab is selected
+                    color: 'white', // Font color when tab is selected
+                    // fontWeight: 'bold', // Font weight when tab is selected
+                    minWidth: '500px !important',
+                    marginRight: '3% !important',
+                    // maxWidth: '500px !important',
+                  },
+                  '& .MuiTabs-indicator': {
+                    display: 'none', // Hide the default indicator
+                  },
+                }}
+                className="custom-tabs"
+              >
+                {menuItems.map((item, index) => (
+                  <Tab
+                    key={item.id}
+                    label={item.name}
+                    iconPosition='start'
+                    icon={
+                      <Avatar
+                        alt={item.name}
+                        src={value === index ? item.selectedImage : item.image}
+                        sx={{
+
+                          color: 'inherit', // Ensure the default font color
+                          '&.Mui-selected': {
+                            backgroundColor: 'purple', // Background color when tab is selected
+                            color: 'white', // Font color when tab is selected
+                          },
+                          '&:hover': {
+                            backgroundColor: 'purple', // Background color on hover (optional)
+                          },
+                        }}
+                      />
+                    }
+                    className='custom-services-tab custom-tab '
+                    sx={{ minWidth: '50px', maxWidth: '50px' }} // Set the minWidth and maxWidth directly on Tab
+                  />
+                ))}
+              </Tabs>
+              {menuItems.map((item, index) => (
+                <TabPanel key={item.id} value={value} index={index} dir={theme.direction}>
+                  <div className="services-details">
+                    <div className='g1'>
+                      {item.details.map((detail, index) => (
+                        <div key={index} className="service-card">
+                          <h2 className="card-header">{detail.header}</h2>
+                          <br></br>
+                          <br></br>
+                          <p className="card-conten" style={{fontSize:"18px"}}>{detail.content}</p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-                <div className='g2'>
-                  {item.slider}
-                </div>
-              </div>
-            </TabPanel>
-          ))}
-          </div>
+                    <div className='g2'>
+                      {item.slider}
+                    </div>
+                  </div>
+                </TabPanel>
+              ))}
+            </div>
           </Box>
         </div>
 

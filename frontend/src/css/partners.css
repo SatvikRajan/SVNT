@@ -150,8 +150,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40vh !important;
-    margin-top: -5%;
+    /* height: 40vh !important; */
+    margin-top: 10%;
     margin-bottom: 5%;
 }
 
@@ -160,6 +160,10 @@
     /* background-color: #005197; */
     padding-top: 0% !important;
     width: 90%;
+}
+
+.desc2 ul li{
+    font-size: 22px;
 }
 
 .head2{

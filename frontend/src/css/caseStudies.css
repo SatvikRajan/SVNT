@@ -292,7 +292,7 @@
     margin-top: 4%;
     color: white;
     position: relative;
-    min-width: 1722px;
+    /* min-width: 1722px; */
     /* min-height: 700px; */
     transition: height 0.5s ease;
     overflow: hidden;
@@ -389,23 +389,27 @@
   .expanded-content {
     display: none;
     transition: height 0.5s ease;
+    font-family: 'Poppins';
+    padding-left: 2%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    font-size: 22px;
+    text-align: left;
   }
   
   .cs-container.expanded .expanded-content {
     display: block;
     height: fit-content;
   }
-  
-  .cs-learn-more {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-  }
+ 
   
   .cs-container .cs-learn-more {
+    display: flex;
+    justify-content: end;
     position: relative;
     bottom: auto;
-    right: auto;
+    right: 5%;
     margin-top: 20px;
   }
   
@@ -415,3 +419,70 @@
     right: 20px;
   }
   
+
+  .abc{
+    animation: slidedown 2s ease;
+    overflow: hidden; /* Important for animation */
+    background: black;
+
+  }
+@keyframes slidedown{
+    from{
+        height: 0;
+    }
+    to{
+        height: 200vh;
+    }
+}
+
+@media (max-width: 768px){
+    .only-desktop{
+        display: none;
+    }
+}
+
+
+.read_btn{
+    background: none;
+    border: none;
+    color: white;
+    /* font-style: italic; */
+    font-family: 'Poppins';
+    font-size: 30px;
+    text-decoration: underline;
+    transition: 0.15s ease;
+    text-underline-offset: 6px;
+    position: relative;
+    top: 2rem;
+}
+
+.read_btn:hover{
+    color: goldenrod;
+}
+
+.expand-img{
+ width: 25%;
+ height: 50%;
+ margin:2rem;
+}
+
+.expand-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.bg-black{
+    background: black;
+}
+@media (max-width: 768px){
+    .expand-img,.img-bg{
+        display: none;
+    }
+
+    .def{
+        font-size: 14px;
+        top: 95%;
+    }
+}

@@ -8,6 +8,9 @@
   margin-bottom: 3rem;
 }
 
+.g2{
+  display: none
+}
 @media (max-width: 768px) {
   .service-img {
     width: 1rem;
@@ -20,6 +23,10 @@
   }
   .service-title {
     font-size: 20px !important;
+  }
+
+  .g2{
+    display: block;
   }
 }
 

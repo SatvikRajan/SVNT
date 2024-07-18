@@ -11,8 +11,7 @@ export default function WhyChooseUs() {
       <div className="d-flex why-choose-main">
         <div className='whyus-details'>
           <img src={wcu1} height={200} alt="" />
-          <p>Technical Expertise, 
-          Tailor Made Solutions</p>
+          <p>Tailored Technical Expertise</p>
         </div>
         <div className='whyus-details-1'>
           <img src={wcu2} height={200} alt="" />
@@ -21,18 +20,15 @@ export default function WhyChooseUs() {
         </div>
         <div className='whyus-details'>
           <img src={wcu3} height={200} alt="" />
-          <p>100% Cost- Effective
-          & Value for Money</p>
+          <p>Cost Effective solutions</p>
         </div>
         <div className='whyus-details-1'>
           <img src={wcu4} height={200} alt="" />
-          <p>Qualified Professional &
-            OEM Certified Engineers</p>
+          <p>OEM Certified Engineers</p>
         </div>
         <div className='whyus-details'>
           <img src={wcu5} height={200} alt="" />
-          <p>Projects On 
-          Time Completion</p>
+          <p>On-time Project Delivery</p>
         </div>
       </div>
     </div>
