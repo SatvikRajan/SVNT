@@ -25,30 +25,28 @@ function App() {
   }, []);
 
   return (
-      <BrowserRouter>
-        {isLoading ? (
-          <div style={{ position: 'relative', height: '100vh', width: '100vw', backgroundColor: '#F1FAFF' }}>
-            <Loader />
-          </div>
-        ) : (
-          <ScrollToTop>
-            <Routes>
-              <Route path="/" element={<MainLayout><Home /></MainLayout>} />
-              <Route path="contact" element={<MainLayout><Contact /></MainLayout>} />
-              <Route path="partners" element={<MainLayout><Partners /></MainLayout>} />
-              <Route path="casestudies" element={<MainLayout><CaseStudies /></MainLayout>} />
-              <Route path="careers" element={<MainLayout><CareersPage /></MainLayout>} />
-              <Route path="about" element={<MainLayout><About /></MainLayout>} />
-              <Route path="services" element={<MainLayout><Services /></MainLayout>} />
-              <Route path="login" element={<AdminLogin />} />
-              <Route path="register" element={<AdminRegister />} />
-              {/* <Route path="/" element={<PrivateRoute />}> */}
-                <Route path="admin-main" element={<AdminPage />} />
-              {/* </Route> */}
-            </Routes>
-          </ScrollToTop>
-        )}
-      </BrowserRouter>
+    <BrowserRouter>
+      {isLoading ? (
+        <div style={{ position: 'relative', height: '100vh', width: '100vw', backgroundColor: '#F1FAFF' }}>
+          <Loader />
+        </div>
+      ) : (
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<MainLayout><Home /></MainLayout>} />
+            <Route path="contact" element={<MainLayout><Contact /></MainLayout>} />
+            <Route path="partners" element={<MainLayout><Partners /></MainLayout>} />
+            <Route path="casestudies" element={<MainLayout><CaseStudies /></MainLayout>} />
+            <Route path="careers" element={<MainLayout><CareersPage /></MainLayout>} />
+            <Route path="about" element={<MainLayout><About /></MainLayout>} />
+            <Route path="services" element={<MainLayout><Services /></MainLayout>} />
+            <Route path="login" element={<AdminLogin />} />
+            <Route path="register" element={<AdminRegister />} />
+            <Route path="admin-main" element={<AdminPage />} />
+          </Routes>
+        </ScrollToTop>
+      )}
+    </BrowserRouter>
   );
 }
 
