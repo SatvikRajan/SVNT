@@ -304,6 +304,8 @@
 }
 
 .case-study{
+    background-color: #0E1513;
+    border-radius: 20px;
     padding-left: 2%;
     padding-right: 1%;
     padding-top: 1%;
@@ -325,10 +327,12 @@
 .image-bg{
     pointer-events: none;
     position: absolute;
+    /* background-color: #0E1513; */
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
+    border-radius: 20px;
 }
 
 .cs-wrapper{

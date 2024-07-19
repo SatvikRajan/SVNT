@@ -39,6 +39,7 @@ import agr1 from "../images/CaseStudies/agr1.png";
 import agr2 from "../images/CaseStudies/agr2.png";
 import agr3 from "../images/CaseStudies/agr3.jpg";
 import agr4 from "../images/CaseStudies/agr4.jpg";
+import cfcl1 from '../images/CaseStudies/cfcl1.png'
 
 import sch from "../images/CaseStudies/sch.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -74,9 +75,6 @@ ITC Royal Bengal needed a way to monitor all areas of the hotel for security and
       `The first goal is to make sure hotel guests have reliable internet. SVNT utilised fibre and cabling structures in a star topology, where all devices connect to a central switch. This setup ensures that information moves quickly and effectively to its destination. All devices and systems within the hotel can now communicate with each other easily and reliably, while also keeping data safe. Managing and fixing problems is made easier. This setup also lets the hotel add more to the network as they get bigger and handle more guests.`
     ],
 
-
-
-
     [`Internally hotel staff stay connected through a specialised network that operates on a ring topology, where devices are connected in a circular path. This setup not only keeps information flowing even if a part of the network goes down but also speeds up how quickly messages get through.`]
       , [`A key role in boosting security  is the access control network, which includes door controllers, master controllers, and CCTV cameras to manage who can enter different areas. For example, the door controller handles locking and unlocking doors based on authorised personnel, enhancing security in rooms and buildings. Behind  the scenes, a central control unit acts as the main hub, overseeing and coordinating multiple devices to keep things running smoothly throughout the hotel. Network access control (NAC) solutions keep an eye on who gets access to the hotel's network and makes sure that both  guests and staff are safe and secure.
 `]], `Keeping Things Running Smoothly`,
@@ -84,7 +82,7 @@ ITC Royal Bengal needed a way to monitor all areas of the hotel for security and
       [`It is crucial for information to flow smoothly throughout different parts of the hotel. During power outages, backup systems kick in to keep everything working, so there is no interruption or loss of information. Inside the hotel, all the calls and messages between rooms are managed by a centralised system making it easy for guests to communicate. `],
       [`Meanwhile, Genetec's Security Desk brings together different security systems like cameras, doors, alarms, and access controls into one easy-to-use platform, simplifying operations across different areas. You can watch live or recorded camera footage, control cameras that can move and zoom, unlock doors, adjust schedules, and handle alarms—all from one place.`],
       [`The collaboration between ITC Royal Bengal and SVNT reflects a commitment to excellence and enhancing guest experiences. This is a significant move from ITC towards modernising security and improving guest experiences in luxury hotels. By setting new standards in hospitality, ITC Royal Bengal solidifies its position as a leader in luxury accommodations and guest services.
-`]], itc3, itc4, itc2, itc,sch],
+`]], itc3, itc4, itc2, itc, sch],
   ['OM BOOKS', [
     'Objective: To cover all Indoor & Semi outdoor areas of Good Shepherd Church & Pratigya Hostel at Hyderabad, under Surveillance System over cloud including steaming & recording.',
     'Installation Summary: 119 Cameras',
@@ -103,18 +101,8 @@ ITC Royal Bengal needed a way to monitor all areas of the hotel for security and
 'We connected all the cameras from different areas into the Stratocast cloud system. This setup allows for both live streaming and recording, which you can access through a subscription service, ensuring everything is covered and easy to reach. We made sure to use only cameras that work with Genetec, so careful selection and compatibility checks were essential. By bringing these cameras together on one cloud platform, our surveillance system now covers all the critical spots.
 
 `,],
-
-
-
-
-
-
-
-
-
-
     [`By integrating advanced IP cameras and leveraging the power of cloud technology, we created a seamless and accessible security network that keeps a vigilant eye on the entire premises, ensuring safety and peace of mind for everyone on site.`
-    ]], oem3, oem2, oem3, oem1,sch],
+    ]], oem3, oem2, oem3, oem1, sch],
   ['JSW Steel Limited', [
     'Objective: To provide real-time monitoring of pellet size at each disc level, enabling timely adjustments to enhance production efficiency and quality control.',
     'Scope of Work: Customising parameters for real-time pellet size monitoring, & enabling data-driven operational adjustments. The system ensures accurate reporting, minimises rejects, & enhances production efficiency with robust software and precise measuring tools.',
@@ -134,7 +122,7 @@ Pelletization turns raw materials like iron ore, biomass, or coal fines into sma
 
     [`The "Eye-on-Pellet" system has been put to the test in real pelletization plants to see how well it performs. It is designed to be super flexible and adaptable, fitting into all sorts of different situations and uses. What's cool about 'Eye-on-Pellet' is its versatility. Operators can choose to use one camera or multiple cameras depending on what they need to monitor. Plus, there are portable handheld systems if they need to keep an eye on things on the go. For a deeper dive into the data, the system can switch to offline mode in a lab, making it easy to dig deep into how those pellets are forming.
 `], [`Eye-on-Pellet has proven that it is the real-deal for boosting efficiency and productivity in pelletization. With its high-tech monitoring and easy adjustments, operators can keep things running smoothly and churn out top-quality pellets. Flexible and effective, "Eye-on-Pellet" is setting a new standard for how pelletization plants operate.`]]
-    , jsw3, jsw2, jsw4, jsw1,sch],
+    , jsw3, jsw2, jsw4, jsw1, sch],
   ['Kempegowda International Airport Limited ', [
     'Objective: To enhance video surveillance at terminals, runways & parking areas, strengthen access control measures at Kempegowda International Airport.',
     'Installation Summary: T1 - 308 cameras, 47 ANPR, and 112 horn speakers; T2 - 2820 cameras',
@@ -153,24 +141,24 @@ We enhanced video surveillance to keep a watchful eye on the two terminals, runw
 At Kempegowda International Airport, we've enhanced security by linking cameras, that store video recordings, with Genetec's platform. This connection lets us efficiently gather data and manage surveillance footage. Integrating these cameras into Genetec's system gives us better visibility and control over our security setup. This setup demonstrates how Genetec's platform can adapt and work seamlessly with other systems, making our security operations more efficient and effective.
 `],
     [`By adopting advanced technology and innovative solutions, Kempegowda International Airport has enhanced both security measures and operational efficiency. This commitment highlights their dedication to ensuring airports remain secure and well-prepared for future challenges.
-`]], kia3, kia2, kia3, kia1,sch]
+`]], kia3, kia2, kia3, kia1, sch]
 
-  , ['CFCL ', [
+  , ['Chambal Fertilizers Limited ', [
     'Objective: To strengthen the security setup of CFCL Gadepan in plant and township area ',
     'Installation Summary: 79nos Licence for Cameras, 7nos Workstation licence for Monitoring PC, 78 cameras',
     'Scope of Work: Erection & Commissioning of IP Based CCTV System & Panic Alarm System',
     `Challenges:Chambal Fertilisers and Chemicals Limited (CFCL), founded in 1985 by Zuari Industries Limited, has become a major player in India's private sector fertiliser industry. Situated in the Gadepan area of Rajasthan's Kota district, CFCL operates two cutting-edge nitrogenous fertiliser plants. Together, these plants produce around 2 million metric tons of urea each year. Over the years, CFCL has not only bolstered its presence in the fertiliser market but has also emerged as a leader in North India's pesticide business.`,
 
-  ], agr1, kia2, ` `,
+  ],cfcl1 , cfcl1, ` `,
     [],
     `Cameras That Think`,
     [[`
 The CCTV system uses advanced IP cameras with Intelligent Video Analytics (IVA) to cover the entire area. These smart cameras automatically detect and analyse events in real-time, identifying any suspicious activities, movements, or objects. We installed night vision cameras in key spots, enabling visibility up to 150-170 metres even in low light. To top it off, fixed cameras at all gates and drains ensure our surveillance system is thorough and reliable.`]
-], `Heads Up!`, [[`
+    ], `Heads Up!`, [[`
 The township, divided into blocks A, B, C, and D with a total of 540 houses, has been equipped with a panic alarm system. These systems feature panic buttons in every bedroom and bright rooftop LEDs for clear visibility. This battery-backed system immediately alerts the security control room during emergencies. When a panic alarm is activated, it sends a notification to the Control Room, where an alert message pops up. A GSM SIM installed in the controller then sends SMS alerts to designated mobile numbers in the security department. A GSM(Global System for Mobile Communications) SIM is a tiny, removable card that keeps your phone connected to the network for calls and internet.`],
     [`Our control room is the heart of our security system. Here, five powerful PCs are linked to 55-inch LED screens, keeping a close eye on cameras and alarms with uninterrupted power backup. In our server hub, all network connections and vital equipment are centralised, ensuring we capture 30 days of high-resolution video footage. This helps us analyse incidents in detail and gather evidence if needed.The security and plant staff are well-trained in using the CCTV system, with three levels of access: Viewers, Operators and Administrators.Our network uses fibre optics spread across a 20km area, connected in a loop to ensure backup if needed.
-`],[`Partnering with SVNT has fortified CFCL’s commitment to security, ensuring every resident in their township feels protected. With advanced surveillance and a responsive panic alarm system, CFCL guarantees the safety of both their plant and the community it serves.As CFCL continues to grow and explore new opportunities, they do so with the confidence that their security measures are top-notch and that their operations are safeguarded against any threat.`]],
- , agr2, agr4,agr1,sch]
+`], [`Partnering with SVNT has fortified CFCL’s commitment to security, ensuring every resident in their township feels protected. With advanced surveillance and a responsive panic alarm system, CFCL guarantees the safety of both their plant and the community it serves.As CFCL continues to grow and explore new opportunities, they do so with the confidence that their security measures are top-notch and that their operations are safeguarded against any threat.`]],
+    , agr2, agr4, agr1, sch]
 ]
 
 const menuItems = [
@@ -343,30 +331,30 @@ export default function CaseStudies() {
                               })}
                             </ul>
                             <div className='cs-image'>
-                              <img src={caseStudy[3]} alt=''  className='only-desktop'/>
+                              <img src={caseStudy[3]} alt='' className='only-desktop' />
                               {!expanded[csIndex] && (
-                              <button
-                                onClick={() => handleReadMore(csIndex)}
-                                className="read_btn def"
-                                style={{
-                                  // position: "absolute",
-                                  // right: "9%",
-                                  // bottom: "100px",
-                                  /* Added styles for whitespace and underline extension */
-                                  textDecoration: "underline", /* Enable underline */
-                                  textUnderlinePosition: "under", /* Ensure underline is below text */
-                                  paddingRight: "1em", /* Add padding to create whitespace */
-                                }}
-                              >
-                                Read More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {/* Use `&nbsp;` for non-breaking space */}
-                              </button>
-                            )}
+                                <button
+                                  onClick={() => handleReadMore(csIndex)}
+                                  className="read_btn def"
+                                  style={{
+                                    // position: "absolute",
+                                    // right: "9%",
+                                    // bottom: "100px",
+                                    /* Added styles for whitespace and underline extension */
+                                    textDecoration: "underline", /* Enable underline */
+                                    textUnderlinePosition: "under", /* Ensure underline is below text */
+                                    paddingRight: "1em", /* Add padding to create whitespace */
+                                  }}
+                                >
+                                  Read More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {/* Use `&nbsp;` for non-breaking space */}
+                                </button>
+                              )}
                             </div>
                           </div>
                           {expanded[csIndex] && (
                             <div className='expanded-content'>
-                              <div style={{display:"flex",flexDirection:"column",alignItems:"center"}}>
-                                <img src={sch} alt="schematic image" className='only-desktop' style={{width:"80%"}}></img>
+                              <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                                <img src={sch} alt="schematic image" className='only-desktop' style={{ width: "80%" }}></img>
                                 <div className='expand-inner'>
                                   <div>
 
@@ -411,22 +399,20 @@ export default function CaseStudies() {
 
                             </div>
                           )}
-                          <div className="cs-learn-more" style={{bottom:"5%"}}>
-
-
+                          <div className="cs-learn-more" style={{ bottom: "5%" }}>
                             {expanded[csIndex] && <button onClick={() => handleReadMore(csIndex)} className="read_btn"
                               style={{
                                 position: "absolute",
                                 right: "20%",
                                 bottom: "10px",
-                                color:"white",
+                                color: "white",
                                 /* Added styles for whitespace and underline extension */
                                 textDecoration: "underline", /* Enable underline */
                                 textUnderlinePosition: "under", /* Ensure underline is below text */
                                 paddingRight: "1em", /* Add padding to create whitespace */
                               }}>Collapse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>}
 
-                            
+
                           </div>
                         </div>
                       </div>

@@ -30,6 +30,7 @@ import AudioVisualSlider from "../components/Sliders/AudioVisualSlider";
 import SecuritySlider from "../components/Sliders/SecuritySlider";
 import SurveillanceSlider from "../components/Sliders/SurveillanceSlider";
 import StorageSlider from "../components/Sliders/StorageSlider";
+import EnergySlider from "../components/Sliders/EnergySlider";
 
 
 import React from "react";
@@ -144,7 +145,7 @@ const menuItems = [
       { header: "Lightning Solution", content: "Advanced systems minimize damage from lightning strikes." },
       { header: "Solar Solution", content: "Utilize solar solutions to reduce carbon footprint and CO2 emissions." },
     ],
-    slider: <SurveillanceSlider />, // Replace with the correct slider component
+    slider: <EnergySlider />, 
   },
 ];
 function TabPanel(props) {
@@ -265,9 +266,7 @@ export default function Services() {
                       {item.details.map((detail, index) => (
                         <div key={index} className="service-card">
                           <h2 className="card-header">{detail.header}</h2>
-                          <br></br>
-                          <br></br>
-                          <p className="card-conten" style={{fontSize:"18px"}}>{detail.content}</p>
+                          <p  style={{fontSize:"22px", paddingTop: '10px'}}>{detail.content}</p>
                         </div>
                       ))}
                     </div>
