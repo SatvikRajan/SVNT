@@ -32,9 +32,6 @@ function SimpleSlider() {
           <img src={es1} alt="" />
         </div>
         <div>
-        <img src={es2} alt="" />
-        </div>
-        <div>
         <img src={es3} alt="" />
         </div>
       </Slider>

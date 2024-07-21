@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import av1 from '../../images/Services/Sliders/av1.png'
+// import av1 from '../../images/Services/Sliders/av1.png'
 import av2 from '../../images/Services/Sliders/av2.png'
 
 function SimpleSlider() {
@@ -28,7 +28,7 @@ function SimpleSlider() {
     <div className="slider-images">
       <Slider {...settings}>
         <div>
-          <img src={av1} alt="" />
+          <img src={av2} alt="" />
         </div>
         <div>
         <img src={av2} alt="" />

@@ -1,7 +1,9 @@
 import React from 'react';
 import '../css/card.css';
-import image1 from '../images/Home/carousel-image-1.jpg';
+import image1 from '../images/Home/carousel-image-1.png';
 import image1m from '../images/Home/carousel-image1m.jpg';
+import image2 from '../images/Home/carousel-image-2.png';
+import image3 from '../images/Home/carousel-image-3.png';
 
 function Carosuel1() {
   return (
@@ -25,10 +27,10 @@ function Carosuel1() {
           </picture>
           <div class="carousel-caption cc1 d-none d-md-block">
             {/* <h1>First slide label</h1> */}
-            <h1 style={{ width: '60%', lineHeight: '4rem' }}>Relax, We've Got Your Back
+            <h1 style={{ width: '60%', fontSize: '40px', lineHeight: '4rem', color: 'black' }}>Relax, We've Got Your Back
               Your Security is Our Priority!
             </h1>
-            <p>Send us a message
+            <p style={{ fontSize: '20px', marginTop: '2rem' }}><a className='readmore text-white' style={{ width: '30%', filter: 'invert(1)' }} href='/contact'>Send us a message</a>
             </p>
             {/* <a href="/about"><p className='ccr text-white readmore'>Read More</p></a> */}
           </div>
@@ -36,19 +38,20 @@ function Carosuel1() {
         <div class="carousel-item ci" >
           {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
-            <source media="(max-width: 425px)" srcSet={image1m} />
-            <source media="(min-width: 426px)" srcSet={image1} />
+            <source media="(max-width: 425px)" srcSet={image2} />
+            <source media="(min-width: 426px)" srcSet={image2} />
             <img
-              src={image1}
+              src={image2}
               className="d-block w-100"
               alt="..."
             />
           </picture>
           <div class="carousel-caption cc1 d-none d-md-block">
-            <h1 style={{ width: '60%', lineHeight: '4rem' }}>Relax, We've Got Your Back
-              Your Security is Our Priority!
+            <h1 style={{ width: '60%', fontSize: '40px', color: 'black', lineHeight: '4rem' }}>Join us in celebrating our
+              awards and recognition over
+              the years!
             </h1>
-            <p>Send us a message
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><a className='readmore text-white' style={{ width: '30%', filter: 'invert(1)' }} href='/contact'>Send us a message</a>
             </p>
           </div>
         </div>
@@ -56,19 +59,16 @@ function Carosuel1() {
           {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
             <source media="(max-width: 425px)" srcSet={image1m} />
-            <source media="(min-width: 426px)" srcSet={image1} />
+            <source media="(min-width: 426px)" srcSet={image3} />
             <img
-              src={image1}
+              src={image3}
               className="d-block w-100"
               alt="..."
             />
           </picture>
           <div class="carousel-caption cc1 d-none d-md-block">
-            <h1 style={{ width: '60%', lineHeight: '4rem' }}>Relax, We've Got Your Back
-              Your Security is Our Priority!
+            <h1 style={{ width: '60%', lineHeight: '4rem', color: 'black',marginBottom: '10rem' }}>Who We Are?
             </h1>
-            <p>Send us a message
-            </p>
           </div>
         </div>
         <div class="carousel-item ci" >

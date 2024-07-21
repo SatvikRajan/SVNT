@@ -11,7 +11,7 @@ p{
 
   .services-main{
     width: 100vw;
-    height: 60rem;
+    margin-bottom: 5%;
     
   }
 
@@ -49,16 +49,22 @@ p{
     /* background-color: aqua; */
   }
   
-  .details {
-    width:80%;
-    /* margin-left: 14.8%; */
+  .services-details {
+    width:98.1%;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: 60% 40%;
     gap: 0%;
     margin-top: -1.4%;
     border: 10px solid #251741;
     background-color: #f1faff !important;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: fit-content;
+    text-align: left;
   }
+  
 
   .custom-tabs {
     width: 100%;
@@ -85,13 +91,22 @@ p{
   }
 
   .g1 div{
-    margin: 1% 1% 2% 2%;
+    margin: 1% 1% 2% 1%;
     /* background-color: #ccc; */
     width: 90%;
     padding: 1.5% 4%;
     background-color: #E9E8EC;
     border-radius: 10px;
     color: #251741;
+    min-height: 150px;
+    height: fit-content;
+    /* overflow-y: scroll; */
+  }
+
+  .g2{
+    /* background-color: #251741; */
+    width: 90%;
+    margin-left: 10%;
   }
 
   .slider-images div{
@@ -113,4 +128,42 @@ p{
     margin: 1% 0%;
     padding-top: 13%;
     padding-right: 0%;
+  }
+
+  .services-parent-container{
+    /* background-color: #251741; */
+    margin: auto auto;
+    width: 90%;
+  }
+
+  .services-details-container{
+    background-color: #251741;
+    
+    /* width: fit-content; */
+
+  }
+
+  .custom-services-tab{
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+
+  .g2{
+    display: inline-block;
+  }
+
+  @media (max-width: 768px){
+    .g2{
+      
+      display: none
+    }
+
+
+    .services-details{
+      display: flex;
+    }
+    
+    .g1 div{
+      max-height: 40vh;
+    }
   }

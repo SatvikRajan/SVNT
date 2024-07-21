@@ -27,7 +27,7 @@ import jcb from '../images/AboutUs/jcb.svg'
 import lat from '../images/AboutUs/lat.svg'
 import mahindra from '../images/AboutUs/mahindra.svg'
 
-import aboutbg from '../images/AboutUs/about-bg.jpg';
+import aboutbg from '../images/AboutUs/about-bg-video.mp4';
 import aboutbgm from '../images/AboutUs/about-bgm.jpg';
 
 import Slider from "react-slick";
@@ -113,16 +113,9 @@ export const About = () => {
       <div className="about-us-head">
         {/* <AboutCarousel /> */}
         {/* <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100%', objectFit: 'scale-down' }} alt="" /> */}
-        <picture>
-          <source media="(max-width: 425px)" srcSet={aboutbgm} />
-          <source media="(min-width: 426px)" srcSet={aboutbg} />
-          <img
-            style={{ height: '100%', width: '100%' }}
-            src={aboutbg}
-            className="about-bg"
-            alt="..."
-          />
-        </picture>
+        <video style={{width: '100%', height: '100%'}} autoPlay muted preload="auto">
+          <source src={aboutbg} type="video/mp4" />
+        </video>
         {/* <h2  className='img-info'>
           Integrated Solutions, Empowered Choices
           <br />

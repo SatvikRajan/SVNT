@@ -54,7 +54,7 @@ export default function WhyWeDoBest() {
     <div className="what-we-do-best">
       <WwdbDetails click={clickVal} index={indexVal} setClick={setClickVal} topPos={topPos} leftPos={leftPos} />
       <div className="wwdb-container">
-        <p className="wwdb-head" data-aos='fade-down' data-aos-easing="ease-in-sine">What We Do Best</p>
+        <p className="wwdb-head" data-aos='fade-down' data-aos-easing="ease-in-sine">What We Do</p>
 
         <div className='wwdb-menu-wrapper'>
           <div className="wwdb-menu">
