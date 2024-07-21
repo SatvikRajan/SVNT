@@ -220,5 +220,11 @@
 @media (max-width: 426px) {
   .scrolled-nav{
     height: 4rem;
+    animation: none;
+    width: 100%;
+    border-radius: 0;
+  }
+  .home{
+    margin-top: 5rem;
   }
 }

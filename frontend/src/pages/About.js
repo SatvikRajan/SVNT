@@ -100,7 +100,7 @@ export const About = () => {
     autoplaySpeed: 3000,
     infinite: true,
     slidesToShow: 1,
-    speed: 600, 
+    speed: 600,
     rows: 3,
     slidesPerRow: 4,
     cssEase: "linear",
@@ -157,17 +157,22 @@ export const About = () => {
         <div className="client-container">
           <div className="about-client-type">
             {Object.keys(clients).map((clientType) => (
-              <p key={clientType} onClick={() => setActiveClientType(clientType)}>
+              <p
+                key={clientType}
+                onClick={() => setActiveClientType(clientType)}
+                className={activeClientType === clientType ? 'active' : ''}
+              >
                 {clientType}
               </p>
             ))}
           </div>
 
+
           <div className="slider-container">
             <Slider {...settings}>
               {clients[activeClientType].map((client, index) => (
                 <div key={index}>
-                  <img height={200} src={client.src} alt={client.alt} />
+                  <img height={150} src={client.src} alt={client.alt} />
                 </div>
               ))}
             </Slider>

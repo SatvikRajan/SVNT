@@ -8,13 +8,18 @@ import sss from '../images/Home/home-carousel-eyeon.webp';
 import avs from '../images/Home/home-carousel-cfcl.webp';
 import es from '../images/Home/home-carousel-aragen.webp';
 import AOS from 'aos';
-
+import '../css/styles.scss'
 import 'aos/dist/aos.css';
 
 function CaseStudiesCarousel() {
   const carouselRef = useRef(null);
   const [cardWidth, setCardWidth] = useState(0);
   const [items, setItems] = useState([]);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleReadMore = () => {
+    setIsExpanded(!isExpanded);
+  };
 
   useEffect(() => {
     AOS.init({
@@ -90,25 +95,22 @@ function CaseStudiesCarousel() {
 
   return (
     <div data-aos='fade-up' id="carouselExampleControls" className="carousel slide">
-      <div className="carousel-inner" ref={carouselRef} style={{ scrollSnapType: 'x mandatory', display: 'flex', marginTop: '1rem' }}>
-        {items.map((item, index) => (
-          <div key={index} className="carousel-item5" style={{ minWidth: cardWidth }}>
-            <div className="card-1">
-              <img src={item.image} alt="" />
-              <div className="card-content">
-                <h2>{item.title}</h2>
-                <p style={{ fontSize: '20px', textAlign: 'left' }}>
-                  {item.description}
-                </p>
-                <a href={`/casestudies?id=${item.id}`} className={`readmore ${!item.title ? 'read-1' : ''}`}>
-                  Read More
-                </a>
-
-              </div>
-            </div>
+      <div className="carousel-inner1" style={{ scrollSnapType: 'x mandatory', display: 'flex', marginTop: '1rem' }}>
+        {/* <a href="https://dribbble.com/shots/3127773-Event-Card" target="_blank">dribbble</a> */}
+        <article class="article-card">
+          <div class="thumb"></div>
+          <div class="infos">
+            <h2 class="title">
+             Client Name
+            </h2>
+            <p class="txt">
+              CLient Desc
+            </p>
+            <h3 class="details1">details</h3>
           </div>
-        ))}
+        </article>
       </div>
+
       <button className="carousel-control-prev" onClick={handlePrev} type="button">
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>

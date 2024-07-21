@@ -245,6 +245,9 @@
 }
 
 @media (max-width: 425px) {
+  .what-we-do-best{
+    margin-top: 2rem;
+  }
   .wwdb-head {
     margin-top: 1rem;
     position: static;

@@ -8,8 +8,6 @@ import '../css/career.css'
 import carrerimage from '../images/Career/careerbg.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Logo from '../images/svnt-logo-black-full.png';
-import { Link } from 'react-router-dom'
 import ArrowIcon from "../components/ArrowIcon";
 import axios from 'axios';
 export const CareersPage = () => {
@@ -19,10 +17,8 @@ export const CareersPage = () => {
   const [totalExperience, setTotalExperience] = useState('');
   const [relevantExperience, setRelevantExperience] = useState('');
   const [resume, setResume] = useState(null);
-  const [id, setId] = useState(null);
   const [showForm, setShowForm] = useState(false);
   const [jobs, setJobs] = useState([]);
-  const [jobId, setJobId] = useState(null);
   const [jobDetails, setJobDetails] = useState(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState('');
 

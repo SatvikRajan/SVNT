@@ -205,7 +205,7 @@
   .trustedtext p {
     font-size: 20px;
     line-height: 45px;
-    padding-top: 30rem !important;
+    padding-top: 30rem ;
   }
   .clientele {
     padding-left: 2rem !important;
@@ -315,7 +315,7 @@
     line-height: 45px;
   }
   #slideshow {
-    margin-top: -8rem;
+    margin-top: -10rem;
     width: 25%;
   }
   .mainLogo {
@@ -422,6 +422,7 @@
     font-size: 18px !important;
   }
   .trusted {
+    height: 40rem;
     margin: 0;
     gap: 6rem !important;
     flex-wrap: wrap !important;
@@ -432,8 +433,8 @@
     padding-left: 2rem;
   }
   #slideshow {
-    padding-left: 36rem;
-    margin-top: -65rem;
+    height: 25%;
+    padding-left: 28rem;
   }
   .cs-readmore {
     width: 50% !important;
@@ -442,7 +443,12 @@
   .last-text-1 {
     position: unset;
   }
+  .trustedtext{
+    height: 45%;
+    width: 90%;
+  }
   .trustedtext p {
+    padding-top: 0;
     font-weight: 500;
     font-size: 18px;
     letter-spacing: 1px !important;

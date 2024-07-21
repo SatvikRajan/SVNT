@@ -162,29 +162,31 @@
 .client-container {
   display: flex;
   align-items: flex-start;
+  margin-top: 2rem;
 }
 
 .about-client-type {
   border-right: 2px solid black;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   margin-right: 2rem;
   cursor: pointer;
-  padding-right: 2rem;
+  padding-right: 3rem;
 }
 
 .about-client-type p {
   margin: 0;
   padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
+  color: black;
   border-radius: 5px;
-  background-color: #f5f5f5;
+  
   transition: background-color 0.3s ease;
 }
 
-.about-client-type p:hover {
-  background-color: #e0e0e0;
+.about-client-type p.active{
+  color: white;
+  background-color: #251741;
 }
 
 .slider-container {
