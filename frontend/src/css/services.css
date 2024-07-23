@@ -1,16 +1,12 @@
 .service-bg {
   height: 100%;
   width: 100%;
-  object-fit: scale-down;
-  margin-top: 1rem;
+  /* object-fit: scale-down; */
 }
 .service-head {
   margin-bottom: 3rem;
 }
 
-.g2{
-  display: none
-}
 @media (max-width: 768px) {
   .service-img {
     width: 1rem;
@@ -151,9 +147,6 @@
   left: 10rem;
 }
 
-
-
-
 .service-content {
   opacity: 0; 
 }
@@ -168,6 +161,11 @@
 }
 
 
-
 /* new css */
 
+@media (max-width: 426px) {
+  .g2{
+    width: 100%;
+
+  }
+}

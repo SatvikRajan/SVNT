@@ -250,6 +250,7 @@
   }
   .wwdb-head {
     margin-top: 1rem;
+    padding-left: 1rem;
     position: static;
     font-size: 24px !important;
   }
@@ -258,12 +259,12 @@
     width: 100% !important;
     margin-left: 1rem;
     margin-right: 1rem;
-    height: 600px !important;
+    height: 100% !important;
     border-radius: 30px !important;
   }
   .wwdb-details-overlay {
     width: 95% !important;
-    height: 600px !important;
+    height: 100% !important;
   }
 
   .wwdb-logo-title,.wwdb-close-button,.wwdb-image-container,.wwdb-details-text{
@@ -321,7 +322,7 @@
     gap: 10px;
   }
   .wwdb-logo-title p{
-    font-size: 24px !important;
+    font-size: 20px !important;
   }
   .wwdb-logo-title img{
     height: 40px;
@@ -342,6 +343,8 @@
   .wwdb-details-text p{
     line-height: 40px !important;
     font-size: 18px !important;
-    padding: 2rem !important;
+    padding: 1rem !important;
+    padding-left: 2rem !important;
+    width: 100vw;
   }
 }

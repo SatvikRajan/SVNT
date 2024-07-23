@@ -2,17 +2,16 @@ import genetec from '../images/Partners/genetec-logo.svg'
 import subtitle from '../images/Partners/subtitle.svg'
 import '../css/partners.css'
 import image1 from '../images/Partners/image1.png'
+import image1m from '../images/Partners/image1m.png'
 import image2 from '../images/Partners/image2.png'
-import image3 from '../images/Partners/image3.png'
 import image4 from '../images/Partners/person.png'
 import image5 from '../images/Partners/genetec_logo_white.png'
 import image6 from '../images/Partners/arrow_forward.svg'
 import certification from '../images/Partners/certification-gentec.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faLeftLong } from '@fortawesome/free-solid-svg-icons';
-import React ,{useEffect} from 'react'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useEffect } from 'react'
+
 import Slider from "react-slick";
 const ArrowRightIcon = ({ className }) => {
     return <FontAwesomeIcon icon={faArrowRight} className={className} />;
@@ -41,7 +40,7 @@ const desc = ["Genetec Inc. is an innovative technology company offering a wide 
 
 export default function Partners() {
     const slider = React.useRef(null);
-  
+
     var settings = {
         dots: false,
         infinite: true,
@@ -53,14 +52,7 @@ export default function Partners() {
         slidesToScroll: 1,
         arrows: false
     };
-    useEffect(() => {
-        AOS.init({
-          duration: 1000,
-          offset: 200,
-          delay: 500,
-          once: true
-        });
-      }, []);
+   
     return (
         <>
             <div className="partners-hero">
@@ -75,6 +67,7 @@ export default function Partners() {
                         <p className="desc-content">{desc[0]}</p>
                     </div>
                     <div className="desc-image" data-aos='fade-left'>
+
                         <img src={image1} alt="genetec" />
                     </div>
                 </div>
@@ -94,7 +87,7 @@ export default function Partners() {
                                     <ul>
                                         <li>{desc[1]}</li>
                                         <li>{desc[2]}</li>
-                                        <li>{desc[3]}</li>
+                                        {/* <li>{desc[3]}</li> */}
                                     </ul>
 
                                     <div className="wwdb-learn-more partners-learn-more" style={{ width: '300px', fontSize: '30px !important' }}>
@@ -192,7 +185,14 @@ export default function Partners() {
 
                     </div>
                     <div data-aos='fade-left' className="desc-image box-image">
-                        <img src={image2} alt="genetec" />
+                        <picture>
+                            <source media="(max-width: 425px)" srcSet={image1m} />
+                            <source media="(min-width: 426px)" srcSet={image2} />
+                            <img
+                                src={image2}
+                                alt="genetec"
+                            />
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -202,7 +202,7 @@ export default function Partners() {
                     <p className='certification-p'>Each solution is tailored to understand and address the unique needs of each client. Everything we do is shaped by a core set of values. Our mission as a company revolves around the complete satisfaction of our clients</p>
                 </div>
                 <div data-aos='fade-right' >
-                    <img src={certification}></img>
+                    <img className='cert' src={certification}></img>
                 </div>
             </div>
 

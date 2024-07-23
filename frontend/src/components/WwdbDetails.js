@@ -69,7 +69,7 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
                 <div >
 
                     <motion.div className="wwdb-close-button" onClick={handleClickOutside}>
-                        <motion.img src={close} />
+                        <motion.img height={50} src={close} />
                     </motion.div>
 
                     <motion.div

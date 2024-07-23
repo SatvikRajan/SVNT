@@ -91,14 +91,16 @@
   font-size: 42px;
   font-weight: 500;
 }
-.whyus-details, .whyus-details-1{
+.whyus-details,
+.whyus-details-1 {
   text-align-last: center;
 }
-.whyus-details-1{
+.whyus-details-1 {
   display: flex;
   flex-direction: column-reverse;
 }
-.whyus-details p,.whyus-details-1 p{
+.whyus-details p,
+.whyus-details-1 p {
   text-align: center;
   font-weight: 500;
   font-size: 24px;
@@ -162,8 +164,82 @@
 .trusted p {
   font-size: 28px;
 }
-.why-choose-main{
+.why-choose-main {
   padding: 2rem;
+}
+/* Basic styling */
+.home-cs-card {
+  position: relative;
+  width: 300px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+  overflow: hidden;
+  transition: transform 0.5s;
+  background-color: #E9E8EC;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+
+.home-cs-card:hover {
+  transform: translateY(-10px); /* Move card up on hover */
+}
+
+.home-cs-card-image {
+  position: relative;
+  width: 100%;
+  height: 70%; /* Initial height of the image section */
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+.home-cs-card:hover .home-cs-card-image {
+  height: 50%; /* New height on hover */
+}
+
+.home-cs-card-image img {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.home-cs-card-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%; 
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: height 0.5s, bottom 0.5s;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 24px;
+}
+
+.home-cs-card-content .title {
+  opacity: 1; /* Always visible */
+}
+
+.home-cs-card-content .description {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s;
+}
+
+.home-cs-card:hover .home-cs-card-content {
+  height: 50%; /* New height on hover */
+  bottom: 0; /* Keep content at the bottom */
+}
+
+.home-cs-card:hover .home-cs-card-content .description {
+  opacity: 1; /* Make the description visible on hover */
+}
+
+.description{
+  font-size: 18px;
 }
 @media (max-width: 768px) {
   .x1 {
@@ -210,14 +286,14 @@
   .trustedtext p {
     font-size: 20px;
     line-height: 45px;
-    padding-top: 30rem ;
+    padding-top: 8rem;
   }
   .clientele {
     padding-left: 2rem !important;
   }
-  #slideshow {
+  /* #slideshow {
     margin-top: -20rem;
-  }
+  } */
   .why-choose-head {
     font-size: 34px !important;
   }
@@ -249,12 +325,19 @@
   .m7 {
     left: 495px !important;
   }
-  .why-choose-main{
+  .why-choose-main {
+    height: 100%;
     flex-wrap: wrap;
+  }
+  .entire-content {
+    padding-left: 5rem;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .trusted {
+    margin-bottom: 20rem;
+  }
   .ceo-photo-1 {
     width: 34rem;
   }
@@ -311,16 +394,13 @@
     font-size: 38px;
   }
   .clientele {
+    margin-top: 2rem !important;
     padding-left: 5rem;
-  }
-  .trustedtext {
-    padding-right: 25%;
   }
   .trustedtext p {
     line-height: 45px;
   }
   #slideshow {
-    margin-top: -10rem;
     width: 25%;
   }
   .mainLogo {
@@ -336,7 +416,7 @@
     left: 16px;
   }
   .m3 {
-    width: 25% !important;
+    width: 37% !important;
     left: 63px;
   }
   .m4 {
@@ -362,6 +442,23 @@
   }
   .mainLogo img {
     width: 85%;
+  }
+  .partners {
+    flex-wrap: wrap;
+  }
+  .last {
+    margin: 3rem;
+    padding: 2rem;
+  }
+  .lt-text a {
+    width: 30%;
+  }
+  .last-contact {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .hehe {
+    width: 25%;
   }
 }
 
@@ -396,7 +493,7 @@
   .lc-1 {
     width: 100% !important;
   }
-  .lc-2{
+  .lc-2 {
     width: 50% !important;
   }
   .last img {
@@ -429,7 +526,7 @@
   .trusted {
     height: 40rem;
     margin: 0;
-    gap: 6rem !important;
+    gap: 3rem !important;
     flex-wrap: wrap !important;
   }
   .clientele {
@@ -438,8 +535,9 @@
     padding-left: 2rem;
   }
   #slideshow {
+    margin-top: -10rem;
     height: 25%;
-    padding-left: 28rem;
+    padding-left: 25rem;
   }
   .cs-readmore {
     width: 50% !important;
@@ -448,7 +546,7 @@
   .last-text-1 {
     position: unset;
   }
-  .trustedtext{
+  .trustedtext {
     height: 45%;
     width: 90%;
   }
@@ -469,19 +567,28 @@
   .rm1 {
     width: 100% !important;
   }
+  .rm-2 {
+    margin-left: 7rem !important;
+    width: 60% !important;
+  }
   .lt-text a {
     width: 50% !important;
   }
   .years {
+    padding-left: 4rem;
+    padding-right: 21px !important;
     padding-top: 10px;
   }
   .m3 {
     width: 100% !important;
   }
   .whyus {
+    margin-top: 1rem;
+    height: 100%;
     padding: 0;
   }
   .why-choose-head {
+    margin-bottom: 0;
     padding-left: 2rem;
   }
   .x1 p {
@@ -496,20 +603,20 @@
     font-size: 18px !important;
   }
   .videoText a {
-    margin-left: 8rem !important;
+    margin-left: 10rem !important;
   }
 
   .years .x1 {
     order: 1;
   }
 
-  .years .col:first-child {
+  /* .years .col:first-child {
     order: 2;
   }
 
   .years .col:last-child {
     order: 3;
-  }
+  } */
   .years .row {
     display: flex;
     flex-wrap: wrap;
@@ -519,5 +626,54 @@
 
   .years .row .col {
     width: 50%;
+  }
+  .foot {
+    width: 100% !important;
+  }
+  .foot1 {
+    justify-content: start !important;
+  }
+  .bottom-bar {
+    gap: 1rem !important;
+    padding-bottom: 1rem;
+  }
+  .ha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    order: 2;
+    justify-content: space-between;
+  }
+  .whyus-details-1 {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .whyus-details p,
+  .whyus-details-1 p {
+    font-size: 18px;
+  }
+  .whyus-details {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .why-choose-main {
+    gap: 15px;
+  }
+  .partners-text img {
+    height: 50px;
+  }
+  .partners-text p,
+  .partners-text a {
+    font-size: 18px;
+    text-align: start;
+  }
+  .partners-text h2 {
+    text-align: start;
+  }
+  .partners-text {
+    text-align: center;
   }
 }

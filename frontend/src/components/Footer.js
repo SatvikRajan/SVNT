@@ -5,10 +5,10 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="row d-flex align-items-center">
-          <div className="col-md-6 w-25 fs-5">
+          <div className="col-md-6 w-25 fs-5  foot">
             <span>SVNT Infotech Pvt. Ltd.</span>
           </div>
-          <div className="col-md-6 p-2 w-25">
+          <div className="col-md-6 p-2 w-25 foot">
             <div
               style={{ gap: "30px", marginBottom: "10px" }}
               className="d-flex align-items-start footer-email"
@@ -44,7 +44,7 @@ const Footer = () => {
               <span>+91 88006 30726</span>
             </div>
           </div>
-          <div style={{gap: '30px'}} className="col-md-6 d-flex justify-content-end align-items-center">
+          <div style={{gap: '30px'}} className="col-md-6 d-flex justify-content-end align-items-center foot1">
             <svg
               width="28"
               height="32"

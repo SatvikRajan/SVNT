@@ -3,7 +3,9 @@ import '../css/card.css';
 import image1 from '../images/Home/carousel-image-1.png';
 import image1m from '../images/Home/carousel-image1m.jpg';
 import image2 from '../images/Home/carousel-image-2.png';
+import image2m from '../images/Home/carousel-image-2m.png';
 import image3 from '../images/Home/carousel-image-3.png';
+import image3m from '../images/Home/carousel-image-3m.png';
 
 function Carosuel1() {
   return (
@@ -38,7 +40,7 @@ function Carosuel1() {
         <div class="carousel-item ci" >
           {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
-            <source media="(max-width: 425px)" srcSet={image2} />
+            <source media="(max-width: 425px)" srcSet={image2m} />
             <source media="(min-width: 426px)" srcSet={image2} />
             <img
               src={image2}
@@ -58,7 +60,7 @@ function Carosuel1() {
         <div class="carousel-item ci" >
           {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
-            <source media="(max-width: 425px)" srcSet={image1m} />
+            <source media="(max-width: 425px)" srcSet={image3m} />
             <source media="(min-width: 426px)" srcSet={image3} />
             <img
               src={image3}
@@ -74,10 +76,10 @@ function Carosuel1() {
         <div class="carousel-item ci" >
           {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
-            <source media="(max-width: 425px)" srcSet={image1m} />
-            <source media="(min-width: 426px)" srcSet={image1} />
+            <source media="(max-width: 425px)" srcSet={image2m} />
+            <source media="(min-width: 426px)" srcSet={image2} />
             <img
-              src={image1}
+              src={image2}
               className="d-block w-100"
               alt="..."
             />

@@ -51,6 +51,7 @@ export const About = () => {
       { src: mahindra, alt: 'abg' },
       { src: itc, alt: 'abg' },
       { src: indigo, alt: 'abg' },
+      { src: indigo, alt: 'abg' },
       // Add all clients here
     ],
     Power: [
@@ -99,12 +100,23 @@ export const About = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 2,
     speed: 600,
-    rows: 3,
-    slidesPerRow: 4,
+    rows: 4,
+    slidesPerRow: 2,
     cssEase: "linear",
-    outline: false
+    outline: false,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          rows: 4,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+    ]
   };
 
 

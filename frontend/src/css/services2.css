@@ -5,9 +5,41 @@ p{
 .service-bg {
     height: 100%;
     width: 100%;
-    object-fit: scale-down;
-    margin-top: 1rem;
   }
+
+  
+@media (max-width: 425px) {
+  .service-bg{
+    margin-top: 5rem;
+    padding: 1rem;
+  }
+  .services-mainhead{
+    font-size: 24px !important;
+    text-align: left !important;
+    padding-left: 1rem;
+  }
+  .css-19kzrtu {
+   padding: 0px !important;
+   padding-top: 1rem !important;
+  }
+  .css-dvqsi7-MuiTabs-root .MuiTab-root.Mui-selected {
+    min-width: 336px !important;
+  }
+  .g2{
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .slider-images div img {
+    height: 80% !important;
+    width: 100% !important;
+  }
+  .g1{
+    margin-top: -2rem;
+  }
+  .slider-images{
+    padding-top: 0 !important;
+  }
+}
 
   .services-main{
     width: 100vw;
@@ -50,7 +82,7 @@ p{
   }
   
   .services-details {
-    width:98.1%;
+    width:100%;
     margin-left: auto;
     margin-right: auto;
     display: grid;
@@ -87,7 +119,7 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2% 1% 2% 4%;
+    padding: 2% 1% 2% 1%;
   }
 
   .g1 div{
@@ -153,17 +185,13 @@ p{
   }
 
   @media (max-width: 768px){
-    .g2{
-      
-      display: none
-    }
-
 
     .services-details{
       display: flex;
+      flex-wrap: wrap-reverse;
     }
     
     .g1 div{
-      max-height: 40vh;
+      max-height: 100%;
     }
   }

@@ -95,7 +95,6 @@ body {
 
 .content-carrousel {
   width: 80%;
-  /* background-color: #0e5054; */
   position: absolute;
   float: right;
   animation: rotar 40s infinite linear;
@@ -614,6 +613,32 @@ body {
     bottom: 18rem;
   }
   .ci{
+    /* border: 1px solid black; */
+    background-color: #E9E8EC;
     padding: 10px;
+    /* margin: 10px; */
+    border-radius: 20px;
+    /* display: flex; */
+    /* flex-direction: column; */
+  }
+  .cc1{
+    position: static; 
+    display: block !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .cc1 h1{
+    font-weight: 500;
+    line-height: 2rem !important;
+    font-size: 18px !important;
+    width: 100% !important;
+  }
+  .cc1 p a{
+    font-size: 18px;
+    width: 100% !important;
+  }
+  .entire-content {
+    padding-left: 5rem;
   }
 }
+

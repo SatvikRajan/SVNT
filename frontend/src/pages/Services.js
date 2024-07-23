@@ -22,6 +22,10 @@ import ss1 from '../images/Services/ss1.svg'
 import ss2 from '../images/Services/ss2.svg'
 import is1 from '../images/Services/is1.svg'
 import is2 from '../images/Services/is2.svg'
+import wwdb21 from '../images/Services/wwdb21.svg'
+import wwdb41 from '../images/Services/wwdb41.svg'
+import wwdb61 from '../images/Services/wwdb61.svg'
+import wwdb51 from '../images/Services/wwdb51.svg'
 
 import IPSlider from "../components/Sliders/IPSSlider";
 import INSlider from "../components/Sliders/INSSlider";
@@ -31,12 +35,13 @@ import SecuritySlider from "../components/Sliders/SecuritySlider";
 import SurveillanceSlider from "../components/Sliders/SurveillanceSlider";
 import StorageSlider from "../components/Sliders/StorageSlider";
 import EnergySlider from "../components/Sliders/EnergySlider";
-
+import servicebgm from '../images/Services/servicebgm.jpg'
 
 import React from "react";
 
 import { useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { selectClasses } from '@mui/material';
 
 const theme = createTheme({
   components: {
@@ -69,6 +74,7 @@ const menuItems = [
   {
     id: 2,
     image: wwdb2,
+    selectedImage: wwdb21,
     name: "IP Networking Solution",
     details: [
       { header: "Network Size Flexibility", content: "The size of an IP network solution can vary, from a few devices to thousands in a large network." },
@@ -92,6 +98,7 @@ const menuItems = [
   {
     id: 4,
     image: wwdb4,
+    selectedImage: wwdb41,
     name: "Audio-Visual Solutions",
     details: [
       { header: "Multimedia Integration", content: "Integrate audio, video, display, lighting, and system controls." },
@@ -103,6 +110,7 @@ const menuItems = [
   {
     id: 5,
     image: wwdb6,
+    selectedImage: wwdb61,
     name: "Security Automation",
     details: [
       // Replace with details specific to Security & Management
@@ -127,6 +135,7 @@ const menuItems = [
   {
     id: 7,
     image: wwdb5,
+    selectedImage: wwdb51,
     name: "Storage",
     details: [
       { header: "Resource Accessibility", content: "Resources are accessible, easy to use, and cost-effective." },
@@ -145,7 +154,7 @@ const menuItems = [
       { header: "Lightning Solution", content: "Advanced systems minimize damage from lightning strikes." },
       { header: "Solar Solution", content: "Utilize solar solutions to reduce carbon footprint and CO2 emissions." },
     ],
-    slider: <EnergySlider />, 
+    slider: <EnergySlider />,
   },
 ];
 function TabPanel(props) {
@@ -184,12 +193,17 @@ export default function Services() {
 
   return (
     <div className="App">
-      <img
-        style={{ position: "relative", marginTop: "-0.5rem" }}
-        src={servicebg}
-        className="service-bg"
-        alt=""
-      />
+      <picture>
+        <source media="(max-width: 425px)" srcSet={servicebgm} />
+        <source media="(min-width: 426px)" srcSet={servicebg} />
+        <img
+          style={{ position: "relative" }}
+          src={servicebg}
+          className="service-bg"
+          alt=""
+        />
+      </picture>
+
       {/* <p className='service-text'>Expertise you can trust:<br /> Tailored solutions just for you!</p> */}
       <div className='services-main'>
 
@@ -205,7 +219,8 @@ export default function Services() {
                 onChange={handleChange}
                 variant="scrollable"
                 // className='menu'
-                scrollButtons="auto"
+                scrollButtons
+                allowScrollButtonsMobile
                 aria-label="scrollable auto tabs example"
                 sx={{
                   // backgroundColor:'pink',
@@ -213,16 +228,18 @@ export default function Services() {
                   '& .MuiTab-root': {
                     textTransform: 'none', // Prevent uppercase transformation
                     color: 'inherit', // Default font color
-                    minWidth: '500px !important',
+                    minWidth: '300px !important',
                     // marginLeft:'3% !important',
                     maxWidth: '500px !important',
+                    fontSize: '22px !important',
                     // marginRight: '3% !important',
                   },
                   '& .MuiTab-root.Mui-selected': {
                     backgroundColor: '#251741', // Background color when tab is selected
                     color: 'white', // Font color when tab is selected
                     // fontWeight: 'bold', // Font weight when tab is selected
-                    minWidth: '500px !important',
+                    minWidth: '300px !important',
+                    fontSize: '22px !important',
                     marginRight: '3% !important',
                     // maxWidth: '500px !important',
                   },
@@ -266,7 +283,7 @@ export default function Services() {
                       {item.details.map((detail, index) => (
                         <div key={index} className="service-card">
                           <h2 className="card-header">{detail.header}</h2>
-                          <p  style={{fontSize:"22px", paddingTop: '10px'}}>{detail.content}</p>
+                          <p style={{ fontSize: "22px", paddingTop: '10px' }}>{detail.content}</p>
                         </div>
                       ))}
                     </div>

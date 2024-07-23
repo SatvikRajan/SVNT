@@ -40,7 +40,7 @@ import agr2 from "../images/CaseStudies/agr2.png";
 import agr3 from "../images/CaseStudies/agr3.jpg";
 import agr4 from "../images/CaseStudies/agr4.jpg";
 import cfcl1 from '../images/CaseStudies/cfcl1.png'
-
+import herobgm from '../images/CaseStudies/hero-bgm.png'
 import sch from "../images/CaseStudies/sch.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faLeftLong } from '@fortawesome/free-solid-svg-icons';
@@ -149,7 +149,7 @@ At Kempegowda International Airport, we've enhanced security by linking cameras,
     'Scope of Work: Erection & Commissioning of IP Based CCTV System & Panic Alarm System',
     `Challenges:Chambal Fertilisers and Chemicals Limited (CFCL), founded in 1985 by Zuari Industries Limited, has become a major player in India's private sector fertiliser industry. Situated in the Gadepan area of Rajasthan's Kota district, CFCL operates two cutting-edge nitrogenous fertiliser plants. Together, these plants produce around 2 million metric tons of urea each year. Over the years, CFCL has not only bolstered its presence in the fertiliser market but has also emerged as a leader in North India's pesticide business.`,
 
-  ],cfcl1 , cfcl1, ` `,
+  ], cfcl1, cfcl1, ` `,
     [],
     `Cameras That Think`,
     [[`
@@ -189,6 +189,20 @@ const menuItems = [
     'image': hotel1,
     'selectedImage': hotel2,
     'cs': [cs[0]]
+  },
+  {
+    'id': 5,
+    'name': 'Agriculture',
+    'image': hotel1,
+    'selectedImage': hotel2,
+    'cs': [cs[0]]
+  },
+  {
+    'id': 6,
+    'name': 'Space',
+    'image': hotel1,
+    'selectedImage': hotel2,
+    'cs': [cs[0]]
   }
 ]
 
@@ -222,6 +236,8 @@ export default function CaseStudies() {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
   const [expanded, setExpanded] = React.useState({});
+  const [isDropdownOpen, setIsDropdownOpen] = useState(true);
+  const [sbg, setSbg] = useState('none'); // Default background image
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -231,14 +247,18 @@ export default function CaseStudies() {
     setExpanded(prev => ({ ...prev, [index]: !prev[index] }));
   };
 
-
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   return (
     <div className='cs-body'>
       <div className='cs-hero'>
-        <div>
+        <picture>
+          <source media="(max-width: 425px)" srcSet={herobgm} />
+          <source media="(min-width: 426px)" srcSet={bghero} />
           <img className="cs-hero-bg" src={bghero} alt="" />
-        </div>
+        </picture>
       </div>
 
       <div className='cs-list'>
@@ -252,16 +272,17 @@ export default function CaseStudies() {
           <div className='case-container'>
             <Box sx={{ width: '90%', height: 'auto' }}>
               <Tabs
+                scrollButtons
+                allowScrollButtonsMobile
                 value={value}
                 onChange={handleChange}
                 variant="scrollable"
-                scrollButtons="auto"
                 aria-label="scrollable auto tabs example"
                 sx={{
                   width: '100%',
                   '& .MuiTab-root': {
                     textTransform: 'none',
-                    minWidth: '312px !important',
+                    minWidth: '300px !important',
                     maxWidth: '312px !important',
                     marginRight: '4%',
                     color: 'inherit',
@@ -269,7 +290,7 @@ export default function CaseStudies() {
                   '& .MuiTab-root.Mui-selected': {
                     backgroundColor: '#251741',
                     color: 'white',
-                    minWidth: '312px !important',
+                    minWidth: '300px !important',
                     maxWidth: '312px !important',
                     marginRight: '4%'
                   },
@@ -313,44 +334,46 @@ export default function CaseStudies() {
                   <div className="cs-details" >
                     {item.cs.map((caseStudy, csIndex) => (
                       <div key={csIndex} className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation  ' : ''}`}>
-                        {!expanded[csIndex] && <img className="image-bg" src={caseStudy[2]} alt='' />}
+                        {!isDropdownOpen && <img className="image-bg" src={caseStudy[2]} alt='' />}
                         {expanded[csIndex]}
-
-
                         <div className='case-study'>
-                          <h3 className='csd-heading'>{caseStudy[0]}</h3>
-                          <div className='cs-wrapper'>
-                            <ul className='csd-points'>
-                              {caseStudy[1].map((detail, detailIndex) => {
-                                const parts = detail.split(':');
-                                return (
-                                  <li className='csd-point' key={detailIndex}>
-                                    <strong>{parts[0]}</strong>{parts.length > 1 && ':' + parts[1]}
-                                  </li>
-                                );
-                              })}
-                            </ul>
-                            <div className='cs-image'>
-                              <img src={caseStudy[3]} alt='' className='only-desktop' />
-                              {!expanded[csIndex] && (
-                                <button
-                                  onClick={() => handleReadMore(csIndex)}
-                                  className="read_btn def"
-                                  style={{
-                                    // position: "absolute",
-                                    // right: "9%",
-                                    // bottom: "100px",
-                                    /* Added styles for whitespace and underline extension */
-                                    textDecoration: "underline", /* Enable underline */
-                                    textUnderlinePosition: "under", /* Ensure underline is below text */
-                                    paddingRight: "1em", /* Add padding to create whitespace */
-                                  }}
-                                >
-                                  Read More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {/* Use `&nbsp;` for non-breaking space */}
-                                </button>
-                              )}
-                            </div>
+                          <div className='csd-head' onClick={toggleDropdown}>
+                            <h3 className='csd-heading'>{caseStudy[0]}</h3>
+                            <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg" className={isDropdownOpen ? 'rotate-180' : ''}
+                            >
+                              <path d="M27.0672 10.137L25.2932 8.34216L14.9999 18.7565L4.70662 8.34216L2.93262 10.137L14.9999 22.3463L27.0672 10.137Z" fill="#F1FAFF" />
+                            </svg>
                           </div>
+                          {isDropdownOpen && (
+                            <div className='cs-wrapper'>
+                              <ul className='csd-points'>
+                                {caseStudy[1].map((detail, detailIndex) => {
+                                  const parts = detail.split(':');
+                                  return (
+                                    <li className='csd-point' key={detailIndex}>
+                                      <strong>{parts[0]}</strong>{parts.length > 1 && ':' + parts[1]}
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                              <div className='cs-image'>
+                                <img src={caseStudy[3]} alt='' className='only-desktop' />
+                                {!expanded[csIndex] && (
+                                  <button
+                                    onClick={() => handleReadMore(csIndex)}
+                                    className="read_btn def"
+                                    style={{
+                                      textDecoration: "underline", /* Enable underline */
+                                      textUnderlinePosition: "under", /* Ensure underline is below text */
+                                      paddingRight: "1em", /* Add padding to create whitespace */
+                                    }}
+                                  >
+                                    Read More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  </button>
+                                )}
+                              </div>
+                            </div>
+                          )}
                           {expanded[csIndex] && (
                             <div className='expanded-content'>
                               <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>

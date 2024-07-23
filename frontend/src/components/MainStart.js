@@ -68,9 +68,9 @@ export default function MainStart() {
       <video src={bgVideo} autoPlay loop muted playsInline className='bg-video'>
       </video>
       <div className="row years" ref={yearsRef}>
-        <div className=" text-center col">
+        <div className=" text-center col ha">
           <span></span>
-          <div className="d-flex align-items-center justify-content-center">
+          <div className="d-flex mb-4 align-items-center justify-content-center">
             <p className="value number5">250</p>
             <span style={{ fontSize: '54px' }}>+</span>
           </div>
@@ -79,10 +79,10 @@ export default function MainStart() {
         </div>
         <div className="d-flex align-items-center x1 col">
           <p className="value number20">21</p>
-          <p style={{ fontSize: '37px', paddingTop: '7rem' }}>Years</p>
+          <p style={{ fontSize: '37px', paddingTop: '7rem' }} className='nameyear'>Years</p>
         </div>
-        <div className="text-center col">
-          <div className='d-flex align-items-center justify-content-center'>
+        <div className="text-center col ha">
+          <div className='d-flex mb-4 align-items-center justify-content-center'>
             <p className="value number60">1000</p><span style={{ fontSize: '54px' }}>+</span>
           </div>
           <p className="x">PROJECTS</p>

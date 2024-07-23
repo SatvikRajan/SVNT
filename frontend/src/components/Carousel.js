@@ -8,7 +8,6 @@ import sss from '../images/Home/home-carousel-eyeon.webp';
 import avs from '../images/Home/home-carousel-cfcl.webp';
 import es from '../images/Home/home-carousel-aragen.webp';
 import AOS from 'aos';
-import '../css/styles.scss'
 import 'aos/dist/aos.css';
 
 function CaseStudiesCarousel() {
@@ -97,18 +96,16 @@ function CaseStudiesCarousel() {
     <div data-aos='fade-up' id="carouselExampleControls" className="carousel slide">
       <div className="carousel-inner1" style={{ scrollSnapType: 'x mandatory', display: 'flex', marginTop: '1rem' }}>
         {/* <a href="https://dribbble.com/shots/3127773-Event-Card" target="_blank">dribbble</a> */}
-        <article class="article-card">
-          <div class="thumb"></div>
-          <div class="infos">
-            <h2 class="title">
-             Client Name
-            </h2>
-            <p class="txt">
-              CLient Desc
-            </p>
-            <h3 class="details1">details</h3>
+        <div class="home-cs-card">
+          <div class="home-cs-card-image">
+            <img src={is} alt="Card Image" />
           </div>
-        </article>
+          <div class="home-cs-card-content">
+            <p class="title">ITC Hotels</p>
+            <p class="description">A Close Examination of how SVNT implements Security Protocols at ITC.</p>
+          </div>
+        </div>
+
       </div>
 
       <button className="carousel-control-prev" onClick={handlePrev} type="button">
