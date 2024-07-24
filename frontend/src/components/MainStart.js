@@ -69,7 +69,6 @@ export default function MainStart() {
       </video>
       <div className="row years" ref={yearsRef}>
         <div className=" text-center col ha">
-          <span></span>
           <div className="d-flex mb-4 align-items-center justify-content-center">
             <p className="value number5">250</p>
             <span style={{ fontSize: '54px' }}>+</span>
