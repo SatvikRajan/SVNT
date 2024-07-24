@@ -169,16 +169,23 @@
 }
 /* Basic styling */
 .home-cs-card {
-  position: relative;
-  width: 300px; /* Adjust width as needed */
-  height: 400px; /* Adjust height as needed */
   overflow: hidden;
+  position: relative;
+  height: 450px; /* Adjust height as needed */
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: 20rem;
   transition: transform 0.5s;
   background-color: #E9E8EC;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
+.ct-1{
+  margin-left: -5rem;
+}
 
 .home-cs-card:hover {
   transform: translateY(-10px); /* Move card up on hover */
@@ -207,8 +214,7 @@
 .home-cs-card-content {
   position: absolute;
   bottom: 0;
-  width: 100%;
-  height: 30%; 
+  height: 5%; 
   color: black;
   display: flex;
   align-items: center;
@@ -224,13 +230,17 @@
   opacity: 1; /* Always visible */
 }
 
+.hcscard-readmore{
+  margin-top: 1rem;
+}
+
 .home-cs-card-content .description {
   opacity: 0; /* Initially hidden */
   transition: opacity 0.5s;
 }
 
 .home-cs-card:hover .home-cs-card-content {
-  height: 50%; /* New height on hover */
+  height: 60%; /* New height on hover */
   bottom: 0; /* Keep content at the bottom */
 }
 
@@ -673,7 +683,22 @@
   .partners-text h2 {
     text-align: start;
   }
-  .partners-text {
-    text-align: center;
+  .home-cs-card .home-cs-card-content {
+    height: 33%;
+    bottom: 1; /* Keep content at the bottom */
   }
+  .home-cs-card .home-cs-card-content .description {
+    opacity: 1; /* Make the description visible on hover */
+  }
+  .home-cs-card:hover{
+    transform: none; 
+    height: 100%;
+  }
+  .carousel-background{
+    height: 100%;
+  }
+  .home-cs-card{
+    height: 600px;
+  }
+  
 }

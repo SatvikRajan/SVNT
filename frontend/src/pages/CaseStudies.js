@@ -377,7 +377,7 @@ export default function CaseStudies() {
                           {expanded[csIndex] && (
                             <div className='expanded-content'>
                               <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                                <img src={sch} alt="schematic image" className='only-desktop' style={{ width: "80%" }}></img>
+                                <img src={sch} alt="schematic image" className=' exp-img' style={{ width: "100%" }}></img>
                                 <div className='expand-inner'>
                                   <div>
 

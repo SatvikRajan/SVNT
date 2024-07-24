@@ -72,7 +72,7 @@
   height: 780px;
   border-radius: 20px;
   position: relative;
-  background-image: url("../images/Home/wbg.jpg");
+  /* background-image: url("../images/Home/wbg.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   /* padding-top: 10%; */
@@ -244,9 +244,16 @@
   padding-left: 5px;
 }
 
+.wwdb-video{
+  width: 100%;
+  object-fit: cover;
+}
 @media (max-width: 425px) {
-  .what-we-do-best{
+  .what-we-do-best {
     margin-top: 2rem;
+  }
+  .wwdb-video{
+    display: none;
   }
   .wwdb-head {
     margin-top: 1rem;
@@ -261,13 +268,21 @@
     margin-right: 1rem;
     height: 100% !important;
     border-radius: 30px !important;
+    background-image: none;
+  }
+  .wwdb-menu-wrapper {
+    border-radius: 20px;
+    background-image: url("../images/Home/wbg.jpg");
   }
   .wwdb-details-overlay {
     width: 95% !important;
     height: 100% !important;
   }
 
-  .wwdb-logo-title,.wwdb-close-button,.wwdb-image-container,.wwdb-details-text{
+  .wwdb-logo-title,
+  .wwdb-close-button,
+  .wwdb-image-container,
+  .wwdb-details-text {
     position: static !important;
   }
   .wwdb-menu {
@@ -318,29 +333,29 @@
   .m7 {
     align-items: center;
   }
-  .wwdb-logo-title{
+  .wwdb-logo-title {
     gap: 10px;
   }
-  .wwdb-logo-title p{
+  .wwdb-logo-title p {
     font-size: 20px !important;
   }
-  .wwdb-logo-title img{
+  .wwdb-logo-title img {
     height: 40px;
   }
-  .wwdb-close-button{
+  .wwdb-close-button {
     margin-left: 20rem !important;
   }
-  .wwdb-image-container{
+  .wwdb-image-container {
     height: 200px !important;
     width: fit-content !important;
     padding-left: 2rem;
     padding-top: 1rem;
   }
-  .wwdb-image-container img{
+  .wwdb-image-container img {
     height: 200px !important;
-    width:max-content !important;
+    width: max-content !important;
   }
-  .wwdb-details-text p{
+  .wwdb-details-text p {
     line-height: 40px !important;
     font-size: 18px !important;
     padding: 1rem !important;

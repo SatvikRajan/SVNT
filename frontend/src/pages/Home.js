@@ -29,7 +29,7 @@ export default function Home() {
       <div className="mainpage">
         <Partners />
         <div className="case-studies">
-          <h1>Case Studies</h1>
+         
           <CaseStudiesCarousel />
         </div>
         <LastContent />

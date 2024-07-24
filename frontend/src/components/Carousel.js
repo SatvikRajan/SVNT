@@ -8,17 +8,15 @@ import sss from '../images/Home/home-carousel-eyeon.webp';
 import avs from '../images/Home/home-carousel-cfcl.webp';
 import es from '../images/Home/home-carousel-aragen.webp';
 import AOS from 'aos';
+import video from '../images/Home/case-studies.mp4'
 import 'aos/dist/aos.css';
 
 function CaseStudiesCarousel() {
   const carouselRef = useRef(null);
   const [cardWidth, setCardWidth] = useState(0);
   const [items, setItems] = useState([]);
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const handleReadMore = () => {
-    setIsExpanded(!isExpanded);
-  };
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [cardsPerSlide, setCardsPerSlide] = useState(1);
 
   useEffect(() => {
     AOS.init({
@@ -39,13 +37,15 @@ function CaseStudiesCarousel() {
           numberOfCardsPerSlide = 3;
         } else if (carouselWidth >= 768) {
           numberOfCardsPerSlide = 2;
+        } else {
+          numberOfCardsPerSlide = 1;
         }
         const calculatedCardWidth = carouselWidth / numberOfCardsPerSlide;
         setCardWidth(calculatedCardWidth);
       }
     };
 
-    updateCardWidth();
+    // updateCardWidth();
 
     const handleResize = () => {
       updateCardWidth();
@@ -72,52 +72,54 @@ function CaseStudiesCarousel() {
     ]);
   }, []);
 
+
   const handleNext = () => {
-    const carousel = carouselRef.current;
-    if (carousel) {
-      carousel.scrollTo({
-        left: carousel.scrollLeft + cardWidth,
-        behavior: 'smooth',
-      });
+    const maxSlide = Math.ceil(items.length / cardsPerSlide) - 1;
+    if (currentSlide < maxSlide) {
+      setCurrentSlide(currentSlide + 1);
     }
   };
 
   const handlePrev = () => {
-    const carousel = carouselRef.current;
-    if (carousel) {
-      carousel.scrollTo({
-        left: carousel.scrollLeft - cardWidth,
-        behavior: 'smooth',
-      });
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
     }
   };
-
   return (
     <div data-aos='fade-up' id="carouselExampleControls" className="carousel slide">
-      <div className="carousel-inner1" style={{ scrollSnapType: 'x mandatory', display: 'flex', marginTop: '1rem' }}>
-        {/* <a href="https://dribbble.com/shots/3127773-Event-Card" target="_blank">dribbble</a> */}
-        <div class="home-cs-card">
-          <div class="home-cs-card-image">
-            <img src={is} alt="Card Image" />
-          </div>
-          <div class="home-cs-card-content">
-            <p class="title">ITC Hotels</p>
-            <p class="description">A Close Examination of how SVNT implements Security Protocols at ITC.</p>
-          </div>
+      <h1>Case Studies</h1>
+      <div className="carousel-background">
+        <video autoPlay muted loop id="myVideo" className="carousel-video">
+          <source src={video} type="video/mp4" />
+        </video>
+      </div>
+      <div className="carousel-inner1" ref={carouselRef} style={{ display: 'flex', overflow: 'hidden' }}>
+        <div className="carousel-track ct-1" style={{ display: 'flex', transition: 'transform 0.5s', transform: `translateX(-${currentSlide * 100 / cardsPerSlide}%)`}}>
+          {items.map((item, index) => (
+            <div key={item.id} className="home-cs-card" style={{ boxSizing: 'border-box', padding: '10px' }}>
+              <div className="home-cs-card-image">
+                <img src={item.image} alt="Card Image" />
+              </div>
+              <div className="home-cs-card-content">
+                <p className="title">{item.title}</p>
+                {item.description && <p className="description">{item.description}</p>}
+                <a className='hcscard-readmore readmore text-white' style={{ width: '60%', fontSize: '15px', filter: 'invert(1)' }} href='/contact'>Read More</a>
+              </div>
+            </div>
+          ))}
+        </div>
         </div>
 
+        <button className="carousel-control-prev" onClick={handlePrev} type="button">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button className="carousel-control-next" onClick={handleNext} type="button">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
       </div>
-
-      <button className="carousel-control-prev" onClick={handlePrev} type="button">
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button className="carousel-control-next" onClick={handleNext} type="button">
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
-    </div>
-  );
+      );
 }
 
-export default CaseStudiesCarousel;
+      export default CaseStudiesCarousel;

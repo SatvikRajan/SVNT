@@ -1,11 +1,13 @@
 import React from 'react';
 import '../css/card.css';
 import image1 from '../images/Home/carousel-image-1.png';
-import image1m from '../images/Home/carousel-image1m.jpg';
+import image1m from '../images/Home/carousel-image-1m.png';
 import image2 from '../images/Home/carousel-image-2.png';
 import image2m from '../images/Home/carousel-image-2m.png';
 import image3 from '../images/Home/carousel-image-3.png';
 import image3m from '../images/Home/carousel-image-3m.png';
+import image4 from '../images/Home/carousel-image-4.png';
+import image4m from '../images/Home/carousel-image-4m.png';
 
 function Carosuel1() {
   return (
@@ -29,10 +31,9 @@ function Carosuel1() {
           </picture>
           <div class="carousel-caption cc1 d-none d-md-block">
             {/* <h1>First slide label</h1> */}
-            <h1 style={{ width: '60%', fontSize: '40px', lineHeight: '4rem', color: 'black' }}>Relax, We've Got Your Back
-              Your Security is Our Priority!
+            <h1 style={{ width: '60%', fontSize: '40px', lineHeight: '4rem', color: 'black' }}>Relax, We've Got Your Back Your Security is Our Priority!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '2rem' }}><a className='readmore text-white' style={{ width: '30%', filter: 'invert(1)' }} href='/contact'>Send us a message</a>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><a className='readmore text-white' style={{ width: '30%', filter: 'invert(1)' }} href='/contact'>Send us a message</a>
             </p>
             {/* <a href="/about"><p className='ccr text-white readmore'>Read More</p></a> */}
           </div>
@@ -48,7 +49,7 @@ function Carosuel1() {
               alt="..."
             />
           </picture>
-          <div class="carousel-caption cc1 d-none d-md-block">
+          <div class="carousel-caption cc1 cc2 d-none d-md-block">
             <h1 style={{ width: '60%', fontSize: '40px', color: 'black', lineHeight: '4rem' }}>Join us in celebrating our
               awards and recognition over
               the years!
@@ -69,27 +70,26 @@ function Carosuel1() {
             />
           </picture>
           <div class="carousel-caption cc1 d-none d-md-block">
-            <h1 style={{ width: '60%', lineHeight: '4rem', color: 'black',marginBottom: '10rem' }}>Who We Are?
+            <h1 style={{ width: '50%', lineHeight: '4rem', color: 'black', marginBottom: '1rem' }}>Explore our many services designed to meet your needs.
             </h1>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><a className='readmore text-white' style={{ width: '30%', filter: 'invert(1)' }} href='/contact'>Send us a message</a></p>
           </div>
         </div>
         <div class="carousel-item ci" >
           {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
-            <source media="(max-width: 425px)" srcSet={image2m} />
-            <source media="(min-width: 426px)" srcSet={image2} />
+            <source media="(max-width: 425px)" srcSet={image4m} />
+            <source media="(min-width: 426px)" srcSet={image4} />
             <img
-              src={image2}
+              src={image4}
               className="d-block w-100"
               alt="..."
             />
           </picture>
-          <div class="carousel-caption cc1 d-none d-md-block">
-            <h1 style={{ width: '60%', lineHeight: '4rem' }}>Relax, We've Got Your Back
-              Your Security is Our Priority!
+          <div class="carousel-caption cc1 cc2 d-none d-md-block">
+            <h1 style={{ width: '60%', lineHeight: '4rem', color: 'black' }}>Dive into our case studies and see how we deliver results!
             </h1>
-            <p>Send us a message
-            </p>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><a className='readmore text-white' style={{ width: '30%', filter: 'invert(1)' }} href='/contact'>Learn more about us</a></p>
           </div>
         </div>
       </div>

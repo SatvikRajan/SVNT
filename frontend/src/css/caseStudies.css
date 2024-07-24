@@ -411,10 +411,12 @@
     height: 200vh;
   }
 }
-
 @media (max-width: 768px) {
   .only-desktop {
     display: none;
+  }
+  .exp-img{
+    display: block;
   }
 }
 
@@ -525,6 +527,6 @@
     min-width: 300px !important;
   }
   .case-study{
-    background-color: inherit;
+    /* background-color: inherit; */
   }
 }

@@ -73,7 +73,7 @@ body {
   height: 50%;
   width: 60%;
   padding-top: 7%;
-  
+
   padding-left: 20%;
   margin-left: 0;
 
@@ -381,8 +381,8 @@ body {
   transform: rotateY(340deg) translateZ(480px);
 }
 
-.carousel-inner1{
-  height: 30rem;
+.carousel-inner1 {
+  padding: 5rem;
 }
 
 @keyframes rotate360 {
@@ -420,7 +420,6 @@ body {
   position: absolute;
 }
 
-
 .material-symbols-outlined {
   vertical-align: middle;
 }
@@ -435,12 +434,12 @@ body {
   opacity: 1;
   width: 5%;
 }
-.carousel-control-prev {
+/* .carousel-control-prev {
   left: -50px;
 }
 .carousel-control-next {
   right: -48px;
-}
+} */
 .carousel-control-next-icon:hover,
 .carousel-control-prev-icon:hover {
   filter: invert();
@@ -554,6 +553,11 @@ body {
   top: 0;
 }
 
+.cc2 {
+  width: 67%;
+  left: 53% !important;
+  right: 0% !important;
+}
 .picker {
   position: relative;
   overflow: hidden;
@@ -565,11 +569,34 @@ body {
     0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
+.carousel-background {
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure the video is behind the content */
+}
+
+.carousel-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
 @media (max-width: 425px) {
   .carousel-control-prev,
   .carousel-control-next {
     align-self: self-end;
-    bottom: -3.3rem;
+    bottom: 0.5rem;
   }
 
   .card-1 {
@@ -578,10 +605,11 @@ body {
   }
   .case-studies {
     border-radius: 30px !important;
-    height: 610px !important;
+    height: 100% !important;
     padding: 0 !important;
     padding-top: 2rem !important;
     padding-left: 0.2rem !important;
+    margin-bottom: 2rem;
   }
 
   .case-studies h1 {
@@ -599,7 +627,7 @@ body {
   .carousel-control-next-icon {
     padding: 30px !important;
   }
-  .c-ind{
+  .c-ind {
     display: none;
   }
 
@@ -609,31 +637,32 @@ body {
     overflow: hidden;
     width: 100%;
   }
-  .ccb{
+  .ccb {
     bottom: 18rem;
   }
-  .ci{
+  .ci {
     /* border: 1px solid black; */
-    background-color: #E9E8EC;
+    background-color: #e9e8ec;
     padding: 10px;
     /* margin: 10px; */
     border-radius: 20px;
     /* display: flex; */
     /* flex-direction: column; */
   }
-  .cc1{
-    position: static; 
+  .cc1 {
+    position: static;
     display: block !important;
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .cc1 h1{
+  
+  .cc1 h1 {
     font-weight: 500;
     line-height: 2rem !important;
     font-size: 18px !important;
     width: 100% !important;
   }
-  .cc1 p a{
+  .cc1 p a {
     font-size: 18px;
     width: 100% !important;
   }
@@ -642,3 +671,8 @@ body {
   }
 }
 
+@media (min-width: 1440px) {
+  .cc1{
+    bottom: 20rem;
+  }
+}

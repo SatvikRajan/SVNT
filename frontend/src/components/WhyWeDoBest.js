@@ -8,6 +8,7 @@ import logo4 from '../images/Home/security-and-mgmt.svg';
 import logo7 from '../images/Home/integration.svg';
 import logo5 from '../images/Home/storage.svg';
 import logo6 from '../images/Home/audio-visual.svg';
+import bg from '../images/Home/whatwedobestbg.mp4'
 import '../css/wwdb.css'
 import WwdbDetails from './WwdbDetails';
 import AOS from 'aos';
@@ -54,6 +55,9 @@ export default function WhyWeDoBest() {
     <div className="what-we-do-best">
       <WwdbDetails click={clickVal} index={indexVal} setClick={setClickVal} topPos={topPos} leftPos={leftPos} />
       <div className="wwdb-container">
+        <video autoPlay loop className='wwdb-video'>
+          <source src={bg} type="video/mp4" />
+        </video>
         <p className="wwdb-head" data-aos='fade-down' data-aos-easing="ease-in-sine">What We Do</p>
 
         <div className='wwdb-menu-wrapper'>
@@ -70,7 +74,7 @@ export default function WhyWeDoBest() {
               setLeftPos(709);
             }}>
               <p>{names[0]}</p>
-              <img className='logoImg' src={logo0} alt='client'/>
+              <img className='logoImg' src={logo0} alt='client' />
             </div>
 
             <div className='m1' data-aos='fade-right' onClick={() => {
@@ -81,7 +85,7 @@ export default function WhyWeDoBest() {
             }}
             >
               <p>{names[1]}</p>
-              <img className='logoImg' src={logo1} alt='client'/>
+              <img className='logoImg' src={logo1} alt='client' />
             </div>
 
             <div className='m2' data-aos='fade-right' onClick={() => {
@@ -91,7 +95,7 @@ export default function WhyWeDoBest() {
               setLeftPos(409);
             }}>
               <p>{names[2]}</p>
-              <img className='logoImg' src={logo2} alt='client'/>
+              <img className='logoImg' src={logo2} alt='client' />
             </div>
 
             <div className='m3' data-aos='fade-right' onClick={() => {
@@ -101,7 +105,7 @@ export default function WhyWeDoBest() {
               setLeftPos(193);
             }}>
               <p>{names[3]}</p>
-              <img className='logoImg' src={logo3} alt='client'/>
+              <img className='logoImg' src={logo3} alt='client' />
             </div>
 
             <div className='m4' data-aos='fade-up' onClick={() => {
@@ -110,7 +114,7 @@ export default function WhyWeDoBest() {
               setTopPos(565);
               setLeftPos(642);
             }}>
-              <img className='logoImg' src={logo4} alt='client'/>
+              <img className='logoImg' src={logo4} alt='client' />
               <p>{names[4]}</p>
             </div>
 
@@ -120,7 +124,7 @@ export default function WhyWeDoBest() {
               setTopPos(490);
               setLeftPos(985);
             }}>
-              <img className='logoImg' src={logo5} alt='client'/>
+              <img className='logoImg' src={logo5} alt='client' />
               <p>{names[5]}</p>
             </div>
 
@@ -130,7 +134,7 @@ export default function WhyWeDoBest() {
               setTopPos(379);
               setLeftPos(1034);
             }}>
-              <img className='logoImg' src={logo6} alt='client'/>
+              <img className='logoImg' src={logo6} alt='client' />
               <p>{names[6]}</p>
             </div>
 
@@ -140,7 +144,7 @@ export default function WhyWeDoBest() {
               setTopPos(267);
               setLeftPos(985);
             }}>
-              <img className='logoImg' src={logo7} alt='client'/>
+              <img className='logoImg' src={logo7} alt='client' />
               <p>{names[7]}</p>
             </div>
 
@@ -149,7 +153,7 @@ export default function WhyWeDoBest() {
         </div>
 
         <div className="wwdb-learn-more wwdb-learnmore-2">
-          <a href="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
+          <a href="/services" class="btn btn-primary btn-arrow"><p className='learnMore text-dark'><span>Learn more
             <ArrowRightIcon className="fas" />
           </span></p></a>
         </div>
