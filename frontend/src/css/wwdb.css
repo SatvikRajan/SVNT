@@ -245,9 +245,12 @@
 }
 
 .wwdb-video{
+  border-radius: 20px;
+  height: -webkit-fill-available;
   width: 100%;
   object-fit: cover;
 }
+
 @media (max-width: 425px) {
   .what-we-do-best {
     margin-top: 2rem;

@@ -449,6 +449,9 @@
     font-size: 18px !important;
     height: 100% !important;
   }
+  .box-content ul{
+    text-align: start;
+  }
   .desc2-wrapper {
     padding-left: 1rem;
     padding-right: 1rem;

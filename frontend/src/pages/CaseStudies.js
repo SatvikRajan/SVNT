@@ -336,7 +336,8 @@ export default function CaseStudies() {
                       <div key={csIndex} className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation  ' : ''}`}>
                         {!isDropdownOpen && <img className="image-bg" src={caseStudy[2]} alt='' />}
                         {expanded[csIndex]}
-                        <div className='case-study'>
+                        <div className={`case-study ${isDropdownOpen ? 'dropdown-open' : ''}`} style={{ backgroundColor: isDropdownOpen ? '#0e1513' : 'inherit' }}>
+
                           <div className='csd-head' onClick={toggleDropdown}>
                             <h3 className='csd-heading'>{caseStudy[0]}</h3>
                             <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg" className={isDropdownOpen ? 'rotate-180' : ''}

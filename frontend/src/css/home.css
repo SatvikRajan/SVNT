@@ -171,24 +171,16 @@
 .home-cs-card {
   overflow: hidden;
   position: relative;
-  height: 450px; /* Adjust height as needed */
   margin-left: 2rem;
   margin-right: 2rem;
-  width: 20rem;
+  width: 25rem !important; 
+  height: 32rem;
   transition: transform 0.5s;
   background-color: #E9E8EC;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   box-sizing: border-box;
   padding: 10px;
-}
-
-.ct-1{
-  margin-left: -5rem;
-}
-
-.home-cs-card:hover {
-  transform: translateY(-10px); /* Move card up on hover */
 }
 
 .home-cs-card-image {
@@ -218,6 +210,7 @@
   color: black;
   display: flex;
   align-items: center;
+  text-align: start !important;
   justify-content: center;
   flex-direction: column;
   transition: height 0.5s, bottom 0.5s;
@@ -231,7 +224,13 @@
 }
 
 .hcscard-readmore{
+  margin-left: auto;
   margin-top: 1rem;
+}
+
+.slick-list{
+  margin-left: 5rem !important;
+  margin-right: 5rem !important;
 }
 
 .home-cs-card-content .description {
@@ -485,6 +484,9 @@
 }
 
 @media (max-width: 425px) {
+  .ct-1{
+    margin-left: -5rem;
+  }
   .last-contact {
     flex-wrap: wrap;
     width: 90% !important;
@@ -650,7 +652,6 @@
   .ha {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     order: 2;
     justify-content: space-between;
   }
@@ -698,7 +699,15 @@
     height: 100%;
   }
   .home-cs-card{
-    height: 600px;
+    height: 42rem;
+    margin-left: 0;
+    margin-right: 0;
+    width: 90% !important;
+    margin-bottom: 5rem;
+  }
+  .slick-list{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
 }

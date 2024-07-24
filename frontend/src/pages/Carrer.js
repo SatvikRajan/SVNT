@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../css/carousel.css'
 import '../css/career.css'
 import carrerimage from '../images/Career/careerbg.jpg'
+import cim from '../images/Career/bgm.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ArrowIcon from "../components/ArrowIcon";
@@ -115,7 +116,12 @@ export const CareersPage = () => {
     <div className="careers-page">
       <div className="career-start">
         <div className="career-image">
-          <img className="career-img" src={carrerimage} alt="" />
+          <picture>
+            <source media="(max-width: 425px)" srcSet={cim} />
+            <source media="(min-width: 426px)" srcSet={carrerimage} />
+            <img className="career-img" src={carrerimage} alt="" />
+
+          </picture>
           <div className="career-text1">
             Empower your <br />
             aspirations at SVNT Infotech!
