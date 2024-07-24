@@ -593,6 +593,9 @@ body {
 }
 
 @media (max-width: 425px) {
+  .cc2{
+    width: 100%;
+  }
   .carousel-control-prev,
   .carousel-control-next {
     align-self: self-end;
