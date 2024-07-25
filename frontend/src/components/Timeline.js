@@ -30,7 +30,8 @@ export default function Timeline() {
                     width: '60px',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    top: '115%'
                 }}
                 // onClick={onClick}
                 onClick={() => {
@@ -61,7 +62,8 @@ export default function Timeline() {
                     width: '60px',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    top: '115%'
                 }}
                 onClick={() => {
                     if (onClick) {
@@ -84,7 +86,16 @@ export default function Timeline() {
         slidesToShow: 3,
         slidesToScroll: 1,
         nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+            }
+        ]
     };
 
     useEffect(() => {

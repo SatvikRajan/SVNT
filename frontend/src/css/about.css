@@ -301,7 +301,8 @@
     padding-bottom: 0 !important;
   }
   .timeline-carousel {
-    display: none !important;
+
+    /* display: none !important; */
   }
   .ceo {
     margin-bottom: 10px !important;
@@ -354,5 +355,14 @@
   }
   .about-bg {
     padding: 1rem;
+  }
+  .info-set-down::before ,.info, .info-set-down::after, .info, .info-set-up::after, .info-set-up::before{
+    display: none;
+  }
+  .info .gap{
+    height: 0;
+  }
+  .info .info-set{
+    height: 0%;
   }
 }

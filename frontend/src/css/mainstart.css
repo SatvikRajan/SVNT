@@ -12,7 +12,7 @@
   position: absolute;
   border-radius: 20px;
   height: inherit;
-  object-fit: fill;
+  object-fit: cover;
   width: 90%;
   overflow: hidden;
   background-color: aqua;

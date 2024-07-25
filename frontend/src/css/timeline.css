@@ -198,3 +198,21 @@ color: white;
 transition: color 1s ease;
 /* display: none; */
 }
+
+@media (max-width: 480px) {
+    .timeline-carousel .info{
+        height: 100%;
+    }
+    .timeline-container{
+        height: 100%;
+    }
+    .info .info-set{
+        padding: 1% 0%;
+    }
+    .info{
+        text-align: start !important;
+    }
+    .timeline-carousel{
+        height: 100vh;
+    }
+}
