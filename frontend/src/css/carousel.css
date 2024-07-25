@@ -592,7 +592,7 @@ body {
   z-index: -1;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .cc2{
     width: 100%;
   }

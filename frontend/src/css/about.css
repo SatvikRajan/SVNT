@@ -286,7 +286,7 @@
   font-size: 22px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .img-info {
     display: none;
   }

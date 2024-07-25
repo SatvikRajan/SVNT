@@ -87,8 +87,8 @@ const Contact = () => {
     <div className="contact-container">
       <div className="contact-image-container">
         <picture>
-          <source media="(max-width: 425px)" srcSet={contactm} />
-          <source media="(min-width: 426px)" srcSet={contact} />
+          <source media="(max-width: 480px)" srcSet={contactm} />
+          <source media="(min-width: 480px)" srcSet={contact} />
           <img
             src={contact}
             className='contact-image'

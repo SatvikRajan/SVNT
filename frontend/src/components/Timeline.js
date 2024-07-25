@@ -30,8 +30,7 @@ export default function Timeline() {
                     width: '60px',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center',
-                    top: '115%'
+                    justifyContent: 'center'
                 }}
                 // onClick={onClick}
                 onClick={() => {
@@ -62,8 +61,7 @@ export default function Timeline() {
                     width: '60px',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center',
-                    top: '115%'
+                    justifyContent: 'center'
                 }}
                 onClick={() => {
                     if (onClick) {

@@ -251,7 +251,7 @@
   object-fit: cover;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .what-we-do-best {
     margin-top: 2rem;
   }

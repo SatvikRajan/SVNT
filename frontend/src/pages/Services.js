@@ -194,8 +194,8 @@ export default function Services() {
   return (
     <div className="App">
       <picture>
-        <source media="(max-width: 425px)" srcSet={servicebgm} />
-        <source media="(min-width: 426px)" srcSet={servicebg} />
+        <source media="(max-width: 480px)" srcSet={servicebgm} />
+        <source media="(min-width: 480px)" srcSet={servicebg} />
         <img
           style={{ position: "relative" }}
           src={servicebg}

@@ -255,8 +255,8 @@ export default function CaseStudies() {
     <div className='cs-body'>
       <div className='cs-hero'>
         <picture>
-          <source media="(max-width: 425px)" srcSet={herobgm} />
-          <source media="(min-width: 426px)" srcSet={bghero} />
+          <source media="(max-width: 480px)" srcSet={herobgm} />
+          <source media="(min-width: 480px)" srcSet={bghero} />
           <img className="cs-hero-bg" src={bghero} alt="" />
         </picture>
       </div>
@@ -358,7 +358,7 @@ export default function CaseStudies() {
                                 })}
                               </ul>
                               <div className='cs-image'>
-                                <img src={caseStudy[3]} alt='' className='only-desktop' />
+                                <img src={caseStudy[3]} alt='' className='only-desktop hehe'/>
                                 {!expanded[csIndex] && (
                                   <button
                                     onClick={() => handleReadMore(csIndex)}

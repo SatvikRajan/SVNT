@@ -403,6 +403,10 @@
   overflow: hidden; /* Important for animation */
   background: black;
 }
+.hehe{
+  width: 100%;
+  height: fit-content;
+}
 @keyframes slidedown {
   from {
     height: 0;
@@ -470,7 +474,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .cs-hero-bg {
     margin-top: 5rem;
     padding: 1rem;

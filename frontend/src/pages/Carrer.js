@@ -117,8 +117,8 @@ export const CareersPage = () => {
       <div className="career-start">
         <div className="career-image">
           <picture>
-            <source media="(max-width: 425px)" srcSet={cim} />
-            <source media="(min-width: 426px)" srcSet={carrerimage} />
+            <source media="(max-width: 480px)" srcSet={cim} />
+            <source media="(min-width: 480px)" srcSet={carrerimage} />
             <img className="career-img" src={carrerimage} alt="" />
 
           </picture>

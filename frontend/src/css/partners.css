@@ -342,7 +342,7 @@
   font-weight: 500;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .main-logo {
     height: 3rem;
   }

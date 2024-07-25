@@ -186,8 +186,8 @@ export default function Partners() {
                     </div>
                     <div data-aos='fade-left' className="desc-image box-image">
                         <picture>
-                            <source media="(max-width: 425px)" srcSet={image1m} />
-                            <source media="(min-width: 426px)" srcSet={image2} />
+                            <source media="(max-width: 480px)" srcSet={image1m} />
+                            <source media="(min-width: 480px)" srcSet={image2} />
                             <img
                                 src={image2}
                                 alt="genetec"

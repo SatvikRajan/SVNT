@@ -21,8 +21,8 @@ function Carosuel1() {
       <div class="carousel-inner cinner">
         <div class="carousel-item ci active" >
           <picture>
-            <source media="(max-width: 425px)" srcSet={image1m} />
-            <source media="(min-width: 426px)" srcSet={image1} />
+            <source media="(max-width: 480px)" srcSet={image1m} />
+            <source media="(min-width: 480px)" srcSet={image1} />
             <img
               src={image1}
               className="d-block w-100"
@@ -41,8 +41,8 @@ function Carosuel1() {
         <div class="carousel-item ci" >
           {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
-            <source media="(max-width: 425px)" srcSet={image2m} />
-            <source media="(min-width: 426px)" srcSet={image2} />
+            <source media="(max-width: 480px)" srcSet={image2m} />
+            <source media="(min-width: 480px)" srcSet={image2} />
             <img
               src={image2}
               className="d-block w-100"
@@ -61,8 +61,8 @@ function Carosuel1() {
         <div class="carousel-item ci" >
           {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
-            <source media="(max-width: 425px)" srcSet={image3m} />
-            <source media="(min-width: 426px)" srcSet={image3} />
+            <source media="(max-width: 480px)" srcSet={image3m} />
+            <source media="(min-width: 480px)" srcSet={image3} />
             <img
               src={image3}
               className="d-block w-100"
@@ -78,8 +78,8 @@ function Carosuel1() {
         <div class="carousel-item ci" >
           {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
-            <source media="(max-width: 425px)" srcSet={image4m} />
-            <source media="(min-width: 426px)" srcSet={image4} />
+            <source media="(max-width: 480px)" srcSet={image4m} />
+            <source media="(min-width: 480px)" srcSet={image4} />
             <img
               src={image4}
               className="d-block w-100"

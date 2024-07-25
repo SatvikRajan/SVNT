@@ -217,7 +217,7 @@
 
 } */
 
-@media (max-width: 426px) {
+@media (max-width: 480px) {
   .scrolled-nav{
     height: 4rem;
     animation: none;
