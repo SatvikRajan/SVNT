@@ -10,9 +10,31 @@ import image6 from '../images/Partners/arrow_forward.svg'
 import certification from '../images/Partners/certification-gentec.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faLeftLong } from '@fortawesome/free-solid-svg-icons';
-import React, { useEffect } from 'react'
-
+import React, { useEffect, useState } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Slider from "react-slick";
+
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <button className="carousel-control-next" type="button" onClick={onClick} style={{ ...style, display: "block", width: '20%', top: '102%' }}>
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+        </button>
+    );
+}
+
+function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <button className="carousel-control-prev" type="button" onClick={onClick} style={{ ...style, display: "block", width: '20%', top: '102%' }}>
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+        </button>
+    );
+}
+
 const ArrowRightIcon = ({ className }) => {
     return <FontAwesomeIcon icon={faArrowRight} className={className} />;
 };
@@ -39,7 +61,12 @@ const desc = ["Genetec Inc. is an innovative technology company offering a wide 
 ]
 
 export default function Partners() {
-    const slider = React.useRef(null);
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const handleBeforeChange = (oldIndex, newIndex) => {
+        setCurrentSlide(newIndex);
+    };
+    const totalSlides = 5;
 
     var settings = {
         dots: false,
@@ -50,9 +77,22 @@ export default function Partners() {
         autoplaySpeed: 5000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false
+        arrows: true,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />
     };
-   
+
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            offset: 200,
+            delay: 500,
+            once: true
+        });
+    }, []);
+
+
     return (
         <>
             <div className="partners-hero">
@@ -73,11 +113,11 @@ export default function Partners() {
                 </div>
             </div>
 
+            <p className="desc-head">What Genetec has to offer?</p>
             <div className="partners-desc">
                 <div className="partners-desc-container">
                     <div data-aos='fade-right' className="description">
-                        <p className="desc-head">What Genetec has to offer?</p>
-                        <Slider ref={slider} {...settings}>
+                        <Slider {...settings} beforeChange={handleBeforeChange}>
 
                             <div className="desc-box">
                                 <div className='box-heading'>
@@ -184,7 +224,7 @@ export default function Partners() {
                         </Slider>
 
                     </div>
-                    <div data-aos='fade-left' className="desc-image box-image">
+                    <div data-aos='fade-left' className="desc-image1 box-image">
                         <picture>
                             <source media="(max-width: 480px)" srcSet={image1m} />
                             <source media="(min-width: 480px)" srcSet={image2} />
@@ -194,6 +234,9 @@ export default function Partners() {
                             />
                         </picture>
                     </div>
+                    {/* <div className="slide-count">
+                        {currentSlide + 1} / {totalSlides}
+                    </div> */}
                 </div>
             </div>
             <div className='d-flex certification'>

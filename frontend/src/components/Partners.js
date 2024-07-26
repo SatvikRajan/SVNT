@@ -14,7 +14,7 @@ export default function Partners() {
     }, []);
     return (
         <>
-            <div className='d-flex partners container'>
+            <div className='d-flex partners'>
                 <img className='partners-img' data-aos='fade-right' src={partners} alt="" />
                 <div className='partners-text' data-aos='fade-left'>
                     <img height={70} src={genetec} alt="" />

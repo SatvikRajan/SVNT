@@ -12,6 +12,7 @@ import 'aos/dist/aos.css';
 import ArrowIcon from "../components/ArrowIcon";
 import axios from 'axios';
 export const CareersPage = () => {
+  
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -20,10 +21,15 @@ export const CareersPage = () => {
   const [resume, setResume] = useState(null);
   const [showForm, setShowForm] = useState(false);
   const [jobs, setJobs] = useState([]);
-  const [jobDetails, setJobDetails] = useState(null);
+  const [jobDetails, setJobDetails] = useState({
+    title: 'Software Developer',
+    description: 'Default job description',
+    employmentType: 'Full Time',
+    experience: '4 Years',
+    primaryskills: 'C++, C',
+    requiredskills: 'Java , Hello'
+  });
   const [selectedJobTitle, setSelectedJobTitle] = useState('');
-
-
   const handleFileChange = (e) => {
     setResume(e.target.files[0]);
   };
@@ -40,6 +46,7 @@ export const CareersPage = () => {
 
     fetchJobs();
   }, []);
+
 
   useEffect(() => {
     const fetchJobDetails = async () => {
@@ -272,7 +279,7 @@ export const CareersPage = () => {
                 </div>
               </div>
             ) : (
-              <div className="job-des d-flex">
+              <div className="job-des d-flex" data-aos="fade-left">
                 <div style={{ marginLeft: "-35px", marginRight: "15px" }}>
                   {" "}
                   <svg

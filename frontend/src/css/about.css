@@ -240,6 +240,16 @@
   .ceo-text-head {
     font-size: 30px !important;
   }
+  .about-clients{
+    margin: 0 ;
+    margin-left: 0 ;
+    margin-right: 0 ;
+    padding: 3rem;
+  }
+  .ceo{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 1024px) {

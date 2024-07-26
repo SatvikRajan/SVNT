@@ -55,7 +55,7 @@ export default function Timeline() {
         const { className, style, onClick } = props;
         return (
             <div
-                className={`arrow ${className}`}
+                className={`arrow ${className} `}
                 style={{
                     ...style,
                     width: '60px',
@@ -90,6 +90,27 @@ export default function Timeline() {
                 breakpoint: 480,
                 settings: {
                   slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 1080,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 1440,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 2,
                   slidesToScroll: 1
                 }
             }

@@ -144,8 +144,8 @@ h1{
 }
 
 .info-set .para{
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 30px;
     letter-spacing: 5%;
 }
 
@@ -155,7 +155,6 @@ h1{
 .info-set-down{
     margin-top: -0.9%;
     border-top: 4px solid #808283 !important;
-
 }
 
 .info .gap{
@@ -199,6 +198,15 @@ transition: color 1s ease;
 /* display: none; */
 }
 
+@media (max-width:768px) {
+    .info-set .sub-head {
+        font-size: 25px;
+    }
+    .info-set .para{
+        line-height: 24px;
+    }
+}
+
 @media (max-width: 480px) {
     .timeline-carousel .info{
         height: 100%;
@@ -207,12 +215,22 @@ transition: color 1s ease;
         height: 100%;
     }
     .info .info-set{
+        text-align: start !important;
         padding: 1% 0%;
     }
     .info{
         text-align: start !important;
     }
     .timeline-carousel{
-        height: 100vh;
+        height: 22rem;
+    }
+    .info-set-down{
+        border-top: none !important;
+    }
+    .info-set-up{
+        border-bottom: none !important;
+    }
+    .arrow{
+        top: 115% !important;
     }
 }

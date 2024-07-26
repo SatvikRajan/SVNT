@@ -12,6 +12,7 @@
 }
 
 .partners {
+  padding: 4rem;
   gap: 30px;
   display: flex;
 }
@@ -228,10 +229,6 @@
   margin-top: 1rem;
 }
 
-.slick-list{
-  margin-left: 5rem !important;
-  margin-right: 5rem !important;
-}
 
 .home-cs-card-content .description {
   opacity: 0; /* Initially hidden */
@@ -250,6 +247,21 @@
 .description{
   font-size: 18px;
 }
+
+@media (hover: none), (max-width: 767px) {
+  .home-cs-card:hover .home-cs-card-image {
+    height: 70%; /* Keep the initial height */
+  }
+
+  .home-cs-card:hover .home-cs-card-content {
+    height: 5%; /* Keep the initial height */
+  }
+
+  .home-cs-card:hover .home-cs-card-content .description {
+    opacity: 0; /* Keep the description hidden */
+  }
+}
+
 @media (max-width: 768px) {
   .x1 {
     flex-wrap: wrap;

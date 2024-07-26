@@ -15,7 +15,7 @@ import 'aos/dist/aos.css';
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <button className="carousel-control-prev" type="button" onClick={onClick} style={{ ...style, display: "block" }}>
+    <button className="carousel-control-prev" type="button" onClick={onClick} style={{ ...style, display: "block"}}>
       <span className="carousel-control-prev-icon" aria-hidden="true"></span>
       <span className="visually-hidden">Previous</span>
     </button>
@@ -45,6 +45,27 @@ function CaseStudiesCarousel() {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
       {
         breakpoint: 480,
         settings: {

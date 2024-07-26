@@ -4,7 +4,7 @@
 }
 .gotoback {
   display: none;
-  filter: invert(0);
+  filter: invert(1);
   margin-block-start: 10rem;
   margin-left: 18rem;
 }

@@ -51,9 +51,7 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
     ];
 
     const handleClickOutside = (e) => {
-        if (e.target === e.currentTarget) {
-            setClick(false);
-        }
+        setClick(false)
     };
 
     return (
