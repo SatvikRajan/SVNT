@@ -265,7 +265,7 @@ a:hover {
   color: #251741;
   font-size: 54px;
 }
-@media (max-width: 768px) {
+@media (max-width: 864px) {
   .jobs {
     flex-wrap: wrap;
     gap: 40px !important;
@@ -286,7 +286,7 @@ a:hover {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 864px) and (max-width: 1024px) {
   .jobs {
     gap: 50px;
     margin-left: 0px;
@@ -379,7 +379,7 @@ a:hover {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1240px){
+@media (min-width: 864px) and (max-width: 1240px){
   .career-text1{
     bottom: 20rem;
     font-size: 32px;

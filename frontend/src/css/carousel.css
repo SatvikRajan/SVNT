@@ -17,15 +17,13 @@
 
 .carousel-indicators {
   align-items: center;
-  width: 46rem;
+  /* width: 46rem; */
   height: 4rem;
   border-radius: 50px;
   gap: 30px;
   opacity: 1 !important;
-  right: 74rem !important;
+  /* right: 74rem !important; */
   bottom: 2rem !important;
-  margin-right: 0% !important;
-  margin-left: 28% !important;
 }
 
 .carousel-indicators .active {
@@ -398,7 +396,7 @@ body {
   transition: none !important;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 864px) {
   .carousel-item5 {
     margin-right: 0;
     flex: 0 0 32.1% !important;

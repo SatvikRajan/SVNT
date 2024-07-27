@@ -415,7 +415,7 @@
     height: 200vh;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 864px) {
   .only-desktop {
     display: none;
   }
@@ -462,7 +462,7 @@
 .csd-head svg {
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 864px) {
   .expand-img,
   .img-bg {
     display: none;

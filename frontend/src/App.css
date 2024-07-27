@@ -93,7 +93,7 @@ svg.btn.search {
 .subject {
   margin-bottom: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 864px) {
   .form-text {
     font-size: 30px;
   }
@@ -787,7 +787,7 @@ main {
   font-size: 34px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 864px) and (max-width: 1024px) {
   .logo-brand{
     top: 38px;
     left: 90px;
@@ -803,7 +803,7 @@ main {
   
 }
 
-@media (min-width: 768px) and (max-width: 1240px) {
+@media (min-width: 864px) and (max-width: 1240px) {
   .text{
     bottom: 18rem;
     font-size: 28px;

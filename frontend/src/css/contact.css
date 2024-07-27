@@ -13,7 +13,7 @@
   margin-left: 8rem;
   padding-top: 3rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 864px) {
   .offices1 {
     flex-wrap: wrap;
   }
@@ -36,7 +36,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 864px) and (max-width: 1024px) {
   /* .contact-image {
     padding: 2rem;
   } */

@@ -138,8 +138,11 @@
 } */
 
 
-@media (max-width: 768px) {
+@media (max-width: 864px) {
   .nameyear{
     padding-top: 0 !important;
+  }
+  .videoText .video-info{
+    padding-left: 0;
   }
 }

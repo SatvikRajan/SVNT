@@ -194,7 +194,7 @@
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 864px) {
   .about-us-head-name {
     top: 14rem !important;
     font-size: 28px !important;

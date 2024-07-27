@@ -183,7 +183,7 @@ p{
     display: inline-block;
   }
 
-  @media (max-width: 768px){
+  @media (max-width: 864px){
 
     .services-details{
       display: flex;

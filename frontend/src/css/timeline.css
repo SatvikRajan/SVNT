@@ -198,7 +198,7 @@ transition: color 1s ease;
 /* display: none; */
 }
 
-@media (max-width:768px) {
+@media (max-width:864px) {
     .info-set .sub-head {
         font-size: 25px;
     }

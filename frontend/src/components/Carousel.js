@@ -82,7 +82,7 @@ function CaseStudiesCarousel() {
       },
 
       {
-        breakpoint: 1168,
+        breakpoint: 1248,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1
