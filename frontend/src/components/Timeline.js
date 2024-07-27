@@ -96,7 +96,7 @@ export default function Timeline() {
             {
                 breakpoint: 1080,
                 settings: {
-                  slidesToShow: 3,
+                  slidesToShow: 2,
                   slidesToScroll: 1
                 }
             },

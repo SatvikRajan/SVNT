@@ -1,9 +1,8 @@
-.navigation-bar{
+.navigation-bar {
   background-color: aquamarine;
   /* width: 99vw; */
   height: 100%;
   overflow-y: scroll;
-
 }
 
 /* Adjust padding to account for scrollbar */
@@ -12,7 +11,7 @@
 }
 
 .navbar {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 0 !important;
   border-radius: 100px;
   box-sizing: content-box;
@@ -21,7 +20,7 @@
   /* padding: 0 !important; */
   /* left: 52%; */
   position: fixed !important;
-  background-color: #F1FAFF;
+  background-color: #f1faff;
   width: 42%;
   height: 8.5%;
   top: 5%;
@@ -54,10 +53,8 @@
     /* align-items: flex-end; */
     justify-content: space-between;
     padding: 0;
-
   }
 }
-
 
 @keyframes shrinkToCenter {
   from {
@@ -70,19 +67,13 @@
   }
 }
 
-.scrolled-nav{
+.scrolled-nav {
   animation: expandFromLeft 0.3s ease forwards;
   top: 0;
   height: 5rem;
   /* background-color: aqua; */
   /* padding-right: 16px; */
   /* width: 100vw; */
-}
-
-.scrolled-top .navbar {
-  animation: shrinkToCenter 0.4s ease forwards;
-  /* background-color: #5b4586; */
-  
 }
 
 .navbar-brand img {
@@ -96,17 +87,14 @@
   /* background-color: #5023aa;
   width: 100%; */
   height: 28px;
-  
 }
-
 
 .nav-link.active {
   border-radius: 100px;
-  background: linear-gradient(135deg, #251741, #5023aa) !important;
+  background: linear-gradient(135deg, #251741, #5023aa);
   color: white !important;
   font-weight: 200 !important;
   text-decoration: none;
-  
 }
 
 .navbar.hidden {
@@ -131,21 +119,15 @@
   text-align: right;
 }
 .nav-item {
- 
   position: relative;
   /* margin: 0% 2% 0% 2%; */
   width: fit-content;
-  
+
   /* background-color: antiquewhite; */
-
-}
-
-.scrolled-nav .nav-item{
-  left: 15%;
 }
 
 .nav-link {
-  transition: color 0.3s, border-bottom-color 0.3s;
+  /* transition: color 0.3s, border-bottom-color 0.3s; */
   position: relative;
   letter-spacing: 0.1px !important;
   display: flex;
@@ -156,19 +138,19 @@
   width: 100%;
   font-size: 20px;
   font-weight: 500;
-  color: black !important;
+  color: rgb(0, 0, 0) !important;
   text-decoration: none;
   /* margin: 0% 10% 0% 5%; */
   /* background-color: aqua; */
   padding: 25px 20px !important;
-  
+
   /* margin-left: 0; */
 }
 
 /* From Left to Right */
 /* Fade in */
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -176,7 +158,7 @@
   height: 3px;
   background-color: #000000;
   opacity: 0;
-  transition: opacity 300ms, transform 300ms;
+  /* transition: opacity 300ms, transform 300ms; */
 }
 
 .nav-link:hover::after,
@@ -217,14 +199,108 @@
 
 } */
 
+@media (max-width: 426px) {
+  .scrolled-nav {
+    height: 4rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .nav-link {
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 1137px) {
+  .nav-link {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 1062px) {
+  .nav-link {
+    font-size: 70%;
+  }
+}
+
+.navbar-expand-lg .navbar-collapse {
+  justify-content: end;
+}
+
+@media (max-width: 990px) {
+  .no-margin {
+    margin-top: 20px;
+  }
+
+  .with-margin {
+    margin-top: 10px;
+  }
+  #navbarSupportedContent {
+    display: flex;
+    justify-content: end;
+  }
+
+  .navbar-nav {
+    width: 40%;
+    align-items: end;
+    padding-top: 20px;
+  }
+
+  .nav-link {
+    width: 100%;
+    justify-content: end;
+    color: white;
+  }
+
+  .nav-item {
+    width: 100%;
+    background: white;
+    border-bottom: black 2px solid;
+  }
+
+  .nav-link.active {
+    background: #202020 !important;
+    border-radius: 0;
+  }
+
+  .collapse:not(.show) {
+    display: none !important;
+  }
+}
+
+.container,
+.container-md,
+.container-sm {
+  max-width: unset !important;
+  /* padding: 0 45px; */
+}
+
+.rotate {
+  animation: rotate 0.2s ease-in;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateZ(90deg);
+  }
+}
+
+.reverserotate {
+  animation: reverse rotate 0.2s ease-in;
+}
+
 @media (max-width: 480px) {
-  .scrolled-nav{
+  .scrolled-nav {
     height: 4rem;
     animation: none;
     width: 100%;
     border-radius: 0;
   }
-  .home{
-    margin-top: 5rem;
+  .home {
+    margin-top: 6rem;
   }
 }

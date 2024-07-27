@@ -6,6 +6,9 @@
   position: relative;
   /* background-color: #0077ff; */
 }
+.openarrow{
+  display: none;
+}
 /* 
 .wwdb-containerDetails{
   width: 100vw;
@@ -97,7 +100,7 @@
 .wwdb-menu div {
   position: absolute;
   /* background-color: aliceblue; */
-  width: fit-content;
+  /* width: fit-content; */
 }
 
 .mainLogo {
@@ -364,5 +367,9 @@
     padding: 1rem !important;
     padding-left: 2rem !important;
     width: 95vw;
+  }
+  .openarrow{
+    display: block;
+    margin-left: auto;
   }
 }

@@ -6,6 +6,7 @@ import '../css/navbar.css'
 const Navbar = () => {
     const location = useLocation();
     const [activeLink, setActiveLink] = useState(null);
+    const [drop,setDrop]=useState(false)
 
     // useEffect(() => {
     //     const handleScroll = () => {
@@ -58,12 +59,16 @@ const Navbar = () => {
         setActiveLink(href);
     };
 
+    const alterDropdown=()=>{
+        setDrop(!drop)
+    }
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg scrolled-nav " id='navbar'>
-                <div className="container">
+            <div className={`container ${drop ? 'no-margin' : ' '}`}>
                     <Link className="navbar-brand" to="/">
-                        <img src={Logo} alt="SVNT Tech" height={30} />
+                        <img src={Logo} alt="SVNT Tech" height={30} style={{paddingLeft:"30px"}} />
                     </Link>
                     <button
                         className="navbar-toggler"
@@ -73,8 +78,14 @@ const Navbar = () => {
                         aria-controls="navbarSupportedContent"
                         aria-expanded="false"
                         aria-label="Toggle navigation"
+                        onClick={alterDropdown}
                     >
-                        <span className="navbar-toggler-icon"></span>
+
+                        
+{drop ? (
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="Cross" style={{height:"2rem"}} className={`  ${drop? 'rotate' : ''}`}><line x1="9.37" x2="54.63" y1="9.37" y2="54.63" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="4" class="colorStroke010101 svgStroke"></line><line x1="9.37" x2="54.63" y1="54.63" y2="9.37" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="4" class="colorStroke010101 svgStroke"></line></svg>     ) : (
+                            <span   className={` navbar-toggler-icon  ${!drop? 'reverserotate' : ''}`}></span>
+                        )}
                     </button>
                     <div className="navbar-collapse navLinksPosition collapse" id="navbarSupportedContent">
                         <ul id='nav-links' className="navbar-nav ">

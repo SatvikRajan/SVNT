@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -25,7 +26,7 @@ const Footer = () => {
                   fill="white"
                 />
               </svg>
-              <span><a className="mail1" href="mailto:info@svntech.com">info@svntech.com</a></span>
+              <span><Link className="mail1"to="mailto:info@svntech.com">info@svntech.com</Link></span>
             </div>
             <div style={{ gap: "30px" }} className="d-flex footer-email">
               <svg

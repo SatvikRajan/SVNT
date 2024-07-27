@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import company from '../images/logo1.png';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 export default function AdminPage() {
     const [candidates, setCandidates] = useState([]);
     const [job, setJob] = useState({
@@ -64,7 +64,7 @@ export default function AdminPage() {
             </div>
             <div className="admin-left">
                 <h1>Applications</h1>
-                <a href=""></a><p>Add Vacancy</p>
+                <Link to=""></Link><p>Add Vacancy</p>
                 <p>Received</p>
                 <p>Add Vacancy</p>
             </div>
@@ -118,9 +118,9 @@ export default function AdminPage() {
                             <td>{candidate.relevantExperience}</td>
                             <td>
                                 {candidate.resumePath && (
-                                    <a href={`http://localhost:8080/${(candidate.resumePath)}`} target="_blank" rel="noopener noreferrer">
+                                    <Link to={`http://localhost:8080/${(candidate.resumePath)}`} target="_blank" rel="noopener noreferrer">
                                         {candidate.resumePath}
-                                    </a>
+                                    </Link>
                                 )}
                             </td>
                             <td>

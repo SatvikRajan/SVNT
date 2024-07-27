@@ -3,6 +3,7 @@ import '../css/mainstart.css';
 import bgVideo from '../images/Home/mainstart.mp4'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 export default function MainStart() {
   const yearsRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
@@ -91,9 +92,9 @@ export default function MainStart() {
         <p className='video-info' data-aos='fade-right'>
           Protection you can rely on<br/>Count on us to keep you safe and secure
         </p>
-        <a className="align-self-end" style={{ marginLeft: '8.5rem' }} href="/about" data-aos='fade-left'>
+        <Link className="align-self-end le" style={{ marginLeft: '8.5rem' }}to="/about" data-aos='fade-left'>
           <p className="fs-4 text-light w-100 readmore">Read more</p>
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react'
 import last from '../images/Home/last-career.png'
+import { Link } from 'react-router-dom';
 export default function LastContent() {
   return (
     <>
@@ -11,9 +12,9 @@ export default function LastContent() {
             <li>Discover New Horizons </li>
             <li>Design the Future</li>
           </ul>
-          <a href="/careers" style={{width: '15%', marginLeft: 'auto'}}>
+          <Link to="/careers" style={{width: '15%', marginLeft: 'auto'}}>
             <p className="last-text1 join">Join Us</p>
-          </a>
+          </Link>
         </div>
         {/* <img src={last} style={{ marginBottom: '3rem' }} alt="" /> */}
         <img src={last} alt="" />
@@ -27,9 +28,9 @@ export default function LastContent() {
           </p>
         </div>
         <div className="ms-auto align-self-center lc-2 hehe" style={{width: '18%'}}>
-          <a href="/contact" style={{ width: '100%' }} className=" text-light align-self-end fs-4 readmore">
+          <Link to="/contact" style={{ width: '100%' }} className=" text-light align-self-end fs-4 readmore">
             Contact Us
-          </a>
+          </Link>
         </div>
       </div >
     </>

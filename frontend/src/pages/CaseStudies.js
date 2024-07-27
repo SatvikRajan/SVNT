@@ -237,8 +237,6 @@ export default function CaseStudies() {
   const [value, setValue] = React.useState(0);
   const [expanded, setExpanded] = React.useState({});
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
-  const [sbg, setSbg] = useState('none'); // Default background image
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -282,7 +280,7 @@ export default function CaseStudies() {
                   width: '100%',
                   '& .MuiTab-root': {
                     textTransform: 'none',
-                    minWidth: '300px !important',
+                    minWidth: '257px !important',
                     maxWidth: '312px !important',
                     marginRight: '4%',
                     color: 'inherit',
@@ -290,7 +288,7 @@ export default function CaseStudies() {
                   '& .MuiTab-root.Mui-selected': {
                     backgroundColor: '#251741',
                     color: 'white',
-                    minWidth: '300px !important',
+                    minWidth: '257px !important',
                     maxWidth: '312px !important',
                     marginRight: '4%'
                   },
@@ -331,7 +329,7 @@ export default function CaseStudies() {
 
               {menuItems.map((item, index) => (
                 <TabPanel key={item.id} value={value} index={index} dir={theme.direction}>
-                  <div className="cs-details" >
+                  <div className="cs-details" id='cs-details'>
                     {item.cs.map((caseStudy, csIndex) => (
                       <div key={csIndex} className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation  ' : ''}`}>
                         {!isDropdownOpen && <img className="image-bg" src={caseStudy[2]} alt='' />}

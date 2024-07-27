@@ -7,6 +7,7 @@ import image2 from '../images/Partners/image2.png'
 import image4 from '../images/Partners/person.png'
 import image5 from '../images/Partners/genetec_logo_white.png'
 import image6 from '../images/Partners/arrow_forward.svg'
+import pbgm from '../images/Partners/partners-bgmobile.png'
 import certification from '../images/Partners/certification-gentec.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faLeftLong } from '@fortawesome/free-solid-svg-icons';
@@ -14,6 +15,7 @@ import React, { useEffect, useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Slider from "react-slick";
+import { Link } from 'react-router-dom';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -28,7 +30,7 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-        <button className="carousel-control-prev" type="button" onClick={onClick} style={{ ...style, display: "block", width: '20%', top: '102%' }}>
+        <button className="carousel-control-prev" type="button" onClick={onClick} style={{ ...style, display: "block", width: '20%', top: '102%', right: '20px' }}>
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Previous</span>
         </button>
@@ -98,12 +100,13 @@ export default function Partners() {
             <div className="partners-hero">
                 <img className='main-logo' src={genetec} alt="genetec-logo" />
                 <img className="subtitle" src={subtitle} alt="genetec-logo" />
+                <img src={pbgm} className='pmobile' alt="" />
             </div>
 
+            <p className="desc-head">What Genetec does ?</p>
             <div className="partners-desc">
-                <div className="partners-desc-container">
+                <div className="partners-desc-container2">
                     <div className="description" data-aos='fade-right'>
-                        <p className="desc-head">What Genetec does ?</p>
                         <p className="desc-content">{desc[0]}</p>
                     </div>
                     <div className="desc-image" data-aos='fade-left'>
@@ -131,9 +134,11 @@ export default function Partners() {
                                     </ul>
 
                                     <div className="wwdb-learn-more partners-learn-more" style={{ width: '300px', fontSize: '30px !important' }}>
-                                        <a href="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
+                                        <Link to="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
                                             <ArrowRightIcon className="fas" />
-                                        </span></p></a>
+                                        </span>
+                                        </p>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -152,9 +157,9 @@ export default function Partners() {
                                         </ul>
 
                                         <div className="wwdb-learn-more partners-learn-more" style={{ width: '300px', fontSize: '30px !important' }}>
-                                            <a href="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
+                                            <Link to="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
                                                 <ArrowRightIcon className="fas" />
-                                            </span></p></a>
+                                            </span></p></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -173,9 +178,9 @@ export default function Partners() {
                                         </ul>
 
                                         <div className="wwdb-learn-more partners-learn-more" style={{ width: '300px', fontSize: '30px !important' }}>
-                                            <a href="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
+                                            <Link to="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
                                                 <ArrowRightIcon className="fas" />
-                                            </span></p></a>
+                                            </span></p></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -194,9 +199,9 @@ export default function Partners() {
                                         </ul>
 
                                         <div className="wwdb-learn-more partners-learn-more" style={{ width: '300px', fontSize: '30px !important' }}>
-                                            <a href="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
+                                            <Link to="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
                                                 <ArrowRightIcon className="fas" />
-                                            </span></p></a>
+                                            </span></p></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -214,9 +219,9 @@ export default function Partners() {
                                         </ul>
 
                                         <div className="wwdb-learn-more partners-learn-more" style={{ width: '300px', fontSize: '30px !important' }}>
-                                            <a href="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
+                                            <Link to="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
                                                 <ArrowRightIcon className="fas" />
-                                            </span></p></a>
+                                            </span></p></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -281,14 +286,14 @@ export default function Partners() {
                         <p className='word1'>Curious About Genetec?</p>
                         <p className='word2'>Discover More Here!</p>
                     </div>
-                    <a href='https://www.genetec.com' target='blank'>
+                    <Link to='https://www.genetec.com' target='blank'>
                         <div className='sub-two'>
                             <img className="sub-two-logo" src={image5} alt='genetec logo' />
                             <p>Website</p>
                             <img className="sub-two-arrow" src={image6} alt='arrow' />
                         </div>
 
-                    </a>
+                    </Link>
 
                 </div>
             </div>

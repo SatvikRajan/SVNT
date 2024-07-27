@@ -13,6 +13,7 @@ import '../css/wwdb.css'
 import WwdbDetails from './WwdbDetails';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faLeftLong } from '@fortawesome/free-solid-svg-icons';
@@ -73,6 +74,9 @@ export default function WhyWeDoBest() {
               setTopPos(135);
               setLeftPos(709);
             }}>
+              <svg width="26" height="27" className='openarrow' viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
+              </svg>
               <p>{names[0]}</p>
               <img className='logoImg' src={logo0} alt='client' />
             </div>
@@ -84,6 +88,9 @@ export default function WhyWeDoBest() {
               setLeftPos(336);
             }}
             >
+              <svg width="26" height="27" className='openarrow' viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
+              </svg>
               <p>{names[1]}</p>
               <img className='logoImg' src={logo1} alt='client' />
             </div>
@@ -94,6 +101,9 @@ export default function WhyWeDoBest() {
               setTopPos(379);
               setLeftPos(409);
             }}>
+              <svg width="26" height="27" className='openarrow' viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
+              </svg>
               <p>{names[2]}</p>
               <img className='logoImg' src={logo2} alt='client' />
             </div>
@@ -104,6 +114,9 @@ export default function WhyWeDoBest() {
               setTopPos(490);
               setLeftPos(193);
             }}>
+              <svg width="26" height="27" className='openarrow' viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
+              </svg>
               <p>{names[3]}</p>
               <img className='logoImg' src={logo3} alt='client' />
             </div>
@@ -114,8 +127,12 @@ export default function WhyWeDoBest() {
               setTopPos(565);
               setLeftPos(642);
             }}>
+
               <img className='logoImg' src={logo4} alt='client' />
               <p>{names[4]}</p>
+              <svg width="26" height="27" className='openarrow' viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
+              </svg>
             </div>
 
             <div className='m5' data-aos='fade-left' onClick={() => {
@@ -124,8 +141,12 @@ export default function WhyWeDoBest() {
               setTopPos(490);
               setLeftPos(985);
             }}>
+
               <img className='logoImg' src={logo5} alt='client' />
               <p>{names[5]}</p>
+              <svg width="26" height="27" className='openarrow' viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
+              </svg>
             </div>
 
             <div className='m6' data-aos='fade-left' onClick={() => {
@@ -134,8 +155,12 @@ export default function WhyWeDoBest() {
               setTopPos(379);
               setLeftPos(1034);
             }}>
+
               <img className='logoImg' src={logo6} alt='client' />
               <p>{names[6]}</p>
+              <svg width="26" height="27" className='openarrow' viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
+              </svg>
             </div>
 
             <div className='m7' data-aos='fade-left' onClick={() => {
@@ -144,8 +169,12 @@ export default function WhyWeDoBest() {
               setTopPos(267);
               setLeftPos(985);
             }}>
+
               <img className='logoImg' src={logo7} alt='client' />
               <p>{names[7]}</p>
+              <svg width="26" height="27" className='openarrow' viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
+              </svg>
             </div>
 
 
@@ -153,9 +182,9 @@ export default function WhyWeDoBest() {
         </div>
 
         <div className="wwdb-learn-more wwdb-learnmore-2">
-          <a href="/services" class="btn btn-primary btn-arrow"><p className='learnMore text-dark'><span>Learn more
+          <Link to="/services" class="btn btn-primary btn-arrow"><p className='learnMore text-dark'><span>Learn more
             <ArrowRightIcon className="fas" />
-          </span></p></a>
+          </span></p></Link>
         </div>
       </div>
 

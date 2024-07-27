@@ -3,6 +3,7 @@ import partners from '../images/Home/partners.jpg'
 import genetec from '../images/Home/genetec.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 export default function Partners() {
     useEffect(() => {
         AOS.init({
@@ -22,7 +23,7 @@ export default function Partners() {
                     <p>Our trusted partner in delivering excellence.</p>
 
                     <p className='readmore rm-2 mt-5' style={{ filter: 'invert(1)', width: '35%' }}>
-                        <a href="/partners" className='text-white'>Read More</a>
+                        <Link to="/partners" className='text-white'>Read More</Link>
                     </p>
                 </div>
             </div>
