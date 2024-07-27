@@ -201,7 +201,7 @@ a:hover {
 }
 
 .copy-notification {
-  color: black !important;
+  color: white !important;
   text-align: center;
   transition: color 0.3s;
 }

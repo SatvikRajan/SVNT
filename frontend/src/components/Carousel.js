@@ -15,7 +15,7 @@ import 'aos/dist/aos.css';
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <button className="carousel-control-prev" type="button" onClick={onClick} style={{ ...style, display: "block"}}>
+    <button className="carousel-control-prev" type="button" onClick={onClick} style={{ ...style, display: "block" }}>
       <span className="carousel-control-prev-icon" aria-hidden="true"></span>
       <span className="visually-hidden">Previous</span>
     </button>
@@ -35,15 +35,43 @@ function SampleNextArrow(props) {
 
 function CaseStudiesCarousel() {
   const [items, setItems] = useState([]);
-
+  const currentIndex = 0;
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    // appendDots: dots => (
+    //   <div
+    //     className='slick-dots1'
+    //     style={{
+    //       borderRadius: "10px"
+    //       , bottom: '1rem'
+    //       // padding: "10px"
+    //     }}
+    //   >
+    //     <ul style={{ margin: "0px", paddingLeft: '0px' }}> {dots} </ul>
+    //   </div>
+    // ),
+    // customPaging: i => (
+    //   <div
+    //     style={{
+    //       width: i === currentIndex ? "30px" : "20px", // Larger width for active dot
+    //       height: "20px", // Increased height for all dots
+    //       color: i === currentIndex ? "purple" : "white",
+    //       display: "flex",
+    //       justifyContent: "center",
+    //       alignItems: "center",
+    //       transition: "width 0.3s",
+    //       fontSize: '70px'
+    //     }}
+    //   >
+    //     {'•'}
+    //   </div>
+    // ),
     responsive: [
       {
         breakpoint: 1440,
@@ -91,8 +119,6 @@ function CaseStudiesCarousel() {
       { id: 0, image: sss, title: 'JSW Eye on Pellet', description: 'Delve into the revolutionary world of pelletization plants through real time system integration.' },
       { id: 3, image: str, title: 'ITC Hotels', description: 'A Close Examination of how SVNT implements Security Protocols at ITC.' },
       { id: 4, image: sms, title: 'BEL(Rafael)', description: 'Explore the realm of security and management solutions, vital for safeguarding businesses against threats.' },
-      // { id: 1, image: ips, title: '', description: '' },
-      // { id: 2, image: ipn, title: '', description: '' },
       { id: 5, image: is, title: 'Om Books (Statocast)', description: 'Optimize efficiency with our integration solutions, merging systems for seamless communication and collaboration.' },
       { id: 6, image: avs, title: 'CFCL', description: 'Elevate communication and engagement with our audio-visual solutions.' },
       { id: 7, image: es, title: 'Aragen', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' },

@@ -12,6 +12,8 @@
 }
 
 .partners {
+  margin-left: 2rem;
+  margin-right: 2rem;
   padding: 4rem;
   gap: 30px;
   display: flex;
@@ -246,6 +248,9 @@
 
 .description{
   font-size: 18px;
+}
+.slick-dots1{
+  display: none;
 }
 
 @media (hover: none), (max-width: 767px) {
@@ -493,6 +498,34 @@
   .trustedtext p {
     padding-left: 10rem;
   }
+  .home-cs-card{
+    width: 22rem !important;
+  }
+  
+}
+@media (min-width: 1080px) and (max-width: 1440px) {
+  .rm-2{
+    width: 50% !important;
+  }
+  .cc1{
+    bottom: 15rem !important;
+  }
+  .ceo-text{
+    width: 55%;
+  }
+  .ceo-photo{
+    width: 45%;
+  }
+  .ceo-photo-1{
+    width: 100%;
+  }
+  .ceo{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .text{
+    font-size: 34px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -663,10 +696,7 @@
     padding-bottom: 1rem;
   }
   .ha {
-    display: flex;
-    flex-wrap: wrap;
     order: 2;
-    justify-content: space-between;
   }
   .whyus-details-1 {
     flex-direction: row;
@@ -698,7 +728,7 @@
     text-align: start;
   }
   .home-cs-card .home-cs-card-content {
-    height: 33%;
+    height: 53%;
     bottom: 1; /* Keep content at the bottom */
   }
   .home-cs-card .home-cs-card-content .description {
@@ -712,7 +742,7 @@
     height: 100%;
   }
   .home-cs-card{
-    height: 40rem;
+    height: 26rem;
     margin-left: 0;
     margin-right: 0;
     width: 90% !important;
@@ -725,13 +755,20 @@
   .x{
     padding-left: 0;
   }
-  .home-cs-card:hover:disabled{
-
+  .home-cs-card-image{
+    height: 50%;
   }
+  .home-cs-card-content{
+    justify-content: start;
+  }
+  .slick-dots1{
+    display: block;
+  }
+  
 }
 
 
-@media (max-width: 375px) {
+@media (max-width: 418px) {
   .number5{
     font-size: 60px !important;
   }

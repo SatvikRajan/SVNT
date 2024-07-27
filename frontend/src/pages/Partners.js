@@ -113,9 +113,9 @@ export default function Partners() {
                 </div>
             </div>
 
-            <p className="desc-head">What Genetec has to offer?</p>
-            <div className="partners-desc">
-                <div className="partners-desc-container">
+            <p className="desc-head desc-head1">What Genetec has to offer?</p>
+            <div className="partners-desc1">
+                <div className="partners-desc-container .partners-desc-container1">
                     <div data-aos='fade-right' className="description">
                         <Slider {...settings} beforeChange={handleBeforeChange}>
 

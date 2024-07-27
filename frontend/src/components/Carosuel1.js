@@ -33,7 +33,7 @@ function Carosuel1() {
             {/* <h1>First slide label</h1> */}
             <h1 style={{ width: '60%', fontSize: '40px', lineHeight: '4rem', color: 'black' }}>Relax, We've Got Your Back Your Security is Our Priority!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><a className='readmore text-white' style={{ width: '30%', filter: 'invert(1)' }} href='/contact'>Send us a message</a>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><a className='readmore text-white' style={{ width: '28%', filter: 'invert(1)' }} href='/contact'>Send us a message</a>
             </p>
             {/* <a href="/about"><p className='ccr text-white readmore'>Read More</p></a> */}
           </div>
@@ -54,7 +54,7 @@ function Carosuel1() {
               awards and recognition over
               the years!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><a className='readmore text-white' style={{ width: '30%', filter: 'invert(1)' }} href='/contact'>Send us a message</a>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><a className='readmore text-white' style={{ width: '28%', filter: 'invert(1)' }} href='/contact'>Send us a message</a>
             </p>
           </div>
         </div>
@@ -72,7 +72,7 @@ function Carosuel1() {
           <div class="carousel-caption cc1 d-none d-md-block">
             <h1 style={{ width: '50%', lineHeight: '4rem', color: 'black', marginBottom: '1rem' }}>Explore our many services designed to meet your needs.
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><a className='readmore text-white' style={{ width: '30%', filter: 'invert(1)' }} href='/contact'>Send us a message</a></p>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><a className='readmore text-white' style={{ width: '28%', filter: 'invert(1)' }} href='/contact'>Send us a message</a></p>
           </div>
         </div>
         <div class="carousel-item ci" >
@@ -89,7 +89,7 @@ function Carosuel1() {
           <div class="carousel-caption cc1 cc2 d-none d-md-block">
             <h1 style={{ width: '60%', lineHeight: '4rem', color: 'black' }}>Dive into our case studies and see how we deliver results!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><a className='readmore text-white' style={{ width: '30%', filter: 'invert(1)' }} href='/contact'>Learn more about us</a></p>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><a className='readmore text-white' style={{ width: '28%', filter: 'invert(1)' }} href='/contact'>Learn more about us</a></p>
           </div>
         </div>
       </div>

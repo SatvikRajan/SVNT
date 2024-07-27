@@ -170,21 +170,21 @@ const Contact = () => {
             title="Bangalore"
             address="D No: 114, 52/1 , 2nd Floor, Krishna Reddy Building , 24th Main Road , HSR Layout, 2nd Sector"
             phoneNumber="123456789"
-            backgroundImage={loc2}
+            backgroundImage={loc3}
           />
 
           <LocationCard
             title="Kolkata"
             address="Balaji Apartment, Kalitala PO, Nawab Ganj, Ichapur , North 24 Paraganas , Kolkatta , West Bengal , India"
             phoneNumber="123456789"
-            backgroundImage={loc3}
+            backgroundImage={loc4}
           />
 
           <LocationCard
             title="Delhi"
             address="House No.849, GROUND FLOOR , SECTOR, 47 GURGAON, (HR) 122001"
             phoneNumber="123456789"
-            backgroundImage={loc4}
+            backgroundImage={loc2}
           />
         </div>
       </div>

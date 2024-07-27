@@ -28,6 +28,9 @@
 }
 .partners-desc1 {
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .partners-desc-container {
@@ -38,6 +41,7 @@
 
   /* background-color: aqua; */
 }
+
 .desc-head {
   font-size: 42px;
   font-weight: bold;
@@ -372,8 +376,15 @@
     flex-wrap: wrap;
   }
   .desc-head {
+    padding-left: 0;
     font-size: 18px;
     padding-bottom: 0;
+  }
+  .desc-head1{
+    padding-left: 1rem;
+  }
+  .sub-one{
+    padding-left: 0;
   }
   .description {
     /* display: flex; */
@@ -396,6 +407,7 @@
     width: 100%;
   }
   .partners-desc {
+    flex-direction: column-reverse;
     height: 100%;
   }
   .certification {
@@ -474,7 +486,9 @@
     padding-right: 1rem;
   }
   .box-image img {
-    margin-top: 2rem;
     margin-left: 5%;
+    width: 100%;
   }
+
+
 }
