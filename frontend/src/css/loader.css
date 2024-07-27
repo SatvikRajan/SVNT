@@ -79,3 +79,8 @@
     animation-timing-function: ease-in;
   }
 }
+
+
+@media (max-width: 480px) {
+  
+}

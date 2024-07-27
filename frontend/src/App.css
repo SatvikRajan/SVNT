@@ -800,6 +800,15 @@ main {
     width: 100%;
     margin: 2rem;
   }
+  
+}
+
+@media (min-width: 768px) and (max-width: 1240px) {
+  .text{
+    bottom: 18rem;
+    font-size: 28px;
+  }
+  
 }
 
 .slick-slide div{

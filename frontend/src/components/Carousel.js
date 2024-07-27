@@ -96,7 +96,7 @@ function CaseStudiesCarousel() {
         }
       },
       {
-        breakpoint: 768,
+        breakpoint: 968,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1

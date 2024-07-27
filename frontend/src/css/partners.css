@@ -366,6 +366,9 @@
   justify-content: center;
   margin-top: -7rem;
 } */
+ .cert{
+  width: 100%;
+ }
 
 @media (max-width: 1024px) {
   .certification {
@@ -380,6 +383,15 @@
   }
   .box-image img{
     height: fit-content !important;
+  }
+  .cert{
+    width: 100%;
+  }
+  .certification{
+    flex-wrap: wrap;
+  }
+  .sub-two{
+    grid-template-columns: 70% 30% 0;
   }
 }
 
@@ -529,5 +541,13 @@
   .desc-box{
     padding-left: 0;
     padding-right: 0;
+  }
+  .desc-head{
+    padding-left: 2rem;
+  }
+  .partners-desc-container2{
+    flex-wrap: wrap;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
