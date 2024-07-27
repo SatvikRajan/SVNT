@@ -32,10 +32,10 @@ function SimpleSlider() {
           <img src={ips1} alt="" />
         </div>
         <div>
-        <img src={ips1} alt="" />
+        <img src={ips2} alt="" />
         </div>
         <div>
-        <img src={ips1}  alt="" />
+        <img src={ips3}  alt="" />
         </div>
       </Slider>
       </div>

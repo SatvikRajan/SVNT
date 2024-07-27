@@ -563,7 +563,7 @@
     grid-template-columns: 60% 25% 5%;
   }
   .read_btn {
-    font-size: 20px;
+    font-size: 20px !important;
   }
   .box-content {
     font-size: 24px !important;
@@ -861,7 +861,7 @@
     pointer-events: none;
   }
   .read_btn {
-    top: 7rem !important;
+    top: 14rem !important;
   }
   .wwdb-menu {
     padding-top: 2rem;
@@ -875,5 +875,8 @@
   }
   .ha {
     justify-content: center;
+  }
+  .desc-box{
+    height: 38rem !important;
   }
 }
