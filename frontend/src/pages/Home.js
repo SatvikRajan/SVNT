@@ -15,7 +15,6 @@ export default function Home() {
 
   return (
     <div className="home">
-
       <div class="carousel1">
         <Carosuel1 />
       </div>

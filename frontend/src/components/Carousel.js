@@ -139,7 +139,7 @@ function CaseStudiesCarousel() {
     <div data-aos='fade-up' id="carouselExampleControls" className="carousel slide">
       <h1>Case Studies</h1>
       <div className="carousel-background">
-        <video autoPlay muted controls="false" loop id="myVideo" className="carousel-video">
+        <video autoPlay muted playsinline autobuffer controls={false} loop id="myVideo" className="carousel-video">
           <source src={video} type="video/mp4" />
         </video>
       </div>

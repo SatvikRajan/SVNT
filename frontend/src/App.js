@@ -16,18 +16,18 @@ import AdminRegister from './pages/AdminRegister';
 import Partners from './pages/Partners';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-
+  const handleLoading = () => {
+    setIsLoading(false);
+  }
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-    return () => clearTimeout(timeout);
-  }, []);
+    window.addEventListener("load", handleLoading);
+    return () => window.removeEventListener("load", handleLoading);
+  }, [])
 
   return (
     <BrowserRouter>
       {isLoading ? (
-        <div style={{ position: 'relative', height: '100vh', width: '100vw', backgroundColor: '#F1FAFF' }}>
+        <div className='loader' style={{ position: 'relative', height: '100vh', width: '100vw', backgroundColor: '#F1FAFF' }}>
           <Loader />
         </div>
       ) : (

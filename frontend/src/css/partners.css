@@ -407,6 +407,25 @@
   }
 }
 
+@media (min-width: 480px) and (max-width: 864px) {
+  .partners-desc-container2{
+    flex-wrap: wrap;
+  }
+  .certification{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .desc-box{
+    height: 42rem;
+  }
+  .box-content ul{
+    font-size: 20px;
+  }
+  .box-heading{
+    font-size: 24px;
+  }
+}
+
 @media (max-width: 480px) {
   .main-logo {
     height: 3rem;

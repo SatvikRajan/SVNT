@@ -56,7 +56,7 @@ export default function WhyWeDoBest() {
     <div className="what-we-do-best">
       <WwdbDetails click={clickVal} index={indexVal} setClick={setClickVal} topPos={topPos} leftPos={leftPos} />
       <div className="wwdb-container">
-        <video autoPlay loop muted className='wwdb-video'>
+        <video autoPlay loop muted autobuffer controls={false} playsInline className='wwdb-video'>
           <source src={bg} type="video/mp4" />
         </video>
         <p className="wwdb-head" data-aos='fade-down' data-aos-easing="ease-in-sine">What We Do</p>

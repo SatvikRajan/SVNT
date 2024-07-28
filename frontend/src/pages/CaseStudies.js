@@ -356,7 +356,7 @@ export default function CaseStudies() {
                                 })}
                               </ul>
                               <div className='cs-image'>
-                                <img src={caseStudy[3]} alt='' className='only-desktop hehe'/>
+                                <img src={caseStudy[3]} alt='' className='only-desktop hehe' />
                                 {!expanded[csIndex] && (
                                   <button
                                     onClick={() => handleReadMore(csIndex)}

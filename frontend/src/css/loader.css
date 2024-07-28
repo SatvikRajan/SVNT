@@ -82,5 +82,21 @@
 
 
 @media (max-width: 480px) {
-  
+  .newtons-cradle{
+    position:static;
+    transform: none;
+    align-self: center;
+  }
+  .loader{
+    display: flex;
+    justify-content: center;
+  }
+  .newtons-logo{
+    width: 50%;
+    left: 0;
+  }
+  .newtons-cradle__dot{
+    height: 80%;
+    width: 20%;
+  }
 }

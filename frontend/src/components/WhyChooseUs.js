@@ -23,6 +23,31 @@ export default function WhyChooseUs() {
     });
   }, []);
 
+  // useEffect(() => {
+  //   const element = document.querySelector('.whyus-details', '.whyus-details-1');
+  //   if (element) {
+  //     const isMobile = window.innerWidth <= 480;
+  //     const currentAos = element.getAttribute('data-aos');
+
+  //     if (isMobile) {
+  //       if (currentAos === 'fade-up') {
+  //         element.setAttribute('data-aos', 'fade-right');
+  //       } else if (currentAos === 'fade-down') {
+  //         element.setAttribute('data-aos', 'fade-left');
+  //       }
+  //     } else {
+  //       if (currentAos === 'fade-right') {
+  //         element.setAttribute('data-aos', 'fade-up');
+  //       } else if (currentAos === 'fade-left') {
+  //         element.setAttribute('data-aos', 'fade-down');
+  //       }
+  //     }
+  //   }
+
+  //   AOS.init();
+  //   AOS.refresh();
+  // }, []);
+
   return (
     <div className='whyus'>
       <p className='why-choose-head'>Why Choose Us</p>

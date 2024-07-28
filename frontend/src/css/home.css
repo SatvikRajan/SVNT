@@ -168,6 +168,7 @@
   font-size: 28px;
 }
 .why-choose-main {
+  gap: 2rem;
   padding: 2rem;
 }
 /* Basic styling */
@@ -336,6 +337,7 @@
     left: 495px !important;
   }
   .why-choose-main {
+    gap: 2rem;
     justify-content: center;
     height: 100%;
     flex-wrap: wrap;
@@ -346,21 +348,30 @@
   .entire-content {
     padding-left: 5rem;
   }
-  .home-cs-card .home-cs-card-content {
-    height: 50%;
-    bottom: 1; /* Keep content at the bottom */
-  }
-  .home-cs-card .home-cs-card-content .description {
-    opacity: 1; /* Make the description visible on hover */
-  }
-  .home-cs-card:hover {
-    transform: none;
-    height: 100%;
-  }
+  
   .partners{
     flex-wrap: wrap;
   }
   
+}
+
+@media (min-width: 480px) and (max-width: 864px) {
+  .home-cs-card-content .description {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s;
+  }
+  
+  .home-cs-card:hover .home-cs-card-content {
+    height: 60%; /* New height on hover */
+    bottom: 0; /* Keep content at the bottom */
+  }
+  
+  .home-cs-card:hover .home-cs-card-content .description {
+    opacity: 1; /* Make the description visible on hover */
+  }
+  #slideshow{
+    width: 0;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -632,11 +643,21 @@
     padding: 1rem;
   }
   .lc-1 {
+    font-size: 20px;
     width: 100% !important;
+  }
+  .lc-1 h1{
+    font-size: 22px !important;
+  }
+  .lc-1 p{
+    font-size: 18px !important;
   }
   .lc-2 {
     margin-top: 1rem;
     width: 60% !important;
+  }
+  .lc-2 a{
+    font-size: 18px !important;
   }
   .last img {
     margin-top: 2rem;
@@ -644,9 +665,11 @@
   }
 
   .last-text1 {
+    font-size: 18px;
     text-align: end;
   }
   .lt-text {
+    justify-content: space-between;
     flex-wrap: wrap;
   }
   .lc {
@@ -685,8 +708,12 @@
     width: 50% !important;
     margin-left: 50% !important;
   }
-  .last-text-1 {
+  .last-text-1 {   
+    font-size: 24px !important;
     position: unset;
+  }
+  .last-ul{
+    font-size: 18px;
   }
   .trustedtext {
     height: 45%;
@@ -716,7 +743,7 @@
     width: 60% !important;
   }
   .lt-text a {
-    width: 50% !important;
+    width: 35% !important;
   }
   .years {
     padding-left: 4rem;
