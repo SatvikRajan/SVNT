@@ -23,7 +23,8 @@ function Carosuel1() {
           <picture>
             <source media="(max-width: 480px)" srcSet={image1m} />
             <source media="(min-width: 480px)" srcSet={image1} />
-            <img
+            <img 
+              loading='lazy'
               src={image1}
               className="d-block w-100"
               alt="..."
@@ -39,11 +40,13 @@ function Carosuel1() {
           </div>
         </div>
         <div class="carousel-item ci" >
-          {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
+          {/* <img 
+            loading='lazy' src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
             <source media="(max-width: 480px)" srcSet={image2m} />
             <source media="(min-width: 480px)" srcSet={image2} />
-            <img
+            <img 
+              loading='lazy'
               src={image2}
               className="d-block w-100"
               alt="..."
@@ -59,11 +62,13 @@ function Carosuel1() {
           </div>
         </div>
         <div class="carousel-item ci" >
-          {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
+          {/* <img 
+            loading='lazy' src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
             <source media="(max-width: 480px)" srcSet={image3m} />
             <source media="(min-width: 480px)" srcSet={image3} />
-            <img
+            <img 
+              loading='lazy'
               src={image3}
               className="d-block w-100"
               alt="..."
@@ -76,11 +81,13 @@ function Carosuel1() {
           </div>
         </div>
         <div class="carousel-item ci" >
-          {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
+          {/* <img 
+            loading='lazy' src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
             <source media="(max-width: 480px)" srcSet={image4m} />
             <source media="(min-width: 480px)" srcSet={image4} />
-            <img
+            <img 
+              loading='lazy'
               src={image4}
               className="d-block w-100"
               alt="..."

@@ -126,7 +126,7 @@ return (
         <picture>
           <source media="(max-width: 480px)" srcSet={cim} />
           <source media="(min-width: 480px)" srcSet={carrerimage} />
-          <img className="career-img" src={carrerimage} alt="" />
+          <img loading='lazy' className="career-img" src={carrerimage} alt="" />
 
         </picture>
         <div className="career-text1">
@@ -160,7 +160,7 @@ return (
               aria-expanded="false"
             >
               Dropdown button
-              <img
+              <img loading='lazy'
                 src={search}
                 style={{ float: "right" }}
                 width="30px"
@@ -364,7 +364,7 @@ return (
         </div>
         <div className="d-flex flex-row invite">
           <div data-aos='fade-right'>
-            <img
+            <img loading='lazy'
               style={{
                 maxWidth: "100%",
                 marginRight: "80px",

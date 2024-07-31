@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
           <picture>
             <source media="(max-width: 480px)" height={70} srcSet={wcu1m} />
             <source media="(min-width: 480px)" srcSet={wcu1} />
-            <img src={wcu1} height={200} alt="" />
+            <img loading='lazy' src={wcu1} height={200} alt="" />
           </picture>
           <p>Tailored Technical Expertise</p>
         </div>
@@ -64,7 +64,7 @@ export default function WhyChooseUs() {
           <picture>
             <source media="(max-width: 480px)" height={70} srcSet={wcu2m} />
             <source media="(min-width: 480px)" srcSet={wcu2} />
-            <img src={wcu2} height={200} alt="" />
+            <img loading='lazy' src={wcu2} height={200} alt="" />
           </picture>
           <p>Excellent Product
             & Quality Services</p>
@@ -73,7 +73,7 @@ export default function WhyChooseUs() {
           <picture>
             <source media="(max-width: 480px)" height={70} srcSet={wcu3m} />
             <source media="(min-width: 480px)" srcSet={wcu3} />
-            <img src={wcu3} height={200} alt="" />
+            <img loading='lazy' src={wcu3} height={200} alt="" />
           </picture>
           <p>Cost Effective solutions</p>
         </div>
@@ -81,7 +81,7 @@ export default function WhyChooseUs() {
           <picture>
             <source media="(max-width: 480px)" height={70} srcSet={wcu4m} />
             <source media="(min-width: 480px)" srcSet={wcu4} />
-            <img src={wcu4} height={200} alt="" />
+            <img loading='lazy' src={wcu4} height={200} alt="" />
           </picture>
           <p>OEM Certified Engineers</p>
         </div>
@@ -89,7 +89,7 @@ export default function WhyChooseUs() {
           <picture>
             <source media="(max-width: 480px)" height={70} srcSet={wcu5m} />
             <source media="(min-width: 480px)" srcSet={wcu5} />
-            <img src={wcu5} height={200} alt="" />
+            <img loading='lazy' src={wcu5} height={200} alt="" />
           </picture>
           <p>On-time Project Delivery</p>
         </div>
