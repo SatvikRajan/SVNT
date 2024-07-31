@@ -56,7 +56,7 @@ export default function WhyWeDoBest() {
     <div className="what-we-do-best">
       <WwdbDetails click={clickVal} index={indexVal} setClick={setClickVal} topPos={topPos} leftPos={leftPos} />
       <div className="wwdb-container">
-        <video loading='lazy' autoPlay loop muted autobuffer controls={false} playsInline className='wwdb-video'>
+        <video autoPlay loop muted autobuffer controls={false} playsInline className='wwdb-video'>
           <source src={bg} type="video/mp4" />
         </video>
         <p className="wwdb-head" data-aos='fade-down' data-aos-easing="ease-in-sine">What We Do</p>
@@ -65,7 +65,7 @@ export default function WhyWeDoBest() {
           <div className="wwdb-menu">
 
             <div className='mainLogo'>
-              <img loading='lazy' src={companyLogo} />
+              <img src={companyLogo} />
             </div>
 
             <div className='m0' data-aos='fade-down' onClick={() => {
@@ -78,7 +78,7 @@ export default function WhyWeDoBest() {
                 <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
               </svg>
               <p>{names[0]}</p>
-              <img loading='lazy' className='logoImg' src={logo0} alt='client' />
+              <img className='logoImg' src={logo0} alt='client' />
             </div>
 
             <div className='m1' data-aos='fade-right' onClick={() => {
@@ -92,7 +92,7 @@ export default function WhyWeDoBest() {
                 <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
               </svg>
               <p>{names[1]}</p>
-              <img loading='lazy' className='logoImg' src={logo1} alt='client' />
+              <img className='logoImg' src={logo1} alt='client' />
             </div>
 
             <div className='m2' data-aos='fade-right' onClick={() => {
@@ -105,7 +105,7 @@ export default function WhyWeDoBest() {
                 <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
               </svg>
               <p>{names[2]}</p>
-              <img loading='lazy' className='logoImg' src={logo2} alt='client' />
+              <img className='logoImg' src={logo2} alt='client' />
             </div>
 
             <div className='m3' data-aos='fade-right' onClick={() => {
@@ -118,7 +118,7 @@ export default function WhyWeDoBest() {
                 <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
               </svg>
               <p>{names[3]}</p>
-              <img loading='lazy' className='logoImg' src={logo3} alt='client' />
+              <img className='logoImg' src={logo3} alt='client' />
             </div>
 
             <div className='m4' data-aos='fade-up' onClick={() => {
@@ -128,7 +128,7 @@ export default function WhyWeDoBest() {
               setLeftPos(642);
             }}>
 
-              <img loading='lazy' className='logoImg' src={logo4} alt='client' />
+              <img className='logoImg' src={logo4} alt='client' />
               <p>{names[4]}</p>
               <svg width="26" height="27" className='openarrow' viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
@@ -142,7 +142,7 @@ export default function WhyWeDoBest() {
               setLeftPos(985);
             }}>
 
-              <img loading='lazy' className='logoImg' src={logo5} alt='client' />
+              <img className='logoImg' src={logo5} alt='client' />
               <p>{names[5]}</p>
               <svg width="26" height="27" className='openarrow' viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
@@ -156,7 +156,7 @@ export default function WhyWeDoBest() {
               setLeftPos(1034);
             }}>
 
-              <img loading='lazy' className='logoImg' src={logo6} alt='client' />
+              <img className='logoImg' src={logo6} alt='client' />
               <p>{names[6]}</p>
               <svg width="26" height="27" className='openarrow' viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />
@@ -170,7 +170,7 @@ export default function WhyWeDoBest() {
               setLeftPos(985);
             }}>
 
-              <img loading='lazy' className='logoImg' src={logo7} alt='client' />
+              <img className='logoImg' src={logo7} alt='client' />
               <p>{names[7]}</p>
               <svg width="26" height="27" className='openarrow' viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.68297 24.3611L7.14551 22.8236L16.0664 13.9027L7.14551 4.9819L8.68297 3.44444L19.1413 13.9027L8.68297 24.3611Z" fill="#363636" />

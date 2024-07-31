@@ -124,7 +124,7 @@ const About = () => {
     <div className="about-us-page">
       <div className="about-us-head">
         {/* <AboutCarousel /> */}
-        {/* <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100%', objectFit: 'scale-down' }} alt="" /> */}
+        {/* <img loading='lazy' className='about-img' src={aboutbg} style={{ height: '100%', width: '100%', objectFit: 'scale-down' }} alt="" /> */}
         <video loading='lazy' style={{width: '100%', height: '100%'}} autoPlay playsInline muted preload="auto">
           <source src={aboutbg} type="video/mp4" />
         </video>
@@ -152,7 +152,7 @@ const About = () => {
           <h1 style={{ float: 'inline-end' }}>- Mr. V G Salimath</h1>
         </div>
         <div className="ceo-photo" data-aos='fade-left'>
-          <img className='ceo-photo-1' src={ceo} alt="" />
+          <img loading='lazy' className='ceo-photo-1' src={ceo} alt="" />
         </div>
       </div>
 
@@ -177,7 +177,7 @@ const About = () => {
             <Slider {...settings}>
               {clients[activeClientType].map((client, index) => (
                 <div key={index}>
-                  <img height={150} src={client.src} alt={client.alt} />
+                  <img loading='lazy' height={150} src={client.src} alt={client.alt} />
                 </div>
               ))}
             </Slider>

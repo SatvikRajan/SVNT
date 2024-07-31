@@ -98,9 +98,9 @@ export default function Partners() {
     return (
         <>
             <div className="partners-hero">
-                <img className='main-logo' src={genetec} alt="genetec-logo" />
-                <img className="subtitle" src={subtitle} alt="genetec-logo" />
-                <img src={pbgm} className='pmobile' alt="" />
+                <img loading='lazy' className='main-logo' src={genetec} alt="genetec-logo" />
+                <img loading='lazy' className="subtitle" src={subtitle} alt="genetec-logo" />
+                <img loading='lazy' src={pbgm} className='pmobile' alt="" />
             </div>
 
             <p className="desc-head">What Genetec does ?</p>
@@ -111,7 +111,7 @@ export default function Partners() {
                     </div>
                     <div className="desc-image" data-aos='fade-left'>
 
-                        <img src={image1} alt="genetec" />
+                        <img loading='lazy' src={image1} alt="genetec" />
                     </div>
                 </div>
             </div>
@@ -233,7 +233,7 @@ export default function Partners() {
                         <picture>
                             <source media="(max-width: 480px)" srcSet={image1m} />
                             <source media="(min-width: 480px)" srcSet={image2} />
-                            <img
+                            <img loading='lazy'
                                 src={image2}
                                 alt="genetec"
                             />
@@ -250,7 +250,7 @@ export default function Partners() {
                     <p className='certification-p'>Each solution is tailored to understand and address the unique needs of each client. Everything we do is shaped by a core set of values. Our mission as a company revolves around the complete satisfaction of our clients</p>
                 </div>
                 <div data-aos='fade-right' >
-                    <img className='cert' src={certification}></img>
+                    <img loading='lazy' className='cert' src={certification}></img>
                 </div>
             </div>
 
@@ -273,7 +273,7 @@ export default function Partners() {
                                 </div>
                                 <p className='p-quote'>“No growth hack, brilliant marketing idea can save you long-term if you don’t have a sufficiently good product.”</p>
                                 <div className='p-img'>
-                                    <img src={image4} alt='person' />
+                                    <img loading='lazy' src={image4} alt='person' />
                                 </div>
                             </div>
 
@@ -288,9 +288,9 @@ export default function Partners() {
                     </div>
                     <Link to='https://www.genetec.com' target='blank'>
                         <div className='sub-two'>
-                            <img className="sub-two-logo" src={image5} alt='genetec logo' />
+                            <img loading='lazy' className="sub-two-logo" src={image5} alt='genetec logo' />
                             <p>Website</p>
-                            <img className="sub-two-arrow" src={image6} alt='arrow' />
+                            <img loading='lazy' className="sub-two-arrow" src={image6} alt='arrow' />
                         </div>
 
                     </Link>
