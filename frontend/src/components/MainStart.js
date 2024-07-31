@@ -90,7 +90,7 @@ export default function MainStart() {
       </div>
       <div className="videoText d-flex pt-5 text-light">
         <p className='video-info' data-aos='fade-right'>
-          Protection you can rely on<br/>Count on us to keep you safe and secure
+          Protection you can rely on. Count on us to keep you safe and secure
         </p>
         <Link className="align-self-end le" style={{ marginLeft: '8.5rem' }}to="/about" data-aos='fade-left'>
           <p className="fs-4 text-light w-100 readmore">Read more</p>

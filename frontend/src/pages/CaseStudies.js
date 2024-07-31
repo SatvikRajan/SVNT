@@ -232,7 +232,7 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export default function CaseStudies() {
+const CaseStudies = () => {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
   const [expanded, setExpanded] = React.useState({});
@@ -451,3 +451,5 @@ export default function CaseStudies() {
     </div>
   )
 }
+
+export default CaseStudies;

@@ -245,7 +245,7 @@ export default function Partners() {
                 </div>
             </div>
             <div className='d-flex certification'>
-                <div data-aos='fade-left'>
+                <div data-aos='fade-left' className='cert1'>
                     <h1 className='certification-h'>Joint Recognition</h1>
                     <p className='certification-p'>Each solution is tailored to understand and address the unique needs of each client. Everything we do is shaped by a core set of values. Our mission as a company revolves around the complete satisfaction of our clients</p>
                 </div>

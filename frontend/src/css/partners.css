@@ -375,6 +375,12 @@
   width: 100%;
  }
 
+@media (min-width: 1240px) {
+  .cert1{
+    width: 65% !important;
+  }
+}
+
 @media (max-width: 1024px) {
   .certification {
     flex-wrap: wrap;
@@ -410,6 +416,7 @@
 @media (min-width: 480px) and (max-width: 864px) {
   .partners-desc-container2{
     flex-wrap: wrap;
+    justify-content: center;
   }
   .certification{
     margin-left: 2rem;
@@ -424,6 +431,17 @@
   .box-heading{
     font-size: 24px;
   }
+  .sub-two{
+    grid-template-columns: 65% 30% 0%;
+    align-items: center;
+  }
+  .sub-two-logo{
+    height: 4rem;
+  }
+  .sub-two-arrow{
+    display: none;
+  }
+
 }
 
 @media (max-width: 480px) {

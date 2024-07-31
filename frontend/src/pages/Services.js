@@ -183,7 +183,7 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export default function Services() {
+const Services = () => {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
@@ -302,3 +302,5 @@ export default function Services() {
     </div>
   );
 }
+
+export default Services;

@@ -10,7 +10,7 @@ import LastContent from '../components/LastContent';
 import '../css/home.css'
 import Partners from '../components/Partners';
 
-export default function Home() {
+const Home = ()=> {
 
 
   return (
@@ -36,3 +36,4 @@ export default function Home() {
     </div>
   );
 }
+export default Home;

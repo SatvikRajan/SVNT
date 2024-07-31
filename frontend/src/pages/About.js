@@ -32,7 +32,7 @@ import aboutbgm from '../images/AboutUs/about-bgm.jpg';
 
 import Slider from "react-slick";
 
-export const About = () => {
+const About = () => {
   const [activeClientType, setActiveClientType] = useState('All');
   const clients = {
     All: [
@@ -188,3 +188,5 @@ export const About = () => {
     </div>
   );
 };
+
+export default About;
