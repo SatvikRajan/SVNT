@@ -125,7 +125,7 @@ const About = () => {
       <div className="about-us-head">
         {/* <AboutCarousel /> */}
         {/* <img className='about-img' src={aboutbg} style={{ height: '100%', width: '100%', objectFit: 'scale-down' }} alt="" /> */}
-        <video style={{width: '100%', height: '100%'}} autoPlay muted preload="auto">
+        <video loading='lazy' style={{width: '100%', height: '100%'}} autoPlay playsInline muted preload="auto">
           <source src={aboutbg} type="video/mp4" />
         </video>
         {/* <h2  className='img-info'>

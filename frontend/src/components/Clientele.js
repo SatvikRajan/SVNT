@@ -41,24 +41,24 @@ export default function Clientele() {
         <section id="slideshow" data-aos='fade-left'>
           <div class="entire-content">
             <div class="content-carrousel">
-              <figure class="shadow"><img src={aequs} alt='client'/></figure>
-              <figure class="shadow"><img src={allergan} alt='client'/></figure>
-              <figure class="shadow"><img src={ampath} alt='client'/></figure>
-              <figure class="shadow"><img src={kia} alt='client'/></figure>
-              <figure class="shadow"><img src={brigade} alt='client'/></figure>
-              <figure class="shadow"><img src={esl} alt='client'/></figure>
-              <figure class="shadow"><img src={gd} alt='client'/></figure>
-              <figure class="shadow"><img src={akn} alt='client'/></figure>
-              <figure class="shadow"><img src={hc} alt='client'/></figure>
-              <figure class="shadow"><img src={itc} alt='client'/></figure>
-              <figure class="shadow"><img src={indigo} alt='client'/></figure>
-              <figure class="shadow"><img src={afio} alt='client'/></figure>
-              <figure class="shadow"><img src={abg} alt='client'/></figure>
-              <figure class="shadow"><img src={gm} alt='client'/></figure>
-              <figure class="shadow"><img src={britannia} alt='client'/></figure>
-              <figure class="shadow"><img src={vedanta} alt='client'/></figure>
-              <figure class="shadow"><img src={akn} alt='client'/></figure>
-              <figure class="shadow"><img src={hc} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={aequs} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={allergan} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={ampath} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={kia} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={brigade} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={esl} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={gd} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={akn} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={hc} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={itc} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={indigo} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={afio} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={abg} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={gm} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={britannia} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={vedanta} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={akn} alt='client'/></figure>
+              <figure class="shadow"><img loading='lazy' src={hc} alt='client'/></figure>
 
             </div>
           </div>
