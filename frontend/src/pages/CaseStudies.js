@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../css/caseStudies.css';
-import bghero from '../images/CaseStudies/casestudiesbg.jpg';
+import bghero from '../images/CaseStudies/casestudiesbg.webp';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
