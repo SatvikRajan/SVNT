@@ -2,8 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import av1 from '../../images/Services/Sliders/av1.png'
-import av2 from '../../images/Services/Sliders/av2.png'
+// import av1 from '../../images/Services/Sliders/av1.webp'
+import av2 from '../../images/Services/Sliders/av2.webp'
 
 function SimpleSlider() {
   const settings = {

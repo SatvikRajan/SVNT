@@ -2,9 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ips1 from '../../images/Services/Sliders/ips1.png'
-import ips2 from '../../images/Services/Sliders/ips2.png'
-import ips3 from '../../images/Services/Sliders/ips3.png'
+import ips1 from '../../images/Services/Sliders/ips1.webp'
+import ips2 from '../../images/Services/Sliders/ips2.webp'
+import ips3 from '../../images/Services/Sliders/ips3.webp'
 
 function SimpleSlider() {
   const settings = {
