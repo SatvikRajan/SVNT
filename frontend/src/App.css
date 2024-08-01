@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .logo-brand {
   z-index: 10;
@@ -21,7 +21,6 @@ svg.btn.search {
   width: 50px;
 }
 .read-1:active:hover:not([disabled]) {
-  
 }
 .img-fluid {
   max-width: 100%;
@@ -120,7 +119,8 @@ svg.btn.search {
   color: white;
 }
 .card1 {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   border-left: 5px solid #1f8bed;
 }
 
@@ -130,7 +130,7 @@ svg.btn.search {
   margin-top: -3rem;
   text-align: center;
   border-radius: 80px;
-  background: linear-gradient(to right, #E2E4F4, #CDD4FD);
+  background: linear-gradient(to right, #e2e4f4, #cdd4fd);
   gap: 5rem;
   padding: 6rem;
   display: flex;
@@ -176,7 +176,7 @@ p.write1 {
   overflow: hidden;
 }
 
-.inp .textarea{
+.inp .textarea {
   height: 20rem;
   color: #514567;
   -webkit-appearance: none;
@@ -219,7 +219,7 @@ p.write1 {
   transition: all 0.1s ease;
 }
 
-.textarea{
+.textarea {
   border: 0;
 }
 
@@ -384,7 +384,8 @@ ul.dropdown-menu.show {
   width: 39%;
   border-radius: 20px;
   background-color: white;
-  color: #14181A;
+  color: #14181a;
+  height: 100%;
 }
 
 .job-form {
@@ -407,7 +408,7 @@ ul.job-requirements {
 }
 
 .apply::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
@@ -436,10 +437,10 @@ ul.job-requirements {
 
 .apply::after {
   float: right;
-  content: '';
+  content: "";
   width: 30px; /* Adjust the width of the SVG */
   height: 20px; /* Adjust the height of the SVG */
-  background: url('./images/Vector.svg') no-repeat;
+  background: url("./images/Vector.svg") no-repeat;
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s; /* Transition opacity and transform over 0.5 seconds */
   transform: translateX(-10px); /* Initially move the arrow to the left */
@@ -485,7 +486,7 @@ ul.job-requirements {
 
 .text-container::before,
 .text-container::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   transform: translateY(-50%);
@@ -508,7 +509,7 @@ ul.job-requirements {
 }
 
 .part:nth-child(1)::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   transform: translateY(-50%);
@@ -520,7 +521,7 @@ ul.job-requirements {
 }
 
 .part:nth-child(2)::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -22%;
   transform: translateY(-50%);
@@ -559,7 +560,6 @@ ul.job-requirements {
   font-size: 15px;
   letter-spacing: 0px;
 }
-
 
 .buttons {
   gap: 100px;
@@ -612,10 +612,10 @@ ul.job-requirements {
   gap: 20px;
   align-self: center;
   float: right;
-  content: '';
+  content: "";
   width: 30px; /* Adjust the width of the SVG */
   height: 20px; /* Adjust the height of the SVG */
-  background: url('./images/Vector.svg') no-repeat;
+  background: url("./images/Vector.svg") no-repeat;
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s; /* Transition opacity and transform over 0.5 seconds */
   transform: translateX(-10px);
@@ -630,14 +630,13 @@ ul.job-requirements {
   gap: 20px;
 }
 
-
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 50px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .card-content {
@@ -684,7 +683,7 @@ main {
   margin-bottom: 30rem;
 }
 .shiny::after {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(var(--y, 0) * 1px - 300px);
   left: calc(var(--x, 0) * 1px - 300px);
@@ -698,8 +697,6 @@ main {
 .shiny:hover::after {
   opacity: 0.2;
 }
-
-
 
 .readmore {
   /* gap: 20px; */
@@ -722,10 +719,10 @@ main {
   /* filter: invert(1); */
   align-self: center;
   float: right;
-  content: '';
+  content: "";
   width: 30px; /* Adjust the width of the SVG */
   height: 20px; /* Adjust the height of the SVG */
-  background: url('./images/Vector.svg') no-repeat;
+  background: url("./images/Vector.svg") no-repeat;
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s; /* Transition opacity and transform over 0.5 seconds */
   transform: translateX(-10px);
@@ -734,8 +731,6 @@ main {
   opacity: 1; /* Fade in the SVG on hover */
   transform: translateX(0); /* Move the arrow back to its original position */
 }
-
-
 
 @keyframes popOut {
   0% {
@@ -788,34 +783,39 @@ main {
 }
 
 @media (min-width: 864px) and (max-width: 1024px) {
-  .logo-brand{
+  .logo-brand {
     top: 38px;
     left: 90px;
   }
-  .logo-brand img{
+  .logo-brand img {
     width: 310px;
     height: 36px;
   }
-  .job-form{
+  .job-form {
     width: 100%;
     margin: 2rem;
   }
-  
 }
 
 @media (min-width: 864px) and (max-width: 1240px) {
-  .text{
+  .text {
     bottom: 18rem;
     font-size: 28px;
   }
-  
 }
 
-.slick-slide div{
+.slick-slide div {
   text-align: center;
   outline: none;
 }
 
-.mail1{
+.mail1 {
   color: white !important;
+}
+
+@media (max-width: 480px) {
+  .nested-skills {
+    margin-left: 0;
+    margin-top: 0;
+  }
 }

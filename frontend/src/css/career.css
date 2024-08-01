@@ -259,6 +259,7 @@ a:hover {
 }
 
 .jobs {
+  height: 100%;
   position: relative;
 }
 .overlay-text {
@@ -376,7 +377,8 @@ a:hover {
     width: 85% !important;
   }
   .career-img{
-    margin-top: 6rem;
+    margin-top: 5rem;
+    padding: 1rem;
   }
 }
 
@@ -399,5 +401,22 @@ a:hover {
     margin-right: 10px;
     margin-left: 10px;
     padding: 50px;
+  }
+}
+
+@media (min-width: 564px) and (max-width: 864px) {
+  .jobs{
+    margin-left: 0;
+  }
+
+  .dropdown{
+    margin-left: 5rem;
+  }
+  .career-text1{
+    bottom: 12rem;
+    width: 50%;
+  }
+  .invite{
+    gap: 20px;
   }
 }
