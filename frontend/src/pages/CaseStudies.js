@@ -34,7 +34,6 @@ import oem2 from '../images/CaseStudies/oem2.webp';
 import oem3 from '../images/CaseStudies/oem3.webp';
 import agr1 from "../images/CaseStudies/agr1.webp";
 import agr2 from "../images/CaseStudies/agr2.webp";
-import agr3 from "../images/CaseStudies/agr3.jpg";
 import agr4 from "../images/CaseStudies/agr4.jpg";
 import cfcl1 from '../images/CaseStudies/cfcl1.webp'
 import herobgm from '../images/CaseStudies/hero-bgm.webp'
@@ -65,9 +64,10 @@ const cs = [
     [
       [`It is crucial for information to flow smoothly throughout different parts of the hotel. During power outages, backup systems kick in to keep everything working, so there is no interruption or loss of information. Inside the hotel, all the calls and messages between rooms are managed by a centralised system making it easy for guests to communicate. `],
       [`Meanwhile, Genetec's Security Desk brings together different security systems like cameras, doors, alarms, and access controls into one easy-to-use platform, simplifying operations across different areas. You can watch live or recorded camera footage, control cameras that can move and zoom, unlock doors, adjust schedules, and handle alarms—all from one place.`],
-      [`The collaboration between ITC Royal Bengal and SVNT reflects a commitment to excellence and enhancing guest experiences. This is a significant move from ITC towards modernising security and improving guest experiences in luxury hotels. By setting new standards in hospitality, ITC Royal Bengal solidifies its position as a leader in luxury accommodations and guest services.`]], itc3, itc4, itc2, itc, sch],
-  
-      ['OM BOOKS', [
+      [`The collaboration between ITC Royal Bengal and SVNT reflects a commitment to excellence and enhancing guest experiences. This is a significant move from ITC towards modernising security and improving guest experiences in luxury hotels. By setting new standards in hospitality, ITC Royal Bengal solidifies its position as a leader in luxury accommodations and guest services.`]], itc3, itc4, itc2, itc, sch
+    ],
+
+  ['OM BOOKS', [
     'Objective: To cover all Indoor & Semi outdoor areas of Good Shepherd Church & Pratigya Hostel at Hyderabad, under Surveillance System over cloud including steaming & recording.',
     'Installation Summary: 119 Cameras',
     'Requisites at Client End: Established CCTV Network, Internet connection with sufficient bandwidth based on camera quantity, Client work station & Firewall',

@@ -66,7 +66,7 @@ export default function MainStart() {
 
   return (
     <div className="home-start" data-aos='fade-up'>
-      <video loading='lazy' src={bgVideo} autoPlay loop muted autobuffer controls={false} playsInline className='bg-video'>
+      <video src={bgVideo} autoPlay loop muted autobuffer controls={false} playsInline className='bg-video'>
       </video>
       <div className="row years" ref={yearsRef}>
         <div className=" text-center col ha">

@@ -1,5 +1,4 @@
 import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import '../css/card.css';
 import image1 from '../images/Home/carousel-image-1.webp';
 import image1m from '../images/Home/carousel-image-1m.webp';
@@ -24,8 +23,7 @@ function Carosuel1() {
           <picture>
             <source media="(max-width: 480px)" srcSet={image1m} />
             <source media="(min-width: 480px)" srcSet={image1} />
-            <LazyLoadImage
-              effect="blur"
+            <img
               src={image1}
               className="d-block w-100"
               alt="..."
@@ -41,13 +39,11 @@ function Carosuel1() {
           </div>
         </div>
         <div class="carousel-item ci" >
-          {/* <LazyLoadImage 
-         effect="blur"src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
+          {/* <imsrc={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
             <source media="(max-width: 480px)" srcSet={image2m} />
             <source media="(min-width: 480px)" srcSet={image2} />
-            <LazyLoadImage
-              effect="blur"
+            <img
               src={image2}
               className="d-block w-100"
               alt="..."
@@ -66,9 +62,8 @@ function Carosuel1() {
           <picture>
             <source media="(max-width: 480px)" srcSet={image3m} />
             <source media="(min-width: 480px)" srcSet={image3} />
-            <LazyLoadImage
+            <img
               src={image3}
-              effect="blur"
               className="d-block w-100"
               alt="..."
             />
@@ -83,8 +78,7 @@ function Carosuel1() {
           <picture>
             <source media="(max-width: 480px)" srcSet={image4m} />
             <source media="(min-width: 480px)" srcSet={image4} />
-            <LazyLoadImage
-              effect="blur"
+            <img
               src={image4}
               className="d-block w-100"
               alt="..."
