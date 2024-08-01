@@ -14,6 +14,7 @@ import Loader from './components/Loader';
 import AdminLogin from './pages/AdminLogin';
 import AdminRegister from './pages/AdminRegister';
 import Partners from './pages/Partners';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 const LazyHome = React.lazy(() => import('./pages/Home'))
 // const LazyAbout = React.lazy(() => import('./pages/About'))
 // const LazyCareer = React.lazy(() => import('./pages/Carrer'))
