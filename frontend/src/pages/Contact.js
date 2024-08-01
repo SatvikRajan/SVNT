@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import LocationCard from '../components/LocationCard';
-import contact from '../images/ContactUs/contact-hand.jpg';
-import contactm from '../images/ContactUs/contact-handm.jpg';
+import contact from '../images/ContactUs/contact-hand.webp';
+import contactm from '../images/ContactUs/contact-handm.webp';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../css/contact.css'
 import axios from 'axios';
-import loc1 from '../images/ContactUs/hyd.png'
-import loc2 from '../images/ContactUs/delhi.png'
-import loc3 from '../images/ContactUs/banglore.png'
-import loc4 from '../images/ContactUs/kolkata.png'
+import loc1 from '../images/ContactUs/hyd.webp'
+import loc2 from '../images/ContactUs/delhi.webp'
+import loc3 from '../images/ContactUs/banglore.webp'
+import loc4 from '../images/ContactUs/kolkata.webp'
 const Contact = () => {
   useEffect(() => {
     AOS.init({

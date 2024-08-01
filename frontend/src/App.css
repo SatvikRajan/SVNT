@@ -300,7 +300,7 @@ p.write1 {
 .recruitment {
   z-index: 999;
   padding-top: 5rem;
-  background-image: url(./images/Career/gradient-career.png);
+  background-image: url(./images/Career/gradient-career.webp);
   background-repeat: no-repeat;
   background-position: center 60%;
 }
@@ -658,7 +658,7 @@ main {
 
 .whybest {
   color: #251741;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/Home/wbg.jpg');
+  /* background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/Home/wbg.jpg'); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

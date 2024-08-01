@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import partners from '../images/Home/partners.jpg'
-import genetec from '../images/Home/genetec.png'
+import partners from '../images/Home/partners.webp'
+import genetec from '../images/Home/genetec.webp'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';

@@ -115,7 +115,7 @@
   margin: 5%;
   border-radius: 100px;
   position: relative;
-  background-image: url(../images/AboutUs/company-timelinebg.png);
+  /* background-image: url(../images/AboutUs/company-timelinebg.png); */
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 14rem;

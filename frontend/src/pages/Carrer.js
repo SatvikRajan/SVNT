@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useNavigate } from "react";
-import invite from "../images/ContactUs/invite.png";
+import React, { useState, useEffect } from "react";
+import invite from "../images/Career/invite.webp";
 import search from "../images/search.jpg";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../css/carousel.css'
 import '../css/career.css'
-import carrerimage from '../images/Career/careerbg.jpg'
-import cim from '../images/Career/bgm.png'
+import carrerimage from '../images/Career/careerbg.webp'
+import cim from '../images/Career/bgm.webp'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ArrowIcon from "../components/ArrowIcon";
@@ -126,7 +126,7 @@ return (
         <picture>
           <source media="(max-width: 480px)" srcSet={cim} />
           <source media="(min-width: 480px)" srcSet={carrerimage} />
-          <img loading='lazy' className="career-img" src={carrerimage} alt="" />
+          <img className="career-img" src={carrerimage} alt="" />
 
         </picture>
         <div className="career-text1">
@@ -160,7 +160,7 @@ return (
               aria-expanded="false"
             >
               Dropdown button
-              <img loading='lazy'
+              <img
                 src={search}
                 style={{ float: "right" }}
                 width="30px"
@@ -364,7 +364,7 @@ return (
         </div>
         <div className="d-flex flex-row invite">
           <div data-aos='fade-right'>
-            <img loading='lazy'
+            <img
               style={{
                 maxWidth: "100%",
                 marginRight: "80px",

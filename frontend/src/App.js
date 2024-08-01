@@ -22,44 +22,44 @@ const LazyHome = React.lazy(() => import('./pages/Home'))
 // const LazyServices = React.lazy(() => import('./pages/Services'))
 // const LazyPartners = React.lazy(() => import('./pages/Partners'))
 function App() {
-  const useMediaLoader = () => {
-    const [loading, setLoading] = useState(true);
+  // const useMediaLoader = () => {
+  //   const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-      const mediaElements = Array.from(document.querySelectorAll('img, video'));
+  //   useEffect(() => {
+  //     const mediaElements = Array.from(document.querySelectorAll('img, video'));
 
-      const checkMediaLoaded = () => {
-        if (mediaElements.every(el => el.complete || el.readyState === 4)) {
-          setLoading(false);
-        }
-      };
+  //     const checkMediaLoaded = () => {
+  //       if (mediaElements.every(el => el.complete || el.readyState === 4)) {
+  //         setLoading(false);
+  //       }
+  //     };
 
-      if (mediaElements.length > 0) {
-        mediaElements.forEach(el => {
-          if (el.complete || el.readyState === 4) {
-            return;
-          }
-          el.addEventListener('load', checkMediaLoaded);
-          el.addEventListener('loadeddata', checkMediaLoaded);
-          el.addEventListener('error', checkMediaLoaded);
-        });
-      } else {
-        setLoading(false);
-      }
+  //     if (mediaElements.length > 0) {
+  //       mediaElements.forEach(el => {
+  //         if (el.complete || el.readyState === 4) {
+  //           return;
+  //         }
+  //         el.addEventListener('load', checkMediaLoaded);
+  //         el.addEventListener('loadeddata', checkMediaLoaded);
+  //         el.addEventListener('error', checkMediaLoaded);
+  //       });
+  //     } else {
+  //       setLoading(false);
+  //     }
 
-      return () => {
-        mediaElements.forEach(el => {
-          el.removeEventListener('load', checkMediaLoaded);
-          el.removeEventListener('loadeddata', checkMediaLoaded);
-          el.removeEventListener('error', checkMediaLoaded);
-        });
-      };
-    }, []);
+  //     return () => {
+  //       mediaElements.forEach(el => {
+  //         el.removeEventListener('load', checkMediaLoaded);
+  //         el.removeEventListener('loadeddata', checkMediaLoaded);
+  //         el.removeEventListener('error', checkMediaLoaded);
+  //       });
+  //     };
+  //   }, []);
 
-    return loading;
-  };
+  //   return loading;
+  // };
 
-  const isLoading = useMediaLoader();
+  // const isLoading = useMediaLoader();
 
   const PageLoader = () => {
     return (
@@ -70,7 +70,7 @@ function App() {
   }
   return (
     <BrowserRouter>
-      {isLoading ? <PageLoader /> : (
+      {/* {isLoading ? <PageLoader /> : ( */}
         <ScrollToTop>
           <Routes>
             <Route path="/" element={<React.Suspense fallback={<PageLoader />}><MainLayout><LazyHome /></MainLayout></React.Suspense>} />
@@ -85,7 +85,7 @@ function App() {
             <Route path="admin-main" element={<AdminPage />} />
           </Routes>
         </ScrollToTop>
-      )}
+      {/* )} */}
     </BrowserRouter>
   );
 }

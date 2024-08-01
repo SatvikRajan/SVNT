@@ -1,13 +1,14 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import '../css/card.css';
-import image1 from '../images/Home/carousel-image-1.png';
-import image1m from '../images/Home/carousel-image-1m.png';
-import image2 from '../images/Home/carousel-image-2.png';
-import image2m from '../images/Home/carousel-image-2m.png';
-import image3 from '../images/Home/carousel-image-3.png';
-import image3m from '../images/Home/carousel-image-3m.png';
-import image4 from '../images/Home/carousel-image-4.png';
-import image4m from '../images/Home/carousel-image-4m.png';
+import image1 from '../images/Home/carousel-image-1.webp';
+import image1m from '../images/Home/carousel-image-1m.webp';
+import image2 from '../images/Home/carousel-image-2.webp';
+import image2m from '../images/Home/carousel-image-2m.webp';
+import image3 from '../images/Home/carousel-image-3.webp';
+import image3m from '../images/Home/carousel-image-3m.webp';
+import image4 from '../images/Home/carousel-image-4.webp';
+import image4m from '../images/Home/carousel-image-4m.webp';
 import { Link } from 'react-router-dom';
 function Carosuel1() {
   return (
@@ -23,7 +24,8 @@ function Carosuel1() {
           <picture>
             <source media="(max-width: 480px)" srcSet={image1m} />
             <source media="(min-width: 480px)" srcSet={image1} />
-            <img 
+            <LazyLoadImage
+              effect="blur"
               src={image1}
               className="d-block w-100"
               alt="..."
@@ -39,11 +41,13 @@ function Carosuel1() {
           </div>
         </div>
         <div class="carousel-item ci" >
-          {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
+          {/* <LazyLoadImage 
+         effect="blur"src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
             <source media="(max-width: 480px)" srcSet={image2m} />
             <source media="(min-width: 480px)" srcSet={image2} />
-            <img 
+            <LazyLoadImage
+              effect="blur"
               src={image2}
               className="d-block w-100"
               alt="..."
@@ -59,12 +63,12 @@ function Carosuel1() {
           </div>
         </div>
         <div class="carousel-item ci" >
-          {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
             <source media="(max-width: 480px)" srcSet={image3m} />
             <source media="(min-width: 480px)" srcSet={image3} />
-            <img 
+            <LazyLoadImage
               src={image3}
+              effect="blur"
               className="d-block w-100"
               alt="..."
             />
@@ -76,11 +80,11 @@ function Carosuel1() {
           </div>
         </div>
         <div class="carousel-item ci" >
-          {/* <img src={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
             <source media="(max-width: 480px)" srcSet={image4m} />
             <source media="(min-width: 480px)" srcSet={image4} />
-            <img 
+            <LazyLoadImage
+              effect="blur"
               src={image4}
               className="d-block w-100"
               alt="..."
@@ -89,7 +93,7 @@ function Carosuel1() {
           <div class="carousel-caption cc1 cc2 d-none d-md-block">
             <h1 style={{ width: '60%', lineHeight: '4rem', color: 'black' }}>Dive into our case studies and see how we deliver results!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', filter: 'invert(1)' }} to='/contact'>Learn more about us</Link></p>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', filter: 'invert(1)' }} to='/about'>Learn more about us</Link></p>
           </div>
         </div>
       </div>

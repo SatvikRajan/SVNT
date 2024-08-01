@@ -1,5 +1,5 @@
 import React from 'react'
-import last from '../images/Home/last-career.png'
+import last from '../images/Home/last-career.webp'
 import { Link } from 'react-router-dom';
 export default function LastContent() {
   return (

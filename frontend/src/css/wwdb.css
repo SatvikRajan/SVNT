@@ -259,7 +259,7 @@
     margin-top: 2rem;
   }
   .wwdb-video{
-    display: none;
+    position: absolute;
   }
   .wwdb-head {
     margin-top: 1rem;
@@ -278,7 +278,7 @@
   }
   .wwdb-menu-wrapper {
     border-radius: 20px;
-    background-image: url("../images/Home/wbg.jpg");
+    /* background-image: url("../images/Home/wbg.jpg"); */
   }
   .wwdb-details-overlay {
     width: 95% !important;

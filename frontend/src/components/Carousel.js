@@ -1,6 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import ips from '../images/Home/home-carousel-bial.webp';
-import ipn from '../images/Home/home-carousel-genpact 1.png';
 import str from '../images/Home/home-carousel-itc.webp';
 import sms from '../images/Home/home-carousel-bel';
 import is from '../images/Home/home-carousel-statocast.webp';
@@ -44,34 +42,6 @@ function CaseStudiesCarousel() {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    // appendDots: dots => (
-    //   <div
-    //     className='slick-dots1'
-    //     style={{
-    //       borderRadius: "10px"
-    //       , bottom: '1rem'
-    //       // padding: "10px"
-    //     }}
-    //   >
-    //     <ul style={{ margin: "0px", paddingLeft: '0px' }}> {dots} </ul>
-    //   </div>
-    // ),
-    // customPaging: i => (
-    //   <div
-    //     style={{
-    //       width: i === currentIndex ? "30px" : "20px", // Larger width for active dot
-    //       height: "20px", // Increased height for all dots
-    //       color: i === currentIndex ? "purple" : "white",
-    //       display: "flex",
-    //       justifyContent: "center",
-    //       alignItems: "center",
-    //       transition: "width 0.3s",
-    //       fontSize: '70px'
-    //     }}
-    //   >
-    //     {'•'}
-    //   </div>
-    // ),
     responsive: [
       {
         breakpoint: 1440,
@@ -124,13 +94,12 @@ function CaseStudiesCarousel() {
 
   useEffect(() => {
     setItems([
-      { id: 0, image: sss, title: 'JSW Eye on Pellet', description: 'Delve into the revolutionary world of pelletization plants through real time system integration.' },
-      { id: 3, image: str, title: 'ITC Hotels', description: 'A Close Examination of how SVNT implements Security Protocols at ITC.' },
-      { id: 4, image: sms, title: 'BEL(Rafael)', description: 'Explore the realm of security and management solutions, vital for safeguarding businesses against threats.' },
-      { id: 5, image: is, title: 'Om Books (Statocast)', description: 'Optimize efficiency with our integration solutions, merging systems for seamless communication and collaboration.' },
-      { id: 6, image: avs, title: 'CFCL', description: 'Elevate communication and engagement with our audio-visual solutions.' },
-      { id: 7, image: es, title: 'Aragen', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' },
-      // { id: 0, image: sss, title: 'JSW Eye on Pellet', description: 'Delve into the revolutionary world of pelletization plants through real time system integration.' },
+      { id: 'jsw', image: sss, title: 'JSW Eye on Pellet', description: 'Delve into the revolutionary world of pelletization plants through real time system integration.' },
+      { id: 'itc', image: str, title: 'ITC Hotels', description: 'A Close Examination of how SVNT implements Security Protocols at ITC.' },
+      { id: 'bel', image: sms, title: 'BEL(Rafael)', description: 'Explore the realm of security and management solutions, vital for safeguarding businesses against threats.' },
+      { id: 'om', image: is, title: 'Om Books (Statocast)', description: 'Optimize efficiency with our integration solutions, merging systems for seamless communication and collaboration.' },
+      { id: 'cfcl', image: avs, title: 'CFCL', description: 'Elevate communication and engagement with our audio-visual solutions.' },
+      { id: 'aragen', image: es, title: 'Aragen', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' },
     ]);
   }, []);
 
@@ -143,20 +112,6 @@ function CaseStudiesCarousel() {
           <source src={video} type="video/mp4" />
         </video>
       </div>
-      {/* <div className="carousel-inner1" ref={carouselRef} style={{ display: 'flex', overflow: 'hidden' }}>
-        <div className="carousel-track ct-1" style={{ display: 'flex', transition: 'transform 0.5s', transform: `translateX(-${currentSlide * 10 / cardsPerSlide}%)` }}> */}
-      {/* {items.map((item, index) => (
-            <div key={item.id} className="home-cs-card" style={{ boxSizing: 'border-box', padding: '10px' }}>
-              <div className="home-cs-card-image">
-                <img src={item.image} alt="Card Image" />
-              </div>
-              <div className="home-cs-card-content">
-                <p className="title">{item.title}</p>
-                {item.description && <p className="description">{item.description}</p>}
-                <Link className='hcscard-readmore readmore text-white' style={{ width: '60%', fontSize: '15px', filter: 'invert(1)' }}to='/contact'>Read More</Link>
-              </div>
-            </div>
-          ))} */}
       <Slider {...settings}>
         {items.map((item, index) => (
           <div key={item.id} className="home-cs-card noHover" style={{ boxSizing: 'border-box', padding: '10px' }}>
@@ -166,16 +121,11 @@ function CaseStudiesCarousel() {
             <div className="home-cs-card-content">
               <p className="title">{item.title}</p>
               {item.description && <p className="description">{item.description}</p>}
-              <Link className='hcscard-readmore readmore text-white' style={{ width: '50%', fontSize: '15px', filter: 'invert(1)', pointerEvents: 'auto' }} to='/casestudies#cs-details'>Read More</Link>
+              <Link className='hcscard-readmore readmore text-white' style={{ width: '50%', fontSize: '15px', filter: 'invert(1)', pointerEvents: 'auto' }} to={`/casestudies#${item.id}`}>Read More</Link>
             </div>
           </div>
         ))}
       </Slider>
-      {/* </div>
-      </div> */}
-
-
-
     </div>
   );
 }
