@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/caseStudies.css';
 import bghero from '../images/CaseStudies/casestudiesbg.webp';
 import Tabs from '@mui/material/Tabs';
@@ -38,9 +38,9 @@ import agr4 from "../images/CaseStudies/agr4.jpg";
 import cfcl1 from '../images/CaseStudies/cfcl1.webp'
 import herobgm from '../images/CaseStudies/hero-bgm.webp'
 import sch from "../images/CaseStudies/sch.webp";
-
+import { useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 const cs = [
-  ['ITC Hotels Limited',
+  ['itc', 'ITC Hotels Limited',
     [
       'Objective: To enhance security, communication, and network infrastructure and access control for ITC Royal Bengal, ensuring internet for guests and internal communication for staff',
       'Installation Summary: 850 Cameras, Master and Door Controller, UPS System',
@@ -65,9 +65,9 @@ const cs = [
       [`It is crucial for information to flow smoothly throughout different parts of the hotel. During power outages, backup systems kick in to keep everything working, so there is no interruption or loss of information. Inside the hotel, all the calls and messages between rooms are managed by a centralised system making it easy for guests to communicate. `],
       [`Meanwhile, Genetec's Security Desk brings together different security systems like cameras, doors, alarms, and access controls into one easy-to-use platform, simplifying operations across different areas. You can watch live or recorded camera footage, control cameras that can move and zoom, unlock doors, adjust schedules, and handle alarms—all from one place.`],
       [`The collaboration between ITC Royal Bengal and SVNT reflects a commitment to excellence and enhancing guest experiences. This is a significant move from ITC towards modernising security and improving guest experiences in luxury hotels. By setting new standards in hospitality, ITC Royal Bengal solidifies its position as a leader in luxury accommodations and guest services.`]], itc3, itc4, itc2, itc, sch
-    ],
+  ],
 
-  ['OM BOOKS', [
+  ['om', 'OM BOOKS', [
     'Objective: To cover all Indoor & Semi outdoor areas of Good Shepherd Church & Pratigya Hostel at Hyderabad, under Surveillance System over cloud including steaming & recording.',
     'Installation Summary: 119 Cameras',
     'Requisites at Client End: Established CCTV Network, Internet connection with sufficient bandwidth based on camera quantity, Client work station & Firewall',
@@ -83,7 +83,7 @@ const cs = [
 `,],
     [`By integrating advanced IP cameras and leveraging the power of cloud technology, we created a seamless and accessible security network that keeps a vigilant eye on the entire premises, ensuring safety and peace of mind for everyone on site.`
     ]], oem3, oem2, oem3, oem1, sch],
-  ['JSW Steel Limited', [
+  ['jsw', 'JSW Steel Limited', [
     'Objective: To provide real-time monitoring of pellet size at each disc level, enabling timely adjustments to enhance production efficiency and quality control.',
     'Scope of Work: Customising parameters for real-time pellet size monitoring, & enabling data-driven operational adjustments. The system ensures accurate reporting, minimises rejects, & enhances production efficiency with robust software and precise measuring tools.',
     'Challenges: Precise pellet size monitoring, compatibility and integration with plant infrastructure',
@@ -94,7 +94,7 @@ const cs = [
 
   [`The "Eye-on-Pellet" system has been put to the test in real pelletization plants to see how well it performs. It is designed to be super flexible and adaptable, fitting into all sorts of different situations and uses. What's cool about 'Eye-on-Pellet' is its versatility. Operators can choose to use one camera or multiple cameras depending on what they need to monitor. Plus, there are portable handheld systems if they need to keep an eye on things on the go. For a deeper dive into the data, the system can switch to offline mode in a lab, making it easy to dig deep into how those pellets are forming.`], [`Eye-on-Pellet has proven that it is the real-deal for boosting efficiency and productivity in pelletization. With its high-tech monitoring and easy adjustments, operators can keep things running smoothly and churn out top-quality pellets. Flexible and effective, "Eye-on-Pellet" is setting a new standard for how pelletization plants operate.`]]
     , jsw3, jsw2, jsw4, jsw1, sch],
-  ['Kempegowda International Airport Limited ', [
+  ['kia', 'Kempegowda International Airport Limited ', [
     'Objective: To enhance video surveillance at terminals, runways & parking areas, strengthen access control measures at Kempegowda International Airport.',
     'Installation Summary: T1 - 308 cameras, 47 ANPR, and 112 horn speakers; T2 - 2820 cameras',
     'Scope of Work: Migration of 1786 Bosch camera from VRM to Genetec, SITC of camera for MAR, SITC of ANPR Camera Integrations, Tyco ACS integration',
@@ -109,7 +109,7 @@ const cs = [
     [[`We enhanced video surveillance to keep a watchful eye on the two terminals, runways, and parking areas in real-time. Our focus on strengthening access control ensures that only authorised individuals could enter sensitive zones. Adding strong backup systems meant that these systems would run at all times, even during emergencies. By integrating all security functions into a single hub, from monitoring passenger flow to tracking vehicles, we've created a cohesive system that's easier to manage, boosting our security's strength and efficiency. Plus, our flexible infrastructure grows with the airport, securely handling and swiftly distributing vital information wherever it's needed. Managing everything from one place also made things run smoother, so they could respond quickly to any issues and solve problems faster. `]], `360 Vision`, [[`At Kempegowda International Airport, we've enhanced security by linking cameras, that store video recordings, with Genetec's platform. This connection lets us efficiently gather data and manage surveillance footage. Integrating these cameras into Genetec's system gives us better visibility and control over our security setup. This setup demonstrates how Genetec's platform can adapt and work seamlessly with other systems, making our security operations more efficient and effective.`],
     [`By adopting advanced technology and innovative solutions, Kempegowda International Airport has enhanced both security measures and operational efficiency. This commitment highlights their dedication to ensuring airports remain secure and well-prepared for future challenges.`]], kia3, kia2, kia3, kia1, sch]
 
-  , ['Chambal Fertilizers Limited ', [
+  , ['cfcl', 'Chambal Fertilizers Limited ', [
     'Objective: To strengthen the security setup of CFCL Gadepan in plant and township area ',
     'Installation Summary: 79nos Licence for Cameras, 7nos Workstation licence for Monitoring PC, 78 cameras',
     'Scope of Work: Erection & Commissioning of IP Based CCTV System & Panic Alarm System',
@@ -195,11 +195,15 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
+
 const CaseStudies = () => {
+  const [searchParams] = useSearchParams();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
   const [expanded, setExpanded] = React.useState({});
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
+  const navigate = useNavigate();
+  const location = useLocation();
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -211,6 +215,14 @@ const CaseStudies = () => {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+
+  useEffect(() => {
+    navigate(location.pathname, {replace: true});
+    window.document.getElementById(searchParams.get('menu'))?.scrollIntoView({ block: "center" });
+    
+  }, [searchParams])
+
 
   return (
     <div className='cs-body'>
@@ -294,13 +306,13 @@ const CaseStudies = () => {
                 <TabPanel key={item.id} value={value} index={index} dir={theme.direction}>
                   <div className="cs-details" id='cs-details'>
                     {item.cs.map((caseStudy, csIndex) => (
-                      <div key={csIndex} className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation  ' : ''}`}>
-                        {!isDropdownOpen && <img className="image-bg" src={caseStudy[2]} alt='' />}
+                      <div id={caseStudy[0]} key={csIndex} className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation  ' : ''}`}>
+                        {!isDropdownOpen && <img className="image-bg" src={caseStudy[3]} alt='' />}
                         {expanded[csIndex]}
                         <div className={`case-study ${isDropdownOpen ? 'dropdown-open' : ''}`} style={{ backgroundColor: isDropdownOpen ? '#0e1513' : 'inherit' }}>
 
                           <div className='csd-head' onClick={toggleDropdown}>
-                            <h3 className='csd-heading'>{caseStudy[0]}</h3>
+                            <h3 className='csd-heading'>{caseStudy[1]}</h3>
                             <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg" className={isDropdownOpen ? 'rotate-180' : ''}
                             >
                               <path d="M27.0672 10.137L25.2932 8.34216L14.9999 18.7565L4.70662 8.34216L2.93262 10.137L14.9999 22.3463L27.0672 10.137Z" fill="#F1FAFF" />
@@ -309,7 +321,7 @@ const CaseStudies = () => {
                           {isDropdownOpen && (
                             <div className='cs-wrapper'>
                               <ul className='csd-points'>
-                                {caseStudy[1].map((detail, detailIndex) => {
+                                {caseStudy[2].map((detail, detailIndex) => {
                                   const parts = detail.split(':');
                                   return (
                                     <li className='csd-point' key={detailIndex}>
@@ -319,7 +331,7 @@ const CaseStudies = () => {
                                 })}
                               </ul>
                               <div className='cs-image'>
-                                <img src={caseStudy[3]} alt='' className='only-desktop hehe' />
+                                <img src={caseStudy[4]} alt='' className='only-desktop hehe' />
                                 {!expanded[csIndex] && (
                                   <button
                                     onClick={() => handleReadMore(csIndex)}
@@ -343,42 +355,42 @@ const CaseStudies = () => {
                                 <div className='expand-inner'>
                                   <div>
 
-                                    <h2>{caseStudy[4]}</h2><br></br>
+                                    <h2>{caseStudy[5]}</h2><br></br>
 
                                     <ul>
-                                      {caseStudy[5].map((item) => (
+                                      {caseStudy[6].map((item) => (
                                         <li key={item}>{item}</li>
                                       ))}
                                     </ul>
                                   </div>
-                                  <img src={caseStudy[10]} className="expand-img only-desktop" ></img>
+                                  <img src={caseStudy[11]} className="expand-img only-desktop" ></img>
                                 </div>
 
                                 <br></br><br></br>
                               </div>
                               <div className='expand-inner'>
                                 <div>
-                                  <h2>{caseStudy[6]}</h2><br></br>
+                                  <h2>{caseStudy[7]}</h2><br></br>
                                   <ul>
-                                    {caseStudy[7].map((item) => (
-                                      <li key={item}>{item}</li>
-                                    ))}
-                                  </ul>
-                                </div>
-                                <img src={caseStudy[11]} className="expand-img only-desktop"></img>
-                                <br></br><br></br>
-                              </div>
-                              <br></br><br></br>
-                              <div className='expand-inner'>
-                                <div>
-                                  <h2>{caseStudy[8]}</h2><br></br>
-                                  <ul>
-                                    {caseStudy[9].map((item) => (
+                                    {caseStudy[8].map((item) => (
                                       <li key={item}>{item}</li>
                                     ))}
                                   </ul>
                                 </div>
                                 <img src={caseStudy[12]} className="expand-img only-desktop"></img>
+                                <br></br><br></br>
+                              </div>
+                              <br></br><br></br>
+                              <div className='expand-inner'>
+                                <div>
+                                  <h2>{caseStudy[9]}</h2><br></br>
+                                  <ul>
+                                    {caseStudy[10].map((item) => (
+                                      <li key={item}>{item}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                                <img src={caseStudy[13]} className="expand-img only-desktop"></img>
                                 <br></br><br></br>
                               </div>
 

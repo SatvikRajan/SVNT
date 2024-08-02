@@ -9,8 +9,6 @@ import image5 from '../images/Partners/genetec_logo_white.webp'
 import image6 from '../images/Partners/arrow_forward.svg'
 import pbgm from '../images/Partners/partners-bgmobile.webp'
 import certification from '../images/Partners/certification-gentec.webp'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faLeftLong } from '@fortawesome/free-solid-svg-icons';
 import React, { useEffect, useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -36,10 +34,6 @@ function SamplePrevArrow(props) {
         </button>
     );
 }
-
-const ArrowRightIcon = ({ className }) => {
-    return <FontAwesomeIcon icon={faArrowRight} className={className} />;
-};
 
 
 const desc = ["Genetec Inc. is an innovative technology company offering a wide range of security, intelligence, and operations solutions. The company’s flagship product, Genetec™ Security Center, unifies IP-based video surveillance, access control, automatic license plate recognition (ALPR), communications, and analytics. Genetec also develops cloud-based solutions and services designed to improve security,  and contribute new levels of operational intelligence for governments, enterprises, and the communities in which we live. Founded in 1997, and headquartered in Montreal, Canada, Genetec serves its global customers via an extensive network of certified channel partners and consultants in over 159 countries.",
@@ -132,14 +126,6 @@ export default function Partners() {
                                         <li>{desc[2]}</li>
                                         {/* <li>{desc[3]}</li> */}
                                     </ul>
-
-                                    <div className="wwdb-learn-more partners-learn-more" style={{ width: '300px', fontSize: '30px !important' }}>
-                                        <Link to="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
-                                            <ArrowRightIcon className="fas" />
-                                        </span>
-                                        </p>
-                                        </Link>
-                                    </div>
                                 </div>
                             </div>
 
@@ -155,12 +141,6 @@ export default function Partners() {
                                             <li>{desc[6]}</li>
                                             <li>{desc[7]}</li>
                                         </ul>
-
-                                        <div className="wwdb-learn-more partners-learn-more" style={{ width: '300px', fontSize: '30px !important' }}>
-                                            <Link to="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
-                                                <ArrowRightIcon className="fas" />
-                                            </span></p></Link>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -176,12 +156,6 @@ export default function Partners() {
                                             <li>{desc[8]}</li>
                                             <li>{desc[9]}</li>
                                         </ul>
-
-                                        <div className="wwdb-learn-more partners-learn-more" style={{ width: '300px', fontSize: '30px !important' }}>
-                                            <Link to="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
-                                                <ArrowRightIcon className="fas" />
-                                            </span></p></Link>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -197,12 +171,6 @@ export default function Partners() {
                                             <li>{desc[12]}</li>
                                             <li>{desc[13]}</li>
                                         </ul>
-
-                                        <div className="wwdb-learn-more partners-learn-more" style={{ width: '300px', fontSize: '30px !important' }}>
-                                            <Link to="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
-                                                <ArrowRightIcon className="fas" />
-                                            </span></p></Link>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -217,12 +185,6 @@ export default function Partners() {
                                             <li>{desc[15]}</li>
                                             <li>{desc[16]}</li>
                                         </ul>
-
-                                        <div className="wwdb-learn-more partners-learn-more" style={{ width: '300px', fontSize: '30px !important' }}>
-                                            <Link to="/services" class="btn btn-primary btn-arrow"><p className='learnMore'><span>Learn more
-                                                <ArrowRightIcon className="fas" />
-                                            </span></p></Link>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -242,8 +204,8 @@ export default function Partners() {
                     {/* <div className="slide-count">
                         {currentSlide + 1} / {totalSlides}
                     </div> */}
-                </div>
-            </div>
+                </div >
+            </div >
             <div className='d-flex certification'>
                 <div data-aos='fade-right' className='cert1'>
                     <h1 className='certification-h'>Joint Recognition</h1>

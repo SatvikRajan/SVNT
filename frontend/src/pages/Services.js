@@ -38,11 +38,7 @@ import EnergySlider from "../components/Sliders/EnergySlider";
 import servicebgm from '../images/Services/servicebgm.jpg'
 
 import React from "react";
-
-import { useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { selectClasses } from '@mui/material';
-
 const theme = createTheme({
   components: {
     MuiTab: {
