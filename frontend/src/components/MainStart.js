@@ -26,9 +26,6 @@ export default function MainStart() {
 
   useEffect(() => {
     const yearsElement = yearsRef.current;
-    const values = yearsElement.querySelectorAll('.value');
-    const duration = 2000;
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {

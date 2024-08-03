@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import str from '../images/Home/home-carousel-itc.webp';
 import sms from '../images/Home/home-carousel-bel';
 import is from '../images/Home/home-carousel-statocast.webp';
@@ -116,17 +116,19 @@ function CaseStudiesCarousel() {
         {items.map((item, index) => (
           <div key={item.id} className="home-cs-card noHover" style={{ boxSizing: 'border-box', padding: '10px' }}>
             <div className="home-cs-card-image">
-              <img src={item.image} alt="Card Image" />
+              <img src={item.image} alt="Card" />
             </div>
             <div className="home-cs-card-content">
               <p className="title">{item.title}</p>
               {item.description && <p className="description">{item.description}</p>}
-              <button className='hcscard-readmore readmore text-white' style={{ width: '50%', fontSize: '15px', filter: 'invert(1)' }}
+              <Link className='hcscard-readmore readmore text-white' style={{ width: '50%', fontSize: '15px', filter: 'invert(1)' }}
+                // to={`/casestudies?menu=${item.id}`}
                 onClick={() => {
                   window.location.href = `/casestudies?menu=${item.id}`
-                }}>
+                }}
+              >
                 Read More
-              </button>
+              </Link>
             </div>
           </div>
         ))}

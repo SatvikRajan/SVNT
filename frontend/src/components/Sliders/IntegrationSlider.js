@@ -17,12 +17,6 @@ function SimpleSlider() {
     autoplaySpeed: 4000,
   };
 
-  const sliderStyle = {
-    width: '35%',
-    margin: '0 auto',
-    float: 'right'
-  };
-
   return (
     <div className="slider-images">
       <Slider {...settings}>

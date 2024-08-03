@@ -385,7 +385,7 @@
 
 .cs-container .cs-learn-more {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   position: relative;
   bottom: auto;
   right: 5%;

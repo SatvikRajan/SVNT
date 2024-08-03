@@ -14,53 +14,8 @@ import Loader from './components/Loader';
 import AdminLogin from './pages/AdminLogin';
 import AdminRegister from './pages/AdminRegister';
 import Partners from './pages/Partners';
-import { SpeedInsights } from "@vercel/speed-insights/react"
 const LazyHome = React.lazy(() => import('./pages/Home'))
-// const LazyAbout = React.lazy(() => import('./pages/About'))
-// const LazyCareer = React.lazy(() => import('./pages/Carrer'))
-// const LazyCaseStudeis = React.lazy(() => import('./pages/Home'))
-// const LazyContact = React.lazy(() => import('./pages/Contact'))
-// const LazyServices = React.lazy(() => import('./pages/Services'))
-// const LazyPartners = React.lazy(() => import('./pages/Partners'))
 function App() {
-  // const useMediaLoader = () => {
-  //   const [loading, setLoading] = useState(true);
-
-  //   useEffect(() => {
-  //     const mediaElements = Array.from(document.querySelectorAll('img, video'));
-
-  //     const checkMediaLoaded = () => {
-  //       if (mediaElements.every(el => el.complete || el.readyState === 4)) {
-  //         setLoading(false);
-  //       }
-  //     };
-
-  //     if (mediaElements.length > 0) {
-  //       mediaElements.forEach(el => {
-  //         if (el.complete || el.readyState === 4) {
-  //           return;
-  //         }
-  //         el.addEventListener('load', checkMediaLoaded);
-  //         el.addEventListener('loadeddata', checkMediaLoaded);
-  //         el.addEventListener('error', checkMediaLoaded);
-  //       });
-  //     } else {
-  //       setLoading(false);
-  //     }
-
-  //     return () => {
-  //       mediaElements.forEach(el => {
-  //         el.removeEventListener('load', checkMediaLoaded);
-  //         el.removeEventListener('loadeddata', checkMediaLoaded);
-  //         el.removeEventListener('error', checkMediaLoaded);
-  //       });
-  //     };
-  //   }, []);
-
-  //   return loading;
-  // };
-
-  // const isLoading = useMediaLoader();
 
   const PageLoader = () => {
     return (

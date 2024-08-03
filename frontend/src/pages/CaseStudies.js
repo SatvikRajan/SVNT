@@ -9,14 +9,12 @@ import PropTypes from 'prop-types';
 import Avatar from "@material-ui/core/Avatar";
 import "aos/dist/aos.css";
 import { useTheme } from '@mui/material/styles';
-
 import aviation1 from '../images/CaseStudies/aviation-logo-color.svg';
 import aviation2 from '../images/CaseStudies/aviation-logo-white.svg';
 import manufac1 from '../images/CaseStudies/manufac1.svg';
 import manufac2 from '../images/CaseStudies/manufac2.svg';
 import hotel1 from '../images/CaseStudies/hotel1.svg';
 import hotel2 from '../images/CaseStudies/hotel2.svg';
-
 import itc from '../images/CaseStudies/itc-1.webp';
 import itc1 from '../images/CaseStudies/itc1.webp';
 import itc2 from '../images/CaseStudies/itc2.webp';
@@ -220,7 +218,7 @@ const CaseStudies = () => {
   useEffect(() => {
     navigate(location.pathname, { replace: true });
     window.document.getElementById(searchParams.get('menu'))?.scrollIntoView({ block: "center" });
-  }, [searchParams])
+  }, [searchParams, location.pathname, navigate])
 
 
   return (
@@ -350,7 +348,7 @@ const CaseStudies = () => {
                           {expanded[csIndex] && (
                             <div className='expanded-content'>
                               <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                                <img src={sch} alt="schematic" className=' exp-img' style={{ width: "100%" }}></img>
+                                <img src={sch} alt="schematic" className=' exp-img' style={{ width: "100%" }}/>
                                 <div className='expand-inner'>
                                   <div>
 
@@ -362,7 +360,7 @@ const CaseStudies = () => {
                                       ))}
                                     </ul>
                                   </div>
-                                  <img src={caseStudy[11]} className="expand-img only-desktop" ></img>
+                                  <img alt='case-study' src={caseStudy[11]} className="expand-img only-desktop" />
                                 </div>
 
                                 <br></br><br></br>
@@ -376,7 +374,7 @@ const CaseStudies = () => {
                                     ))}
                                   </ul>
                                 </div>
-                                <img src={caseStudy[12]} className="expand-img only-desktop"></img>
+                                <img alt='casestudy' src={caseStudy[12]} className="expand-img only-desktop"/>
                                 <br></br><br></br>
                               </div>
                               <br></br><br></br>
@@ -389,7 +387,7 @@ const CaseStudies = () => {
                                     ))}
                                   </ul>
                                 </div>
-                                <img src={caseStudy[13]} className="expand-img only-desktop"></img>
+                                <img alt='casestudy' src={caseStudy[13]} className="expand-img only-desktop"/>
                                 <br></br><br></br>
                               </div>
 

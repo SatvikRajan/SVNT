@@ -18,18 +18,12 @@ function SimpleSlider() {
     outline: false
   };
 
-  const sliderStyle = {
-    width: '35%', 
-    margin: '0 auto' ,
-    float: 'right'
-  };
-
   return (
     <div className="slider-images">
       <Slider {...settings}>
-        <div>
+        {/* <div>
           <img src={av2} alt="" />
-        </div>
+        </div> */}
         <div>
         <img src={av2} alt="" />
         </div>

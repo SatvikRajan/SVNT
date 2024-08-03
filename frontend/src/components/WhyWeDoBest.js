@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect , useState } from 'react';
 import companyLogo from '../images/Home/companyLogo.svg';
 import logo3 from '../images/Home/surveillance-and-safety.svg';
 import logo1 from '../images/Home/IP-surveillance.svg';
@@ -57,7 +57,7 @@ export default function WhyWeDoBest() {
           <div className="wwdb-menu">
 
             <div className='mainLogo'>
-              <img src={companyLogo} />
+              <img alt='companylogo' src={companyLogo} />
             </div>
 
             <div className='m0' data-aos='fade-down' onClick={() => {

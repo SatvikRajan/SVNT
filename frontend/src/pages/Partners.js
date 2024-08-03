@@ -57,6 +57,7 @@ const desc = ["Genetec Inc. is an innovative technology company offering a wide 
 ]
 
 export default function Partners() {
+    // eslint-disable-next-line
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const handleBeforeChange = (oldIndex, newIndex) => {

@@ -26,10 +26,7 @@ import jsw from '../images/AboutUs/jsw.svg'
 import jcb from '../images/AboutUs/jcb.svg'
 import lat from '../images/AboutUs/lat.svg'
 import mahindra from '../images/AboutUs/mahindra.svg'
-
 import aboutbg from '../images/AboutUs/about-bg-video.mp4';
-import aboutbgm from '../images/AboutUs/about-bgm.jpg';
-
 import Slider from "react-slick";
 
 const About = () => {
@@ -65,23 +62,23 @@ const About = () => {
       // Add pharma clients here
     ],
     Zinc: [
-      { src: '../images/AboutUs/client-esl.svg', alt: 'Zinc Client 1' },
-      { src: '../images/AboutUs/jcb.svg', alt: 'Zinc Client 2' },
+      { src: esl, alt: 'Zinc Client 1' },
+      { src: jsw, alt: 'Zinc Client 2' },
       // Add pharma clients here
     ],
     Hotels: [
-      { src: '../images/AboutUs/client-esl.svg', alt: 'Hotels Client 1' },
-      { src: '../images/AboutUs/jcb.svg', alt: 'Hotels Client 2' },
+      { src: esl, alt: 'Hotels Client 1' },
+      { src: jsw, alt: 'Hotels Client 2' },
       // Add pharma clients here
     ],
     Tobacco: [
-      { src: '../images/AboutUs/client-esl.svg', alt: 'Tobacco Client 1' },
-      { src: '../images/AboutUs/jcb.svg', alt: 'Tobacco Client 2' },
+      { src: esl, alt: 'Tobacco Client 1' },
+      { src: jsw, alt: 'Tobacco Client 2' },
       // Add pharma clients here
     ],
     Foods: [
-      { src: '../images/AboutUs/client-esl.svg', alt: 'Foods Client 1' },
-      { src: '../images/AboutUs/jcb.svg', alt: 'Foods Client 2' },
+      { src: afio, alt: 'Foods Client 1' },
+      { src: jsw, alt: 'Foods Client 2' },
       // Add pharma clients here
     ],
   };
