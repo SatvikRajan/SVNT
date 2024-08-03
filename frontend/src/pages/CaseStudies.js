@@ -218,9 +218,8 @@ const CaseStudies = () => {
 
 
   useEffect(() => {
-    navigate(location.pathname, {replace: true});
-    window.document.getElementById(searchParams.get('menu'))?.scrollIntoView({ block: "center" });
-    
+    // navigate(location.pathname, {replace: true});
+    window.document.getElementById(searchParams.get('menu'))?.scrollIntoView({ block: "center" });        
   }, [searchParams])
 
 
