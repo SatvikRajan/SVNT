@@ -348,7 +348,7 @@ const CaseStudies = () => {
                           {expanded[csIndex] && (
                             <div className='expanded-content'>
                               <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                                <img src={sch} alt="schematic" className=' exp-img' style={{ width: "100%" }}/>
+                                <img src={sch} alt="schematic" className=' exp-img' style={{ width: "100%" }} />
                                 <div className='expand-inner'>
                                   <div>
 
@@ -374,7 +374,7 @@ const CaseStudies = () => {
                                     ))}
                                   </ul>
                                 </div>
-                                <img alt='casestudy' src={caseStudy[12]} className="expand-img only-desktop"/>
+                                <img alt='casestudy' src={caseStudy[12]} className="expand-img only-desktop" />
                                 <br></br><br></br>
                               </div>
                               <br></br><br></br>
@@ -387,7 +387,7 @@ const CaseStudies = () => {
                                     ))}
                                   </ul>
                                 </div>
-                                <img alt='casestudy' src={caseStudy[13]} className="expand-img only-desktop"/>
+                                <img alt='casestudy' src={caseStudy[13]} className="expand-img only-desktop" />
                                 <br></br><br></br>
                               </div>
 
