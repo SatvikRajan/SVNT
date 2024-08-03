@@ -16,7 +16,7 @@ import Slider from "react-slick";
 import { Link } from 'react-router-dom';
 
 function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
+    const { style, onClick } = props;
     return (
         <button className="carousel-control-next" type="button" onClick={onClick} style={{ ...style, display: "block", width: '20%', top: '102%' }}>
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
@@ -26,7 +26,7 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
+    const { style, onClick } = props;
     return (
         <button className="carousel-control-prev" type="button" onClick={onClick} style={{ ...style, display: "block", width: '20%', top: '102%', right: '20px' }}>
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -62,7 +62,6 @@ export default function Partners() {
     const handleBeforeChange = (oldIndex, newIndex) => {
         setCurrentSlide(newIndex);
     };
-    const totalSlides = 5;
 
     var settings = {
         dots: false,
@@ -94,7 +93,7 @@ export default function Partners() {
             <div className="partners-hero">
                 <img className='main-logo' src={genetec} alt="genetec-logo" />
                 <img className="subtitle" src={subtitle} alt="genetec-logo" />
-                <img src={pbgm} className='pmobile' alt="" />
+                <img src={pbgm} className='pmobile' alt="genetec" />
             </div>
 
             <p className="desc-head">What Genetec does ?</p>
@@ -212,7 +211,7 @@ export default function Partners() {
                     <p className='certification-p'>Each solution is tailored to understand and address the unique needs of each client. Everything we do is shaped by a core set of values. Our mission as a company revolves around the complete satisfaction of our clients</p>
                 </div>
                 <div data-aos='fade-left' >
-                    <img className='cert' src={certification}></img>
+                    <img className='cert' src={certification} alt='certification'></img>
                 </div>
             </div>
 

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState , useEffect } from 'react';
 import str from '../images/Home/home-carousel-itc.webp';
 import sms from '../images/Home/home-carousel-bel';
 import is from '../images/Home/home-carousel-statocast.webp';
@@ -12,7 +12,7 @@ import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { style, onClick } = props;
   return (
     <button className="carousel-control-prev" type="button" onClick={onClick} style={{ ...style, display: "block" }}>
       <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -22,7 +22,7 @@ function SamplePrevArrow(props) {
 }
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+  const { style, onClick } = props;
   return (
     <button className="carousel-control-next ccn" type="button" onClick={onClick} style={{ ...style, display: "block" }}>
       <span className="carousel-control-next-icon" aria-hidden="true"></span>

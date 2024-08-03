@@ -1,10 +1,7 @@
-import wwdb1 from '../images/Home/IP-surveillance.svg';
 import wwdb2 from '../images/Home/IP-network.svg';
-import wwdb3 from '../images/Home/integration.svg';
 import wwdb4 from '../images/Home/audio-visual.svg';
 import wwdb5 from '../images/Home/security-and-mgmt.svg';
 import wwdb6 from '../images/Home/energy.svg';
-import wwdb7 from '../images/Home/surveillance-and-safety.svg';
 import servicebg from "../images/Services/servicebg.jpg";
 import "../css/services2.css";
 import { useTheme } from '@mui/material/styles';
@@ -38,21 +35,7 @@ import EnergySlider from "../components/Sliders/EnergySlider";
 import servicebgm from '../images/Services/servicebgm.jpg'
 
 import React from "react";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-const theme = createTheme({
-  components: {
-    MuiTab: {
-      styleOverrides: {
-        root: {
-          '&.Mui-selected': {
-            color: 'purple',
-            fontWeight: '100',
-          },
-        },
-      },
-    },
-  },
-});
+
 
 const menuItems = [
   {

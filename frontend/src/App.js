@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect, Suspense } from 'react';
+import React, { useLayoutEffect, Suspense } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
@@ -74,7 +74,7 @@ function App() {
       {/* {isLoading ? <PageLoader /> : ( */}
         <ScrollToTop>
           <Routes>
-            <Route path="/" element={<React.Suspense fallback={<PageLoader />}><MainLayout><LazyHome /></MainLayout></React.Suspense>} />
+            <Route path="/" element={<Suspense fallback={<PageLoader />}><MainLayout><LazyHome /></MainLayout></Suspense>} />
             <Route path="contact" element={<MainLayout><Contact /></MainLayout>} />
             <Route path="partners" element={<MainLayout><Partners /></MainLayout>} />
             <Route path="casestudies" element={<MainLayout><CaseStudies /></MainLayout>} />

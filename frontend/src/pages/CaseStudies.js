@@ -38,7 +38,7 @@ import agr4 from "../images/CaseStudies/agr4.jpg";
 import cfcl1 from '../images/CaseStudies/cfcl1.webp'
 import herobgm from '../images/CaseStudies/hero-bgm.webp'
 import sch from "../images/CaseStudies/sch.webp";
-import { useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 const cs = [
   ['itc', 'ITC Hotels Limited',
     [
@@ -218,8 +218,8 @@ const CaseStudies = () => {
 
 
   useEffect(() => {
-    // navigate(location.pathname, {replace: true});
-    window.document.getElementById(searchParams.get('menu'))?.scrollIntoView({ block: "center" });        
+    navigate(location.pathname, { replace: true });
+    window.document.getElementById(searchParams.get('menu'))?.scrollIntoView({ block: "center" });
   }, [searchParams])
 
 
@@ -350,7 +350,7 @@ const CaseStudies = () => {
                           {expanded[csIndex] && (
                             <div className='expanded-content'>
                               <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                                <img src={sch} alt="schematic image" className=' exp-img' style={{ width: "100%" }}></img>
+                                <img src={sch} alt="schematic" className=' exp-img' style={{ width: "100%" }}></img>
                                 <div className='expand-inner'>
                                   <div>
 
