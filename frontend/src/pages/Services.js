@@ -244,7 +244,7 @@ const Services = () => {
                             backgroundColor: 'purple', // Background color when tab is selected
                             color: 'white', // Font color when tab is selected
                           },
-                          '&:hover': {
+                          '&:hover' : {
                             backgroundColor: 'purple', // Background color on hover (optional)
                           },
                         }}
