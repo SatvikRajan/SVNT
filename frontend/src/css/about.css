@@ -375,4 +375,7 @@
   .info .info-set{
     height: 0%;
   }
+  .about-client-type{
+    padding-right: 1rem;
+  }
 }

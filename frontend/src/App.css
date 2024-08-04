@@ -781,6 +781,10 @@ main {
   font-size: 34px;
 }
 
+.job-form svg, .job-des svg{
+  height: -webkit-fill-available;
+}
+
 @media (min-width: 864px) and (max-width: 1024px) {
   .logo-brand {
     top: 38px;
@@ -818,3 +822,4 @@ main {
     margin-top: 0;
   }
 }
+

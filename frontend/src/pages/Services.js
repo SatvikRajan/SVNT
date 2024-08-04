@@ -11,8 +11,6 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import Avatar from "@material-ui/core/Avatar";
-// import SwipeableViews from 'react-swipeable-views';
-// import SwipeableViews from 'react-swipeable-views';
 import energy1 from '../images/Services/energy1.svg'
 import energy2 from '../images/Services/energy2.svg'
 import ss1 from '../images/Services/ss1.svg'
@@ -33,11 +31,23 @@ import SurveillanceSlider from "../components/Sliders/SurveillanceSlider";
 import StorageSlider from "../components/Sliders/StorageSlider";
 import EnergySlider from "../components/Sliders/EnergySlider";
 import servicebgm from '../images/Services/servicebgm.jpg'
-
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const menuItems = [
+  {
+    id: 0,
+    image: wwdb2,
+    selectedImage: wwdb21,
+    name: "IP Networking Solution",
+    details: [
+      { header: "Network Size Flexibility", content: "The size of an IP network solution can vary, from a few devices to thousands in a large network." },
+      { header: "Communication Support", content: "Supports communication systems like email, web browsing, and video streaming." },
+      { header: "Effortless Information Exchange", content: "Allows easy exchange of information and resources." },
+    ],
+    slider: <INSlider />,
+  },
   {
     id: 1,
     image: ss1,
@@ -52,55 +62,18 @@ const menuItems = [
   },
   {
     id: 2,
-    image: wwdb2,
-    selectedImage: wwdb21,
-    name: "IP Networking Solution",
+    image: energy1,
+    selectedImage: energy2,
+    name: "Energy Solutions",
     details: [
-      { header: "Network Size Flexibility", content: "The size of an IP network solution can vary, from a few devices to thousands in a large network." },
-      { header: "Communication Support", content: "Supports communication systems like email, web browsing, and video streaming." },
-      { header: "Effortless Information Exchange", content: "Allows easy exchange of information and resources." },
+      { header: "Power Backup", content: "Our UPS solution provides automatic backup power during outages." },
+      { header: "Lightning Solution", content: "Advanced systems minimize damage from lightning strikes." },
+      { header: "Solar Solution", content: "Utilize solar solutions to reduce carbon footprint and CO2 emissions." },
     ],
-    slider: <INSlider />,
+    slider: <EnergySlider />,
   },
   {
     id: 3,
-    image: is1,
-    selectedImage: is2,
-    name: "Integration Solutions",
-    details: [
-      { header: "Speedy Communication", content: "Boost productivity and quality by speeding up information flow and cutting costs." },
-      { header: "Integration", content: "Easily connect new and existing hardware with our integration solutions." },
-      { header: "Collaboration", content: "Simplify sharing info and collaboration with our machine integration." },
-    ],
-    slider: <IntegrationSlider />,
-  },
-  {
-    id: 4,
-    image: wwdb4,
-    selectedImage: wwdb41,
-    name: "Audio-Visual Solutions",
-    details: [
-      { header: "Multimedia Integration", content: "Integrate audio, video, display, lighting, and system controls." },
-      { header: "Venue Application", content: "Perfect for conference rooms, auditoriums, cafeterias, classrooms, and more." },
-      { header: "Digital Displays", content: "Use digital displays to create dynamic content ideal for entertainment, merchandise, and advertising." },
-    ],
-    slider: <AudioVisualSlider />,
-  },
-  {
-    id: 5,
-    image: wwdb6,
-    selectedImage: wwdb61,
-    name: "Security Automation",
-    details: [
-      // Replace with details specific to Security & Management
-      { header: "Firewall", content: "Decide what data to allow or block using a firewall" },
-      { header: "Vulnerability Detection", content: "Discover and fix security weaknesses to keep your business safe." },
-      { header: "Website Optimization", content: ` Improve your website's performance with web caching and bandwidth management.` },
-    ],
-    slider: <SecuritySlider />,
-  },
-  {
-    id: 6,
     image: ss1,
     selectedImage: ss2,
     name: "Surveillance and Safety Solutions",
@@ -112,7 +85,19 @@ const menuItems = [
     slider: <SurveillanceSlider />,
   },
   {
-    id: 7,
+    id: 4,
+    image: wwdb6,
+    selectedImage: wwdb61,
+    name: "Security Automation",
+    details: [
+      { header: "Firewall", content: "Decide what data to allow or block using a firewall" },
+      { header: "Vulnerability Detection", content: "Discover and fix security weaknesses to keep your business safe." },
+      { header: "Website Optimization", content: ` Improve your website's performance with web caching and bandwidth management.` },
+    ],
+    slider: <SecuritySlider />,
+  },
+  {
+    id: 5,
     image: wwdb5,
     selectedImage: wwdb51,
     name: "Storage",
@@ -124,16 +109,28 @@ const menuItems = [
     slider: <StorageSlider />,
   },
   {
-    id: 8,
-    image: energy1,
-    selectedImage: energy2,
-    name: "Energy Solutions",
+    id: 6,
+    image: wwdb4,
+    selectedImage: wwdb41,
+    name: "Audio-Visual Solutions",
     details: [
-      { header: "Power Backup", content: "Our UPS solution provides automatic backup power during outages." },
-      { header: "Lightning Solution", content: "Advanced systems minimize damage from lightning strikes." },
-      { header: "Solar Solution", content: "Utilize solar solutions to reduce carbon footprint and CO2 emissions." },
+      { header: "Multimedia Integration", content: "Integrate audio, video, display, lighting, and system controls." },
+      { header: "Venue Application", content: "Perfect for conference rooms, auditoriums, cafeterias, classrooms, and more." },
+      { header: "Digital Displays", content: "Use digital displays to create dynamic content ideal for entertainment, merchandise, and advertising." },
     ],
-    slider: <EnergySlider />,
+    slider: <AudioVisualSlider />,
+  },
+  {
+    id: 7,
+    image: is1,
+    selectedImage: is2,
+    name: "Integration Solutions",
+    details: [
+      { header: "Speedy Communication", content: "Boost productivity and quality by speeding up information flow and cutting costs." },
+      { header: "Integration", content: "Easily connect new and existing hardware with our integration solutions." },
+      { header: "Collaboration", content: "Simplify sharing info and collaboration with our machine integration." },
+    ],
+    slider: <IntegrationSlider />,
   },
 ];
 function TabPanel(props) {
@@ -165,6 +162,20 @@ TabPanel.propTypes = {
 const Services = () => {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
+  const location = useLocation();
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const tab = parseInt(params.get('tab'));
+    if (!isNaN(tab)) {
+      setValue(tab);
+      document.getElementById(`tab-${tab}`)
+        const element = document.getElementById(`tab-${tab}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+  }, [location]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -257,7 +268,7 @@ const Services = () => {
               </Tabs>
               {menuItems.map((item, index) => (
                 <TabPanel key={item.id} value={value} index={index} dir={theme.direction}>
-                  <div className="services-details">
+                  <div id={`tab-${item.id}`} className="services-details">
                     <div className='g1'>
                       {item.details.map((detail, index) => (
                         <div key={index} className="service-card">
