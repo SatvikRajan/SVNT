@@ -353,6 +353,12 @@ a:hover {
   width: 100%;
 }
 
+@media (max-width: 370px) {
+  .icons{
+    gap: 20px !important;
+  }
+}
+
 @media (max-width: 480px) {
   .invite {
     padding: 1rem !important;
@@ -379,6 +385,16 @@ a:hover {
   .career-img{
     margin-top: 5rem;
     padding: 1rem;
+  }
+  .foot {
+    width: 100% !important;
+  }
+  .foot1 {
+    justify-content: start !important;
+  }
+  .bottom-bar {
+    gap: 1rem !important;
+    padding-bottom: 1rem;
   }
 }
 

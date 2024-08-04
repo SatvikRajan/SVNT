@@ -497,6 +497,7 @@
     padding-right: 4%;
   }
   .case-study h3 {
+    text-align: start;
     content: counter(KIA);
     font-size: 20px !important;
   }

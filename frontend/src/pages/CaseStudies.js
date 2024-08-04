@@ -37,6 +37,7 @@ import cfcl1 from '../images/CaseStudies/cfcl1.webp'
 import herobgm from '../images/CaseStudies/hero-bgm.webp'
 import sch from "../images/CaseStudies/sch.webp";
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
+import { useMediaQuery } from '@mui/material';
 const cs = [
   ['itc', 'ITC Hotels Limited',
     [
@@ -199,7 +200,7 @@ const CaseStudies = () => {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
   const [expanded, setExpanded] = React.useState({});
-  const [isDropdownOpen, setIsDropdownOpen] = useState(true);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
   const handleChange = (event, newValue) => {
@@ -210,10 +211,9 @@ const CaseStudies = () => {
     setExpanded(prev => ({ ...prev, [index]: !prev[index] }));
   };
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const toggleDropdown = (index) => {
+    setIsDropdownOpen(isDropdownOpen === index ? null : index);
   };
-
 
   useEffect(() => {
     navigate(location.pathname, { replace: true });
@@ -306,16 +306,16 @@ const CaseStudies = () => {
                       <div id={caseStudy[0]} key={csIndex} className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation  ' : ''}`}>
                         {!isDropdownOpen && <img className="image-bg" src={caseStudy[3]} alt='' />}
                         {expanded[csIndex]}
-                        <div className={`case-study ${isDropdownOpen ? 'dropdown-open' : ''}`} style={{ backgroundColor: isDropdownOpen ? '#0e1513' : 'inherit' }}>
+                        <div className={`case-study ${isDropdownOpen === csIndex ? 'dropdown-open' : ''}`} style={{ backgroundColor: isDropdownOpen === csIndex ? '#0e1513' : '' }}>
 
-                          <div className='csd-head' onClick={toggleDropdown}>
+                          <div className='csd-head' onClick={() => toggleDropdown(csIndex)}>
                             <h3 className='csd-heading'>{caseStudy[1]}</h3>
-                            <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg" className={isDropdownOpen ? 'rotate-180' : ''}
+                            <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg" className={isDropdownOpen === csIndex ? 'rotate-180' : ''}
                             >
                               <path d="M27.0672 10.137L25.2932 8.34216L14.9999 18.7565L4.70662 8.34216L2.93262 10.137L14.9999 22.3463L27.0672 10.137Z" fill="#F1FAFF" />
                             </svg>
                           </div>
-                          {isDropdownOpen && (
+                          {isDropdownOpen === csIndex && (
                             <div className='cs-wrapper'>
                               <ul className='csd-points'>
                                 {caseStudy[2].map((detail, detailIndex) => {

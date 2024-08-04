@@ -190,7 +190,7 @@ const CareersPage = () => {
                   {" "}
                   <svg
                     width="16"
-                    height="590"
+                    height="-webkit-fill-available"
                     viewBox="0 0 16 681"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
