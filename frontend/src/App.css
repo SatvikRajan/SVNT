@@ -821,5 +821,15 @@ main {
     margin-left: 0;
     margin-top: 0;
   }
+  .job-form{
+    margin-left: 2rem;
+    width: 85% !important;
+  }
+  .buttons{
+    gap: 10px;
+  }
+  .go-back{
+    width: 35%;
+  } 
 }
 

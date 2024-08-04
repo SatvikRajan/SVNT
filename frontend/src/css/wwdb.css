@@ -129,28 +129,28 @@
 .m0 {
   text-align: center;
   top: 135px;
-  left: 709px;
+  left: 789px;
 }
 
 .m1 {
-  left: 349px;
+  left: 489px;
   top: 238px;
 }
 
 .m2 {
-  left: 407px;
+  left: 287px;
   top: 360px;
 }
 
 .m3 {
-  left: 206px;
+  left: 196px;
   top: 483px;
 }
 
 .m4 {
   text-align: center;
   top: 567px;
-  left: 640px;
+  left: 630px;
 }
 
 .m5 {
@@ -372,6 +372,14 @@
   .openarrow {
     display: block;
     margin-left: auto;
+  }
+  .wwdb-lm2{
+    position: static !important;
+    margin-left: auto;
+    margin-block-start: 15rem;
+  }
+  .lm-2{
+    font-size: 20px;
   }
 }
 

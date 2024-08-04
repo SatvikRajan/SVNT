@@ -17,16 +17,15 @@ import { Link } from 'react-router-dom';
 
 export default function WhyWeDoBest() {
 
-
   const names = [
-    'IP Networking Solution',
-    'IP Surveillance Solution',
-    'Energy Solutions',
+    'Networking',
+    'Data Centers',
+    'Electrical and Backup',
     'Surveillance and Safety Solutions',
     'Security & Management Services',
-    'Storage and Archives ',
-    'Audio-Visual Solutions',
-    'Integration Solutions',
+    'Server Storage',
+    'Audio and Visual',
+    'Integration',
   ];
 
   const [clickVal, setClickVal] = useState(false);

@@ -99,7 +99,7 @@ const About = () => {
     infinite: true,
     slidesToShow: 2,
     speed: 600,
-    rows: 4,
+    rows: 3,
     slidesPerRow: 2,
     cssEase: "linear",
     outline: false,
@@ -174,7 +174,7 @@ const About = () => {
             <Slider {...settings}>
               {clients[activeClientType].map((client, index) => (
                 <div key={index}>
-                  <img height={150} src={client.src} alt={client.alt} />
+                  <img height={200} src={client.src} alt={client.alt} />
                 </div>
               ))}
             </Slider>

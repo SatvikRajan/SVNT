@@ -94,7 +94,7 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
                 </motion.div>
 
                 <motion.div
-                    className="wwdb-learn-more"
+                    className="wwdb-learn-more wwdb-lm2"
                     initial={{ opacity: 0, top: '673px', left: '1126px' }}
                     animate={{ opacity: 1, top: '536px', left: '1140px', width: '240px' }}
                     transition={{ delay: 0.3, duration: 0.8 }}
@@ -103,7 +103,7 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
                         onClick={() => {
                             window.location.href = `/services?tab=${index}`
                         }} className="btn btn-primary btn-arrow w-100">
-                        <motion.p className="learnMore">
+                        <motion.p className="learnMore lm-2">
                             <motion.span>Read More
                                 <svg className='fas' fill='white' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" /></svg>
                             </motion.span>
