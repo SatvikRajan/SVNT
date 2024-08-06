@@ -156,9 +156,9 @@ const CareersPage = () => {
             Recruitment
           </h1>
           <div className="jobs">
-            <div class="dropdown" data-aos='fade-right'>
+            <div className="dropdown" data-aos='fade-right'>
               <button
-                class="btn btn-secondary dropdown-career dropdown-toggle"
+                className="btn btn-secondary dropdown-career dropdown-toggle"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -233,16 +233,16 @@ const CareersPage = () => {
                   </p>
                   <div className="form-box-1">
                     <span style={{ marginLeft: "10px" }}>Apply Online</span>
-                    <label for="inp" class="inp">
+                    <label for="inp" className="inp">
                       <input type="text" id="inp" placeholder="&nbsp;" value={name} onChange={(e) => setName(e.target.value)} />
-                      <span class="label">Name</span>
-                      <span class="focus-bg"></span>
+                      <span className="label">Name</span>
+                      <span className="focus-bg"></span>
                     </label>
                     <div className="d-flex" style={{ gap: "15px" }}>
-                      <label for="inp" class="inp">
+                      <label for="inp" className="inp">
                         <input type="text" id="inp" placeholder="&nbsp;" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <span class="label">Email</span>
-                        <span class="focus-bg"></span>
+                        <span className="label">Email</span>
+                        <span className="focus-bg"></span>
                       </label>
                       <label htmlFor="phone" className="inp">
                         <input type="text" id="phone" placeholder="&nbsp;" value={phone} onChange={(e) => setPhone(e.target.value)} onWheel={event => event.currentTarget.blur()} />
@@ -250,15 +250,15 @@ const CareersPage = () => {
                         <span className="focus-bg"></span>
                       </label>
                     </div>
-                    <label for="inp" class="inp">
+                    <label for="inp" className="inp">
                       <input type="text" id="inp" placeholder="&nbsp;" value={totalExperience} onChange={(e) => setTotalExperience(e.target.value)} />
-                      <span class="label">Total Experience</span>
-                      <span class="focus-bg"></span>
+                      <span className="label">Total Experience</span>
+                      <span className="focus-bg"></span>
                     </label>
-                    <label for="inp" class="inp">
+                    <label for="inp" className="inp">
                       <input type="text" id="inp" placeholder="&nbsp;" value={relevantExperience} onChange={(e) => setRelevantExperience(e.target.value)} />
-                      <span class="label">Relevant Experience</span>
-                      <span class="focus-bg"></span>
+                      <span className="label">Relevant Experience</span>
+                      <span className="focus-bg"></span>
                     </label>
 
                     <div className="d-flex mt-4 justify-center">
@@ -333,7 +333,7 @@ const CareersPage = () => {
                       {jobDetails.employmentType}
                     </p>
                     <p style={{ fontWeight: "bold" }}>Requirements</p>
-                    <ul class="job-requirements">
+                    <ul className="job-requirements">
                       <li>
                         Experience {" "}
                         <ArrowIcon style={{ marginRight: '25px', marginLeft: '50px' }} />

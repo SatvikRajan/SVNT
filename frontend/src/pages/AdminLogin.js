@@ -55,8 +55,8 @@ function AdminLogin() {
       <div className="top">
         <img src={company} width='400rem' alt="" />
       </div>
-      <div class="parent-container">
-        <div class="portal-login d-flex flex-column">
+      <div className="parent-container">
+        <div className="portal-login d-flex flex-column">
           <p>Admin Portal</p>
           <form onSubmit={(e) => handleSubmit(e)}>
             <input

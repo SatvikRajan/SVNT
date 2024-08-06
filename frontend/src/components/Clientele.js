@@ -39,26 +39,26 @@ export default function Clientele() {
         </div>
 
         <section id="slideshow" data-aos='fade-left'>
-          <div class="entire-content">
-            <div class="content-carrousel">
-              <figure class="shadow"><img src={aequs} alt='client'/></figure>
-              <figure class="shadow"><img src={allergan} alt='client'/></figure>
-              <figure class="shadow"><img src={ampath} alt='client'/></figure>
-              <figure class="shadow"><img src={kia} alt='client'/></figure>
-              <figure class="shadow"><img src={brigade} alt='client'/></figure>
-              <figure class="shadow"><img src={esl} alt='client'/></figure>
-              <figure class="shadow"><img src={gd} alt='client'/></figure>
-              <figure class="shadow"><img src={akn} alt='client'/></figure>
-              <figure class="shadow"><img src={hc} alt='client'/></figure>
-              <figure class="shadow"><img src={itc} alt='client'/></figure>
-              <figure class="shadow"><img src={indigo} alt='client'/></figure>
-              <figure class="shadow"><img src={afio} alt='client'/></figure>
-              <figure class="shadow"><img src={abg} alt='client'/></figure>
-              <figure class="shadow"><img src={gm} alt='client'/></figure>
-              <figure class="shadow"><img src={britannia} alt='client'/></figure>
-              <figure class="shadow"><img src={vedanta} alt='client'/></figure>
-              <figure class="shadow"><img src={akn} alt='client'/></figure>
-              <figure class="shadow"><img src={hc} alt='client'/></figure>
+          <div className="entire-content">
+            <div className="content-carrousel">
+              <figure className="shadow"><img src={aequs} alt='client'/></figure>
+              <figure className="shadow"><img src={allergan} alt='client'/></figure>
+              <figure className="shadow"><img src={ampath} alt='client'/></figure>
+              <figure className="shadow"><img src={kia} alt='client'/></figure>
+              <figure className="shadow"><img src={brigade} alt='client'/></figure>
+              <figure className="shadow"><img src={esl} alt='client'/></figure>
+              <figure className="shadow"><img src={gd} alt='client'/></figure>
+              <figure className="shadow"><img src={akn} alt='client'/></figure>
+              <figure className="shadow"><img src={hc} alt='client'/></figure>
+              <figure className="shadow"><img src={itc} alt='client'/></figure>
+              <figure className="shadow"><img src={indigo} alt='client'/></figure>
+              <figure className="shadow"><img src={afio} alt='client'/></figure>
+              <figure className="shadow"><img src={abg} alt='client'/></figure>
+              <figure className="shadow"><img src={gm} alt='client'/></figure>
+              <figure className="shadow"><img src={britannia} alt='client'/></figure>
+              <figure className="shadow"><img src={vedanta} alt='client'/></figure>
+              <figure className="shadow"><img src={akn} alt='client'/></figure>
+              <figure className="shadow"><img src={hc} alt='client'/></figure>
 
             </div>
           </div>

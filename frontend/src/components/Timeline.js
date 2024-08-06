@@ -131,7 +131,7 @@ export default function Timeline() {
         <div className="timeline" data-aos='fade-up'>
             <div className="timeline-container" style={{ backgroundPositionX: `${backgroundPosition}%` }}>
                 <div><h1 className="timeline-head">Company TimeLine</h1></div>
-                {/* <div class="line"></div>  */}
+                {/* <div className="line"></div>  */}
                 <div className="timeline-carousel">
                     <Slider {...settings}>
 

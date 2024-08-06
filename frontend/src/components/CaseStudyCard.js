@@ -94,7 +94,7 @@ export default function CaseStudyCard({ props }) {
     const [currTop, setCurrTop] = useState('');
     const [expandedPosition, setExpandedPosition] = useState({ top: '50%', left: '50%' });
     const expandedCardRef = useRef(null);
-    const location = useLocation(); // Use useLocation to access the URL
+    const location = useLocation();
 
     // Function to get URL parameter
     const getUrlParameter = (name) => {

@@ -55,8 +55,8 @@ function Admin() {
       <div className="top">
         <img src={company} width='400rem' alt="" />
       </div>
-      <div class="parent-container">
-        <div class="portal d-flex flex-column">
+      <div className="parent-container">
+        <div className="portal d-flex flex-column">
           <p>Admin Portal</p>
           <form onSubmit={(e) => handleSubmit(e)}>
             <input

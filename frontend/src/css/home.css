@@ -228,6 +228,10 @@
 }
 
 .hcscard-readmore {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
   margin-left: auto;
   margin-top: 1rem;
 }

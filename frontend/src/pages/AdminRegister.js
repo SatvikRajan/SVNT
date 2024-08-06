@@ -73,8 +73,8 @@ export default function Register() {
             <div className="top">
                 <img src={company} width='400rem' alt="" />
             </div>
-            <div class="parent-container">
-                <div class="portal-register d-flex flex-column">
+            <div className="parent-container">
+                <div className="portal-register d-flex flex-column">
                     <p>Admin Portal</p>
                     <form className="reg" onSubmit={(e) => handleSubmit(e)}>
                         <input

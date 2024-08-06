@@ -11,15 +11,15 @@ import image4m from '../images/Home/carousel-image-4m.webp';
 import { Link } from 'react-router-dom';
 function Carosuel1() {
   return (
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators c-ind">
-        <div type="button" id='carousel-button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></div>
+    <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
+      <div className="carousel-indicators c-ind">
+        <div type="button" id='carousel-button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></div>
         <div type="button" id='carousel-button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></div>
         <div type="button" id='carousel-button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></div>
         <div type="button" id='carousel-button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></div>
       </div>
-      <div class="carousel-inner cinner">
-        <div class="carousel-item ci active" >
+      <div className="carousel-inner cinner">
+        <div className="carousel-item ci active" >
           <picture>
             <source media="(max-width: 480px)" srcSet={image1m} />
             <source media="(min-width: 480px)" srcSet={image1} />
@@ -29,7 +29,7 @@ function Carosuel1() {
               alt="..."
             />
           </picture>
-          <div class="carousel-caption cc1 d-none d-md-block">
+          <div className="carousel-caption cc1 d-none d-md-block">
             {/* <h1>First slide label</h1> */}
             <h1 style={{ width: '60%', fontSize: '40px', lineHeight: '4rem', color: 'white' }}>Relax, We've Got Your Back Your Security is Our Priority!
             </h1>
@@ -38,8 +38,8 @@ function Carosuel1() {
             {/* <Link to="/about"><p className='ccr readmore'>Read More</p></Link> */}
           </div>
         </div>
-        <div class="carousel-item ci" >
-          {/* <imsrc={image4} class="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
+        <div className="carousel-item ci" >
+          {/* <imsrc={image4} className="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
             <source media="(max-width: 480px)" srcSet={image2m} />
             <source media="(min-width: 480px)" srcSet={image2} />
@@ -49,7 +49,7 @@ function Carosuel1() {
               alt="..."
             />
           </picture>
-          <div class="carousel-caption cc1 d-none d-md-block">
+          <div className="carousel-caption cc1 d-none d-md-block">
             <h1 style={{ width: '60%', fontSize: '40px', color: 'white', lineHeight: '4rem' }}>Join us in celebrating our
               awards and recognition over
               the years!
@@ -58,7 +58,7 @@ function Carosuel1() {
             </p>
           </div>
         </div>
-        <div class="carousel-item ci" >
+        <div className="carousel-item ci" >
           <picture>
             <source media="(max-width: 480px)" srcSet={image3m} />
             <source media="(min-width: 480px)" srcSet={image3} />
@@ -68,13 +68,13 @@ function Carosuel1() {
               alt="..."
             />
           </picture>
-          <div class="carousel-caption cc1 cc2 d-none d-md-block">
+          <div className="carousel-caption cc1 cc2 d-none d-md-block">
             <h1 style={{ width: '50%', lineHeight: '4rem', color: 'white', marginBottom: '1rem' }}>Explore our many services designed to meet your needs.
             </h1>
             <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/contact'>Send us a message</Link></p>
           </div>
         </div>
-        <div class="carousel-item ci" >
+        <div className="carousel-item ci" >
           <picture>
             <source media="(max-width: 480px)" srcSet={image4m} />
             <source media="(min-width: 480px)" srcSet={image4} />
@@ -84,20 +84,20 @@ function Carosuel1() {
               alt="..."
             />
           </picture>
-          <div class="carousel-caption cc1 d-none d-md-block">
+          <div className="carousel-caption cc1 d-none d-md-block">
             <h1 style={{ width: '60%', lineHeight: '4rem', color: 'white' }}>Dive into our case studies and see how we deliver results!
             </h1>
             <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/about'>Learn more about us</Link></p>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev ccb" id='carousel-control-prev' type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" id='carousel-control-prev-icon' aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+      <button className="carousel-control-prev ccb" id='carousel-control-prev' type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span className="carousel-control-prev-icon" id='carousel-control-prev-icon' aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next ccb" id='carousel-control-next' type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" id='carousel-control-next-icon' aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+      <button className="carousel-control-next ccb" id='carousel-control-next' type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span className="carousel-control-next-icon" id='carousel-control-next-icon' aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
       </button>
     </div>
   );

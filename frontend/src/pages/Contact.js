@@ -112,40 +112,40 @@ const Contact = () => {
         </div>
         <div className="form-box" data-aos="fade-left">
           <form onSubmit={handleSubmit}>
-            <label for="name" class="inp">
+            <label for="name" className="inp">
               <input type="text" id="name" value={senderName}
                 onChange={(e) => setSenderName(e.target.value)} placeholder="&nbsp;" />
-              <span class="label">Name</span>
-              <span class="focus-bg"></span>
+              <span className="label">Name</span>
+              <span className="focus-bg"></span>
             </label>
-            <div class="d-flex email" style={{ gap: '15px' }}>
-              <label for="email" class="inp">
+            <div className="d-flex email" style={{ gap: '15px' }}>
+              <label for="email" className="inp">
                 <input type="text" id="email" value={senderEmail}
                   onChange={(e) => setSenderEmail(e.target.value)} placeholder="&nbsp;" />
-                <span class="label">Email</span>
-                <span class="focus-bg"></span>
+                <span className="label">Email</span>
+                <span className="focus-bg"></span>
               </label>
-              <label for="phone" class="inp ">
+              <label for="phone" className="inp ">
                 <input type="text" id="phone" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="&nbsp;" />
-                <span class="label"> Phone Number</span>
-                <span class="focus-bg"></span>
+                <span className="label"> Phone Number</span>
+                <span className="focus-bg"></span>
               </label>
             </div>
-            <label for="subject" class="inp">
+            <label for="subject" className="inp">
               <input type="text" id="subject" value={subject}
                 onChange={(e) => setSubject(e.target.value)} placeholder="&nbsp;" />
-              <span class="label">Subject</span>
-              <span class="focus-bg"></span>
+              <span className="label">Subject</span>
+              <span className="focus-bg"></span>
             </label>
 
-            <label for="inp" class="inp">
+            <label for="inp" className="inp">
               <textarea style={{ height: '20rem' }} className='textarea' type="text" id="inp" value={text} rows={12}
                 onChange={(e) => setText(e.target.value)} placeholder="&nbsp;" />
-              <span class="label">Message</span>
-              <span class="focus-bg"></span>
+              <span className="label">Message</span>
+              <span className="focus-bg"></span>
             </label>
-            <div class="input-group">
-              <button class="btn btn-primary submit" type="submit">
+            <div className="input-group">
+              <button className="btn btn-primary submit" type="submit">
                 <span>Submit </span>
               </button>
             </div>

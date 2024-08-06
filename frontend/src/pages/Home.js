@@ -15,7 +15,7 @@ const Home = ()=> {
 
   return (
     <div className="home">
-      <div class="carousel1">
+      <div className="carousel1">
         <Carosuel1 />
       </div>
 

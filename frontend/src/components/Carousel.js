@@ -108,7 +108,7 @@ function CaseStudiesCarousel() {
     <div data-aos='fade-up' id="carouselExampleControls" className="carousel slide">
       <h1>Case Studies</h1>
       <div className="carousel-background">
-        <video autoPlay muted playsinline autobuffer controls={false} loop id="myVideo" className="carousel-video">
+        <video autoPlay muted playsInline autobuffer="true" controls={false} loop id="myVideo" className="carousel-video">
           <source src={video} type="video/mp4" />
         </video>
       </div>
@@ -121,7 +121,7 @@ function CaseStudiesCarousel() {
             <div className="home-cs-card-content">
               <p className="title">{item.title}</p>
               {item.description && <p className="description">{item.description}</p>}
-              <button className='hcscard-readmore readmore text-white' style={{ width: '50%', fontSize: '15px', filter: 'invert(1)' }}
+              <button className='hcscard-readmore readmore text-white ' style={{ width: '50%', fontSize: '15px', filter: 'invert(1)' }}
                 // to={`/casestudies?menu=${item.id}`}
                 onClick={() => {
                   window.location.href = `/casestudies?menu=${item.id}`

@@ -83,7 +83,7 @@ const Navbar = () => {
 
                         
 {drop ? (
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="Cross" style={{height:"2rem"}} className={`  ${drop? 'rotate' : ''}`}><line x1="9.37" x2="54.63" y1="9.37" y2="54.63" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="4" class="colorStroke010101 svgStroke"></line><line x1="9.37" x2="54.63" y1="54.63" y2="9.37" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="4" class="colorStroke010101 svgStroke"></line></svg>     ) : (
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="Cross" style={{height:"2rem"}} className={`  ${drop? 'rotate' : ''}`}><line x1="9.37" x2="54.63" y1="9.37" y2="54.63" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="4" className="colorStroke010101 svgStroke"></line><line x1="9.37" x2="54.63" y1="54.63" y2="9.37" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="4" className="colorStroke010101 svgStroke"></line></svg>     ) : (
                             <span   className={` navbar-toggler-icon  ${!drop? 'reverserotate' : ''}`}></span>
                         )}
                     </button>
