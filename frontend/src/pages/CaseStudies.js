@@ -37,7 +37,6 @@ import cfcl1 from '../images/CaseStudies/cfcl1.webp'
 import herobgm from '../images/CaseStudies/hero-bgm.webp'
 import sch from "../images/CaseStudies/sch.webp";
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
-import { useMediaQuery } from '@mui/material';
 const cs = [
   ['itc', 'ITC Hotels Limited',
     [
@@ -107,7 +106,7 @@ const cs = [
     `Enhancing Airport Safety`,
     [[`We enhanced video surveillance to keep a watchful eye on the two terminals, runways, and parking areas in real-time. Our focus on strengthening access control ensures that only authorised individuals could enter sensitive zones. Adding strong backup systems meant that these systems would run at all times, even during emergencies. By integrating all security functions into a single hub, from monitoring passenger flow to tracking vehicles, we've created a cohesive system that's easier to manage, boosting our security's strength and efficiency. Plus, our flexible infrastructure grows with the airport, securely handling and swiftly distributing vital information wherever it's needed. Managing everything from one place also made things run smoother, so they could respond quickly to any issues and solve problems faster. `]], `360 Vision`, [[`At Kempegowda International Airport, we've enhanced security by linking cameras, that store video recordings, with Genetec's platform. This connection lets us efficiently gather data and manage surveillance footage. Integrating these cameras into Genetec's system gives us better visibility and control over our security setup. This setup demonstrates how Genetec's platform can adapt and work seamlessly with other systems, making our security operations more efficient and effective.`],
     [`By adopting advanced technology and innovative solutions, Kempegowda International Airport has enhanced both security measures and operational efficiency. This commitment highlights their dedication to ensuring airports remain secure and well-prepared for future challenges.`]], kia3, kia2, kia3, kia1, sch]
-
+  // eslint-disable-next-line
   , ['cfcl', 'Chambal Fertilizers Limited ', [
     'Objective: To strengthen the security setup of CFCL Gadepan in plant and township area ',
     'Installation Summary: 79nos Licence for Cameras, 7nos Workstation licence for Monitoring PC, 78 cameras',
@@ -306,7 +305,7 @@ const CaseStudies = () => {
                       <div id={caseStudy[0]} key={csIndex} className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation  ' : ''}`}>
                         {!isDropdownOpen && <img className="image-bg" src={caseStudy[3]} alt='' />}
                         {expanded[csIndex]}
-                        <div className={`case-study ${isDropdownOpen === csIndex ? 'dropdown-open' : ''}`} style={{ backgroundColor: isDropdownOpen === csIndex ? '#0e1513' : '' }}>
+                        <div className={`case-study ${isDropdownOpen === csIndex ? 'dropdown-open' : ''}`} style={{ backgroundColor: isDropdownOpen === csIndex ? 'inherit' : 'inherit' }}>
 
                           <div className='csd-head' onClick={() => toggleDropdown(csIndex)}>
                             <h3 className='csd-heading'>{caseStudy[1]}</h3>

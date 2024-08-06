@@ -9,7 +9,7 @@ import AOS from 'aos';
 import Slider from "react-slick";
 import video from '../images/Home/case-studies.mp4'
 import 'aos/dist/aos.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function SamplePrevArrow(props) {
   const { style, onClick } = props;
@@ -121,14 +121,14 @@ function CaseStudiesCarousel() {
             <div className="home-cs-card-content">
               <p className="title">{item.title}</p>
               {item.description && <p className="description">{item.description}</p>}
-              <Link className='hcscard-readmore readmore text-white' style={{ width: '50%', fontSize: '15px', filter: 'invert(1)' }}
+              <button className='hcscard-readmore readmore text-white' style={{ width: '50%', fontSize: '15px', filter: 'invert(1)' }}
                 // to={`/casestudies?menu=${item.id}`}
                 onClick={() => {
                   window.location.href = `/casestudies?menu=${item.id}`
                 }}
               >
                 Read More
-              </Link>
+              </button>
             </div>
           </div>
         ))}

@@ -7,14 +7,24 @@
 }
 
 .carousel-caption {
+  background-color: #251741;
   color: #f1faff;
   text-align: start !important;
-  bottom: 14rem;
-  right: 20% !important;
-  left: 12% !important;
-  font-size: 42px;  
+  height: 19rem;
+  font-size: 42px;
+  padding: 2rem;
+  border-radius: 10px;
+  opacity: 0.9;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 70vw;
+  /* text-align: center; */
 }
 
+.carousel-caption h1 {
+  width: 65% !important;
+}
 .carousel-indicators {
   align-items: center;
   /* width: 46rem; */
@@ -27,7 +37,7 @@
 }
 
 .carousel-indicators .active {
-  background-color: #5b09ff !important;
+  background-color: #8243ff !important;
 }
 /* 
 .carousel-item.active {
@@ -69,7 +79,7 @@ body {
 
 #slideshow {
   height: 50%;
-  width: 60%;
+  width: 100%;
   padding-top: 7%;
 
   padding-left: 20%;
@@ -555,11 +565,6 @@ body {
   top: 0;
 }
 
-.cc2 {
-  width: 67%;
-  left: 53% !important;
-  right: 0% !important;
-}
 .picker {
   position: relative;
   overflow: hidden;
@@ -595,9 +600,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  .cc2{
-    width: 100%;
-  }
   .carousel-control-prev,
   .carousel-control-next {
     align-self: self-end;
@@ -640,7 +642,7 @@ body {
     width: 100%;
   }
   .ccb {
-    bottom: 13rem;
+    bottom: 16rem;
   }
   .ci {
     /* border: 1px solid black; */
@@ -657,7 +659,7 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  
+
   .cc1 h1 {
     font-weight: 500;
     line-height: 2rem !important;
@@ -673,15 +675,3 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
-  .cc1{
-    bottom: 20rem;
-  }
-  
-}
-
-@media (min-width: 1440px) {
-  .carousel-caption{
-    bottom: 18rem !important;
-  }
-}

@@ -148,8 +148,7 @@ const CareersPage = () => {
             <h1>Shape our Future Together!</h1>
             <p className="recruit-handle">
               With over 32 locations , SVNT presents limitless prospects while
-              fostering growth,
-              <br /> leadership, innovation, and showing appreciation for its
+              fostering growth, leadership, innovation, and showing appreciation for its
               dedicated workforce.
             </p>
           </div>

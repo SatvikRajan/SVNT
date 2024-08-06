@@ -298,8 +298,8 @@ p.write1 {
   margin-top: 15px;
 }
 .recruitment {
+  position: sticky;
   z-index: 999;
-  padding-top: 5rem;
   background-image: url(./images/Career/gradient-career.webp);
   background-repeat: no-repeat;
   background-position: center 60%;

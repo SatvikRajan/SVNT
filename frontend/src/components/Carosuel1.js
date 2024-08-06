@@ -31,11 +31,11 @@ function Carosuel1() {
           </picture>
           <div class="carousel-caption cc1 d-none d-md-block">
             {/* <h1>First slide label</h1> */}
-            <h1 style={{ width: '60%', fontSize: '40px', lineHeight: '4rem', color: 'black' }}>Relax, We've Got Your Back Your Security is Our Priority!
+            <h1 style={{ width: '60%', fontSize: '40px', lineHeight: '4rem', color: 'white' }}>Relax, We've Got Your Back Your Security is Our Priority!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '30%', filter: 'invert(1)' }} to='/contact'>Send us a message</Link>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '30%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/contact'>Send us a message</Link>
             </p>
-            {/* <Link to="/about"><p className='ccr text-white readmore'>Read More</p></Link> */}
+            {/* <Link to="/about"><p className='ccr readmore'>Read More</p></Link> */}
           </div>
         </div>
         <div class="carousel-item ci" >
@@ -49,12 +49,12 @@ function Carosuel1() {
               alt="..."
             />
           </picture>
-          <div class="carousel-caption cc1 cc2 d-none d-md-block">
-            <h1 style={{ width: '60%', fontSize: '40px', color: 'black', lineHeight: '4rem' }}>Join us in celebrating our
+          <div class="carousel-caption cc1 d-none d-md-block">
+            <h1 style={{ width: '60%', fontSize: '40px', color: 'white', lineHeight: '4rem' }}>Join us in celebrating our
               awards and recognition over
               the years!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', filter: 'invert(1)' }} to='/contact'>Send us a message</Link>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/contact'>Send us a message</Link>
             </p>
           </div>
         </div>
@@ -68,10 +68,10 @@ function Carosuel1() {
               alt="..."
             />
           </picture>
-          <div class="carousel-caption cc1 d-none d-md-block">
-            <h1 style={{ width: '50%', lineHeight: '4rem', color: 'black', marginBottom: '1rem' }}>Explore our many services designed to meet your needs.
+          <div class="carousel-caption cc1 cc2 d-none d-md-block">
+            <h1 style={{ width: '50%', lineHeight: '4rem', color: 'white', marginBottom: '1rem' }}>Explore our many services designed to meet your needs.
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', filter: 'invert(1)' }} to='/contact'>Send us a message</Link></p>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/contact'>Send us a message</Link></p>
           </div>
         </div>
         <div class="carousel-item ci" >
@@ -84,10 +84,10 @@ function Carosuel1() {
               alt="..."
             />
           </picture>
-          <div class="carousel-caption cc1 cc2 d-none d-md-block">
-            <h1 style={{ width: '60%', lineHeight: '4rem', color: 'black' }}>Dive into our case studies and see how we deliver results!
+          <div class="carousel-caption cc1 d-none d-md-block">
+            <h1 style={{ width: '60%', lineHeight: '4rem', color: 'white' }}>Dive into our case studies and see how we deliver results!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', filter: 'invert(1)' }} to='/about'>Learn more about us</Link></p>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/about'>Learn more about us</Link></p>
           </div>
         </div>
       </div>

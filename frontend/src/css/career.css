@@ -274,7 +274,8 @@ a:hover {
   }
   .job-des {
     margin-left: 5rem;
-    width: 80% !important;
+    width: 85% !important;
+    z-index: -1;
   }
   .dropdown {
     width: 85%;
@@ -285,6 +286,10 @@ a:hover {
   }
   .career-text1 {
     font-size: 20px !important;
+  }
+  ul.dropdown-menu.show{
+    z-index: 1;
+    opacity: 0.9;
   }
 }
 
@@ -330,9 +335,6 @@ a:hover {
   gap: 34rem;
 }
 @media (min-width: 1440px) {
-  .recruitment {
-    padding-top: 5rem;
-  }
   .jobs {
     margin-top: 4rem;
     gap: 50px;
