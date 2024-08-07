@@ -195,10 +195,6 @@
   transition: height 0.5s;
 }
 
-.home-cs-card:hover .home-cs-card-image {
-  height: 50%; /* New height on hover */
-}
-
 .home-cs-card-image img {
   width: 100%;
   height: 100%;
@@ -241,20 +237,28 @@
   transition: opacity 0.5s;
 }
 
-.home-cs-card:hover .home-cs-card-content {
-  height: 60%; /* New height on hover */
-  bottom: 0; /* Keep content at the bottom */
-}
-
-.home-cs-card:hover .home-cs-card-content .description {
-  opacity: 1; /* Make the description visible on hover */
-}
-
 .description {
   font-size: 18px;
 }
 .slick-dots1 {
   display: none;
+}
+
+@media (min-width: 480px) {
+  .home-cs-card:hover .home-cs-card-image {
+    height: 50%; 
+  }
+  .home-cs-card:hover .home-cs-card-content {
+    height: 60%; 
+    bottom: 0; 
+  }
+
+  .home-cs-card:hover .home-cs-card-content .description {
+    opacity: 1;
+  }
+  .why-choose-main{
+    justify-content: center;
+  }
 }
 
 @media (max-width: 864px) {
@@ -343,48 +347,46 @@
     height: 100%;
     flex-wrap: wrap;
   }
-  .whyus-details-1{
+  .whyus-details-1 {
     flex-direction: column;
   }
   .entire-content {
     padding-left: 5rem;
   }
-  
-  .partners{
+
+  .partners {
     flex-wrap: wrap;
   }
-  
 }
 
 @media (min-width: 480px) and (max-width: 864px) {
   .home-cs-card-content .description {
-    opacity: 0; /* Initially hidden */
+    opacity: 0;
     transition: opacity 0.5s;
   }
-  
+
   .home-cs-card:hover .home-cs-card-content {
-    height: 60%; /* New height on hover */
-    bottom: 0; /* Keep content at the bottom */
+    height: 60%;
+    bottom: 0;
   }
-  
+
   .home-cs-card:hover .home-cs-card-content .description {
-    opacity: 1; /* Make the description visible on hover */
+    opacity: 1;
   }
-  #slideshow{
+  #slideshow {
     width: 0;
   }
-  .years{
+  .years {
     gap: 1rem;
   }
   .ccn {
     right: 50px !important;
   }
-
 }
 
 @media (max-width: 1024px) {
-  .rm-2{
-    width: 60% !important; 
+  .rm-2 {
+    width: 60% !important;
   }
 }
 
@@ -587,7 +589,6 @@
   .box-content ul {
     font-size: 22px;
   }
-  
 }
 
 .clientele {
@@ -649,17 +650,17 @@
     font-size: 20px;
     width: 100% !important;
   }
-  .lc-1 h1{
+  .lc-1 h1 {
     font-size: 22px !important;
   }
-  .lc-1 p{
+  .lc-1 p {
     font-size: 18px !important;
   }
   .lc-2 {
     margin-top: 1rem;
     width: 60% !important;
   }
-  .lc-2 a{
+  .lc-2 a {
     font-size: 18px !important;
   }
   .last img {
@@ -711,11 +712,11 @@
     width: 50% !important;
     margin-left: 50% !important;
   }
-  .last-text-1 {   
+  .last-text-1 {
     font-size: 24px !important;
     position: unset;
   }
-  .last-ul{
+  .last-ul {
     font-size: 18px;
   }
   .trustedtext {
@@ -846,14 +847,10 @@
   }
   .home-cs-card .home-cs-card-content {
     height: 50%;
-    bottom: 1; /* Keep content at the bottom */
+    bottom: 1; 
   }
   .home-cs-card .home-cs-card-content .description {
     opacity: 1; /* Make the description visible on hover */
-  }
-  .home-cs-card:hover {
-    transform: none;
-    height: 100%;
   }
   .carousel-background {
     height: 100%;
@@ -897,19 +894,19 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-  .le p{
+  .le p {
     font-size: 18px !important;
   }
-  .carousel-caption{
+  .carousel-caption {
     transform: none !important;
     width: 100% !important;
     height: fit-content;
-    background-color: #E9E8EC;
+    background-color: #e9e8ec;
   }
-  .carousel-caption h1{
+  .carousel-caption h1 {
     color: black !important;
   }
-  .carousel-caption p a{
+  .carousel-caption p a {
     filter: invert(1);
   }
 }
@@ -921,7 +918,7 @@
   .ha {
     justify-content: center;
   }
-  .desc-box{
+  .desc-box {
     height: 38rem !important;
   }
 }

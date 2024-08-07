@@ -6,6 +6,8 @@ import '../css/admin-main.css'
 import { AgGridReact } from 'ag-grid-react'; // React Data Grid Component
 import "ag-grid-community/styles/ag-grid.css"; // Mandatory CSS required by the Data Grid
 import "ag-grid-community/styles/ag-theme-alpine.css"; // Optional theme CSS
+// import backArrow from "../images/admin-main/back-arrow.svg";
+// import pointer from "../images/admin-main/pointer.svg";
 
 export default function AdminPage() {
     const [candidates, setCandidates] = useState([]);
@@ -111,47 +113,67 @@ export default function AdminPage() {
                 <h1 className='admin-head'>Applications</h1>
                 <div className='admin-cont'>
                     <div className="admin-left">
-                        <p 
-                            onClick={() => setView('form')} 
-                            style={{ cursor: 'pointer', fontWeight: view === 'form' ? 'bold' : 'normal' }}
-                        >
-                            Add Vacancy
-                        </p>
-                        <p 
-                            onClick={() => setView('table')} 
-                            style={{ cursor: 'pointer', fontWeight: view === 'table' ? 'bold' : 'normal' }}
-                        >
-                            Received
-                        </p>
+                        <div style={{ display: "flex" }}>
+                            {/* <img src={pointer} style={{ display: view === 'form' ? 'block' : 'none' }}></img> */}
+                            <p
+                                onClick={() => setView('form')}
+                                style={{ cursor: 'pointer', color: view === 'form' ? '#DC1615' : 'black' }}
+                            >
+                                Add Vacancy
+                            </p>
+                        </div>
+                        <div style={{ display: "flex" }}>
+                            {/* <img src={pointer} style={{ display: view === 'form' ? 'none' : 'block' }}></img> */}
+                            <p
+                                onClick={() => setView('table')}
+                                style={{ cursor: 'pointer', color: view === 'form' ? 'black' : '#DC1615' }}
+                            >
+                                Received
+                            </p></div>
                     </div>
 
                     {view === 'form' && (
                         <form className='vacancy-form' onSubmit={handleSubmit}>
                             <p>Add Vacancy</p>
-                            <div>
-                                <label>Job Title:</label>
-                                <input type="text" name="title" value={job.title} onChange={handleChange} required />
-                            </div>
-                            <div>
-                                <label>Employment Type:</label>
-                                <select name="employmentType" value={job.employmentType} onChange={handleChange} required>
-                                    <option value="">Select Type</option>
-                                    <option value="Full Time">Full Time</option>
-                                    <option value="Part Time">Part Time</option>
-                                    <option value="Contract">Contract</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label>Experience:</label>
-                                <input type="number" name="experience" value={job.experience} onChange={handleChange} />
-                            </div>
-                            <div>
-                                <label>Primary Skills:</label>
-                                <input type="text" name="primaryskills" value={job.primaryskills} onChange={handleChange} />
-                            </div>
-                            <div>
-                                <label>Required Skills:</label>
-                                <textarea rows="4" cols="25" className='text-box' type='text' name="requiredskills" value={job.requiredskills} onChange={handleChange} />
+                            <div className='vacancy-form-div1'>
+
+
+                                {/* <img src={backArrow}></img> */}
+                                <div className='sub-part'>
+                                    <div>
+                                        <label>Job Title:</label>
+                                        <input type="text" name="title" value={job.title} onChange={handleChange} required />
+                                    </div>
+                                    {/* <div>
+                                        <label>Employment Type:</label>
+                                        <select name="employmentType" value={job.employmentType} onChange={handleChange} required>
+                                            <option value="" disabled>Select Type</option>
+                                            <option value="Full Time">Full Time</option>
+                                            <option value="Part Time">Part Time</option>
+                                            <option value="Contract">Contract</option>
+                                        </select>
+                                    </div> */}
+                                    <div>
+                                        <label>Working Hours</label>
+                                        <input type="number" name="working-hours" value={job.working_hour} onChange={handleChange} />
+                                    </div>
+                                    <div>
+                                        <label>Experience:</label>
+                                        <input type="number" name="experience" value={job.experience} onChange={handleChange} />
+                                    </div>
+                                    <div>
+                                        <label>Primary Skills:</label>
+                                        <input type="text" name="primaryskills" value={job.primaryskills} onChange={handleChange} />
+                                    </div>
+                                    <div>
+                                        <label>Required Skills</label>
+                                        <input type="text" name="requiredskills" value={job.requiredskills} onChange={handleChange} />
+                                    </div>
+                                    <div>
+                                        <label>General Requirment</label>
+                                        <textarea rows="4" cols="25" className='text-box' type='text' name="generalRequirment" value={job.general_requirment} onChange={handleChange} />
+                                    </div>
+                                </div>
                             </div>
                             <button type="submit">Create Job</button>
                         </form>
@@ -159,7 +181,7 @@ export default function AdminPage() {
 
                     {view === 'table' && (
                         <div className='table'>
-                            <div className="ag-theme-alpine" style={{ height: '100%', width: '100%', marginRight:'10%'}}>
+                            <div className="ag-theme-alpine" style={{ height: '100%', width: '100%', marginRight: '10%' }}>
                                 <AgGridReact
                                     rowData={candidates}
                                     columnDefs={columnDefs}

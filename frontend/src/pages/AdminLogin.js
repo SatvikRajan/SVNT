@@ -5,7 +5,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import { loginRoute } from '../utils/ApiRoutes';
 import '../css/admin.css'
-
+// import person from "../images/admin-main/person.svg";
+// import eye_close from "../images/admin-main/eye-closed.svg";
+// import eye_open from "../images/admin-main/eye-open.svg";
 
 function AdminLogin() {
   const navigate = useNavigate();
@@ -13,6 +15,11 @@ function AdminLogin() {
     username: "",
     password: ""
   })
+
+  const [passwordClose, setPassword] = useState(false)
+  const togglePasswordVisibility = () => {
+    setPassword(!passwordClose);
+  };
   useEffect(() => {
     if (localStorage.getItem('app-user')) {
       navigate('/admin-main')
@@ -55,32 +62,49 @@ function AdminLogin() {
       <div className="top">
         <img src={company} width='400rem' alt="" />
       </div>
-      <div className="parent-container">
-        <div className="portal-login d-flex flex-column">
-          <p>Admin Portal</p>
+      <div class="parent-container">
+        <div class="portal-login d-flex flex-column">
           <form onSubmit={(e) => handleSubmit(e)}>
-            <input
+          <p style={{width:'100%',textAlign:"center",fontWeight:"500"}}>Admin Portal</p>
+            <div className='login-input'><input
               type="text"
               placeholder="Username"
               name="username"
               onChange={(e) => {
                 handleChange(e);
               }}
+              style={{ border: "none" }}
               min="3"
             />
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              onChange={(e) => {
-                handleChange(e);
-              }}
-            />
-            <button type="submit">Login</button>
-            <span>
-            Don't have an account ?<Link to="/register">  Register</Link>
-          </span>
+              {/* <img src={person} alt='person'></img> */}
+            </div>
+            <div className='login-input'>
+              <input
+                type={passwordClose? "password":"text"}
+                placeholder="password"
+                name="password"
+                onChange={(e) => {
+                  handleChange(e);
+                }}
+                style={{ border: "none" }}
+              />
+              {/* <img
+                src={passwordClose ? eye_close : eye_open}
+                alt="eye"
+                onClick={togglePasswordVisibility}
+              /> */}
+            </div>
+            <p style={{fontSize:"12px",width:"100%",fontWeight:"bold"}}>
+              Don't have an account ?<Link to="/register">  Register</Link>
+            </p>
+            <button type="submit">Submit</button>
+           
           </form>
+            <div className='login-footer'>
+              <p>Forgot Password?</p>
+              <p>Forgot Admin ID?</p>
+          
+            </div>
         </div>
         <ToastContainer />
       </div>

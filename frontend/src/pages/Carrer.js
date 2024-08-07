@@ -171,7 +171,7 @@ const CareersPage = () => {
                   alt=""
                 />
               </button>
-              <ul className="dropdown-menu">
+              <ul className="dropdown-menu">  
                 {jobs.map((job) => (
                   <button
                     key={job._id}
@@ -347,11 +347,9 @@ const CareersPage = () => {
                       <li>
                         Required Skills {" "}
                         <ArrowIcon style={{ marginRight: '20px', marginLeft: '24px' }} />
-                        <ul className="nested-skills">
-                          {jobDetails.requiredskills.map((skill, index) => (
-                            <li key={index}>{skill}</li>
-                          ))}
-                        </ul>
+                        {/* <ul className="nested-skills"> */}
+                        {jobDetails.requiredskills}
+                        {/* </ul> */}
                       </li>
                     </ul>
 

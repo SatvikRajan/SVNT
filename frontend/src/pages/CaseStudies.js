@@ -211,7 +211,7 @@ const CaseStudies = () => {
   };
 
   const toggleDropdown = (index) => {
-    setIsDropdownOpen(isDropdownOpen === index ? null : index);
+    setIsDropdownOpen(isDropdownOpen[index] ? null : index);
   };
 
   useEffect(() => {
@@ -303,7 +303,7 @@ const CaseStudies = () => {
                   <div className="cs-details" id='cs-details'>
                     {item.cs.map((caseStudy, csIndex) => (
                       <div id={caseStudy[0]} key={csIndex} className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation  ' : ''}`}>
-                        {!isDropdownOpen && <img className="image-bg" src={caseStudy[3]} alt='' />}
+                        {!isDropdownOpen[csIndex] && <img className="image-bg" src={caseStudy[3]} alt='' />}
                         {expanded[csIndex]}
                         <div className={`case-study ${isDropdownOpen === csIndex ? 'dropdown-open' : ''}`} style={{ backgroundColor: isDropdownOpen === csIndex ? 'inherit' : 'inherit' }}>
 
@@ -399,7 +399,6 @@ const CaseStudies = () => {
                                 right: "20%",
                                 bottom: "10px",
                                 color: "white",
-                                /* Added styles for whitespace and underline extension */
                                 textDecoration: "underline", /* Enable underline */
                                 textUnderlinePosition: "under", /* Ensure underline is below text */
                                 paddingRight: "1em", /* Add padding to create whitespace */

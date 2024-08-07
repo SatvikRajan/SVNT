@@ -348,7 +348,7 @@ p.write1 {
 
 ul.dropdown-menu.show {
   line-height: 35px !important;
-  padding-top: 30px;
+  /* padding-top: 30px; */
   z-index: 1;
   border: none;
   background-color: #ffffff;

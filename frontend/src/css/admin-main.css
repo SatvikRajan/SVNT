@@ -12,12 +12,21 @@
     padding: 2% 0% 0% 3%;
     text-transform: uppercase;
 }
+
+.admin-left{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .admin-left p{
     font-size: 24px;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .vacancy-form{
-    border: 2px solid black;
+ 
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -29,11 +38,31 @@
     font-size: 24px;
     word-spacing: 10px;
     color: white;
-    background-color: red;
+    background-color: #6D6480;
     border-radius: 5px;
 }
 
-.vacancy-form div{
+.vacancy-form-div1{
+    display: flex;
+    width: 80%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.vacancy-form .sub-part{
+    width: 100%;
+}
+.vacancy-form  div img{
+    height: 10%;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 18px;
+    cursor: pointer;
+ 
+}
+
+ 
+.vacancy-form div div div {
     padding-left: 3%;
     padding-top: 2%;
     display: flex;
@@ -53,12 +82,13 @@
     font-size: 15px;
     padding: 1% 1%;
     margin-right: 3%;
+    background: #F1FAFF;
 
 }
 
 .vacancy-form button{
     width: 20%;
-    margin-left: 77%;
+    margin-left: 63%;
     margin-top: 2%;
     padding: 1% 0% 1%;
     margin-right: 3%;

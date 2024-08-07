@@ -263,12 +263,11 @@
   }
 }
 
-.container,
+/* .container,
 .container-md,
 .container-sm {
   max-width: unset !important;
-  /* padding: 0 45px; */
-}
+} */
 
 .rotate {
   animation: rotate 0.2s ease-in;

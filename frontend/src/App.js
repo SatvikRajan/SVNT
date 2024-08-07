@@ -1,4 +1,6 @@
 import React, { useLayoutEffect, Suspense } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
