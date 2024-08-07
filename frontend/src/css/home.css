@@ -396,6 +396,22 @@
   }
 }
 
+@media (min-width: 764px) and (max-width: 1024px) {
+  .carousel-caption h1{
+    font-size: 30px !important;
+    width: 100% !important;
+    line-height: 3rem !important;
+  }
+  .carousel-caption{ 
+    height: 15rem;
+    display: flex !important;
+    flex-direction: column ;
+  }
+  .carousel-caption p a{
+    width: 50% !important;
+  }
+}
+
 @media (min-width: 864px) and (max-width: 1230px) {
   .trusted {
     margin-bottom: 20rem;
@@ -588,6 +604,12 @@
   }
   .box-content ul {
     font-size: 22px;
+  }
+  .carousel-caption h1{
+    font-size: 32px;
+  }
+  .carousel-caption p a{
+    width: 40%;
   }
 }
 

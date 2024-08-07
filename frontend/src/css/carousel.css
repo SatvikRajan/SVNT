@@ -9,6 +9,9 @@
 .carousel-caption {
   background-color: #251741;
   color: #f1faff;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: start !important;
   height: 19rem;
   font-size: 42px;
@@ -23,7 +26,11 @@
 }
 
 .carousel-caption h1 {
-  width: 65% !important;
+  width: 75%;
+  font-size: 40px;
+  line-height: 4rem;
+  color: white;
+  /* width: 65%; */
 }
 .carousel-indicators {
   align-items: center;
@@ -674,4 +681,3 @@ body {
     padding-left: 5rem;
   }
 }
-
