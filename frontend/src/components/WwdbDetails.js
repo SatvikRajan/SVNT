@@ -17,7 +17,6 @@ import logo5 from '../images/Home/storage-white.svg';
 import logo6 from '../images/Home/audio-vis-white.svg';
 import close from '../images/Home/cross.svg';
 import '../css/wwdb-inside.css';
-import { Link } from 'react-router-dom';
 
 export default function WwdbDetails({ click, index, setClick, topPos, leftPos }) {
     const names = [
@@ -99,7 +98,7 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
                     animate={{ opacity: 1, top: '536px', left: '1140px', width: '240px' }}
                     transition={{ delay: 0.3, duration: 0.8 }}
                 >
-                    <Link
+                    <button
                         onClick={() => {
                             window.location.href = `/services?tab=${index}`
                         }} className="btn btn-primary btn-arrow w-100">
@@ -108,7 +107,7 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
                                 <svg className='fas' fill='white' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" /></svg>
                             </motion.span>
                         </motion.p>
-                    </Link>
+                    </button>
                 </motion.div>
             </motion.div>
         )

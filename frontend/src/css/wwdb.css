@@ -387,4 +387,7 @@
   .wwdb-close-button {
     margin-left: 18rem !important;
   }
+  .hcscard-readmore{
+    width: 60% !important;
+  }
 }

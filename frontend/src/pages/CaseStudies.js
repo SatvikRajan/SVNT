@@ -199,7 +199,7 @@ const CaseStudies = () => {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
   const [expanded, setExpanded] = React.useState({});
-  const [isDropdownOpen, setIsDropdownOpen] = useState(0);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
   const handleChange = (event, newValue) => {
@@ -211,8 +211,9 @@ const CaseStudies = () => {
   };
 
   const toggleDropdown = (index) => {
-    setIsDropdownOpen(isDropdownOpen[index] ? null : index);
+    setIsDropdownOpen(prevState => prevState === index ? true : index);
   };
+
 
   useEffect(() => {
     navigate(location.pathname, { replace: true });
@@ -233,9 +234,7 @@ const CaseStudies = () => {
       <div className='cs-list'>
         <div className='cs-main'>
           <div className='cs-search-bar'>
-            <div>
-              <p>Gain a deeper insight into our Case Studies</p>
-            </div>
+            <p>Gain a deeper insight into our Case Studies</p>
           </div>
 
           <div className='case-container'>
@@ -302,19 +301,20 @@ const CaseStudies = () => {
                 <TabPanel key={item.id} value={value} index={index} dir={theme.direction}>
                   <div className="cs-details" id='cs-details'>
                     {item.cs.map((caseStudy, csIndex) => (
-                      <div id={caseStudy[0]} key={csIndex} className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation  ' : ''}`}>
+                      <div
+                        id={caseStudy[0]}
+                        key={csIndex}
+                        className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation' : ''}`}
+                      >
                         {!isDropdownOpen[csIndex] && <img className="image-bg" src={caseStudy[3]} alt='' />}
-                        {expanded[csIndex]}
-                        <div className={`case-study ${isDropdownOpen === csIndex ? 'dropdown-open' : ''}`} style={{ backgroundColor: isDropdownOpen === csIndex ? 'inherit' : 'inherit' }}>
-
+                        <div className={`case-study ${isDropdownOpen === csIndex ? 'dropdown-open' : ''}`} style={{ backgroundColor: 'inherit' }}>
                           <div className='csd-head' onClick={() => toggleDropdown(csIndex)}>
                             <h3 className='csd-heading'>{caseStudy[1]}</h3>
-                            <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg" className={isDropdownOpen === csIndex ? 'rotate-180' : ''}
-                            >
+                            <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg" className={isDropdownOpen === csIndex ? 'rotate-180' : ''}>
                               <path d="M27.0672 10.137L25.2932 8.34216L14.9999 18.7565L4.70662 8.34216L2.93262 10.137L14.9999 22.3463L27.0672 10.137Z" fill="#F1FAFF" />
                             </svg>
                           </div>
-                          {isDropdownOpen === csIndex && (
+                          {(isDropdownOpen === csIndex || window.innerWidth >= 764) && (
                             <div className='cs-wrapper'>
                               <ul className='csd-points'>
                                 {caseStudy[2].map((detail, detailIndex) => {
@@ -333,9 +333,9 @@ const CaseStudies = () => {
                                     onClick={() => handleReadMore(csIndex)}
                                     className="read_btn def"
                                     style={{
-                                      textDecoration: "underline", /* Enable underline */
-                                      textUnderlinePosition: "under", /* Ensure underline is below text */
-                                      paddingRight: "1em", /* Add padding to create whitespace */
+                                      textDecoration: "underline",
+                                      textUnderlinePosition: "under",
+                                      paddingRight: "1em",
                                     }}
                                   >
                                     Read More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -346,65 +346,27 @@ const CaseStudies = () => {
                           )}
                           {expanded[csIndex] && (
                             <div className='expanded-content'>
-                              <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                                <img src={sch} alt="schematic" className=' exp-img' style={{ width: "100%" }} />
-                                <div className='expand-inner'>
-                                  <div>
-
-                                    <h2>{caseStudy[5]}</h2><br></br>
-
-                                    <ul>
-                                      {caseStudy[6].map((item) => (
-                                        <li key={item}>{item}</li>
-                                      ))}
-                                    </ul>
-                                  </div>
-                                  <img alt='case-study' src={caseStudy[11]} className="expand-img only-desktop" />
-                                </div>
-
-                                <br></br><br></br>
-                              </div>
-                              <div className='expand-inner'>
-                                <div>
-                                  <h2>{caseStudy[7]}</h2><br></br>
-                                  <ul>
-                                    {caseStudy[8].map((item) => (
-                                      <li key={item}>{item}</li>
-                                    ))}
-                                  </ul>
-                                </div>
-                                <img alt='casestudy' src={caseStudy[12]} className="expand-img only-desktop" />
-                                <br></br><br></br>
-                              </div>
-                              <br></br><br></br>
-                              <div className='expand-inner'>
-                                <div>
-                                  <h2>{caseStudy[9]}</h2><br></br>
-                                  <ul>
-                                    {caseStudy[10].map((item) => (
-                                      <li key={item}>{item}</li>
-                                    ))}
-                                  </ul>
-                                </div>
-                                <img alt='casestudy' src={caseStudy[13]} className="expand-img only-desktop" />
-                                <br></br><br></br>
-                              </div>
-
+                              {/* Expanded Content */}
                             </div>
                           )}
                           <div className="cs-learn-more" style={{ bottom: "5%" }}>
-                            {expanded[csIndex] && <button onClick={() => handleReadMore(csIndex)} className="read_btn"
-                              style={{
-                                position: "absolute",
-                                right: "20%",
-                                bottom: "10px",
-                                color: "white",
-                                textDecoration: "underline", /* Enable underline */
-                                textUnderlinePosition: "under", /* Ensure underline is below text */
-                                paddingRight: "1em", /* Add padding to create whitespace */
-                              }}>Collapse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>}
-
-
+                            {expanded[csIndex] && (
+                              <button
+                                onClick={() => handleReadMore(csIndex)}
+                                className="read_btn"
+                                style={{
+                                  position: "absolute",
+                                  right: "20%",
+                                  bottom: "10px",
+                                  color: "white",
+                                  textDecoration: "underline",
+                                  textUnderlinePosition: "under",
+                                  paddingRight: "1em",
+                                }}
+                              >
+                                Collapse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              </button>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -412,6 +374,7 @@ const CaseStudies = () => {
                   </div>
                 </TabPanel>
               ))}
+
             </Box>
           </div>
           <div>
