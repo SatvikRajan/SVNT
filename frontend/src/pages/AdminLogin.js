@@ -5,9 +5,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import { loginRoute } from '../utils/ApiRoutes';
 import '../css/admin.css'
-// import person from "../images/admin-main/person.svg";
-// import eye_close from "../images/admin-main/eye-closed.svg";
-// import eye_open from "../images/admin-main/eye-open.svg";
+import person from "../images/admin-main/person.svg";
+import eye_close from "../images/admin-main/eye-closed.svg";
+import eye_open from "../images/admin-main/eye-open.svg";
 
 function AdminLogin() {
   const navigate = useNavigate();
@@ -76,7 +76,7 @@ function AdminLogin() {
               style={{ border: "none" }}
               min="3"
             />
-              {/* <img src={person} alt='person'></img> */}
+              <img src={person} alt='person'></img>
             </div>
             <div className='login-input'>
               <input
@@ -88,11 +88,11 @@ function AdminLogin() {
                 }}
                 style={{ border: "none" }}
               />
-              {/* <img
+              <img
                 src={passwordClose ? eye_close : eye_open}
                 alt="eye"
                 onClick={togglePasswordVisibility}
-              /> */}
+              />
             </div>
             <p style={{fontSize:"12px",width:"100%",fontWeight:"bold"}}>
               Don't have an account ?<Link to="/register">  Register</Link>

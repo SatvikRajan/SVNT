@@ -6,8 +6,8 @@ import '../css/admin-main.css'
 import { AgGridReact } from 'ag-grid-react'; // React Data Grid Component
 import "ag-grid-community/styles/ag-grid.css"; // Mandatory CSS required by the Data Grid
 import "ag-grid-community/styles/ag-theme-alpine.css"; // Optional theme CSS
-// import backArrow from "../images/admin-main/back-arrow.svg";
-// import pointer from "../images/admin-main/pointer.svg";
+import backArrow from "../images/admin-main/back-arrow.svg";
+import pointer from "../images/admin-main/pointer.svg";
 
 export default function AdminPage() {
     const [candidates, setCandidates] = useState([]);
@@ -114,7 +114,7 @@ export default function AdminPage() {
                 <div className='admin-cont'>
                     <div className="admin-left">
                         <div style={{ display: "flex" }}>
-                            {/* <img src={pointer} style={{ display: view === 'form' ? 'block' : 'none' }}></img> */}
+                            <img src={pointer} style={{ display: view === 'form' ? 'block' : 'none' }}></img>
                             <p
                                 onClick={() => setView('form')}
                                 style={{ cursor: 'pointer', color: view === 'form' ? '#DC1615' : 'black' }}
@@ -123,7 +123,7 @@ export default function AdminPage() {
                             </p>
                         </div>
                         <div style={{ display: "flex" }}>
-                            {/* <img src={pointer} style={{ display: view === 'form' ? 'none' : 'block' }}></img> */}
+                            <img src={pointer} style={{ display: view === 'form' ? 'none' : 'block' }}></img>
                             <p
                                 onClick={() => setView('table')}
                                 style={{ cursor: 'pointer', color: view === 'form' ? 'black' : '#DC1615' }}
@@ -138,7 +138,7 @@ export default function AdminPage() {
                             <div className='vacancy-form-div1'>
 
 
-                                {/* <img src={backArrow}></img> */}
+                                <img src={backArrow}></img>
                                 <div className='sub-part'>
                                     <div>
                                         <label>Job Title:</label>

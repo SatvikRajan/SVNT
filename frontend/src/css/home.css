@@ -246,17 +246,17 @@
 
 @media (min-width: 480px) {
   .home-cs-card:hover .home-cs-card-image {
-    height: 50%; 
+    height: 50%;
   }
   .home-cs-card:hover .home-cs-card-content {
-    height: 60%; 
-    bottom: 0; 
+    height: 60%;
+    bottom: 0;
   }
 
   .home-cs-card:hover .home-cs-card-content .description {
     opacity: 1;
   }
-  .why-choose-main{
+  .why-choose-main {
     justify-content: center;
   }
 }
@@ -384,6 +384,20 @@
   }
 }
 
+@media (min-width: 480px) and (max-width: 768px) {
+  .carousel-caption{
+    height: 15rem;
+  }
+  .carousel-caption h1{
+    font-size: 24px !important;
+    line-height: 40px ;
+  }
+  .carousel p a {
+    width: 60% !important;
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 1024px) {
   .rm-2 {
     width: 60% !important;
@@ -397,17 +411,17 @@
 }
 
 @media (min-width: 764px) and (max-width: 1024px) {
-  .carousel-caption h1{
+  .carousel-caption h1 {
     font-size: 30px !important;
     width: 100% !important;
     line-height: 3rem !important;
   }
-  .carousel-caption{ 
+  .carousel-caption {
     height: 15rem;
     display: flex !important;
-    flex-direction: column ;
+    flex-direction: column;
   }
-  .carousel-caption p a{
+  .carousel-caption p a {
     width: 50% !important;
   }
 }
@@ -605,10 +619,10 @@
   .box-content ul {
     font-size: 22px;
   }
-  .carousel-caption h1{
+  .carousel-caption h1 {
     font-size: 32px;
   }
-  .carousel-caption p a{
+  .carousel-caption p a {
     width: 40%;
   }
 }
@@ -869,7 +883,7 @@
   }
   .home-cs-card .home-cs-card-content {
     height: 50%;
-    bottom: 1; 
+    bottom: 1;
   }
   .home-cs-card .home-cs-card-content .description {
     opacity: 1; /* Make the description visible on hover */
