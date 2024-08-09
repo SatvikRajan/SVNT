@@ -60,7 +60,12 @@ const CareersPage = () => {
           const selectedJob = jobs.find(job => job.title === selectedJobTitle);
           if (selectedJob) {
             const response = await axios.get(`http://localhost:8080/admin/api/jobs/${selectedJob._id}`);
-            setJobDetails(response.data);
+            let data = response.data;
+            if (typeof data.requiredskills === 'string') {
+              data.requiredskills = data.requiredskills.split(',').map(skill => skill.trim());
+            }
+
+            setJobDetails(data);
           }
         } catch (error) {
           console.error('Error fetching job details:', error);
@@ -70,6 +75,7 @@ const CareersPage = () => {
 
     fetchJobDetails();
   }, [selectedJobTitle, jobs]);
+
 
 
   const handleDropdownClick = (title) => {
@@ -152,7 +158,7 @@ const CareersPage = () => {
               dedicated workforce.
             </p>
           </div>
-          <h1 className='recruitment-h'>
+          <h1 className='recruitment-h container'>
             Recruitment
           </h1>
           <div className="jobs">
@@ -171,7 +177,7 @@ const CareersPage = () => {
                   alt=""
                 />
               </button>
-              <ul className="dropdown-menu">  
+              <ul className="dropdown-menu">
                 {jobs.map((job) => (
                   <button
                     key={job._id}
@@ -347,9 +353,11 @@ const CareersPage = () => {
                       <li>
                         Required Skills {" "}
                         <ArrowIcon style={{ marginRight: '20px', marginLeft: '24px' }} />
-                        {/* <ul className="nested-skills"> */}
-                        {jobDetails.requiredskills}
-                        {/* </ul> */}
+                        <ul className="nested-skills">
+                          {jobDetails.requiredskills.map((skill, index) => (
+                            <li key={index}>{skill.trim()}</li>
+                          ))}
+                        </ul>
                       </li>
                     </ul>
 

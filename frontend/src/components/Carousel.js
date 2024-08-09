@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import str from '../images/Home/home-carousel-itc.webp';
-import sms from '../images/Home/home-carousel-bel';
-import is from '../images/Home/home-carousel-statocast.webp';
+// import is from '../images/Home/home-carousel-statocast.webp';
 import sss from '../images/Home/home-carousel-eyeon.webp';
 import avs from '../images/Home/home-carousel-cfcl.webp';
-import es from '../images/Home/home-carousel-aragen.webp';
+// import es from '../images/Home/home-carousel-aragen.webp';
+import kia from '../images/Home/kia.png'
 import AOS from 'aos';
 import Slider from "react-slick";
 import video from '../images/Home/case-studies.mp4'
@@ -94,12 +94,12 @@ function CaseStudiesCarousel() {
 
   useEffect(() => {
     setItems([
-      { id: 'jsw', image: sss, title: 'JSW Eye on Pellet', description: 'Delve into the revolutionary world of pelletization plants through real time system integration.' },
+      { id: 'jsw', image: sss, title: 'JSW Eye on Pellet', description: 'Eye on Pellet: An innovative instrument for timely estimation of pellet size' },
       { id: 'itc', image: str, title: 'ITC Hotels', description: 'A Close Examination of how SVNT implements Security Protocols at ITC.' },
-      { id: 'bel', image: sms, title: 'BEL(Rafael)', description: 'Explore the realm of security and management solutions, vital for safeguarding businesses against threats.' },
-      { id: 'om', image: is, title: 'Om Books (Statocast)', description: 'Optimize efficiency with our integration solutions, merging systems for seamless communication and collaboration.' },
-      { id: 'cfcl', image: avs, title: 'CFCL', description: 'Elevate communication and engagement with our audio-visual solutions.' },
-      { id: 'aragen', image: es, title: 'Aragen', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' },
+      // { id: 'om', image: is, title: 'Om Books (Statocast)', description: 'Get a closer look at how our cloud-based security keeps every corner covered.' },
+      { id: 'kia', image: kia, title: 'Kempagowda International Airport', description: 'Discover how we ensure and uphold airport security' },
+      { id: 'cfcl', image: avs, title: 'CFCL', description: 'Find out how we elevate security standards at CFCL Gadepan .' },
+      // { id: 'aragen', image: es, title: 'Aragen', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' },
     ]);
   }, []);
 

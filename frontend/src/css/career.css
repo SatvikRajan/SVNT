@@ -237,8 +237,7 @@ a:hover {
   height: 100%;
 }
 .recruitment-h {
-  text-align: start;
-  padding-left: 18rem;
+  text-align: center;
 }
 .phn {
   color: #e9e8ec !important;
@@ -298,9 +297,6 @@ a:hover {
     gap: 50px;
     margin-left: 0px;
   }
-  .recruitment-h {
-    padding-left: 6rem;
-  }
   .dropdown {
     margin-left: 5rem;
   }
@@ -340,9 +336,6 @@ a:hover {
     gap: 50px;
     margin-left: 0px;
   }
-  .recruitment-h {
-    padding-left: 10rem;
-  }
   .dropdown {
     margin-left: 16rem;
   }
@@ -373,9 +366,6 @@ a:hover {
   }
   .jobs{
     margin-left: 0;
-  }
-  .recruitment-h{
-    padding-left: 2rem;
   }
   .dropdown{
     margin-left: 2rem;
@@ -410,9 +400,6 @@ a:hover {
   }
   .jobs{
     margin-left: 0;
-  }
-  .recruitment-h{
-    padding-left: 10rem;
   }
   .invite{
     gap: 20px;

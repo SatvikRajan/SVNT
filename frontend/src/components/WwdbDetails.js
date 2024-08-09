@@ -20,14 +20,14 @@ import '../css/wwdb-inside.css';
 
 export default function WwdbDetails({ click, index, setClick, topPos, leftPos }) {
     const names = [
-        'IP Networking Solution',
-        'IP Surveillance Solution',
-        'Energy Solutions',
-        'Surveillance and Safety Solutions',
-        'Security & Management Services',
-        'Storage and Archives',
-        'Audio-Visual Solutions',
-        'Integration Solutions',
+        'Networking',
+        'Data Centers',
+        'Electrical and Backup',
+        'Surveillance and Safety',
+        'Security & Management',
+        'Server Storage',
+        'Audio and Visual',
+        'Integration',
     ];
 
     const images = [img0, img1, img2, img3, img4, img5, img6, img7];
@@ -73,7 +73,6 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
                         <motion.p>{names[index]}</motion.p>
                     </motion.div>
                 </div>
-
                 <motion.div
                     className="wwdb-image-container"
                     initial={{ top: '300px', opacity: 0 }}

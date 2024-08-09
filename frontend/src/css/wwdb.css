@@ -97,19 +97,15 @@
 
 /* newwwwwww */
 
-.wwdb-menu div {
+/* .wwdb-menu div {
   position: absolute;
-  /* background-color: aliceblue; */
-  /* width: fit-content; */
 }
 
 .mainLogo {
   left: 808px;
   top: 330px;
-  /* z-index: 100; */
   width: 100px;
   height: 157px;
-  /* background-color: aqua; */
 }
 
 .wwdb-menu div p {
@@ -118,15 +114,14 @@
   margin: 0;
   padding: 0;
   width: fit-content;
-  /* background-color: aquamarine; */
 }
 
 .logoImg {
   width: 60px;
   height: 60px;
-}
+} */
 
-.m0 {
+/* .m0 {
   text-align: center;
   top: 135px;
   left: 789px;
@@ -187,6 +182,90 @@
 .m6,
 .m7:hover {
   cursor: pointer;
+} */
+
+.wwdb-menu-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.wwdb-menu {
+  position: relative;
+  width: 400px; /* Adjust size based on your needs */
+  height: 400px; /* Adjust size based on your needs */
+  border-radius: 50%; /* Circular container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.companylogo {
+  height: 90px;
+}
+.mainLogo {
+  position: absolute;
+  width: 80px; /* Adjust size based on your needs */
+  height: 80px; /* Adjust size based on your needs */
+}
+
+.wwdb-menu div[class^="m"] {
+  position: absolute;
+  width: 45%; /* Adjust size of the logos */
+  height: 90px; /* Adjust size of the logos */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform-origin: 50% 50%;
+  text-align: center;
+  font-size: 12px;
+}
+.wwdb-menu div p {
+  font-size: 22px;
+  font-family: "poppins";
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+}
+.m0,.m1,.m2,.m3,.m4,.m5,.m6,.m7{
+  cursor: pointer;
+}
+
+.m0 {
+  transform: rotate(0deg) translate(0, -250px) rotate(0deg);
+}
+.m1 {
+  transform: rotate(45deg) translate(0, -250px) rotate(-45deg);
+}
+.m2 {
+  transform: rotate(90deg) translate(0, -250px) rotate(-90deg);
+}
+.m3 {
+  transform: rotate(135deg) translate(0, -250px) rotate(-135deg);
+}
+.m4 {
+  transform: rotate(180deg) translate(0, -250px) rotate(-180deg);
+}
+.m5 {
+  transform: rotate(225deg) translate(0, -250px) rotate(-225deg);
+}
+.m6 {
+  transform: rotate(270deg) translate(0, -250px) rotate(-270deg);
+}
+.m7 {
+  transform: rotate(315deg) translate(0, -250px) rotate(-315deg);
+}
+
+.logoImg {
+  height: auto;
+}
+
+.wwdb-head {
+  text-align: center;
 }
 
 .wwdb-learnmore-2 {
@@ -248,10 +327,13 @@
 }
 
 .wwdb-video {
-  border-radius: 20px;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 @media (max-width: 480px) {
@@ -278,7 +360,6 @@
   }
   .wwdb-menu-wrapper {
     border-radius: 20px;
-    /* background-image: url("../images/Home/wbg.jpg"); */
   }
   .wwdb-details-overlay {
     width: 95% !important;
@@ -292,14 +373,19 @@
     position: static !important;
   }
   .wwdb-menu {
+    height: 100%;
     padding: 10px;
     gap: 20px;
     display: flex;
     flex-direction: column;
   }
 
-  .wwdb-menu div {
+  .wwdb-menu div[class^="m"] {
     position: static;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    text-align: start;
   }
 
   .wwdb-menu div p {
@@ -337,6 +423,7 @@
   .m5,
   .m6,
   .m7 {
+    transform: none;
     align-items: center;
   }
   .wwdb-logo-title {
@@ -373,12 +460,12 @@
     display: block;
     margin-left: auto;
   }
-  .wwdb-lm2{
+  .wwdb-lm2 {
     position: static !important;
     margin-left: auto;
     margin-block-start: 15rem;
   }
-  .lm-2{
+  .lm-2 {
     font-size: 20px;
   }
 }
@@ -387,7 +474,7 @@
   .wwdb-close-button {
     margin-left: 18rem !important;
   }
-  .hcscard-readmore{
+  .hcscard-readmore {
     width: 60% !important;
   }
 }

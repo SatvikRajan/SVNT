@@ -293,6 +293,8 @@ p.write1 {
 }
 
 .recruit-handle {
+  padding-left: 4rem;
+  padding-right: 4rem;
   margin-top: 15px;
 }
 .recruitment {
@@ -369,7 +371,6 @@ ul.dropdown-menu.show {
 .jobs {
   height: 45rem;
   gap: 80px;
-  margin-left: 8rem;
   display: flex;
   flex-direction: row;
 }

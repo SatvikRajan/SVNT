@@ -497,20 +497,20 @@
     width: 25%;
   }
   .mainLogo {
-    left: 400px;
+    left: 420px;
   }
   .m0 {
-    left: 320px;
+    left: 400px;
   }
   .m1 {
-    left: 20px;
+    left: 160px;
   }
   .m2 {
     left: 16px;
   }
   .m3 {
-    width: 37% !important;
-    left: 10px;
+    width: 30% !important;
+    left: 60px;
   }
   .m4 {
     left: 285px;
@@ -625,10 +625,19 @@
   .carousel-caption p a {
     width: 40%;
   }
+  .wwdb-learn-more{
+    left: 700px;
+  }
+  .wwdb-learn-more a p{
+    font-size: 28px;
+  }
+  .wwdb-learn-more .btn{
+    height: 50px;
+  }
 }
 
 .clientele {
-  margin-top: 12rem;
+  margin-top: 10rem;
   margin-bottom: -5rem;
   padding-left: 10rem;
 }
@@ -660,6 +669,9 @@
   }
   .text {
     font-size: 34px;
+  }
+  .carousel-caption p a{
+    width: 35% !important;
   }
 }
 
@@ -927,7 +939,6 @@
     top: 14rem !important;
   }
   .wwdb-menu {
-    padding-top: 2rem;
     padding-bottom: 2rem;
   }
   .le p {

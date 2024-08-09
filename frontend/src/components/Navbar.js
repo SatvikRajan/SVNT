@@ -57,6 +57,7 @@ const Navbar = () => {
 
     const handleNavLinkClick = (href) => {
         setActiveLink(href);
+        setDrop(!drop)
     };
 
     const alterDropdown=()=>{
@@ -79,23 +80,23 @@ const Navbar = () => {
                         aria-expanded="false"
                         aria-label="Toggle navigation"
                         onClick={alterDropdown}
-                    >
-
-                        
-{drop ? (
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="Cross" style={{height:"2rem"}} className={`  ${drop? 'rotate' : ''}`}><line x1="9.37" x2="54.63" y1="9.37" y2="54.63" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="4" className="colorStroke010101 svgStroke"></line><line x1="9.37" x2="54.63" y1="54.63" y2="9.37" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="4" className="colorStroke010101 svgStroke"></line></svg>     ) : (
+                    >                    
+                        {drop ? (
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="Cross" style={{height:"2rem"}} className={`  ${drop? 'rotate' : ''}`}><line x1="9.37" x2="54.63" y1="9.37" y2="54.63" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" strokeWidth="4" class="colorStroke010101 svgStroke"></line><line x1="9.37" x2="54.63" y1="54.63" y2="9.37" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" strokeWidth="4" class="colorStroke010101 svgStroke"></line></svg>     ) : (
                             <span   className={` navbar-toggler-icon  ${!drop? 'reverserotate' : ''}`}></span>
                         )}
                     </button>
-                    <div className="navbar-collapse navLinksPosition collapse" id="navbarSupportedContent">
+                    <div  className={`navbar-collapse navLinksPosition collapse ${
+              drop ? 'show' : '' // Apply 'show' class when drop is true
+            }`}  id="navbarSupportedContent">
                         <ul id='nav-links' className="navbar-nav ">
-                            <NavItem to="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                            <NavItem to="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
                                 About Us
                             </NavItem>
-                            <NavItem to="/partners" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                            <NavItem to="/partners" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
                                 Partners
                             </NavItem>
-                            <NavItem to="/casestudies" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                            <NavItem to="/casestudies" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
                                 Industries
                             </NavItem>
                             <NavItem to="/services" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
@@ -107,6 +108,7 @@ const Navbar = () => {
                             <NavItem to="/contact" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 Contact Us
                             </NavItem>
+                             
                         </ul>
                     </div>
                 </div>
@@ -133,8 +135,3 @@ const NavItem = ({ to, children, activeLink, handleNavLinkClick }) => {
 
 
 export default Navbar;
-
-
-// export default function Navbar() {
-    
-// }

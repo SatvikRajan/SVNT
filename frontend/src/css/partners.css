@@ -379,6 +379,9 @@
   .cert1{
     width: 65% !important;
   }
+  .last{
+    margin: 4rem !important;
+  }
 }
 
 @media (max-width: 1024px) {
