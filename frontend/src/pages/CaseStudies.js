@@ -200,7 +200,7 @@ const CaseStudies = () => {
   const [value, setValue] = React.useState(0);
   const [expanded, setExpanded] = React.useState({});
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const location = useLocation();
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -216,9 +216,16 @@ const CaseStudies = () => {
 
 
   useEffect(() => {
-    navigate(location.pathname, { replace: true });
-    window.document.getElementById(searchParams.get('menu'))?.scrollIntoView({ block: "center" });
-  }, [searchParams, location.pathname, navigate])
+    const scrollToElement = () => {
+        const element = window.document.getElementById(searchParams.get('menu'));
+        if (element) {
+            element.scrollIntoView({ block: "center" });
+        }
+    };
+
+    setTimeout(scrollToElement, 100);
+}, [searchParams, location.pathname]);
+
 
 
   return (
