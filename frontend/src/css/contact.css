@@ -9,6 +9,13 @@
   margin-block-start: 9rem;
   margin-left: auto;
 }
+.gotofront {
+  display: none;
+  filter: invert(1);
+  transform: rotate(180deg);
+  margin-block-start: 1rem;
+  margin-left: auto;
+}
 .ln {
   text-align: start;
   margin-left: 8rem;
@@ -18,7 +25,7 @@
   .offices1 {
     flex-wrap: wrap;
   }
-  .gotoback {
+  .gotoback, .gotofront {
     display: block;
   }
   .form-body {
@@ -93,7 +100,7 @@
   .text {
     display: none;
   }
-  .ln{
+  .ln {
     margin-left: 2rem;
     margin-bottom: 1rem;
   }

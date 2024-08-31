@@ -424,4 +424,11 @@ a:hover {
   .invite{
     gap: 20px;
   }
+  .bottom-bar{
+    gap: 1rem;
+  }
+  .last{
+    margin: 3rem !important;
+  }
+  
 }

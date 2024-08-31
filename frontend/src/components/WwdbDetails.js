@@ -57,12 +57,7 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
                 exit={{ opacity: 0, zIndex: -1, transition: { duration: 0.5, delay: 0.4 } }}
                 transition={{ duration: 0.5 }}
             >
-                <div >
-
-                    <motion.div className="wwdb-close-button" onClick={handleClickOutside}>
-                        <motion.img height={50} src={close} />
-                    </motion.div>
-
+                <div className='d-flex justify-around m-4 pt-4'>
                     <motion.div
                         className="wwdb-logo-title"
                         initial={{ top: `${topPos}px`, left: `${leftPos}px` }}
@@ -72,29 +67,35 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
                         <motion.img src={logo[index]} />
                         <motion.p>{names[index]}</motion.p>
                     </motion.div>
+                    <motion.div className="wwdb-close-button" onClick={handleClickOutside}>
+                        <motion.img height={50} src={close} />
+                    </motion.div>
                 </div>
-                <motion.div
-                    className="wwdb-image-container"
-                    initial={{ top: '300px', opacity: 0 }}
-                    animate={{ top: '208px', opacity: 1 }}
-                    transition={{ delay: 0.3, duration: 0.8 }}
-                >
-                    <motion.img src={images[index]} />
-                </motion.div>
+                <div className='d-flex flex-row justify-content-center' style={{marginTop: '5rem', width: '85%', marginLeft: '6rem', gap: '2rem'}}>
+                    <motion.div
+                        className="wwdb-image-container"
+                        initial={{ top: '300px', opacity: 0 }}
+                        animate={{ top: '208px', opacity: 1 }}
+                        transition={{ delay: 0.3, duration: 0.8 }}
+                    >
+                        <motion.img src={images[index]} />
+                    </motion.div>
 
-                <motion.div
-                    className="wwdb-details-text"
-                    initial={{ opacity: 0, top: '260px' }}
-                    animate={{ opacity: 1, top: '270px' }}
-                    transition={{ delay: 0.3, duration: 0.8 }}
-                >
-                    <motion.p>{details[index]}</motion.p>
-                </motion.div>
+                    <motion.div
+                        className="wwdb-details-text"
+                        initial={{ opacity: 0, top: '260px' }}
+                        animate={{ opacity: 1, top: '270px' }}
+                        transition={{ delay: 0.3, duration: 0.8 }}
+                    >
+                        <motion.p>{details[index]}</motion.p>
+                    </motion.div>
+
+                </div>
 
                 <motion.div
                     className="wwdb-learn-more wwdb-lm2"
-                    initial={{ opacity: 0, top: '673px', left: '1126px' }}
-                    animate={{ opacity: 1, top: '536px', left: '1140px', width: '240px' }}
+                    initial={{ opacity: 0, top: '673px', }}
+                    animate={{ opacity: 1, top: '536px', width: '240px' }}
                     transition={{ delay: 0.3, duration: 0.8 }}
                 >
                     <button

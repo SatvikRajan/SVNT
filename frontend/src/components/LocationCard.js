@@ -34,7 +34,9 @@ const LocationCard = ({ title, address, phoneNumber, backgroundImage }) => {
                     <h3 className='location-cardtitle'>{title}</h3>
                     {/* <p className='location-cardaddress'>{address}</p> */}
                 </div>
-                <svg className='gotoback' width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className='gotoback' onClick={() => {
+                    setIsHovered(true)
+                }} width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.01912 25.0673L0.245117 23.2933L10.5384 13L0.245117 2.70672L2.01912 0.932724L14.0864 13L2.01912 25.0673Z" fill="#363636" />
                 </svg>
 
@@ -64,8 +66,12 @@ const LocationCard = ({ title, address, phoneNumber, backgroundImage }) => {
                             <p>Phone Call</p>
                         </div>
 
-
                     </div>
+                    <svg className='gotofront' onClick={() => {
+                        setIsHovered(false)
+                    }} width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.01912 25.0673L0.245117 23.2933L10.5384 13L0.245117 2.70672L2.01912 0.932724L14.0864 13L2.01912 25.0673Z" fill="#363636" />
+                    </svg>
                     {copyNotification && <p className="copy-notification">Address Copied!</p>}
                 </div>
             </div>

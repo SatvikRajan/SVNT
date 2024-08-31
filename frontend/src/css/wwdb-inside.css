@@ -12,15 +12,14 @@
 }
 
 .wwdb-close-button {
-  position: absolute;
+  /* position: absolute; */
   top: 10%;
-  left: 1546px;
   cursor: pointer;
   z-index: 1000;
 }
 
 .wwdb-logo-title {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,10 +37,10 @@
 }
 
 .wwdb-image-container {
-  position: absolute;
+  /* position: absolute; */
   left: 178px;
-  width: 436px;
-  height: 267px;
+  /* width: 436px; */
+  /* height: 267px; */
   border-radius: 20px;
   z-index: 101;
 }
@@ -52,9 +51,10 @@
 
 .wwdb-details-text {
   text-align: left;
-  position: absolute;
-  width: 559px;
-  height: 150px;
+  justify-content: center;
+  /* position: absolute; */
+  width: 50%;
+  height: 100%;
   left: 858px;
   color: white;
 }

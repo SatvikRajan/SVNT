@@ -53,7 +53,7 @@ export default function WhyWeDoBest() {
         <p className="wwdb-head" data-aos='fade-down' data-aos-easing="ease-in-sine">What We Do</p>
 
         <div className='wwdb-menu-wrapper'>
-          <div className="wwdb-menu">
+          <div className="wwdb-menu" data-aos='fade-up'>
 
             <div className='mainLogo'>
               <img alt='companylogo' src={companyLogo} />
