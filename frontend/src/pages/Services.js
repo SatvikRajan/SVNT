@@ -5,6 +5,7 @@ import wwdb6 from '../images/Home/energy.svg';
 import servicebg from "../images/Services/servicebg.jpg";
 import "../css/services2.css";
 import { useTheme } from '@mui/material/styles';
+import { useLayoutEffect } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -164,18 +165,26 @@ const Services = () => {
   const [value, setValue] = React.useState(0);
   const location = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const params = new URLSearchParams(location.search);
     const tab = parseInt(params.get('tab'));
     if (!isNaN(tab)) {
       setValue(tab);
-      document.getElementById(`tab-${tab}`)
-        const element = document.getElementById(`tab-${tab}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
+      const element = document.getElementById(`tab-${tab}`);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        const timeout = setTimeout(() => {
+          const retryElement = document.getElementById(`tab-${tab}`);
+          if (retryElement) {
+            retryElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 100);
+        return () => clearTimeout(timeout);
+      }
     }
   }, [location]);
+
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -255,7 +264,7 @@ const Services = () => {
                             backgroundColor: 'purple', // Background color when tab is selected
                             color: 'white', // Font color when tab is selected
                           },
-                          '&:hover' : {
+                          '&:hover': {
                             backgroundColor: 'purple', // Background color on hover (optional)
                           },
                         }}

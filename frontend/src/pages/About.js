@@ -18,7 +18,6 @@ import hc from '../images/AboutUs/client-hc.svg'
 import itc from '../images/AboutUs/client-itc.svg'
 import indigo from '../images/AboutUs/client-indigo.svg'
 import afio from '../images/AboutUs/client-afio.svg'
-import abg from '../images/AboutUs/client-abg.svg'
 import gm from '../images/AboutUs/client-gm.svg'
 import britannia from '../images/AboutUs/client-britannia.svg'
 import vedanta from '../images/AboutUs/client-vedanta.svg'
@@ -26,6 +25,42 @@ import jsw from '../images/AboutUs/jsw.svg'
 import jcb from '../images/AboutUs/jcb.svg'
 import lat from '../images/AboutUs/lat.svg'
 import mahindra from '../images/AboutUs/mahindra.svg'
+import abh from '../images/AboutUs/abh.svg'
+import access from '../images/AboutUs/access.svg'
+import act from '../images/AboutUs/act.svg'
+import aragen from '../images/AboutUs/aragen.svg'
+import atos from '../images/AboutUs/atos.svg'
+import buhler from '../images/AboutUs/buhler.svg'
+import cargill from '../images/AboutUs/cargill.svg'
+import cfcl from '../images/AboutUs/cfcl.svg'
+import dufri from '../images/AboutUs/dufri.svg'
+import ec from '../images/AboutUs/ec.svg'
+import edb from '../images/AboutUs/edb.svg'
+import genetec from '../images/AboutUs/genetec.svg'
+import genpact from '../images/AboutUs/genpact.svg'
+import harista from '../images/AboutUs/harista.svg'
+import infra from '../images/AboutUs/infra.svg'
+import intox from '../images/AboutUs/intox.svg'
+import iti from '../images/AboutUs/iti.svg'
+import laurus from '../images/AboutUs/laurus.svg'
+import natco from '../images/AboutUs/natco.svg'
+import ntpc from '../images/AboutUs/ntpc.svg'
+import opc from '../images/AboutUs/opc.svg'
+import petrofac from '../images/AboutUs/petrofac.svg'
+import pidilite from '../images/AboutUs/pidilite.svg'
+import prdc from '../images/AboutUs/prdc.svg'
+import proconnect from '../images/AboutUs/proconnect.svg'
+import reliance from '../images/AboutUs/reliance.svg'
+import selec from '../images/AboutUs/selec.svg'
+import sharp from '../images/AboutUs/sharp.svg'
+import techser from '../images/AboutUs/techser.svg'
+import transit from '../images/AboutUs/transit.svg'
+import uday from '../images/AboutUs/uday.svg'
+import ultratech from '../images/AboutUs/ultratech.svg'
+import vaaman from '../images/AboutUs/vaaman.svg'
+import veera from '../images/AboutUs/veera.svg'
+import zinc from '../images/AboutUs/zinc.svg'
+import zuari from '../images/AboutUs/zuari.svg'
 import aboutbg from '../images/AboutUs/about-bg-video.mp4';
 import Slider from "react-slick";
 
@@ -40,46 +75,127 @@ const About = () => {
       { src: vedanta, alt: 'vedanta' },
       { src: britannia, alt: 'britannia' },
       { src: gm, alt: 'gm' },
-      { src: abg, alt: 'abg' },
-      { src: brigade, alt: 'abg' },
-      { src: gd, alt: 'abg' },
-      { src: akn, alt: 'abg' },
-      { src: hc, alt: 'abg' },
-      { src: mahindra, alt: 'abg' },
-      { src: itc, alt: 'abg' },
-      { src: indigo, alt: 'abg' },
-      { src: indigo, alt: 'abg' },
-      // Add all clients here
+      { src: brigade, alt: 'brigade' },
+      { src: gd, alt: 'gd' },
+      { src: akn, alt: 'akn' },
+      { src: hc, alt: 'hc' },
+      { src: mahindra, alt: 'mahindra' },
+      { src: itc, alt: 'itc' },
+      { src: abh, alt: 'abh' },
+      { src: access, alt: 'access' },
+      { src: act, alt: 'act' },
+      { src: aragen, alt: 'aragen' },
+      { src: atos, alt: 'atos' },
+      { src: buhler, alt: 'buhler' },
+      { src: cargill, alt: 'cargill' },
+      { src: cfcl, alt: 'cfcl' },
+      { src: dufri, alt: 'dufri' },
+      { src: ec, alt: 'ec' },
+      { src: edb, alt: 'edb' },
+      { src: genetec, alt: 'genetec' },
+      { src: genpact, alt: 'genpact' },
+      { src: harista, alt: 'harista' },
+      { src: infra, alt: 'infra' },
+      { src: intox, alt: 'intox' },
+      { src: iti, alt: 'iti' },
+      { src: natco, alt: 'natco' },
+      { src: opc, alt: 'opc' },
+      { src: petrofac, alt: 'petrofac' },
+      { src: pidilite, alt: 'pidilite' },
+      { src: prdc, alt: 'prdc' },
+      { src: proconnect, alt: 'proconnect' },
+      { src: reliance, alt: 'reliance' },
+      { src: selec, alt: 'selec' },
+      { src: sharp, alt: 'sharp' },
+      { src: transit, alt: 'transit' },
+      { src: techser, alt: 'techser' },
+      { src: uday, alt: 'uday' },
+      { src: ultratech, alt: 'ultratech' },
+      { src: vaaman, alt: 'vaaman' },
+      { src: veera, alt: 'veera' },
+      { src: zinc, alt: 'zinc' },
+      { src: zuari, alt: 'zuari' },
+      { src: indigo, alt: 'indigo' },
+      { src: atos, alt: 'atos' },
+      { src: hc, alt: 'hc' },
+      { src: sharp, alt: 'sharp' },
+      { src: prdc, alt: 'prdc' },
+      { src: abh, alt: 'abh' },
+      { src: infra, alt: 'infra' },
     ],
     Power: [
-      { src: ampath, alt: 'Power Client 1' },
-      { src: kia, alt: 'Power Client 2' },
-      // Add power clients here
+      { src: kia, alt: 'kia' },
+      { src: act, alt: 'act' },
+      { src: iti, alt: 'iti' },
+      { src: jsw, alt: 'jsw' },
+      { src: ec, alt: 'ec' },
+      { src: veera, alt: 'veera' },
+      { src: transit, alt: 'transit' },
+      { src: uday, alt: 'uday' },
+      { src: techser, alt: 'techser' },
+      { src: reliance, alt: 'reliance' },
+      { src: petrofac, alt: 'petrofac' },
+      { src: prdc, alt: 'prdc' },
+      { src: ntpc, alt: 'ntpc' },
+      { src: laurus, alt: 'laurus' },
+      { src: access, alt: 'access' },
+      { src: techser, alt: 'techser' },
+      { src: petrofac, alt: 'petrofac' },
+      { src: ntpc, alt: 'ntpc' },
     ],
     Pharma: [
-      { src: esl, alt: 'Pharma Client 1' },
-      { src: jsw, alt: 'Pharma Client 2' },
-      // Add pharma clients here
-    ],
-    Zinc: [
-      { src: esl, alt: 'Zinc Client 1' },
-      { src: jsw, alt: 'Zinc Client 2' },
-      // Add pharma clients here
+      { src: ampath, alt: 'ampath' },
+      { src: allergan, alt: 'Allergan' },
+      { src: aragen, alt: 'aragen' },
+      { src: cfcl, alt: 'cfcl' },
+      { src: gd, alt: 'gd' },
+      { src: intox, alt: 'intox' },
+      { src: natco, alt: 'natco' },
+      { src: pidilite, alt: 'pidilite' },
     ],
     Hotels: [
-      { src: esl, alt: 'Hotels Client 1' },
-      { src: jsw, alt: 'Hotels Client 2' },
-      // Add pharma clients here
+      { src: itc, alt: 'itc' },
+      
     ],
-    Tobacco: [
-      { src: esl, alt: 'Tobacco Client 1' },
-      { src: jsw, alt: 'Tobacco Client 2' },
-      // Add pharma clients here
+    Techno: [
+      { src: akn, alt: 'itc' },
+      { src: atos, alt: 'itc' },
+      { src: cargill, alt: 'itc' },
+      { src: genetec, alt: 'itc' },
+      { src: genpact, alt: 'itc' },
+      { src: harista, alt: 'itc' },
+      { src: infra, alt: 'itc' },
+      { src: reliance, alt: 'reliance' },
+      
     ],
-    Foods: [
-      { src: afio, alt: 'Foods Client 1' },
-      { src: jsw, alt: 'Foods Client 2' },
-      // Add pharma clients here
+    Agro: [
+      { src: buhler, alt: 'buhler' },
+      { src: itc, alt: 'itc' },
+      { src: edb, alt: 'edb' },
+      { src: indigo, alt: 'indigo' },
+      { src: buhler, alt: 'buhler' },
+      { src: itc, alt: 'itc' },
+      { src: indigo, alt: 'indigo' },
+      { src: edb, alt: 'edb' },
+      { src: techser, alt: 'techser' },
+      { src: uday, alt: 'uday' },
+    ],
+    Industrial: [
+      { src: aequs, alt: 'Aequs' },
+      { src: zuari, alt: 'zuari' },
+      { src: dufri, alt: 'dufri' },
+      { src: esl, alt: 'esl' },
+      { src: hc, alt: 'hc' },
+      { src: abh, alt: 'abh' },
+      { src: jcb, alt: 'jcb' },
+      { src: zinc, alt: 'zinc' },
+      { src: selec, alt: 'selec' },
+      { src: opc, alt: 'opc' },
+      { src: proconnect, alt: 'proconnect' },
+      { src: ultratech, alt: 'ultratech' },
+      { src: vaaman, alt: 'vaaman' },
+      { src: sharp, alt: 'sharp' },
+
     ],
   };
 
@@ -94,7 +210,7 @@ const About = () => {
   const settings = {
     arrows: false,
     dots: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     infinite: true,
     slidesToShow: 2,
@@ -105,16 +221,35 @@ const About = () => {
     outline: false,
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 1024, 
+        settings: {
+          slidesToShow: 2,
+          slidesPerRow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 768, 
+        settings: {
+          slidesToShow: 2,
+          slidesPerRow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 480, 
         settings: {
           slidesToShow: 1,
-          rows: 4,
+          slidesPerRow: 1,
           slidesToScroll: 1,
           infinite: true,
         }
       },
     ]
   };
+  
 
 
   return (
@@ -174,7 +309,7 @@ const About = () => {
             <Slider {...settings}>
               {clients[activeClientType].map((client, index) => (
                 <div key={index}>
-                  <img height={200} src={client.src} alt={client.alt} />
+                  <img className='about-client-logo' height={200} src={client.src} alt={client.alt} />
                 </div>
               ))}
             </Slider>

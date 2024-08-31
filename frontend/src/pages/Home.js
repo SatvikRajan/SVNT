@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import '../css/carousel.css';
 import Carosuel1 from '../components/Carosuel1';
 import CaseStudiesCarousel from '../components/Carousel';
@@ -10,9 +10,7 @@ import LastContent from '../components/LastContent';
 import '../css/home.css'
 import Partners from '../components/Partners';
 
-const Home = ()=> {
-
-
+const Home = () => {
   return (
     <div className="home">
       <div className="carousel1">
@@ -28,7 +26,7 @@ const Home = ()=> {
       <div className="mainpage">
         <Partners />
         <div className="case-studies">
-         
+
           <CaseStudiesCarousel />
         </div>
         <LastContent />

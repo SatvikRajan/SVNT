@@ -70,9 +70,13 @@
 }
 .wwdb-learn-more {
   position: absolute;
-  top: 632px;
-  left: 1296px;
-  width: 330px;
+  bottom: 5%; /* Move to the bottom of the container */
+  left: 88%; /* Center horizontally */
+  transform: translateX(-50%);
+  width: 100%; /* Make it responsive */
+  max-width: 300px; /* Limit max size */
+  padding: 10px 20px; /* Add padding */
+  text-align: center;
   /* background-color: aqua; */
 }
 
@@ -83,7 +87,7 @@
 
 .wwdb-learn-more .btn {
   padding: 0.5rem 0 0.5rem;
-  width: 80%;
+  width: 100%;
   height: 60px;
   text-align: left;
   background-color: transparent;

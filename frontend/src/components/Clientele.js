@@ -10,11 +10,11 @@ import akn from '../images/AboutUs/client-akn.svg'
 import hc from '../images/AboutUs/client-hc.svg'
 import itc from '../images/AboutUs/client-itc.svg'
 import indigo from '../images/AboutUs/client-indigo.svg'
-import afio from '../images/AboutUs/client-afio.svg'
-import abg from '../images/AboutUs/client-abg.svg'
-import gm from '../images/AboutUs/client-gm.svg'
+import abg from '../images/AboutUs/abh.svg'
 import britannia from '../images/AboutUs/client-britannia.svg'
 import vedanta from '../images/AboutUs/client-vedanta.svg'
+import reliance from '../images/AboutUs/reliance.svg'
+import iti from '../images/AboutUs/iti.svg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -52,13 +52,13 @@ export default function Clientele() {
               <figure className="shadow"><img src={hc} alt='client'/></figure>
               <figure className="shadow"><img src={itc} alt='client'/></figure>
               <figure className="shadow"><img src={indigo} alt='client'/></figure>
-              <figure className="shadow"><img src={afio} alt='client'/></figure>
               <figure className="shadow"><img src={abg} alt='client'/></figure>
-              <figure className="shadow"><img src={gm} alt='client'/></figure>
               <figure className="shadow"><img src={britannia} alt='client'/></figure>
               <figure className="shadow"><img src={vedanta} alt='client'/></figure>
               <figure className="shadow"><img src={akn} alt='client'/></figure>
               <figure className="shadow"><img src={hc} alt='client'/></figure>
+              <figure className="shadow"><img src={iti} alt='client'/></figure>
+              <figure className="shadow"><img src={reliance} alt='client'/></figure>
 
             </div>
           </div>

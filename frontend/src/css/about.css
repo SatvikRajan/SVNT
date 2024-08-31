@@ -166,10 +166,11 @@
 }
 
 .about-client-type {
+  font-size: 20px;
   border-right: 2px solid black;
   display: flex;
   flex-direction: column;
-  gap: 3.5rem;
+  gap: 3rem;
   margin-right: 2rem;
   cursor: pointer;
   padding-right: 3rem;
@@ -344,6 +345,12 @@
     padding: 0 !important;
     margin: 2rem !important;
   }
+  .about-client-logo{
+    height: 9rem !important;
+  }
+  .about-client-type{
+    gap: 1rem;
+  }
   /* .slick-slide img {
     height: 100px !important;
   } */
@@ -377,5 +384,13 @@
   }
   .about-client-type{
     padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1240px) {
+  .about-clients{
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 1rem;
   }
 }

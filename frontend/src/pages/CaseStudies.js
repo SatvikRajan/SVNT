@@ -36,7 +36,7 @@ import agr4 from "../images/CaseStudies/agr4.jpg";
 import cfcl1 from '../images/CaseStudies/cfcl1.webp'
 import herobgm from '../images/CaseStudies/hero-bgm.webp'
 import sch from "../images/CaseStudies/sch.webp";
-import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 const cs = [
   ['itc', 'ITC Hotels Limited',
     [
@@ -151,20 +151,6 @@ const menuItems = [
     'selectedImage': hotel2,
     'cs': [cs[0]]
   },
-  {
-    'id': 5,
-    'name': 'Agriculture',
-    'image': hotel1,
-    'selectedImage': hotel2,
-    'cs': [cs[0]]
-  },
-  {
-    'id': 6,
-    'name': 'Space',
-    'image': hotel1,
-    'selectedImage': hotel2,
-    'cs': [cs[0]]
-  }
 ]
 
 function TabPanel(props) {
@@ -351,9 +337,52 @@ const CaseStudies = () => {
                               </div>
                             </div>
                           )}
-                          {expanded[csIndex] && (
+                           {expanded[csIndex] && (
                             <div className='expanded-content'>
-                              {/* Expanded Content */}
+                              <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                                <img src={sch} alt="schematic" className=' exp-img' style={{ width: "100%" }} />
+                                <div className='expand-inner'>
+                                  <div>
+
+                                    <h2>{caseStudy[5]}</h2><br></br>
+
+                                    <ul>
+                                      {caseStudy[6].map((item) => (
+                                        <li key={item}>{item}</li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                  <img alt='case-study' src={caseStudy[11]} className="expand-img only-desktop" />
+                                </div>
+
+                                <br></br><br></br>
+                              </div>
+                              <div className='expand-inner'>
+                                <div>
+                                  <h2>{caseStudy[7]}</h2><br></br>
+                                  <ul>
+                                    {caseStudy[8].map((item) => (
+                                      <li key={item}>{item}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                                <img alt='casestudy' src={caseStudy[12]} className="expand-img only-desktop" />
+                                <br></br><br></br>
+                              </div>
+                              <br></br><br></br>
+                              <div className='expand-inner'>
+                                <div>
+                                  <h2>{caseStudy[9]}</h2><br></br>
+                                  <ul>
+                                    {caseStudy[10].map((item) => (
+                                      <li key={item}>{item}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                                <img alt='casestudy' src={caseStudy[13]} className="expand-img only-desktop" />
+                                <br></br><br></br>
+                              </div>
+
                             </div>
                           )}
                           <div className="cs-learn-more" style={{ bottom: "5%" }}>
