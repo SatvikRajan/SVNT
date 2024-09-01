@@ -64,7 +64,7 @@
   line-height: 50px;
   letter-spacing: 5%;
   color: white;
-  
+
   margin: 0;
   padding: 0;
 }
@@ -104,4 +104,29 @@
 }
 .btn-arrow .learnMore {
   color: white;
+}
+
+.wwdb-overlay-title {
+}
+
+.wwdb-overlay-container {
+  margin-top: 5rem;
+  width: 85%;
+  margin-left: 6rem;
+  gap: 2rem;
+}
+
+@media (max-width: 480px) {
+  .wwdb-lm2 {
+    width: 60% !important;
+    display: block;
+  }
+  .wwdb-details-text {
+    width: 100% !important;
+  }
+  .wwdb-overlay-container {
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+  }
 }

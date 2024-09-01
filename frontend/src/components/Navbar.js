@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom'; 
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '../images/logo.png';
 import '../css/navbar.css'
 
 const Navbar = () => {
     const location = useLocation();
     const [activeLink, setActiveLink] = useState(null);
-    const [drop,setDrop]=useState(false)
+    const [drop, setDrop] = useState(false)
 
     // useEffect(() => {
     //     const handleScroll = () => {
@@ -60,16 +60,16 @@ const Navbar = () => {
         setDrop(!drop)
     };
 
-    const alterDropdown=()=>{
+    const alterDropdown = () => {
         setDrop(!drop)
     }
 
     return (
         <div>
             <nav className="navbar navbar-expand-lg scrolled-nav " id='navbar'>
-            <div className={`container ${drop ? 'no-margin' : ' '}`}>
+                <div className={`container ${drop ? 'no-margin' : ' '}`}>
                     <Link className="navbar-brand" to="/">
-                        <img src={Logo} alt="SVNT Tech" height={30} style={{paddingLeft:"30px"}} />
+                        <img src={Logo} alt="SVNT Tech" height={30} />
                     </Link>
                     <button
                         className="navbar-toggler"
@@ -80,15 +80,14 @@ const Navbar = () => {
                         aria-expanded="false"
                         aria-label="Toggle navigation"
                         onClick={alterDropdown}
-                    >                    
+                    >
                         {drop ? (
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="Cross" style={{height:"2rem"}} className={`  ${drop? 'rotate' : ''}`}><line x1="9.37" x2="54.63" y1="9.37" y2="54.63" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" strokeWidth="4" class="colorStroke010101 svgStroke"></line><line x1="9.37" x2="54.63" y1="54.63" y2="9.37" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" strokeWidth="4" class="colorStroke010101 svgStroke"></line></svg>     ) : (
-                            <span   className={` navbar-toggler-icon  ${!drop? 'reverserotate' : ''}`}></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="Cross" style={{ height: "2rem" }} className={`  ${drop ? 'rotate' : ''}`}><line x1="9.37" x2="54.63" y1="9.37" y2="54.63" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" strokeWidth="4" class="colorStroke010101 svgStroke"></line><line x1="9.37" x2="54.63" y1="54.63" y2="9.37" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" strokeWidth="4" class="colorStroke010101 svgStroke"></line></svg>) : (
+                            <span className={` navbar-toggler-icon  ${!drop ? 'reverserotate' : ''}`}></span>
                         )}
                     </button>
-                    <div  className={`navbar-collapse navLinksPosition collapse ${
-              drop ? 'show' : '' // Apply 'show' class when drop is true
-            }`}  id="navbarSupportedContent">
+                    <div className={`navbar-collapse navLinksPosition collapse ${drop ? 'show' : '' // Apply 'show' class when drop is true
+                        }`} id="navbarSupportedContent">
                         <ul id='nav-links' className="navbar-nav ">
                             <NavItem to="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
                                 About Us
@@ -108,7 +107,7 @@ const Navbar = () => {
                             <NavItem to="/contact" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 Contact Us
                             </NavItem>
-                             
+
                         </ul>
                     </div>
                 </div>

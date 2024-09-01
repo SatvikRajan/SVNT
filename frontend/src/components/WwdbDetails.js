@@ -57,7 +57,7 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
                 exit={{ opacity: 0, zIndex: -1, transition: { duration: 0.5, delay: 0.4 } }}
                 transition={{ duration: 0.5 }}
             >
-                <div className='d-flex justify-around m-4 pt-4'>
+                <div className='d-flex justify-around m-4 pt-4 wwdb-overlay-title'>
                     <motion.div
                         className="wwdb-logo-title"
                         initial={{ top: `${topPos}px`, left: `${leftPos}px` }}
@@ -71,7 +71,7 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
                         <motion.img height={50} src={close} />
                     </motion.div>
                 </div>
-                <div className='d-flex flex-row justify-content-center' style={{marginTop: '5rem', width: '85%', marginLeft: '6rem', gap: '2rem'}}>
+                <div className='d-flex flex-row justify-content-center wwdb-overlay-container'>
                     <motion.div
                         className="wwdb-image-container"
                         initial={{ top: '300px', opacity: 0 }}
