@@ -65,22 +65,23 @@ function AdminLogin() {
       <div class="parent-container">
         <div class="portal-login d-flex flex-column">
           <form onSubmit={(e) => handleSubmit(e)}>
-          <p style={{width:'100%',textAlign:"center",fontWeight:"500"}}>Admin Portal</p>
-            <div className='login-input'><input
-              type="text"
-              placeholder="Username"
-              name="username"
-              onChange={(e) => {
-                handleChange(e);
-              }}
-              style={{ border: "none" }}
-              min="3"
-            />
+            <p style={{ width: '100%', textAlign: "center", fontWeight: "500" }}>Admin Portal</p>
+            <div className='login-input'>
+              <input
+                type="text"
+                placeholder="Username"
+                name="username"
+                onChange={(e) => {
+                  handleChange(e);
+                }}
+                style={{ border: "none" }}
+                min="3"
+              />
               <img src={person} alt='person'></img>
             </div>
             <div className='login-input'>
               <input
-                type={passwordClose? "password":"text"}
+                type={passwordClose ? "password" : "text"}
                 placeholder="password"
                 name="password"
                 onChange={(e) => {
@@ -94,17 +95,16 @@ function AdminLogin() {
                 onClick={togglePasswordVisibility}
               />
             </div>
-            <p style={{fontSize:"12px",width:"100%",fontWeight:"bold"}}>
+            <p style={{ fontSize: "12px", width: "100%", fontWeight: "bold" }}>
               Don't have an account ?<Link to="/register">  Register</Link>
             </p>
             <button type="submit">Submit</button>
-           
+
           </form>
-            <div className='login-footer'>
+          {/* <div className='login-footer'>
               <p>Forgot Password?</p>
               <p>Forgot Admin ID?</p>
-          
-            </div>
+            </div> */}
         </div>
         <ToastContainer />
       </div>

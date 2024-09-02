@@ -17,7 +17,7 @@ export default function Managers() {
   }, []);
   return (
     <div className="managers">
-      <h1>Our Team</h1>
+      <h1>Team Members</h1>
       <div className="manager-menu">
         <div className="d-flex manager-line justify-content-around">
           <div className="d-flex flex-column manager-1" data-aos='fade-up'>

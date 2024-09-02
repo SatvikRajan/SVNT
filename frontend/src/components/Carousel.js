@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import str from '../images/Home/home-carousel-itc.webp';
+import str from '../images/Home/itc-1.png';
 // import is from '../images/Home/home-carousel-statocast.webp';
-import sss from '../images/Home/home-carousel-eyeon.webp';
-import avs from '../images/Home/home-carousel-cfcl.webp';
+import sss from '../images/Home/jsw-1.png';
+import avs from '../images/Home/cfcl.png';
 // import es from '../images/Home/home-carousel-aragen.webp';
 import kia from '../images/Home/kia.png'
 import AOS from 'aos';

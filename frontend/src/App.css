@@ -401,7 +401,7 @@ ul.dropdown-menu.show {
 
 ul.job-requirements {
   letter-spacing: 0px;
-  line-height: 35px;
+  line-height: 45px;
   list-style-type: none;
   padding-left: 0rem !important;
 }
@@ -557,6 +557,7 @@ ul.job-requirements {
   margin-top: -36px;
   font-size: 15px;
   letter-spacing: 0px;
+  line-height: 40px;
 }
 
 .buttons {

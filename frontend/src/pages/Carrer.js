@@ -312,7 +312,7 @@ const CareersPage = () => {
                       style={{
                         display: "flex",
                         alignItems: "center",
-                        height: "4vh",
+                        height: "2rem",
                         letterSpacing: "0px",
                         fontWeight: "bold",
                         paddingLeft: "10px",

@@ -75,44 +75,57 @@ export default function Register() {
             </div>
             <div className="parent-container">
                 <div className="portal-register d-flex flex-column">
-                    <p>Admin Portal</p>
+                    <p style={{ width: '100%', textAlign: "center", fontWeight: "500" }}>Admin Portal</p>
                     <form className="reg" onSubmit={(e) => handleSubmit(e)}>
-                        <input
-                            type="text"
-                            placeholder="Username"
-                            name="username"
-                            onChange={(e) => {
-                                handleChange(e);
-                            }}
-                        />
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            name="email"
-                            onChange={(e) => {
-                                handleChange(e);
-                            }}
-                        />
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            name="password"
-                            onChange={(e) => {
-                                handleChange(e);
-                            }}
-                        />
-                        <input
-                            type="password"
-                            placeholder="Confirm Password"
-                            name="confirmPassword"
-                            onChange={(e) => {
-                                handleChange(e);
-                            }}
-                        />
-                        <button type="submit">Create User</button>
-                        <span>
+
+                        <div className='login-input'>
+                            <input
+                                type="text"
+                                placeholder="Username"
+                                name="username"
+                                onChange={(e) => {
+                                    handleChange(e);
+                                }}
+                                style={{ border: "none" }}
+                            />
+                        </div>
+                        <div className='login-input'>
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                name="email"
+                                onChange={(e) => {
+                                    handleChange(e);
+                                }}
+                                style={{ border: "none" }}
+                            />
+                        </div>
+                        <div className='login-input'>
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                name="password"
+                                onChange={(e) => {
+                                    handleChange(e);
+                                }}
+                                style={{ border: "none" }}
+                            />
+                        </div>
+                        <div className='login-input'>
+                            <input
+                                type="password"
+                                placeholder="Confirm Password"
+                                name="confirmPassword"
+                                onChange={(e) => {
+                                    handleChange(e);
+                                }}
+                                style={{ border: "none" }}
+                            />
+                        </div>
+                        <span style={{ fontSize: "12px", width: "100%", fontWeight: "bold" }}>
                             Already have an account ?<Link to="/login"> Login</Link>
                         </span>
+                        <button type="submit">Create User</button>
                     </form>
                 </div>
                 <ToastContainer />
