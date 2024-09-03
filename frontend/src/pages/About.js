@@ -281,7 +281,7 @@ const About = () => {
           <p className="ceo-text-p w-75" style={{ marginBottom: '2rem' }} data-aos='fade-right'>
             “User experience is everything. It always has been, but it's still undervalued and under-invested in. If you don't know user-centered design, study it. Hire people who know it. Obsess over it. Live and breathe it. ”
           </p>
-          <h1 style={{ float: 'inline-end' }}>- Mr. V G Salimath</h1>
+          <h1 style={{ float: 'inline-end' }} data-aos='fade-right'>- Mr. V G Salimath</h1>
         </div>
         <div className="ceo-photo" data-aos='fade-left'>
           <img className='ceo-photo-1' src={ceo} alt="" />
