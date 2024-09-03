@@ -238,6 +238,24 @@ export default function Partners() {
                                     <img src={image4} alt='person' />
                                 </div>
                             </div>
+                            <div className='people'>
+                                <div className='p-name'>
+                                    <p>Soumendra <br />Director</p>
+                                </div>
+                                <p className='p-quote'>“No growth hack, brilliant marketing idea can save you long-term if you don’t have a sufficiently good product.”</p>
+                                <div className='p-img'>
+                                    <img src={image4} alt='person' />
+                                </div>
+                            </div>
+                            <div className='people'>
+                                <div className='p-name'>
+                                    <p>Soumendra <br />Director</p>
+                                </div>
+                                <p className='p-quote'>“No growth hack, brilliant marketing idea can save you long-term if you don’t have a sufficiently good product.”</p>
+                                <div className='p-img'>
+                                    <img src={image4} alt='person' />
+                                </div>
+                            </div>
 
                         </div>
                     </div>

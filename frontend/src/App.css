@@ -186,9 +186,11 @@ p.write1 {
   height: 56px;
   font-size: 16px;
   font-weight: 400;
-  /* background: rgba(0, 0, 0, 0.02); */
+  background: white;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
   transition: all 0.15s ease;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .inp .textarea:hover {

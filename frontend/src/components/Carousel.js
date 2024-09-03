@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import str from '../images/Home/itc-1.png';
-// import is from '../images/Home/home-carousel-statocast.webp';
+import is from '../images/Home/home-carousel-statocast.webp';
 import sss from '../images/Home/jsw-1.png';
 import avs from '../images/Home/cfcl.png';
 // import es from '../images/Home/home-carousel-aragen.webp';
@@ -96,7 +96,7 @@ function CaseStudiesCarousel() {
     setItems([
       { id: 'jsw', image: sss, title: 'JSW Eye on Pellet', description: 'Eye on Pellet: An innovative instrument for timely estimation of pellet size' },
       { id: 'itc', image: str, title: 'ITC Hotels', description: 'A Close Examination of how SVNT implements Security Protocols at ITC.' },
-      // { id: 'om', image: is, title: 'Om Books (Statocast)', description: 'Get a closer look at how our cloud-based security keeps every corner covered.' },
+      { id: 'om', image: is, title: 'Om Books (Statocast)', description: 'Get a closer look at how our cloud-based security keeps every corner covered.' },
       { id: 'kia', image: kia, title: 'Kempagowda International Airport', description: 'Discover how we ensure and uphold airport security' },
       { id: 'cfcl', image: avs, title: 'CFCL', description: 'Find out how we elevate security standards at CFCL Gadepan .' },
       // { id: 'aragen', image: es, title: 'Aragen', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' },
