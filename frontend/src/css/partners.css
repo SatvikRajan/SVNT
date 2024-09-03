@@ -44,32 +44,38 @@
 }
 .partners-desc-container2{
   display: flex;
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
   gap: 20px;
-
 }
-
 .desc-head {
   font-size: 42px;
   font-weight: bold;
   margin: 0;
-  padding-left: 6rem;
+  padding-left: 8rem;
   padding-top: 3.5%;
 }
 
 .desc-content {
+  font-weight: 500;
   font-size: 28px;
   line-height: 50px;
-  letter-spacing: 5%;
-  /* background-color: #005197; */
-  /* height: 100%; */
   width: 100%;
   height: 100%;
 }
 
+.description1 {
+  float: left;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 50px;
+  box-sizing: border-box; /* Ensure padding and borders are included in width calculation */
+}
+
 .desc-image img {
-  height: fit-content;
+  float: right;
+  display: block;
+  height: 35rem;
   width: fit-content;
 }
 
@@ -78,7 +84,7 @@
   border-bottom-left-radius: 25px;
   /* background-color: #005197; */
   width: 100%;
-  padding-left: 1rem;
+  padding-left: 2rem;
   padding-right: 1rem;
   height: 32rem;
   margin-top: 2%;
@@ -195,6 +201,7 @@
 .head2 {
   /* background-color: #76777A; */
   padding-top: 0% !important;
+  padding-left: 3rem !important;
   padding-bottom: 3%;
 }
 
@@ -210,7 +217,7 @@
   justify-content: space-evenly;
   /* align-items: center; */
   height: fit-content;
-  padding-left: 6rem;
+  padding-left: 3rem;
 }
 
 .people {
@@ -274,7 +281,7 @@
 
 .sub-one {
   /* background-color: #005197; */
-  padding-left: 6rem;
+  padding-left: 3rem;
 }
 
 .word1 {
@@ -358,7 +365,9 @@
 .desc-head3 {
   font-size: 28px;
   font-weight: 500;
-  padding-left: 6rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  letter-spacing: 2px;
 }
 
 .box-content ul {

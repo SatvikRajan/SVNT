@@ -96,7 +96,7 @@ p{
     gap: 0%;
     margin-top: -1.4%;
     border: 10px solid #251741;
-    background-color: #f1faff !important;
+    /* background-color: #f1faff !important; */
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     height: fit-content;

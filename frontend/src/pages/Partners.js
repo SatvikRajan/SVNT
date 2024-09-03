@@ -100,11 +100,10 @@ export default function Partners() {
             <p className="desc-head">What Genetec does ?</p>
             <div className="partners-desc">
                 <div className="partners-desc-container2">
-                    <div className="description" data-aos='fade-right'>
+                    <div className="description description1" data-aos='fade-right'>
                         <p className="desc-content">{desc[0]}</p>
                     </div>
                     <div className="desc-image" data-aos='fade-left'>
-
                         <img src={image1} alt="genetec" />
                     </div>
                 </div>
@@ -227,7 +226,7 @@ export default function Partners() {
             <div className="partners-desc2">
                 <div className="jr-container">
                     <div className="description">
-                        <p className="desc-head">People Involved</p>
+                        <p className="desc-head head2">People Involved</p>
                         <div className='people-box'>
                             <div className='people'>
                                 <div className='p-name'>

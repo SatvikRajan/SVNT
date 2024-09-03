@@ -34,6 +34,7 @@ import agr1 from "../images/CaseStudies/agr1.webp";
 import agr2 from "../images/CaseStudies/agr2.webp";
 import agr4 from "../images/CaseStudies/agr4.jpg";
 import cfcl1 from '../images/CaseStudies/cfcl1.webp'
+import cfclbg from '../images/CaseStudies/cfclbg.png'
 import herobgm from '../images/CaseStudies/hero-bgm.webp'
 import sch from "../images/CaseStudies/sch.webp";
 import { useLocation, useSearchParams } from 'react-router-dom';
@@ -113,7 +114,7 @@ const cs = [
     'Scope of Work: Erection & Commissioning of IP Based CCTV System & Panic Alarm System',
     `Challenges:Chambal Fertilisers and Chemicals Limited (CFCL), founded in 1985 by Zuari Industries Limited, has become a major player in India's private sector fertiliser industry. Situated in the Gadepan area of Rajasthan's Kota district, CFCL operates two cutting-edge nitrogenous fertiliser plants. Together, these plants produce around 2 million metric tons of urea each year. Over the years, CFCL has not only bolstered its presence in the fertiliser market but has also emerged as a leader in North India's pesticide business.`,
 
-  ], cfcl1, cfcl1, ` `,
+  ], cfclbg, cfcl1, ` `,
     [],
     `Cameras That Think`,
     [[`The CCTV system uses advanced IP cameras with Intelligent Video Analytics (IVA) to cover the entire area. These smart cameras automatically detect and analyse events in real-time, identifying any suspicious activities, movements, or objects. We installed night vision cameras in key spots, enabling visibility up to 150-170 metres even in low light. To top it off, fixed cameras at all gates and drains ensure our surveillance system is thorough and reliable.`]
