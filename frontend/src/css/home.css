@@ -983,7 +983,13 @@
     color: black !important;
   }
   .carousel-caption p a {
+    width: max-content !important;
     filter: invert(1);
+  }
+  .cc3{
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    background-color: #251741;
   }
 }
 

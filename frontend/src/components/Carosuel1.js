@@ -1,13 +1,13 @@
 import React from 'react';
 import '../css/card.css';
 import image1 from '../images/Home/carousel-image-1.webp';
-import image1m from '../images/Home/carousel-image-1m.webp';
+import image1m from '../images/Home/carousel-image-1m.png';
 import image2 from '../images/Home/carousel-image-2.webp';
-import image2m from '../images/Home/carousel-image-2m.webp';
+import image2m from '../images/Home/carousel-image-2m.png';
 import image3 from '../images/Home/carousel-image-3.webp';
-import image3m from '../images/Home/carousel-image-3m.webp';
+import image3m from '../images/Home/carousel-image-3m.png';
 import image4 from '../images/Home/carousel-image-4.webp';
-import image4m from '../images/Home/carousel-image-4m.webp';
+import image4m from '../images/Home/carousel-image-4m.png';
 import { Link } from 'react-router-dom';
 function Carosuel1() {
   return (
@@ -33,7 +33,7 @@ function Carosuel1() {
             {/* <h1>First slide label</h1> */}
             <h1>Relax, We've Got Your Back Your Security is Our Priority!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '30%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/contact'>Send us a message</Link>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '30%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/about'>Learn More About Us</Link>
             </p>
             {/* <Link to="/about"><p className='ccr readmore'>Read More</p></Link> */}
           </div>
@@ -54,7 +54,7 @@ function Carosuel1() {
               awards and recognition over
               the years!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/contact'>Send us a message</Link>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/contact'>Be an SVNTian</Link>
             </p>
           </div>
         </div>
@@ -84,7 +84,7 @@ function Carosuel1() {
               alt="..."
             />
           </picture>
-          <div className="carousel-caption cc1 d-none d-md-block">
+          <div className="carousel-caption cc1 cc3 d-none d-md-block">
             <h1>Dive into our case studies and see how we deliver results!
             </h1>
             <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/about'>Learn more about us</Link></p>
