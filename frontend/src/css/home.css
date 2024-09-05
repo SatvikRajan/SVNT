@@ -979,8 +979,16 @@
     height: fit-content;
     background-color: #e9e8ec;
   }
-  .carousel-caption h1 {
+  .cc3 h1{
+    color: white !important;
+  }
+  .cc3 p a{
     color: black !important;
+    border-bottom: 2px solid black;
+    font-weight: 600;
+  }
+  .carousel-caption h1 {
+    color: black ;
   }
   .carousel-caption p a {
     width: max-content !important;
