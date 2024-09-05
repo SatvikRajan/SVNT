@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import str from '../images/Home/itc-1.png';
-import is from '../images/Home/home-carousel-statocast.webp';
+import is from '../images/Home/ombooks.png';
 import sss from '../images/Home/jsw-1.png';
 import avs from '../images/Home/cfcl.png';
 // import es from '../images/Home/home-carousel-aragen.webp';

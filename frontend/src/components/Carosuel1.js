@@ -1,10 +1,10 @@
 import React from 'react';
 import '../css/card.css';
-import image1 from '../images/Home/carousel-image-1.webp';
+import image1 from '../images/Home/carousel-image-1.png';
 import image1m from '../images/Home/carousel-image-1m.png';
 import image2 from '../images/Home/carousel-image-2.webp';
 import image2m from '../images/Home/carousel-image-2m.png';
-import image3 from '../images/Home/carousel-image-3.webp';
+import image3 from '../images/Home/carousel-image-3.png';
 import image3m from '../images/Home/carousel-image-3m.png';
 import image4 from '../images/Home/carousel-image-4.webp';
 import image4m from '../images/Home/carousel-image-4m.png';
@@ -68,7 +68,7 @@ function Carosuel1() {
               alt="..."
             />
           </picture>
-          <div className="carousel-caption cc1 cc2 d-none d-md-block">
+          <div className="carousel-caption cc1 cc2 cc3 d-none d-md-block">
             <h1>Explore our many services designed to meet your needs.
             </h1>
             <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/contact'>Send us a message</Link></p>
@@ -87,7 +87,7 @@ function Carosuel1() {
           <div className="carousel-caption cc1 cc3 d-none d-md-block">
             <h1>Dive into our case studies and see how we deliver results!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/about'>Learn more about us</Link></p>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '60%', marginStartBLock: 'auto' }} to='/about'>Learn more about us</Link></p>
           </div>
         </div>
       </div>
