@@ -45,7 +45,6 @@
 .cs-list {
   width: 100vw;
   min-height: 100vh;
-  max-height: auto;
 }
 
 .cs-search-bar {
@@ -247,7 +246,7 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background-color: #f1faff;
+  /* background-color: #f1faff; */
   overflow: visible;
 }
 
