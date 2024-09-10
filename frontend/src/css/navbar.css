@@ -42,8 +42,8 @@
 
 @keyframes expandFromLeft {
   0% {
-    width: 42%; /* Initial width */
-    left: 51%; /* Initial left position */
+    width: 90%; /* Initial width */
+    left: 5%; /* Initial left position */
   }
   100% {
     width: 90%; /* Final width */
@@ -56,21 +56,12 @@
   }
 }
 
-@keyframes shrinkToCenter {
-  from {
-    width: 90%;
-    left: 5%;
-  }
-  to {
-    width: 42%;
-    left: 51%;
-  }
-}
 
 .scrolled-nav {
   animation: expandFromLeft 0.3s ease forwards;
   top: 0;
   height: 5rem;
+  padding: 0;
   /* background-color: aqua; */
   /* padding-right: 16px; */
   /* width: 100vw; */
@@ -299,6 +290,9 @@
   animation: reverse rotate 0.2s ease-in;
 }
 
+.home{
+  background-color: #f1faff;
+}
 @media (max-width: 480px) {
   .scrolled-nav {
     height: 4rem;

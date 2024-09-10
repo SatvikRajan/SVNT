@@ -2,6 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  /* background-color: #F1FAFF; */
+}
+.about-us-page{
+  background-color: #f1faff;
 }
 .logo-brand {
   z-index: 10;

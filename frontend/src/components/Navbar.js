@@ -8,49 +8,6 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState(null);
     const [drop, setDrop] = useState(false)
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         setScrollTop(window.scrollY);
-    //         const navElement = document.getElementById('navbar');
-    //         const navItems = document.getElementById("navbarSupportedContent");
-    //         const navLinks = document.getElementById('nav-links')
-    //         if (navElement) {
-    //             if (scrollTop > 70) {
-    //                 navElement.classList.add('scrolled-nav');
-    //                 navItems.classList.add('collapse','justify-content-end')
-    //                 navLinks.classList.remove('navbar-collapse', 'collapse', 'justify-content-between')
-    //                 navItems.classList.add('navLinksPosition')
-    //                 // navItems.classList.add('justify-content-end')
-    //             } else {
-    //                 navElement.classList.remove('scrolled-nav')
-    //                 navItems.classList.remove('collapse','justify-content-end')
-    //                 navLinks.classList.add('navbar-collapse', 'collapse', 'justify-content-between')
-    //                 navItems.classList.add('navLinksPosition')
-    //                 // navItems.classList.remove('justify-content-')
-    //                 // navItems.classList.add('justify-content-center');
-    //             }
-    //         }
-
-    //         const currentScrollPos = window.scrollY;
-
-
-
-    //         if (currentScrollPos > prevScrollPos && currentScrollPos > 100) {
-    //             document.querySelector('.navbar').classList.add('hidden');
-    //         } else {
-    //             document.querySelector('.navbar').classList.remove('hidden');
-    //         }
-
-    //         setPrevScrollPos(currentScrollPos);
-    //     };
-
-    //     window.addEventListener('scroll', handleScroll);
-
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, [prevScrollPos]);
-
     useEffect(() => {
         setActiveLink(location.pathname);
     }, [location.pathname]);

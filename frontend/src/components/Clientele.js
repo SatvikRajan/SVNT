@@ -1,20 +1,22 @@
 import React,{useEffect} from 'react';
-import aequs from '../images/AboutUs/client-aequs.svg'
-import allergan from '../images/AboutUs/client-allergan.svg'
-import ampath from '../images/AboutUs/client-ampath.svg'
+import abh from '../images/AboutUs/abh.svg'
+import act from '../images/AboutUs/client-act.svg'
+import atos from '../images/AboutUs/atos.svg'
+import cargill from '../images/AboutUs/cargill.svg'
+import veera from '../images/AboutUs/veera.svg'
+import jsw from '../images/AboutUs/jsw.svg'
+import jcb from '../images/AboutUs/jcb.svg'
+import aragen from '../images/AboutUs/aragen.svg'
+import cfcl from '../images/AboutUs/cfcl.svg'
+import pidilite from '../images/AboutUs/pidilite.svg'
+import petrofac from '../images/AboutUs/petrofac.svg'
+import ultratech from '../images/AboutUs/ultratech.svg'
+import genetec from '../images/AboutUs/genetec.svg'
+import ec from '../images/AboutUs/ec.svg'
+import edb from '../images/AboutUs/edb.svg'
+import zinc from '../images/AboutUs/zinc.svg'
 import kia from '../images/AboutUs/client-kia.svg'
-import brigade from '../images/AboutUs/client-brigade.svg'
-import esl from '../images/AboutUs/client-esl.svg'
-import gd from '../images/AboutUs/client-gd.svg'
-import akn from '../images/AboutUs/client-akn.svg'
-import hc from '../images/AboutUs/client-hc.svg'
 import itc from '../images/AboutUs/client-itc.svg'
-import indigo from '../images/AboutUs/client-indigo.svg'
-import abg from '../images/AboutUs/abh.svg'
-import britannia from '../images/AboutUs/client-britannia.svg'
-import vedanta from '../images/AboutUs/client-vedanta.svg'
-import reliance from '../images/AboutUs/reliance.svg'
-import iti from '../images/AboutUs/iti.svg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -41,24 +43,24 @@ export default function Clientele() {
         <section id="slideshow" data-aos='fade-left'>
           <div className="entire-content">
             <div className="content-carrousel">
-              <figure className="shadow"><img src={aequs} alt='client'/></figure>
-              <figure className="shadow"><img src={allergan} alt='client'/></figure>
-              <figure className="shadow"><img src={ampath} alt='client'/></figure>
-              <figure className="shadow"><img src={kia} alt='client'/></figure>
-              <figure className="shadow"><img src={brigade} alt='client'/></figure>
-              <figure className="shadow"><img src={esl} alt='client'/></figure>
-              <figure className="shadow"><img src={gd} alt='client'/></figure>
-              <figure className="shadow"><img src={akn} alt='client'/></figure>
-              <figure className="shadow"><img src={hc} alt='client'/></figure>
+              <figure className="shadow"><img src={abh} alt='client'/></figure>
               <figure className="shadow"><img src={itc} alt='client'/></figure>
-              <figure className="shadow"><img src={indigo} alt='client'/></figure>
-              <figure className="shadow"><img src={abg} alt='client'/></figure>
-              <figure className="shadow"><img src={britannia} alt='client'/></figure>
-              <figure className="shadow"><img src={vedanta} alt='client'/></figure>
-              <figure className="shadow"><img src={akn} alt='client'/></figure>
-              <figure className="shadow"><img src={hc} alt='client'/></figure>
-              <figure className="shadow"><img src={iti} alt='client'/></figure>
-              <figure className="shadow"><img src={reliance} alt='client'/></figure>
+              <figure className="shadow"><img src={atos} alt='client'/></figure>
+              <figure className="shadow"><img src={cargill} alt='client'/></figure>
+              <figure className="shadow"><img src={veera} alt='client'/></figure>
+              <figure className="shadow"><img src={jsw} alt='client'/></figure>
+              <figure className="shadow"><img src={jcb} alt='client'/></figure>
+              <figure className="shadow"><img src={aragen} alt='client'/></figure>
+              <figure className="shadow"><img src={cfcl} alt='client'/></figure>
+              <figure className="shadow"><img src={pidilite} alt='client'/></figure>
+              <figure className="shadow"><img src={petrofac} alt='client'/></figure>
+              <figure className="shadow"><img src={ultratech} alt='client'/></figure>
+              <figure className="shadow"><img src={genetec} alt='client'/></figure>
+              <figure className="shadow"><img src={ec} alt='client'/></figure>
+              <figure className="shadow"><img src={edb} alt='client'/></figure>
+              <figure className="shadow"><img src={zinc} alt='client'/></figure>
+              <figure className="shadow"><img src={kia} alt='client'/></figure>
+              <figure className="shadow"><img src={act} alt='client'/></figure>
 
             </div>
           </div>
