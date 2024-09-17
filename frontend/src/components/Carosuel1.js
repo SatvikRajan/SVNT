@@ -1,13 +1,13 @@
 import React from 'react';
 import '../css/card.css';
 import image1 from '../images/Home/carousel-image-1.webp';
-import image1m from '../images/Home/carousel-image-1m.png';
+import image1m from '../images/Home/carousel-image-1m.webp';
 import image2 from '../images/Home/carousel-image-2.webp';
-import image2m from '../images/Home/carousel-image-2m.png';
+import image2m from '../images/Home/carousel-image-2m.webp';
 import image3 from '../images/Home/carousel-image-3.webp';
-import image3m from '../images/Home/carousel-image-3m.png';
+import image3m from '../images/Home/carousel-image-3m.webp';
 import image4 from '../images/Home/carousel-image-4.webp';
-import image4m from '../images/Home/carousel-image-4m.png';
+import image4m from '../images/Home/carousel-image-4m.webp';
 import { Link } from 'react-router-dom';
 function Carosuel1() {
   return (
