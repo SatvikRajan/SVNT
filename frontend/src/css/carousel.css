@@ -7,10 +7,9 @@
 }
 
 .carousel-caption {
-  background-color: #251741;
   color: #f1faff;
   display: flex !important;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   text-align: start !important;
   height: 19rem;
@@ -22,6 +21,7 @@
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
   width: 70vw;
+  gap: 2rem;
   /* text-align: center; */
 }
 
@@ -30,7 +30,7 @@
   font-size: 40px;
   line-height: 4rem;
   color: white;
-  /* width: 65%; */
+  /* width: 60%; */
 }
 .carousel-indicators {
   align-items: center;

@@ -1,10 +1,10 @@
 import React from 'react';
 import '../css/card.css';
-import image1 from '../images/Home/carousel-image-1.png';
+import image1 from '../images/Home/carousel-image-1.webp';
 import image1m from '../images/Home/carousel-image-1m.png';
 import image2 from '../images/Home/carousel-image-2.webp';
 import image2m from '../images/Home/carousel-image-2m.png';
-import image3 from '../images/Home/carousel-image-3.png';
+import image3 from '../images/Home/carousel-image-3.webp';
 import image3m from '../images/Home/carousel-image-3m.png';
 import image4 from '../images/Home/carousel-image-4.webp';
 import image4m from '../images/Home/carousel-image-4m.png';
@@ -19,7 +19,7 @@ function Carosuel1() {
         <div type="button" id='carousel-button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></div>
       </div>
       <div className="carousel-inner cinner">
-        <div className="carousel-item ci active" >
+        <div className="carousel-item ci active" style={{gap: '3rem'}}>
           <picture>
             <source media="(max-width: 480px)" srcSet={image1m} />
             <source media="(min-width: 480px)" srcSet={image1} />
@@ -33,12 +33,12 @@ function Carosuel1() {
             {/* <h1>First slide label</h1> */}
             <h1>Relax, We've Got Your Back Your Security is Our Priority!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '30%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/about'>Learn More About Us</Link>
+            <p style={{ fontSize: '20px', marginTop: '1rem', width: '50%' }}><Link className='readmore text-white' style={{ width: '100%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/about'>Learn More About Us</Link>
             </p>
             {/* <Link to="/about"><p className='ccr readmore'>Read More</p></Link> */}
           </div>
         </div>
-        <div className="carousel-item ci" >
+        <div className="carousel-item ci" style={{gap: '3rem'}}>
           {/* <imsrc={image4} className="d-block w-100" style={{ backgroundSize: 'cover' }} alt="..." /> */}
           <picture>
             <source media="(max-width: 480px)" srcSet={image2m} />
@@ -54,7 +54,7 @@ function Carosuel1() {
               awards and recognition over
               the years!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/contact'>Be an SVNTian</Link>
+            <p style={{ fontSize: '20px', marginTop: '1rem', width: '50%' }}><Link className='readmore text-white' style={{ width: '100%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/contact'>Be an SVNTian</Link>
             </p>
           </div>
         </div>
@@ -71,7 +71,7 @@ function Carosuel1() {
           <div className="carousel-caption cc1 cc2 cc3 d-none d-md-block">
             <h1>Explore our many services designed to meet your needs.
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/contact'>Send us a message</Link></p>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', marginStartBLock: 'auto' }} to='/contact'>Send us a message</Link></p>
           </div>
         </div>
         <div className="carousel-item ci" >

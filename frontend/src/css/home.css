@@ -243,13 +243,14 @@
 .slick-dots1 {
   display: none;
 }
-.cc2{
+/* .cc2{
   background-color: #251741 !important;
-}
+} */
 .cc3{
   left: 30% !important;
   width: 40vw !important;
   background-color: transparent;
+  flex-direction: column;
 }
 
 .cc3 p a{
