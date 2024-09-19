@@ -34,11 +34,11 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
     const logo = [logo0, logo1, logo2, logo3, logo4, logo5, logo6, logo7];
     const details = [
         'IP networks ensure smooth device interaction, vital for home and corporate setups, integrating seamlessly for uninterrupted data transmission.',
-        'IP camera systems revolutionise security with customisable surveillance accessible anywhere, integrating with existing systems for coverage and effectiveness.',
-        'Empower your organisation with energy solutions, optimising usage, cutting costs, and minimising environmental impact through custom sustainable plans.',
-        'Our systems offer thorough monitoring, ensuring swift responses to threats. From runway monitoring to fire alarm systems, we prioritise safety in any environment.',
+        'We help you keep your data safe and sound, while making sure it’s always available and easy to scale as you grow.',
+        'Ensure uninterrupted power and safeguard your equipment with our all-encompassing backup solutions.',
+        'Our systems revolutionise security with customisable surveillance accessible anywhere, integrating with existing systems for coverage and effectiveness.',
         'Explore key security solutions for businesses, from network audits to advanced access control systems, ensuring robust protection and efficiency.',
-        'NAS and SAN services simplify data storage, allowing collaboration and prompt customer response, ensuring accessibility, affordability, and quick recovery.',
+        'We make it easy to access what you need, work together effortlessly, and keep your data safe and sound.',
         'Enhance communication and engagement with our tailored audio-visual solutions, perfect for presentations, events, and meetings covering displays to sound systems.',
         'Boost efficiency with our integration solutions, merging systems for seamless communication. Simplify processes, reduce complexity, and automate tasks effectively.',
     ];
