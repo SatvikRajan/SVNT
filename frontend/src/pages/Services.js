@@ -2,7 +2,7 @@ import wwdb2 from '../images/Home/IP-network.svg';
 import wwdb4 from '../images/Home/audio-visual.svg';
 import wwdb5 from '../images/Home/security-and-mgmt.svg';
 import wwdb6 from '../images/Home/energy.svg';
-import servicebg from "../images/Services/servicebg.jpg";
+import servicebg from "../images/Services/servicebg.webp";
 import "../css/services2.css";
 import { useTheme } from '@mui/material/styles';
 import { useLayoutEffect } from 'react';
