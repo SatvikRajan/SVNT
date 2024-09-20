@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import company from '../images/logo1.png';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import '../css/admin-main.css'
+import '../css/admin-main.css';
 import { AgGridReact } from 'ag-grid-react'; // React Data Grid Component
 import "ag-grid-community/styles/ag-grid.css"; // Mandatory CSS required by the Data Grid
 import "ag-grid-community/styles/ag-theme-alpine.css"; // Optional theme CSS
@@ -10,6 +10,7 @@ import backArrow from "../images/admin-main/back-arrow.svg";
 import pointer from "../images/admin-main/pointer.svg";
 
 export default function AdminPage() {
+
     const [candidates, setCandidates] = useState([]);
     const [job, setJob] = useState({
         title: '',
@@ -19,7 +20,7 @@ export default function AdminPage() {
         requiredskills: '',
     });
     const [showPopup, setShowPopup] = useState(false);
-    const [view, setView] = useState('form'); // Track current view: 'form' or 'table'
+    const [view, setView] = useState('form');
 
     useEffect(() => {
         const fetchCandidates = async () => {
@@ -51,8 +52,6 @@ export default function AdminPage() {
                 body: JSON.stringify(job),
             });
             if (response.ok) {
-                const data = await response.json();
-                console.log('Job created successfully:', data);
                 setJob({
                     title: '',
                     employmentType: '',
@@ -69,6 +68,14 @@ export default function AdminPage() {
         }
     };
 
+    const CustomButtonComponent = (params) => {
+        const handleClick = () => {
+            handleDelete(params.data._id);
+        };
+
+        return <button className='btn' onClick={handleClick}>Delete</button>;
+    };
+
     const handleDelete = async (id) => {
         try {
             await axios.delete(`http://localhost:8080/api/candidates/${id}`);
@@ -76,6 +83,18 @@ export default function AdminPage() {
         } catch (error) {
             console.error('Error deleting candidate:', error);
         }
+    };
+
+    const ResumeLinkComponent = (params) => {
+        return (
+            <Link
+                to={`http://localhost:8080/${params.value}`}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Download Resume
+            </Link>
+        );
     };
 
     const closePopup = () => {
@@ -91,30 +110,32 @@ export default function AdminPage() {
         {
             headerName: "Resume",
             field: "resumePath",
-            cellRendererFramework: (params) => (
-                params.value ? <Link to={`http://localhost:8080/${params.value}`} target="_blank" rel="noopener noreferrer">{params.value}</Link> : null
-            )
+            cellRenderer: ResumeLinkComponent,
+            // cellRendererParams: {
+            //     onClick: handleDelete,
+            // },
         },
         {
             headerName: "Actions",
-            field: "_id",
-            cellRendererFramework: (params) => (
-                <button onClick={() => handleDelete(params.value)}>Delete</button>
-            )
+            field: "actions",
+            cellRenderer: CustomButtonComponent,
+            cellRendererParams: {
+                onclick: handleDelete,
+            },
         }
     ];
 
     return (
         <div>
             <div className="top">
-                <img src={company} width='400rem' alt="" />
+                <img src={company} width='400rem' alt="company" />
             </div>
             <div className='admin-super'>
                 <h1 className='admin-head'>Applications</h1>
                 <div className='admin-cont'>
                     <div className="admin-left">
                         <div style={{ display: "flex" }}>
-                            <img src={pointer} style={{ display: view === 'form' ? 'block' : 'none' }}></img>
+                            <img alt='pointer' src={pointer} style={{ display: view === 'form' ? 'block' : 'none' }} />
                             <p
                                 onClick={() => setView('form')}
                                 style={{ cursor: 'pointer', color: view === 'form' ? '#DC1615' : 'black' }}
@@ -123,7 +144,7 @@ export default function AdminPage() {
                             </p>
                         </div>
                         <div style={{ display: "flex" }}>
-                            <img src={pointer} style={{ display: view === 'form' ? 'none' : 'block' }}></img>
+                            <img alt='pointer' src={pointer} style={{ display: view === 'form' ? 'none' : 'block' }} />
                             <p
                                 onClick={() => setView('table')}
                                 style={{ cursor: 'pointer', color: view === 'form' ? 'black' : '#DC1615' }}
@@ -136,15 +157,13 @@ export default function AdminPage() {
                         <form className='vacancy-form' onSubmit={handleSubmit}>
                             <p>Add Vacancy</p>
                             <div className='vacancy-form-div1'>
-
-
-                                <img src={backArrow}></img>
+                                <img alt='back' src={backArrow} />
                                 <div className='sub-part'>
                                     <div>
                                         <label>Job Title:</label>
                                         <input type="text" name="title" value={job.title} onChange={handleChange} required />
                                     </div>
-                                    {/* <div>
+                                    <div>
                                         <label>Employment Type:</label>
                                         <select name="employmentType" value={job.employmentType} onChange={handleChange} required>
                                             <option value="" disabled>Select Type</option>
@@ -152,10 +171,6 @@ export default function AdminPage() {
                                             <option value="Part Time">Part Time</option>
                                             <option value="Contract">Contract</option>
                                         </select>
-                                    </div> */}
-                                    <div>
-                                        <label>Working Hours</label>
-                                        <input type="number" name="working-hours" value={job.working_hour} onChange={handleChange} />
                                     </div>
                                     <div>
                                         <label>Experience:</label>
@@ -168,10 +183,6 @@ export default function AdminPage() {
                                     <div>
                                         <label>Required Skills</label>
                                         <input type="text" name="requiredskills" value={job.requiredskills} onChange={handleChange} />
-                                    </div>
-                                    <div>
-                                        <label>General Requirment</label>
-                                        <textarea rows="4" cols="25" className='text-box' type='text' name="generalRequirment" value={job.general_requirment} onChange={handleChange} />
                                     </div>
                                 </div>
                             </div>
@@ -187,6 +198,9 @@ export default function AdminPage() {
                                     columnDefs={columnDefs}
                                     pagination={true}
                                     paginationPageSize={10}
+                                    frameworkComponents={{
+                                        customButtonComponent: CustomButtonComponent, // Register the custom component
+                                    }}
                                 />
                             </div>
                         </div>

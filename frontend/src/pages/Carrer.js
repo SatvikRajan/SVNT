@@ -289,7 +289,7 @@ const CareersPage = () => {
                 </div>
               </div>
             ) : (
-              <div className="job-des d-flex" data-aos="fade-left">
+              <div className="job-des d-flex">
                 <div style={{ marginLeft: "-35px", marginRight: "15px" }}>
                   {" "}
                   <svg

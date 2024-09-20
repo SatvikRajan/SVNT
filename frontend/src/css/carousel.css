@@ -9,6 +9,7 @@
 .carousel-caption {
   color: #f1faff;
   display: flex !important;
+  background-color: #251741;
   flex-direction: row;
   justify-content: space-between;
   text-align: start !important;
@@ -21,7 +22,7 @@
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
   width: 70vw;
-  gap: 2rem;
+  /* gap: 2rem; */
   /* text-align: center; */
 }
 
@@ -31,6 +32,7 @@
   line-height: 4rem;
   color: white;
   /* width: 60%; */
+  align-content: center;
 }
 .carousel-indicators {
   align-items: center;

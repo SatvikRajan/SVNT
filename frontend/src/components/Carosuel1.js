@@ -33,7 +33,7 @@ function Carosuel1() {
             {/* <h1>First slide label</h1> */}
             <h1>Relax, We've Got Your Back Your Security is Our Priority!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem', width: '50%' }}><Link className='readmore text-white' style={{ width: '100%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/about'>Learn More About Us</Link>
+            <p style={{ fontSize: '20px', marginTop: '1rem', width: '50%' }}><Link className='readmore text-white' style={{ width: '85%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/about'>Learn More About Us</Link>
             </p>
             {/* <Link to="/about"><p className='ccr readmore'>Read More</p></Link> */}
           </div>
@@ -54,7 +54,7 @@ function Carosuel1() {
               awards and recognition over
               the years!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem', width: '50%' }}><Link className='readmore text-white' style={{ width: '100%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/contact'>Be an SVNTian</Link>
+            <p style={{ fontSize: '20px', marginTop: '1rem', width: '50%', alignContent: 'center' }}><Link className='readmore text-white' style={{ width: '70%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/contact'>Be an SVNTian</Link>
             </p>
           </div>
         </div>
@@ -71,7 +71,7 @@ function Carosuel1() {
           <div className="carousel-caption cc1 cc2 cc3 d-none d-md-block">
             <h1>Explore our many services designed to meet your needs.
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '28%', marginStartBLock: 'auto' }} to='/contact'>Send us a message</Link></p>
+            <p style={{ fontSize: '20px', marginTop: '1rem', alignContent: 'center' }}><Link className='readmore text-white' style={{ width: '28%', marginStartBLock: 'auto' }} to='/contact'>Send us a message</Link></p>
           </div>
         </div>
         <div className="carousel-item ci" >

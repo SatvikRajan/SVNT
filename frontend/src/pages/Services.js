@@ -32,7 +32,7 @@ import SurveillanceSlider from "../components/Sliders/SurveillanceSlider";
 import StorageSlider from "../components/Sliders/StorageSlider";
 import EnergySlider from "../components/Sliders/EnergySlider";
 import servicebgm from '../images/Services/servicebgm.jpg'
-import React, { useEffect } from "react";
+import React from "react";
 import { useLocation } from 'react-router-dom';
 
 

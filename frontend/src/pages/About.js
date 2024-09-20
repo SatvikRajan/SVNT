@@ -42,6 +42,7 @@ import harista from '../images/AboutUs/harista.svg'
 import infra from '../images/AboutUs/infra.svg'
 import intox from '../images/AboutUs/intox.svg'
 import iti from '../images/AboutUs/iti.svg'
+import isro from '../images/AboutUs/client-isro.svg'
 import laurus from '../images/AboutUs/laurus.svg'
 import natco from '../images/AboutUs/natco.svg'
 import ntpc from '../images/AboutUs/ntpc.svg'
@@ -61,6 +62,12 @@ import vaaman from '../images/AboutUs/vaaman.svg'
 import veera from '../images/AboutUs/veera.svg'
 import zinc from '../images/AboutUs/zinc.svg'
 import zuari from '../images/AboutUs/zuari.svg'
+import cae from '../images/AboutUs/client-cae.svg'
+import temp from '../images/AboutUs/client-temp.svg'
+import nst from '../images/AboutUs/client-nst.svg'
+import elcita from '../images/AboutUs/client-elcita.svg'
+import infopark from '../images/AboutUs/client-infopark.svg'
+import tata from '../images/AboutUs/client-tata.svg'
 import aboutbg from '../images/AboutUs/about-bg-video.mp4';
 import Slider from "react-slick";
 
@@ -161,11 +168,12 @@ const About = () => {
       { src: akn, alt: 'itc' },
       { src: atos, alt: 'itc' },
       { src: cargill, alt: 'itc' },
-      { src: genetec, alt: 'itc' },
+      // { src: genetec, alt: 'itc' },
       { src: genpact, alt: 'itc' },
       { src: harista, alt: 'itc' },
       { src: infra, alt: 'itc' },
       { src: reliance, alt: 'reliance' },
+      { src: infopark, alt: 'infopark' },
       
     ],
     Agro: [
@@ -177,14 +185,13 @@ const About = () => {
       { src: itc, alt: 'itc' },
       { src: indigo, alt: 'indigo' },
       { src: edb, alt: 'edb' },
-      { src: techser, alt: 'techser' },
-      { src: uday, alt: 'uday' },
     ],
     Industrial: [
       { src: aequs, alt: 'Aequs' },
       { src: zuari, alt: 'zuari' },
       { src: dufri, alt: 'dufri' },
       { src: esl, alt: 'esl' },
+      { src: vedanta, alt: 'vedanta' },
       { src: hc, alt: 'hc' },
       { src: abh, alt: 'abh' },
       { src: jcb, alt: 'jcb' },
@@ -197,6 +204,18 @@ const About = () => {
       { src: sharp, alt: 'sharp' },
 
     ],
+    Transport: [
+      { src: kia, alt: 'kia' },
+      { src: cae, alt: 'cae' },
+      { src: isro, alt: 'isro' },
+      { src: mahindra, alt: 'mahindra' },
+      { src: tata, alt: 'tata' },
+      { src: tata, alt: 'tata' },
+      { src: brigade, alt: 'brigade' },
+      { src: temp, alt: 'temp' },
+      { src: elcita, alt: 'elcita' },
+      { src: nst, alt: 'nst' },
+    ],
   };
 
   useEffect(() => {
@@ -208,6 +227,7 @@ const About = () => {
     });
   }, []);
   const settings = {
+    centerMode: true,
     arrows: false,
     dots: false,
     autoplay: true,

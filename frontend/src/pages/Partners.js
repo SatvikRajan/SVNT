@@ -215,14 +215,6 @@ export default function Partners() {
                 </div>
             </div>
 
-
-            <div className='desc2-wrapper'>
-                <div data-aos='fade-down' className="description desc2">
-                    <p className="desc-head head2">What Genetec Provides</p>
-                    <p className='desc-head3'>Each solution is tailored to understand and address the unique needs of each client. Everything we do is shaped by a core set of values. Our mission as a company revolves around the complete satisfaction of our clients.Each solution is tailored to understand and address the unique needs of each client. Everything we do is shaped by a core set of values. </p>
-                </div>
-            </div>
-
             <div className="partners-desc2">
                 <div className="jr-container">
                     <div className="description">
