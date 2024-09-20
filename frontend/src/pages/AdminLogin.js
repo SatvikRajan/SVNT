@@ -18,7 +18,7 @@ function AdminLogin() {
 
   const [passwordClose, setPassword] = useState(false)
   const togglePasswordVisibility = () => {
-    setPassword(!passwordClose);
+    setPassword(passwordClose);
   };
   useEffect(() => {
     if (localStorage.getItem('app-user')) {

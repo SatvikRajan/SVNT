@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Contact from './pages/Contact';
 // import Home from './pages/Home';
 import Footer from './components/Footer';
@@ -19,6 +19,15 @@ import Partners from './pages/Partners';
 const LazyHome = React.lazy(() => import('./pages/Home'))
 function App() {
 
+  const isAuthenticated = () => {
+    return localStorage.getItem('admin') !== null;
+  };
+
+  // PrivateRoute component
+  const PrivateRoute = ({ element }) => {
+    return isAuthenticated() ? element : <Navigate to="/login" />;
+  };
+
   const PageLoader = () => {
     return (
       <div className='loader' style={{ position: 'relative', height: '100vh', width: '100vw', backgroundColor: '#F1FAFF' }}>
@@ -28,21 +37,20 @@ function App() {
   }
   return (
     <BrowserRouter>
-      {/* {isLoading ? <PageLoader /> : ( */}
-        <ScrollToTop>
-          <Routes>
-            <Route path="/" element={<Suspense fallback={<PageLoader />}><MainLayout><LazyHome /></MainLayout></Suspense>} />
-            <Route path="contact" element={<MainLayout><Contact /></MainLayout>} />
-            <Route path="partners" element={<MainLayout><Partners /></MainLayout>} />
-            <Route path="casestudies" element={<MainLayout><CaseStudies /></MainLayout>} />
-            <Route path="careers" element={<MainLayout><CareersPage /></MainLayout>} />
-            <Route path="about" element={<MainLayout><About /></MainLayout>} />
-            <Route path="services" element={<MainLayout><Services /></MainLayout>} />
-            <Route path="login" element={<AdminLogin />} />
-            <Route path="register" element={<AdminRegister />} />
-            <Route path="admin-main" element={<AdminPage />} />
-          </Routes>
-        </ScrollToTop>
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Suspense fallback={<PageLoader />}><MainLayout><LazyHome /></MainLayout></Suspense>} />
+          <Route path="contact" element={<MainLayout><Contact /></MainLayout>} />
+          <Route path="partners" element={<MainLayout><Partners /></MainLayout>} />
+          <Route path="casestudies" element={<MainLayout><CaseStudies /></MainLayout>} />
+          <Route path="careers" element={<MainLayout><CareersPage /></MainLayout>} />
+          <Route path="about" element={<MainLayout><About /></MainLayout>} />
+          <Route path="services" element={<MainLayout><Services /></MainLayout>} />
+          <Route path="login" element={<AdminLogin />} />
+          <Route path="register" element={<AdminRegister />} />
+          <Route path="admin-main" element={<PrivateRoute element={<AdminPage />} />} />
+        </Routes>
+      </ScrollToTop>
       {/* )} */}
     </BrowserRouter>
   );
