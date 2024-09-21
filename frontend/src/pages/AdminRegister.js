@@ -10,7 +10,6 @@ import { registerRoute } from "../utils/ApiRoutes";
 export default function Register() {
     const navigate = useNavigate();
     const [values, setValues] = useState({
-        username: "",
         email: "",
         password: "",
         confirmPassword: ""
@@ -30,9 +29,9 @@ export default function Register() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (handleValidation()) {
-            const { password, username, email } = values;
+            const { password, email } = values;
             const { data } = await axios.post(registerRoute, {
-                username, email, password
+                email, password
             })
             if (data.status === false) {
                 toast.error(data.msg, toastOptions)
@@ -44,15 +43,11 @@ export default function Register() {
         }
     }
     const handleValidation = () => {
-        const { password, confirmPassword, username, email } = values;
+        const { password, confirmPassword, email } = values;
         if (password !== confirmPassword) {
             toast.error("password and confirm password should be same.", {
                 toastOptions
             });
-            return false;
-        }
-        else if (username.length < 3) {
-            toast.error("Username should be greater than 3 charactors", toastOptions)
             return false;
         }
         else if (email === "") {
@@ -77,18 +72,6 @@ export default function Register() {
                 <div className="portal-register d-flex flex-column">
                     <p style={{ width: '100%', textAlign: "center", fontWeight: "500" }}>Admin Portal</p>
                     <form className="reg" onSubmit={(e) => handleSubmit(e)}>
-
-                        <div className='login-input'>
-                            <input
-                                type="text"
-                                placeholder="Username"
-                                name="username"
-                                onChange={(e) => {
-                                    handleChange(e);
-                                }}
-                                style={{ border: "none" }}
-                            />
-                        </div>
                         <div className='login-input'>
                             <input
                                 type="email"

@@ -8,7 +8,7 @@ module.exports.register = async (req, res, next) => {
         let emailCheck = await Admin.findOne({ email })
         if (emailCheck)
             return res.json({ msg: "Email already used", status: false });
-        const hashedPassword = bcrypt.hashSync(password, saltRounds)
+        const hashedPassword = bcrypt.hashSync(password, saltRounds);
         const user = await Admin.create({
             email, password: hashedPassword
         })
@@ -24,7 +24,7 @@ module.exports.login = async (req, res, next) => {
         const { email, password } = req.body;
         const user = await Admin.findOne({ email });
         if (!user) return res.json({ msg: "Incorrect Email or Password", status: false });
-        const isPasswordValid = bcrypt.compareSync(password, user.password)
+        const isPasswordValid = bcrypt.compareSync(password, user.password);
         if (!isPasswordValid)
             return res.json({ msg: "Incorrect Username or Password", status: false });
         return res.json({ status: true, user })

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import company from '../images/logo1.png';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../css/admin-main.css';
 import { AgGridReact } from 'ag-grid-react'; // React Data Grid Component
 import "ag-grid-community/styles/ag-grid.css"; // Mandatory CSS required by the Data Grid
@@ -10,7 +10,7 @@ import backArrow from "../images/admin-main/back-arrow.svg";
 import pointer from "../images/admin-main/pointer.svg";
 
 export default function AdminPage() {
-
+    const navigate = useNavigate();
     const [candidates, setCandidates] = useState([]);
     const [job, setJob] = useState({
         title: '',
@@ -97,6 +97,11 @@ export default function AdminPage() {
         );
     };
 
+    const handleSignOut = () => {
+        localStorage.clear();
+        navigate('/login')
+    }
+
     const closePopup = () => {
         setShowPopup(false);
     };
@@ -127,8 +132,11 @@ export default function AdminPage() {
 
     return (
         <div>
-            <div className="top">
+            <div className="top d-flex justify-content-between">
                 <img src={company} width='400rem' alt="company" />
+                <button style={{backgroundColor: 'transparent', border: 'none', color: 'white'}} onClick={handleSignOut}>
+                    <svg  stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg"><path d="M124,216a12,12,0,0,1-12,12H48a12,12,0,0,1-12-12V40A12,12,0,0,1,48,28h64a12,12,0,0,1,0,24H60V204h52A12,12,0,0,1,124,216Zm108.49-96.49-40-40a12,12,0,0,0-17,17L195,116H112a12,12,0,0,0,0,24h83l-19.52,19.51a12,12,0,0,0,17,17l40-40A12,12,0,0,0,232.49,119.51Z"></path></svg>
+                </button>
             </div>
             <div className='admin-super'>
                 <h1 className='admin-head'>Applications</h1>

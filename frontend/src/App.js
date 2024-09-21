@@ -20,7 +20,7 @@ const LazyHome = React.lazy(() => import('./pages/Home'))
 function App() {
 
   const isAuthenticated = () => {
-    return localStorage.getItem('admin') !== null;
+    return localStorage.getItem('app-user') !== null;
   };
 
   // PrivateRoute component

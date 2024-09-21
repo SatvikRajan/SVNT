@@ -19,7 +19,7 @@ function Carosuel1() {
         <div type="button" id='carousel-button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></div>
       </div>
       <div className="carousel-inner cinner">
-        <div className="carousel-item ci" >
+        <div className="carousel-item ci active" >
           <picture>
             <source media="(max-width: 480px)" srcSet={image4m} />
             <source media="(min-width: 480px)" srcSet={image4} />
@@ -35,7 +35,7 @@ function Carosuel1() {
             <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '60%', marginStartBLock: 'auto' }} to='/about'>Learn more about us</Link></p>
           </div>
         </div>
-        <div className="carousel-item ci active" style={{ gap: '3rem' }}>
+        <div className="carousel-item ci" style={{ gap: '3rem' }}>
           <picture>
             <source media="(max-width: 480px)" srcSet={image1m} />
             <source media="(min-width: 480px)" srcSet={image1} />
@@ -54,6 +54,7 @@ function Carosuel1() {
             {/* <Link to="/about"><p className='ccr readmore'>Read More</p></Link> */}
           </div>
         </div>
+
         <div className="carousel-item ci" >
           <picture>
             <source media="(max-width: 480px)" srcSet={image3m} />

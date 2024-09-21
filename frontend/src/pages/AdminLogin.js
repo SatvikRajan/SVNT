@@ -12,13 +12,13 @@ import eye_open from "../images/admin-main/eye-open.svg";
 function AdminLogin() {
   const navigate = useNavigate();
   const [values, setValues] = useState({
-    username: "",
+    email: "",
     password: ""
   })
 
-  const [passwordClose, setPassword] = useState(false)
+  const [passwordClose, setPassword] = useState(true)
   const togglePasswordVisibility = () => {
-    setPassword(passwordClose);
+    setPassword(!passwordClose);
   };
   useEffect(() => {
     if (localStorage.getItem('app-user')) {
@@ -29,9 +29,9 @@ function AdminLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (handleValidation()) {
-      const { password, username } = values;
+      const { password, email } = values;
       const { data } = await axios.post(loginRoute, {
-        username, password
+        email, password
       })
       if (data.status === false) {
         toast.error(data.msg)
@@ -43,13 +43,13 @@ function AdminLogin() {
     }
   }
   const handleValidation = () => {
-    const { password, username } = values;
+    const { password, email } = values;
     if (password === "") {
-      toast.error("username and Password is required")
+      toast.error("Email and Password is required")
       return false;
     }
-    else if (username.length === 0) {
-      toast.error("username and Password is required")
+    else if (email.length === 0) {
+      toast.error("Email and Password is required")
       return false;
     }
     return true;
@@ -69,8 +69,8 @@ function AdminLogin() {
             <div className='login-input'>
               <input
                 type="text"
-                placeholder="Username"
-                name="username"
+                placeholder="Email"
+                name="email"
                 onChange={(e) => {
                   handleChange(e);
                 }}
