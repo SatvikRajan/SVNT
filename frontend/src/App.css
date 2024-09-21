@@ -131,9 +131,9 @@ svg.btn.search {
   margin-right: 8rem;
   margin-top: -3rem;
   text-align: center;
-  border-radius: 80px;
+  border-radius: 20px;
   background: linear-gradient(to right, #e2e4f4, #cdd4fd);
-  gap: 5rem;
+  gap: 10rem;
   padding: 6rem;
   display: flex;
   justify-content: center;

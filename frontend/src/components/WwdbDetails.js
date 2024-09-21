@@ -24,7 +24,7 @@ export default function WwdbDetails({ click, index, setClick, topPos, leftPos })
         'Data Centers',
         'Electrical and Backup',
         'Surveillance and Safety',
-        'Security & Management',
+        'Physical Security Automation',
         'Server Storage',
         'Audio and Visual',
         'Integration',

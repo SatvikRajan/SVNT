@@ -40,7 +40,7 @@ export default function LastContent() {
           </p>
         </div>
         <div className="ms-auto align-self-center lc-2 hehe" style={{ width: '18%' }}>
-          <Link to="/contact" style={{ width: '100%' }} className=" text-light align-self-end fs-4 readmore">
+          <Link to="/contact" style={{ width: '100%', filter: 'invert(1)' }} className=" text-light align-self-end fs-4 readmore">
             Contact Us
           </Link>
         </div>

@@ -22,7 +22,7 @@ export default function WhyWeDoBest() {
     'Data Centers',
     'Electrical and Backup',
     'Surveillance and Safety',
-    'Security & Management',
+    'Physical Security Automation',
     'Server Storage',
     'Audio and Visual',
     'Integration',

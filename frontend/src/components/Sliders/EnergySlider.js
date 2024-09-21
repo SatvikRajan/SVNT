@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import es1 from '../../images/Services/Sliders/es1.webp'
-import es2 from '../../images/Services/Sliders/es2.webp'
 import es3 from '../../images/Services/Sliders/es3.webp'
 
 function SimpleSlider() {
@@ -24,9 +23,6 @@ function SimpleSlider() {
       <Slider {...settings}>
         <div>
           <img src={es1} alt="" />
-        </div>
-        <div>
-          <img src={es2} alt="" />
         </div>
         <div>
         <img src={es3} alt="" />

@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import sm1 from '../../images/Services/Sliders/sm1.webp'
 import sm2 from '../../images/Services/Sliders/sm2.webp'
+import sm3 from '../../images/Services/Sliders/sm3.webp'
 
 function SimpleSlider() {
   const settings = {
@@ -27,6 +28,9 @@ function SimpleSlider() {
         </div>
         <div>
         <img src={sm2} alt="" />
+        </div>
+        <div>
+        <img src={sm3} alt="" />
         </div>
       </Slider>
     </div>

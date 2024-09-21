@@ -18,6 +18,8 @@ import ss1 from '../images/Services/ss1.svg'
 import ss2 from '../images/Services/ss2.svg'
 import is1 from '../images/Services/is1.svg'
 import is2 from '../images/Services/is2.svg'
+import wwdb1 from '../images/Services/wwdb1.svg'
+import wwdb11 from '../images/Services/wwdb11.svg'
 import wwdb21 from '../images/Services/wwdb21.svg'
 import wwdb41 from '../images/Services/wwdb41.svg'
 import wwdb61 from '../images/Services/wwdb61.svg'
@@ -39,8 +41,8 @@ import { useLocation } from 'react-router-dom';
 const menuItems = [
   {
     id: 0,
-    image: wwdb2,
-    selectedImage: wwdb21,
+    image: wwdb1,
+    selectedImage: wwdb11,
     name: "Networking",
     details: [
       { header: "Network Size Flexibility", content: "The size of an IP network solution can vary, from a few devices to thousands in a large network." },
@@ -51,8 +53,8 @@ const menuItems = [
   },
   {
     id: 1,
-    image: ss1,
-    selectedImage: ss2,
+    image: wwdb2,
+    selectedImage: wwdb21,
     name: "Data Centers",
     details: [
       { header: "Disaster Recovery", content: "Ensures a swift recovery from potential disasters." },

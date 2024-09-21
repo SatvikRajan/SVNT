@@ -109,8 +109,8 @@
   font-size: 24px;
 }
 .last {
-  border-radius: 30px;
-  padding: 4rem;
+  border-radius: 20px;
+  padding: 4rem 8rem 4rem 8rem;
   margin: 6rem;
   background-color: #e9e8ec;
   /* position: relative; */
@@ -118,7 +118,7 @@
 .last img {
   width: 100%;
   /* position: relative; */
-  /* padding-left: 5rem; */
+  padding-left: 4rem;
 }
 .last-text {
   text-shadow: 2px 2px 5px black;
@@ -154,8 +154,8 @@
 .last-contact {
   padding: 30px;
   border-radius: 30px;
-  color: white;
-  background: linear-gradient(135deg, #251741, #5023aa) !important;
+  color: black;
+  /* background: linear-gradient(135deg, #251741, #5023aa) !important; */
   width: 90%;
   margin-left: 5%;
   /* margin: 30px; */
@@ -182,7 +182,7 @@
   transition: transform 0.5s;
   background-color: #e9e8ec;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+  border-radius: 10px;
   box-sizing: border-box;
   padding: 10px;
 }
@@ -243,9 +243,9 @@
 .slick-dots1 {
   display: none;
 }
-.cc2{
+/* .cc2{
   background-color: #251741 !important;
-}
+} */
 .cc3{
   left: 30% !important;
   width: 40vw !important;

@@ -3,8 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ips1 from '../../images/Services/Sliders/ips1.webp'
-import ips2 from '../../images/Services/Sliders/ips2.webp'
-import ips3 from '../../images/Services/Sliders/ips3.webp'
+import s1 from '../../images/Services/Sliders/s1.webp'
 
 function SimpleSlider() {
   const settings = {
@@ -26,10 +25,7 @@ function SimpleSlider() {
           <img src={ips1} alt="" />
         </div>
         <div>
-        <img src={ips2} alt="" />
-        </div>
-        <div>
-        <img src={ips3}  alt="" />
+        <img src={s1}  alt="" />
         </div>
       </Slider>
       </div>

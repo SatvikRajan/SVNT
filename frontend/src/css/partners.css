@@ -203,7 +203,6 @@
   /* background-color: #76777A; */
   padding-top: 0% !important;
   padding-left: 3rem !important;
-  padding-bottom: 3%;
 }
 
 .content2 {
@@ -222,6 +221,7 @@
 }
 
 .people {
+  padding: 0 2rem 0 2rem;
   background-color: #c4cfe7;
   width: 40%;
   height: 80%;
@@ -262,7 +262,6 @@
 
 .p-img {
   display: flex;
-  align-items: flex-end;
   justify-content: right;
 }
 
@@ -271,6 +270,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 4rem;
 }
 
 .word-container {

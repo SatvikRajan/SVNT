@@ -22,13 +22,13 @@ const Home = () => {
       <Clientele />
       <WhyWeDoBest />
 
-      <WhyChooseUs />
       <div className="mainpage">
         <Partners />
         <div className="case-studies">
 
           <CaseStudiesCarousel />
         </div>
+        <WhyChooseUs />
         <LastContent />
       </div>
     </div>

@@ -2,8 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import is1 from '../../images/Services/Sliders/is1.webp'
 import is2 from '../../images/Services/Sliders/is2.webp'
+import ips2 from '../../images/Services/Sliders/ips2.webp'
 
 function SimpleSlider() {
   const settings = {
@@ -21,10 +21,10 @@ function SimpleSlider() {
     <div className="slider-images">
       <Slider {...settings}>
         <div>
-          <img src={is1} alt="" />
+          <img src={is2} alt="" />
         </div>
         <div>
-          <img src={is2} alt="" />
+          <img src={ips2} alt="" />
         </div>
       </Slider>
     </div>
