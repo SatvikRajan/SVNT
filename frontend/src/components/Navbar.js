@@ -46,24 +46,24 @@ const Navbar = () => {
                     <div className={`navbar-collapse navLinksPosition collapse ${drop ? 'show' : '' // Apply 'show' class when drop is true
                         }`} id="navbarSupportedContent">
                         <ul id='nav-links' className="navbar-nav ">
-                            <a href="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
+                            <NavItem href="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
                                 About Us
-                            </a>
-                            <a href="/partners" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
+                            </NavItem>
+                            <NavItem href="/partners" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
                                 Partners
-                            </a>
-                            <a href="/casestudies" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
+                            </NavItem>
+                            <NavItem href="/casestudies" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
                                 Industries
-                            </a>
-                            <a href="/services" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                            </NavItem>
+                            <NavItem href="/services" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 Services
-                            </a>
-                            <a href="/careers" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                            </NavItem>
+                            <NavItem href="/careers" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 Careers
-                            </a>
-                            <a href="/contact" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                            </NavItem>
+                            <NavItem href="/contact" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 Contact Us
-                            </a>
+                            </NavItem>
 
                         </ul>
                     </div>
