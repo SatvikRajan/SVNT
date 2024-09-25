@@ -46,24 +46,24 @@ const Navbar = () => {
                     <div className={`navbar-collapse navLinksPosition collapse ${drop ? 'show' : '' // Apply 'show' class when drop is true
                         }`} id="navbarSupportedContent">
                         <ul id='nav-links' className="navbar-nav ">
-                            <NavItem to="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
+                            <a href="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
                                 About Us
-                            </NavItem>
-                            <NavItem to="/partners" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
+                            </a>
+                            <a href="/partners" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
                                 Partners
-                            </NavItem>
-                            <NavItem to="/casestudies" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
+                            </a>
+                            <a href="/casestudies" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
                                 Industries
-                            </NavItem>
-                            <NavItem to="/services" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                            </a>
+                            <a href="/services" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 Services
-                            </NavItem>
-                            <NavItem to="/careers" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                            </a>
+                            <a href="/careers" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 Careers
-                            </NavItem>
-                            <NavItem to="/contact" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                            </a>
+                            <a href="/contact" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
                                 Contact Us
-                            </NavItem>
+                            </a>
 
                         </ul>
                     </div>
@@ -73,7 +73,7 @@ const Navbar = () => {
     );
 };
 
-const NavItem = ({ to, children, activeLink, handleNavLinkClick }) => {
+const a = ({ to, children, activeLink, handleNavLinkClick }) => {
     const isActive = activeLink === to;
 
     return (
