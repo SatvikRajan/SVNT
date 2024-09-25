@@ -1,11 +1,10 @@
 import React, { useLayoutEffect, Suspense } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Contact from './pages/Contact';
-// import Home from './pages/Home';
 import Footer from './components/Footer';
 import CareersPage from './pages/Carrer';
 import CaseStudies from './pages/CaseStudies';

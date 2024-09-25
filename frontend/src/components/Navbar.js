@@ -12,14 +12,18 @@ const Navbar = () => {
         setActiveLink(location.pathname);
     }, [location.pathname]);
 
-    const handleNavLinkClick = (href) => {
-        setActiveLink(href);
+    const handleNavLinkClick = (to) => {
+        setActiveLink(to);
         setDrop(!drop)
     };
 
     const alterDropdown = () => {
         setDrop(!drop)
     }
+
+    const preloadComponent = (component) => {
+        component.preload();
+    };
 
     return (
         <div>
@@ -46,22 +50,22 @@ const Navbar = () => {
                     <div className={`navbar-collapse navLinksPosition collapse ${drop ? 'show' : '' // Apply 'show' class when drop is true
                         }`} id="navbarSupportedContent">
                         <ul id='nav-links' className="navbar-nav ">
-                            <NavItem href="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
+                            <NavItem to="/about" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} preload={preloadComponent}>
                                 About Us
                             </NavItem>
-                            <NavItem href="/partners" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
+                            <NavItem to="/partners" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} preload={preloadComponent}>
                                 Partners
                             </NavItem>
-                            <NavItem href="/casestudies" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} >
+                            <NavItem to="/casestudies" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} preload={preloadComponent}>
                                 Industries
                             </NavItem>
-                            <NavItem href="/services" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                            <NavItem to="/services" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} preload={preloadComponent}>
                                 Services
                             </NavItem>
-                            <NavItem href="/careers" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                            <NavItem to="/careers" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} preload={preloadComponent}>
                                 Careers
                             </NavItem>
-                            <NavItem href="/contact" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick}>
+                            <NavItem to="/contact" activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} preload={preloadComponent}>
                                 Contact Us
                             </NavItem>
 
@@ -73,7 +77,7 @@ const Navbar = () => {
     );
 };
 
-const a = ({ to, children, activeLink, handleNavLinkClick }) => {
+const NavItem = ({ to, children, activeLink, handleNavLinkClick }) => {
     const isActive = activeLink === to;
 
     return (
