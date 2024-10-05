@@ -76,7 +76,7 @@ export default function MainStart() {
         </div>
         <div className="d-flex align-items-center x1 col">
           <p className="value number20">20</p>
-          <p style={{ fontSize: '37px', paddingTop: '7rem' }} className='nameyear'>Years</p>
+          <p style={{ fontSize: '37px',  }} className='nameyear'>Years Of Experience</p>
         </div>
         <div className="text-center col ha">
           <div className='d-flex mb-4 align-items-center justify-content-center'>

@@ -42,7 +42,7 @@ const Footer = () => {
                 />
               </svg>
 
-              <span>+91 88006 30726</span>
+              <span ><a style={{filter: 'invert(1)', fontWeight: '500'}} target="blank" href="https://wa.me/8800630726">+91 88006 30726</a></span>
             </div>
           </div>
           <div style={{gap: '30px'}} className="col-md-6 d-flex justify-content-end align-items-center foot1">
@@ -100,7 +100,7 @@ const Footer = () => {
           Legal Disclaimer |&nbsp; Disclaimer: Fraud Recruitment Offers |&nbsp;
           A Group Company{" "}
         </p>
-        <p className="justify-content-end">&copy;  © 2023 All rights reserved. SVNT Infotech Pvt Ltd.</p>
+        <p className="justify-content-end">&copy; 2024 All rights reserved. SVNT Infotech Pvt Ltd.</p>
       </div>
     </footer>
   );

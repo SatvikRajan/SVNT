@@ -32,7 +32,7 @@ function Carosuel1() {
           <div className="carousel-caption cc1 cc3 d-none d-md-block">
             <h1>Dive into our case studies and see how we deliver results!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '60%', marginStartBLock: 'auto' }} to='/about'>Learn more about us</Link></p>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '60%', marginStartBLock: 'auto' }} to='/casestudies'>Learn about our Case Studies</Link></p>
           </div>
         </div>
         <div className="carousel-item ci" style={{ gap: '3rem' }}>
@@ -68,7 +68,7 @@ function Carosuel1() {
           <div className="carousel-caption cc1 cc2 cc3 d-none d-md-block">
             <h1>Explore our many services designed to meet your needs.
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem', alignContent: 'center' }}><Link className='readmore text-white' style={{ width: '28%', marginStartBLock: 'auto' }} to='/contact'>Send us a message</Link></p>
+            <p style={{ fontSize: '20px', marginTop: '1rem', alignContent: 'center' }}><Link className='readmore text-white' style={{ width: '28%', marginStartBLock: 'auto' }} to='/services'>See Our Services</Link></p>
           </div>
         </div>
         <div className="carousel-item ci" style={{ gap: '3rem' }}>
@@ -87,7 +87,7 @@ function Carosuel1() {
               awards and recognition over
               the years!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem', width: '50%', alignContent: 'center' }}><Link className='readmore text-white' style={{ width: '70%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/contact'>Be an SVNTian</Link>
+            <p style={{ fontSize: '20px', marginTop: '1rem', width: '50%', alignContent: 'center' }}><Link className='readmore text-white' style={{ width: '70%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/carrers'>Be an SVNTian</Link>
             </p>
           </div>
         </div>

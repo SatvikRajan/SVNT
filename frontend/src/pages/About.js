@@ -29,17 +29,17 @@ import abh from '../images/AboutUs/abh.svg'
 import access from '../images/AboutUs/access.svg'
 import act from '../images/AboutUs/act.svg'
 import aragen from '../images/AboutUs/aragen.svg'
-import atos from '../images/AboutUs/atos.svg'
+// import atos from '../images/AboutUs/atos.svg'
 import buhler from '../images/AboutUs/buhler.svg'
 import cargill from '../images/AboutUs/cargill.svg'
 import cfcl from '../images/AboutUs/cfcl.svg'
 import dufri from '../images/AboutUs/dufri.svg'
 import ec from '../images/AboutUs/ec.svg'
 import edb from '../images/AboutUs/edb.svg'
-import genetec from '../images/AboutUs/genetec.svg'
+// import genetec from '../images/AboutUs/genetec.svg'
 import genpact from '../images/AboutUs/genpact.svg'
 import harista from '../images/AboutUs/harista.svg'
-import infra from '../images/AboutUs/infra.svg'
+// import infra from '../images/AboutUs/infra.svg'
 import intox from '../images/AboutUs/intox.svg'
 import iti from '../images/AboutUs/iti.svg'
 import isro from '../images/AboutUs/client-isro.svg'
@@ -53,13 +53,13 @@ import prdc from '../images/AboutUs/prdc.svg'
 import proconnect from '../images/AboutUs/proconnect.svg'
 import reliance from '../images/AboutUs/reliance.svg'
 import selec from '../images/AboutUs/selec.svg'
-import sharp from '../images/AboutUs/sharp.svg'
+// import sharp from '../images/AboutUs/sharp.svg'
 import techser from '../images/AboutUs/techser.svg'
-import transit from '../images/AboutUs/transit.svg'
+// import transit from '../images/AboutUs/transit.svg'
 import uday from '../images/AboutUs/uday.svg'
 import ultratech from '../images/AboutUs/ultratech.svg'
 import vaaman from '../images/AboutUs/vaaman.svg'
-import veera from '../images/AboutUs/veera.svg'
+// import veera from '../images/AboutUs/veera.svg'
 import zinc from '../images/AboutUs/zinc.svg'
 import zuari from '../images/AboutUs/zuari.svg'
 import cae from '../images/AboutUs/client-cae.svg'
@@ -92,17 +92,17 @@ const About = () => {
       { src: access, alt: 'access' },
       { src: act, alt: 'act' },
       { src: aragen, alt: 'aragen' },
-      { src: atos, alt: 'atos' },
+      // { src: atos, alt: 'atos' },
       { src: buhler, alt: 'buhler' },
       { src: cargill, alt: 'cargill' },
       { src: cfcl, alt: 'cfcl' },
       { src: dufri, alt: 'dufri' },
       { src: ec, alt: 'ec' },
       { src: edb, alt: 'edb' },
-      { src: genetec, alt: 'genetec' },
+      // { src: genetec, alt: 'genetec' },
       { src: genpact, alt: 'genpact' },
       { src: harista, alt: 'harista' },
-      { src: infra, alt: 'infra' },
+      // { src: infra, alt: 'infra' },
       { src: intox, alt: 'intox' },
       { src: iti, alt: 'iti' },
       { src: natco, alt: 'natco' },
@@ -113,22 +113,22 @@ const About = () => {
       { src: proconnect, alt: 'proconnect' },
       { src: reliance, alt: 'reliance' },
       { src: selec, alt: 'selec' },
-      { src: sharp, alt: 'sharp' },
-      { src: transit, alt: 'transit' },
+      // { src: sharp, alt: 'sharp' },
+      // { src: transit, alt: 'transit' },
       { src: techser, alt: 'techser' },
       { src: uday, alt: 'uday' },
       { src: ultratech, alt: 'ultratech' },
       { src: vaaman, alt: 'vaaman' },
-      { src: veera, alt: 'veera' },
+      // { src: veera, alt: 'veera' },
       { src: zinc, alt: 'zinc' },
       { src: zuari, alt: 'zuari' },
       { src: indigo, alt: 'indigo' },
-      { src: atos, alt: 'atos' },
+      // { src: atos, alt: 'atos' },
       { src: hc, alt: 'hc' },
-      { src: sharp, alt: 'sharp' },
+      // { src: sharp, alt: 'sharp' },
       { src: prdc, alt: 'prdc' },
       { src: abh, alt: 'abh' },
-      { src: infra, alt: 'infra' },
+      // { src: infra, alt: 'infra' },
     ],
     Power: [
       { src: kia, alt: 'kia' },
@@ -136,8 +136,8 @@ const About = () => {
       { src: iti, alt: 'iti' },
       { src: jsw, alt: 'jsw' },
       { src: ec, alt: 'ec' },
-      { src: veera, alt: 'veera' },
-      { src: transit, alt: 'transit' },
+      // { src: veera, alt: 'veera' },
+      // { src: transit, alt: 'transit' },
       { src: uday, alt: 'uday' },
       { src: techser, alt: 'techser' },
       { src: reliance, alt: 'reliance' },
@@ -166,12 +166,12 @@ const About = () => {
     ],
     Techno: [
       { src: akn, alt: 'itc' },
-      { src: atos, alt: 'itc' },
+      // { src: atos, alt: 'itc' },
       { src: cargill, alt: 'itc' },
       // { src: genetec, alt: 'itc' },
       { src: genpact, alt: 'itc' },
       { src: harista, alt: 'itc' },
-      { src: infra, alt: 'itc' },
+      // { src: infra, alt: 'itc' },
       { src: reliance, alt: 'reliance' },
       { src: infopark, alt: 'infopark' },
       
@@ -201,7 +201,7 @@ const About = () => {
       { src: proconnect, alt: 'proconnect' },
       { src: ultratech, alt: 'ultratech' },
       { src: vaaman, alt: 'vaaman' },
-      { src: sharp, alt: 'sharp' },
+      // { src: sharp, alt: 'sharp' },
 
     ],
     Transport: [
