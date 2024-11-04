@@ -49,7 +49,7 @@ function Carosuel1() {
             {/* <h1>First slide label</h1> */}
             <h1>Relax, We've Got Your Back Your Security is Our Priority!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem', width: '50%', alignContent: 'center' }}><Link className='readmore text-white' style={{ width: '85%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/services'>Learn More About Us</Link>
+            <p style={{ fontSize: '20px', marginTop: '1rem', width: '50%', alignContent: 'center' }}><Link className='readmore text-white' style={{ width: '85%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/about'>Learn More About Us</Link>
             </p>
             {/* <Link to="/about"><p className='ccr readmore'>Read More</p></Link> */}
           </div>
