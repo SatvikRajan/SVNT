@@ -53,10 +53,8 @@
 .svnt-info {
   line-height: 50px;
   font-weight: 500;
-  margin-left: 5rem;
-  margin-right: 5rem;
   font-size: 28px;
-  padding: 8rem;
+  padding: 5rem 0 5rem 0;
 }
 
 .ceo {
@@ -153,9 +151,6 @@
 
 .about-clients {
   border-radius: 80px;
-  margin: 5rem;
-  margin-right: 6rem;
-  margin-left: 6rem;
   padding: 5rem;
   /* background-color: #e3dbfb; */
 }
@@ -170,7 +165,7 @@
   border-right: 2px solid black;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   margin-right: 2rem;
   cursor: pointer;
   padding-right: 3rem;
@@ -193,7 +188,30 @@
 .slider-container {
   width: 100%;
   text-align: center;
+  overflow: hidden;
+  position: relative;
 }
+
+.slider-container::before,
+.slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px; /* Adjust for desired fade width */
+  z-index: 1;
+}
+
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
 
 @media (max-width: 864px) {
   .about-us-head-name {
@@ -310,10 +328,6 @@
   }
   .svnt-info h1 {
     padding-bottom: 0 !important;
-  }
-  .timeline-carousel {
-
-    /* display: none !important; */
   }
   .ceo {
     margin-bottom: 10px !important;

@@ -259,6 +259,10 @@ const CaseStudies = () => {
                   '& .MuiTabs-indicator': {
                     display: 'none',
                   },
+                  '& .MuiSvgIcon-root': {
+                    height: '3em',
+                    width: '3em'
+                  },
                 }}
                 className="custom-tabs"
               >

@@ -245,8 +245,15 @@ const Services = () => {
                     // maxWidth: '500px !important',
                   },
                   '& .MuiTabs-indicator': {
-                    display: 'none', // Hide the default indicator
+                    display: 'none',// Hide the default indicator
                   },
+                  '& .MuiSvgIcon-root': {
+                    height: '3em',
+                    width: '3em'
+                  },
+                  '& .MuiTabs-scrollButtons.Mui-disabled': {
+                    opacity: 0.3,
+                  }
                 }}
                 className="custom-tabs"
               >

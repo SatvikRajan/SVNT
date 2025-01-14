@@ -138,9 +138,9 @@ export default function Timeline() {
                         {/* display grid 50% 50% for each with bottom border and 50% of left border for the text div */}
                         <div className='info'>
                             <div className='info-set info-set-up'>
-                                <p className='year'>2003 - 2006</p>
-                                <p className='sub-head'>Birth of SVNT</p>
-                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                                <p className='year'>2003</p>
+                                <p className='sub-head'>Inception</p>
+                                <p className='para'>SVNT was founded with a first major order of ₹60-70 lakh</p>
 
                             </div>
                             <div className='gap'>
@@ -154,8 +154,8 @@ export default function Timeline() {
                             </div>
                             <div className='info-set info-set-down'>
                                 <p className='year'>2006 - 2009</p>
-                                <p className='sub-head'>Company Spinout</p>
-                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                                <p className='sub-head'>Networking solution</p>
+                                <p className='para'>Redefined campus-wide connectivity with networking and data center systems.</p>
 
                             </div>
                         </div>
@@ -163,8 +163,8 @@ export default function Timeline() {
                         <div className='info'>
                             <div className='info-set info-set-up'>
                                 <p className='year'>2009 - 2012</p>
-                                <p className='sub-head'>Company Spinout</p>
-                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                                <p className='sub-head'>CCTV Surveillance</p>
+                                <p className='para'>Expanded into CCTV surveillance solutions, working with Vedanta, NTPC, and Mylan Labs, and achieving ₹10 crore revenue</p>
 
                             </div>
                             <div className='gap'>
@@ -178,8 +178,8 @@ export default function Timeline() {
                             </div>
                             <div className='info-set info-set-down'>
                                 <p className='year'>2012 - 2015</p>
-                                <p className='sub-head'>Company Spinout</p>
-                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                                <p className='sub-head'>Nationwide presence</p>
+                                <p className='para'>Revenue climbs to ₹30 cr with a major milestone of securing ITC Hotels projects nationwide</p>
 
                             </div>
                         </div>
@@ -188,8 +188,8 @@ export default function Timeline() {
                         <div className='info'>
                             <div className='info-set info-set-up'>
                                 <p className='year'>2015 - 2018</p>
-                                <p className='sub-head'>Company Spinout</p>
-                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                                <p className='sub-head'>Security systems</p>
+                                <p className='para'>Revenue reaches ₹50 cr while taking on security systems for ISRO and intrusion alarms for 540 CFCL houses.</p>
 
                             </div>
                             <div className='gap'>
@@ -203,23 +203,35 @@ export default function Timeline() {
                             </div>
                             <div className='info-set info-set-down'>
                                 <p className='year'>2018 - 2021</p>
-                                <p className='sub-head'>Company Spinout</p>
-                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                                <p className='sub-head'>Partnering with BIAL</p>
+                                <p className='para'>Revenue hits ₹80 crore as SVNT migrates Bosch to Genetec and secures BIAL with Genetec CCTV systems.</p>
 
                             </div>
                         </div>
 
                         <div className='info'>
                             <div className='info-set info-set-up'>
-                                <p className='year'>2021 - Present</p>
-                                <p className='sub-head'>Company Spinout</p>
-                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                                <p className='year'>2021 - 2024</p>
+                                <p className='sub-head'>Industry Leadership</p>
+                                <p className='para'>SVNT delivers on-prem CCTV and cloud access control for Genpact and Maruti, reaching ₹100cr revenue</p>
 
                             </div>
                             <div className='gap'>
 
                             </div>
                         </div>
+
+                        {/* <div className='info'>
+                            <div className='gap'>
+
+                            </div>
+                            <div className='info-set info-set-down'>
+                                <p className='year'>2024 - Present</p>
+                                <p className='sub-head'>Company Spinout</p>
+                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+
+                            </div>
+                        </div> */}
 
                     </Slider>
                 </div>

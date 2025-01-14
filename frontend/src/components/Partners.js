@@ -22,6 +22,9 @@ export default function Partners() {
                     <h2>Meet our Global Partner</h2>
                     <p>Our trusted partner in delivering excellence.</p>
 
+                    {/* <Link className="align-self-end" to="/about" style={{ filter: 'invert(1)' }} data-aos='fade-left'>
+                        <p className="fs-4 text-light readmore">Read more</p>
+                    </Link> */}
                     <p className='readmore rm-2 mt-5' style={{ filter: 'invert(1)', width: '35%' }}>
                         <Link to="/partners" className='text-white'>Read More</Link>
                     </p>
