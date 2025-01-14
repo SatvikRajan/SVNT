@@ -20,7 +20,7 @@
 }
 
 .partners-img {
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
@@ -599,7 +599,7 @@
   }
 
   .partners-img {
-    height: fit-content;
+    height: 50%;
     width: 50%;
   }
   .years {
