@@ -534,3 +534,65 @@
     /* background-color: inherit; */
   }
 }
+
+@media (min-width: 768px) {
+  .cs-image img{
+    display: none;
+  }
+
+  .cs-image button{
+    font-size: 18px;
+    margin-left: 70%;
+    margin-top: 0%;
+  }
+  .cs-wrapper{
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 85% 25%;
+    padding-right: 10px;
+    padding-left: 5px;
+  }
+
+  .csd-points{
+    font-size: 18px;
+    line-height: 40px;
+    text-align: justify;
+    padding-right: 4%;
+  }
+
+  .case-study h3{
+    font-size: 28px !important;
+  }
+  .only-desktop{
+    display: none;
+  }
+
+  .expanded-content{
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+
+  .expand-inner h2{
+    font-size: 28px !important;
+    margin-bottom: -10px !important;
+    margin-left: 2px;
+  }
+
+  .expand-inner-child{
+    /* border: 2px solid white; */
+    margin-bottom: -10%;
+    margin-top: 10px;
+    text-align: justify;
+    padding-right: 10px;
+  }
+
+  .last-row{
+    margin-bottom: 5px;
+  }
+
+  .collapse-button{
+    font-size: 20px;
+    /* background-color: #0e1513; */
+    margin-bottom: 5px;
+  }
+}

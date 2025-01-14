@@ -114,8 +114,8 @@ const cs = [
     'Scope of Work: Erection & Commissioning of IP Based CCTV System & Panic Alarm System',
     `Challenges:Chambal Fertilisers and Chemicals Limited (CFCL), founded in 1985 by Zuari Industries Limited, has become a major player in India's private sector fertiliser industry. Situated in the Gadepan area of Rajasthan's Kota district, CFCL operates two cutting-edge nitrogenous fertiliser plants. Together, these plants produce around 2 million metric tons of urea each year. Over the years, CFCL has not only bolstered its presence in the fertiliser market but has also emerged as a leader in North India's pesticide business.`,
 
-  ], cfclbg, cfcl1, ` `,
-    [],
+  ], cfclbg, cfcl1, `Info`,
+    [['The CCTV system uses advanced IP cameras with Intelligent Video Analytics (IVA) to cover the entire area. These smart cameras automatically detect and analyse events in real-time, identifying any suspicious activities, movements, or objects. We installed night vision cameras in key spots, enabling visibility up to 150-170 metres even in low light. To top it off, fixed cameras at all gates and drains ensure our surveillance system is thorough and reliable.']],
     `Cameras That Think`,
     [[`The CCTV system uses advanced IP cameras with Intelligent Video Analytics (IVA) to cover the entire area. These smart cameras automatically detect and analyse events in real-time, identifying any suspicious activities, movements, or objects. We installed night vision cameras in key spots, enabling visibility up to 150-170 metres even in low light. To top it off, fixed cameras at all gates and drains ensure our surveillance system is thorough and reliable.`]
     ], `Heads Up!`, [[`The township, divided into blocks A, B, C, and D with a total of 540 houses, has been equipped with a panic alarm system. These systems feature panic buttons in every bedroom and bright rooftop LEDs for clear visibility. This battery-backed system immediately alerts the security control room during emergencies. When a panic alarm is activated, it sends a notification to the Control Room, where an alert message pops up. A GSM SIM installed in the controller then sends SMS alerts to designated mobile numbers in the security department. A GSM(Global System for Mobile Communications) SIM is a tiny, removable card that keeps your phone connected to the network for calls and internet.`],
@@ -340,10 +340,10 @@ const CaseStudies = () => {
                           )}
                            {expanded[csIndex] && (
                             <div className='expanded-content'>
-                              <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent:"center", flexWrap:"wrap" }}>
                                 <img src={sch} alt="schematic" className=' exp-img' style={{ width: "100%" }} />
                                 <div className='expand-inner'>
-                                  <div>
+                                  <div className='expand-inner-child'>
 
                                     <h2>{caseStudy[5]}</h2><br></br>
 
@@ -359,7 +359,7 @@ const CaseStudies = () => {
                                 <br></br><br></br>
                               </div>
                               <div className='expand-inner'>
-                                <div>
+                                <div className='expand-inner-child'>
                                   <h2>{caseStudy[7]}</h2><br></br>
                                   <ul>
                                     {caseStudy[8].map((item) => (
@@ -372,7 +372,7 @@ const CaseStudies = () => {
                               </div>
                               <br></br><br></br>
                               <div className='expand-inner'>
-                                <div>
+                                <div className='expand-inner-child last-row'>
                                   <h2>{caseStudy[9]}</h2><br></br>
                                   <ul>
                                     {caseStudy[10].map((item) => (
@@ -386,11 +386,11 @@ const CaseStudies = () => {
 
                             </div>
                           )}
-                          <div className="cs-learn-more" style={{ bottom: "5%" }}>
+                          <div className="cs-learn-more collapse" style={{ bottom: "5%" }}>
                             {expanded[csIndex] && (
                               <button
                                 onClick={() => handleReadMore(csIndex)}
-                                className="read_btn"
+                                className="read_btn collapse-button"
                                 style={{
                                   position: "absolute",
                                   right: "20%",

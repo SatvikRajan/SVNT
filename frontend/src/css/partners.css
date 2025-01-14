@@ -614,3 +614,18 @@
     padding-right: 2rem;
   }
 }
+
+@media (min-width: 768px) {
+  .desc-content{
+    text-align: justify;
+  }
+
+  .desc-image1{
+    display: none;
+  }
+
+  .partners-desc-container{
+    grid-template-columns: 100% 0%;
+    margin-bottom: 10px;
+  }
+}
