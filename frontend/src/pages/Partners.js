@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 function SampleNextArrow(props) {
     const { style, onClick } = props;
     return (
-        <button className="carousel-control-next" type="button" onClick={onClick} style={{ ...style, display: "block", width: '20%', top: '102%' }}>
+        <button className="carousel-control-next crousel-control" id='crousel-control' type="button" onClick={onClick} style={{ ...style, width: '20%', top: '102%' }}>
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
         </button>
@@ -28,7 +28,7 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
     const { style, onClick } = props;
     return (
-        <button className="carousel-control-prev" type="button" onClick={onClick} style={{ ...style, display: "block", width: '20%', top: '102%', right: '20px' }}>
+        <button className="carousel-control-prev carousel-control" id='crousel-control' type="button" onClick={onClick} style={{ ...style, width: '20%', top: '102%', right: '20px' }}>
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Previous</span>
         </button>
@@ -75,7 +75,15 @@ export default function Partners() {
         slidesToScroll: 1,
         arrows: true,
         nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+            {
+              breakpoint: 703, // Screen width at which to disable arrows
+              settings: {
+                arrows: false, // Disable arrows
+              },
+            },
+          ],
     };
 
 

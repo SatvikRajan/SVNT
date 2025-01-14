@@ -615,6 +615,7 @@
   }
 }
 
+
 @media (min-width: 768px) {
   .desc-content{
     text-align: justify;
@@ -627,5 +628,12 @@
   .partners-desc-container{
     grid-template-columns: 100% 0%;
     margin-bottom: 10px;
+  }
+
+  .description button *{
+    opacity: 0% !important;
+  }
+  .desc-box{
+    height: 25rem;
   }
 }
