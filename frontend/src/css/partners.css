@@ -636,4 +636,9 @@
   .desc-box{
     height: 27rem;
   }
+
+  .p-img{
+    width: 100px;
+    height: 100px;
+  }
 }
