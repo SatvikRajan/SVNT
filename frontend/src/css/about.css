@@ -165,7 +165,7 @@
   border-right: 2px solid black;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2rem;
   margin-right: 2rem;
   cursor: pointer;
   padding-right: 3rem;
