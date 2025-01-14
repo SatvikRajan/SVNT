@@ -197,7 +197,6 @@ a:hover {
 .icons {
   margin-top: 10px;
   display: flex;
-  gap: 60px;
   justify-content: space-around;
 }
 
@@ -354,6 +353,12 @@ a:hover {
   }
 }
 
+@media (min-width: 1300px) {
+  .icons{
+    gap: 60px;
+  }
+}
+
 @media (max-width: 480px) {
   .invite {
     padding: 1rem !important;
@@ -429,6 +434,9 @@ a:hover {
   }
   .last{
     margin: 3rem !important;
+  }
+  .icons{
+    gap: 60px;
   }
   
 }

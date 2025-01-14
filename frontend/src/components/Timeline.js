@@ -211,12 +211,24 @@ export default function Timeline() {
 
                         <div className='info'>
                             <div className='info-set info-set-up'>
-                                <p className='year'>2021 - Present</p>
+                                <p className='year'>2021 - 2024</p>
                                 <p className='sub-head'>Company Spinout</p>
                                 <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
 
                             </div>
                             <div className='gap'>
+
+                            </div>
+                        </div>
+
+                        <div className='info'>
+                            <div className='gap'>
+
+                            </div>
+                            <div className='info-set info-set-down'>
+                                <p className='year'>2024 - Present</p>
+                                <p className='sub-head'>Company Spinout</p>
+                                <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
 
                             </div>
                         </div>

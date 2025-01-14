@@ -89,7 +89,7 @@ export default function MainStart() {
         <p className='video-info' data-aos='fade-right'>
           Protection you can rely on. Count on us to keep you safe and secure
         </p>
-        <Link className="align-self-end le" style={{ marginLeft: '8.5rem' }}to="/about" data-aos='fade-left'>
+        <Link className="align-self-end le" style={{ marginLeft: '8.5rem' }} to="/about" data-aos='fade-left'>
           <p className="fs-4 text-light w-100 readmore">Read more</p>
         </Link>
       </div>
