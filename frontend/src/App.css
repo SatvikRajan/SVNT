@@ -382,6 +382,7 @@ ul.dropdown-menu.show {
 }
 
 .job-des {
+  flex-direction: row;
   height: 40rem;
   margin-top: 2rem;
   padding: 30px;
@@ -558,9 +559,9 @@ ul.job-requirements {
   gap: 170px;
 }
 .nested-skills {
-  margin-left: 184px;
+  /* margin-left: 184px; */
   list-style-type: disc;
-  margin-top: -36px;
+  /* margin-top: -36px; */
   font-size: 15px;
   letter-spacing: 0px;
   line-height: 40px;
