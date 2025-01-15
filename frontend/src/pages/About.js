@@ -181,6 +181,9 @@ const About = () => {
       { src: itc, alt: 'itc' },
       { src: edb, alt: 'edb' },
       { src: indigo, alt: 'indigo' },
+      { src: itc, alt: 'itc' },
+      { src: edb, alt: 'edb' },
+      { src: buhler, alt: 'buhler' },
     ],
     Industrial: [
       { src: aequs, alt: 'Aequs' },

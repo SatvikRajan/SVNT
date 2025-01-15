@@ -139,8 +139,8 @@ export default function Timeline() {
                         <div className='info'>
                             <div className='info-set info-set-up'>
                                 <p className='year'>2003</p>
-                                <p className='sub-head'>Inception</p>
-                                <p className='para'>SVNT was founded with a first major order of ₹60-70 lakh</p>
+                                <p className='sub-head'>Revenue Milestone - ₹60-70 lakh</p>
+                                <p className='para'>A new chapter begins with SVNT</p>
 
                             </div>
                             <div className='gap'>
@@ -154,7 +154,7 @@ export default function Timeline() {
                             </div>
                             <div className='info-set info-set-down'>
                                 <p className='year'>2006 - 2009</p>
-                                <p className='sub-head'>Networking solution</p>
+                                <p className='sub-head'>Revenue Milestone - ₹90 lakh</p>
                                 <p className='para'>Redefined campus-wide connectivity with networking and data center systems.</p>
 
                             </div>
@@ -163,8 +163,8 @@ export default function Timeline() {
                         <div className='info'>
                             <div className='info-set info-set-up'>
                                 <p className='year'>2009 - 2012</p>
-                                <p className='sub-head'>CCTV Surveillance</p>
-                                <p className='para'>Expanded into CCTV surveillance solutions, working with Vedanta, NTPC, and Mylan Labs, and achieving ₹10 crore revenue</p>
+                                <p className='sub-head'>Revenue Milestone - ₹10 cr</p>
+                                <p className='para'>Expanded into CCTV surveillance solutions, working with Vedanta, NTPC, and Mylan Labs</p>
 
                             </div>
                             <div className='gap'>
@@ -178,8 +178,8 @@ export default function Timeline() {
                             </div>
                             <div className='info-set info-set-down'>
                                 <p className='year'>2012 - 2015</p>
-                                <p className='sub-head'>Nationwide presence</p>
-                                <p className='para'>Revenue climbs to ₹30 cr with a major milestone of securing ITC Hotels projects nationwide</p>
+                                <p className='sub-head'>Revenue Milestone - ₹20 cr</p>
+                                <p className='para'>Partnered with ITC Hotels to secure their projects nationwide </p>
 
                             </div>
                         </div>
@@ -188,8 +188,8 @@ export default function Timeline() {
                         <div className='info'>
                             <div className='info-set info-set-up'>
                                 <p className='year'>2015 - 2018</p>
-                                <p className='sub-head'>Security systems</p>
-                                <p className='para'>Revenue reaches ₹50 cr while taking on security systems for ISRO and intrusion alarms for 540 CFCL houses.</p>
+                                <p className='sub-head'>Revenue Milestone - ₹40 cr</p>
+                                <p className='para'>Elevates security systems for ISRO and guards 540 CFCL homes with alarm solutions</p>
 
                             </div>
                             <div className='gap'>
@@ -203,8 +203,8 @@ export default function Timeline() {
                             </div>
                             <div className='info-set info-set-down'>
                                 <p className='year'>2018 - 2021</p>
-                                <p className='sub-head'>Partnering with BIAL</p>
-                                <p className='para'>Revenue hits ₹80 crore as SVNT migrates Bosch to Genetec and secures BIAL with Genetec CCTV systems.</p>
+                                <p className='sub-head'>Revenue Milestone - ₹60 cr</p>
+                                <p className='para'>Migrates Bosch to Genetec and secures BIAL with Genetec CCTV systems</p>
 
                             </div>
                         </div>
@@ -212,8 +212,9 @@ export default function Timeline() {
                         <div className='info'>
                             <div className='info-set info-set-up'>
                                 <p className='year'>2021 - 2024</p>
-                                <p className='sub-head'>Industry Leadership</p>
-                                <p className='para'>SVNT delivers on-prem CCTV and cloud access control for Genpact and Maruti, reaching ₹100cr revenue</p>
+                                <p className='sub-head'>Revenue Milestone - ₹80 cr
+                                </p>
+                                <p className='para'>Delivers on-prem CCTV and cloud access control for Genpact and Maruti Suzuki</p>
 
                             </div>
                             <div className='gap'>

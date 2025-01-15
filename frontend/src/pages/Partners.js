@@ -9,6 +9,8 @@ import image5 from '../images/Partners/genetec_logo_white.webp'
 import image6 from '../images/Partners/arrow_forward.svg'
 import pbgm from '../images/Partners/partners-bgmobile.webp'
 import certification from '../images/Partners/certification-gentec.webp'
+import nd from '../images/AboutUs/nd.png'
+import soumendra from '../images/AboutUs/soumendra.png'
 import React, { useEffect, useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -109,7 +111,7 @@ export default function Partners() {
             <div className="partners-desc">
                 <div className="partners-desc-container2">
                     <div className="description description1" data-aos='fade-right'>
-                        <p className="desc-content">{desc[0]}</p>
+                        <p align='justify' className="desc-content">{desc[0]}</p>
                     </div>
                     <div className="desc-image" data-aos='fade-left'>
                         <img src={image1} alt="genetec" />
@@ -230,11 +232,11 @@ export default function Partners() {
                         <div className='people-box'>
                             <div className='people'>
                                 <div className='p-name'>
-                                    <p>Soumendra <br />Director</p>
+                                    <p>ND Prasad <br />Director</p>
                                 </div>
                                 <p className='p-quote'>“No growth hack, brilliant marketing idea can save you long-term if you don’t have a sufficiently good product.”</p>
                                 <div className='p-img'>
-                                    <img src={image4} alt='person' />
+                                    <img src={nd} alt='person' />
                                 </div>
                             </div>
                             <div className='people'>
@@ -243,7 +245,7 @@ export default function Partners() {
                                 </div>
                                 <p className='p-quote'>“No growth hack, brilliant marketing idea can save you long-term if you don’t have a sufficiently good product.”</p>
                                 <div className='p-img'>
-                                    <img src={image4} alt='person' />
+                                    <img src={soumendra} alt='person' />
                                 </div>
                             </div>
                             <div className='people'>
