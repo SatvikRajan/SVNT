@@ -616,7 +616,7 @@
 }
 
 
-@media (min-width: 768px) {
+@media (max-width: 1024px) {
   .desc-content{
     text-align: justify;
   }

@@ -535,7 +535,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1024px) {
   .cs-image img{
     display: none;
   }
