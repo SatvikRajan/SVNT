@@ -312,7 +312,7 @@ p.write1 {
 }
 .dropdown {
   width: 25%;
-  height: 100vh;
+  height: 100%;
   margin-left: 10rem;
   margin-top: 2rem;
 }
