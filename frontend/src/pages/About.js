@@ -181,9 +181,6 @@ const About = () => {
       { src: itc, alt: 'itc' },
       { src: edb, alt: 'edb' },
       { src: indigo, alt: 'indigo' },
-      { src: indigo, alt: 'indigo' },
-      { src: indigo, alt: 'indigo' },
-      { src: cfcl, alt: 'cfcl' },
     ],
     Industrial: [
       { src: aequs, alt: 'Aequs' },
@@ -208,7 +205,6 @@ const About = () => {
       { src: mahindra, alt: 'mahindra' },
       { src: tata, alt: 'tata' },
       { src: nst, alt: 'nst' },
-      { src: cae, alt: 'cae' },
     ],
     Realty: [
       { src: brigade, alt: 'brigade' },
@@ -217,7 +213,6 @@ const About = () => {
       { src: nexus, alt: 'nexus' },
       { src: om, alt: 'om' },
       { src: opme, alt: 'opme' },
-      { src: om, alt: 'om' },
     ]
   };
 
