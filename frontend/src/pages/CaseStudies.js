@@ -152,6 +152,13 @@ const menuItems = [
     'selectedImage': hotel2,
     'cs': [cs[0]]
   },
+  {
+    'id': 5,
+    'name': 'Agricuture',
+    'image': hotel1,
+    'selectedImage': hotel2,
+    'cs': [cs[4]]
+  },
 ]
 
 function TabPanel(props) {

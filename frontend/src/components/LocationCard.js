@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const LocationCard = ({ title, address, phoneNumber, backgroundImage }) => {
+const LocationCard = ({ title, address, phoneNumber, backgroundImage, isHyderabad  }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [copyNotification, setCopyNotification] = useState(false);
 
@@ -42,7 +42,12 @@ const LocationCard = ({ title, address, phoneNumber, backgroundImage }) => {
 
                 <div className="back" style={{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', color: 'white' }}>
                     <h3>{title}</h3>
-                    <div className="icons">
+                    <div className="icons"
+                    style={
+                        isHyderabad
+                          ? { display: 'flex', gap: '60px', justifyContent: 'center' } // Apply gap for Hyderabad
+                          : { display: 'flex', justifyContent: 'center' }
+                      }>
                         <div className='loc-icon'>
                             <svg onClick={openMapsInNewTab} style={{ cursor: 'pointer' }} width="30" height="30" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M30.0072 29.3269C31.1201 29.3269 32.0699 28.9306 32.8566 28.1381C33.6436 27.3456 34.0372 26.3929 34.0372 25.28C34.0372 24.1671 33.6407 23.2171 32.8478 22.43C32.0553 21.6433 31.1026 21.25 29.9897 21.25C28.8768 21.25 27.927 21.6463 27.1403 22.4388C26.3532 23.2313 25.9597 24.184 25.9597 25.2969C25.9597 26.4098 26.3561 27.3598 27.1491 28.1469C27.9416 28.9335 28.8943 29.3269 30.0072 29.3269ZM29.9984 52.5481C24.1234 47.3527 19.698 42.5073 16.7222 38.0119C13.7459 33.5169 12.2578 29.4265 12.2578 25.7406C12.2578 20.4519 13.9799 16.0896 17.4241 12.6538C20.8678 9.21792 25.0593 7.5 29.9984 7.5C34.9376 7.5 39.1291 9.21792 42.5728 12.6538C46.017 16.0896 47.7391 20.4519 47.7391 25.7406C47.7391 29.4265 46.2509 33.5169 43.2747 38.0119C40.2989 42.5073 35.8734 47.3527 29.9984 52.5481Z" fill="#F1FAFF" />

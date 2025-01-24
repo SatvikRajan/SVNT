@@ -84,8 +84,8 @@
   opacity: 1 !important;
   /* padding: 2px; */
   background-color: #f1faff;
-  width: 24px;
-  height: 24px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   display: inline-block;
 }
@@ -135,9 +135,9 @@
   display: flex;
   color: #251741;
   /* transform: translate(-50%, -50%); */
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 300;
-  border-bottom: 2px solid #251741;
+  border-bottom: 1.5px solid #251741;
   /* width: 10%; */
   padding-bottom: 5px;
   text-align: right;
@@ -157,8 +157,6 @@
   border-radius: 30px;
   color: black;
   /* background: linear-gradient(135deg, #251741, #5023aa) !important; */
-  width: 90%;
-  margin-left: 5%;
   /* margin: 30px; */
   margin-bottom: 2rem;
   padding-left: 5rem;
@@ -281,7 +279,7 @@
   }
   .carousel-indicators {
     height: 3rem !important;
-    bottom: 1rem !important;
+    bottom: -1rem !important;
     gap: 15px !important;
   }
   #carousel-button {
@@ -307,7 +305,7 @@
     font-size: 40px !important;
   }
   .videoText {
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
   }
   .video-info {
@@ -395,10 +393,38 @@
   .ccn {
     right: 50px !important;
   }
+  .last{
+    padding: 4rem !important; 
+  }
+  .last img{
+    padding: 0;
+  }
+  .lt-text a{
+    width: 25% !important;
+    margin-bottom: 1rem;
+  }
+  .lc-1{
+    width: 100% !important;
+  }
+  .lc-2{
+    width: 40% !important;
+  }
+  .last-contact{
+    flex-wrap: wrap !important;
+    gap: 20px;
+  }
+  
+}
+
+@media (min-width: 468px) and (max-width: 672px) {
+  .lt-text a{ 
+    width: 45% !important;
+  }
 }
 
 @media (min-width: 480px) and (max-width: 768px) {
   .carousel-caption{
+    flex-wrap: wrap;
     height: 15rem;
   }
   .carousel-caption h1{
@@ -406,8 +432,14 @@
     line-height: 40px ;
   }
   .carousel p a {
-    width: 60% !important;
+    width: 100% !important;
     font-size: 20px;
+  }
+  .carousel-caption p{
+    width: 70% !important;
+  }
+  .cc3{
+    flex-direction: row;
   }
   .m0 {
     transform: rotate(0deg) translate(0, -200px) rotate(0deg);
@@ -433,12 +465,13 @@
   .m7 {
     transform: rotate(315deg) translate(0, -200px) rotate(-315deg);
   }
-  .last-contact{
-    flex-wrap: wrap !important;
-  }
+  
   .lt-text{
     flex-wrap: wrap;
   }
+  
+
+  
 }
 
 @media (max-width: 1024px) {
@@ -591,8 +624,8 @@
     width: 30%;
   }
   .last-contact {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
   .hehe {
     width: 25%;
@@ -674,7 +707,7 @@
 }
 
 .clientele {
-  margin-top: 10rem;
+  margin-top: 5rem;
   margin-bottom: -5rem;
   padding-left: 10rem;
 }

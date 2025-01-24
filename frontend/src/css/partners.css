@@ -58,21 +58,15 @@
 }
 
 .desc-content {
-  font-weight: 500;
   font-size: 28px;
-  line-height: 50px;
-  width: 100%;
-  height: 100%;
   text-align: justify;
   padding-left: 10px;
 }
 
 .description1 {
-  float: left;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 28px;
   line-height: 50px;
-  box-sizing: border-box; /* Ensure padding and borders are included in width calculation */
 }
 
 .desc-image img {
@@ -223,15 +217,16 @@
 }
 
 .people {
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem;
   background-color: #c4cfe7;
   border-radius: 10px;
   margin-top: 3% !important;
   display: flex;
   flex-direction: column;
   margin: 1% 5% 1% 0%;
-
+  align-items: center;
   /* padding: 2%; */
+  width: inherit;
 }
 
 .p-name,
@@ -255,9 +250,9 @@
 
 .p-img {
   display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: right;
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
 }
 
 .partners-desc2 {
@@ -389,6 +384,9 @@
   .last{
     margin: 4rem !important;
   }
+  .sub-two{
+    grid-template-columns: 50% 20% 10%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -463,6 +461,8 @@
   }
   .people{
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

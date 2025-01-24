@@ -162,6 +162,7 @@ const Contact = () => {
             address="12th Floor, DSL ABACUS IT PARK , UPPAL, Hyderabad, Telangana, India-500 039"
             phoneNumber="123456789"
             backgroundImage={loc1}
+            isHyderabad={true}
           />
         </div>
         <h1 className="location-name">Other Branches</h1>

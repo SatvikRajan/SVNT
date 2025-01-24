@@ -181,9 +181,6 @@ const About = () => {
       { src: itc, alt: 'itc' },
       { src: edb, alt: 'edb' },
       { src: indigo, alt: 'indigo' },
-      { src: itc, alt: 'itc' },
-      { src: edb, alt: 'edb' },
-      { src: buhler, alt: 'buhler' },
     ],
     Industrial: [
       { src: aequs, alt: 'Aequs' },
@@ -208,7 +205,6 @@ const About = () => {
       { src: mahindra, alt: 'mahindra' },
       { src: tata, alt: 'tata' },
       { src: nst, alt: 'nst' },
-      { src: isro, alt: 'isro' },
     ],
     Realty: [
       { src: brigade, alt: 'brigade' },
@@ -217,7 +213,6 @@ const About = () => {
       { src: nexus, alt: 'nexus' },
       { src: om, alt: 'om' },
       { src: opme, alt: 'opme' },
-      { src: elcita, alt: 'elcita' },
     ]
   };
 
@@ -291,7 +286,7 @@ const About = () => {
       <div className="ceo d-flex">
         <div className="ceo-text">
           <h1 className="fs-1 ceo-text-head" style={{ marginBottom: '2rem' }} data-aos='fade-down'>Meet Our Managing Director </h1>
-          <p align="justify" className="ceo-text-p w-75" style={{ marginBottom: '2rem' }} data-aos='fade-right'>
+          <p className="ceo-text-p w-75" style={{ marginBottom: '2rem' }} data-aos='fade-right'>
             “User experience is everything. It always has been, but it's still undervalued and under-invested in. If you don't know user-centered design, study it. Hire people who know it. Obsess over it. Live and breathe it. ”
           </p>
           <h1 style={{ float: 'inline-end' }} data-aos='fade-right'>- Mr. V G Salimath</h1>
