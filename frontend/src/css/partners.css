@@ -89,7 +89,7 @@
   width: 100%;
   padding-left: 2rem;
   padding-right: 1rem;
-  height: 32rem;
+  height: 48rem;
   margin-top: 2%;
   border-radius: 28px;
 
@@ -647,7 +647,16 @@
   .description button *{
     opacity: 0% !important;
   }
+  .box-content{
+    height: 20rem;
+  }
+
   .desc-box{
-    height: 27rem;
+    height: 413px;
+  }
+
+  .people .p-img{
+    width: 90%;
+    height: 90%;
   }
 }

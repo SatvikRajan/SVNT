@@ -13,13 +13,17 @@
 .navbar {
   font-family: "Poppins", sans-serif;
   letter-spacing: 0 !important;
-  border-radius: 100px;
+  
+  /* border-radius: 100px; */
+
   box-sizing: content-box;
   padding-right: 0%;
   /* border-bottom: 0px !important; */
   /* padding: 0 !important; */
   /* left: 52%; */
-  position: fixed !important;
+  
+  /* position: fixed !important; */
+
   background-color: #f1faff;
   width: 42%;
   height: 8.5%;
@@ -29,7 +33,9 @@
   /* background-color: #5023aa; */
   /* transition: transform 0.3s ease-in-out 0.5s !important; */
   /* animation: expandFromLeft 0.3s ease; */
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px; */
+  
   display: flex;
   align-items: center;
   /* justify-content: space-between; */

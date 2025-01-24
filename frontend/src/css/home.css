@@ -84,8 +84,8 @@
   opacity: 1 !important;
   /* padding: 2px; */
   background-color: #f1faff;
-  width: 24px;
-  height: 24px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   display: inline-block;
 }
@@ -1017,7 +1017,44 @@
   .ha {
     justify-content: center;
   }
-  .desc-box {
-    height: 38rem !important;
+  .box-content {
+    height: 38rem;
   }
 }
+
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1){
+
+    #carousel-button{
+      width: 15px;
+      height: 15px;
+    }
+    
+    .trustedtext{
+      padding-left: 5%;
+      text-align: justify;
+    }
+
+    .last-text1{
+      font-size: 28px;
+    }
+
+    .wwdb-learn-more .btn-arrow span{
+      font-size: 17px !important;
+    }
+
+    .foot span{
+      font-size: 19px;
+    }
+
+    .video-info{
+      font-size: 28px !important;
+      padding-right: 5%;
+    }
+  }
+
+ 
