@@ -191,6 +191,9 @@
   align-items: center;
   height: 100%;
   width: 100%;
+  border-color: azure;
+  border-style: none;
+  border-width: 0;
 }
 
 .wwdb-menu {
@@ -360,6 +363,8 @@
   }
   .wwdb-menu-wrapper {
     border-radius: 20px;
+    border-style: none;
+    border-color:silver
   }
   .wwdb-details-overlay {
     width: 95% !important;

@@ -130,3 +130,34 @@
     width: 100%;
   }
 }
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1){
+  
+    .wwdb-image-container img {
+      width: 450px;
+      height: 300px;
+    }
+    
+    .wwdb-learn-more {
+      position: absolute;
+      bottom: 5%; /* Move to the bottom of the container */
+      left: 88%; /* Center horizontally */
+      transform: translateX(-50%);
+      width: 100%; /* Make it responsive */
+      max-width: 176px;
+    }
+
+    .wwdb-details-text p{
+      text-align: left;
+    }
+
+    .wwdb-overlay-container {
+      margin-top: 15% !important;
+    }
+
+  
+  }

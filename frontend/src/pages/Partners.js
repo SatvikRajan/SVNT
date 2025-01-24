@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom';
 function SampleNextArrow(props) {
     const { style, onClick } = props;
     return (
-        <button className="carousel-control-next crousel-control" id='crousel-control' type="button" onClick={onClick} style={{ ...style, width: '20%', top: '102%' }}>
+        <button className="carousel-control-next crousel-control" id='crousel-control' type="button" onClick={onClick} style={{ ...style, width: '20%', top: '82%' }}>
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
         </button>
@@ -29,7 +29,7 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
     const { style, onClick } = props;
     return (
-        <button className="carousel-control-prev carousel-control" id='crousel-control' type="button" onClick={onClick} style={{ ...style, width: '20%', top: '102%', right: '20px' }}>
+        <button className="carousel-control-prev carousel-control" id='crousel-control' type="button" onClick={onClick} style={{ ...style, width: '20%', top: '82%', right: '20px' }}>
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Previous</span>
         </button>
@@ -248,7 +248,7 @@ export default function Partners() {
                                     <img src={soumendra} alt='person' />
                                 </div>
                             </div>
-                            <div className='people'>
+                            {/* <div className='people'>
                                 <div className='p-name'>
                                     <p>Soumendra</p>
                                 </div>
@@ -256,7 +256,7 @@ export default function Partners() {
                                 <div className='p-img'>
                                     <img src={soumendra} alt='person' />
                                 </div>
-                            </div>
+                            </div> */}
 
                         </div>
                     </div>
