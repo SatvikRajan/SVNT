@@ -9,7 +9,6 @@ import 'aos/dist/aos.css';
 import aequs from '../images/AboutUs/client-aequs.svg';
 import allergan from '../images/AboutUs/client-allergan.svg';
 import ampath from '../images/AboutUs/client-ampath.svg';
-import kia from '../images/AboutUs/client-kia.svg';
 import brigade from '../images/AboutUs/client-brigade.svg';
 import esl from '../images/AboutUs/client-esl.svg';
 import gd from '../images/AboutUs/client-gd.svg';
@@ -56,9 +55,7 @@ import vaaman from '../images/AboutUs/vaaman.svg';
 import zinc from '../images/AboutUs/zinc.svg';
 import zuari from '../images/AboutUs/zuari.svg';
 import cae from '../images/AboutUs/client-cae.svg';
-import temp from '../images/AboutUs/client-temp.svg';
 import nst from '../images/AboutUs/client-nst.svg';
-import elcita from '../images/AboutUs/client-elcita.svg';
 import infopark from '../images/AboutUs/client-infopark.svg';
 import tata from '../images/AboutUs/client-tata.svg';
 import matrix from '../images/AboutUs/matrix.svg';
@@ -227,7 +224,7 @@ const About = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesPerRow: 1,
           slidesToScroll: 1,
           infinite: true,

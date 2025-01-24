@@ -165,7 +165,7 @@
   border-right: 2px solid black;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3.5rem;
   margin-right: 2rem;
   cursor: pointer;
   padding-right: 3rem;
@@ -188,7 +188,6 @@
 .slider-container {
   width: 100%;
   text-align: center;
-  overflow: hidden;
   position: relative;
 }
 
