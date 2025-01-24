@@ -71,6 +71,9 @@ import sau from '../images/AboutUs/sau.svg';
 import seehawk from '../images/AboutUs/seehawk.svg';
 import source from '../images/AboutUs/source.svg';
 import thump from '../images/AboutUs/thump.svg';
+import nmdc from '../images/AboutUs/nmdc.svg';
+import sharp from '../images/AboutUs/sharp.svg';
+import sandvik from '../images/AboutUs/sandvik.svg';
 import aboutbg from '../images/AboutUs/about-bg-video.mp4';
 import Slider from "react-slick";
 
@@ -135,7 +138,6 @@ const About = () => {
       { src: thump, alt: 'thump' },
     ],
     Power: [
-      { src: kia, alt: 'kia' },
       { src: act, alt: 'act' },
       { src: iti, alt: 'iti' },
       { src: jsw, alt: 'jsw' },
@@ -149,7 +151,7 @@ const About = () => {
       { src: laurus, alt: 'laurus' },
       { src: access, alt: 'access' },
     ],
-    Pharma: [
+    Energy: [
       { src: ampath, alt: 'ampath' },
       { src: allergan, alt: 'Allergan' },
       { src: aragen, alt: 'aragen' },
@@ -158,12 +160,13 @@ const About = () => {
       { src: intox, alt: 'intox' },
       { src: natco, alt: 'natco' },
       { src: pidilite, alt: 'pidilite' },
+      { src: zinc, alt: 'zinc' },
+      { src: sandvik, alt: 'sandvik' },
+      { src: nmdc, alt: 'nmdc' },
+      { src: vedanta, alt: 'vedanta' },
     ],
-    Hotels: [
+    Infrastructure: [
       { src: itc, alt: 'itc' },
-    ],
-    Techno: [
-      { src: akn, alt: 'itc' },
       { src: cargill, alt: 'cargill' },
       { src: genpact, alt: 'genpact' },
       { src: harista, alt: 'harista' },
@@ -174,13 +177,7 @@ const About = () => {
       { src: om, alt: 'om' },
       { src: opme, alt: 'opme' },
       { src: placid, alt: 'placid' },
-      { src: railtel, alt: 'railtel' },
-    ],
-    Agro: [
-      { src: buhler, alt: 'buhler' },
-      { src: itc, alt: 'itc' },
-      { src: edb, alt: 'edb' },
-      { src: indigo, alt: 'indigo' },
+      { src: cae, alt: 'cae' },
     ],
     Industrial: [
       { src: aequs, alt: 'Aequs' },
@@ -197,23 +194,12 @@ const About = () => {
       { src: proconnect, alt: 'proconnect' },
       { src: ultratech, alt: 'ultratech' },
       { src: vaaman, alt: 'vaaman' },
-    ],
-    Transport: [
-      { src: kia, alt: 'kia' },
-      { src: cae, alt: 'cae' },
       { src: isro, alt: 'isro' },
-      { src: mahindra, alt: 'mahindra' },
+      { src: sharp, alt: 'sharp' },
       { src: tata, alt: 'tata' },
       { src: nst, alt: 'nst' },
+
     ],
-    Realty: [
-      { src: brigade, alt: 'brigade' },
-      { src: temp, alt: 'temp' },
-      { src: elcita, alt: 'elcita' },
-      { src: nexus, alt: 'nexus' },
-      { src: om, alt: 'om' },
-      { src: opme, alt: 'opme' },
-    ]
   };
 
   useEffect(() => {
