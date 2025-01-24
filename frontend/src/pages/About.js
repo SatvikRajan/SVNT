@@ -208,6 +208,7 @@ const About = () => {
       { src: mahindra, alt: 'mahindra' },
       { src: tata, alt: 'tata' },
       { src: nst, alt: 'nst' },
+      { src: isro, alt: 'isro' },
     ],
     Realty: [
       { src: brigade, alt: 'brigade' },
@@ -216,6 +217,7 @@ const About = () => {
       { src: nexus, alt: 'nexus' },
       { src: om, alt: 'om' },
       { src: opme, alt: 'opme' },
+      { src: elcita, alt: 'elcita' },
     ]
   };
 
