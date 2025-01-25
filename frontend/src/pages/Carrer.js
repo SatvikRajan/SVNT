@@ -39,6 +39,16 @@ const CareersPage = () => {
     setResume(e.target.files[0]);
   };
 
+  function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function validatePhone(phone) {
+    const phoneRegex = /^\d{10}$/;
+    return phoneRegex.test(phone);
+  }
+
   useEffect(() => {
     const fetchJobs = async () => {
       try {
@@ -102,7 +112,6 @@ const CareersPage = () => {
       if (!response.ok) {
         throw new Error('Error submitting form');
       }
-
       setName('');
       setEmail('');
       setPhone('');
@@ -111,8 +120,15 @@ const CareersPage = () => {
       setResume(null);
       toast.success('Form submitted successfully');
     } catch (error) {
-      console.error(error);
-      toast.error('Error submitting form');
+      if (name.length < 3) {
+        toast.error('Name should be more than 3 characters')
+      }
+      else if (validateEmail(email) === false) {
+        toast.error('Invalid Email')
+      }
+      else if (validatePhone(phone) === false) {
+        toast.error('Invalid Phone Number')
+      }
     }
   };
 
@@ -169,7 +185,7 @@ const CareersPage = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                More Job Opportunities
+                More Jobs
                 <img
                   src={search}
                   style={{ float: "right" }}

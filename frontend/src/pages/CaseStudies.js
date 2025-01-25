@@ -15,6 +15,8 @@ import manufac1 from '../images/CaseStudies/manufac1.svg';
 import manufac2 from '../images/CaseStudies/manufac2.svg';
 import hotel1 from '../images/CaseStudies/hotel1.svg';
 import hotel2 from '../images/CaseStudies/hotel2.svg';
+import agri1 from '../images/CaseStudies/agri1.svg';
+import agri2 from '../images/CaseStudies/agri2.svg';
 import itc from '../images/CaseStudies/itc-1.webp';
 import itc1 from '../images/CaseStudies/itc1.webp';
 import itc2 from '../images/CaseStudies/itc2.webp';
@@ -155,8 +157,8 @@ const menuItems = [
   {
     'id': 5,
     'name': 'Agricuture',
-    'image': hotel1,
-    'selectedImage': hotel2,
+    'image': agri2,
+    'selectedImage': agri1,
     'cs': [cs[4]]
   },
 ]

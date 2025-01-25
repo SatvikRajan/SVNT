@@ -12,6 +12,7 @@ import pointer from "../images/admin-main/pointer.svg";
 export default function AdminPage() {
     const navigate = useNavigate();
     const [candidates, setCandidates] = useState([]);
+    const [jobs, setJobs] = useState([]); // Jobs state to manage vacancies
     const [job, setJob] = useState({
         title: '',
         employmentType: '',
@@ -33,6 +34,19 @@ export default function AdminPage() {
         };
 
         fetchCandidates();
+    }, []);
+
+    useEffect(() => {
+        const fetchJobs = async () => {
+            try {
+                const response = await axios.get('http://localhost:8080/api/jobs');
+                setJobs(response.data);
+            } catch (error) {
+                console.error('Error fetching jobs:', error);
+            }
+        };
+
+        fetchJobs();
     }, []);
 
     const handleChange = (e) => {
@@ -97,6 +111,15 @@ export default function AdminPage() {
         );
     };
 
+    const handleDeleteClick = async (job) => {
+        try {
+            await axios.delete(`http://localhost:8080/api/jobs/${job._id}`);
+            setJobs(jobs.filter((item) => item._id !== job._id)); // Remove the deleted job from the state
+        } catch (error) {
+            console.error('Error deleting job:', error);
+        }
+    };
+
     const handleSignOut = () => {
         localStorage.clear();
         navigate('/login')
@@ -134,15 +157,17 @@ export default function AdminPage() {
         <div>
             <div className="top d-flex justify-content-between">
                 <img src={company} width='400rem' alt="company" />
-                <button style={{backgroundColor: 'transparent', border: 'none', color: 'white'}} onClick={handleSignOut}>
-                    <svg  stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg"><path d="M124,216a12,12,0,0,1-12,12H48a12,12,0,0,1-12-12V40A12,12,0,0,1,48,28h64a12,12,0,0,1,0,24H60V204h52A12,12,0,0,1,124,216Zm108.49-96.49-40-40a12,12,0,0,0-17,17L195,116H112a12,12,0,0,0,0,24h83l-19.52,19.51a12,12,0,0,0,17,17l40-40A12,12,0,0,0,232.49,119.51Z"></path></svg>
+                <button style={{ backgroundColor: 'transparent', border: 'none', color: 'white' }} onClick={handleSignOut}>
+                    <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M124,216a12,12,0,0,1-12,12H48a12,12,0,0,1-12-12V40A12,12,0,0,1,48,28h64a12,12,0,0,1,0,24H60V204h52A12,12,0,0,1,124,216Zm108.49-96.49-40-40a12,12,0,0,0-17,17L195,116H112a12,12,0,0,0,0,24h83l-19.52,19.51a12,12,0,0,0,17,17l40-40A12,12,0,0,0,232.49,119.51Z"></path>
+                    </svg>
                 </button>
             </div>
             <div className='admin-super'>
                 <h1 className='admin-head'>Applications</h1>
                 <div className='admin-cont'>
                     <div className="admin-left">
-                        <div style={{ display: "flex" }}>
+                        <div style={{ display: "flex", alignItems: "center" }}>
                             <img alt='pointer' src={pointer} style={{ display: view === 'form' ? 'block' : 'none' }} />
                             <p
                                 onClick={() => setView('form')}
@@ -151,15 +176,26 @@ export default function AdminPage() {
                                 Add Vacancy
                             </p>
                         </div>
-                        <div style={{ display: "flex" }}>
-                            <img alt='pointer' src={pointer} style={{ display: view === 'form' ? 'none' : 'block' }} />
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                            <img alt='pointer' src={pointer} style={{ display: view === 'table-1' ? 'block' : 'none' }} />
+                            <p
+                                onClick={() => setView('table-1')}
+                                style={{ cursor: 'pointer', color: view === 'table-1' ? '#DC1615' : 'black' }}
+                            >
+                                Delete Vacancy
+                            </p>
+                        </div>
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                            <img alt='pointer' src={pointer} style={{ display: view === 'table' ? 'block' : 'none' }} />
                             <p
                                 onClick={() => setView('table')}
-                                style={{ cursor: 'pointer', color: view === 'form' ? 'black' : '#DC1615' }}
+                                style={{ cursor: 'pointer', color: view === 'table' ? '#DC1615' : 'black' }}
                             >
                                 Received
-                            </p></div>
+                            </p>
+                        </div>
                     </div>
+
 
                     {view === 'form' && (
                         <form className='vacancy-form' onSubmit={handleSubmit}>
@@ -189,7 +225,7 @@ export default function AdminPage() {
                                         <input type="text" name="primaryskills" value={job.primaryskills} onChange={handleChange} />
                                     </div>
                                     <div>
-                                        <label>Required Skills</label>
+                                        <label>Required Skills:</label>
                                         <input type="text" name="requiredskills" value={job.requiredskills} onChange={handleChange} />
                                     </div>
                                 </div>
@@ -197,6 +233,32 @@ export default function AdminPage() {
                             <button type="submit">Create Job</button>
                         </form>
                     )}
+
+                    {view === 'table-1' && (
+                        <div className='table-1 table'>
+                            <table className="styled-table">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {jobs.map((job) => (
+                                        <tr key={job._id}>
+                                            <td>{job.title}</td>
+                                            <td>
+                                                <button className="delete-button" onClick={() => handleDeleteClick(job)}>
+                                                    Delete Vacancy
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
+
 
                     {view === 'table' && (
                         <div className='table'>
@@ -207,7 +269,7 @@ export default function AdminPage() {
                                     pagination={true}
                                     paginationPageSize={10}
                                     frameworkComponents={{
-                                        customButtonComponent: CustomButtonComponent, // Register the custom component
+                                        customButtonComponent: CustomButtonComponent,
                                     }}
                                 />
                             </div>

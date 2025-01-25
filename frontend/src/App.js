@@ -15,6 +15,7 @@ import Loader from './components/Loader';
 import AdminLogin from './pages/AdminLogin';
 import AdminRegister from './pages/AdminRegister';
 import Partners from './pages/Partners';
+import ScrollToTopButton from './components/ScrollToTopButton';
 const LazyHome = React.lazy(() => import('./pages/Home'))
 function App() {
 
@@ -50,6 +51,7 @@ function App() {
           <Route path="admin-main" element={<PrivateRoute element={<AdminPage />} />} />
         </Routes>
       </ScrollToTop>
+      <ScrollToTopButton/>
       {/* )} */}
     </BrowserRouter>
   );
