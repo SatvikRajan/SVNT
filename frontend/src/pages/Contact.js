@@ -160,7 +160,7 @@ const Contact = () => {
           <LocationCard
             title="Hyderabad"
             address="12th Floor, DSL ABACUS IT PARK , UPPAL, Hyderabad, Telangana, India-500 039"
-            phoneNumber="123456789"
+            phoneNumber="+918800630726"
             backgroundImage={loc1}
             isHyderabad={true}
           />
@@ -169,22 +169,22 @@ const Contact = () => {
         <div className="offices1" data-aos='fade-up'>
           <LocationCard
             title="Bangalore"
-            address="D No: 114, 52/1 , 2nd Floor, Krishna Reddy Building , 24th Main Road , HSR Layout, 2nd Sector"
-            phoneNumber="123456789"
+            // address="D No: 114, 52/1 , 2nd Floor, Krishna Reddy Building , 24th Main Road , HSR Layout, 2nd Sector"
+            phoneNumber="+918800630726"
             backgroundImage={loc3}
           />
 
           <LocationCard
             title="Kolkata"
-            address="Balaji Apartment, Kalitala PO, Nawab Ganj, Ichapur , North 24 Paraganas , Kolkatta , West Bengal , India"
-            phoneNumber="123456789"
+            // address="Balaji Apartment, Kalitala PO, Nawab Ganj, Ichapur , North 24 Paraganas , Kolkatta , West Bengal , India"
+            phoneNumber="+918800630726"
             backgroundImage={loc4}
           />
 
           <LocationCard
             title="Delhi"
-            address="House No.849, GROUND FLOOR , SECTOR, 47 GURGAON, (HR) 122001"
-            phoneNumber="123456789"
+            // address="House No.849, GROUND FLOOR , SECTOR, 47 GURGAON, (HR) 122001"
+            phoneNumber="+918800630726"
             backgroundImage={loc2}
           />
         </div>

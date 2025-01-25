@@ -48,7 +48,7 @@ const LocationCard = ({ title, address, phoneNumber, backgroundImage, isHyderaba
                           ? { display: 'flex', gap: '60px', justifyContent: 'center' } // Apply gap for Hyderabad
                           : { display: 'flex', justifyContent: 'center' }
                       }>
-                        <div className='loc-icon'>
+                        <div className='loc-icon' style={isHyderabad?{display: 'block'} : {display: 'none'}}>
                             <svg onClick={openMapsInNewTab} style={{ cursor: 'pointer' }} width="30" height="30" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M30.0072 29.3269C31.1201 29.3269 32.0699 28.9306 32.8566 28.1381C33.6436 27.3456 34.0372 26.3929 34.0372 25.28C34.0372 24.1671 33.6407 23.2171 32.8478 22.43C32.0553 21.6433 31.1026 21.25 29.9897 21.25C28.8768 21.25 27.927 21.6463 27.1403 22.4388C26.3532 23.2313 25.9597 24.184 25.9597 25.2969C25.9597 26.4098 26.3561 27.3598 27.1491 28.1469C27.9416 28.9335 28.8943 29.3269 30.0072 29.3269ZM29.9984 52.5481C24.1234 47.3527 19.698 42.5073 16.7222 38.0119C13.7459 33.5169 12.2578 29.4265 12.2578 25.7406C12.2578 20.4519 13.9799 16.0896 17.4241 12.6538C20.8678 9.21792 25.0593 7.5 29.9984 7.5C34.9376 7.5 39.1291 9.21792 42.5728 12.6538C46.017 16.0896 47.7391 20.4519 47.7391 25.7406C47.7391 29.4265 46.2509 33.5169 43.2747 38.0119C40.2989 42.5073 35.8734 47.3527 29.9984 52.5481Z" fill="#F1FAFF" />
                             </svg>
@@ -56,7 +56,7 @@ const LocationCard = ({ title, address, phoneNumber, backgroundImage, isHyderaba
                             <p>Open Location</p>
 
                         </div>
-                        <div className="map-icon">
+                        <div className="map-icon" style={isHyderabad?{display: 'block'} : {display: 'none'}}>
                             <svg style={{ cursor: 'pointer' }} onClick={handleMapClick} width="30" height="30" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M22.7887 42.5C21.6379 42.5 20.6771 42.1146 19.9062 41.3438C19.1354 40.5729 18.75 39.6121 18.75 38.4613V11.5387C18.75 10.3879 19.1354 9.42708 19.9062 8.65625C20.6771 7.88542 21.6379 7.5 22.7887 7.5H42.2113C43.3621 7.5 44.3229 7.88542 45.0938 8.65625C45.8646 9.42708 46.25 10.3879 46.25 11.5387V38.4613C46.25 39.6121 45.8646 40.5729 45.0938 41.3438C44.3229 42.1146 43.3621 42.5 42.2113 42.5H22.7887ZM15.2887 50C14.1379 50 13.1771 49.6146 12.4062 48.8438C11.6354 48.0729 11.25 47.1123 11.25 45.9619V16.5387H13.75V45.9619C13.75 46.3465 13.9102 46.699 14.2306 47.0194C14.551 47.3398 14.9037 47.5 15.2887 47.5H37.2113V50H15.2887Z" fill="#F1FAFF" />
                             </svg>

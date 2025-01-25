@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import '../css/caseStudies.css';
 import bghero from '../images/CaseStudies/casestudiesbg.webp';
 import Tabs from '@mui/material/Tabs';
@@ -36,7 +36,7 @@ import agr4 from "../images/CaseStudies/agr4.jpg";
 import cfcl1 from '../images/CaseStudies/cfcl1.webp'
 import cfclbg from '../images/CaseStudies/cfclbg.png'
 import herobgm from '../images/CaseStudies/hero-bgm.webp'
-import sch from "../images/CaseStudies/sch.webp";
+import itc_arch from "../images/CaseStudies/itc_arch.png";
 import { useLocation, useSearchParams } from 'react-router-dom';
 const cs = [
   ['itc', 'ITC Hotels Limited',
@@ -63,7 +63,7 @@ const cs = [
     [
       [`It is crucial for information to flow smoothly throughout different parts of the hotel. During power outages, backup systems kick in to keep everything working, so there is no interruption or loss of information. Inside the hotel, all the calls and messages between rooms are managed by a centralised system making it easy for guests to communicate. `],
       [`Meanwhile, Genetec's Security Desk brings together different security systems like cameras, doors, alarms, and access controls into one easy-to-use platform, simplifying operations across different areas. You can watch live or recorded camera footage, control cameras that can move and zoom, unlock doors, adjust schedules, and handle alarms—all from one place.`],
-      [`The collaboration between ITC Royal Bengal and SVNT reflects a commitment to excellence and enhancing guest experiences. This is a significant move from ITC towards modernising security and improving guest experiences in luxury hotels. By setting new standards in hospitality, ITC Royal Bengal solidifies its position as a leader in luxury accommodations and guest services.`]], itc3, itc4, itc2, itc, sch
+      [`The collaboration between ITC Royal Bengal and SVNT reflects a commitment to excellence and enhancing guest experiences. This is a significant move from ITC towards modernising security and improving guest experiences in luxury hotels. By setting new standards in hospitality, ITC Royal Bengal solidifies its position as a leader in luxury accommodations and guest services.`]], itc3, itc4, itc2, itc, itc_arch
   ],
 
   ['om', 'OM BOOKS', [
@@ -81,7 +81,7 @@ const cs = [
     ], `Unified in Harmony`, [[`'We connected all the cameras from different areas into the Stratocast cloud system. This setup allows for both live streaming and recording, which you can access through a subscription service, ensuring everything is covered and easy to reach. We made sure to use only cameras that work with Genetec, so careful selection and compatibility checks were essential. By bringing these cameras together on one cloud platform, our surveillance system now covers all the critical spots.
 `,],
     [`By integrating advanced IP cameras and leveraging the power of cloud technology, we created a seamless and accessible security network that keeps a vigilant eye on the entire premises, ensuring safety and peace of mind for everyone on site.`
-    ]], oem3, oem2, oem3, oem1, sch],
+    ]], oem3, oem2, oem3, oem1, itc_arch],
   ['jsw', 'JSW Steel Limited', [
     'Objective: To provide real-time monitoring of pellet size at each disc level, enabling timely adjustments to enhance production efficiency and quality control.',
     'Scope of Work: Customising parameters for real-time pellet size monitoring, & enabling data-driven operational adjustments. The system ensures accurate reporting, minimises rejects, & enhances production efficiency with robust software and precise measuring tools.',
@@ -92,7 +92,7 @@ const cs = [
   ]], `The Eve of Change`, [[`'Eye-on-Pellet' is a game-changer in pellet production. It keeps a close watch on pellet size in real time as they're forming on the disc. This means operators get instant updates on how things are shaping up without any delays. This system allows operators to make quick adjustments to improve pellet quality. It uses smart camera tech and clever algorithms to measure pellet size accurately, making sure every pellet is just right and cutting down on mistakes. It is easy to install and customise for specific needs. 'Eye-on-Pellet' promises smoother production and better quality control for pellets.`],
 
   [`The "Eye-on-Pellet" system has been put to the test in real pelletization plants to see how well it performs. It is designed to be super flexible and adaptable, fitting into all sorts of different situations and uses. What's cool about 'Eye-on-Pellet' is its versatility. Operators can choose to use one camera or multiple cameras depending on what they need to monitor. Plus, there are portable handheld systems if they need to keep an eye on things on the go. For a deeper dive into the data, the system can switch to offline mode in a lab, making it easy to dig deep into how those pellets are forming.`], [`Eye-on-Pellet has proven that it is the real-deal for boosting efficiency and productivity in pelletization. With its high-tech monitoring and easy adjustments, operators can keep things running smoothly and churn out top-quality pellets. Flexible and effective, "Eye-on-Pellet" is setting a new standard for how pelletization plants operate.`]]
-    , jsw3, jsw2, jsw4, jsw1, sch],
+    , jsw3, jsw2, jsw4, jsw1, itc_arch],
   ['kia', 'Kempegowda International Airport Limited ', [
     'Objective: To enhance video surveillance at terminals, runways & parking areas, strengthen access control measures at Kempegowda International Airport.',
     'Installation Summary: T1 - 308 cameras, 47 ANPR, and 112 horn speakers; T2 - 2820 cameras',
@@ -106,7 +106,7 @@ const cs = [
     [`Owned and operated by Bengaluru International Airport Limited (BIAL), the airport teamed up with SVNT to enhance security and streamline operations`]],
     `Enhancing Airport Safety`,
     [[`We enhanced video surveillance to keep a watchful eye on the two terminals, runways, and parking areas in real-time. Our focus on strengthening access control ensures that only authorised individuals could enter sensitive zones. Adding strong backup systems meant that these systems would run at all times, even during emergencies. By integrating all security functions into a single hub, from monitoring passenger flow to tracking vehicles, we've created a cohesive system that's easier to manage, boosting our security's strength and efficiency. Plus, our flexible infrastructure grows with the airport, securely handling and swiftly distributing vital information wherever it's needed. Managing everything from one place also made things run smoother, so they could respond quickly to any issues and solve problems faster. `]], `360 Vision`, [[`At Kempegowda International Airport, we've enhanced security by linking cameras, that store video recordings, with Genetec's platform. This connection lets us efficiently gather data and manage surveillance footage. Integrating these cameras into Genetec's system gives us better visibility and control over our security setup. This setup demonstrates how Genetec's platform can adapt and work seamlessly with other systems, making our security operations more efficient and effective.`],
-    [`By adopting advanced technology and innovative solutions, Kempegowda International Airport has enhanced both security measures and operational efficiency. This commitment highlights their dedication to ensuring airports remain secure and well-prepared for future challenges.`]], kia3, kia2, kia3, kia1, sch]
+    [`By adopting advanced technology and innovative solutions, Kempegowda International Airport has enhanced both security measures and operational efficiency. This commitment highlights their dedication to ensuring airports remain secure and well-prepared for future challenges.`]], kia3, kia2, kia3, kia1, itc_arch]
   // eslint-disable-next-line
   , ['cfcl', 'Chambal Fertilizers Limited ', [
     'Objective: To strengthen the security setup of CFCL Gadepan in plant and township area ',
@@ -120,7 +120,7 @@ const cs = [
     [[`The CCTV system uses advanced IP cameras with Intelligent Video Analytics (IVA) to cover the entire area. These smart cameras automatically detect and analyse events in real-time, identifying any suspicious activities, movements, or objects. We installed night vision cameras in key spots, enabling visibility up to 150-170 metres even in low light. To top it off, fixed cameras at all gates and drains ensure our surveillance system is thorough and reliable.`]
     ], `Heads Up!`, [[`The township, divided into blocks A, B, C, and D with a total of 540 houses, has been equipped with a panic alarm system. These systems feature panic buttons in every bedroom and bright rooftop LEDs for clear visibility. This battery-backed system immediately alerts the security control room during emergencies. When a panic alarm is activated, it sends a notification to the Control Room, where an alert message pops up. A GSM SIM installed in the controller then sends SMS alerts to designated mobile numbers in the security department. A GSM(Global System for Mobile Communications) SIM is a tiny, removable card that keeps your phone connected to the network for calls and internet.`],
     [`Our control room is the heart of our security system. Here, five powerful PCs are linked to 55-inch LED screens, keeping a close eye on cameras and alarms with uninterrupted power backup. In our server hub, all network connections and vital equipment are centralised, ensuring we capture 30 days of high-resolution video footage. This helps us analyse incidents in detail and gather evidence if needed.The security and plant staff are well-trained in using the CCTV system, with three levels of access: Viewers, Operators and Administrators.Our network uses fibre optics spread across a 20km area, connected in a loop to ensure backup if needed.`], [`Partnering with SVNT has fortified CFCL’s commitment to security, ensuring every resident in their township feels protected. With advanced surveillance and a responsive panic alarm system, CFCL guarantees the safety of both their plant and the community it serves.As CFCL continues to grow and explore new opportunities, they do so with the confidence that their security measures are top-notch and that their operations are safeguarded against any threat.`]],
-    , agr2, agr4, agr1, sch]
+    , agr2, agr4, agr1, itc_arch]
 ]
 
 const menuItems = [
@@ -192,7 +192,7 @@ const CaseStudies = () => {
   const [searchParams] = useSearchParams();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
-  const [expanded, setExpanded] = React.useState({});
+  const [expanded, setExpanded] = useState({});
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
   // const navigate = useNavigate();
   const location = useLocation();
@@ -201,7 +201,13 @@ const CaseStudies = () => {
   };
 
   const handleReadMore = (index) => {
-    setExpanded(prev => ({ ...prev, [index]: !prev[index] }));
+    setExpanded({ [index]: true }); 
+    // const expandedSectionRef = useRef(null);
+    // expandedSectionRef.current?.scrollIntoView({ behavior: 'smooth' }); 
+  };
+
+  const handleCollapse = (index) => {
+    setExpanded({}); // Close all expanded sections
   };
 
   const toggleDropdown = (index) => {
@@ -309,6 +315,7 @@ const CaseStudies = () => {
                       <div
                         id={caseStudy[0]}
                         key={csIndex}
+                        // ref={expandedSectionRef}
                         className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation' : ''}`}
                       >
                         {!isDropdownOpen[csIndex] && <img className="image-bg" src={caseStudy[3]} alt='' />}
@@ -349,10 +356,10 @@ const CaseStudies = () => {
                               </div>
                             </div>
                           )}
-                           {expanded[csIndex] && (
+                          {expanded[csIndex] && (
                             <div className='expanded-content'>
                               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent:"center", flexWrap:"wrap" }}>
-                                <img src={sch} alt="schematic" className=' exp-img' style={{ width: "100%" }} />
+                                <img src={itc_arch} alt="schematic" className=' exp-img' style={{ width: "100%" }} />
                                 <div className='expand-inner'>
                                   <div className='expand-inner-child'>
 
@@ -400,7 +407,7 @@ const CaseStudies = () => {
                           <div className="cs-learn-more collapse" style={{ bottom: "5%" }}>
                             {expanded[csIndex] && (
                               <button
-                                onClick={() => handleReadMore(csIndex)}
+                                onClick={() => handleCollapse()} // Close all expanded sections
                                 className="read_btn collapse-button"
                                 style={{
                                   position: "absolute",

@@ -229,8 +229,13 @@
   width: inherit;
 }
 
+.p-name{
+  font-weight: 600 !important;
+}
+
 .p-name,
 .p-quote {
+  flex: 1;
   font-size: 22px;
   line-height: 143.4%;
   padding-left: 3%;
@@ -267,7 +272,7 @@
   /* background-color: #76777A; */
   width: 90%;
   margin-top: 5%;
-  margin-bottom: 15%;
+  margin-bottom: 5%;
 }
 
 .sub-one {
@@ -655,8 +660,4 @@
     height: 413px;
   }
 
-  .people .p-img{
-    width: 90%;
-    height: 90%;
-  }
 }
