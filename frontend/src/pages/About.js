@@ -9,7 +9,6 @@ import 'aos/dist/aos.css';
 import aequs from '../images/AboutUs/client-aequs.svg';
 import allergan from '../images/AboutUs/client-allergan.svg';
 import ampath from '../images/AboutUs/client-ampath.svg';
-import kia from '../images/AboutUs/client-kia.svg';
 import brigade from '../images/AboutUs/client-brigade.svg';
 import esl from '../images/AboutUs/client-esl.svg';
 import gd from '../images/AboutUs/client-gd.svg';
@@ -56,9 +55,7 @@ import vaaman from '../images/AboutUs/vaaman.svg';
 import zinc from '../images/AboutUs/zinc.svg';
 import zuari from '../images/AboutUs/zuari.svg';
 import cae from '../images/AboutUs/client-cae.svg';
-import temp from '../images/AboutUs/client-temp.svg';
 import nst from '../images/AboutUs/client-nst.svg';
-import elcita from '../images/AboutUs/client-elcita.svg';
 import infopark from '../images/AboutUs/client-infopark.svg';
 import tata from '../images/AboutUs/client-tata.svg';
 import matrix from '../images/AboutUs/matrix.svg';
@@ -71,6 +68,9 @@ import sau from '../images/AboutUs/sau.svg';
 import seehawk from '../images/AboutUs/seehawk.svg';
 import source from '../images/AboutUs/source.svg';
 import thump from '../images/AboutUs/thump.svg';
+import nmdc from '../images/AboutUs/nmdc.svg';
+import sharp from '../images/AboutUs/sharp.svg';
+import sandvik from '../images/AboutUs/sandvik.svg';
 import aboutbg from '../images/AboutUs/about-bg-video.mp4';
 import Slider from "react-slick";
 
@@ -135,7 +135,6 @@ const About = () => {
       { src: thump, alt: 'thump' },
     ],
     Power: [
-      { src: kia, alt: 'kia' },
       { src: act, alt: 'act' },
       { src: iti, alt: 'iti' },
       { src: jsw, alt: 'jsw' },
@@ -149,7 +148,7 @@ const About = () => {
       { src: laurus, alt: 'laurus' },
       { src: access, alt: 'access' },
     ],
-    Pharma: [
+    Energy: [
       { src: ampath, alt: 'ampath' },
       { src: allergan, alt: 'Allergan' },
       { src: aragen, alt: 'aragen' },
@@ -158,12 +157,13 @@ const About = () => {
       { src: intox, alt: 'intox' },
       { src: natco, alt: 'natco' },
       { src: pidilite, alt: 'pidilite' },
+      { src: zinc, alt: 'zinc' },
+      { src: sandvik, alt: 'sandvik' },
+      { src: nmdc, alt: 'nmdc' },
+      { src: vedanta, alt: 'vedanta' },
     ],
-    Hotels: [
+    Infrastructure: [
       { src: itc, alt: 'itc' },
-    ],
-    Techno: [
-      { src: akn, alt: 'itc' },
       { src: cargill, alt: 'cargill' },
       { src: genpact, alt: 'genpact' },
       { src: harista, alt: 'harista' },
@@ -174,16 +174,7 @@ const About = () => {
       { src: om, alt: 'om' },
       { src: opme, alt: 'opme' },
       { src: placid, alt: 'placid' },
-      { src: railtel, alt: 'railtel' },
-    ],
-    Agro: [
-      { src: buhler, alt: 'buhler' },
-      { src: itc, alt: 'itc' },
-      { src: edb, alt: 'edb' },
-      { src: indigo, alt: 'indigo' },
-      { src: itc, alt: 'itc' },
-      { src: edb, alt: 'edb' },
-      { src: buhler, alt: 'buhler' },
+      { src: cae, alt: 'cae' },
     ],
     Industrial: [
       { src: aequs, alt: 'Aequs' },
@@ -200,25 +191,12 @@ const About = () => {
       { src: proconnect, alt: 'proconnect' },
       { src: ultratech, alt: 'ultratech' },
       { src: vaaman, alt: 'vaaman' },
-    ],
-    Transport: [
-      { src: kia, alt: 'kia' },
-      { src: cae, alt: 'cae' },
       { src: isro, alt: 'isro' },
-      { src: mahindra, alt: 'mahindra' },
+      { src: sharp, alt: 'sharp' },
       { src: tata, alt: 'tata' },
       { src: nst, alt: 'nst' },
-      { src: isro, alt: 'isro' },
+
     ],
-    Realty: [
-      { src: brigade, alt: 'brigade' },
-      { src: temp, alt: 'temp' },
-      { src: elcita, alt: 'elcita' },
-      { src: nexus, alt: 'nexus' },
-      { src: om, alt: 'om' },
-      { src: opme, alt: 'opme' },
-      { src: elcita, alt: 'elcita' },
-    ]
   };
 
   useEffect(() => {
@@ -246,7 +224,7 @@ const About = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesPerRow: 1,
           slidesToScroll: 1,
           infinite: true,
@@ -291,7 +269,7 @@ const About = () => {
       <div className="ceo d-flex">
         <div className="ceo-text">
           <h1 className="fs-1 ceo-text-head" style={{ marginBottom: '2rem' }} data-aos='fade-down'>Meet Our Managing Director </h1>
-          <p align="justify" className="ceo-text-p w-75" style={{ marginBottom: '2rem' }} data-aos='fade-right'>
+          <p className="ceo-text-p w-75" style={{ marginBottom: '2rem' }} data-aos='fade-right'>
             “User experience is everything. It always has been, but it's still undervalued and under-invested in. If you don't know user-centered design, study it. Hire people who know it. Obsess over it. Live and breathe it. ”
           </p>
           <h1 style={{ float: 'inline-end' }} data-aos='fade-right'>- Mr. V G Salimath</h1>

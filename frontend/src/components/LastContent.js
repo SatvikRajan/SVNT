@@ -24,7 +24,7 @@ export default function LastContent() {
             <li>Discover New Horizons </li>
             <li>Design the Future</li>
           </ul>
-          <Link to="/careers" style={{ width: '15%', marginLeft: 'auto' }}>
+          <Link to="/careers" style={{ width: '16%', marginLeft: 'auto' }}>
             <p className="last-text1 join">Join Us</p>
           </Link>
         </div>

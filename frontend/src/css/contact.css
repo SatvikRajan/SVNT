@@ -24,6 +24,9 @@
   margin-left: 8rem;
   padding-top: 3rem;
 }
+.hyderabad-gap{
+  gap: 60px;
+}
 @media (max-width: 864px) {
   .offices1 {
     flex-wrap: wrap;
@@ -32,8 +35,16 @@
     display: block;
   }
   .form-body {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding: 2rem;
     gap: 5rem;
     flex-wrap: wrap !important;
+  }
+  .location{
+    margin-left: 3rem !important;
+    margin-right: 3rem !important;
+    padding: 2rem;
   }
   .write-h1 {
     text-align: center;

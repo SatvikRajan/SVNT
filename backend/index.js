@@ -6,6 +6,7 @@ const adminRoutes = require('../backend/routes/AdminRoutes');
 const candidateRoutes = require('./routes/CandidateRoutes');
 const jobRoutes = require('./routes/JobRoutes');
 const Candidate = require('./model/CandidatesModel');
+const JobModel = require('./model/JobModel');
 const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
@@ -35,7 +36,7 @@ const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'satvikrajan@gmail.com',
-        pass: 'cwlx qmia fpco ifij',
+        pass: 'jhby kkwf bmaz xxom',
     },
 });
 
@@ -95,6 +96,16 @@ app.get('/candidates', async (req, res) => {
     }
 });
 
+app.get('/api/jobs', async (req, res) => {
+    try {
+        const jobs = await JobModel.find({});
+        res.status(200).json(jobs);
+    } catch (error) {
+        res.status(500).json({ error: 'Error fetching jobs' });
+    }
+});
+
+
 
 app.post('/careers/api/submitForm', upload.single('resume'), async (req, res) => {
     try {
@@ -115,6 +126,16 @@ app.post('/careers/api/submitForm', upload.single('resume'), async (req, res) =>
     } catch (error) {
         console.error('Error saving candidate:', error);
         res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+app.delete('/api/jobs/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        await JobModel.findByIdAndDelete(id);
+        res.status(200).json({ message: 'Job deleted successfully' });
+    } catch (error) {
+        res.status(500).json({ error: 'Error deleting job' });
     }
 });
 

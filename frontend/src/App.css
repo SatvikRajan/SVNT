@@ -180,7 +180,6 @@ p.write1 {
 
 .inp .textarea {
   height: 20rem;
-  color: #514567;
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
@@ -251,7 +250,6 @@ p.write1 {
 }
 
 .inp input {
-  color: #514567;
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
@@ -323,6 +321,8 @@ p.write1 {
 
 .dropdown-career {
   width: 100%;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .dropdown-toggle,

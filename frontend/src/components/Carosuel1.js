@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/card.css';
 import image1 from '../images/Home/carousel-image-1.webp';
 import image1m from '../images/Home/carousel-image-1m.webp';
 import image2 from '../images/Home/carousel-image-2.webp';

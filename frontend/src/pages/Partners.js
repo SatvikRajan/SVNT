@@ -4,7 +4,6 @@ import '../css/partners.css'
 import image1 from '../images/Partners/image1.webp'
 import image1m from '../images/Partners/image1m.webp'
 import image2 from '../images/Partners/image2.webp'
-import image4 from '../images/Partners/person.webp'
 import image5 from '../images/Partners/genetec_logo_white.webp'
 import image6 from '../images/Partners/arrow_forward.svg'
 import pbgm from '../images/Partners/partners-bgmobile.webp'
@@ -232,16 +231,17 @@ export default function Partners() {
                         <div className='people-box'>
                             <div className='people'>
                                 <div className='p-name'>
-                                    <p>ND Prasad <br />Director</p>
+                                    <p>ND Prasad </p>
+                                    {/* <p>Director</p> */}
                                 </div>
-                                <p className='p-quote'>“No growth hack, brilliant marketing idea can save you long-term if you don’t have a sufficiently good product.”</p>
+                                <p className='p-quote'>“Opportunities don’t come knocking at your door, you must build your own door.”</p>
                                 <div className='p-img'>
                                     <img src={nd} alt='person' />
                                 </div>
                             </div>
                             <div className='people'>
                                 <div className='p-name'>
-                                    <p>Soumendra <br />Director</p>
+                                    <p>Soumendra</p>
                                 </div>
                                 <p className='p-quote'>“No growth hack, brilliant marketing idea can save you long-term if you don’t have a sufficiently good product.”</p>
                                 <div className='p-img'>
@@ -250,11 +250,11 @@ export default function Partners() {
                             </div>
                             {/* <div className='people'>
                                 <div className='p-name'>
-                                    <p>Soumendra <br />Director</p>
+                                    <p>Soumendra</p>
                                 </div>
                                 <p className='p-quote'>“No growth hack, brilliant marketing idea can save you long-term if you don’t have a sufficiently good product.”</p>
                                 <div className='p-img'>
-                                    <img src={image4} alt='person' />
+                                    <img src={soumendra} alt='person' />
                                 </div>
                             </div> */}
 

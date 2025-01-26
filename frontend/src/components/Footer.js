@@ -6,10 +6,10 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="row d-flex align-items-center justify-content-between">
-          <div className="col-md-6 w-25 fs-5  foot">
+          <div className="col-md-6 fs-5 foot">
             <span>SVNT Infotech Pvt. Ltd.</span>
           </div>
-          <div className="col-md-6 p-2 w-25 foot">
+          <div className="col-md-6 p-2 foot">
             <div
               style={{ gap: "30px", marginBottom: "10px" }}
               className="d-flex align-items-start footer-email"
@@ -54,7 +54,7 @@ const Footer = () => {
           Legal Disclaimer |&nbsp; Disclaimer: Fraud Recruitment Offers |&nbsp;
           A Group Company{" "}
         </p>
-        <p className="justify-content-end">&copy; 2024 All rights reserved. SVNT Infotech Pvt Ltd.</p>
+        <p className="justify-content-end">&copy; 2025 All rights reserved. SVNT Infotech Pvt Ltd.</p>
       </div>
     </footer>
   );
