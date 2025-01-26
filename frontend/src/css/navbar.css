@@ -14,7 +14,7 @@
   font-family: "Poppins", sans-serif;
   letter-spacing: 0 !important;
   
-  /* border-radius: 100px; */
+  border-radius: 100px;
 
   box-sizing: content-box;
   padding-right: 0%;
@@ -22,7 +22,7 @@
   /* padding: 0 !important; */
   /* left: 52%; */
   
-  /* position: fixed !important; */
+  position: fixed !important;
 
   background-color: #f1faff;
   width: 42%;
@@ -34,17 +34,30 @@
   /* transition: transform 0.3s ease-in-out 0.5s !important; */
   /* animation: expandFromLeft 0.3s ease; */
   
-  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px; */
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   
   display: flex;
   align-items: center;
   /* justify-content: space-between; */
   /* padding-right: 12px; */
   /* padding: 0 2px; */
-  /* transition: padding 0.1s ease;  
+  transition: padding 0.1s ease;  
   animation-duration: 0.3s;
-  animation-timing-function: ease; */
+  animation-timing-function: ease;
 }
+
+/* navbar.css */
+
+.navbar-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-visible {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
 
 @keyframes expandFromLeft {
   0% {
