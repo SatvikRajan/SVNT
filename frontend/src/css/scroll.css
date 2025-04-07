@@ -1,0 +1,20 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  
+  .scroll-icon {
+    height: 4rem;
+    width: 4rem;
+    background-color: #251741;
+    opacity: 95%;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(7, 6, 6, 0.2);
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  

@@ -122,7 +122,7 @@ const cs = [
     [[`The CCTV system uses advanced IP cameras with Intelligent Video Analytics (IVA) to cover the entire area. These smart cameras automatically detect and analyse events in real-time, identifying any suspicious activities, movements, or objects. We installed night vision cameras in key spots, enabling visibility up to 150-170 metres even in low light. To top it off, fixed cameras at all gates and drains ensure our surveillance system is thorough and reliable.`]
     ], `Heads Up!`, [[`The township, divided into blocks A, B, C, and D with a total of 540 houses, has been equipped with a panic alarm system. These systems feature panic buttons in every bedroom and bright rooftop LEDs for clear visibility. This battery-backed system immediately alerts the security control room during emergencies. When a panic alarm is activated, it sends a notification to the Control Room, where an alert message pops up. A GSM SIM installed in the controller then sends SMS alerts to designated mobile numbers in the security department. A GSM(Global System for Mobile Communications) SIM is a tiny, removable card that keeps your phone connected to the network for calls and internet.`],
     [`Our control room is the heart of our security system. Here, five powerful PCs are linked to 55-inch LED screens, keeping a close eye on cameras and alarms with uninterrupted power backup. In our server hub, all network connections and vital equipment are centralised, ensuring we capture 30 days of high-resolution video footage. This helps us analyse incidents in detail and gather evidence if needed.The security and plant staff are well-trained in using the CCTV system, with three levels of access: Viewers, Operators and Administrators.Our network uses fibre optics spread across a 20km area, connected in a loop to ensure backup if needed.`], [`Partnering with SVNT has fortified CFCL’s commitment to security, ensuring every resident in their township feels protected. With advanced surveillance and a responsive panic alarm system, CFCL guarantees the safety of both their plant and the community it serves.As CFCL continues to grow and explore new opportunities, they do so with the confidence that their security measures are top-notch and that their operations are safeguarded against any threat.`]],
-    , agr2, agr4, agr1, itc_arch]
+    , agr2, agr4, agr1,itc_arch]
 ]
 
 const menuItems = [
@@ -194,22 +194,20 @@ const CaseStudies = () => {
   const [searchParams] = useSearchParams();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
-  const [expanded, setExpanded] = useState({});
-  const [isDropdownOpen, setIsDropdownOpen] = useState(true);
-  // const navigate = useNavigate();
+  const [expanded, setExpanded] = useState(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState({});
+  const caseStudyRefs = useRef([]);
   const location = useLocation();
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   const handleReadMore = (index) => {
-    setExpanded({ [index]: true }); 
-    // const expandedSectionRef = useRef(null);
-    // expandedSectionRef.current?.scrollIntoView({ behavior: 'smooth' }); 
+    setExpanded(index); // Expand the selected case study
   };
 
-  const handleCollapse = (index) => {
-    setExpanded({}); // Close all expanded sections
+  const handleCollapse = () => {
+    setExpanded(null); // Collapse all sections
   };
 
   const toggleDropdown = (index) => {
@@ -317,7 +315,7 @@ const CaseStudies = () => {
                       <div
                         id={caseStudy[0]}
                         key={csIndex}
-                        // ref={expandedSectionRef}
+                        ref={(el) => (caseStudyRefs.current[csIndex] = el)}
                         className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation' : ''}`}
                       >
                         {!isDropdownOpen[csIndex] && <img className="image-bg" src={caseStudy[3]} alt='' />}
@@ -361,7 +359,7 @@ const CaseStudies = () => {
                           {expanded[csIndex] && (
                             <div className='expanded-content'>
                               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent:"center", flexWrap:"wrap" }}>
-                                <img src={itc_arch} alt="schematic" className=' exp-img' style={{ width: "100%" }} />
+                              <img src={itc_arch} alt="schematic" className='exp-img' style={{ width: "100%" }} />
                                 <div className='expand-inner'>
                                   <div className='expand-inner-child'>
 

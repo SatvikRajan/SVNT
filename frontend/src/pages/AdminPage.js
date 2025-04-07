@@ -26,7 +26,7 @@ export default function AdminPage() {
     useEffect(() => {
         const fetchCandidates = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/candidates');
+                const response = await axios.get('https://svnt-backend.fly.dev/candidates');
                 setCandidates(response.data);
             } catch (error) {
                 console.error('Error fetching candidates:', error);
@@ -39,7 +39,7 @@ export default function AdminPage() {
     useEffect(() => {
         const fetchJobs = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/api/jobs');
+                const response = await axios.get('https://svnt-backend.fly.dev/api/jobs');
                 setJobs(response.data);
             } catch (error) {
                 console.error('Error fetching jobs:', error);
@@ -58,7 +58,7 @@ export default function AdminPage() {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:8080/admin/api/jobs', {
+            const response = await fetch('https://svnt-backend.fly.dev/admin/api/jobs', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ export default function AdminPage() {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:8080/api/candidates/${id}`);
+            await axios.delete(`https://svnt-backend.fly.dev/api/candidates/${id}`);
             setCandidates(candidates.filter(candidate => candidate._id !== id));
         } catch (error) {
             console.error('Error deleting candidate:', error);
@@ -102,7 +102,7 @@ export default function AdminPage() {
     const ResumeLinkComponent = (params) => {
         return (
             <Link
-                to={`http://localhost:8080/${params.value}`}
+                to={`https://svnt-backend.fly.dev/${params.value}`}
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -113,7 +113,7 @@ export default function AdminPage() {
 
     const handleDeleteClick = async (job) => {
         try {
-            await axios.delete(`http://localhost:8080/api/jobs/${job._id}`);
+            await axios.delete(`https://svnt-backend.fly.dev/api/jobs/${job._id}`);
             setJobs(jobs.filter((item) => item._id !== job._id)); // Remove the deleted job from the state
         } catch (error) {
             console.error('Error deleting job:', error);

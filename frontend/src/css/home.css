@@ -256,27 +256,6 @@
   width: 68% !important;
 }
 
-.scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  cursor: pointer;
-}
-
-.scroll-icon {
-  height: 4rem;
-  width: 4rem;
-  background-color: #ffffff;
-  border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.3s, visibility 0.3s;
-}
-
-.scroll-icon:hover {
-  background-color: #f1faff;
-}
 @media (min-width: 480px) {
   .home-cs-card:hover .home-cs-card-image {
     height: 50%;

@@ -48,7 +48,7 @@ const Contact = () => {
         return;
       }
 
-      const response = await axios.post('http://localhost:8080/send-email', {
+      const response = await axios.post('https://svnt-backend.fly.dev/send-email', {
         senderName,
         senderEmail,
         subject,
