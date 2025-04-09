@@ -52,7 +52,7 @@ const CareersPage = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.get('https://svnt-backend.fly.dev/admin/api/jobs');
+        const response = await axios.get('https://svnt-backend1-summer-star-9951.fly.dev/admin/api/jobs');
         setJobs(response.data);
       } catch (error) {
         console.error('Error fetching jobs:', error);
@@ -69,7 +69,7 @@ const CareersPage = () => {
         try {
           const selectedJob = jobs.find(job => job.title === selectedJobTitle);
           if (selectedJob) {
-            const response = await axios.get(`https://svnt-backend.fly.dev/admin/api/jobs/${selectedJob._id}`);
+            const response = await axios.get(`https://svnt-backend1-summer-star-9951.fly.dev/admin/api/jobs/${selectedJob._id}`);
             let data = response.data;
             if (typeof data.requiredskills === 'string') {
               data.requiredskills = data.requiredskills.split(',').map(skill => skill.trim());
@@ -104,7 +104,7 @@ const CareersPage = () => {
     formData.append('resume', resume)
 
     try {
-      const response = await fetch('https://svnt-backend.fly.dev/careers/api/submitForm', {
+      const response = await fetch('https://svnt-backend1-summer-star-9951.fly.dev/careers/api/submitForm', {
         method: 'POST',
         body: formData,
       });
