@@ -36,7 +36,12 @@ const CareersPage = () => {
   });
   const [selectedJobTitle, setSelectedJobTitle] = useState('');
   const handleFileChange = (e) => {
-    setResume(e.target.files[0]);
+    const file = e.target.files[0];
+    if (file && file.type === "application/pdf") {
+      setResume(file);
+    } else {
+      toast.error("Please upload a PDF file.");
+    }
   };
 
   function validateEmail(email) {
@@ -94,43 +99,54 @@ const CareersPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
+    if (name.length < 3) {
+      toast.error('Name should be more than 3 characters');
+      return;
+    }
+    if (!validateEmail(email)) {
+      toast.error('Invalid Email');
+      return;
+    }
+    if (!validatePhone(phone)) {
+      toast.error('Invalid Phone Number');
+      return;
+    }
+    if (!resume) {
+      toast.error('Please upload your resume in PDF format');
+      return;
+    }
+  
     const formData = new FormData();
     formData.append('name', name);
     formData.append('email', email);
     formData.append('phone', phone);
     formData.append('totalExperience', totalExperience);
     formData.append('relevantExperience', relevantExperience);
-    formData.append('resume', resume)
-
+    formData.append('resume', resume);
+  
     try {
       const response = await fetch('https://svnt-backend1-summer-star-9951.fly.dev/careers/api/submitForm', {
         method: 'POST',
         body: formData,
       });
-
+  
       if (!response.ok) {
         throw new Error('Error submitting form');
       }
+  
+      toast.success('Form submitted successfully');
       setName('');
       setEmail('');
       setPhone('');
       setTotalExperience('');
       setRelevantExperience('');
       setResume(null);
-      toast.success('Form submitted successfully');
     } catch (error) {
-      if (name.length < 3) {
-        toast.error('Name should be more than 3 characters')
-      }
-      else if (validateEmail(email) === false) {
-        toast.error('Invalid Email')
-      }
-      else if (validatePhone(phone) === false) {
-        toast.error('Invalid Phone Number')
-      }
+      toast.error(error.message || 'Something went wrong');
     }
   };
+  
 
   const handleApplyClick = () => {
     setShowForm(true);
@@ -255,13 +271,13 @@ const CareersPage = () => {
                   </p>
                   <div className="form-box-1">
                     <span style={{ marginLeft: "10px" }}>Apply Online</span>
-                    <label for="inp" className="inp">
+                    <label htmlFor="inp" className="inp">
                       <input type="text" id="inp" placeholder="&nbsp;" value={name} onChange={(e) => setName(e.target.value)} />
                       <span className="label">Name</span>
                       <span className="focus-bg"></span>
                     </label>
                     <div className="d-flex" style={{ gap: "15px" }}>
-                      <label for="inp" className="inp">
+                      <label htmlFor="inp" className="inp">
                         <input type="text" id="inp" placeholder="&nbsp;" value={email} onChange={(e) => setEmail(e.target.value)} />
                         <span className="label">Email</span>
                         <span className="focus-bg"></span>
@@ -272,12 +288,12 @@ const CareersPage = () => {
                         <span className="focus-bg"></span>
                       </label>
                     </div>
-                    <label for="inp" className="inp">
+                    <label htmlFor="inp" className="inp">
                       <input type="text" id="inp" placeholder="&nbsp;" value={totalExperience} onChange={(e) => setTotalExperience(e.target.value)} />
                       <span className="label">Total Experience</span>
                       <span className="focus-bg"></span>
                     </label>
-                    <label for="inp" className="inp">
+                    <label htmlFor="inp" className="inp">
                       <input type="text" id="inp" placeholder="&nbsp;" value={relevantExperience} onChange={(e) => setRelevantExperience(e.target.value)} />
                       <span className="label">Relevant Experience</span>
                       <span className="focus-bg"></span>
@@ -290,8 +306,9 @@ const CareersPage = () => {
                         id="resume"
                         name="resume"
                         type="file"
-                        accept=".pdf"
+                        accept="application/pdf"
                         onChange={handleFileChange}
+                        disabled={!!resume}
                       />
                     </div>
                   </div>

@@ -101,13 +101,13 @@ export default function AdminPage() {
 
     const ResumeLinkComponent = (params) => {
         return (
-            <Link
-                to={`https://svnt-backend1-summer-star-9951.fly.dev/${params.value}`}
+            <a
+                href={`https://svnt-backend1-summer-star-9951.fly.dev/api/resume/${params.data._id}`}
                 target="_blank"
                 rel="noopener noreferrer"
             >
                 Download Resume
-            </Link>
+            </a>
         );
     };
 
@@ -218,7 +218,7 @@ export default function AdminPage() {
                                     </div>
                                     <div>
                                         <label>Experience:</label>
-                                        <input type="number" name="experience" value={job.experience} onChange={handleChange} />
+                                        <input type="text" name="experience" value={job.experience} onChange={handleChange} />
                                     </div>
                                     <div>
                                         <label>Primary Skills:</label>
