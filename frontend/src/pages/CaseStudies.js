@@ -194,20 +194,19 @@ const CaseStudies = () => {
   const [searchParams] = useSearchParams();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
-  const [expanded, setExpanded] = useState(null);
-  const [isDropdownOpen, setIsDropdownOpen] = useState({});
-  const caseStudyRefs = useRef([]);
+  const [expanded, setExpanded] = useState({});
+  const [isDropdownOpen, setIsDropdownOpen] = useState(true);
+  // const caseStudyRefs = useRef([]);
   const location = useLocation();
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   const handleReadMore = (index) => {
-    setExpanded(index); // Expand the selected case study
+    setExpanded({ [index]: true });
   };
-
-  const handleCollapse = () => {
-    setExpanded(null); // Collapse all sections
+  const handleCollapse = (index) => {
+    setExpanded({});
   };
 
   const toggleDropdown = (index) => {
@@ -315,7 +314,7 @@ const CaseStudies = () => {
                       <div
                         id={caseStudy[0]}
                         key={csIndex}
-                        ref={(el) => (caseStudyRefs.current[csIndex] = el)}
+                        // ref={(el) => (caseStudyRefs.current[csIndex] = el)}
                         className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation' : ''}`}
                       >
                         {!isDropdownOpen[csIndex] && <img className="image-bg" src={caseStudy[3]} alt='' />}
