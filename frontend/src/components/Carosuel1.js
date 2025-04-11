@@ -31,7 +31,7 @@ function Carosuel1() {
           <div className="carousel-caption cc1 cc3 d-none d-md-block">
             <h1>Dive into our case studies and see how we deliver results!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '60%', marginStartBLock: 'auto' }} to='/casestudies'>Learn about our Case Studies</Link></p>
+            <p style={{ fontSize: '20px', marginTop: '1rem' }}><Link className='readmore text-white' style={{ width: '60%', marginStartBLock: 'auto' }} to='/casestudies'>About our Case Studies</Link></p>
           </div>
         </div>
         <div className="carousel-item ci" style={{ gap: '3rem' }}>
