@@ -112,6 +112,12 @@ const CareersPage = () => {
       toast.error('Invalid Phone Number');
       return;
     }
+    if (!relevantExperience){
+      toast.error('Please add relevant experience');
+    }
+    if (!totalExperience){
+      toast.error('Please add your total experience');
+    }
     if (!resume) {
       toast.error('Please upload your resume in PDF format');
       return;

@@ -26,6 +26,7 @@ export default function Register() {
             navigate('/')
         }
     }, [navigate])
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (handleValidation()) {
