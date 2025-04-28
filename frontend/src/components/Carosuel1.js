@@ -86,7 +86,7 @@ function Carosuel1() {
               awards and recognition over
               the years!
             </h1>
-            <p style={{ fontSize: '20px', marginTop: '1rem', width: '50%', alignContent: 'center' }}><Link className='readmore text-white' style={{ width: '70%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/carrers'>Be an SVNTian</Link>
+            <p style={{ fontSize: '20px', marginTop: '1rem', width: '50%', alignContent: 'center' }}><Link className='readmore text-white' style={{ width: '70%', marginLeft: 'auto', marginStartBLock: 'auto' }} to='/careers'>Be an SVNTian</Link>
             </p>
           </div>
         </div>
