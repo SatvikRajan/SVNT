@@ -24,7 +24,7 @@ import wwdb21 from '../images/Services/wwdb21.svg'
 import wwdb41 from '../images/Services/wwdb41.svg'
 import wwdb61 from '../images/Services/wwdb61.svg'
 import wwdb51 from '../images/Services/wwdb51.svg'
-
+import { Helmet } from 'react-helmet';
 import IPSlider from "../components/Sliders/IPSSlider";
 import INSlider from "../components/Sliders/INSSlider";
 import IntegrationSlider from "../components/Sliders/IntegrationSlider";
@@ -193,121 +193,132 @@ const Services = () => {
   };
 
   return (
-    <div className="App">
-      <picture>
-        <source media="(max-width: 480px)" srcSet={servicebgm} />
-        <source media="(min-width: 480px)" srcSet={servicebg} />
-        <img
-          style={{ position: "relative" }}
-          src={servicebg}
-          className="service-bg"
-          alt=""
+    <>
+      <Helmet>
+        <title>Our Services – SVNT Infotech</title>
+        <meta
+          name="description"
+          content="Explore our range of services including smart wearables, IoT solutions, and software development."
         />
-      </picture>
+        <link rel="canonical" href="https://svntech.com/services" />
+      </Helmet>
 
-      {/* <p className='service-text'>Expertise you can trust:<br /> Tailored solutions just for you!</p> */}
-      <div className='services-main'>
+      <div className="App">
+        <picture>
+          <source media="(max-width: 480px)" srcSet={servicebgm} />
+          <source media="(min-width: 480px)" srcSet={servicebg} />
+          <img
+            style={{ position: "relative" }}
+            src={servicebg}
+            className="service-bg"
+            alt=""
+          />
+        </picture>
 
-        <p className='services-mainhead'>
-          Gain a deeper insight into our{" "}
-          <span style={{ fontWeight: "500", color: "black" }}>Services</span>
-        </p>
-        <div className='case-container'>
-          <Box sx={{ width: '100%', height: 'auto', padding: 'auto' }}>
-            <div className='services-parent-container'>
-              <Tabs
-                value={value}
-                onChange={handleChange}
-                variant="scrollable"
-                // className='menu'
-                scrollButtons
-                allowScrollButtonsMobile
-                aria-label="scrollable auto tabs example"
-                sx={{
-                  // backgroundColor:'pink',
-                  width: '100%',
-                  '& .MuiTab-root': {
-                    textTransform: 'none', // Prevent uppercase transformation
-                    color: 'inherit', // Default font color
-                    minWidth: '300px !important',
-                    // marginLeft:'3% !important',
-                    maxWidth: '500px !important',
-                    fontSize: '22px !important',
-                    // marginRight: '3% !important',
-                  },
-                  '& .MuiTab-root.Mui-selected': {
-                    backgroundColor: '#251741', // Background color when tab is selected
-                    color: 'white', // Font color when tab is selected
-                    // fontWeight: 'bold', // Font weight when tab is selected
-                    minWidth: '300px !important',
-                    fontSize: '22px !important',
-                    marginRight: '3% !important',
-                    // maxWidth: '500px !important',
-                  },
-                  '& .MuiTabs-indicator': {
-                    display: 'none',// Hide the default indicator
-                  },
-                  '& .MuiSvgIcon-root': {
-                    height: '3em',
-                    width: '3em'
-                  },
-                  '& .MuiTabs-scrollButtons.Mui-disabled': {
-                    opacity: 0.3,
-                  }
-                }}
-                className="custom-tabs"
-              >
-                {menuItems.map((item, index) => (
-                  <Tab
-                    key={item.id}
-                    label={item.name}
-                    iconPosition='start'
-                    icon={
-                      <Avatar
-                        alt={item.name}
-                        src={value === index ? item.selectedImage : item.image}
-                        sx={{
+        {/* <p className='service-text'>Expertise you can trust:<br /> Tailored solutions just for you!</p> */}
+        <div className='services-main'>
 
-                          color: 'inherit', // Ensure the default font color
-                          '&.Mui-selected': {
-                            backgroundColor: 'purple', // Background color when tab is selected
-                            color: 'white', // Font color when tab is selected
-                          },
-                          '&:hover': {
-                            backgroundColor: 'purple', // Background color on hover (optional)
-                          },
-                        }}
-                      />
+          <p className='services-mainhead'>
+            Gain a deeper insight into our{" "}
+            <span style={{ fontWeight: "500", color: "black" }}>Services</span>
+          </p>
+          <div className='case-container'>
+            <Box sx={{ width: '100%', height: 'auto', padding: 'auto' }}>
+              <div className='services-parent-container'>
+                <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  variant="scrollable"
+                  // className='menu'
+                  scrollButtons
+                  allowScrollButtonsMobile
+                  aria-label="scrollable auto tabs example"
+                  sx={{
+                    // backgroundColor:'pink',
+                    width: '100%',
+                    '& .MuiTab-root': {
+                      textTransform: 'none', // Prevent uppercase transformation
+                      color: 'inherit', // Default font color
+                      minWidth: '300px !important',
+                      // marginLeft:'3% !important',
+                      maxWidth: '500px !important',
+                      fontSize: '22px !important',
+                      // marginRight: '3% !important',
+                    },
+                    '& .MuiTab-root.Mui-selected': {
+                      backgroundColor: '#251741', // Background color when tab is selected
+                      color: 'white', // Font color when tab is selected
+                      // fontWeight: 'bold', // Font weight when tab is selected
+                      minWidth: '300px !important',
+                      fontSize: '22px !important',
+                      marginRight: '3% !important',
+                      // maxWidth: '500px !important',
+                    },
+                    '& .MuiTabs-indicator': {
+                      display: 'none',// Hide the default indicator
+                    },
+                    '& .MuiSvgIcon-root': {
+                      height: '3em',
+                      width: '3em'
+                    },
+                    '& .MuiTabs-scrollButtons.Mui-disabled': {
+                      opacity: 0.3,
                     }
-                    className='custom-services-tab custom-tab '
-                    sx={{ minWidth: '50px', maxWidth: '50px' }} // Set the minWidth and maxWidth directly on Tab
-                  />
+                  }}
+                  className="custom-tabs"
+                >
+                  {menuItems.map((item, index) => (
+                    <Tab
+                      key={item.id}
+                      label={item.name}
+                      iconPosition='start'
+                      icon={
+                        <Avatar
+                          alt={item.name}
+                          src={value === index ? item.selectedImage : item.image}
+                          sx={{
+
+                            color: 'inherit', // Ensure the default font color
+                            '&.Mui-selected': {
+                              backgroundColor: 'purple', // Background color when tab is selected
+                              color: 'white', // Font color when tab is selected
+                            },
+                            '&:hover': {
+                              backgroundColor: 'purple', // Background color on hover (optional)
+                            },
+                          }}
+                        />
+                      }
+                      className='custom-services-tab custom-tab '
+                      sx={{ minWidth: '50px', maxWidth: '50px' }} // Set the minWidth and maxWidth directly on Tab
+                    />
+                  ))}
+                </Tabs>
+                {menuItems.map((item, index) => (
+                  <TabPanel key={item.id} value={value} index={index} dir={theme.direction}>
+                    <div id={`tab-${item.id}`} className="services-details">
+                      <div className='g1'>
+                        {item.details.map((detail, index) => (
+                          <div key={index} className="service-card">
+                            <h2 className="card-header">{detail.header}</h2>
+                            <p style={{ fontSize: "22px", paddingTop: '10px' }}>{detail.content}</p>
+                          </div>
+                        ))}
+                      </div>
+                      <div className='g2'>
+                        {item.slider}
+                      </div>
+                    </div>
+                  </TabPanel>
                 ))}
-              </Tabs>
-              {menuItems.map((item, index) => (
-                <TabPanel key={item.id} value={value} index={index} dir={theme.direction}>
-                  <div id={`tab-${item.id}`} className="services-details">
-                    <div className='g1'>
-                      {item.details.map((detail, index) => (
-                        <div key={index} className="service-card">
-                          <h2 className="card-header">{detail.header}</h2>
-                          <p style={{ fontSize: "22px", paddingTop: '10px' }}>{detail.content}</p>
-                        </div>
-                      ))}
-                    </div>
-                    <div className='g2'>
-                      {item.slider}
-                    </div>
-                  </div>
-                </TabPanel>
-              ))}
-            </div>
-          </Box>
+              </div>
+            </Box>
+          </div>
+
         </div>
 
       </div>
-
-    </div>
+    </>
   );
 }
 

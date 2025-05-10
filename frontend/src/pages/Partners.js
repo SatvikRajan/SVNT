@@ -15,6 +15,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Slider from "react-slick";
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet'
 
 function SampleNextArrow(props) {
     const { style, onClick } = props;
@@ -79,12 +80,12 @@ export default function Partners() {
         prevArrow: <SamplePrevArrow />,
         responsive: [
             {
-              breakpoint: 703, // Screen width at which to disable arrows
-              settings: {
-                arrows: false, // Disable arrows
-              },
+                breakpoint: 703, // Screen width at which to disable arrows
+                settings: {
+                    arrows: false, // Disable arrows
+                },
             },
-          ],
+        ],
     };
 
 
@@ -100,6 +101,14 @@ export default function Partners() {
 
     return (
         <>
+            <Helmet>
+                <title>Our Partners – SVNT Infotech</title>
+                <meta
+                    name="description"
+                    content="Meet our trusted partners and collaborators who power our innovation."
+                />
+                <link rel="canonical" href="https://svntech.com/partners" />
+            </Helmet>
             <div className="partners-hero">
                 <img className='main-logo' src={genetec} alt="genetec-logo" />
                 <img className="subtitle" src={subtitle} alt="genetec-logo" />

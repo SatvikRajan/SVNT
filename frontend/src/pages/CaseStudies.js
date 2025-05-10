@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/caseStudies.css';
 import bghero from '../images/CaseStudies/casestudiesbg.webp';
 import Tabs from '@mui/material/Tabs';
@@ -40,6 +40,7 @@ import cfclbg from '../images/CaseStudies/cfclbg.png'
 import herobgm from '../images/CaseStudies/hero-bgm.webp'
 import itc_arch from "../images/CaseStudies/itc_arch.png";
 import { useLocation, useSearchParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 const cs = [
   ['itc', 'ITC Hotels Limited',
     [
@@ -122,7 +123,7 @@ const cs = [
     [[`The CCTV system uses advanced IP cameras with Intelligent Video Analytics (IVA) to cover the entire area. These smart cameras automatically detect and analyse events in real-time, identifying any suspicious activities, movements, or objects. We installed night vision cameras in key spots, enabling visibility up to 150-170 metres even in low light. To top it off, fixed cameras at all gates and drains ensure our surveillance system is thorough and reliable.`]
     ], `Heads Up!`, [[`The township, divided into blocks A, B, C, and D with a total of 540 houses, has been equipped with a panic alarm system. These systems feature panic buttons in every bedroom and bright rooftop LEDs for clear visibility. This battery-backed system immediately alerts the security control room during emergencies. When a panic alarm is activated, it sends a notification to the Control Room, where an alert message pops up. A GSM SIM installed in the controller then sends SMS alerts to designated mobile numbers in the security department. A GSM(Global System for Mobile Communications) SIM is a tiny, removable card that keeps your phone connected to the network for calls and internet.`],
     [`Our control room is the heart of our security system. Here, five powerful PCs are linked to 55-inch LED screens, keeping a close eye on cameras and alarms with uninterrupted power backup. In our server hub, all network connections and vital equipment are centralised, ensuring we capture 30 days of high-resolution video footage. This helps us analyse incidents in detail and gather evidence if needed.The security and plant staff are well-trained in using the CCTV system, with three levels of access: Viewers, Operators and Administrators.Our network uses fibre optics spread across a 20km area, connected in a loop to ensure backup if needed.`], [`Partnering with SVNT has fortified CFCL’s commitment to security, ensuring every resident in their township feels protected. With advanced surveillance and a responsive panic alarm system, CFCL guarantees the safety of both their plant and the community it serves.As CFCL continues to grow and explore new opportunities, they do so with the confidence that their security measures are top-notch and that their operations are safeguarded against any threat.`]],
-    , agr2, agr4, agr1,itc_arch]
+    , agr2, agr4, agr1, itc_arch]
 ]
 
 const menuItems = [
@@ -216,226 +217,236 @@ const CaseStudies = () => {
 
   useEffect(() => {
     const scrollToElement = () => {
-        const element = window.document.getElementById(searchParams.get('menu'));
-        if (element) {
-            element.scrollIntoView({ block: "center" });
-        }
+      const element = window.document.getElementById(searchParams.get('menu'));
+      if (element) {
+        element.scrollIntoView({ block: "center" });
+      }
     };
 
     setTimeout(scrollToElement, 100);
-}, [searchParams, location.pathname]);
+  }, [searchParams, location.pathname]);
 
 
 
   return (
-    <div className='cs-body'>
-      <div className='cs-hero'>
-        <picture>
-          <source media="(max-width: 480px)" srcSet={herobgm} />
-          <source media="(min-width: 480px)" srcSet={bghero} />
-          <img className="cs-hero-bg" src={bghero} alt="" />
-        </picture>
-      </div>
+    <>
+      <Helmet>
+        <title>Case Studies – SVNT Infotech</title>
+        <meta
+          name="description"
+          content="See how SVNT Infotech delivers smart, real-world solutions through our innovative projects."
+        />
+        <link rel="canonical" href="https://svntech.com/casestudies" />
+      </Helmet>
+      <div className='cs-body'>
+        <div className='cs-hero'>
+          <picture>
+            <source media="(max-width: 480px)" srcSet={herobgm} />
+            <source media="(min-width: 480px)" srcSet={bghero} />
+            <img className="cs-hero-bg" src={bghero} alt="" />
+          </picture>
+        </div>
 
-      <div className='cs-list'>
-        <div className='cs-main'>
-          <div className='cs-search-bar'>
-            <p>Gain a deeper insight into our Case Studies</p>
-          </div>
+        <div className='cs-list'>
+          <div className='cs-main'>
+            <div className='cs-search-bar'>
+              <p>Gain a deeper insight into our Case Studies</p>
+            </div>
 
-          <div className='case-container'>
-            <Box sx={{ width: '90%', height: 'auto' }}>
-              <Tabs
-                scrollButtons
-                allowScrollButtonsMobile
-                value={value}
-                onChange={handleChange}
-                variant="scrollable"
-                aria-label="scrollable auto tabs example"
-                sx={{
-                  width: '100%',
-                  '& .MuiTab-root': {
-                    textTransform: 'none',
-                    minWidth: '257px !important',
-                    maxWidth: '312px !important',
-                    marginRight: '4%',
-                    color: 'inherit',
-                  },
-                  '& .MuiTab-root.Mui-selected': {
-                    backgroundColor: '#251741',
-                    color: 'white',
-                    minWidth: '257px !important',
-                    maxWidth: '312px !important',
-                    marginRight: '4%'
-                  },
-                  '& .MuiTabs-indicator': {
-                    display: 'none',
-                  },
-                  '& .MuiSvgIcon-root': {
-                    height: '3em',
-                    width: '3em'
-                  },
-                }}
-                className="custom-tabs"
-              >
+            <div className='case-container'>
+              <Box sx={{ width: '90%', height: 'auto' }}>
+                <Tabs
+                  scrollButtons
+                  allowScrollButtonsMobile
+                  value={value}
+                  onChange={handleChange}
+                  variant="scrollable"
+                  aria-label="scrollable auto tabs example"
+                  sx={{
+                    width: '100%',
+                    '& .MuiTab-root': {
+                      textTransform: 'none',
+                      minWidth: '257px !important',
+                      maxWidth: '312px !important',
+                      marginRight: '4%',
+                      color: 'inherit',
+                    },
+                    '& .MuiTab-root.Mui-selected': {
+                      backgroundColor: '#251741',
+                      color: 'white',
+                      minWidth: '257px !important',
+                      maxWidth: '312px !important',
+                      marginRight: '4%'
+                    },
+                    '& .MuiTabs-indicator': {
+                      display: 'none',
+                    },
+                    '& .MuiSvgIcon-root': {
+                      height: '3em',
+                      width: '3em'
+                    },
+                  }}
+                  className="custom-tabs"
+                >
+                  {menuItems.map((item, index) => (
+                    <Tab
+                      key={item.id}
+                      label={item.name}
+                      iconPosition='start'
+                      icon={
+                        item.name !== 'All Case Studies' ? (
+                          <Avatar
+                            alt={item.name}
+                            src={value === index ? item.selectedImage : item.image}
+                            sx={{
+                              color: 'inherit',
+                              '&.Mui-selected': {
+                                backgroundColor: 'purple',
+                                color: 'white',
+                              },
+                              '&:hover': {
+                                backgroundColor: 'purple',
+                              },
+                            }}
+                          />
+                        ) : null
+                      }
+                      className='custom-tab'
+                      sx={{ minWidth: '50px', maxWidth: '50px' }}
+                    />
+                  ))}
+                </Tabs>
+
                 {menuItems.map((item, index) => (
-                  <Tab
-                    key={item.id}
-                    label={item.name}
-                    iconPosition='start'
-                    icon={
-                      item.name !== 'All Case Studies' ? (
-                        <Avatar
-                          alt={item.name}
-                          src={value === index ? item.selectedImage : item.image}
-                          sx={{
-                            color: 'inherit',
-                            '&.Mui-selected': {
-                              backgroundColor: 'purple',
-                              color: 'white',
-                            },
-                            '&:hover': {
-                              backgroundColor: 'purple',
-                            },
-                          }}
-                        />
-                      ) : null
-                    }
-                    className='custom-tab'
-                    sx={{ minWidth: '50px', maxWidth: '50px' }}
-                  />
-                ))}
-              </Tabs>
-
-              {menuItems.map((item, index) => (
-                <TabPanel key={item.id} value={value} index={index} dir={theme.direction}>
-                  <div className="cs-details" id='cs-details'>
-                    {item.cs.map((caseStudy, csIndex) => (
-                      <div
-                        id={caseStudy[0]}
-                        key={csIndex}
-                        // ref={(el) => (caseStudyRefs.current[csIndex] = el)}
-                        className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation' : ''}`}
-                      >
-                        {!isDropdownOpen[csIndex] && <img className="image-bg" src={caseStudy[3]} alt='' />}
-                        <div className={`case-study ${isDropdownOpen === csIndex ? 'dropdown-open' : ''}`} style={{ backgroundColor: 'inherit' }}>
-                          <div className='csd-head' onClick={() => toggleDropdown(csIndex)}>
-                            <h3 className='csd-heading'>{caseStudy[1]}</h3>
-                            <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg" className={isDropdownOpen === csIndex ? 'rotate-180' : ''}>
-                              <path d="M27.0672 10.137L25.2932 8.34216L14.9999 18.7565L4.70662 8.34216L2.93262 10.137L14.9999 22.3463L27.0672 10.137Z" fill="#F1FAFF" />
-                            </svg>
-                          </div>
-                          {(isDropdownOpen === csIndex || window.innerWidth >= 764) && (
-                            <div className='cs-wrapper'>
-                              <ul className='csd-points'>
-                                {caseStudy[2].map((detail, detailIndex) => {
-                                  const parts = detail.split(':');
-                                  return (
-                                    <li className='csd-point' key={detailIndex}>
-                                      <strong>{parts[0]}</strong>{parts.length > 1 && ':' + parts[1]}
-                                    </li>
-                                  );
-                                })}
-                              </ul>
-                              <div className='cs-image'>
-                                <img src={caseStudy[4]} alt='' className='only-desktop hehe' />
-                                {!expanded[csIndex] && (
-                                  <button
-                                    onClick={() => handleReadMore(csIndex)}
-                                    className="read_btn def"
-                                    style={{
-                                      textDecoration: "underline",
-                                      textUnderlinePosition: "under",
-                                      paddingRight: "1em",
-                                    }}
-                                  >
-                                    Read More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  </button>
-                                )}
-                              </div>
+                  <TabPanel key={item.id} value={value} index={index} dir={theme.direction}>
+                    <div className="cs-details" id='cs-details'>
+                      {item.cs.map((caseStudy, csIndex) => (
+                        <div
+                          id={caseStudy[0]}
+                          key={csIndex}
+                          // ref={(el) => (caseStudyRefs.current[csIndex] = el)}
+                          className={`cs-container ${expanded[csIndex] ? 'expanded abc top-to-bottom-fade-animation' : ''}`}
+                        >
+                          {!isDropdownOpen[csIndex] && <img className="image-bg" src={caseStudy[3]} alt='' />}
+                          <div className={`case-study ${isDropdownOpen === csIndex ? 'dropdown-open' : ''}`} style={{ backgroundColor: 'inherit' }}>
+                            <div className='csd-head' onClick={() => toggleDropdown(csIndex)}>
+                              <h3 className='csd-heading'>{caseStudy[1]}</h3>
+                              <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg" className={isDropdownOpen === csIndex ? 'rotate-180' : ''}>
+                                <path d="M27.0672 10.137L25.2932 8.34216L14.9999 18.7565L4.70662 8.34216L2.93262 10.137L14.9999 22.3463L27.0672 10.137Z" fill="#F1FAFF" />
+                              </svg>
                             </div>
-                          )}
-                          {expanded[csIndex] && (
-                            <div className='expanded-content'>
-                              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent:"center", flexWrap:"wrap" }}>
-                              <img src={itc_arch} alt="schematic" className='exp-img' style={{ width: "100%" }} />
+                            {(isDropdownOpen === csIndex || window.innerWidth >= 764) && (
+                              <div className='cs-wrapper'>
+                                <ul className='csd-points'>
+                                  {caseStudy[2].map((detail, detailIndex) => {
+                                    const parts = detail.split(':');
+                                    return (
+                                      <li className='csd-point' key={detailIndex}>
+                                        <strong>{parts[0]}</strong>{parts.length > 1 && ':' + parts[1]}
+                                      </li>
+                                    );
+                                  })}
+                                </ul>
+                                <div className='cs-image'>
+                                  <img src={caseStudy[4]} alt='' className='only-desktop hehe' />
+                                  {!expanded[csIndex] && (
+                                    <button
+                                      onClick={() => handleReadMore(csIndex)}
+                                      className="read_btn def"
+                                      style={{
+                                        textDecoration: "underline",
+                                        textUnderlinePosition: "under",
+                                        paddingRight: "1em",
+                                      }}
+                                    >
+                                      Read More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </button>
+                                  )}
+                                </div>
+                              </div>
+                            )}
+                            {expanded[csIndex] && (
+                              <div className='expanded-content'>
+                                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", flexWrap: "wrap" }}>
+                                  <img src={itc_arch} alt="schematic" className='exp-img' style={{ width: "100%" }} />
+                                  <div className='expand-inner'>
+                                    <div className='expand-inner-child'>
+
+                                      <h2>{caseStudy[5]}</h2><br></br>
+
+                                      <ul>
+                                        {caseStudy[6].map((item) => (
+                                          <li key={item}>{item}</li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                    <img alt='case-study' src={caseStudy[11]} className="expand-img only-desktop" />
+                                  </div>
+
+                                  <br></br><br></br>
+                                </div>
                                 <div className='expand-inner'>
                                   <div className='expand-inner-child'>
-
-                                    <h2>{caseStudy[5]}</h2><br></br>
-
+                                    <h2>{caseStudy[7]}</h2><br></br>
                                     <ul>
-                                      {caseStudy[6].map((item) => (
+                                      {caseStudy[8].map((item) => (
                                         <li key={item}>{item}</li>
                                       ))}
                                     </ul>
                                   </div>
-                                  <img alt='case-study' src={caseStudy[11]} className="expand-img only-desktop" />
+                                  <img alt='casestudy' src={caseStudy[12]} className="expand-img only-desktop" />
+                                  <br></br><br></br>
+                                </div>
+                                <br></br><br></br>
+                                <div className='expand-inner'>
+                                  <div className='expand-inner-child last-row'>
+                                    <h2>{caseStudy[9]}</h2><br></br>
+                                    <ul>
+                                      {caseStudy[10].map((item) => (
+                                        <li key={item}>{item}</li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                  <img alt='casestudy' src={caseStudy[13]} className="expand-img only-desktop" />
+                                  <br></br><br></br>
                                 </div>
 
-                                <br></br><br></br>
                               </div>
-                              <div className='expand-inner'>
-                                <div className='expand-inner-child'>
-                                  <h2>{caseStudy[7]}</h2><br></br>
-                                  <ul>
-                                    {caseStudy[8].map((item) => (
-                                      <li key={item}>{item}</li>
-                                    ))}
-                                  </ul>
-                                </div>
-                                <img alt='casestudy' src={caseStudy[12]} className="expand-img only-desktop" />
-                                <br></br><br></br>
-                              </div>
-                              <br></br><br></br>
-                              <div className='expand-inner'>
-                                <div className='expand-inner-child last-row'>
-                                  <h2>{caseStudy[9]}</h2><br></br>
-                                  <ul>
-                                    {caseStudy[10].map((item) => (
-                                      <li key={item}>{item}</li>
-                                    ))}
-                                  </ul>
-                                </div>
-                                <img alt='casestudy' src={caseStudy[13]} className="expand-img only-desktop" />
-                                <br></br><br></br>
-                              </div>
-
-                            </div>
-                          )}
-                          <div className="cs-learn-more collapse" style={{ bottom: "5%" }}>
-                            {expanded[csIndex] && (
-                              <button
-                                onClick={() => handleCollapse()} // Close all expanded sections
-                                className="read_btn collapse-button"
-                                style={{
-                                  position: "absolute",
-                                  right: "20%",
-                                  bottom: "10px",
-                                  color: "white",
-                                  textDecoration: "underline",
-                                  textUnderlinePosition: "under",
-                                  paddingRight: "1em",
-                                }}
-                              >
-                                Collapse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              </button>
                             )}
+                            <div className="cs-learn-more collapse" style={{ bottom: "5%" }}>
+                              {expanded[csIndex] && (
+                                <button
+                                  onClick={() => handleCollapse()} // Close all expanded sections
+                                  className="read_btn collapse-button"
+                                  style={{
+                                    position: "absolute",
+                                    right: "20%",
+                                    bottom: "10px",
+                                    color: "white",
+                                    textDecoration: "underline",
+                                    textUnderlinePosition: "under",
+                                    paddingRight: "1em",
+                                  }}
+                                >
+                                  Collapse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </button>
+                              )}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                </TabPanel>
-              ))}
+                      ))}
+                    </div>
+                  </TabPanel>
+                ))}
 
-            </Box>
-          </div>
-          <div>
+              </Box>
+            </div>
+            <div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

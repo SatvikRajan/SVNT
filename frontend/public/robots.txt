@@ -1,5 +1,8 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow: /admin-main
+Disallow: /login
+Disallow: /register
 
 Sitemap: https://svntech.com/sitemap.xml
+

@@ -73,6 +73,7 @@ import sharp from '../images/AboutUs/sharp.svg';
 import sandvik from '../images/AboutUs/sandvik.svg';
 import aboutbg from '../images/AboutUs/about-bg-video.mp4';
 import Slider from "react-slick";
+import { Helmet } from 'react-helmet';
 
 const About = () => {
   const [activeClientType, setActiveClientType] = useState('All');
@@ -252,77 +253,84 @@ const About = () => {
   };
 
   return (
-    <div className="about-us-page">
-      <div className="about-us-head">
-        <video style={{ width: '100%', height: '100%' }} autoPlay playsInline muted preload="auto">
-          <source src={aboutbg} type="video/mp4" />
-        </video>
-      </div>
-      <div className="svnt-info container" data-aos='fade-up'>
-        <h1 style={{ paddingBottom: '2rem' }}>About Us</h1>
-        <p align="justify"> Established in 2003, SVNT Infotech Pvt Ltd set out on a mission to revolutionize IT infrastructure solutions.
-          Our philosophy is to combine international technology with local expertise to tailor solutions to clients needs. Driven by excellence, we aim to lead the global market in networking and communication solutions.</p>
-      </div>
-
-      <TimeLine />
-
-      <div className="ceo d-flex">
-        <div className="ceo-text">
-          <h1 className="fs-1 ceo-text-head" style={{ marginBottom: '2rem' }} data-aos='fade-down'>Meet Our Managing Director </h1>
-          <p className="ceo-text-p w-75" style={{ marginBottom: '2rem' }} data-aos='fade-right'>
-            “User experience is everything. It always has been, but it's still undervalued and under-invested in. If you don't know user-centered design, study it. Hire people who know it. Obsess over it. Live and breathe it. ”
-          </p>
-          <h1 style={{ float: 'inline-end' }} data-aos='fade-right'>- Mr. V G Salimath</h1>
+    <>
+      <Helmet>
+        <title>About Us – SVNT Infotech</title>
+        <meta name="description" content="Learn more about SVNT Infotech's vision, mission, and leadership." />
+        <link rel="canonical" href="https://svntech.com/about" />
+      </Helmet>
+      <div className="about-us-page">
+        <div className="about-us-head">
+          <video style={{ width: '100%', height: '100%' }} autoPlay playsInline muted preload="auto">
+            <source src={aboutbg} type="video/mp4" />
+          </video>
         </div>
-        <div className="ceo-photo" data-aos='fade-left'>
-          <img className='ceo-photo-1' src={ceo} alt="" />
+        <div className="svnt-info container" data-aos='fade-up'>
+          <h1 style={{ paddingBottom: '2rem' }}>About Us</h1>
+          <p align="justify"> Established in 2003, SVNT Infotech Pvt Ltd set out on a mission to revolutionize IT infrastructure solutions.
+            Our philosophy is to combine international technology with local expertise to tailor solutions to clients needs. Driven by excellence, we aim to lead the global market in networking and communication solutions.</p>
         </div>
-      </div>
 
-      <Managers />
-      <div className='about-clients'>
-        <h1 className='client-h1'>Clients</h1>
-        <div className="client-container">
-          <div className="about-client-type">
-            {Object.keys(clients).map((clientType) => (
-              <p
-                key={clientType}
-                onClick={() => setActiveClientType(clientType)}
-                className={activeClientType === clientType ? 'active' : ''}
-              >
-                {clientType}
-              </p>
-            ))}
+        <TimeLine />
+
+        <div className="ceo d-flex">
+          <div className="ceo-text">
+            <h1 className="fs-1 ceo-text-head" style={{ marginBottom: '2rem' }} data-aos='fade-down'>Meet Our Managing Director </h1>
+            <p className="ceo-text-p w-75" style={{ marginBottom: '2rem' }} data-aos='fade-right'>
+              “User experience is everything. It always has been, but it's still undervalued and under-invested in. If you don't know user-centered design, study it. Hire people who know it. Obsess over it. Live and breathe it. ”
+            </p>
+            <h1 style={{ float: 'inline-end' }} data-aos='fade-right'>- Mr. V G Salimath</h1>
           </div>
+          <div className="ceo-photo" data-aos='fade-left'>
+            <img className='ceo-photo-1' src={ceo} alt="" />
+          </div>
+        </div>
 
-          <div className="slider-container">
-            <Slider
-              key={activeClientType}
-              {...settings}
-            >
-              {clients[activeClientType].map((client, index) => (
-                <div key={index}>
-                  <img
-                    className="about-client-logo"
-                    height={200}
-                    src={client.src}
-                    alt={client.alt}
-                  />
-                </div>
+        <Managers />
+        <div className='about-clients'>
+          <h1 className='client-h1'>Clients</h1>
+          <div className="client-container">
+            <div className="about-client-type">
+              {Object.keys(clients).map((clientType) => (
+                <p
+                  key={clientType}
+                  onClick={() => setActiveClientType(clientType)}
+                  className={activeClientType === clientType ? 'active' : ''}
+                >
+                  {clientType}
+                </p>
               ))}
-            </Slider>
+            </div>
+
+            <div className="slider-container">
+              <Slider
+                key={activeClientType}
+                {...settings}
+              >
+                {clients[activeClientType].map((client, index) => (
+                  <div key={index}>
+                    <img
+                      className="about-client-logo"
+                      height={200}
+                      src={client.src}
+                      alt={client.alt}
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </div>
           </div>
         </div>
+        <div style={{ width: '100%', padding: '0' }}>
+          <iframe
+            loading='lazy'
+            title='map'
+            src="https://www.google.com/maps/d/embed?mid=1GUq8xtiTqXd5ZvPKLOG7-MMCGwsDuiM&ehbc=2E312F"
+            style={{ border: 'none', width: '100%', height: '640px' }}
+          />
+        </div>
       </div>
-      <div style={{ width: '100%', padding: '0' }}>
-        <iframe
-          loading='lazy'
-          title='map'
-          src="https://www.google.com/maps/d/embed?mid=1GUq8xtiTqXd5ZvPKLOG7-MMCGwsDuiM&ehbc=2E312F"
-          style={{ border: 'none', width: '100%', height: '640px'}}
-        />
-      </div>
-    </div>
+    </>
   );
 };
 
