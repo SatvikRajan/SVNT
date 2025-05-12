@@ -27,21 +27,22 @@ function AdminLogin() {
   }, [navigate])
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (handleValidation()) {
-      const { password, email } = values;
-      const { data } = await axios.post(loginRoute, {
-        email, password
-      })
-      if (data.status === false) {
-        toast.error(data.msg)
-      }
-      if (data.status === true) {
-        localStorage.setItem('app-user', JSON.stringify(data.user))
+  e.preventDefault();
+  if (handleValidation()) {
+    const { email, password } = values;
+    try {
+      const { data } = await axios.post(loginRoute, { email, password });
+      if (!data.status) {
+        toast.error(data.msg);
+      } else {
+        localStorage.setItem('app-user', JSON.stringify(data.user));
         navigate("/admin-main");
       }
+    } catch (error) {
+      toast.error("Something went wrong. Please try again later.");
     }
   }
+};
   const handleValidation = () => {
     const { password, email } = values;
     if (password === "") {
