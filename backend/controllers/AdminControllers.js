@@ -23,15 +23,19 @@ module.exports.login = async (req, res, next) => {
     try {
         const { email, password } = req.body;
         const user = await Admin.findOne({ email });
-        if (!user) return res.json({ msg: "Incorrect Email or Password", status: false });
+        if (!user) {
+            return res.json({ msg: "Email not found. Please register or check your input.", status: false });
+        }
         const isPasswordValid = bcrypt.compareSync(password, user.password);
-        if (!isPasswordValid)
-            return res.json({ msg: "Incorrect Username or Password", status: false });
-        return res.json({ status: true, user })
+        if (!isPasswordValid) {
+            return res.json({ msg: "Incorrect password. Please try again.", status: false });
+        }
+        return res.json({ status: true, user });
     } catch (ex) {
         next(ex);
     }
-}
+};
+
 
 module.exports.getAllAdmins = async (req, res, next) => {
     try {
